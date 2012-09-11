@@ -17,20 +17,19 @@
 </h1>
 
 <ul class="nav nav-tabs bootnode" data-event="click" data-view="comp_navtabs/navtabs" data-target-id="section-container">
-    <li class="active"><a href="grid-system.html">Grid</a></li>
-    <li><a href="rich-containers.html">Rich Containers</a></li>
-    <li><a href="typography.html">Typography</a></li>
-    <li><a href="forms.html">Forms</a></li>
-    <li><a href="helpers.html">Helpers</a></li>
-    <li><a href="variables.html">Variables</a></li>
-    <li><a href="components.html">Components</a></li>
-    <li><a href="icons.html">Icons</a></li>
-    <li><a href="dialogs.html">Dialogs</a></li>
+    <li{% if page.url == '/grid-system.html' %} class="active"{% endif %}><a href="grid-system.html">Grid</a></li>
+    <li{% if page.url == '/rich-containers.html' %} class="active"{% endif %}><a href="rich-containers.html">Rich Containers</a></li>
+    <li{% if page.url == '/typography.html' %} class="active"{% endif %}><a href="typography.html">Typography</a></li>
+    <li{% if page.url == '/forms.html' %} class="active"{% endif %}><a href="forms.html">Forms</a></li>
+    <li{% if page.url == '/helpers.html' %} class="active"{% endif %}><a href="helpers.html">Helpers</a></li>
+    <li{% if page.url == '/variables.html' %} class="active"{% endif %}><a href="variables.html">Variables</a></li>
+    <li{% if page.url == '/components.html' %} class="active"{% endif %}><a href="components.html">Components</a></li>
+    <li{% if page.url == '/icons.html' %} class="active"{% endif %}><a href="icons.html">Icons</a></li>
+    <li{% if page.url == '/dialogs.html' %} class="active"{% endif %}><a href="dialogs.html">Dialogs</a></li>
 </ul>
 
 <div class="nav-tabs-section" id="section-container">
         <div class="section">
-            {{ page.url }}
             {{ content }}
         </div>
     
