@@ -1,0 +1,394 @@
+---
+layout: default
+title: Components
+---
+<div class="page-header">
+  <h1>
+    Components
+    <span class="sub">Buttons, Tabs, Nav, Pills, Dropdowns, Tooltips & More</span>
+  </h1>
+</div>
+
+<div class="gr grsm">
+	<div class="gu gu-1of3">
+	    <h3>Normal</h3>
+	    <a href="javascript:void();" class="btn btn-primary">Primary</a>
+	    <a href="javascript:void();" class="btn btn-default">Default</a>
+	    <a href="javascript:void();" class="btn btn-secondary">Secondary</a>
+	    <a href="javascript:void();" class="btn btn-tertiary">Tertiary</a>
+	    <pre class="mtl" data-line="1-3,4-6,7-9,10-12"><code class="language-markup">&lt;a class="btn btn-primary"&gt;
+  Primary
+&lt;/a&gt;
+&lt;a class="btn btn-default"&gt;
+  Default
+&lt;/a&gt;
+&lt;a class="btn btn-secondary"&gt;
+  Secondary
+&lt;/a&gt;
+&lt;a class="btn btn-tertiary"&gt;
+  Tertiary
+&lt;/a&gt;</code></pre>
+	</div>
+  <div class="gu gu-1of3">
+      <h3>Loading</h3>
+      <a href="javascript:void();" class="btn btn-primary btn-loading"><span>Primary</span></a>
+      <a href="javascript:void();" class="btn btn-default btn-loading"><span>Default</span></a>
+      <a href="javascript:void();" class="btn btn-secondary btn-loading">Secondary</a>
+      <a href="javascript:void();" class="btn btn-secondary btn-loading"><span>Tertiary</span></a>
+      <p class="mtm">Add <code class="language-markup">btn-loading</code> to the <code class="language-markup">btn</code> class.</p>
+      
+      <h3>Disabled</h3>
+      <a href="javascript:void();" class="btn btn-primary btn-disabled">Primary</a>
+      <a href="javascript:void();" class="btn btn-default btn-disabled">Default</a>
+      <a href="javascript:void();" class="btn btn-secondary btn-disabled">Secondary</a>
+      <a href="javascript:void();" class="btn btn-tertiary btn-disabled">Tertiary</a>
+      <p class="mtm">Add <code class="language-markup">btn-disabled</code> to the <code class="language-markup">btn</code> class.</p>
+      
+      <h3>Inactive</h3>
+      <a href="javascript:void();" class="btn btn-tertiary btn-inactive">Tertiary</a>
+      <p class="mtm">Add <code class="language-markup">btn-inactive</code> to the <code class="language-markup">btn</code> class.</p>
+  </div>
+  <div class="gu gu-last">
+      <p class="mtxl">
+			  You may notice that the loading button has an extra <code class="language-markup">&ltspan&gt;</code> element inside it.
+			  This is in order to preserve the width of the button, so that it won't be disturbing for the user.
+			  The extra <code class="language-markup">&ltspan&gt;</code> element will not change the visual appearance of the other button states,
+			  so when working on dynamic buttons involving the loading state
+			  it is recommended that you use this extra element in all states.
+			</p>
+  </div>
+</div>
+
+<div class="gr grss mtl">
+  <div class="gu gu-1of3">
+      <h3>Large</h3>
+      <a href="javascript:void();" class="btn btn-primary btn-large">Primary</a>
+      <a href="javascript:void();" class="btn btn-default btn-large">Default</a>
+      <a href="javascript:void();" class="btn btn-secondary btn-large">Sec.</a>
+      <a href="javascript:void();" class="btn btn-tertiary btn-large">Tertiary</a>
+      <p class="mtm">Add <code class="language-markup">btn-large</code> to the <code class="language-markup">btn</code> class.</p>
+  </div>
+  <div class="gu gu-1of3">
+      <h3>Small</h3>
+      <a href="javascript:void();" class="btn btn-primary btn-small">Primary</a>
+      <a href="javascript:void();" class="btn btn-default btn-small">Default</a>
+      <a href="javascript:void();" class="btn btn-secondary btn-small">Secondary</a>
+      <a href="javascript:void();" class="btn btn-tertiary btn-small">Tertiary</a>
+      <p class="mtxl">Add <code class="language-markup">btn-small</code> to the <code class="language-markup">btn</code> class.</p>
+  </div>
+	<div class="gu gu-last">
+	    <h3>Outline</h3>
+	    <a href="javascript:void();" class="btn btn-outline btn-primary">Primary</a>
+	    <a href="javascript:void();" class="btn btn-outline btn-default">Default</a>
+	    <a href="javascript:void();" class="btn btn-outline btn-secondary">Secondary</a>
+	    <a href="javascript:void();" class="btn btn-outline btn-tertiary">Tertiary</a>
+	    <p class="mtm">Add <code class="language-markup">btn-outline</code> to the <code class="language-markup">btn</code> class.</p>
+	</div>
+</div>
+
+<div class="gr grsl pvxl">
+    <div class="gu gu-1of5">
+        <h2>Switch Buttons</h2>
+        <p>This component implements Yes/No switch buttons.</p>
+    </div>
+    
+    <div class="gu gu-2of5">
+        <div class="btncontainer">
+	        <div class="btn-yn bootnode btn-yes" data-view="comp_yesnobutton/yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample1">
+	            <a href="javascript:void(0);" class="lnk-yes">Yes</a>
+	            <a href="javascript:void(0);" class="lnk-no">No</a>
+	        </div>
+	        <div class="lbl plm ptxs">
+              <span class="lbl-yes">Yes is activated by default</span>
+          </div>
+        </div>
+        
+        <pre class="mtm"><code class="language-markup">&lt;div class="btn-yn bootnode btn-yes"
+  data-view="comp_yesnobutton/yesno"
+  data-event="click"
+  data-url="/dev/coreui/yesno-model-fake.json.jsp"
+  data-param="yesnoSample1"&gt;
+  
+  &lt;a href="javascript:void(0);" class="lnk-yes"&gt;
+    Yes
+  &lt;/a&gt;
+  &lt;a href="javascript:void(0);" class="lnk-no"&gt;
+    No
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="lbl"&gt;
+  &lt;span class="lbl-yes"&gt;Yes by default&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+     </div>
+     
+     <div class="gu gu-last">
+        <div class="btncontainer">
+          <div class="btn-yn bootnode btn-no" data-view="comp_yesnobutton/yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample2">
+              <a href="javascript:void(0);" class="lnk-yes" title="Yes">Yes</a>
+              <a href="javascript:void(0);" class="lnk-no" title="No">No</a>
+          </div>
+          <div class="lbl plm ptxs">
+              <span class="lbl-no">No is activated by default</span>
+          </div>
+        </div>
+    </div>
+    
+    <pre class="mtm"><code class="language-markup">&lt;div class="btn-yn bootnode btn-no"
+  data-view="comp_yesnobutton/yesno"
+  data-event="click"
+  data-url="/dev/coreui/yesno-model-fake.json.jsp"
+  data-param="yesnoSample2"&gt;
+  
+  &lt;a href="javascript:void(0);" class="lnk-yes"&gt;
+    Yes
+  &lt;/a&gt;
+  &lt;a href="javascript:void(0);" class="lnk-no"&gt;
+    No
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="lbl"&gt;
+  &lt;span class="lbl-no"&gt;No by default&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="gr grsl pvl">
+    <div class="gu gu-1of5">
+        <h2>Tabs &amp; Pills</h2>
+    </div>
+    <div class="gu gu-last">
+        <h3 class="mbl">Standard tabs example with aside link</h3>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Other</a></li>
+            <li class="side-links"><a href="#">Aside Link</a></li>
+        </ul>
+        
+        <h3 class="mbl">Secondary tabs example</h3>
+        <ul class="nav nav-tabs nav-tabs-secondary">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Other</a></li>
+        </ul>
+        
+        <h3 class="mvl">Standard pills example with aside link</h3>
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Other</a></li>
+            <li class="side-links"><a href="#">Aside Link</a></li>
+        </ul>
+          
+    </div>
+</div>
+
+<div class="gr grsl pvl">
+    <div class="gu gu-1of5">
+        <h2>Ajax Tabs</h2>
+        <p>
+          Set tab content via Ajax for the tabs by setting an href value in the tab links.
+          While the Ajax request is waiting for a response,
+          the tab content shows a loader,
+          then displays the tab content once loaded.
+        </p>
+    </div>
+    <div class="gu gu-last">
+        
+        <ul class="nav nav-tabs bootnode" data-event="click" data-view="comp_navtabs/navtabs" data-target-id="tab-sample-container">
+            <li class="active"><a href="tab-sample-1.jsp">Sample 1</a></li>
+            <li><a href="tab-sample-2.jsp">Sample 2</a></li>
+            <li><a href="tab-sample-3.jsp">Sample 3</a></li>
+        </ul>
+				<div class="nav-tabs-section" id="tab-sample-container">
+				    <div class="section">
+				      <%@ include file="tab-sample-1.jsp"%>
+				    </div>
+				    
+				    <div class="loader">
+				        <img src="/v_img/profilev2/ajax-loader.gif" />
+				        <p>loading...</p>
+				    </div>
+				</div>
+				
+				<pre class="mtm"><code class="language-markup">&lt;ul class="nav nav-tabs bootnode"
+  data-event="click"
+  data-view="comp_navtabs/navtabs"
+  data-target-id="tab-sample-container"&gt;&lt;!-- The id of the element where tab contents will be loaded --&gt;
+  
+  &lt;li class="active"&gt;&lt;a href="tab-sample-1.jsp"&gt;Sample 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="tab-sample-2.jsp"&gt;Sample 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="tab-sample-3.jsp"&gt;Sample 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="nav-tabs-section" id="tab-sample-container"&gt;
+
+  &lt;!-- Tab contents are loaded inside this tag --&gt;
+  &lt;div class="section"&gt;
+    
+    &lt;!-- Content displayed by default --&gt;
+    &lt;%@ include file="tab-sample-1.jsp"%&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;!-- If you want to display a loader, use this element --&gt;
+  &lt;div class="loader"&gt;
+
+    &lt;!-- Here, put whatever you want --&gt;
+    &lt;img src="/v_img/profilev2/ajax-loader.gif" /&gt;
+    &lt;p&gt;loading...&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				
+    </div>
+</div>
+    
+    <div class="gr grsl mtm">
+        <div class="gu gu-1of5">
+            <h2>Dropdowns</h2>
+           
+        </div>
+        <div class="gu gu-last">
+            <h3 class="mbl">Standard dropdowns example with multi events and positions</h3>
+            
+            <div class="clearfix">
+            
+                <div class="dd">
+                   <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="comp_dropdown/view">Click<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                   </ul>
+                </div>
+                <div class="dd">
+                   <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-view="comp_dropdown/view">Mouseover<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                   </ul>
+                </div>
+                <div class="dd pull-right">
+                   <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="comp_dropdown/view">Click &amp; pull right<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   </ul>
+                </div>
+                <div class="dd pull-right">
+                   <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-view="comp_dropdown/view">Mouseover &amp; pull right<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   </ul>
+                </div>
+                <span>
+                   <a href="#" class="btn btn-default">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default btn-append" data-event="click" data-view="comp_dropdown/view"><span class="global-icon arrow"></span></a>
+                       <ul class="dd-menu no-prevent">
+                           <li class="dd-item"><a href="">dropdown item</a></li>
+                           <li class="dd-item"><a href="">dropdown item</a></li>
+                           <li class="dd-item"><a href="">dropdown item</a></li>
+                       </ul>
+                   </div>
+                </span>
+            </div>
+            
+            <div class="clearfix mtm">
+                <div class="dd">
+                   <a href="#" class="dd-btn bootnode" data-event="click" data-view="comp_dropdown/view">Click<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                   </ul>
+                </div>
+                <div class="dd">
+                   <a href="#" class="dd-btn bootnode" data-event="mouseover" data-view="comp_dropdown/view">Mouseover<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                   </ul>
+                </div>
+                <div class="dd pull-right">
+                   <a href="#" class="dd-btn bootnode" data-event="click" data-view="comp_dropdown/view">Click &amp; pull right<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   </ul>
+                </div>
+                <div class="dd pull-right">
+                   <a href="#" class="dd-btn bootnode" data-event="mouseover" data-view="comp_dropdown/view">Mouseover &amp; pull right<span class="global-icon arrow"></span></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                       <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div class="mtm">
+                <p>The data-event property (click or mouseover) on the dropdown button is required to prevent conflict on multi event handler</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gr grsl ptl">
+        <div class="gu gu-1of5">
+            <h2>Tooltips</h2>
+        </div>
+        <div class="gu gu-last">
+            <h3 class="mbl">Roll over the links to show the tooltips.</h3>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a class="tooltip" href="http://www.viadeo.com">Praesent bibendum ullamcorper<span class="tooltip-content">Go to Viadeo</span></a> lectus dictum blandit. Integer sapien sem, facilisis eu suscipit vitae, ultricies sed tortor. Aliquam tincidunt auctor tincidunt. Donec dapibus varius magna, eget lobortis leo aliquam et. <a class="tooltip" href="http://www.viadeo.com">Vivamus placerat ornare velit<span class="tooltip-content">This is great !</span></a>, nec interdum velit ullamcorper interdum. Donec non est nisi. Praesent iaculis aliquet tempor. Quisque commodo dui quis arcu <a class="tooltip" href="http://www.viadeo.com">accumsan laoreet<span class="tooltip-content">I think you should click on this link</span></a> consequat purus malesuada. Morbi non orci ultricies nunc pulvinar porta. Fusce ut lorem eu nunc auctor porttitor in eu tortor. Nam vitae <a class="tooltip" href="http://www.viadeo.com">ipsum eget nisi malesuada malesuada<span class="tooltip-content">Stop reading this and click</span></a> et eu turpis. Vestibulum auctor auctor odio sit amet laoreet. Aenean gravida dapibus consequat. </p>
+            
+            <div class="gr">
+              <div class="gu gu-1of5">
+                <h3>Four directions</h3>
+              </div>
+              <div class="gu gu-1of5">
+                <a href="" class="tooltip">Tooltip on top (default)<span class="tooltip-content">I'm on top</span></a>
+              </div>
+              <div class="gu gu-1of5">
+                <a href="" class="tooltip tooltip-right">Tooltip on right<span class="tooltip-content">I'm on right</span></a>
+              </div>
+              <div class="gu gu-1of5">
+                <a href="" class="tooltip tooltip-bottom">Tooltip on bottom<span class="tooltip-content">I'm on bottom</span></a>
+              </div>
+              <div class="gu gu-last">
+                <a href="" class="tooltip tooltip-left">Tooltip on left<span class="tooltip-content">I'm on left</span></a>
+              </div>
+            </div>
+            
+            <pre data-line="1-4,5-8,9-12,13-16"><code class="language-markup">&lt;a href="" class="tooltip"&gt;
+  Tooltip on top (default)
+  &lt;span class="tooltip-content"&gt;I'm on top&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="" class="tooltip tooltip-right"&gt;
+  Tooltip on right
+  &lt;span class="tooltip-content"&gt;I'm on right&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="" class="tooltip tooltip-bottom"&gt;
+  Tooltip on bottom
+  &lt;span class="tooltip-content"&gt;I'm on bottom&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="" class="tooltip tooltip-left"&gt;
+  Tooltip on left
+  &lt;span class="tooltip-content"&gt;I'm on left&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+            
+            <p>A <code class="language-markup">&lt;span&gt;</code> for example can be used instead of a link <code class="language-markup">&lt;a&gt;</code>.</p>
+            
+        </div>
+    </div>
+
+<script>Prism.highlightAll();</script>
