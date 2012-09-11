@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/css/core/fonts/OpenSans/OpenSans.eot');
+  src: url('/css/core/fonts/OpenSans/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('/css/core/fonts/OpenSans/OpenSans.woff') format('woff'),
+    url('/css/core/fonts/OpenSans/OpenSans.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+p {
+  line-height: 20px;
+}
+
+.section {
+  h1, h2, h3, h4 {
+    margin-bottom: @spacingL;
+    font-family: 'OpenSans', 'Arial', sans-serif;
+  }
+  
+  .restore-typography {
+    h1, h2, h3, h4 {
+      font-family: 'Arial', sans-serif;
+    }
+  }
+}
+
+.section-container-loading {
+	.section {
+	   visibility: hidden;
+	}
+	.loading {
+	   @width: 145px;
+	   @height: 80px;
+	   
+	   display: block !important;
+	   width: 100%;
+	   text-align: center;
+	   margin: 0 auto;
+	   position: absolute;
+	   top: @spacingXl;
+	   
+	   p {
+	       color: @gray;
+	       font-size: 12px;
+	   }
+	}
+}
+
+.var {
+	display: block;
+	width: 36px;
+	height: 14px;
+	.border-radius(@borderRadiusS);
+	border: 2px solid @white;
+	.box-shadow(0 0 3px @gray);
+}
+
+code, pre {
+  font-family: 'Consolas', 'Menlo', 'Monaco', 'Andale Mono', 'Courier New', monospace;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+code.color-transform { font-size: 11px; margin: @spacingXs 0 0 0; background: @white; color: @gray; }
+
+// Grayscale
+.var-black              { background-color: @black; }
+.var-gray-dark          { background-color: @grayDark; }
+.var-gray               { background-color: @gray; }
+.var-gray-light         { background-color: @grayLight; }
+.var-gray-lighter       { background-color: @grayLighter; }
+.var-white              { background-color: @white; }
+
+// Colors
+.var-green              { background-color: @green; }
+.var-yellow             { background-color: @yellow; }
+.var-orange             { background-color: @orange; }
+.var-highlight          { background-color: @highlightColor; }
+.var-link               { background-color: @linkColor; }
+.var-link-hover         { background-color: @linkColorHover; }
+.var-border-color       { background-color: @borderColor; }
+.var-panel-background   { background-color: @panelBackground; }
+.var-panel-border       { background-color: @panelBorder; }
+.var-overlay-border     { background-color: @overlayBorder; }
+
+// Typo
+.var-base-font-color    { background-color: @baseFontColor; }
+
+.var-tooltip {
+	position: absolute;
+	background-color: @grayDark;
+	margin-top: -26px;
+	color: @grayLighter;
+	padding: 2px 3px;
+	#font > .code();
+	
+	.arrow {
+	   #arrow > .down(5px, @grayDark);
+	   bottom: -5px;
+	   left: 5px;
+	}
+}
+
+#button-dropdowns,
+#split-button-dropdowns {
+	.btn-group {
+	   margin-right: @spacingXs;
+	}
+}
+
+.vicon {
+  color: lighten(@black, 25%);
+}
+
+.icon-sample-settings-btn .vicon {
+  margin-left: -5px;
+  font-size: 8px;
+  color: @white;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary.icon-sample-add-btn .vicon {
+  font-size: 10px;
+  color: @white;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-default.icon-sample-add-btn .vicon {
+  font-size: 8px;
+  color: #666;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.icon-sample-header .vicon {
+  color: #ADC6D9;
+}
+
+.icon-sample-profile .vicon {
+  color: #FA6900;
+}
+
+.icon-sample-premium .vicon {
+  color: #FFBC14;
+}
+
+.btn-twitter {
+  padding: 1px 0;
+  border: 1px solid #42C8F4;
+  #gradient > .vertical(#80DFFF, #48CAF5);
+  
+  .vicon {
+    font-size: 7px;
+    color: white;
+  }
+  
+  &:hover {
+    border-color: darken(#42C8F4, 10%);
+    #gradient > .vertical(darken(#80DFFF, 10%), darken(#48CAF5, 10%));
+  }
+}
