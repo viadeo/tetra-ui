@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Grid System</title>
+<title>{% if page.title %} {{ page.title }} | {% endif %} CoreUI</title>
 <link rel="stylesheet" href="css/coreui.css" />
-<!-- <link rel="stylesheet" href="css/coreui-global.css" /> -->
 <link rel="stylesheet" href="css/coreui-documentation.css" />
 <link rel="stylesheet" href="externals/prism/prism.css" />
 <script src="externals/prism/prism.js"></script>
@@ -31,7 +30,7 @@
 
 <div class="nav-tabs-section" id="section-container">
         <div class="section">
-            {% include grid-system.html %}
+            {{ content }}
         </div>
     
     <div class="loader tac">
