@@ -2,12 +2,43 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>TODO</title>
+<title>Grid System</title>
+<link rel="stylesheet" href="css/coreui.css" />
+<!-- <link rel="stylesheet" href="css/coreui-global.css" /> -->
+<link rel="stylesheet" href="css/coreui-documentation.css" />
+<link rel="stylesheet" href="externals/prism/prism.css" />
+<script src="externals/prism/prism.js"></script>
 </head>
 
 <body>
 
-<p>TODO</p>
+<h1>
+  CoreUI
+  <span class="sub mts mbxl">A smart, easy-to-use toolkit for creating rich interfaces in lightning speed!</span>
+</h1>
+
+<ul class="nav nav-tabs bootnode" data-event="click" data-view="comp_navtabs/navtabs" data-target-id="section-container">
+    <li class="active"><a href="grid_system.jsp">Grid</a></li>
+    <li><a href="rich_containers.jsp">Rich Containers</a></li>
+    <li><a href="typography.jsp">Typography</a></li>
+    <li><a href="forms.jsp">Forms</a></li>
+    <li><a href="helpers.jsp">Helpers</a></li>
+    <li><a href="variables.jsp">Variables</a></li>
+    <li><a href="components.jsp">Components</a></li>
+    <li><a href="icons.jsp">Icons</a></li>
+    <li><a href="dialogs.jsp">Dialogs</a></li>
+</ul>
+
+<div class="nav-tabs-section" id="section-container">
+        <div class="section">
+            {% include grid-system.html %}
+        </div>
+    
+    <div class="loader tac">
+        <img src="/v_img/profilev2/ajax-loader.gif" />
+        <p>loading...</p>
+    </div>
+</div>
 
 </body>
 </html>
