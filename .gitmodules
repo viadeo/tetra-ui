@@ -1,3 +1,6 @@
-[submodule "externals/tetra"]
-	path = externals/tetra
+[submodule "lib/tetra"]
+	path = lib/tetra
 	url = git://github.com/ohory/tetra.git
+[submodule "lib/prism"]
+	path = lib/prism
+	url = git://github.com/LeaVerou/prism.git
