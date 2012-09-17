@@ -1,1 +1,2 @@
-source: ./documentation
+source: documentation
+destination: public
