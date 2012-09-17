@@ -1,0 +1,92 @@
+/* Mini Profile Style */
+
+.mini-profile {
+	background:#ffffff;
+	border:1px solid #cccccc;
+	.border-radius(5px);
+	z-index:50;
+	* {
+	   zoom:1;
+	}
+}
+
+    .mini-profile .mini-profile-content { width:380px; padding:5px; }
+        .mini-profile .profile-header { background:#eeeeee; border-bottom:1px solid #cccccc; padding:4px 5px; font-weight:bold; }
+            .mini-profile .profile-header .name { float:left; font-size:13px; line-height:1.4em; }
+            .mini-profile .profile-header .global-icon { float:left; margin-left:5px; }
+            .mini-profile .profile-header .close { float:right; display:block; height:16px; width:16px; background:url(/v_img/global/global-sprite.png) no-repeat -80px -304px; outline:none; }
+            .mini-profile .profile-header .close:hover { background-position:-96px -304px; }
+        .mini-profile .content { margin-top:5px; padding:0 0 0 5px; }
+        .mini-profile .content * { line-height:1.3em; }
+            .mini-profile .profile-details { float:left; width:224px; border-right:1px dotted #cccccc; padding-right:5px; }
+            .mini-profile-recruiter .profile-details { float:none; padding:0; width:370px; border:none; }
+                .mini-profile .profile-details .headline { display:block; font-size:14px; }
+                .mini-profile-recruiter .profile-details .full-name { display:block; font-weight:bold; }
+                .mini-profile-recruiter .profile-details .location { display:block; color:#666666; margin:5px 0; }
+                    .mini-profile-recruiter .profile-details .location .global-icon { float:left; }
+                    .mini-profile-recruiter .profile-details .location .the-location { font-size:11px; float:left; margin-left:4px; }
+                .mini-profile .profile-details .positions { margin-top:5px; }
+                    .mini-profile .profile-details .position { margin-bottom:5px; }
+                        .mini-profile .profile-details .position .period { display:block; color:#666666; font-size:11px; }
+                        .mini-profile .profile-details .position .details { background:#edefd2; padding:3px; font-size:11px; }
+                            .mini-profile .profile-details .position .details .title { display:block; font-weight:bold; }
+                            .mini-profile .profile-details .position .details .company-name { display:block; margin-bottom:5px; }
+                            .mini-profile .profile-details .position .details .description { display:block; font-size:11px; margin:0; color:#666666; }
+                .mini-profile .profile-details .schools { margin-top:10px; }
+                    .mini-profile .profile-details .schools .header { display:block; color:#666666; font-size:11px; }
+                    .mini-profile .profile-details .schools .school-list { margin-top:3px; }
+                        .mini-profile .profile-details .schools .school { display:block; }
+                            .mini-profile .profile-details .schools .school .global-icon { float:left; }
+                            .mini-profile .profile-details .schools .school .the-school { float:left; font-size:11px; margin-left:3px; width:205px; }
+                            .mini-profile-recruiter .profile-details .schools .school .the-school { width:350px; }
+                .mini-profile .profile-details .overview { font-size:11px; margin:10px 0 0 0; }
+            .mini-profile .actions { float:left; width:140px; padding-left:5px; }
+                .mini-profile .actions .action { display:block; padding:3px; text-decoration:none; -moz-border-radius:3px; -webkit-border-radius:3px; }
+                .mini-profile .actions .action:hover { background-color:#eeeeee; }
+                    .mini-profile .actions .action .global-icon, .mini-profile .actions .info .global-icon { float:left; }
+                    .mini-profile .actions .action .the-link, .mini-profile .actions .info .the-info { float:left; width:114px; margin-left:4px; font-size:11px; }
+                .mini-profile .actions .view-profile { border-bottom:1px dotted #cccccc; padding-bottom:5px; margin-bottom:5px; }
+                    .mini-profile .actions .networking .action { margin-bottom:3px; }
+                .mini-profile .information { margin-top:10px; padding:3px; background-color:#eeeeee; }
+                    .mini-profile .actions .info { display:block; color:#666666; margin:5px 0; }
+
+
+
+.miniprofilshadow {position: relative; top: 5px; left: 5px; background: transparent url(/v_img/visuel/shadow.png) bottom right; margin: 10px 0 40px;}
+.miniprofilshadow .miniProfile {position: relative; top: -5px; left: -5px; background-color: #ffffff; padding: 15px 20px 0;}
+.msie6 .miniprofilshadow {background-color: #ccc !important; background-image: none !important;}
+
+.miniprofil {z-index: 5;}
+
+.miniProfile { width: 350px; font-family:Arial,sans-serif; }
+.miniProfileRecruiter {width: 550px;}
+.miniProfile .miniProfileTitle { background-color:@blueDark; color:#FFFFFF; vertical-align:middle; font-size:15px; font-weight:bold; }
+.miniProfile .miniProfileTitle img { padding: 0 5px; vertical-align: text-top;}
+.miniProfile .miniProfileTitle img.imgclose { float:right; }
+
+.miniProfileRecruiter p,
+.miniProfileRecruiter h3,
+.miniProfileRecruiter h4 {margin: 5px 0 3px 0;}
+.miniProfile .miniProfileBloc div.border {border:1px solid @blueDark; background-color:#FFFFFF; padding:5px 10px;}
+.miniProfile .miniProfileBloc div.border p {font-size: 11px; text-align: left;}
+.miniProfile .miniProfileBloc td.nowrap {white-space: nowrap;}
+.miniProfile .miniProfileBloc td.orange {color: #FF7200;}
+.miniProfile .miniProfileBloc td {vertical-align:top; padding: 5px 0 0 5px; color: #444444;}
+.miniProfile .miniProfileBloc td,
+.miniProfile .miniProfileBloc td p {font-size:11px; text-align: left;}
+.miniProfile .miniProfileBloc td img {padding: 0 5px; vertical-align: text-bottom;}
+.miniProfile .miniProfileContact { float:right; }
+.miniProfile .miniProfileActionLink span { float:right; margin-left: 8px;}
+.miniProfile .miniProfileActionLink span#sendMail { padding-right: 18px; background: transparent url(/v_img/messages/markAsRead.gif) right top no-repeat;}
+
+.miniProfile2  {width: 330px; background-color: #ffffff; padding: 20px; -moz-box-shadow: 0px 0px 8px #DDDDDD; -webkit-box-shadow: 0px 0px 8px #DDDDDD; box-shadow: 0px 0px 8px #DDDDDD; zoom : 1; border: 1px solid #eee;}
+.miniProfile2   .miniprofile2-member-name {font-size: 15px; width: 170px; float: left;}
+.miniProfile2   .miniprofile2-action {width: 150px; float: right; margin: 0; padding: 5px; background-color: #eee;}
+.miniProfile2   .miniprofile2-content {}
+.miniProfile2       .miniprofile2-positions {}
+.miniProfile2           .miniprofile2-position {padding: 0 0 5px 0;}
+.miniProfile2               .miniprofile2-date {width: 100px; float: left;}
+.miniProfile2               .miniprofile2-position-details {width: 200px; float: right;}
+.miniProfile2       .miniprofile2-school {}
+.miniProfile2       .miniprofile2-network-infos {}
+.miniProfile2   .close {position: absolute; top: 0; right: 0;}

@@ -1,0 +1,126 @@
+/* Patterns.less
+ * Common interface patterns
+ * ---------------------------------------------------------------------------- */
+
+// Fixes
+.menu-container h1 { padding-bottom: 0; }
+
+// Page Headers
+.page-header {
+   margin-bottom: @baseLineHeight * 1.5;
+   padding-bottom: 5px;
+   border-bottom: 1px solid @grayLighter;
+   .clearfix();
+   
+   h1 {
+       margin: 2px 0 0 0;
+       line-height: @baseLineHeight - 0.2;
+       float: left;
+   }
+   .actions {
+        float: right;
+        
+        .btn {
+            margin-left: 5px;
+        }
+   }
+}
+
+h1 .sub {
+  color: lighten(@baseFontColor, 20%);
+  display: block;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* --- Rich container Pattern --- 
+@Modele : It's a block who contains media and a text. The img is float to the left by defaults
+@Options :  -- Add .imgRight to the container to put the img on the right
+            -- Add .imgWrap to the container to put the text above the image
+@exemple : <div class="rc">
+                <a href="#" class="img"><img src="http://static3.viadeo-static.com/v_img/navigation/logoviaducblanc.png" /></a>
+                <div class="bd">
+                    example content text
+                </div>
+           </div>
+*/
+
+.rc, .richcontainer {
+	display: block;
+	.clearfixHack();
+	
+	.bd{
+	   display: table-cell;
+	   *display: inline-block;
+	   zoom: 1;
+	   
+	   &:after {
+	       clear: both;
+	       display: block;
+	       visibility: hidden;
+	       overflow: hidden;
+	       height: 0 !important;
+	       line-height: 0;
+	       font-size: xx-large;
+	       content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
+	   }
+	   > :first-child {
+	       margin-top:0;
+	   }
+	   > :last-child {
+	       margin-bottom:0;
+	   }
+	}
+	.img, .img-left {
+        float: left;
+    }
+    .img-right, .imgRight {
+        float: right;
+    }
+}
+.rcsxs .img, .rcsxs .img-left                                               { margin-right: @spacingXs; }
+.rcss .img, .small .img, .rcss .img-left, .small .img-left                  { margin-right: @spacingS; }
+.rcsm .img, .medium .img, .rcsm .img-left, .medium .img-left                { margin-right: @spacingM; }
+.rcsl .img, .large .img, .rcsl .img-left, .large .img-left                  { margin-right: @spacingL; }
+.rcsxl .img, .xlarge .img, .rcsxl .img-left, .xlarge .img-left              { margin-right: @spacingXl; }
+
+.rcsxs .img-right, .rcsxs .imgRight                                         { margin-left: @spacingXs; }
+.rcss .img-right, .small .img-right, .rcss .imgRight, .small .imgRight      { margin-left: @spacingS; }
+.rcsm .img-right, .medium .img-right, .rcsm .imgRight, .medium .imgRight    { margin-left: @spacingM; }
+.rcsl .img-right, .large .img-right, .rcsl .imgRight, .large .imgRight      { margin-left: @spacingL; }
+.rcsxl .img-right, .xlarge .img-right, .rcsxl .imgRight, .xlarge .imgRight  { margin-left: @spacingXl; }
+
+.ui-label {
+  display: inline-block;
+  margin: 0 1px @spacingXs 0;
+  padding: 1px 14px;
+  font-size: 11px;
+  background: @panelBackground;
+  border: 1px solid @borderColor;
+  border-radius: 12px;
+  
+  .vicon {
+    margin-right: -9px;
+    color: @borderColor;
+    font-size: 8px;
+  }
+  
+  &:hover {
+    background: @panelBorder;
+    
+    .vicon {
+      color: darken(@borderColor, 25%);
+    }
+  }
+}
+
+.ui-badge {
+  #gradient > .vertical(#FF7919, #F56600);
+  background-color: #FF7919;
+  border: 1px solid #F56600;
+  color: #FFFFFF;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1px 3px;
+  .bras;
+}

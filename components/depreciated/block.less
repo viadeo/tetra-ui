@@ -1,0 +1,57 @@
+
+
+/* --- Block Pattern --- 
+
+@Modele : Block is a empty global container. This class build an empty block without graphic design. Real life example Newspaper Article -> title , content , footer
+@mentatory: You must respect the global architecture of the example.
+@Options :  -- .ft class (footer of the block)
+@exemple : <div class="block">
+                <div class="blockInside">
+                    <div class="hd">
+                        <span></span>
+                    </div>
+                    <div class="bd">
+                        <p>content</p>
+                    </div>
+                    <div class="ft">
+                        <p>footer</p>
+                    </div>
+                </div>
+            </div>
+            
+@benefits: No more clear, No more clearfix , No sizing , Completely scalable , Respect semantic, Less div in the page .
+*/
+
+
+.block{margin-bottom:15px;}
+.block .blockInside{position:relative;}
+.block .blockInside:after, .block .hd:after, .block .bd:after, .block .ft:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+
+
+/* --- Tabs Pattern ---
+
+@Modele :
+@mentatory:
+@Options :
+@exemple :
+ */
+
+.tabs .hd ul{padding:0; display:table-row;_zoom:1;}
+.tabs .hd li{display:table-cell;*display:inline;vertical-align:middle;}
+.tabs .tabControl a{display:inline-block;text-decoration: none;}
+.tabs .tabControl span{display:inline-block; text-align:center; padding: 5px 20px;}
+.tabs .bd li{display:none;}
+.tabs .bd li li{display:block;}
+.tabs .bd li.current{display:block;}
+
+.tabControl li{}
+.tabControl li:last-child{border-right:none;}
+.tabControl li:first-child{border-left:none;}
+.tabs a{font-weight:normal;}
+.tabs .hd .tabControl .current{}
+.tabs li a:hover{}
+.tabs .hd li.current a,.tabs .hd li.current span{cursor: default;}
+.tabs li.current a:hover{}
+.tabs .hd li span{cursor:pointer;}
+
+
