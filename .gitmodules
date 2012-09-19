@@ -1,6 +1,0 @@
-[submodule "lib/prism"]
-	path = lib/prism
-	url = git://github.com/LeaVerou/prism.git
-[submodule "lib/tetra"]
-	path = lib/tetra
-	url = git://github.com/ohory/tetra.git
