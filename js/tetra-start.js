@@ -1,6 +1,7 @@
 tetra.extend({
     conf: {
         env: 'jQuery',
-        enableBootstrap: true
+        enableBootstrap: true,
+        APPS_PATH: 'js/tetramvc/apps'
     }
 }).start();
