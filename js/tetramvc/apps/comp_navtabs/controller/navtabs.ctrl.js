@@ -24,7 +24,6 @@ tetra.controller.register('navtabs', {
 						},
 						'error': function(error) {
 							
-							
 							me.tabRef.pop();
 							
 							app
