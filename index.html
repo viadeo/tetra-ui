@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Tetra UI</title>
+<link rel="stylesheet" href="css/coreui.css" />
+<link rel="stylesheet" href="css/coreui-documentation.css" />
+
+<link rel="stylesheet" href="lib/prism/prism.css" />
+<script src="lib/prism/prism.js"></script>
+
+<script src="lib/jquery/jquery.min.js"></script>
+
+<script src="lib/tetra/tetra-core.js"></script>
+</head>
+
+<body>
+
+<div class="fixed-container">
+
+<h1>
+  Tetra UI
+  <span class="sub mts mbxl">A smart, easy-to-use toolkit for creating rich interfaces in lightning speed!</span>
+</h1>
+
+<ul class="nav nav-tabs bootnode" data-event="click" data-view="comp_navtabs/navtabs" data-target-id="section-container">
+    <li><a href="grid-system.html">Grid</a></li>
+    <li><a href="rich-containers.html">Rich Containers</a></li>
+    <li><a href="typography.html">Typography</a></li>
+    <li><a href="forms.html">Forms</a></li>
+    <li><a href="helpers.html">Helpers</a></li>
+    <li><a href="variables.html">Variables</a></li>
+    <li><a href="components.html">Components</a></li>
+    <li><a href="icons.html">Icons</a></li>
+    <li><a href="dialogs.html">Dialogs</a></li>
+</ul>
+
+<div class="nav-tabs-section" id="section-container">
+        <div class="section">
+            
+        </div>
+    
+    <div class="loader tac">
+        <img src="/v_img/profilev2/ajax-loader.gif" />
+        <p>loading...</p>
+    </div>
+</div>
+
+</div>
+
+<script>
+tetra.extend({
+    conf: {
+        env: 'jQuery',
+        enableBootstrap: true
+    }
+}).start();
+</script>
+
+</body>
+</html>
