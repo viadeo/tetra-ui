@@ -6,7 +6,6 @@ tetra.model.register('navtabs', {
 		save : {
 			url : '{0}',
 			uriParams: ['url'],
-			method: 'PUT',
 			parser : function(resp, col, cond) {
 				col[cond.uriParams.url] = {id: cond.uriParams.url, html: resp.toString()};
 				return col;
