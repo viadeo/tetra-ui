@@ -8,12 +8,8 @@ tetra.controller.register('navtabs', {
 				model: { // events received from model
 					'navtabs': { // model name
 						
-						'update': function(obj) {
-							app.notify('start loading', {
-								targetId: obj.get('targetId')
-							});
-						},
-						'stored': function(obj) {
+						'append': function(col) {
+							var obj = col[0];
 							me.currentContent = obj.get('html');
 							app
 								.notify('end loading', {
@@ -27,6 +23,7 @@ tetra.controller.register('navtabs', {
 							;
 						},
 						'error': function(error) {
+							
 							
 							me.tabRef.pop();
 							
@@ -49,7 +46,14 @@ tetra.controller.register('navtabs', {
 					'show tab': function(data) {
 						
 						me.tabRef.push(data.url);
-						orm('navtabs').create(data).save({ uriParams: { url: data.url } });
+
+						app.notify('start loading', {
+							targetId: data.targetId
+						});
+
+						data.uriParams = { url: data.url };
+						orm('navtabs').fetch(data);
+						//orm('navtabs').create(data).save({ uriParams: { url: data.url } });
 						
 					}
 				}
