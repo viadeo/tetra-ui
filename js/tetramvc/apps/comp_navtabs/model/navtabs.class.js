@@ -3,11 +3,11 @@ tetra.model.register('navtabs', {
     scope: "comp_navtabs",
     
 	req : {
-		save : {
+		fetch : {
 			url : '{0}',
 			uriParams: ['url'],
 			parser : function(resp, col, cond) {
-				col[cond.uriParams.url] = {id: cond.uriParams.url, html: resp.toString()};
+				col[cond.uriParams.url] = {id: cond.uriParams.url, targetId: cond.targetId, html: resp.toString()};
 				return col;
 			}
 		}
@@ -15,8 +15,7 @@ tetra.model.register('navtabs', {
 	
 	attr : {
 		html : '',
-		targetId: '',
-		url : ''
+		targetId : ''
 	},
 	
 	methods : function(attr) { return {
