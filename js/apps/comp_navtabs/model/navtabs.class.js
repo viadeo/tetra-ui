@@ -1,4 +1,4 @@
-core.model.register('navtabs', {
+tetra.model.register('navtabs', {
 
     scope: "comp_navtabs",
     

@@ -1,4 +1,4 @@
-core.controller.register('navtabs', {
+tetra.controller.register('navtabs', {
 	scope: 'comp_navtabs', // application name
 	use: ['navtabs'], // list of required models
 	
