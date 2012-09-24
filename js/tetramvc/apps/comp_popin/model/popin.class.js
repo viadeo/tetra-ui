@@ -1,5 +1,5 @@
 tetra.model.register('popin', {
-    scope: 'comp_popin',
+  scope: 'comp_popin',
     
 	req : {
 		fetch : {

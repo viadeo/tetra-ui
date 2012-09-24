@@ -75,8 +75,10 @@ tetra.controller.register('popin', {
 			
 			methods: {
 				init: function() {
+
 					me.id = null;
 					me.url = null;
+					
 				}
 			}
 		};
