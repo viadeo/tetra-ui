@@ -2,7 +2,7 @@ tetra.model.register('popin', {
     scope: 'comp_popin',
     
 	req : {
-		save : {
+		fetch : {
 			url : '{0}',
 			uriParams: ['url'],
 			parser : function(resp, col, cond) {
@@ -23,6 +23,9 @@ tetra.model.register('popin', {
 	methods : function(attr) { return {
 		validate : function(attr, errors){
 			return errors;
+		},
+		getAttr : function(){
+			return attr;
 		}
 	};}
 

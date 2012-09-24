@@ -1,5 +1,4 @@
 tetra.model.register('navtabs', {
-
     scope: "comp_navtabs",
     
 	req : {

@@ -8,18 +8,18 @@ tetra.controller.register('popin', {
 				model: { // events received from model
 					'popin': { // model name
 						
-						'update': function(obj) {
+						'call': function(obj) {
 							
 							app.notify('start loading');
 							
 						},
-						'stored': function(obj) {
+						'append': function(col) {
 							
 							app.notify('end loading').notify('set content', {
-								content : obj.get('html')
+								content : col[0].get('html')
 							});
 							
-							page.notify("popin: success", obj);
+							page.notify("popin: success", obj.getAttr());
 						},
 						'error': function(error) {
 							
@@ -35,17 +35,20 @@ tetra.controller.register('popin', {
 					},
 					'popin: set content': function(data) {
 						
+						data._timestamp = (new Date()).getTime();
+						
 						if (data.url) { // loading popin with ajax
 							
 							me.url = data.url;
 							me.id = null;
-							orm('popin').create(data).save({ uriParams: { url: data.url } });
+							orm('popin').fetch({ uriParams: { url: data.url } });
 							
 						} else if (data.id) { // loading popin from the dom
 							
 							me.id = data.id;
 							me.url = null;
 							app.notify('start loading').notify('load from dom', data.id);
+							page.notify("popin: success", data);
 							
 						} else if (data.html) { // updating with html content
 							
@@ -54,6 +57,7 @@ tetra.controller.register('popin', {
 							app.notify('end loading').notify('set content', {
 								content : data.html
 							});
+							page.notify("popin: success", data);
 							
 						}
 						
