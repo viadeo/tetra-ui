@@ -19,7 +19,7 @@ tetra.controller.register('popin', {
 								content : col[0].get('html')
 							});
 							
-							page.notify("popin: success", col[0].get('html'));
+							page.notify("popin: success", obj.getAttr());
 						},
 						'error': function(error) {
 							
@@ -75,10 +75,8 @@ tetra.controller.register('popin', {
 			
 			methods: {
 				init: function() {
-
 					me.id = null;
 					me.url = null;
-					
 				}
 			}
 		};
