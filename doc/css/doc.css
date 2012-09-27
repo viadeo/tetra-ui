@@ -5455,6 +5455,29 @@ h1 .sub {
 .btncontainer .lbl .lbl-no {
   color: #808080;
 }
+/* Avatar Styles */
+.avatar {
+  background: #ffffff;
+  display: block;
+  border: 1px solid #d9d9d9;
+  padding: 2px;
+}
+.avatar img {
+  display: block;
+  background-color: #d9e0e6;
+}
+a.avatar img {
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+a.avatar:hover {
+  border-color: #bfbfbf;
+}
+a.avatar:hover img {
+  background-color: #cad3dc;
+}
 @font-face {
   font-family: 'OpenSans';
   src: url('/../../fonts/opensans/opensans-regular.eot');
