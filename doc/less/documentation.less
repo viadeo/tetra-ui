@@ -1,15 +1,29 @@
 @font-face {
   font-family: 'OpenSans';
-  src: url('/css/core/fonts/OpenSans/OpenSans.eot');
-  src: url('/css/core/fonts/OpenSans/OpenSans.eot?#iefix') format('embedded-opentype'),
-    url('/css/core/fonts/OpenSans/OpenSans.woff') format('woff'),
-    url('/css/core/fonts/OpenSans/OpenSans.ttf') format('truetype');
+  src: url('/../../fonts/opensans/opensans-regular.eot');
+  src: url('/../../fonts/opensans/opensans-regular.eot?#iefix') format('embedded-opentype'),
+    url('/../../fonts/opensans/opensans-regular.woff') format('woff'),
+    url('/../../fonts/opensans/opensans-regular.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
+body {
+  padding-top: 80px;
+}
+
 p {
   line-height: 20px;
+}
+
+.top-bar {
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: @spacingS 0;
+  #gradient > .vertical(lighten(@black, 17%), lighten(@black, 14%));
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .section {
