@@ -5478,6 +5478,7 @@ a.avatar:hover {
 a.avatar:hover img {
   background-color: #cad3dc;
 }
+/* Fonts */
 @font-face {
   font-family: 'OpenSans';
   src: url('/../../fonts/opensans/opensans-regular.eot');
@@ -5485,13 +5486,15 @@ a.avatar:hover img {
   font-weight: bold;
   font-style: normal;
 }
+/* Common */
 body {
   padding-top: 80px;
 }
 p {
   line-height: 20px;
 }
-.top-bar {
+/* Header */
+.header {
   position: fixed;
   left: 0;
   top: 0;
@@ -5511,6 +5514,18 @@ p {
   *filter: none;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
+/* Footer */
+.footer {
+  margin: 15px 0 0 0;
+  padding: 5px 0;
+  background: #1a1a1a;
+}
+.footer p {
+  margin: 0;
+  color: #808080;
+  text-align: center;
+}
+/* Documentation */
 .section h1,
 .section h2,
 .section h3,

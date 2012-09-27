@@ -1,3 +1,5 @@
+/* Fonts */
+
 @font-face {
   font-family: 'OpenSans';
   src: url('/../../fonts/opensans/opensans-regular.eot');
@@ -8,6 +10,8 @@
   font-style: normal;
 }
 
+/* Common */
+
 body {
   padding-top: 80px;
 }
@@ -16,7 +20,9 @@ p {
   line-height: 20px;
 }
 
-.top-bar {
+/* Header */
+
+.header {
   position: fixed;
   left: 0; top: 0;
   z-index: 100;
@@ -25,6 +31,22 @@ p {
   #gradient > .vertical(lighten(@black, 17%), lighten(@black, 14%));
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
+
+/* Footer */
+
+.footer {
+  margin: @spacingM 0 0 0;
+  padding: @spacingXs 0;
+  background: lighten(@black, 10%);
+
+  p {
+    margin: 0;
+    color: @gray;
+    text-align: center;
+  }
+}
+
+/* Documentation */
 
 .section {
   h1, h2, h3, h4 {
