@@ -5,7 +5,7 @@
     font-weight: bold;
     font-size: 11px;
     
-    a {
+    .lnk-yes, .lnk-no {
       float: left;
       padding: 0 @spacingS;
       line-height: 22px;
@@ -16,25 +16,23 @@
       *background-color: lighten(@black, 90%);
       cursor: pointer;
       
-      &:hover, &:focus {
-        color: @grayDark;
-        border-color: lighten(@black, 75%);
-        #gradient > .vertical(lighten(@black, 95%), lighten(@black, 85%));
-        outline: none;
+      input[type='radio'] {
+        visibility: hidden;
+        margin-right: -15px;
       }
-      
-      &.lnk-yes {
-        .border-radius(@borderRadiusS 0 0 @borderRadiusS);
-      }
-      
-      &.lnk-no {
-        .border-radius(0 @borderRadiusS @borderRadiusS 0);
-      }
+    }
+    
+    .lnk-yes {
+      .border-radius(@borderRadiusS 0 0 @borderRadiusS);
+    }
+    
+    .lnk-no {
+      .border-radius(0 @borderRadiusS @borderRadiusS 0);
     }
   }
   
   .btn-yes {
-    a.lnk-yes {
+    .lnk-yes {
       color: @white;
       border-color: @green lighten(@green, 5%) lighten(@green, 12%) lighten(@green, 10%);
       #gradient > .vertical(@green, lighten(@green, 20%));
@@ -44,13 +42,22 @@
   }
   
   .btn-no {
-    a.lnk-no {
+    .lnk-no {
       color: @white;
       border-color: darken(@orange, 15%);
       border-bottom-color: darken(@orange, 7%);
       #gradient > .vertical(darken(@orange, 10%), @orange);
       cursor: default;
     }
+  }
+  
+  .btn-yes .lnk-no, .btn-no .lnk-yes {
+      &:hover, &:focus {
+        color: @grayDark;
+        border-color: lighten(@black, 75%);
+        #gradient > .vertical(lighten(@black, 95%), lighten(@black, 85%));
+        outline: none;
+      }
   }
   
   .lbl {
