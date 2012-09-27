@@ -8,7 +8,7 @@ tetra.controller.register('popin', {
 				model: { // events received from model
 					'popin': { // model name
 						
-						'call': function(obj) {
+						'fetch': function(obj) {
 							
 							app.notify('start loading');
 							
