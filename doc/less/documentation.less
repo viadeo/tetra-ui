@@ -12,7 +12,12 @@
 
 /* Common */
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background: darken(@white, 2%);
 }
 
@@ -35,20 +40,22 @@ p {
 /* Footer */
 
 .footer {
-  padding: @spacingXs 0;
+  height: 40px;
+  margin-top: -40px;
   background: lighten(@black, 10%);
 
   p {
-    margin: 0;
+    margin: @spacingS 0 0 0;
     color: @gray;
     text-align: center;
   }
 }
 
-/* Documentation */
+/* Content */
 
 .content {
-  padding: 80px @spacingL @spacingM;
+  min-height: 100%;
+  padding: 0 @spacingL;
   background: @white;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 
@@ -60,7 +67,15 @@ p {
   }
 }
 
+/* Documentation */
+
+.content > h1 {
+  margin-top: 80px;
+}
+
 .section {
+  padding-bottom: 80px;
+
   h1, h2, h3, h4 {
     margin-bottom: @spacingL;
     font-family: 'OpenSans', 'Arial', sans-serif;
