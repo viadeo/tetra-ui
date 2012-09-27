@@ -13,7 +13,7 @@
 /* Common */
 
 body {
-  padding-top: 80px;
+  background: darken(@white, 2%);
 }
 
 p {
@@ -35,7 +35,6 @@ p {
 /* Footer */
 
 .footer {
-  margin: @spacingM 0 0 0;
   padding: @spacingXs 0;
   background: lighten(@black, 10%);
 
@@ -47,6 +46,19 @@ p {
 }
 
 /* Documentation */
+
+.content {
+  padding: 80px @spacingL @spacingM;
+  background: @white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+
+  > .nav-tabs {
+    position: relative;
+    left: -1 * @spacingL;
+    width: 100%;
+    padding: 0 @spacingL;
+  }
+}
 
 .section {
   h1, h2, h3, h4 {
