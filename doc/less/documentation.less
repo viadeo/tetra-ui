@@ -10,6 +10,17 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'LearningtoTrust';
+  src: url('../../fonts/learningtotrust/learningtotrust.eot');
+  src: url('../../fonts/learningtotrust/learningtotrust.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/learningtotrust/learningtotrust.woff') format('woff'),
+    url('../../fonts/learningtotrust/learningtotrust.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Common */
 
 html {
@@ -38,6 +49,12 @@ p {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Wrapper for sticky footer */
+
+.wrap {
+  min-height: 100%;
+}
+
 /* Footer */
 
 .footer {
@@ -52,11 +69,33 @@ p {
   }
 }
 
+/* Headline */
+
+.headline {
+  position: relative;
+  z-index: 99;
+  padding: 80px 0 30px 0;
+  #gradient > .vertical(@white, @panelBorder);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+
+  h1 {
+    font-family: 'LearningtoTrust', 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    color: @black;
+
+    .sub {
+      font-size: 24px;
+      color: #fa6900;
+    }
+  }
+}
+
 /* Content */
 
 .content {
-  min-height: 100%;
-  padding: 0 @spacingL;
+  padding: 40px @spacingL 80px;
   background: @white;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 
@@ -70,12 +109,7 @@ p {
 
 /* Documentation */
 
-.content > h1 {
-  margin-top: 80px;
-}
-
 .section {
-  padding-bottom: 80px;
 
   h1, h2, h3, h4 {
     margin-bottom: @spacingL;
