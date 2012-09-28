@@ -74,28 +74,59 @@ p {
 .headline {
   position: relative;
   z-index: 99;
-  padding: 80px 0 30px 0;
+  padding: 90px 0 40px 0;
   #gradient > .vertical(@white, @panelBorder);
-  box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.4);
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: -35px;
+    width: 70px; height: 70px;
+    margin-left: -35px;
+    border-radius: 50%;
+    background: @white;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.3) inset;
+  }
 
   h1 {
     font-family: 'LearningtoTrust', 'Arial', sans-serif;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 40px;
-    color: @black;
+    font-size: 21px;
+    line-height: 30px;
 
     .sub {
-      font-size: 24px;
+      font-size: 21px;
       color: #fa6900;
     }
+  }
+
+  .arrow {
+    position: absolute;
+    z-index: 99;
+    left: 50%; bottom: -20px;
+    width: 40px; height: 40px;
+    margin-left: -20px;
+    border-radius: 50%;
+    font-size: 40px;
+    text-align: center;
+    line-height: 70px;
+    color: lighten(@black, 50%);
+    background: @panelBackground;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.1) inset,
+      0 -2px 1px rgba(255, 255, 255, 0.9) inset,
+      0 0 2px rgba(0, 0, 0, 0.3),
+      0 0 0 6px lighten(@black, 97%),
+      0 1px 2px 6px rgba(0, 0, 0, 0.3);
   }
 }
 
 /* Content */
 
 .content {
-  padding: 40px @spacingL 80px;
+  padding: 50px @spacingL 80px;
   background: @white;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 
