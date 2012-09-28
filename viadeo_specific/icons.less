@@ -1,6 +1,6 @@
 /* Global Icons */
 .global-icon, .ico {
-	background: url(/v_img/global/global-sprite2.png) no-repeat;
+	background: url('@{img-sprite-dir}/global-sprite2.png') no-repeat;
 	color: transparent;
 	font: 0/0 a;
 	display: inline-block;
@@ -12,17 +12,17 @@
 
  /* Same image, but in PNG8 for IE6 */
 .msie6 .global-icon, .msie6 .ico {
-	background-image: url(/v_img/global/global-sprite2-8.png);
+	background-image: url('@{img-sprite-dir}/global-sprite2-8.png');
 }
 
 /* Icon Fonts */
 
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/viadeoicons.eot?#iefix') format('embedded-opentype'),
-    url('/css/core/fonts/viadeoicons/viadeoicons.woff') format('woff'),
-    url('/css/core/fonts/viadeoicons/viadeoicons.ttf') format('truetype');
+  src: url('@{fonts-dir}/viadeoicons/viadeoicons.eot');
+  src: url('@{fonts-dir}/viadeoicons/viadeoicons.eot?#iefix') format('embedded-opentype'),
+    url('@{fonts-dir}/viadeoicons/viadeoicons.woff') format('woff'),
+    url('@{fonts-dir}/viadeoicons/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
