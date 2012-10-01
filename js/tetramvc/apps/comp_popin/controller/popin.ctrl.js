@@ -29,37 +29,10 @@ tetra.controller.register('popin', {
 					}
 				},
 				
-				view: { // events received from view or third party controllers
-					'popin: loading': function(data) {
-						app.notify('start loading');
-					},
+				view: {
 					'popin: set content': function(data) {
 						
-						data._timestamp = (new Date()).getTime();
-						
-						if (data.url) { // loading popin with ajax
-							
-							me.url = data.url;
-							me.id = null;
-							orm('popin').fetch({ uriParams: { url: data.url } });
-							
-						} else if (data.id) { // loading popin from the dom
-							
-							me.id = data.id;
-							me.url = null;
-							app.notify('start loading').notify('load from dom', data.id);
-							page.notify("popin: success", data);
-							
-						} else if (data.html) { // updating with html content
-							
-							me.id = null;
-							me.url = null;
-							app.notify('end loading').notify('set content', {
-								content : data.html
-							});
-							page.notify("popin: success", data);
-							
-						}
+						me.methods.setContent(data);
 						
 					},
 					'popin: close': function() {
@@ -70,6 +43,16 @@ tetra.controller.register('popin', {
 						});
 						
 					}
+				},
+				
+				controller: { // events received from view or third party controllers
+					'popin: loading': function(data) {
+						app.notify('start loading');
+					},
+					'popin: set content': function(data) {
+						me.methods.setContent(data);
+						
+					}
 				}
 			},
 			
@@ -77,6 +60,36 @@ tetra.controller.register('popin', {
 				init: function() {
 					me.id = null;
 					me.url = null;
+				},
+				
+				setContent: function(data) {
+					
+					data._timestamp = (new Date()).getTime();
+					
+					if (data.url) { // loading popin with ajax
+						
+						me.url = data.url;
+						me.id = null;
+						orm('popin').fetch({ uriParams: { url: data.url } });
+						
+					} else if (data.id) { // loading popin from the dom
+						
+						me.id = data.id;
+						me.url = null;
+						app.notify('start loading').notify('load from dom', data.id);
+						page.notify("popin: success", data);
+						
+					} else if (data.html) { // updating with html content
+
+						me.id = null;
+						me.url = null;
+						app.notify('start loading').notify('set content', {
+							content : data.html
+						});
+						page.notify("popin: success", data);
+						
+					}
+					
 				}
 			}
 		};
