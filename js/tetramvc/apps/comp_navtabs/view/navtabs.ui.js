@@ -33,7 +33,7 @@ tetra.view.register('navtabs', {
 						me.methods.setActiveTab(elm);
 					},
 					'show error': function(error) {
-						VNS.ui.growl(lang['notification.modification.save.error']);
+						//VNS.ui.growl(lang['notification.modification.save.error']);
 					}
 				}
 			},
@@ -42,6 +42,8 @@ tetra.view.register('navtabs', {
 				init: function() {
 					me.target = undefined;
 					me.tabs = undefined;
+
+					_('.nav-tabs li:first-child a').click();
 				},
 				setActiveTab: function(elm) {
 					_(elm).parent().addClass('active').siblings().removeClass('active');
