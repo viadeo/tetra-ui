@@ -1,0 +1,38 @@
+{
+  "name": "tetra-ui",
+  "description": "Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!",
+  "version": "1.0.0",
+  "author": {
+    "name": "Frédéric Perrin",
+    "email": "fperrin@viadeoteam.com"
+  },
+  "contributors": [
+    {
+      "name": "Frédéric Perrin",
+      "email": "fperrin@viadeoteam.com"
+    },
+    {
+      "name": "Richard Francis",
+      "email": "rfrancis@viadeoteam.com"
+    },
+    {
+      "name": "Sylvain Faucherand",
+      "email": "sfaucherand@viadeoteam.com"
+    }
+  ],
+  "devDependencies": {
+    "grunt": ">=0.3.15",
+    "grunt-recess": ">=0.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/viadeo/tetra-ui"
+  },
+  "engines": {
+    "node": ">= 0.8.7"
+  },
+  "scripts": {
+    "postinstall": "git submodule update; grunt default --verbose",
+    "test": "grunt test --verbose"
+  }
+}
