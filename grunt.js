@@ -24,13 +24,15 @@ module.exports = function( grunt ) {
                 },
                 files: {
                     'dist/tetra-ui-<%=meta.version%>.min.css': ['less/packages/default.less'],
-                    'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['less/packages/apna.less']
+                    'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['less/packages/apna.less'],
+                    'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['less/packages/doc.less']
                 }
 			}
 		},
 		concat: {
 			'dist/tetra-ui-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-<%=meta.version%>.min.css'],
-			'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-apna-<%=meta.version%>.min.css']
+			'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-apna-<%=meta.version%>.min.css'],
+			'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-doc-<%=meta.version%>.min.css']
 		}
 	});
 
