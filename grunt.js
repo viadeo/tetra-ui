@@ -1,37 +1,39 @@
 module.exports = function( grunt ) {
+	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.initConfig({
 		pkg: "<json:package.json>",
 		meta: {
 			version: "<%= pkg.version %>",
 			banner: "/*! Tetra UI v<%= pkg.version %> | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */"
 		},
-		recess: {
-			tetra-ui: {
-				src: [
-					'less/foundation.less',
-					'less/core.less'
-				],
-				dest: 'dist/tetra-ui-<%=meta.version%>.js',
+		less: {
+			development: {
 				options: {
-					compile: true,
-					compress: true
+					paths: ["less"]
+				},
+				files: {
+					'dist/tetra-ui-<%=meta.version%>.css': ['less/packages/default.less'],
+					'dist/tetra-ui-apna-<%=meta.version%>.css': ['less/packages/apna.less']
 				}
 			},
 			
-			tetra-ui-apna: {
-				src: [
-					'less/foundation_apna.less',
-					'less/core.less'
-				],
-				dest: 'dist/tetra-ui-apna-<%=meta.version%>.js',
-				options: {
-					compile: true,
-					compress: true
-				}
+			production: {
+                                options: {
+                                        paths: ["less"],
+					yuicompress: true
+                                },
+                                files: {
+                                        'dist/tetra-ui-<%=meta.version%>.min.css': ['less/packages/default.less'],
+                                        'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['less/packages/apna.less']
+                                }
 			}
+		},
+		concat: {
+			'dist/tetra-ui-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-<%=meta.version%>.min.css'],
+			'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-apna-<%=meta.version%>.min.css']
 		}
 	});
 
 	// Default task.
-	grunt.registerTask('default', 'recess:*');
+	grunt.registerTask('default', 'less concat');
 };

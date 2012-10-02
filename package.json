@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "grunt": ">=0.3.15",
-    "grunt-recess": ">=0.1.7"
+    "grunt-contrib-less": ">=0.3.0"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "node": ">= 0.8.7"
   },
   "scripts": {
-    "postinstall": "git submodule update; grunt default --verbose",
+    "postinstall": "grunt default --verbose",
     "test": "grunt test --verbose"
   }
 }
