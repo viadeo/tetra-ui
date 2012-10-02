@@ -18,14 +18,14 @@ module.exports = function( grunt ) {
 			},
 			
 			production: {
-                                options: {
-                                        paths: ["less"],
+                options: {
+                    paths: ["less"],
 					yuicompress: true
-                                },
-                                files: {
-                                        'dist/tetra-ui-<%=meta.version%>.min.css': ['less/packages/default.less'],
-                                        'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['less/packages/apna.less']
-                                }
+                },
+                files: {
+                    'dist/tetra-ui-<%=meta.version%>.min.css': ['less/packages/default.less'],
+                    'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['less/packages/apna.less']
+                }
 			}
 		},
 		concat: {

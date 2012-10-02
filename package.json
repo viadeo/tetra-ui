@@ -32,7 +32,6 @@
     "node": ">= 0.8.7"
   },
   "scripts": {
-    "postinstall": "grunt default --verbose",
-    "test": "grunt test --verbose"
+    "postinstall": "grunt default --verbose"
   }
 }
