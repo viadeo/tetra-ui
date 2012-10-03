@@ -6,7 +6,8 @@ Tetra UI
 ## Licence
 (The MIT License)
 
-Copyright (c) Viadeo/APVO Corp., Frédéric Perrin and other Tetra contributors.
+Copyright (c) Viadeo/APVO Corp., Frédéric Perrin, Richard Francis, Sylvain Faucherand and other Tetra contributors.
+Inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence)
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
