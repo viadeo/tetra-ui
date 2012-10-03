@@ -1,3 +1,4 @@
 .svn
 .DS_Store
 *.sublime-workspace
+node_modules
