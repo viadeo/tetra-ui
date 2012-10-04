@@ -44,7 +44,7 @@ html {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  padding: 70px 0 0 0;
+  padding: 70px 0;
 }
 img {
   max-width: 100%;
@@ -195,17 +195,17 @@ img {
   text-align: center;
   margin-bottom: 10px;
 }
-.downloads {
+.downloads ul {
   zoom: 1;
 }
-.downloads:before,
-.downloads:after {
+.downloads ul:before,
+.downloads ul:after {
   display: table;
   content: "";
   zoom: 1;
   *display: inline;
 }
-.downloads:after {
+.downloads ul:after {
   clear: both;
 }
 .downloads li {
