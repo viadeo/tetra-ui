@@ -222,36 +222,6 @@
 	}
 }
 
-.btn-outline {
-    @_borderRadius:    @borderRadiusS;
-    @_outlineColor:    #EBECEE;
-    @_outlineWidth:    3px;
-
-    margin: @_outlineWidth;
-
-    &:after {
-        border-radius: @_borderRadius;
-        bottom: -1px;
-        box-shadow: -@_outlineWidth -@_outlineWidth 0 0 @_outlineColor, -@_outlineWidth @_outlineWidth 0 0 @_outlineColor, @_outlineWidth -@_outlineWidth 0 0 @_outlineColor, @_outlineWidth @_outlineWidth 0 0 @_outlineColor;
-        content: '';
-        left: -1px;
-        overflow: hidden;
-        position: absolute;
-        right: -1px;
-        top: -1px;
-    }
-
-    &.btn-append {
-        margin-left: -1 * (@_borderRadius + @_outlineWidth);
-
-        &:after {
-            box-shadow: @_outlineWidth -@_outlineWidth 0 0 @_outlineColor, @_outlineWidth @_outlineWidth 0 0 @_outlineColor;
-        }
-
-    }
-
-}
-
 .btn-append {
     @_borderRadius:    @borderRadiusS;
     
