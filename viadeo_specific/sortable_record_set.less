@@ -1,0 +1,82 @@
+/* Offre Détaillés */
+        #offreDetails .recordset td.titlejobd { padding: 15px 35px 12px 12px; }
+        #offreDetails .recordset td.titlejobd a {color:@linkColor; font-family: "Trebuchet MS";font-size:15px; border-bottom: 1px dotted @linkColor;text-decoration: none;font-weight: none;line-height: 140%;}
+        #offreDetails .recordset td span.annjobdetails {color:#666; display:block;margin:6px 35px 0 12px;padding: 0 0 0 12px;border-left-style:solid;border-left-width:thin;border-left-color:#B2B2B2;text-decoration: none;font-size:9pt;text-align: left; line-height: 1.25em;font-size: 12px;font-weight: none;}
+        
+        #offreDetails .recordset td.lastlinejobd {padding:12px 15px 5px 12px;line-height: 1.3em;font-family:"lucida grande",tahoma,verdana, Arial, Helvetica, sans-serif;color:#909090;text-align:left;font-size:11px;}
+        #offreDetails .recordset td.lastlinejobd a {color:#909090;text-decoration:underline;}
+        #offreDetails .recordset td.lastlinejobd .nbpers {font-weight: none;color:#666;text-decoration:none;}
+        
+        #offreDetails .recordset td.favlinejobd {padding:0 35px 12px 12px;} 
+        #offreDetails .recordset td.btnjobd, .recordset td.logojobd { padding:25px 15px 0 0; }
+        #offreDetails .recordset td.logojobd img {padding:12px 12px 0  0;}
+        td.recordlight div.text table, td.record div.text table {margin:5px 0;}
+        
+/*** tableau triable ***/
+    /**** FIN Sortable 1 ****/
+        table.sortablerecordset {margin: 20px auto;}
+        table.sortablerecordset tr.onTop td {background-color: #ffc; border-top: 1px solid #ff6; border-bottom: 1px solid #ff6;}
+        #offreDetails tr.onTop td.recordlight,
+        #offreDetails tr.onTop td.record {background-color: #ffc;}
+        #offreDetails table tr.activeLine td.recordlight,
+        #offreDetails table tr.activeLine td.record{background-color: @grayLighter !important;}
+        #offreList table tr.activeLine td.recordlight,
+        #offreList table tr.activeLine td.record{background-color: @grayLighter !important;}
+
+        table.sortablerecordset td.record,
+        table.sortablerecordset td.recordlight { padding: 5px;}
+        table.sortablerecordset td.record{vertical-align: top;}
+        table.sortablerecordset td.record div,
+        table.sortablerecordset td.recordlight div {font-size: 12px;}
+        table.sortablerecordset td div.outLink {width: 20px !important; white-space:nowrap;}
+        table.sortablerecordset td div.outLink a.main {position: relative; left: -0.5ex;}
+
+        table.sortablerecordset td.whitekey {outline: none; background: @blueLighter url(/v_img/emplois/bkg_td.gif) top left repeat-x; font-weight: bold;}
+        table.sortablerecordset td.whitekey, table.sortablerecordset td {border-left: 1px solid #d8d8d8; text-align: left; font-size: 12px;color: #696969;}
+        table.sortablerecordset td.whitekey:first-child,
+        table.sortablerecordset td:first-child {border-left: 1px solid #F8F8F8;}
+        table.sortablerecordset td.order-desc a, table.sortablerecordset td.order-asc a {float: left;}
+        
+        table.sortablerecordset td.whitekey a {outline: none;padding:5px 12px; display: block; margin: 0 auto; text-align: left; color: #696969; text-decoration: underline;/* background: transparent url(/v_img/espacecarriere/orderable.gif) center left no-repeat;*/}
+        table.sortablerecordset td.whitekey b {display:block;margin:0 12px;}
+        table.sortablerecordset td.whitekey b.firstTitle {display:block;margin-top:5px;margin-right:12px;}
+        table.sortablerecordset td.whitekey b.lastTitle {display:block;margin-top:5px;margin-right:12px;}
+        table.sortablerecordset td.whitekey img.leftCorner { float:left; }
+        table.sortablerecordset td.whitekey img.rightCorner {float:right; }
+        
+        table.sortablerecordset td.whitekey a.order-desc { padding: 5px 33px 5px 12px;height:15px;outline: none; background-image: url(/v_img/emplois/td_selected.gif);background-position: right -25px;}
+        table.sortablerecordset td.whitekey a.order-asc { padding: 5px 33px 5px 12px;height:15px;outline: none;background-image: url(/v_img/emplois/td_selected.gif);background-position: right 0;}
+        
+        table.sortablerecordset td a.toggle {padding-right: 16px; background: transparent url(/v_img/espacecarriere/plus-icon.gif) center right no-repeat;}
+        table.sortablerecordset td ul {padding-top: 5px;}
+        table.sortablerecordset td ul.dates-invisibles {display: none;}
+
+    /**** Sortable2****/
+        table.sortablerecordset2 td {height:33px}
+        table.sortablerecordset2 td.whitekey {background-image:url(/v_img/emplois/bkg_td2.gif);}        
+        table.sortablerecordset2 td.whitekey a {outline: none;padding:5px 12px; display: block; margin: 0 auto; text-align: left; color: #696969; text-decoration: underline;/* background: transparent url(/v_img/espacecarriere/orderable.gif) center left no-repeat;*/}
+        table.sortablerecordset2 td.whitekey b {display:block;margin:0 12px;}
+        table.sortablerecordset2 td.whitekey b.firstTitle {display:block;margin-top:3px;margin-right:12px;}
+        table.sortablerecordset2 td.whitekey b.lastTitle {display:block;margin-top:3px;margin-right:12px;}
+        table.sortablerecordset2 td.whitekey    img.leftCorner { float:left; }
+        table.sortablerecordset2 td.whitekey    img.rightCorner {float:right; }
+        
+        /*Selecteur de trie down */
+        table.sortablerecordset sortablerecordset2 td.whitekey a.order-desc { padding: 5px 33px 5px 12px;height:15px;outline: none; background-image: url(/v_img/emplois/td_selected.gif);background-position: right -25px;}
+        
+        /*Selecteur de trie up */
+        table.sortablerecordset sortablerecordset2 td.whitekey a.order-asc { padding: 5px 33px 5px 12px;height:15px;outline: none;background-image: url(/v_img/emplois/td_selected.gif);background-position: right 0;}
+
+    /**** sortable N ****/
+            /* common */
+            table.sortable-N {border-collapse: separate;}
+            
+            /* habillage header */
+            table.sortable-N tr.sortableHeader th {background: #ECECEC url(/v_img/visuel/bg-sortableHeader.gif) top left repeat-x; padding: 0; border-width: 1px 1px 1px 0; border-style: solid; border-color: #CCC;}
+            table.sortable-N tr.sortableHeader th.firstKey {border-left-width: 1px;}
+            table.sortable-N tr.sortableHeader th.order {background-image: url(/v_img/visuel/bg-sortableHeader-active.gif); background-color: #fff;}
+            table.sortable-N tr.sortableHeader th a,
+            table.sortable-N tr.sortableHeader th span {display: block; padding: 6px; background-color: transparent; background-position: center right; background-repeat: no-repeat; color: #444;}
+            table.sortable-N tr.sortableHeader th a.main {color: #444; text-decoration: underline;}
+            table.sortable-N tr.sortableHeader th.asc a {background-image: url(/v_img/visuel/arrow-up.gif); padding-right: 18px;}
+            table.sortable-N tr.sortableHeader th.desc a {background-image: url(/v_img/visuel/arrow-down.gif); padding-right: 18px;}
