@@ -34,7 +34,12 @@ tetra.view.register('popin', {
 						}
 					}
 				},
-				
+				window:{
+					'keyup' : function(e){
+						if(e.keyCode == 27)
+							app.notify('popin: close');
+					}
+				},
 				controller: {
 					'start loading': function() {
 						me.methods.clear();
