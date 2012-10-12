@@ -1467,6 +1467,51 @@ width = 2400;
 unicode = 0076;
 },
 {
+glyphname = w;
+lastChange = "2012-10-12 15:53:33 +0000";
+layers = (
+{
+anchors = (
+{
+name = top;
+position = "{300, 2400}";
+}
+);
+layerId = "B666C820-39E7-4854-9B1A-8391CFDDE462";
+name = Regular;
+paths = (
+{
+closed = 1;
+nodes = (
+"500 300 LINE",
+"500 0 LINE",
+"1900 0 LINE",
+"1900 300 LINE",
+"2100 300 LINE",
+"2100 -200 LINE",
+"300 -200 LINE",
+"300 300 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"1200 300 LINE",
+"1650 800 LINE",
+"1350 800 LINE",
+"1350 1100 LINE",
+"1050 1100 LINE",
+"1050 800 LINE",
+"750 800 LINE"
+);
+}
+);
+width = 2400;
+}
+);
+unicode = 0077;
+},
+{
 glyphname = z;
 lastChange = "2012-10-05 16:02:42 +0000";
 layers = (
