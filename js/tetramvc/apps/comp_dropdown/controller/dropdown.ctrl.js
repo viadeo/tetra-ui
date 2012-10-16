@@ -9,7 +9,14 @@ tetra.controller.register('dropdown', {
 					'share btn through apps' : function (param) {
 						page.notify('retrieve btn from dropdown comp', param);
 					}
+				},
+
+				controller : {
+					'dropdown: close all': function(){
+						app.notify('close all');
+					}
 				}
+				
 			},
 			
 			methods : {

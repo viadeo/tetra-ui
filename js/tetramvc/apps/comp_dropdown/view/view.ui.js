@@ -46,6 +46,10 @@ tetra.view.register('view', {
 			},			
 			
 			controller : {
+				'close all' : function(){
+					_('.dd-btn').removeClass("active");
+                                	_('.dd').removeClass("open");
+				}
 			}
 		},
 		
