@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Tetra UI</title>
+<link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/img/logo/favicon.ico" />
+
+<link rel="stylesheet" href="/tetra-ui/dist/tetra-ui-doc-1.0.0.min.css" />
+
+<script src="/tetra-ui/lib/jquery/jquery.min.js"></script>
+
+<script src="/tetra-ui/lib/tetra/tetra-core.min.js"></script>
+<script src="/tetra-ui/js/tetra-start.js"></script>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="header">
+    <div class="fixed-container">
+        <a href="./" class="fl"><img src="/tetra-ui/img/logo/viadeo.png" /></a>
+        <a href="https://github.com/viadeo/tetra-ui" class="fr mts github">Tetra UI on GitHub</a>
+    </div>
+</div>
+
+<div class="headline">
+    <div class="fixed-container">
+        <h1>
+          Tetra UI: a smart, easy-to-use toolkit
+          <span class="sub">for creating rich interfaces in lightning speed!</span>
+        </h1>
+    </div>
+    <span class="arrow">&#780;</span>
+</div>
+
+<div class="content fixed-container">
+
+<form class="core-form form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Text input</label>
+    <div class="controls">
+      
+      <div class="autocomplete" id="autocomplete-sample-1">
+          <input type="text" class="bootnode"
+            data-view="comp_autocomplete/autocomplete"
+            data-url="/tetra-ui/playground/autocomplete/autocomplete-fake.json"
+            data-event="focus"
+            data-min-length="1"
+          />
+          
+          <ul class="autocomplete-menu"></ul>
+          
+          <script id="tmpl_completion" type="text/html">
+          {% for (var i in data) { %}
+            <li data-value="{%= data[i].fullName %}">
+              {%= data[i].fullName %} - {%= data[i].headline %}
+            </li>
+          {% } %}
+        </script>
+      </div>
+      
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
