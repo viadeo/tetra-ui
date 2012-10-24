@@ -1,68 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>Tetra UI</title>
-<link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/img/logo/favicon.ico" />
+	<head>
+		<meta charset="utf-8" />
+		<title>Tetra UI</title>
+		<link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/img/logo/favicon.ico" />
+		<link rel="stylesheet" href="/tetra-ui/dist/tetra-ui-doc-1.0.0.min.css" />
+		<script src="/tetra-ui/lib/jquery/jquery.min.js"></script>
+		<script src="/tetra-ui/lib/tetra/tetra-core.min.js"></script>
+		<script src="/tetra-ui/js/tetra-start.js"></script>
+	</head>
 
-<link rel="stylesheet" href="/tetra-ui/dist/tetra-ui-doc-1.0.0.min.css" />
+	<body>
 
-<script src="/tetra-ui/lib/jquery/jquery.min.js"></script>
+		<div class="wrap">
 
-<script src="/tetra-ui/lib/tetra/tetra-core.min.js"></script>
-<script src="/tetra-ui/js/tetra-start.js"></script>
-</head>
+			<div class="header">
+				<div class="plxl prxl">
+					<a href="./" class="fl"><img src="/tetra-ui/img/logo/viadeo.png" /></a>
+				</div>
+			</div>
 
-<body>
+			<div class="content">
 
-<div class="wrap">
+				<form class="core-form form-horizontal paxl">
 
-<div class="header">
-    <div class="fixed-container">
-        <a href="./" class="fl"><img src="/tetra-ui/img/logo/viadeo.png" /></a>
-        <a href="https://github.com/viadeo/tetra-ui" class="fr mts github">Tetra UI on GitHub</a>
-    </div>
-</div>
-
-<div class="headline">
-    <div class="fixed-container">
-        <h1>
-          Tetra UI: a smart, easy-to-use toolkit
-          <span class="sub">for creating rich interfaces in lightning speed!</span>
-        </h1>
-    </div>
-    <span class="arrow">&#780;</span>
-</div>
-
-<div class="content fixed-container">
-
-<form class="core-form form-horizontal">
-  <div class="control-group">
-    <label class="control-label">Text input</label>
-    <div class="controls">
-      
-      <div class="autocomplete" id="autocomplete-sample-1">
-          <input type="text" class="bootnode"
-            data-view="comp_autocomplete/autocomplete"
-            data-url="/tetra-ui/playground/autocomplete-fake.json"
-            data-event="focus"
-            data-min-length="1"
-          />
+					<div class="control-group">
+						<label class="control-label">Text input</label>
+						<div class="controls">
+     
+							<div class="autocomplete" id="autocomplete-sample-1">
+								
+								<input type="text" class="bootnode"
+									data-view="comp_autocomplete/autocomplete"
+									data-suggest-container-id="autocomplete-suggestions"
+									data-suggest-template-ref="completion1"
+									data-url="/tetra-ui/playground/autocomplete-fake.json"
+									data-event="focus"
+									data-min-length="1"
+								/>
           
-          <ul class="autocomplete-menu"></ul>
-          
-          <script id="tmpl_completion" type="text/html">
-          {% for (var i in data) { %}
-            <li data-value="{%= data[i].fullName %}">
-              {%= data[i].fullName %} - {%= data[i].headline %}
-            </li>
-          {% } %}
-        </script>
-      </div>
+ 								<ul class="autocomplete-menu" id="autocomplete-suggestions"></ul>
       
-    </div>
-  </div>
-</form>
+								<script id="tmpl_completion1" type="text/html">
+								{% for (var i in data) { %}
+									<li data-value="{%= data[i].fullName %}" data-ref="{%= data[i].ref %}">
+										{%= data[i].fullName %} ({%= data[i].email %})
+									</li>
+								{% } %}
+								</script>
 
-</body>
+							</div>
+						
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label">Text input 2</label>
+						<div class="controls">
+
+ 							<div class="autocomplete" id="autocomplete-sample-2">
+          
+								<input type="text" class="bootnode"
+									data-view="comp_autocomplete/autocomplete"
+									data-suggest-container-id="autocomplete-suggestions-2"
+									data-suggest-template-ref="completion2"
+            								data-url="/tetra-ui/playground/autocomplete-fake2.json"
+            								data-event="focus"
+									data-min-length="1"
+								/>
+
+          							<ul class="autocomplete-menu" id="autocomplete-suggestions-2"></ul>
+            
+								<script id="tmpl_completion2" type="text/html">
+								{% for (var i in data) { %}
+									<li data-value="{%= data[i].fullName %}" data-ref="{%= data[i].ref %}">
+									{%= data[i].fullName %} - <strong>{%= data[i].headline %}</strong>
+									</li>
+								{% } %}
+								</script>
+
+							</div>
+      
+ 						</div>
+
+					</div>
+
+				</form>
+
+				<p id="selectedItemName" class="plxl prxl" style="display:none;">(Other app) Last selected item is : <span class="ui-label name"></span> from <code class="origin"></code></p>
+
+			</div>
+		</div>
+
+		<script>
+
+			tetra.view.register('current status', {
+				scope : 'status',
+				constr : function(me, app, _){ return {
+					events : {
+						controller : {
+							'display last selected member name' : function(param){
+								var container = _('#selectedItemName');
+								container.find('.name').html(param.name);
+								container.find('.origin').html(param.origin);
+								container.fadeIn();
+							}
+						}
+					}
+				}}
+			});
+			
+			tetra.controller.register('current status', {
+				scope : 'status',
+					constr : function(me, app, page, orm){ return {
+		                        events : {
+						controller : {
+							'autocomplete: item selected' : function(details){
+								console.log(details);
+								app.notify('display last selected member name', {name : details.obj.fullName, origin : details.origin});
+							}
+						}
+					}
+				}}
+			});
+
+		</script>
+
+	</body>
 </html>

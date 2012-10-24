@@ -1,51 +1,54 @@
 tetra.controller.register('autocomplete', {
 	scope: 'comp_autocomplete',
-	use: ['autocomplete'], // required models
+	use: ['suggestions'],
 	
 	constr: function(me, app, page, orm) {
+		
 		return {
 			events: {
-				model: { // events received from model
-					'autocomplete': { // model name
-						
-						'fetch': function(cond) {
-							
-						},
-						
+
+				model: {
+					'suggestions': {
 						'append': function(col) {
-							app.notify('autocomplete: display completion', col[0].get('completion'));
+							app.notify('display suggestions', col[0].getAll());
 						}
-						
 					}
 				},
 				
-				view: { // events received from view or third party controllers
+				view: {
 					
-					'autocomplete: show': function(data) {
-						
-						orm('autocomplete').fetch({
-							param: data.param,
-							uriParams: {
-								url: data.url
-							},
-							id: data.id
-						});
+					'do query': function(data) {
+
+						orm('suggestions').select({
+                                                        param: data.param,
+                                                        uriParams: {
+                                                                url: data.url
+                                                        },
+                                                        id: data.id
+                                                });
 						
 					},
 					
-					'autocomplete: set value': function(data) {
-						
-						app.notify('autocomplete: display value', data);
-						
+					'select suggestion': function(data) {
+
+						var
+							packRef = data.ref.split(':')[0],
+							objRef = data.ref.split(':')[1]
+						;
+
+						orm('suggestions').findByRef(packRef, function(pack){
+							page.notify('autocomplete: item selected', {
+								obj : pack.get('suggestions').data[objRef],
+								origin : data.id
+							});
+						});
+
+						app.notify('display value', data);
 					}
 					
 				}
-			},
-			
-			methods: {
-				init: function() {
-				}
 			}
+			
 		};
 	}
 });
