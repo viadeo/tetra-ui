@@ -18,15 +18,15 @@ tetra.controller.register('autocomplete', {
 				view: {
 					
 					'do query': function(data) {
-
-						orm('suggestions').select({
-                                                        param: data.param,
-                                                        uriParams: {
-                                                                url: data.url
-                                                        },
-                                                        id: data.id
-                                                });
-						
+						me.methods.startCountDown(function(data){
+							orm('suggestions').select({
+                                                	        param: data.param,
+                                                	        uriParams: {
+                                                	                url: data.url
+                                                	        },
+                                                	        id: data.id
+                                                	});
+						}, data);
 					},
 					
 					'select suggestion': function(data) {
@@ -46,6 +46,18 @@ tetra.controller.register('autocomplete', {
 						app.notify('display value', data);
 					}
 					
+				}
+			},
+			methods : {
+				init : function(){
+					me.delay = 150; // default delay before sending server-side request
+					me.countDown = null;
+				},
+				startCountDown : function(callback, data){
+					// cancel previous counter if it exists
+					if(me.countDown) { window.clearTimeout(me.countDown) }
+					// set a new counter
+					me.countDown = window.setTimeout(callback, me.delay, data);
 				}
 			}
 			
