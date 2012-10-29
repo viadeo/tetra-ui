@@ -50,14 +50,18 @@ tetra.controller.register('autocomplete', {
 			},
 			methods : {
 				init : function(){
-					me.delay = 150; // default delay before sending server-side request
+					me.defaultTypingDelay = 150; // default delay before sending server-side request
 					me.countDown = null;
 				},
 				startCountDown : function(callback, data){
+					// it is considered that user types only one field at a time, so no need to consider origin
 					// cancel previous counter if it exists
-					if(me.countDown) { window.clearTimeout(me.countDown) }
+					if(me.countDown) { window.clearTimeout(me.countDown); console.log('cancelled timer'); }
+					// updates typing delay if precised
+					var typingDelay = (typeof data.typingDelay === 'number') ? data.typingDelay : me.defaultTypingDelay;
+					if(data.typingDelay) {  }
 					// set a new counter
-					me.countDown = window.setTimeout(callback, me.delay, data);
+					me.countDown = window.setTimeout(callback, typingDelay, data);
 				}
 			}
 			

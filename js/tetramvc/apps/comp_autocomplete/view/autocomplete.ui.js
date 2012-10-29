@@ -77,7 +77,8 @@ tetra.view.register('autocomplete', {
 										app.notify('do query', {
 											url: elm.attr('data-url'),
 											param: elm.val(),
-											id: containerId
+											id: containerId,
+											typingDelay : elm.attr('data-typing-delay') || undefined	
 										});
 									}
 									break;
