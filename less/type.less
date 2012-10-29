@@ -62,6 +62,12 @@ h6, .h6 {
    text-transform: uppercase;
 }
 
+.subh-divider {
+  padding-bottom: @spacingXs;
+  border-bottom: 1px solid @panelBorder;
+  font-size: 14px;
+}
+
 // Lists
 ul.link-list {
    list-style: none;
@@ -100,6 +106,17 @@ ul.list-disc li {
    border-top: 1px solid #E6EAED;
    background: #F7F9FA;
    padding: @spacingS;
+}
+
+// Horizontal dividers
+.divider-before {
+  padding-top: @spacingS;
+  border-top: 1px dotted @borderColor;
+}
+
+.divider-after {
+  padding-bottom: @spacingS;
+  border-bottom: 1px dotted @borderColor;
 }
 
 // Emphasis
