@@ -56,10 +56,9 @@ tetra.controller.register('autocomplete', {
 				startCountDown : function(callback, data){
 					// it is considered that user types only one field at a time, so no need to consider origin
 					// cancel previous counter if it exists
-					if(me.countDown) { window.clearTimeout(me.countDown); console.log('cancelled timer'); }
+					if(me.countDown) { window.clearTimeout(me.countDown); }
 					// updates typing delay if precised
-					var typingDelay = (typeof data.typingDelay === 'number') ? data.typingDelay : me.defaultTypingDelay;
-					if(data.typingDelay) {  }
+					var typingDelay = (typeof data.typingDelay != 'undefined') ? data.typingDelay : me.defaultTypingDelay;
 					// set a new counter
 					me.countDown = window.setTimeout(callback, typingDelay, data);
 				}
