@@ -129,3 +129,44 @@ h1 .sub {
   #gradient > .vertical(lighten(@blueBright, 10%), @blueBright);
   border-color: @blueBright;
 }
+
+.ui-tag {
+  display: inline-block;
+  margin: 0 @spacingXs @spacingXs 0;
+  padding: @spacingXs @spacingS;
+  border: 1px solid lighten(@borderColor, 5%);
+  border-radius: @borderRadiusS;
+  background: lighten(@borderColor, 10%);
+  white-space: nowrap;
+
+  .remove {
+    position: relative;
+    display: inline-block;
+    margin: 0 -1*@spacingXs 0 @spacingXs;
+    padding: 0 0 0 @spacingXs;
+    border-left: 1px solid @white;
+
+    &:before {
+      content: '';
+      position: absolute; left: -2px; top: 0;
+      width: 0; height: 100%;
+      border-left: 1px solid lighten(@grayLight, 10%);
+    }
+
+    .vicon {
+      width: 15px; height: 15px;
+      background: darken(@grayLight, 15%);
+      border-radius: 7px;
+      font-size: 6px;
+      color: white;
+      vertical-align: top;
+      line-height: 15px;
+    }
+
+    &:hover {
+      .vicon {
+        background: @gray;
+      }
+    }
+  }
+}
