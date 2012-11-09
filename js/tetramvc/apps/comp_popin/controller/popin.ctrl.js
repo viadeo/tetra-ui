@@ -45,13 +45,18 @@ tetra.controller.register('popin', {
 					}
 				},
 				
-				controller: { // events received from view or third party controllers
+				controller: {
 					'popin: loading': function(data) {
 						app.notify('start loading');
 					},
 					'popin: set content': function(data) {
 						me.methods.setContent(data);
-						
+					},
+					'popin: close': function() {
+						app.notify('clear', {
+							url: me.url,
+							id: me.id
+						});
 					}
 				}
 			},
