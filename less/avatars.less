@@ -11,17 +11,21 @@
 	img {
 	 display: block;
    background-color: @avatarBg;
+   .transition(background-color 0.2s);
   }
-}
 
-a.avatar {
-  img {
-    .transition(background-color 0.2s);
-  }
-  
   &:hover {
     border-color: @grayLight;
     
+    img {
+      background-color: darken(@avatarBg, 5%);
+    }
+  }
+}
+
+a:hover {
+  .avatar {
+    border-color: @grayLight;
     img {
       background-color: darken(@avatarBg, 5%);
     }
