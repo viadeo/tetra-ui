@@ -54,31 +54,58 @@
     <p>A panel is a simple helpful CSS class that enables to easily outline sections of the page.</p>
   </div>
   
-  <div class="gu gu-last">
-    <div class="panel mbl">
-      Hello! I'm in a panel.
+  <div class="gu gu-last gr grsxl">
+    <div class="gu gu-1of2 ptxs">
+      <div class="panel mbl">Hello! I'm in a panel.</div>
+      <div class="divider-before mbl">I have a divider before.</div>
+      <div class="divider-after">I have a divider after.</div>
     </div>
 
-    <div class="divider-before mbl">
-      I have a divider before.
-    </div>
+    <div class="gu gu-last">
+      <pre><code class="language-markup">&lt;div class="panel"&gt;Panel&lt;/div&gt;
 
-    <div class="divider-after">
-      I have a divider after.
-    </div>
+&lt;div class="divider-before"&gt;Divider before&lt;/div&gt;
 
+&lt;div class="divider-after"&gt;Divider after&lt;/div&gt;</code></pre>
+    </div>
   </div>
 </div>
 
 <div class="gr grsxl mtxl">
-  <h2>Labels, badges, tags</h2>
+  <h2>Badges</h2>
   
   <div class="gu gu-1of5">
-    <p>Labels are used to highlight keywords and tags, they optionally have a remove button. Badges are used as notifications alerts.</p>
+    <p>Badges are used as notification indicators (new messages, new requests).</p>
   </div>
   
   <div class="gu gu-last gr grsxl">
-    <div class="gu gu-1of3">
+    <div class="gu gu-1of2">
+      <span class="ui-badge">1</span>
+      <span class="ui-badge">12</span>
+      <span class="ui-badge">123</span>
+
+      <pre><code class="language-markup">&lt;span class="ui-badge"&gt;123&lt;/span&gt;</code></pre>
+    </div>
+
+    <div class="gu gu-last">
+      <span class="ui-badge ui-badge-alt">1</span>
+      <span class="ui-badge ui-badge-alt">12</span>
+      <span class="ui-badge ui-badge-alt">123</span>
+
+      <pre><code class="language-markup">&lt;span class="ui-badge ui-badge-alt"&gt;123&lt;/span&gt;</code></pre>
+    </div>
+  </div>
+</div>
+
+<div class="gr grsxl mts">
+  <h2>Labels</h2>
+  
+  <div class="gu gu-1of5">
+    <p>Labels are essentially used for clickable keywords.</p>
+  </div>
+  
+  <div class="gu gu-last gr grsxl">
+    <div class="gu gu-1of2">
     
       <span class="ui-label"><a href="">Lorem</a></span>
       <span class="ui-label"><a href="">Ipsum</a></span>
@@ -88,9 +115,12 @@
       <span class="ui-label"><a href="">Consectetur</a></span>
       <span class="ui-label"><a href="">Adipiscing</a></span>
       
+      <pre><code class="language-markup">&lt;span class="ui-label"&gt;
+  &lt;a href=""&gt;Adipiscing&lt;/a&gt;
+&lt;/span&gt;</code></pre>
     </div>
     
-    <div class="gu gu-1of3">
+    <div class="gu gu-last">
     
       <span class="ui-label">
         <a href="">Lorem</a>
@@ -116,29 +146,46 @@
         <a href="">Consectetur</a>
         <a href=""><i class="vicon">&times;</i></a>
       </span>
+      <span class="ui-label">
+        <a href="">Adipiscing</a>
+        <a href=""><i class="vicon">&times;</i></a>
+      </span>
       
+      <pre><code class="language-markup">&lt;span class="ui-label"&gt;
+  &lt;a href=""&gt;Adipiscing&lt;/a&gt;
+  &lt;a href=""&gt;&lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;&lt;/a&gt;
+&lt;/span&gt;</code></pre>
     </div>
+  </div>
+</div>
+
+<div class="gr grsxl">
+  <h2>Tags</h2>
+  
+  <div class="gu gu-1of5">
+    <p>Tags are not clickable, they only have a remove button.</p>
+  </div>
+  
+  <div class="gu gu-last gr grsxl">
+    <div class="gu gu-1of2 ptxs">
     
-    <div class="gu gu-last">
-    
-      <span class="ui-badge">1</span>
-      <span class="ui-badge">12</span>
-      <span class="ui-badge">123</span>
-      
-      <span class="mhm"></span>
-
-      <span class="ui-badge ui-badge-alt">1</span>
-      <span class="ui-badge ui-badge-alt">12</span>
-      <span class="ui-badge ui-badge-alt">123</span>
-
-    </div>
-
-    <div class="gu gu-1of2 mtl">
       <span class="ui-tag">Lorem ipsum <a href="" class="remove"><i class="vicon">&times;</i></a></span>
       <span class="ui-tag">Consectetur <a href="" class="remove"><i class="vicon">&times;</i></a></span>
       <span class="ui-tag">Sed do <a href="" class="remove"><i class="vicon">&times;</i></a></span>
       <span class="ui-tag">Magna aliqua <a href="" class="remove"><i class="vicon">&times;</i></a></span>
       <span class="ui-tag">Voluptate <a href="" class="remove"><i class="vicon">&times;</i></a></span>
+      
+    </div>
+    
+    <div class="gu gu-last">
+      
+      <pre><code class="language-markup">&lt;span class="ui-tag"&gt;
+  Lorem ipsum
+  &lt;a href="" class="remove"&gt;
+    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
+  &lt;/a&gt;
+&lt;/span&gt;</code></pre>
+
     </div>
   </div>
 </div>
