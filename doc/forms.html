@@ -431,7 +431,7 @@
   <div class="gu gu-last">
     <form class="core-form form-horizontal">
       <div class="control-group">
-        <label class="control-label">Custom radio buttons</label>
+        <label class="control-label">Horizontal radio buttons</label>
         <div class="controls">
           <label class="radio inline custom-radio mrl">
             <input type="radio" name="customRadioButtons1" checked="checked" />
@@ -452,7 +452,7 @@
       </div>
 
       <div class="control-group">
-        <label class="control-label">Custom radio buttons</label>
+        <label class="control-label">Vertical radio buttons</label>
         <div class="controls">
           <label class="radio custom-radio">
             <input type="radio" name="customRadioButtons2" checked="checked" />
@@ -472,7 +472,41 @@
         </div>
       </div>
     </form>
-  </div>  
+  </div>
+
+  <div class="gu gu-1of4">
+    <p>Just add a
+      <code class="language-markup">custom-radio</code>
+      class to your existing
+      <code class="language-markup">&lt;label class="radio"&gt;</code>,
+      and juste before your label text add a
+      <code class="language-markup">&lt;span class="custom-radio-element"&gt;</code>
+    </p>
+  </div>
+
+  <div class="gu gu-last">
+    <pre><code class="language-markup">&lt;form class="core-form form-horizontal"&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label"&gt;Custom radio buttons&lt;/label&gt;
+    &lt;div class="controls"&gt;
+
+      &lt;label class="radio inline custom-radio"&gt;&lt;!-- Add the inline class for horizontal --&gt;
+        &lt;input type="radio" name="customRadioButtons1" checked="checked" /&gt;
+        &lt;span class="custom-radio-element"&gt;&lt;/span&gt;&lt;!-- This must be just before your text --&gt;
+        Option one
+      &lt;/label&gt;
+
+      &lt;label class="radio inline custom-radio"&gt;
+        &lt;input type="radio" name="customRadioButtons1" /&gt;
+        &lt;span class="custom-radio-element"&gt;&lt;/span&gt;
+        Option two
+      &lt;/label&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
 </div>
 
 <!--[if gt IE 8]><!--><script>Prism.highlightAll();</script><!--<![endif]-->
