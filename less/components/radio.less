@@ -1,0 +1,32 @@
+// Custom radio buttons
+
+// rule filter to block browsers that don't support that selector from applying rules they shouldn't
+.custom-radio:not(#unsupported) {
+	cursor: pointer;
+
+	input {
+		opacity: 0;
+		width: 20px;
+	}
+
+	.custom-radio-element {
+		display: inline-block;
+		width: 0.7em; height: 0.7em;
+		margin: 0 @spacingXs 2px -20px;
+		border: 3px solid @white;
+		border-radius: 50%;
+		background-color: @white;
+		vertical-align: middle;
+		box-shadow: 0 0 0 1px @grayLight;
+	}
+
+	&:hover {
+		.custom-radio-element {
+			box-shadow: 0 0 0 1px @gray;
+		}
+	}
+
+	input:checked + .custom-radio-element {
+		background-color: @baseFontColor;
+	}
+}
