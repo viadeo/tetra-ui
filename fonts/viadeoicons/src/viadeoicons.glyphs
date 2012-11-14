@@ -22,6 +22,64 @@ xHeight = 2400;
 );
 glyphs = (
 {
+glyphname = L;
+lastChange = "2012-11-14 11:09:52 +0000";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{300, 0}";
+},
+{
+name = top;
+position = "{300, 2400}";
+}
+);
+layerId = "B666C820-39E7-4854-9B1A-8391CFDDE462";
+name = Regular;
+paths = (
+{
+closed = 1;
+nodes = (
+"923.926 1400 OFFCURVE",
+"700 1176.17 OFFCURVE",
+"700 900 CURVE SMOOTH",
+"700 425 OFFCURVE",
+"1200 -300 OFFCURVE",
+"1200 -300 CURVE SMOOTH",
+"1200 -300 OFFCURVE",
+"1700 450 OFFCURVE",
+"1700 900 CURVE SMOOTH",
+"1700 1176.17 OFFCURVE",
+"1476.07 1400 OFFCURVE",
+"1200 1400 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"1061.91 700 OFFCURVE",
+"950 811.914 OFFCURVE",
+"950 950 CURVE SMOOTH",
+"950 1088.09 OFFCURVE",
+"1061.91 1200 OFFCURVE",
+"1200 1200 CURVE SMOOTH",
+"1338.09 1200 OFFCURVE",
+"1450 1088.09 OFFCURVE",
+"1450 950 CURVE SMOOTH",
+"1450 811.914 OFFCURVE",
+"1338.09 700 OFFCURVE",
+"1200 700 CURVE SMOOTH"
+);
+}
+);
+width = 2400;
+}
+);
+unicode = 004C;
+},
+{
 glyphname = a;
 lastChange = "2012-08-23 15:20:11 +0000";
 layers = (
