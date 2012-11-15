@@ -17,16 +17,16 @@
 		border-radius: 50%;
 		background-color: @white;
 		vertical-align: middle;
-		box-shadow: 0 0 0 1px @grayLight;
+		box-shadow: 0 0 0 1px @inputBorder;
 	}
 
 	&:hover {
 		.custom-radio-element {
-			box-shadow: 0 0 0 1px @gray;
+			box-shadow: 0 0 0 1px @inputBorderFocus;
 		}
 	}
 
 	input:checked + .custom-radio-element {
-		background-color: @baseFontColor;
+		background-color: @inputSelectedControl;
 	}
 }
