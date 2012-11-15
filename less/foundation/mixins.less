@@ -293,11 +293,10 @@
   input,
   select,
   textarea {
-    color: @textColor;
     border-color: @borderColor;
     &:focus {
       border-color: darken(@borderColor, 10%);
-      .box-shadow(0 0 6px lighten(@borderColor, 20%));
+      .box-shadow(0 0 6px fadeout(@borderColor, 40%));
     }
   }
   // Give a small background color for input-prepend/-append
