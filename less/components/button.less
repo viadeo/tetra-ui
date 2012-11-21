@@ -42,6 +42,16 @@
             vertical-align: text-top;
         }
     }
+
+    // Icon font
+    .vicon.btn-icon-first {
+        margin: 0 -2px 0 -7px;
+        font-size: 8px;
+    }
+    .vicon.btn-icon-last {
+        margin: 0 -7px 0 -2px;
+        font-size: 8px;
+    }
 }
 .btn-primary, .btn-secondary, .socialAction, .eventsAction {
     @_primaryBgColor:              @buttonPrimaryBgColor; // in browsers that don't support gradients this will be solid
@@ -102,9 +112,17 @@
     span, input, button { color: @_defaultTextColor; }
     _background-color: @_defaultBgColor!important;
     
+    .vicon {
+        color: @gray;
+    }
+
     &:hover {
         #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);
         color: @_defaultTextColor;
+
+        .vicon {
+            color: @_defaultTextColor;
+        }
     }
     &:active {
         #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);

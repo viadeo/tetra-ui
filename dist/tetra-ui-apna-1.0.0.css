@@ -4514,6 +4514,14 @@ i.vicon {
 .btn span img {
   vertical-align: text-top;
 }
+.btn .vicon.btn-icon-first {
+  margin: 0 -2px 0 -7px;
+  font-size: 8px;
+}
+.btn .vicon.btn-icon-last {
+  margin: 0 -7px 0 -2px;
+  font-size: 8px;
+}
 .btn-primary,
 .btn-secondary,
 .socialAction,
@@ -4676,6 +4684,10 @@ i.vicon {
 .secEventsAction button {
   color: #2e2e2e;
 }
+.btn-default .vicon,
+.secEventsAction .vicon {
+  color: #808080;
+}
 .btn-default:hover,
 .secEventsAction:hover {
   background-color: #d5d5d5;
@@ -4689,6 +4701,10 @@ i.vicon {
   background-image: linear-gradient(top, #e8e8e8, #d5d5d5);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#d5d5d5', GradientType=0);
   *filter: none;
+  color: #2e2e2e;
+}
+.btn-default:hover .vicon,
+.secEventsAction:hover .vicon {
   color: #2e2e2e;
 }
 .btn-default:active,
