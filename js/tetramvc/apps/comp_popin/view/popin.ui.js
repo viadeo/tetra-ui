@@ -56,17 +56,21 @@ tetra.view.register('popin', {
 					},
 					'clear': function(data) {
 						if (data.id) { // putting back the popin content to where it was in the dom
-							var content = _('body .popin-container').html();
+							var content = _('.popin-container').html();
 							me.methods.clear();
 							_('#' + data.id).html(content);
 						} else {
 							me.methods.clear();
 						}
 					},
+					'fadeout': function(data) {
+						_('.popin-overlay').remove();
+						_('.popin-container .popin').addClass('popin-close-animation');
+					},
 					'load from dom': function(id) {
 						var content = _('#' + id).html();
 						_('#' + id).empty();
-						_('body .popin-container').html(content);
+						_('.popin-container').html(content);
 					}
 				}
 			},

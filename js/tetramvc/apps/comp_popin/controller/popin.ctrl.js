@@ -57,6 +57,21 @@ tetra.controller.register('popin', {
 							url: me.url,
 							id: me.id
 						});
+					},
+					'popin: fadeout': function() {
+						
+						app.notify('fadeout', {
+							url: me.url,
+							id: me.id
+						});
+
+						window.setTimeout(function() {
+							app.notify('clear', {
+								url: me.url,
+								id: me.id
+							});
+						}, 300);
+						
 					}
 				}
 			},

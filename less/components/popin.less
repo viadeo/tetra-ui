@@ -87,10 +87,15 @@
       border-top: 1px solid @panelBorder;
       background: @panelBackground;
     }
+
+    &.popin-close-animation {
+      -webkit-animation: popin-fadeout 0.3s;
+      -moz-animation: popin-fadeout 0.3s;
+    }
   }
 }
 
-/* Animations */
+// Animations
 
 .popin-overlay-fadein() {
   from {
@@ -119,3 +124,19 @@
 
 @-webkit-keyframes popin-fadein { .popin-fadein; }
 @-moz-keyframes popin-fadein { .popin-fadein; }
+
+.popin-fadeout() {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+  }
+}
+
+@-webkit-keyframes popin-fadeout { .popin-fadeout; }
+@-moz-keyframes popin-fadeout { .popin-fadeout; }
