@@ -4514,11 +4514,11 @@ i.vicon {
 .btn span img {
   vertical-align: text-top;
 }
-.btn .vicon.btn-icon-first {
+.btn .vicon.btn-icon-before {
   margin: 0 -2px 0 -7px;
   font-size: 8px;
 }
-.btn .vicon.btn-icon-last {
+.btn .vicon.btn-icon-after {
   margin: 0 -7px 0 -2px;
   font-size: 8px;
 }
