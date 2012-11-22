@@ -4911,6 +4911,13 @@ i.vicon {
   /* dropdown sub menu */
 
 }
+.dd .dd-btn .vicon {
+  margin: 0 -6px 0 -2px;
+  color: #404040;
+  line-height: 12px;
+  *line-height: 20px;
+  *margin-top: -3px;
+}
 .dd .dd-btn .arrow {
   background-position: -159px -48px;
   left: 3px;
