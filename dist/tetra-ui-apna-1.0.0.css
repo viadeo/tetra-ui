@@ -2966,16 +2966,6 @@ textarea {
 /* Text Alignment
  * ----------------------------------------------------------------- */
 .tac,
-.tal,
-.tar,
-.taj,
-.tai {
-  font-weight: inherit;
-  font-size: inherit;
-  color: inherit;
-  line-height: inherit;
-}
-.tac,
 .center {
   text-align: center;
 }
