@@ -3510,7 +3510,7 @@ pre {
 .core-form .control-group.error .input-prepend .add-on,
 .core-form .control-group.error .input-append .add-on {
   color: #c80000;
-  background-color: #ff0000;
+  background-color: #fff1f1;
   border-color: #c80000;
 }
 .core-form .control-group.success > label,
@@ -3630,7 +3630,6 @@ pre {
   font-weight: normal;
   line-height: 1.4em;
   text-align: center;
-  text-shadow: 0 1px 0 #ffffff;
   vertical-align: middle;
   background-color: #e6e6e6;
   border: 1px solid #ccc;
