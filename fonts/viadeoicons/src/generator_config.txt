@@ -2,4 +2,4 @@
 # Upload this file to the generator to recreate the settings
 # you used to create these fonts.
 
-{"mode":"expert","formats":["ttf","woff","eot"],"tt_instructor":"default","fallback":"none","fallback_custom":"100","options_subset":"advanced","subset_custom":"abcdefghlLmoprstvwz\u00d7+*\u2039\u203a\u00ab\u00bb","subset_custom_range":"","css_stylesheet":"stylesheet.css","filename_suffix":"","emsquare":"2400","spacing_adjustment":"0","rememberme":"Y"}
+{"mode":"expert","formats":["ttf","woff","eot"],"tt_instructor":"default","fallback":"none","fallback_custom":"100","options_subset":"advanced","subset_custom":"abcdefghlLmoprstvwz\u00d7+*\u2039\u203a\u00ab\u00bb\u2227\u2228","subset_custom_range":"","css_stylesheet":"stylesheet.css","filename_suffix":"","emsquare":"2400","spacing_adjustment":"0","rememberme":"Y"}
