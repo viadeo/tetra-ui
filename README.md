@@ -3,6 +3,10 @@ Tetra UI
 
 ## A smart, easy-to-use toolkit for creating rich interfaces in lightning speed!
 
+### Slides about Tetra.js & Tetra UI
+
+<http://viadeo.github.com/tetra-slides/2012-11-20/>
+
 ## Licence
 (The MIT License)
 
