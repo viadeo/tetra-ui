@@ -243,12 +243,14 @@
 <div class="gr grsl mtm">
     <div class="gu gu-1of5">
         <h2>Dropdowns</h2>
+        <p class="mbxs">Click events are preferred over mousover events.</p>
+        <p>The data-event property (click or mouseover) on the dropdown button is required to prevent conflict on multi event handler.</p>
     </div>
     <div class="gu gu-last">
         <h3 class="mbl">Standard dropdowns example with multi events and positions</h3>
         
-        <div class="clearfix">
-        
+        <div class="gr">
+          <div class="gu gu-1of5">
             <div class="dd">
                <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="comp_dropdown/view">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
@@ -257,6 +259,8 @@
                    <li class="dd-item"><a href="">dropdown item</a></li>
                </ul>
             </div>
+          </div>
+          <div class="gu gu-1of5">
             <div class="dd">
                <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-view="comp_dropdown/view">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
@@ -265,22 +269,28 @@
                    <li class="dd-item"><a href="">dropdown item</a></li>
                </ul>
             </div>
+          </div>
+          <div class="gu gu-1of5">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="comp_dropdown/view">Click &amp; pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="comp_dropdown/view">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                </ul>
             </div>
+          </div>
+          <div class="gu gu-1of5 tac">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-view="comp_dropdown/view">Mouseover &amp; pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-view="comp_dropdown/view">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                </ul>
             </div>
+          </div>
+          <div class="gu gu-last tar">
             <span>
                <a href="#" class="btn btn-default">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default btn-append" data-event="click" data-view="comp_dropdown/view"><i class="vicon">∨</i></a>
                    <ul class="dd-menu no-prevent">
@@ -290,9 +300,119 @@
                    </ul>
                </div>
             </span>
+          </div>
+        </div>
+
+        <div class="gr mts">
+          <div class="gu gu-1of5">
+            <div class="dd">
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="click" data-view="comp_dropdown/view">Click <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-1of5">
+            <div class="dd">
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="mouseover" data-view="comp_dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-1of5">
+            <div class="dd pull-right">
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="click" data-view="comp_dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-1of5 tac">
+            <div class="dd pull-right">
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="mouseover" data-view="comp_dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-last tar">
+            <span>
+               <a href="#" class="btn btn-primary">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-primary btn-append" data-event="click" data-view="comp_dropdown/view"><i class="vicon">∨</i></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                   </ul>
+               </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="gr mts">
+          <div class="gu gu-1of5">
+            <div class="dd">
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="click" data-view="comp_dropdown/view">Click <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-1of5">
+            <div class="dd">
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="mouseover" data-view="comp_dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+                   <li class="dd-item"><a href="">dropdown item</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-1of5">
+            <div class="dd pull-right">
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="click" data-view="comp_dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-1of5 tac">
+            <div class="dd pull-right">
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="mouseover" data-view="comp_dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <ul class="dd-menu no-prevent">
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+                   <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="gu gu-last tar">
+            <span>
+               <a href="#" class="btn btn-tertiary">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-tertiary btn-append" data-event="click" data-view="comp_dropdown/view"><i class="vicon">∨</i></a>
+                   <ul class="dd-menu no-prevent">
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                       <li class="dd-item"><a href="">dropdown item</a></li>
+                   </ul>
+               </div>
+            </span>
+          </div>
         </div>
         
-        <div class="clearfix mtm">
+        <div class="gr mtm">
+          <div class="gu gu-1of5 mls">
             <div class="dd mrxl">
                <a href="#" class="dd-btn bootnode" data-event="click" data-view="comp_dropdown/view">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
@@ -301,6 +421,8 @@
                    <li class="dd-item"><a href="">dropdown item</a></li>
                </ul>
             </div>
+          </div>
+          <div class="gu gu-1of5">
             <div class="dd mrxl">
                <a href="#" class="dd-btn bootnode" data-event="mouseover" data-view="comp_dropdown/view">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
@@ -309,29 +431,30 @@
                    <li class="dd-item"><a href="">dropdown item</a></li>
                </ul>
             </div>
+          </div>
+          <div class="gu gu-1of5">
             <div class="dd pull-right mrxl">
-               <a href="#" class="dd-btn bootnode" data-event="click" data-view="comp_dropdown/view">Click &amp; pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode" data-event="click" data-view="comp_dropdown/view">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                </ul>
             </div>
+          </div>
+          <div class="gu gu-1of5 tac">
             <div class="dd pull-right mrxl">
-               <a href="#" class="dd-btn bootnode" data-event="mouseover" data-view="comp_dropdown/view">Mouseover &amp; pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode" data-event="mouseover" data-view="comp_dropdown/view">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                </ul>
             </div>
-        </div>
-        <div class="mtm">
-            <p>The data-event property (click or mouseover) on the dropdown button is required to prevent conflict on multi event handler</p>
+          </div>
         </div>
 
-
-        <form class="core-form form-horizontal">
+        <form class="core-form form-horizontal mtl">
           <div class="control-group">
             <label class="control-label">Input + Dropdown button</label>
             <div class="controls">
