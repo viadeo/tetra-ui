@@ -4635,6 +4635,16 @@ i.vicon {
   border-color: #ffd04f;
   color: #f2b100;
 }
+.btn-primary.btn-disabled .vicon,
+.btn-secondary.btn-disabled .vicon,
+.socialAction.btn-disabled .vicon,
+.eventsAction.btn-disabled .vicon,
+.btn-primary.btn-loading .vicon,
+.btn-secondary.btn-loading .vicon,
+.socialAction.btn-loading .vicon,
+.eventsAction.btn-loading .vicon {
+  color: #f2b100;
+}
 .btn-primary.btn-loading span,
 .btn-secondary.btn-loading span,
 .socialAction.btn-loading span,
@@ -4744,6 +4754,12 @@ i.vicon {
   border-color: #d5d5d5;
   color: #c8c8c8;
 }
+.btn-default.btn-disabled .vicon,
+.secEventsAction.btn-disabled .vicon,
+.btn-default.btn-loading .vicon,
+.secEventsAction.btn-loading .vicon {
+  color: #c8c8c8;
+}
 .btn-tertiary {
   color: #ffffff;
   border: 1px solid #86b300;
@@ -4763,6 +4779,9 @@ i.vicon {
 .btn-tertiary span,
 .btn-tertiary input,
 .btn-tertiary button {
+  color: #ffffff;
+}
+.btn-tertiary .vicon {
   color: #ffffff;
 }
 .btn-tertiary:hover {
@@ -4811,6 +4830,10 @@ i.vicon {
 .btn-tertiary.btn-loading span {
   background-color: #91c200;
   border-color: #86b300;
+  color: #739a00;
+}
+.btn-tertiary.btn-disabled .vicon,
+.btn-tertiary.btn-loading .vicon {
   color: #739a00;
 }
 .btn-tertiary.btn-loading span,
@@ -4907,7 +4930,6 @@ i.vicon {
 }
 .dd .dd-btn .vicon {
   margin: 0 -6px 0 -2px;
-  color: #404040;
   line-height: 12px;
   *line-height: 20px;
   *margin-top: -3px;

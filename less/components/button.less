@@ -88,6 +88,9 @@
         	border-color: lighten(@_primaryBorderColor, 15%);
 	        color: darken(@_primaryBorderColor,3%);
         }
+        .vicon {
+            color: darken(@_primaryBorderColor,3%);
+        }
     }
     &.btn-loading,
     &.btn-loading:hover,
@@ -141,6 +144,9 @@
 	        border-color: @_defaultBorderColor;
 	        color: darken(@_defaultBorderColor,5%);
         }
+        .vicon {
+            color: darken(@_defaultBorderColor,5%);
+        }
     }
 }
 .btn-tertiary {
@@ -157,6 +163,10 @@
     #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
     _background-color: @_tertiaryBgColor!important;
     
+    .vicon {
+        color: @_tertiaryTextColor;
+    }
+
     &:hover {
         #gradient > .vertical(@_tertiaryStartColor, @_tertiaryHoverColor);
         border-color: @_tertiaryHoverColor;
@@ -178,6 +188,9 @@
 	        background-color: lighten(@_tertiaryEndColor,3%);
         	border-color: @_tertiaryBorderColor;
 	        color: darken(@_tertiaryBorderColor,5%);
+        }
+        .vicon {
+            color: darken(@_tertiaryBorderColor,5%);
         }
     }
     &.btn-loading,
