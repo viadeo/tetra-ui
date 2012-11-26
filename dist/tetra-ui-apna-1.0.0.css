@@ -4257,6 +4257,7 @@ i.vicon {
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
+  text-transform: none;
   pointer-events: none;
   -moz-transition: opacity .3s, margin .3s;
   -o-transition: opacity .3s, margin .3s;
