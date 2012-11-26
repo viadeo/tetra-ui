@@ -305,6 +305,17 @@
 	  .formFieldState(@successText, @successBorder, @successBackground);
 	}
 	
+	// Disabled
+	.control-group.disabled {
+		label {
+	  	color: lighten(@gray, 10%);
+	  	cursor: not-allowed;
+		}
+		.help-block, .help-inline {
+			color: lighten(@gray, 25%);
+		}
+	}
+
 	// HTML5 invalid states
 	// Shares styles with the .control-group.error above
 	input:focus:required:invalid,

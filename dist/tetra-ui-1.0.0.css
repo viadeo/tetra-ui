@@ -3534,6 +3534,14 @@ pre {
   background-color: #dff0d8;
   border-color: #65a900;
 }
+.core-form .control-group.disabled label {
+  color: #999999;
+  cursor: not-allowed;
+}
+.core-form .control-group.disabled .help-block,
+.core-form .control-group.disabled .help-inline {
+  color: #bfbfbf;
+}
 .core-form input:focus:required:invalid,
 .core-form textarea:focus:required:invalid,
 .core-form select:focus:required:invalid {
