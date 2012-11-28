@@ -2203,6 +2203,36 @@ width = 2400;
 }
 );
 unicode = 002B;
+},
+{
+glyphname = arrowboth;
+lastChange = "2012-11-28 11:01:11 +0000";
+layers = (
+{
+layerId = "B666C820-39E7-4854-9B1A-8391CFDDE462";
+name = Regular;
+paths = (
+{
+closed = 1;
+nodes = (
+"1600 600 LINE",
+"800 600 LINE",
+"1200 1100 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"1600 400 LINE",
+"800 400 LINE",
+"1200 -100 LINE"
+);
+}
+);
+width = 2400;
+}
+);
+unicode = 2194;
 }
 );
 instances = (

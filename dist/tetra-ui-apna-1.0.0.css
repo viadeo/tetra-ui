@@ -5475,6 +5475,13 @@ i.vicon {
 .paginator li.arrow.disabled .vicon {
   color: #bfbfbf;
 }
+.paginator li.arrow.selector a {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.paginator li.arrow.selector a .vicon {
+  margin: 0 0 0 -2px;
+}
 .paginator li.ellipsis span {
   margin: 0 5px;
   color: #bfbfbf;
