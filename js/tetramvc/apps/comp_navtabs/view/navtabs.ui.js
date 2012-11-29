@@ -9,8 +9,8 @@ tetra.view.register('navtabs', {
 					'click': {
 						'.nav-tabs a': function(e, elm) {
 							var data = {
-								url: _(elm).attr('href'),
-								targetId : _(elm).parents('.nav-tabs').attr('data-target-id')
+								url: elm.attr('href'),
+								targetId : elm.parents('.nav-tabs').attr('data-target-id')
 							};
 							
 							me.methods.setActiveTab(elm);
@@ -40,13 +40,10 @@ tetra.view.register('navtabs', {
 			
 			methods: {
 				init: function() {
-					me.target = undefined;
-					me.tabs = undefined;
-
-					_('.nav-tabs li:first-child a').click();
+					_('.nav-tabs li.active a').click();
 				},
 				setActiveTab: function(elm) {
-					_(elm).parent().addClass('active').siblings().removeClass('active');
+					elm.parent().addClass('active').siblings().removeClass('active');
 				}
 			}
 		};
