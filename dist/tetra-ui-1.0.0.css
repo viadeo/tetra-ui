@@ -5538,7 +5538,7 @@ i.vicon {
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
   background: #ffffff;
-  box-shadow: inset 0 7px 21px -13px rgba(0, 0, 0, 0.7), inset 0 -7px 21px -13px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 7px 21px -17px rgba(0, 0, 0, 0.7), inset 0 -7px 21px -17px rgba(0, 0, 0, 0.6);
 }
 .paginator-multi .multi .paginator-btn {
   padding-left: 10px;
