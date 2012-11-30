@@ -5483,13 +5483,6 @@ i.vicon {
 .paginator li.arrow.disabled .vicon {
   color: #bfbfbf;
 }
-.paginator li.arrow.selector a {
-  padding-left: 10px;
-  padding-right: 5px;
-}
-.paginator li.arrow.selector a .vicon {
-  margin: 0 0 0 -2px;
-}
 .paginator li.ellipsis span {
   margin: 0 5px;
   color: #bfbfbf;
@@ -5516,6 +5509,96 @@ i.vicon {
 }
 .paginator li:hover a {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.paginator-multi li {
+  padding: 0;
+  margin: 0 2px;
+}
+.paginator-multi li a {
+  outline: none;
+}
+.paginator-multi .multi {
+  position: relative;
+}
+.paginator-multi .multi.open .multi-list {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
+.paginator-multi .multi .multi-list {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  max-height: 185px;
+  overflow-x: hidden;
+  visibility: hidden;
+  opacity: 0;
+  border: 1px solid #d0dce2;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  background: #ffffff;
+  box-shadow: inset 0 7px 21px -13px rgba(0, 0, 0, 0.7), inset 0 -7px 21px -13px rgba(0, 0, 0, 0.6);
+}
+.paginator-multi .multi .paginator-btn {
+  padding-left: 10px;
+  padding-right: 5px;
+  background-color: #ebebeb;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ebebeb));
+  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
+  *filter: none;
+}
+.paginator-multi .multi .paginator-btn .vicon {
+  margin-right: 0;
+  margin-left: -2px;
+  font-size: 7px;
+  color: #808080;
+}
+.paginator-multi .multi ul {
+  width: 150%;
+  max-height: 183px;
+  overflow-y: scroll;
+  border-radius: 3px;
+}
+.paginator-multi .multi ul li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.paginator-multi .multi ul li a {
+  display: block;
+  text-align: center;
+  border: 0 none;
+  padding: 5px 10% 5px 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  filter: none;
+}
+.paginator-multi .multi ul li.active a,
+.paginator-multi .multi ul li:hover a {
+  background-color: #e0e8ec;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #f0f4f6, #e0e8ec);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f0f4f6), color-stop(100%, #e0e8ec));
+  background-image: -webkit-linear-gradient(top, #f0f4f6, #e0e8ec);
+  background-image: -o-linear-gradient(top, #f0f4f6, #e0e8ec);
+  background-image: linear-gradient(to bottom, #f0f4f6, #e0e8ec);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f4f6', endColorstr='#e0e8ec', GradientType=0);
+  *filter: none;
+}
+.paginator-multi .multi ul li.active a {
+  border: 1px solid #d0dce2;
+  border-width: 1px 0;
 }
 .custom-radio:not(#unsupported) {
   cursor: pointer;

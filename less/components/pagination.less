@@ -54,17 +54,6 @@
 					color: @grayLight;
 				}
 			}
-
-			&.selector {
-				a {
-					padding-left: 10px;
-					padding-right: 5px;
-
-					.vicon {
-						margin: 0 0 0 -2px;
-					}
-				}
-			}
 		}
 
 		&.ellipsis {
@@ -97,4 +86,93 @@
 			}
 		}
 	}
+}
+
+.paginator-multi {
+    li {
+        padding: 0;
+        margin: 0 2px;
+        a {
+             outline: none;
+        }
+    }
+
+    .multi {
+        position: relative;
+        
+        &.open {
+            .multi-list {
+                opacity: 1;
+                visibility: visible;
+                top: 50%;
+            }
+        }
+        
+        .multi-list {
+            position: absolute;
+            z-index: 100;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            max-height: 185px;
+            overflow-x: hidden;
+            visibility: hidden;
+            opacity: 0;
+            border: 1px solid @borderColor;
+            .transition(opacity 0.5s);
+            background: @white;
+            box-shadow:
+            	inset 0 7px 21px -13px rgba(0, 0, 0, 0.7),
+            	inset 0 -7px 21px -13px rgba(0, 0, 0, 0.6);
+        }
+
+        .paginator-btn {
+        	padding-left: @spacingS;
+        	padding-right: @spacingXs;
+        	#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+
+		    	.vicon {
+						margin-right: 0;
+						margin-left: -2px;
+						font-size: 7px;
+						color: @gray;
+					}
+		    }
+
+        ul {
+            width: 150%;
+            max-height: 183px;
+            overflow-y: scroll;
+            border-radius: @borderRadiusS;
+            
+            li {
+                margin: 0;
+                padding: 0;
+                display: block;
+
+                a {
+                    display: block;
+                    text-align: center;
+                    border: 0 none;
+                    padding: 5px 10% 5px 0;
+                    background: none;
+                    border-radius: 0;
+                    box-shadow: none;
+                    outline: none;
+                    filter: none;
+                }
+                &.active, &:hover {
+                    a {
+                        #gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
+                    }
+                }
+                &.active {
+                    a {
+                        border: 1px solid @borderColor;
+                        border-width: 1px 0;
+                    }
+                }
+            }
+        }
+    }
 }

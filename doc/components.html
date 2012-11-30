@@ -640,8 +640,10 @@
 <div class="gr grsl mtm">
     <div class="gu gu-1of5">
         <h2>Pagination</h2>
+        <p>The standard and backward compatible way.</p>
     </div>
     <div class="gu gu-last">
+
       <ul class="paginator">
         <li class="arrow disabled"><a href=""><i class="vicon">«</i></a></li>
         <li class="arrow disabled"><a href=""><i class="vicon">‹</i></a></li>
@@ -653,12 +655,6 @@
         <li><a href="">10</a></li>
         <li class="arrow"><a href=""><i class="vicon">›</i></a></li>
         <li class="arrow"><a href=""><i class="vicon">»</i></a></li>
-      </ul>
-
-      <ul class="paginator mtl">
-        <li class="arrow"><a href=""><i class="vicon">‹</i></a></li>
-        <li class="arrow selector"><a href="">5 <i class="vicon">↔</i></a></li>
-        <li class="arrow"><a href=""><i class="vicon">›</i></a></li>
       </ul>
 
       <pre class="mtm"><code class="language-markup">&lt;ul class="paginator"&gt;
@@ -674,6 +670,67 @@
   &lt;li class="arrow"&gt;&lt;a href=""&gt;&lt;i class="vicon"&gt;»&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
       
+    </div>
+</div>
+
+<div class="gr grsl mtm">
+    <div class="gu gu-1of5">
+        <h2>Pagination</h2>
+        <p>The fancy way with a custom JavaScript component. This component has an inner scroll area to choose pages, it aims at reducing the width used to choose between pages and avoid page clutter.</p>
+        <p>This enhanced pagination component started as an experiment and should be used sparingly ;)</p>
+    </div>
+    <div class="gu gu-last">
+
+      <ul class="paginator paginator-multi">
+        <li class="arrow"><a><i class="vicon">‹</i></a></li>
+        <li class="multi">
+          <a href="#" class="bootnode paginator-btn"
+            data-view="comp_paginator/paginator"
+            data-event="click">
+            3 <i class="vicon">↔</i>
+          </a>
+          <div class="multi-list">
+            <ul>
+              <li><a>1</a></li>
+              <li><a>2</a></li>
+              <li class="active"><a>3</a></li>
+              <li><a>4</a></li>
+              <li><a>5</a></li>
+              <li><a>6</a></li>
+              <li><a>7</a></li>
+              <li><a>8</a></li>
+              <li><a>9</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="arrow"><a><i class="vicon">›</i></a></li>
+      </ul>
+
+      <pre class="mtm"><code class="language-markup">&lt;ul class="paginator paginator-multi"&gt;
+  &lt;li class="arrow"&gt;&lt;a&gt;&lt;i class="vicon"&gt;‹&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="multi"&gt;
+    &lt;a href="#" class="bootnode paginator-btn"
+      data-view="comp_paginator/paginator"
+      data-event="click"&gt;
+      3 &lt;i class="vicon"&gt;↔&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;div class="multi-list"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;8&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;9&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="arrow"&gt;&lt;a&gt;&lt;i class="vicon"&gt;›&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
     </div>
 </div>
 
