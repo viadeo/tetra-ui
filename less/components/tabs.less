@@ -2,11 +2,12 @@
 	margin: 0;
 	margin-bottom: @baseLineHeight;
 	list-style: none;
+	text-shadow: none;
 }
 .nav li a {
 	display: block;
 	_display: inline-block;
-	
+
 	&:hover {
 		text-decoration: none;
 	}
@@ -16,15 +17,15 @@
 .nav-tabs, .nav-pills {
 	.clearfix();
 	.user-select(none);
-	
+
 	li {
 		float: left;
 		padding: 0; // Override existing generic styles
 		position: relative;
-		
+
 		a {
 			.transition(background-color 0.15s ease-out);
-		
+
 			&:hover {
 				text-decoration: none;
 			}
@@ -32,7 +33,7 @@
 	}
 	li.side-links {
 	   float: right;
-	   
+
 	   a {
        padding: 8px 4px;
        color: @gray;
@@ -60,29 +61,29 @@
 	@verticalPadding:	   9px;
 	@horizontalPadding:    25px;
 	@tabHeight:				@barHeight - (@borderWidth * 2) - (@verticalPadding * 2);
-	
+
 	background-color: @panelBackground;
 	border: @borderWidth solid @borderColor;
 	border-width: @borderWidth 0 @borderWidth 0;
 	padding: 0 10px;
 	height: @barHeight - (@borderWidth * 2);
-	
+
 	a {
 		font-size: @fontSize;
 		height: @tabHeight;
 		line-height: @tabHeight;
 		padding: @verticalPadding @horizontalPadding;
 		outline: none;
-		
+
 		&:hover {
 			background-color: @hoverColor;
 		}
-		
+
 		&:focus {
       background-color: @hoverColor;
     }
 	}
-		
+
 	.active {
 		a {
 			color: @black;
