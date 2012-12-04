@@ -4153,6 +4153,7 @@ i.vicon {
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
+  text-shadow: none;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
@@ -4283,6 +4284,7 @@ i.vicon {
   font: 11px/1.6em 'Lucida Grande', Tahoma, Arial, Verdana, sans-serif;
   text-align: center;
   text-decoration: none;
+  text-shadow: none;
   white-space: nowrap;
   pointer-events: none;
   -moz-transition: opacity .3s, margin .3s;
@@ -4367,6 +4369,7 @@ i.vicon {
   border-radius: 3px;
   position: relative;
   text-decoration: none;
+  text-shadow: none;
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
@@ -4785,6 +4788,7 @@ i.vicon {
   /* IE7 inline-block hack */
 
   *zoom: 1;
+  text-shadow: none;
   /* dropdown button */
 
   /* dropdown menu */
@@ -5085,6 +5089,7 @@ i.vicon {
   margin: 0;
   margin-bottom: 1.4em;
   list-style: none;
+  text-shadow: none;
 }
 .nav li a {
   display: block;
