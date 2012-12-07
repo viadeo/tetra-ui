@@ -15,7 +15,8 @@ module.exports = function( grunt ) {
 				},
 				files: {
 					'dist/tetra-ui-<%=meta.version%>.css': ['less/packages/default.less'],
-					'dist/tetra-ui-apna-<%=meta.version%>.css': ['less/packages/apna.less']
+					'dist/tetra-ui-apna-<%=meta.version%>.css': ['less/packages/apna.less'],
+					'dist/tetra-ui-tianji-<%=meta.version%>.css': ['less/packages/tianji.less']
 				}
 			},
 			
@@ -27,7 +28,9 @@ module.exports = function( grunt ) {
 				files: {
 					'dist/tetra-ui-<%=meta.version%>.min.css': ['less/packages/default.less'],
 					'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['less/packages/apna.less'],
-					'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['less/packages/doc.less']
+					'dist/tetra-ui-tianji-<%=meta.version%>.min.css': ['less/packages/tianji.less'],
+					'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['less/packages/doc.less'],
+					'dist/tetra-ui-doc-tianji-<%=meta.version%>.min.css': ['less/packages/doc-tianji.less']
 				}
 			}
 		},
@@ -35,7 +38,8 @@ module.exports = function( grunt ) {
 		concat: {
 			'dist/tetra-ui-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-<%=meta.version%>.min.css'],
 			'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-apna-<%=meta.version%>.min.css'],
-			'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-doc-<%=meta.version%>.min.css']
+			'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-doc-<%=meta.version%>.min.css'],
+			'dist/tetra-ui-tianji-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-tianji-<%=meta.version%>.min.css']
 		},
 
     server: {
@@ -52,5 +56,5 @@ module.exports = function( grunt ) {
 
 	// Default task.
 	grunt.registerTask('default', 'less concat');
-	grunt.registerTask('watch-serve', 'server watch');
+	grunt.registerTask('watch-server', 'server watch');
 };
