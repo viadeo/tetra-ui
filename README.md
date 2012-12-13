@@ -15,7 +15,7 @@ If it is not already done, install it here:
 
 #### Installing required Node packages
 
-In case you do not have them installed
+In case you do not have them installed:
 
 	npm install -g grunt
 	npm install -g less
@@ -23,17 +23,17 @@ In case you do not have them installed
 #### Getting the `tetra-ui` project
 
 You can use the default GitHub client, or your preferred Git client, or the `git` command line.
-For testing only another solution is to get the repository as a Zip file.
+For testing purpose another solution is to get the repository as a Zip file.
 
 The repository content must be in a `tetra-ui` folder on your computer.
 
 #### Installing Less for Grunt
 
-With the command line go to the `tetra-ui` folder
+With the command line go to the `tetra-ui` folder:
 
 	cd tetra-ui
 
-Then install grunt-contrib-less
+Then install `grunt-contrib-less`:
 
 	npm install grunt-contrib-less --save-dev
 
@@ -41,11 +41,11 @@ Now you should have a `node_modules` folder inside `tetra-ui`.
 
 #### Launching Tetra UI with Grunt’s built-in server
 
-On Mac or Linux
+On Mac or Linux:
 
 	grunt watch-server
 
-On Windows
+On Windows:
 
 	grunt.cmd watch-server
 
