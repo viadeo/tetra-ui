@@ -4548,6 +4548,28 @@ i.vicon {
   background: transparent url('/v_img/coreui/buttons/loaders/secondary.gif') no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
+.btn-primary.btn-inactive,
+.btn-secondary.btn-inactive,
+.socialAction.btn-inactive,
+.eventsAction.btn-inactive,
+.btn-primary.btn-inactive:hover,
+.btn-secondary.btn-inactive:hover,
+.socialAction.btn-inactive:hover,
+.eventsAction.btn-inactive:hover {
+  border-color: #ffbb02;
+  background-color: #ffc906;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #ffd724, #ffc906);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffd724), color-stop(100%, #ffc906));
+  background-image: -webkit-linear-gradient(top, #ffd724, #ffc906);
+  background-image: -o-linear-gradient(top, #ffd724, #ffc906);
+  background-image: linear-gradient(to bottom, #ffd724, #ffc906);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd724', endColorstr='#ffc906', GradientType=0);
+  *filter: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+}
 .btn-default,
 .secEventsAction {
   border: 1px solid #d5d5d5;
@@ -4641,6 +4663,24 @@ i.vicon {
 .btn-default.btn-loading .vicon,
 .secEventsAction.btn-loading .vicon {
   color: #c8c8c8;
+}
+.btn-default.btn-inactive,
+.secEventsAction.btn-inactive,
+.btn-default.btn-inactive:hover,
+.secEventsAction.btn-inactive:hover {
+  border-color: #d5d5d5;
+  background-color: #ebebeb;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ebebeb));
+  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
+  *filter: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
 }
 .btn-tertiary {
   color: #ffffff;
