@@ -101,6 +101,13 @@
     			*background-position-y: 0;
     		}
     }
+    &.btn-inactive,
+    &.btn-inactive:hover {
+      border-color: @_primaryBorderColor;
+      #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
+      .box-shadow(none);
+      cursor: default;
+    }
 }
 .btn-default, .secEventsAction {
     @_defaultBgColor:              @buttonDefaultBgColor; // in browsers that don't support gradients this will be solid
@@ -148,6 +155,13 @@
         .vicon {
             color: darken(@_defaultBorderColor,5%);
         }
+    }
+    &.btn-inactive,
+    &.btn-inactive:hover {
+      border-color: @_defaultBorderColor;
+      #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
+      .box-shadow(none);
+      cursor: default;
     }
 }
 .btn-tertiary {
