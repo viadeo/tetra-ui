@@ -67,6 +67,83 @@
   </div>
 </div>
 
+<div class="gr grsl ptxl">
+    <div class="gu gu-1of5">
+        <h2>Toggle buttons</h2>
+        <p class="mbxs">The toggle button maps a Tetra.js component to a native hidden checkbox.</p>
+        <p class="mbxs"><strong>When active</strong>, the container has a <code class="language-markup">btn-toggle-checked</code> class and the hidden checkbox is checked.</p>
+        <p><strong>When inactive</strong>, the <code class="language-markup">btn-toggle-checked</code> class is removed and the hidden checkbox is unchecked.</p>
+    </div>
+    
+    <div class="gu gu-2of5">
+      <label class="btn-toggle bootnode btn-toggle-checked"
+        data-view="comp_toggle/toggle"
+        data-event="click"
+        id="btn-toggle-sample-1">
+
+        <input type="checkbox" checked="checked" />
+        <span class="btn-toggle-check"><i class="vicon">v</i></span>
+        Toggle button (default on)
+      </label>
+
+      <pre class="mts"><code class="language-markup">&lt;label
+  class="btn-toggle bootnode btn-toggle-checked"
+  data-view="comp_toggle/toggle"
+  data-event="click"
+  id="btn-toggle-sample-1"&gt;
+
+  &lt;input type="checkbox" checked="checked" /&gt;
+  &lt;span class="btn-toggle-check"&gt;
+    &lt;i class="vicon"&gt;v&lt;/i&gt;
+  &lt;/span&gt;
+
+  Toggle button (default on)
+&lt;/label&gt;</code></pre>
+    </div>
+
+    <div class="gu gu-last">
+      <label class="btn-toggle bootnode"
+        data-view="comp_toggle/toggle"
+        data-event="click"
+        id="btn-toggle-sample-2">
+
+        <input type="checkbox" />
+        <span class="btn-toggle-check"><i class="vicon">v</i></span>
+        Toggle button (default off)
+      </label>
+
+      <pre class="mts"><code class="language-markup">&lt;label
+  class="btn-toggle bootnode"
+  data-view="comp_toggle/toggle"
+  data-event="click"
+  id="btn-toggle-sample-1"&gt;
+
+  &lt;input type="checkbox" /&gt;
+  &lt;span class="btn-toggle-check"&gt;
+    &lt;i class="vicon"&gt;v&lt;/i&gt;
+  &lt;/span&gt;
+  
+  Toggle button (default off)
+&lt;/label&gt;</code></pre>
+    </div>
+</div>
+
+<div class="gr grsl">
+    <div class="gu gu-1of5">
+        <p><strong>On the JavaScript part</strong>, the component fires this event, and you can set the component state from a third party controller with the same function.</p>
+    </div>
+
+    <div class="gu-last mts">  
+
+      <pre><code class="language-javascript">page.notify('toggle: set state', {
+  id: 'btn-toggle-sample-1', /* the DOM id of the toggle button */
+  state: false /* true or false, the new state of the component */
+});</code></pre>
+
+    </div>
+</div>
+
+
 <div class="gr grsl pvxl">
     <div class="gu gu-1of5">
         <h2>Switch Buttons</h2>

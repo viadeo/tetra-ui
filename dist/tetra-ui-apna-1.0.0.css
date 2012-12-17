@@ -5669,3 +5669,78 @@ i.vicon {
 .custom-radio:not(#unsupported) input:checked + .custom-radio-element {
   background-color: #344957;
 }
+.btn-toggle {
+  display: inline-block;
+  padding: 4px 10px 4px 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  color: #808080;
+  line-height: 18px;
+  background-color: #e6e6e6;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #e6e6e6));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: -o-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: linear-gradient(to bottom, #f2f2f2, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#e6e6e6', GradientType=0);
+  *filter: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.btn-toggle input {
+  visibility: hidden;
+  width: 1px;
+}
+.btn-toggle .btn-toggle-check {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+  border-radius: 2px;
+  background: #fcfcfc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.btn-toggle .btn-toggle-check .vicon {
+  visibility: hidden;
+  font-size: 8px;
+}
+.btn-toggle-checked {
+  border-color: #bac8cf;
+  color: #0977b5;
+  background-color: #d0dce2;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #e5e9ec, #d0dce2);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e5e9ec), color-stop(100%, #d0dce2));
+  background-image: -webkit-linear-gradient(top, #e5e9ec, #d0dce2);
+  background-image: -o-linear-gradient(top, #e5e9ec, #d0dce2);
+  background-image: linear-gradient(to bottom, #e5e9ec, #d0dce2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e9ec', endColorstr='#d0dce2', GradientType=0);
+  *filter: none;
+  box-shadow: inset 0 1px 0 rgba(186, 200, 207, 0.8);
+}
+.btn-toggle-checked .btn-toggle-check {
+  background: #f6f8f9;
+  box-shadow: 1px 1px 1px rgba(6, 87, 132, 0.5);
+}
+.btn-toggle-checked .btn-toggle-check .vicon {
+  visibility: visible;
+  color: #0977b5;
+}
+.btn-toggle:hover {
+  border-color: #bac8cf;
+  background-color: #c8d6de;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #d6dde1, #c8d6de);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d6dde1), color-stop(100%, #c8d6de));
+  background-image: -webkit-linear-gradient(top, #d6dde1, #c8d6de);
+  background-image: -o-linear-gradient(top, #d6dde1, #c8d6de);
+  background-image: linear-gradient(to bottom, #d6dde1, #c8d6de);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6dde1', endColorstr='#c8d6de', GradientType=0);
+  *filter: none;
+}

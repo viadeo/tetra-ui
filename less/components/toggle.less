@@ -1,0 +1,60 @@
+// Toggle buttons
+
+.btn-toggle {
+	display: inline-block;
+	padding: 4px 10px 4px 0;
+	border: 1px solid lighten(@black, 84%);
+	border-radius: @borderRadiusS;
+	color: @gray;
+	line-height: 18px;
+	#gradient > .vertical(lighten(@black, 95%), lighten(@black, 90%));
+	box-shadow: 0 1px 0 fade(@black, 16%);
+	cursor: pointer;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	input {
+		visibility: hidden;
+		width: 1px;
+	}
+
+	.btn-toggle-check {
+		display: inline-block;
+		width: 18px; height: 18px;
+		margin: 0 @spacingXs 0 0;
+		border-radius: (@borderRadiusS - 1);
+		background: lighten(@black, 99%);
+		box-shadow: inset 0 1px 2px fade(@black, 25%);
+
+		.vicon {
+			visibility: hidden;
+			font-size: 8px;
+		}
+	}
+}
+
+.btn-toggle-checked {
+	border-color: @panelBorderDarker;
+	color: darken(@linkColor, 5%);
+	#gradient > .vertical(@panelBorder, @borderColor);
+	box-shadow: inset 0 1px 0 fade(@panelBorderDarker, 80%);
+
+	.btn-toggle-check {
+		background: @panelBackground;
+		box-shadow: 1px 1px 1px fade(darken(@linkColor, 15%), 50%);
+
+		.vicon {
+			visibility: visible;
+			color: darken(@linkColor, 5%);
+		}
+	}
+}
+
+.btn-toggle:hover {
+	border-color: @panelBorderDarker;
+	#gradient > .vertical(darken(@panelBorder, 5%), darken(@borderColor, 2.5%));
+}
