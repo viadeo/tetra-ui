@@ -4,31 +4,33 @@
 
 tetra.model.register('suggestions', {
 
-    scope: 'comp_autocomplete',
-    
-	req: {
-		fetch: {
-			url: '{0}',
-			uriParams: ['url'],
-			parser : function(resp, col, cond) {
-				resp.id = cond.id;
-				col[cond.uriParams.url] = {
-					id: cond.id,
-					suggestions: resp
-				};
-				return col;
-			}
-		}
-	},
-	
-	attr: {
-		suggestions: {}
-	},
-	
-	methods: function(attr) { return {
-		validate: function(attr, errors) {
-			return errors;
-		}
-	};}
+    scope:'comp_autocomplete',
+
+    req:{
+        fetch:{
+            url:'{0}',
+            uriParams:['url'],
+            parser:function (resp, col, cond) {
+                resp.id = cond.id;
+                col[cond.uriParams.url] = {
+                    id:cond.id,
+                    suggestions:resp
+                };
+                return col;
+            }
+        }
+    },
+
+    attr:{
+        suggestions:{}
+    },
+
+    methods:function (attr) {
+        return {
+            validate:function (attr, errors) {
+                return errors;
+            }
+        };
+    }
 
 });
