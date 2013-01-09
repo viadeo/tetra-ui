@@ -1,0 +1,25 @@
+src_files:
+  - lib/jquery/1.8.3/jquery.js
+  - lib/requirejs/require.js
+  - lib/JSON-js/json2.js
+  - src/tetra.js
+  - src/conf/requirejs/client.js
+  - src/view/client-micro-tmpl.js
+  - src/view/tetra-view.js
+  - src/controller/tetra-controller.js
+  - src/model/tetra-model.js
+  - test/conf/remote-webapp.js
+  - test/lib/Sinon.JS/sinon-1.5.2.js
+  - test/lib/Sinon.JS/sinon-ie-1.5.2.js
+  - test/lib/jasmine-jquery/lib/jasmine-jquery.js
+  - test/conf/jasmine/init_remote_fixtures.js
+  - test/utils.js
+
+spec_files:
+  - tetra.spec.js
+  - model/*.spec.js
+  - controller/*.spec.js
+  - view/*.spec.js
+
+src_dir: 
+spec_dir: 'test/specs'

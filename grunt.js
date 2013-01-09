@@ -14,9 +14,9 @@ module.exports = function( grunt ) {
 					paths: ["less"]
 				},
 				files: {
-					'dist/tetra-ui-<%=meta.version%>.css': ['less/packages/default.less'],
-					'dist/tetra-ui-apna-<%=meta.version%>.css': ['less/packages/apna.less'],
-					'dist/tetra-ui-tianji-<%=meta.version%>.css': ['less/packages/tianji.less']
+					'release/<%=meta.version%>/tetra-ui.css': ['less/packages/default.less'],
+					'release/<%=meta.version%>/tetra-ui-apna.css': ['less/packages/apna.less'],
+					'release/<%=meta.version%>/tetra-ui-tianji.css': ['less/packages/tianji.less']
 				}
 			},
 			
@@ -26,20 +26,20 @@ module.exports = function( grunt ) {
 					yuicompress: true
 				},
 				files: {
-					'dist/tetra-ui-<%=meta.version%>.min.css': ['less/packages/default.less'],
-					'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['less/packages/apna.less'],
-					'dist/tetra-ui-tianji-<%=meta.version%>.min.css': ['less/packages/tianji.less'],
-					'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['less/packages/doc.less'],
-					'dist/tetra-ui-doc-tianji-<%=meta.version%>.min.css': ['less/packages/doc-tianji.less']
+					'release/<%=meta.version%>/tetra-ui-.min.css': ['less/packages/default.less'],
+					'release/<%=meta.version%>/tetra-ui-apna.min.css': ['less/packages/apna.less'],
+					'release/<%=meta.version%>/tetra-ui-tianji.min.css': ['less/packages/tianji.less'],
+					'release/<%=meta.version%>/tetra-ui-doc.min.css': ['less/packages/doc.less'],
+					'release/<%=meta.version%>/tetra-ui-doc-tianji.min.css': ['less/packages/doc-tianji.less']
 				}
 			}
 		},
 
 		concat: {
-			'dist/tetra-ui-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-<%=meta.version%>.min.css'],
-			'dist/tetra-ui-apna-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-apna-<%=meta.version%>.min.css'],
-			'dist/tetra-ui-doc-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-doc-<%=meta.version%>.min.css'],
-			'dist/tetra-ui-tianji-<%=meta.version%>.min.css': ['<banner>', 'dist/tetra-ui-tianji-<%=meta.version%>.min.css']
+			'release/<%=meta.version%>/tetra-ui.min.css': ['<banner>', 'release/<%=meta.version%>/tetra-ui.min.css'],
+			'release/<%=meta.version%>/tetra-ui-apna.min.css': ['<banner>', 'release/<%=meta.version%>/tetra-ui-apna.min.css'],
+			'release/<%=meta.version%>/tetra-ui-doc.min.css': ['<banner>', 'release/<%=meta.version%>/tetra-ui-doc.min.css'],
+			'release/<%=meta.version%>/tetra-ui-tianji.min.css': ['<banner>', 'release/<%=meta.version%>/tetra-ui-tianji.min.css']
 		},
 
     server: {
