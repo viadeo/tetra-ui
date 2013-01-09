@@ -5744,3 +5744,10 @@ i.vicon {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='#d8d8d8', GradientType=0);
   *filter: none;
 }
+.core-form label.btn-toggle {
+  display: inline-block;
+}
+.core-form label.btn-toggle input {
+  display: inline;
+  width: 1px;
+}

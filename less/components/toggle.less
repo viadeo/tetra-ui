@@ -58,3 +58,16 @@
 	border-color: @panelBorderDarker;
 	#gradient > .vertical(darken(@panelBorder, 5%), darken(@borderColor, 2.5%));
 }
+
+// Toggle buttons in forms
+
+.core-form {
+	label.btn-toggle {
+		display: inline-block;
+		
+		input {
+			display: inline;
+			width: 1px;
+		}
+	}
+}
