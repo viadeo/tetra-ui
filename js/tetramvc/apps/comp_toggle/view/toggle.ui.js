@@ -21,7 +21,7 @@ tetra.view.register('toggle', {
 				controller: {
 					'set state': function(data) {
 						var container = _('#' + data.id);
-						var checkbox = _('input:checkbox', container);
+						var checkbox = container.find('input');
 
 						if (data.state) {
 							container.addClass('btn-toggle-checked');
