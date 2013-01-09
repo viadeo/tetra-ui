@@ -1,14 +1,14 @@
 {
   "name": "tetra-ui",
   "description": "Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
-    "name": "Frédéric Perrin",
+    "name": "Frï¿½dï¿½ric Perrin",
     "email": "fperrin@viadeoteam.com"
   },
   "contributors": [
     {
-      "name": "Frédéric Perrin",
+      "name": "Frï¿½dï¿½ric Perrin",
       "email": "fperrin@viadeoteam.com"
     },
     {
@@ -18,11 +18,15 @@
     {
       "name": "Sylvain Faucherand",
       "email": "sfaucherand@viadeoteam.com"
+    },
+    {
+      "name": "Cormac Flynn",
+      "email": "cflynn@viadeoteam.com"
     }
   ],
   "devDependencies": {
     "grunt": ">=0.3.15",
-    "grunt-contrib-less": ">=0.3.0"
+    "grunt-contrib-less": "~0.3.2"
   },
   "repository": {
     "type": "git",

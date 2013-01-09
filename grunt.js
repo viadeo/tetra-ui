@@ -11,26 +11,26 @@ module.exports = function( grunt ) {
 		less: {
 			development: {
 				options: {
-					paths: ["less"]
+					paths: ["src/less"]
 				},
 				files: {
-					'release/<%=meta.version%>/tetra-ui.css': ['less/packages/default.less'],
-					'release/<%=meta.version%>/tetra-ui-apna.css': ['less/packages/apna.less'],
-					'release/<%=meta.version%>/tetra-ui-tianji.css': ['less/packages/tianji.less']
+					'release/<%=meta.version%>/tetra-ui.css': ['src/less/packages/default.less'],
+					'release/<%=meta.version%>/tetra-ui-apna.css': ['src/less/packages/apna.less'],
+					'release/<%=meta.version%>/tetra-ui-tianji.css': ['src/less/packages/tianji.less']
 				}
 			},
 			
 			production: {
 				options: {
-					paths: ["less"],
+					paths: ["src/less"],
 					yuicompress: true
 				},
 				files: {
-					'release/<%=meta.version%>/tetra-ui-.min.css': ['less/packages/default.less'],
-					'release/<%=meta.version%>/tetra-ui-apna.min.css': ['less/packages/apna.less'],
-					'release/<%=meta.version%>/tetra-ui-tianji.min.css': ['less/packages/tianji.less'],
-					'release/<%=meta.version%>/tetra-ui-doc.min.css': ['less/packages/doc.less'],
-					'release/<%=meta.version%>/tetra-ui-doc-tianji.min.css': ['less/packages/doc-tianji.less']
+					'release/<%=meta.version%>/tetra-ui-.min.css': ['src/less/packages/default.less'],
+					'release/<%=meta.version%>/tetra-ui-apna.min.css': ['src/less/packages/apna.less'],
+					'release/<%=meta.version%>/tetra-ui-tianji.min.css': ['src/less/packages/tianji.less'],
+					'release/<%=meta.version%>/tetra-ui-doc.min.css': ['src/less/packages/doc.less'],
+					'release/<%=meta.version%>/tetra-ui-doc-tianji.min.css': ['src/less/packages/doc-tianji.less']
 				}
 			}
 		},
@@ -48,7 +48,7 @@ module.exports = function( grunt ) {
     },
 
     watch: {
-      files: ['less/**/*.less'],
+      files: ['src/less/**/*.less'],
       tasks: 'less concat'
     },
 

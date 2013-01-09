@@ -1,0 +1,19 @@
+{
+    "framework": "jasmine",
+    "src_files": [
+        "src/js/lib/jquery/1.8.3/jquery.js",
+        "src/js/lib/tetra/release/1.0.5/tetra-core.js",
+        "test/lib/jasmine-jquery/lib/jasmine-jquery.js",
+        "test/conf/jasmine/init_remote_fixtures.js",
+        "test/lib/Sinon.JS/sinon-1.5.2.js",
+        "test/lib/Sinon.JS/sinon-ie-1.5.2.js",
+        "test/lib/utils.js",
+        "test/conf/tetra/start.js",
+        "src/js/lib/history/scripts/compressed/history.js",
+        "src/js/lib/history/scripts/compressed/history.adapter.jquery.js",
+        "src/js/coremvc/**/*.class.js",
+        "src/js/coremvc/**/*.ctrl.js",
+        "src/js/coremvc/**/*.ui.js",
+        "test/specs/coremvc/**/*.spec.js"
+    ]
+}
