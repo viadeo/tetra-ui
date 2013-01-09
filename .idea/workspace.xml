@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="464d37d8-d684-4cc5-b0a9-c78bcea51006" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/foundation.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/foundation_apna.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/foundation_tianji.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/all-light.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/all.less" />
+      <change type="DELETED" beforePath="C:\viadeo\projects\tetra-ui\less\core.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\viadeo\projects\tetra-ui\less\foundation.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\viadeo\projects\tetra-ui\less\foundation_apna.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\viadeo\projects\tetra-ui\less\foundation_tianji.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\all-light.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\all.less" afterPath="" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-1.0.0.css" afterPath="$PROJECT_DIR$/release/tetra-ui-1.0.0.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-1.0.0.min.css" afterPath="$PROJECT_DIR$/release/tetra-ui-1.0.0.min.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-apna-1.0.0.css" afterPath="$PROJECT_DIR$/release/tetra-ui-apna-1.0.0.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-apna-1.0.0.min.css" afterPath="$PROJECT_DIR$/release/tetra-ui-apna-1.0.0.min.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-doc-1.0.0.min.css" afterPath="$PROJECT_DIR$/release/tetra-ui-doc-1.0.0.min.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-doc-tianji-1.0.0.min.css" afterPath="$PROJECT_DIR$/release/tetra-ui-doc-tianji-1.0.0.min.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-tianji-1.0.0.css" afterPath="$PROJECT_DIR$/release/tetra-ui-tianji-1.0.0.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\dist\tetra-ui-tianji-1.0.0.min.css" afterPath="$PROJECT_DIR$/release/tetra-ui-tianji-1.0.0.min.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\learningtotrust\learningtotrust.eot" afterPath="$PROJECT_DIR$/src/fonts/learningtotrust/learningtotrust.eot" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\learningtotrust\learningtotrust.ttf" afterPath="$PROJECT_DIR$/src/fonts/learningtotrust/learningtotrust.ttf" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\learningtotrust\learningtotrust.woff" afterPath="$PROJECT_DIR$/src/fonts/learningtotrust/learningtotrust.woff" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\learningtotrust\src\LearningtoTrust-TOU.txt" afterPath="$PROJECT_DIR$/src/fonts/learningtotrust/src/LearningtoTrust-TOU.txt" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\learningtotrust\src\generator_config.txt" afterPath="$PROJECT_DIR$/src/fonts/learningtotrust/src/generator_config.txt" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\learningtotrust\src\learningtotrust.ttf" afterPath="$PROJECT_DIR$/src/fonts/learningtotrust/src/learningtotrust.ttf" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\opensans\Apache License Version 2.txt" afterPath="$PROJECT_DIR$/src/fonts/opensans/Apache License Version 2.txt" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\opensans\opensans-bold.eot" afterPath="$PROJECT_DIR$/src/fonts/opensans/opensans-bold.eot" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\opensans\opensans-bold.ttf" afterPath="$PROJECT_DIR$/src/fonts/opensans/opensans-bold.ttf" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\opensans\opensans-bold.woff" afterPath="$PROJECT_DIR$/src/fonts/opensans/opensans-bold.woff" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\opensans\opensans-regular.eot" afterPath="$PROJECT_DIR$/src/fonts/opensans/opensans-regular.eot" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\opensans\opensans-regular.ttf" afterPath="$PROJECT_DIR$/src/fonts/opensans/opensans-regular.ttf" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\opensans\opensans-regular.woff" afterPath="$PROJECT_DIR$/src/fonts/opensans/opensans-regular.woff" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\src\export-to-glyphs.ai" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/src/export-to-glyphs.ai" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\src\generator_config.txt" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/src/generator_config.txt" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\src\viadeoicons.ai" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/src/viadeoicons.ai" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\src\viadeoicons.glyphs" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/src/viadeoicons.glyphs" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\src\viadeoicons.otf" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/src/viadeoicons.otf" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\viadeoicons.eot" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/viadeoicons.eot" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\viadeoicons.ttf" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/viadeoicons.ttf" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\fonts\viadeoicons\viadeoicons.woff" afterPath="$PROJECT_DIR$/src/fonts/viadeoicons/viadeoicons.woff" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-m-107x145.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-m-107x145.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-m-140x185.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-m-140x185.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-m-26x35.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-m-26x35.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-m-30x30.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-m-30x30.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-m-40x40.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-m-40x40.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-m-45x60.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-m-45x60.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-n-107x145.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-n-107x145.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-n-140x185.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-n-140x185.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-n-26x35.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-n-26x35.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-n-30x30.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-n-30x30.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-n-40x40.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-n-40x40.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-n-45x60.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-n-45x60.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-w-107x145.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-w-107x145.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-w-140x185.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-w-140x185.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-w-26x35.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-w-26x35.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-w-30x30.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-w-30x30.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-w-40x40.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-w-40x40.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\avatars\avatar-w-45x60.png" afterPath="$PROJECT_DIR$/src/img/avatars/avatar-w-45x60.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\buttons\loaders\default.gif" afterPath="$PROJECT_DIR$/src/img/buttons/loaders/default.gif" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\buttons\loaders\primary.gif" afterPath="$PROJECT_DIR$/src/img/buttons/loaders/primary.gif" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\buttons\loaders\secondary.gif" afterPath="$PROJECT_DIR$/src/img/buttons/loaders/secondary.gif" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\buttons\tianji\loaders\default.gif" afterPath="$PROJECT_DIR$/src/img/buttons/tianji/loaders/default.gif" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\buttons\tianji\loaders\primary.gif" afterPath="$PROJECT_DIR$/src/img/buttons/tianji/loaders/primary.gif" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\buttons\tianji\loaders\secondary.gif" afterPath="$PROJECT_DIR$/src/img/buttons/tianji/loaders/secondary.gif" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\loaders\ajax-loader.gif" afterPath="$PROJECT_DIR$/src/img/loaders/ajax-loader.gif" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\logo\favicon.ico" afterPath="$PROJECT_DIR$/src/img/logo/favicon.ico" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\logo\viadeo-white.svg" afterPath="$PROJECT_DIR$/src/img/logo/viadeo-white.svg" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\logo\viadeo.png" afterPath="$PROJECT_DIR$/src/img/logo/viadeo.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\logo\viadeo.svg" afterPath="$PROJECT_DIR$/src/img/logo/viadeo.svg" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\tianji\favicon.ico" afterPath="$PROJECT_DIR$/src/img/tianji/favicon.ico" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\tianji\logo-main.png" afterPath="$PROJECT_DIR$/src/img/tianji/logo-main.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\tianji\logo-main.svg" afterPath="$PROJECT_DIR$/src/img/tianji/logo-main.svg" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\viadeo\global-sprite2.png" afterPath="$PROJECT_DIR$/src/img/viadeo/global-sprite2.png" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\img\viadeo\src\global-sprite2.psd" afterPath="$PROJECT_DIR$/src/img/viadeo/src/global-sprite2.psd" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetra-start.js" afterPath="$PROJECT_DIR$/src/js/conf/tetra-start.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_autocomplete\controller\autocomplete.ctrl.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_autocomplete/controller/autocomplete.ctrl.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_autocomplete\model\suggestions.class.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_autocomplete/model/suggestions.class.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_autocomplete\view\autocomplete.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_autocomplete/view/autocomplete.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_dropdown\controller\dropdown.ctrl.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_dropdown/controller/dropdown.ctrl.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_dropdown\view\click_enabled.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_dropdown/view/click_enabled.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_dropdown\view\view.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_dropdown/view/view.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_history\controller\history.ctrl.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_history/controller/history.ctrl.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_navtabs\controller\navtabs.ctrl.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_navtabs/controller/navtabs.ctrl.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_navtabs\model\navtabs.class.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_navtabs/model/navtabs.class.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_navtabs\view\navtabs.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_navtabs/view/navtabs.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_paginator\view\paginator.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_paginator/view/paginator.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_popin\controller\popin.ctrl.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_popin/controller/popin.ctrl.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_popin\model\popin.class.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_popin/model/popin.class.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_popin\view\popin.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_popin/view/popin.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_toggle\controller\toggle.ctrl.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_toggle/controller/toggle.ctrl.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\comp_toggle\view\toggle.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/comp_toggle/view/toggle.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\fakeApp\controller\fakeApp.ctrl.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/fakeApp/controller/fakeApp.ctrl.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\fakeApp\model\fakeApp.class.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/fakeApp/model/fakeApp.class.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\js\tetramvc\apps\fakeApp\view\fakeApp.ui.js" afterPath="$PROJECT_DIR$/src/js/coremvc/apps/fakeApp/view/fakeApp.ui.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\avatars.less" afterPath="$PROJECT_DIR$/src/less/avatars.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\autocomplete.less" afterPath="$PROJECT_DIR$/src/less/components/autocomplete.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\button.less" afterPath="$PROJECT_DIR$/src/less/components/button.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\deprecated\block.less" afterPath="$PROJECT_DIR$/src/less/components/deprecated/block.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\deprecated\medias.less" afterPath="$PROJECT_DIR$/src/less/components/deprecated/medias.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\dropdown.less" afterPath="$PROJECT_DIR$/src/less/components/dropdown.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\pagination.less" afterPath="$PROJECT_DIR$/src/less/components/pagination.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\popin.less" afterPath="$PROJECT_DIR$/src/less/components/popin.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\popover.less" afterPath="$PROJECT_DIR$/src/less/components/popover.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\radio.less" afterPath="$PROJECT_DIR$/src/less/components/radio.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\tabs.less" afterPath="$PROJECT_DIR$/src/less/components/tabs.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\toggle.less" afterPath="$PROJECT_DIR$/src/less/components/toggle.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\tooltip.less" afterPath="$PROJECT_DIR$/src/less/components/tooltip.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components\yesno.less" afterPath="$PROJECT_DIR$/src/less/components/yesno.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\components_in_progress\navigation.less" afterPath="$PROJECT_DIR$/src/less/components_in_progress/navigation.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\documentation-tianji.less" afterPath="$PROJECT_DIR$/src/less/documentation-tianji.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\documentation.less" afterPath="$PROJECT_DIR$/src/less/documentation.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\forms.less" afterPath="$PROJECT_DIR$/src/less/forms.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\foundation\mixins.less" afterPath="$PROJECT_DIR$/src/less/foundation/mixins.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\foundation\variables.less" afterPath="$PROJECT_DIR$/src/less/foundation/variables.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\foundation\variables_apna.less" afterPath="$PROJECT_DIR$/src/less/foundation/variables_apna.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\foundation\variables_tianji.less" afterPath="$PROJECT_DIR$/src/less/foundation/variables_tianji.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\grid.less" afterPath="$PROJECT_DIR$/src/less/grid.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\helpers.less" afterPath="$PROJECT_DIR$/src/less/helpers.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\icons.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/icons.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\packages\apna.less" afterPath="$PROJECT_DIR$/src/less/packages/apna.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\packages\default.less" afterPath="$PROJECT_DIR$/src/less/packages/default.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\packages\doc-tianji.less" afterPath="$PROJECT_DIR$/src/less/packages/doc-tianji.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\packages\doc.less" afterPath="$PROJECT_DIR$/src/less/packages/doc.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\packages\tianji.less" afterPath="$PROJECT_DIR$/src/less/packages/tianji.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\patterns.less" afterPath="$PROJECT_DIR$/src/less/patterns.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\reset.less" afterPath="$PROJECT_DIR$/src/less/reset.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\tables.less" afterPath="$PROJECT_DIR$/src/less/tables.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\less\type.less" afterPath="$PROJECT_DIR$/src/less/type.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\history\history.adapter.jquery.js" afterPath="$PROJECT_DIR$/src/js/lib/history/history.adapter.jquery.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\history\history.html4.js" afterPath="$PROJECT_DIR$/src/js/lib/history/history.html4.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\history\history.js" afterPath="$PROJECT_DIR$/src/js/lib/history/history.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\jquery\jquery.min.js" afterPath="$PROJECT_DIR$/src/js/lib/jquery/jquery.min.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\json\json2.js" afterPath="$PROJECT_DIR$/src/js/lib/json/json2.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\prism\prism.css" afterPath="$PROJECT_DIR$/src/js/lib/prism/prism.css" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\prism\prism.js" afterPath="$PROJECT_DIR$/src/js/lib/prism/prism.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\lib\tetra\tetra-core.min.js" afterPath="$PROJECT_DIR$/src/js/lib/tetra/tetra-core.min.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\playground\autocomplete-fake.json" afterPath="$PROJECT_DIR$/src/js/playground/autocomplete-fake.json" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\playground\autocomplete-fake2.json" afterPath="$PROJECT_DIR$/src/js/playground/autocomplete-fake2.json" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\playground\autocomplete.html" afterPath="$PROJECT_DIR$/src/js/playground/autocomplete.html" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\playground\scripts.js" afterPath="$PROJECT_DIR$/src/js/playground/scripts.js" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\avatars.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/avatars.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\content.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/content.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\date_chooser.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/date_chooser.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\generic.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/generic.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\grid.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/grid.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\growl.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/growl.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\header.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/header.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\header2.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/header2.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\icons.less" afterPath="$PROJECT_DIR$/src/less/icons.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\layout.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/layout.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\mini_profile.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/mini_profile.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\modal_box.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/modal_box.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\notifications.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/notifications.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\page_header.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/page_header.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\rss.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/rss.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\search.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/search.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\sortable_record_set.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/sortable_record_set.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\standard_profile.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/standard_profile.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\toggle.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/toggle.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\unyk.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/unyk.less" />
+      <change type="MOVED" beforePath="C:\viadeo\projects\tetra-ui\viadeo_specific\yellow_bubble.less" afterPath="$PROJECT_DIR$/src/less/viadeo_specific/yellow_bubble.less" />
+    </list>
+    <ignored path="tetra-ui.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index-tianji.html" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="66" />
+    <option name="y" value="-8" />
+    <option name="width" value="1862" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tetra-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tetra-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tetra-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\viadeo\projects\tetra-ui\src\less" />
+      <recent name="C:\viadeo\projects\tetra-ui\src\js\conf" />
+      <recent name="C:\viadeo\projects\tetra-ui\src\js" />
+      <recent name="C:\viadeo\projects\tetra-ui\src" />
+      <recent name="C:\viadeo\projects\tetra-ui\release\1.0.0" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="464d37d8-d684-4cc5-b0a9-c78bcea51006" name="Default" comment="" />
+      <created>1357726009257</created>
+      <updated>1357726009257</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="66" y="-8" width="1862" height="1096" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2738889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="10" selection-start="848" selection-end="848" vertical-scroll-proportion="0.41648108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grunt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="25" selection-start="681" selection-end="681" vertical-scroll-proportion="0.41053787" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index-tianji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="82" selection-start="2425" selection-end="2425" vertical-scroll-proportion="1.0949153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="2589" selection-end="2589" vertical-scroll-proportion="0.84632766" />
+      </provider>
+    </entry>
+  </component>
+</project>
+
