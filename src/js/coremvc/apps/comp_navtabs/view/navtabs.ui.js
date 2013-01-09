@@ -3,6 +3,9 @@ tetra.view.register('navtabs', {
     use:['navtabs'], // list of required controllers
 
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
             events:{
                 user:{ // list of events listened on the page

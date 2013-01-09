@@ -3,6 +3,9 @@ tetra.view.register('autocomplete', {
     use:['autocomplete'], // required controllers
 
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
             events:{
                 user:{ // events listened on the page
@@ -19,7 +22,7 @@ tetra.view.register('autocomplete', {
                                 case 13: // enter
                                     // avoid enter to allow form submit
                                     e.preventDefault();
-                                    var elm = container.find('.autocomplete-menu li.active');
+                                    elm = container.find('.autocomplete-menu li.active');
                                     app.notify('select suggestion', {
                                         value:elm.attr('data-value'),
                                         id:containerId,
@@ -73,7 +76,7 @@ tetra.view.register('autocomplete', {
                                     break;
 
                                 default:
-                                    if (elm.val().length >= parseInt(elm.attr('data-min-length'))) {
+                                    if (elm.val().length >= parseInt(elm.attr('data-min-length'), 10)) {
                                         app.notify('do query', {
                                             url:elm.attr('data-url'),
                                             param:elm.val(),
@@ -119,7 +122,7 @@ tetra.view.register('autocomplete', {
                             ;
 
                         _.each(suggestionsPack.suggestions.data, function (key, value) {
-                            value.ref = suggestionsPack.ref + ':' + key
+                            value.ref = suggestionsPack.ref + ':' + key;
                         });
 
                         app.exec(templateRef, suggestionsPack.suggestions, function (html) {
@@ -144,7 +147,7 @@ tetra.view.register('autocomplete', {
                     select:function (containerId, direction) {
                         var items = _('#' + containerId).find('.autocomplete-menu li');
                         var index = items.filter('.active').removeClass('active').index();
-                        index += (direction == 'next') ? 1 : -1;
+                        index += (direction === 'next') ? 1 : -1;
                         if (index >= items.length) {
                             index = 0;
                         }

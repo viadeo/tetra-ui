@@ -2,6 +2,9 @@ tetra.controller.register('history', {
     scope:'comp_history',
 
     constr:function (me, app, page, orm) {
+
+        'use strict';
+
         return {
             events:{
 

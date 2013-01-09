@@ -1,6 +1,9 @@
 tetra.view.register('click_enabled', {
     scope:'comp_dropdown',
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
             events:{
                 user:{
@@ -30,7 +33,7 @@ tetra.view.register('click_enabled', {
                             var dd = elm.parents('.dd');
 
                             /* prevent conflict on multi event handler */
-                            if (btn.attr("data-event") == "click") {
+                            if (btn.attr("data-event") === "click") {
                                 if (0 === _(e.target).parents('.dd.' + _(elm).attr('data-dropdown-callback')).length) {
                                     _(e.target).parents('.dd.' + _(elm).attr('data-dropdown-callback')).removeClass(_(elm).attr('data-dropdown-callback'));
                                     _(elm).removeAttr('data-dropdown-callback');
@@ -46,7 +49,7 @@ tetra.view.register('click_enabled', {
                                 dd = elm
                                 ;
                             /* prevent conflict on multi event handler */
-                            if (btn.attr("data-event") == "mouseover") {
+                            if (btn.attr("data-event") === "mouseover") {
                                 me.methods.closeDd(btn, dd);
                             }
                         }

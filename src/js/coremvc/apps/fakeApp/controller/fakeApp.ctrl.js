@@ -3,6 +3,9 @@ tetra.controller.register('fakeApp', {
     use:['fakeApp'], // list of required models
 
     constr:function (me, app, page, orm) {
+
+        'use strict';
+
         return {
             events:{
                 model:{ // events received from model

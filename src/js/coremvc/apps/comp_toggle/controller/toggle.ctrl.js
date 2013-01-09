@@ -2,6 +2,9 @@ tetra.controller.register('toggle', {
     scope:'comp_toggle',
 
     constr:function (me, app, page, orm) {
+
+        'use strict';
+
         return {
             events:{
                 view:{

@@ -3,6 +3,9 @@ tetra.view.register('toggle', {
     use:['toggle'],
 
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
             events:{
                 user:{

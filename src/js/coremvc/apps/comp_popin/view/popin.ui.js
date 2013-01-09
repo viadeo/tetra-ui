@@ -3,13 +3,16 @@ tetra.view.register('popin', {
     use:['popin'],
 
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
             events:{
                 user:{
                     'click':{
                         '[data-popin]':function (e, elm) {
 
-                            if (elm.attr('data-popin') == 'show') {
+                            if (elm.attr('data-popin') === 'show') {
 
                                 if (elm.attr('data-target-url')) {
 
@@ -25,7 +28,7 @@ tetra.view.register('popin', {
 
                                 }
 
-                            } else if (elm.attr('data-popin') == 'close') {
+                            } else if (elm.attr('data-popin') === 'close') {
 
                                 app.notify('popin: close');
 
@@ -36,8 +39,9 @@ tetra.view.register('popin', {
                 },
                 window:{
                     'keyup':function (e) {
-                        if (e.keyCode == 27)
+                        if (e.keyCode === 27) {
                             app.notify('popin: close');
+                        }
                     }
                 },
                 controller:{

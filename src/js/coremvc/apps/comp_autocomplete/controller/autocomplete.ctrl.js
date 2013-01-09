@@ -4,6 +4,8 @@ tetra.controller.register('autocomplete', {
 
     constr:function (me, app, page, orm) {
 
+        'use strict';
+
         return {
             events:{
 
@@ -60,7 +62,7 @@ tetra.controller.register('autocomplete', {
                         window.clearTimeout(me.countDown);
                     }
                     // updates typing delay if precised
-                    var typingDelay = (typeof data.typingDelay != 'undefined') ? data.typingDelay : me.defaultTypingDelay;
+                    var typingDelay = (typeof data.typingDelay !== 'undefined') ? data.typingDelay : me.defaultTypingDelay;
                     // set a new counter
                     me.countDown = window.setTimeout(callback, typingDelay, data);
                 }

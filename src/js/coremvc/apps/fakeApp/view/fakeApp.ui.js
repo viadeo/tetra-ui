@@ -3,6 +3,9 @@ tetra.view.register('fakeApp', {
     use:['fakeApp'], // list of required controllers
 
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
             events:{
                 user:{

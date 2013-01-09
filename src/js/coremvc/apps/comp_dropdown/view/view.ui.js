@@ -2,6 +2,9 @@ tetra.view.register('view', {
     use:['dropdown'],
     scope:'comp_dropdown',
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
 
             events:{
@@ -28,7 +31,7 @@ tetra.view.register('view', {
                                 dd = elm
                                 ;
                             /* prevent conflict on multi event handler */
-                            if (btn.attr("data-event") == "click") {
+                            if (btn.attr("data-event") === "click") {
                                 me.methods.closeDd(btn, dd);
                             }
                         }
@@ -39,7 +42,7 @@ tetra.view.register('view', {
                                 dd = elm
                                 ;
                             /* prevent conflict on multi event handler */
-                            if (btn.attr("data-event") == "mouseover") {
+                            if (btn.attr("data-event") === "mouseover") {
                                 me.methods.closeDd(btn, dd);
                             }
                         }
@@ -90,9 +93,9 @@ tetra.view.register('view', {
                         }
 
                         /* Broadcast custom parameter on dropdown list openning */
-                        if (typeof btn.attr('data-custom-param') != 'undefined' && !isOpen)
+                        if (typeof btn.attr('data-custom-param') !== 'undefined' && !isOpen) {
                             app.notify('share btn through apps', btn);
-
+                        }
 
                         return false;
                     }

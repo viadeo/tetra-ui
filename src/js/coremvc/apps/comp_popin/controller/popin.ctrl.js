@@ -3,6 +3,9 @@ tetra.controller.register('popin', {
     use:['popin'],
 
     constr:function (me, app, page, orm) {
+
+        'use strict';
+
         return {
             events:{
                 model:{ // events received from model
