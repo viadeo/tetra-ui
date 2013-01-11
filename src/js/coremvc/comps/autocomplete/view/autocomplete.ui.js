@@ -1,5 +1,5 @@
 tetra.view.register('autocomplete', {
-    scope:'comp_autocomplete',
+    scope:'autocomplete',
     use:['autocomplete'], // required controllers
 
     constr:function (me, app, _) {

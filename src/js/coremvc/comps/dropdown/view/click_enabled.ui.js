@@ -1,5 +1,5 @@
 tetra.view.register('click_enabled', {
-    scope:'comp_dropdown',
+    scope:'dropdown',
     constr:function (me, app, _) {
 
         'use strict';

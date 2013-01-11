@@ -1,6 +1,6 @@
 tetra.view.register('yesno', {
     use:['yesno'],
-    scope:'comp_yesnobutton',
+    scope:'yesno',
     constr:function (me, app, _) {
 
         'use strict';

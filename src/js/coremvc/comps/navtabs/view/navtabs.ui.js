@@ -1,5 +1,5 @@
 tetra.view.register('navtabs', {
-    scope:'comp_navtabs', // application name
+    scope:'navtabs', // application name
     use:['navtabs'], // list of required controllers
 
     constr:function (me, app, _) {
@@ -12,8 +12,8 @@ tetra.view.register('navtabs', {
                     'click':{
                         '.nav-tabs a':function (e, elm) {
                             var data = {
-                                url:_(elm).attr('href'),
-                                targetId:_(elm).parents('.nav-tabs').attr('data-target-id')
+                                url:elm.attr('href'),
+                                targetId:elm.parents('.nav-tabs').attr('data-target-id')
                             };
 
                             me.methods.setActiveTab(elm);
@@ -36,18 +36,17 @@ tetra.view.register('navtabs', {
                         me.methods.setActiveTab(elm);
                     },
                     'show error':function (error) {
-                        VNS.ui.growl(lang['notification.modification.save.error']);
+                        //VNS.ui.growl(lang['notification.modification.save.error']);
                     }
                 }
             },
 
             methods:{
                 init:function () {
-                    me.target = undefined;
-                    me.tabs = undefined;
+                    _('.nav-tabs li.active a').click();
                 },
                 setActiveTab:function (elm) {
-                    _(elm).parent().addClass('active').siblings().removeClass('active');
+                    elm.parent().addClass('active').siblings().removeClass('active');
                 }
             }
         };

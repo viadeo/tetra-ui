@@ -4,7 +4,7 @@
 
 tetra.model.register('suggestions', {
 
-    scope:'comp_autocomplete',
+    scope:'autocomplete',
 
     req:{
         fetch:{

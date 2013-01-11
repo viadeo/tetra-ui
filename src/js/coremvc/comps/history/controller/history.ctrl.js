@@ -1,5 +1,5 @@
 tetra.controller.register('history', {
-    scope:'comp_history',
+    scope:'history',
 
     constr:function (me, app, page, orm) {
 

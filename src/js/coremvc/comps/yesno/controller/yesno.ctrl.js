@@ -5,7 +5,7 @@
  * 
  * */
 tetra.controller.register('yesno', {
-    scope:'comp_yesnobutton',
+    scope:'yesno',
     use:['yesno'],
     constr:function (me, app, page, orm) {
 

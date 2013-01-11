@@ -1,6 +1,6 @@
 tetra.view.register('view', {
     use:['dropdown'],
-    scope:'comp_dropdown',
+    scope:'dropdown',
     constr:function (me, app, _) {
 
         'use strict';

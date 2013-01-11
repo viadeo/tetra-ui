@@ -1,5 +1,5 @@
 tetra.controller.register('autocomplete', {
-    scope:'comp_autocompleteGeneric',
+    scope:'generic_autocomplete',
     use:['autocomplete'],
 
     constr:function (me, app, page, orm) {

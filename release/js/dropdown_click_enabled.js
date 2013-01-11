@@ -1,38 +1,39 @@
 /*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.controller.register('dropdown', {
-	scope : 'comp_dropdown',
-	constr : function(me, app, page, orm) {
+    scope:'dropdown',
+    constr:function (me, app, page, orm) {
 
         'use strict';
 
-		return {
-			events : {
-				model : {},
-				
-				view : {
-					'share btn through apps' : function (param) {
-						page.notify('retrieve btn from dropdown comp', param);
-					}
-				},
+        return {
+            events:{
+                model:{},
 
-				controller : {
-					'dropdown: close all': function(){
-						app.notify('close all');
-					}
-				}
-				
-			},
-			
-			methods : {
-				init : function(){}
-			}
-		};
-	}
+                view:{
+                    'share btn through apps':function (param) {
+                        page.notify('retrieve btn from dropdown comp', param);
+                    }
+                },
+
+                controller:{
+                    'dropdown: close all':function () {
+                        app.notify('close all');
+                    }
+                }
+
+            },
+
+            methods:{
+                init:function () {
+                }
+            }
+        };
+    }
 });
 
 tetra.view.register('click_enabled', {
-    scope:'comp_dropdown',
+    scope:'dropdown',
     constr:function (me, app, _) {
 
         'use strict';

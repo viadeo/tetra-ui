@@ -1,7 +1,7 @@
 /*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.controller.register('toggle', {
-    scope:'comp_toggle',
+    scope:'toggle',
 
     constr:function (me, app, page, orm) {
 
@@ -39,7 +39,7 @@ tetra.controller.register('toggle', {
 });
 
 tetra.view.register('toggle', {
-    scope:'comp_toggle',
+    scope:'toggle',
     use:['toggle'],
 
     constr:function (me, app, _) {

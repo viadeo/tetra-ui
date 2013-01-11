@@ -1,5 +1,5 @@
 tetra.view.register('paginator', {
-    scope:'comp_paginator',
+    scope:'paginator',
     constr:function (me, app, _) {
 
         'use strict';
@@ -12,7 +12,7 @@ tetra.view.register('paginator', {
                             var
                                 parent = elm.parents(".multi:first"),
                                 list = parent.find(".multi-list:first")
-                            ;
+                                ;
                             parent.addClass("open");
                             me.methods.show_multiPaginator(list);
                         },
@@ -20,7 +20,7 @@ tetra.view.register('paginator', {
                             var
                                 parent = elm.parents(".multi:first"),
                                 list = parent.find(".multi-list:first")
-                            ;
+                                ;
                             parent.removeClass("open");
                             me.methods.hide_multiPaginator(list);
                         }
@@ -30,7 +30,7 @@ tetra.view.register('paginator', {
                             var
                                 parent = elm.parents(".multi:first"),
                                 list = parent.find(".multi-list:first")
-                            ;
+                                ;
                             parent.removeClass("open");
                             me.methods.hide_multiPaginator(list);
                         }

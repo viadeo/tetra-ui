@@ -1,15 +1,14 @@
 /*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.model.register('navtabs', {
-
-    scope:"comp_navtabs",
+    scope:"navtabs",
 
     req:{
-        save:{
+        fetch:{
             url:'{0}',
             uriParams:['url'],
             parser:function (resp, col, cond) {
-                col[cond.uriParams.url] = {id:cond.uriParams.url, html:resp.toString()};
+                col[cond.uriParams.url] = {id:cond.uriParams.url, targetId:cond.targetId, html:resp.toString()};
                 return col;
             }
         }
@@ -17,8 +16,7 @@ tetra.model.register('navtabs', {
 
     attr:{
         html:'',
-        targetId:'',
-        url:''
+        targetId:''
     },
 
     methods:function (attr) {
@@ -31,7 +29,7 @@ tetra.model.register('navtabs', {
 
 });
 tetra.controller.register('navtabs', {
-    scope:'comp_navtabs', // application name
+    scope:'navtabs', // application name
     use:['navtabs'], // list of required models
 
     constr:function (me, app, page, orm) {
@@ -43,12 +41,8 @@ tetra.controller.register('navtabs', {
                 model:{ // events received from model
                     'navtabs':{ // model name
 
-                        'save':function (obj) {
-                            app.notify('start loading', {
-                                targetId:obj.get('targetId')
-                            });
-                        },
-                        'saved':function (obj) {
+                        'append':function (col) {
+                            var obj = col[0];
                             me.currentContent = obj.get('html');
                             app
                                 .notify('end loading', {
@@ -84,7 +78,14 @@ tetra.controller.register('navtabs', {
                     'show tab':function (data) {
 
                         me.tabRef.push(data.url);
-                        orm('navtabs').create(data).save({ uriParams:{ url:data.url } });
+
+                        app.notify('start loading', {
+                            targetId:data.targetId
+                        });
+
+                        data.uriParams = { url:data.url };
+                        orm('navtabs').fetch(data);
+                        //orm('navtabs').create(data).save({ uriParams: { url: data.url } });
 
                     }
                 }
@@ -101,7 +102,7 @@ tetra.controller.register('navtabs', {
 });
 
 tetra.view.register('navtabs', {
-    scope:'comp_navtabs', // application name
+    scope:'navtabs', // application name
     use:['navtabs'], // list of required controllers
 
     constr:function (me, app, _) {
@@ -114,8 +115,8 @@ tetra.view.register('navtabs', {
                     'click':{
                         '.nav-tabs a':function (e, elm) {
                             var data = {
-                                url:_(elm).attr('href'),
-                                targetId:_(elm).parents('.nav-tabs').attr('data-target-id')
+                                url:elm.attr('href'),
+                                targetId:elm.parents('.nav-tabs').attr('data-target-id')
                             };
 
                             me.methods.setActiveTab(elm);
@@ -138,18 +139,17 @@ tetra.view.register('navtabs', {
                         me.methods.setActiveTab(elm);
                     },
                     'show error':function (error) {
-                        VNS.ui.growl(lang['notification.modification.save.error']);
+                        //VNS.ui.growl(lang['notification.modification.save.error']);
                     }
                 }
             },
 
             methods:{
                 init:function () {
-                    me.target = undefined;
-                    me.tabs = undefined;
+                    _('.nav-tabs li.active a').click();
                 },
                 setActiveTab:function (elm) {
-                    _(elm).parent().addClass('active').siblings().removeClass('active');
+                    elm.parent().addClass('active').siblings().removeClass('active');
                 }
             }
         };

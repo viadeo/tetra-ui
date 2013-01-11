@@ -1,5 +1,5 @@
 tetra.model.register('autocomplete', {
-    scope:'comp_autocomplete',
+    scope:'autocomplete',
 
     req:{
         fetch:{

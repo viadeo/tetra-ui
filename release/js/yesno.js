@@ -2,7 +2,7 @@
 
 tetra.model.register('yesno', {
 
-    scope:"comp_yesnobutton",
+    scope:"yesno",
 
     req:{
         save:{
@@ -41,7 +41,7 @@ tetra.model.register('yesno', {
  * 
  * */
 tetra.controller.register('yesno', {
-    scope:'comp_yesnobutton',
+    scope:'yesno',
     use:['yesno'],
     constr:function (me, app, page, orm) {
 
@@ -83,7 +83,7 @@ tetra.controller.register('yesno', {
 });
 tetra.view.register('yesno', {
     use:['yesno'],
-    scope:'comp_yesnobutton',
+    scope:'yesno',
     constr:function (me, app, _) {
 
         'use strict';

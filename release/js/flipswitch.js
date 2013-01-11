@@ -1,7 +1,7 @@
 /*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.controller.register('flipswitch', {
-    scope:'comp_flipswitch',
+    scope:'flipswitch',
 
     constr:function (me, app, page, orm) {
 
@@ -39,7 +39,7 @@ tetra.controller.register('flipswitch', {
 });
 
 tetra.view.register('flipswitch', {
-    scope:'comp_flipswitch',
+    scope:'flipswitch',
     use:['flipswitch'],
 
     constr:function (me, app, _) {

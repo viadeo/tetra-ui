@@ -1,5 +1,5 @@
 tetra.view.register('view', {
-    scope:'comp_editor',
+    scope:'editor',
     constr:function (me, app, _) {
 
         'use strict';

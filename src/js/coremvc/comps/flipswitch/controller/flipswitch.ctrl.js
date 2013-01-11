@@ -1,5 +1,5 @@
 tetra.controller.register('flipswitch', {
-    scope:'comp_flipswitch',
+    scope:'flipswitch',
 
     constr:function (me, app, page, orm) {
 

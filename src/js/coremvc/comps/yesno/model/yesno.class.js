@@ -1,6 +1,6 @@
 tetra.model.register('yesno', {
 
-    scope:"comp_yesnobutton",
+    scope:"yesno",
 
     req:{
         save:{

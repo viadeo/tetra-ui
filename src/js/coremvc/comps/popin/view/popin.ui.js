@@ -1,5 +1,5 @@
 tetra.view.register('popin', {
-    scope:'comp_popin',
+    scope:'popin',
     use:['popin'],
 
     constr:function (me, app, _) {

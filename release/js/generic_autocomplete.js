@@ -1,7 +1,7 @@
 /*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.model.register('autocomplete', {
-    scope:'comp_autocompleteGeneric',
+    scope:'generic_autocomplete',
 
     req:{
         fetch:{
@@ -32,7 +32,7 @@ tetra.model.register('autocomplete', {
 
 });
 tetra.controller.register('autocomplete', {
-    scope:'comp_autocompleteGeneric',
+    scope:'generic_autocomplete',
     use:['autocomplete'],
 
     constr:function (me, app, page, orm) {
@@ -89,7 +89,7 @@ tetra.controller.register('autocomplete', {
 });
 
 tetra.view.register('autocomplete', {
-    scope:'comp_autocompleteGeneric',
+    scope:'generic_autocomplete',
     use:['autocomplete'], // required controllers
 
     constr:function (me, app, _) {

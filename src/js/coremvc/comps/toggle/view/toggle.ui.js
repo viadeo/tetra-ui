@@ -1,5 +1,5 @@
 tetra.view.register('toggle', {
-    scope:'comp_toggle',
+    scope:'toggle',
     use:['toggle'],
 
     constr:function (me, app, _) {

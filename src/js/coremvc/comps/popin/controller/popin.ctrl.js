@@ -1,5 +1,5 @@
 tetra.controller.register('popin', {
-    scope:'comp_popin',
+    scope:'popin',
     use:['popin'],
 
     constr:function (me, app, page, orm) {

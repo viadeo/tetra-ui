@@ -1,7 +1,7 @@
 /*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.model.register('popin', {
-    scope:'comp_popin',
+    scope:'popin',
 
     req:{
         fetch:{
@@ -35,7 +35,7 @@ tetra.model.register('popin', {
 
 });
 tetra.controller.register('popin', {
-    scope:'comp_popin',
+    scope:'popin',
     use:['popin'],
 
     constr:function (me, app, page, orm) {
@@ -160,7 +160,7 @@ tetra.controller.register('popin', {
 });
 
 tetra.view.register('popin', {
-    scope:'comp_popin',
+    scope:'popin',
     use:['popin'],
 
     constr:function (me, app, _) {
