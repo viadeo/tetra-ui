@@ -1,0 +1,3454 @@
+/*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+
+/* Variables_apna.less
+ * Anything declared here will overwrite the variables declared in variables.less
+ * ----------------------------------------------------- */
+
+@import "variables";
+
+@buttonPrimaryBgColor:     lighten(#9c1111, 7%);
+@buttonPrimaryEndColor:    #9c1111;
+@buttonPrimaryHoverColor:  #9c1111;
+@buttonPrimaryBorderColor: #9c1111;
+@buttonPrimaryTextColor:   @white;
+
+@buttonTerBgColor:         lighten(#354962, 10%);
+@buttonTerHoverColor:      #354962;
+@buttonTerBorderColor:     darken(#354962, 10%);
+
+@linkColor: #005EAC;
+
+@panelBackground: #F8F8F8;
+@borderColor: darken(#F8F8F8, 10%);
+@panelBorderDarker: darken(#F8F8F8, 15%);
+@panelBorder: darken(#F8F8F8, 5%);
+/* Mixins.less
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
+
+// Clearfix for clearing floats like a boss h5bp.com/q -> No presentational code needed :)
+.clearfixHack() {
+    zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        zoom: 1;
+        *display: inline;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Fonts
+#font {
+    .sansSerif(@weight: normal, @size: @baseFontSize, @color: @baseFontColor, @lineHeight: @baseLineHeight) {
+       font-family: Arial, sans-serif;
+       font-size: @size;
+       font-weight: @weight;
+       line-height: @lineHeight;
+    }
+    .code(@weight: normal, @size: @baseFontSize, @color: @baseFontColor, @lineHeight: @baseLineHeight) {
+        font-family: Monaco, Andale Mono, Courier New, monospace;
+        font-size: @size;
+        font-weight: @weight;
+        line-height: @lineHeight;
+    }
+    .helveticaBold () {
+        font-family: "Helvetica", "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+        font-weight: bold;
+    }
+}
+
+// Border Radius
+.border-radius (@values) {
+	border-radius: @values;
+}
+.border-radius-topleft (@size) {
+    border-top-left-radius: @size;
+}
+.border-radius-topright (@size) {
+    border-top-right-radius: @size;
+}
+.border-radius-bottomright (@size) {
+    border-bottom-right-radius: @size;
+}
+.border-radius-bottomleft (@size) {
+    border-bottom-left-radius: @size;
+}
+.border-radius-top (@size) {
+    .border-radius-topleft (@size);
+    .border-radius-topright (@size);
+}
+.border-radius-right (@size) {
+    .border-radius-topright (@size);
+    .border-radius-bottomright (@size);
+}
+.border-radius-bottom (@size) {
+    .border-radius-bottomright (@size);
+    .border-radius-bottomleft (@size);
+}
+.border-radius-left (@size) {
+    .border-radius-topleft (@size);
+    .border-radius-bottomleft (@size);
+}
+
+// Disable text selection
+.user-select (@value) {
+    -webkit-user-select: @value;
+    -khtml-user-select: @value;
+    -moz-user-select: @value;
+    -o-user-select: @value;
+    user-select: @value;
+}
+
+// Transitions
+.transition (@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+    // IE 10 supports the unprefixed form
+}
+
+// Box shadows
+.box-shadow (@values: 0 0 2px @gray) {
+    -webkit-box-shadow: @values;
+    box-shadow: @values;
+}
+
+// Opacity
+.opacity(@opacity: 100) {
+    filter: e(%("alpha(opacity=%d)", @opacity));
+    opacity: @opacity / 100;
+}
+
+
+// Gradient Bar Colors for buttons and allerts
+.gradientBar(@primaryColor, @secondaryColor) {
+  #gradient > .vertical(@primaryColor, @secondaryColor);
+}
+
+// Gradients
+#gradient {
+  .horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to right, @startColor, @endColor); // // IE 10 supports the unprefixed form
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
+    *filter: none;
+  }
+  .vertical(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to bottom, @startColor, @endColor); // IE 10 supports the unprefixed form
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+    *filter: none;
+  }
+  .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(@deg, @startColor, @endColor); // IE 10 supports the unprefixed form
+  }
+  .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+    background-color: @endColor;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+    background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+    background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+    *filter: none;
+  }
+}
+
+// Background clipping
+.background-clip(@clip) {
+    -webkit-background-clip: @clip;
+       -moz-background-clip: @clip;
+            background-clip: @clip;
+}
+
+// Fix text inherit
+.text-inherit() {
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+	line-height: inherit;
+}
+
+// Hyphenation
+.hyphens() {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+
+// Arrows
+.arrow(@position: top, @size : 10px, @color :  black,  @borderWidth: 0, @borderColor : transparent){
+  position: relative;
+
+  .border(top, @color)    { border-bottom-color: @color; }
+  .border(right, @color)  { border-left-color: @color; }
+  .border(bottom, @color) { border-top-color: @color; }
+  .border(left, @color)   { border-right-color: @color; }
+
+  .position(top, @size)    { bottom: 100%; margin-left: @size; left: 50%; }
+  .position(right, @size)  { left: 100%; margin-top: @size; top: 50%; }
+  .position(bottom, @size) { left: 50%; margin-left: @size; top: 100%; }
+  .position(left, @size)   { margin-top: @size; right: 100%; top: 50%; }
+  
+  &:after, &:before {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    .border(@position, @color);
+    border-width: @size;
+    .position(@position, @size * -1);
+  }
+
+  &:before {
+    @outerSize: `Math.round(parseInt('@{borderWidth}') * 1.41421356)`;
+    .border(@position, @borderColor);
+    border-width: @size + @outerSize;
+    .position(@position, -1 * (@size + @outerSize));
+  }
+}
+
+/* Yeah ! Duplicate code ! Thanks to LESS and his lack of conditions */
+.inner-arrow(@position: top, @size: 10px, @color:  black,  @borderWidth: 0, @borderColor: transparent) {
+  position: relative;
+
+  .border(top, @color)    { border-top-color: @color; }
+  .border(right, @color)  { border-right-color: @color; }
+  .border(bottom, @color) { border-bottom-color: @color; }
+  .border(left, @color)   { border-left-color: @color; }
+
+  .position(top, @size)    { top: 0; margin-left: @size; left: 50%; }
+  .position(right, @size)  { right: 0; margin-top: @size; top: 50%; }
+  .position(bottom, @size) { left: 50%; margin-left: @size; bottom: 0; }
+  .position(left, @size)   { margin-top: @size; left: 0; top: 50%; }
+  
+  &:after, &:before {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    margin: @borderWidth * -1;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+
+  &:after {
+    .border(@position, @color);
+    border-width: @size;
+    .position(@position, @size * -1);
+  }
+
+  &:before {
+    @outerSize: `Math.round(parseInt('@{borderWidth}') * 1.41421356)`;
+    .border(@position, @borderColor);
+    border-width: @size + @outerSize;
+    .position(@position, -1 * (@size + @outerSize));
+  }
+}
+
+// Deprecated !
+#arrow {
+  .down (@size, @color) {
+     display: block;
+     width: 0;
+     height: 0;
+     position: absolute;
+     border-width: @size @size 0 @size;
+     border-color: @color transparent transparent transparent;
+     border-style: solid;
+  }
+}
+// IE7 inline-block
+.ie7-inline-block() {
+  *display: inline; /* IE7 inline-block hack */
+  *zoom: 1;
+}
+
+// FORMS
+
+// Mixin for form field states
+.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
+  // Set the text color
+  > label,
+  .help-block,
+  .help-inline {
+    color: @textColor;
+  }
+  // Style inputs accordingly
+  input,
+  select,
+  textarea {
+    border-color: @borderColor;
+    &:focus {
+      border-color: darken(@borderColor, 10%);
+      .box-shadow(0 0 6px fadeout(@borderColor, 40%));
+    }
+  }
+  // Give a small background color for input-prepend/-append
+  .input-prepend .add-on,
+  .input-append .add-on {
+    color: @textColor;
+    background-color: @backgroundColor;
+    border-color: @textColor;
+  }
+}
+
+// Misc. use by forms
+#font {
+  .shorthand(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+}
+
+// Box sizing
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+      -ms-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+// Webkit-style focus
+.tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Placeholder text
+.placeholder(@color: @placeholderText) {
+  :-moz-placeholder {
+    color: @color;
+  }
+  ::-webkit-input-placeholder {
+    color: @color;
+  }
+}
+/* Reset.less
+ * An adapted version of the adapted version of eric mayers reset for Twitter's Bootstrap
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+// ERIC MEYER RESET
+// --------------------------------------------------
+
+html, body { background: #FFFFFF; }
+body, h1, h2, h3, h4, h5, h6, p, div, span, blockquote, pre, a, button, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; background: transparent; } // NOTE: If any properties are added or removed, be sure to update the .inherit() mixin.
+table { border-collapse: collapse; border-spacing: 0; text-align: left; width: 100%; }
+address,caption,cite,code,dfn,strong,th,var,optgroup { font-style: inherit; }
+del,ins { text-decoration: none; }
+caption,th { text-align: left; }
+abbr,acronym { font-variant:normal; cursor: help; border-bottom: 1px dotted @gray; &:hover { cursor: help; } }
+sup,sub { vertical-align: baseline; }
+ol, ul { list-style: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+p { font-size: inherit; line-height: 125%; margin-bottom: 1em; }
+
+
+// Normalize.css
+// Pulling in select resets form the normalize.css project
+// --------------------------------------------------
+
+// Display in IE6-9 and FF3
+// -------------------------
+// Source: http://github.com/necolas/normalize.css
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+// Focus states
+a:focus {
+  outline: thin dotted;
+}
+// Hover & Active
+a:hover,
+a:active {
+  outline: 0;
+}
+
+// Display in IE6-9 and FF3
+// -------------------------
+// Source: http://github.com/necolas/normalize.css
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+// Display block in IE6-9 and FF3
+// -------------------------
+// Source: http://github.com/necolas/normalize.css
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+// Prevents modern browsers from displaying 'audio' without controls
+// -------------------------
+// Source: http://github.com/necolas/normalize.css
+audio:not([controls]) {
+    display: none;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+// -------------------------
+// Source: http://github.com/necolas/normalize.css
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+// Img border in a's and image quality
+// -------------------------
+// Source: http://github.com/necolas/normalize.css
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+// Forms
+// -------------------------
+// Source: http://github.com/necolas/normalize.css
+
+// Font size in all browsers, margin changes, misc consistency
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  font-family: inherit;
+}
+button,
+input {
+  line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
+  *overflow: visible; // Inner spacing ie IE6/7
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { // Inner padding and border oddities in FF3/4
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer; // Cursors on all buttons applied consistently
+  -webkit-appearance: button; // Style clicable inputs in iOS
+}
+input[type="search"] { // Appearance in Safari/Chrome
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; // Inner-padding issues in Chrome OSX, Safari 5
+}
+textarea {
+  overflow: auto; // Remove vertical scrollbar in IE6-9
+  vertical-align: top; // Readability and alignment cross-browser
+}
+/* Grid Specific Mixins
+ * ----------------------------------------------------------------- */
+
+#grid {
+	.unit (@span, @total) {
+	   width: (100% / @total) * @span;
+	   margin: 0;
+	}
+	
+	/**
+	* Determine width and margin for grid unit with spacing
+	*
+	* @param (integer)span           the column span of the grid unit                                          required
+	* @param (integer)total          the total number of columns in the grid row                               required
+	* @param (pixels)spacing         the ammount of spacing required between grid units                        required
+	* @param (integer)parentSpan     the column span of the parent grid unit, used for nested grids            optional
+	* @param (integer)parentTotal    the total number of columns in the parent grid unit's grid row            optional
+	* @param (pixels)parentSpacing   the ammount of spacing between grid units in the parent unit's grid row   optional
+	*
+	* The width of the grid unit is a percentage value, and the margin is in pixels.
+	* We therefore need to first calculate the margin as a percentage of the parent
+	* grid row and compensate in the width percentage value of each grid unit.
+	*/
+	.unitWithSpacing (@span, @total, @spacing, @parentSpan: 1, @parentTotal: 1, @parentSpacing: 0px) {
+	   
+	   /* Calculate the width of the parent element, in pixels
+	   ====================================================== */
+	   /**
+	   * Get the parent width percentage.
+	   * Uses exactly the same logic as the section below ("Calculate the width
+	   * of the grid unit, in percentage"), just concatinated.
+	   */
+	   @parentWidthPercentage: ((100% / @parentTotal) * @parentSpan) - ((((1% * ((@parentSpacing / @siteWidth) * 100)) * (@parentTotal - 1)) / @parentTotal) / @parentSpan);
+	   
+	   /**
+	   * Calculate the parent element width in pixels
+	   */
+	   @parentWidth: (@siteWidth / 100) * @parentWidthPercentage;
+	   
+	   
+	   
+	   /* Calculate the width of the grid unit, in percentage
+       ====================================================== */
+	   /**
+	   * Calculate the spacing width as a percentage of the parent width.
+	   * There is no LESS function to change a variable from pixels to percentage,
+	   * so we just multiply 1% by the percentage value in pixels (math hack)
+	   */
+	   @spacingPercentage: 1% * ((@spacing / @parentWidth) * 100);
+	   
+	   /**
+	   * Calculate the base width (as if there were no spacing)
+	   */
+	   @baseWidth: (100% / @total) * @span;
+	   
+	   /**
+	   * As we are using margin-right, the number of units with spacing should be
+	   * one less than the total number of units
+	   */
+	   @unitsWithSpacing: @total - 1;
+	   
+	   /**
+	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
+	   */
+	   @totalRowSpacing: @spacingPercentage * @unitsWithSpacing;
+	   
+	   /**
+	   * To calculate how much width to subtract from each one of the units with
+	   * spacing, we take the total ammount of spacing in the grid row, divide it
+	   * by the total number of columns, then divide that by the the number of columns
+	   * that the unit in question consumes :)
+	   */
+	   @widthToSubtract: (@totalRowSpacing / @total) / @span;
+	   
+	   /* Set the CSS properties */
+	   width: (@baseWidth - @widthToSubtract);
+	   margin-right: @spacing;
+	}
+}
+
+.fixed-container {
+  width: @siteWidth;
+  margin: 0 auto;
+  .clearfixHack();
+}
+
+/* Grid System
+ * ----------------------------------------------------------------- */
+
+/*
+*   This grid system is retro-compatiable with the old one, but the
+*   old one must not be used in new projects.
+*/
+
+// Grid Row
+.gr, .line {
+    width: 100%;
+    .clearfixHack();
+}
+
+// Grid Units
+/**
+* NOTE: When ready to remove IE6/7 support, all selectors beginning with .grs
+* can be removed, and add direct decendant indicators (>) to the grid units
+* contained within the spaced grid row containers declared after these rules
+*/
+.gu, .gridUnit {
+    float: left;
+}
+.gu-1of1, .grid1of1 { #grid > .unit(1, 1); }
+.gu-1of2, .grid1of2, .gu-2of4, .grid2of4 { #grid > .unit(1, 2); }
+.gu-1of3, .grid1of3 { #grid > .unit(1, 3); }
+.gu-2of3, .grid2of3 { #grid > .unit(2, 3); }
+.gu-1of4, .grid1of4 { #grid > .unit(1, 4); }
+.gu-3of4, .grid3of4 { #grid > .unit(3, 4); }
+.gu-1of5, .grid1of5 { #grid > .unit(1, 5); }
+.gu-2of5, .grid2of5 { #grid > .unit(2, 5); }
+.gu-3of5, .grid3of5 { #grid > .unit(3, 5); }
+.gu-4of5, .grid4of5 { #grid > .unit(4, 5); }
+
+.gu-last, .gridLastUnit {
+    zoom: 1;
+    display: table-cell;
+    *display: block;
+    float: none;
+    width: 2000px;
+    *width: auto;
+    _position: relative;
+    _left: -3px;
+    _margin-right: -3px;
+}
+
+.grsxs {
+    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4 { #grid > .unitWithSpacing(1, 2, @spacingXs); }
+    > .gu-1of3, > .grid1of3 { #grid > .unitWithSpacing(1, 3, @spacingXs); }
+    > .gu-2of3, > .grid2of2 { #grid > .unitWithSpacing(2, 3, @spacingXs); }
+    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingXs); }
+    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingXs); }
+    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingXs); }
+    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingXs); }
+    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingXs); }
+    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingXs); }
+}
+.grss {
+    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4 { #grid > .unitWithSpacing(1, 2, @spacingS); }
+    > .gu-1of3, > .grid1of3 { #grid > .unitWithSpacing(1, 3, @spacingS); }
+    > .gu-2of3, > .grid2of3 { #grid > .unitWithSpacing(2, 3, @spacingS); }
+    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingS); }
+    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingS); }
+    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingS); }
+    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingS); }
+    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingS); }
+    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingS); }
+}
+.grsm {
+    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4 { #grid > .unitWithSpacing(1, 2, @spacingM); }
+    > .gu-1of3, > .grid1of3 { #grid > .unitWithSpacing(1, 3, @spacingM); }
+    > .gu-2of3, > .grid2of3 { #grid > .unitWithSpacing(2, 3, @spacingM); }
+    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingM); }
+    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingM); }
+    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingM); }
+    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingM); }
+    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingM); }
+    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingM); }
+}
+.grsl {
+    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4 { #grid > .unitWithSpacing(1, 2, @spacingL); }
+    > .gu-1of3, > .grid1of3 { #grid > .unitWithSpacing(1, 3, @spacingL); }
+    > .gu-2of3, > .grid2of3 { #grid > .unitWithSpacing(2, 3, @spacingL); }
+    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingL); }
+    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingL); }
+    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingL); }
+    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingL); }
+    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingL); }
+    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingL); }
+}
+.grsxl {
+    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4 { #grid > .unitWithSpacing(1, 2, @spacingXl); }
+    > .gu-1of3 { #grid > .unitWithSpacing(1, 3, @spacingXl); }
+    > .gu-2of3 { #grid > .unitWithSpacing(2, 3, @spacingXl); }
+    > .gu-1of4 { #grid > .unitWithSpacing(1, 4, @spacingXl); }
+    > .gu-3of4 { #grid > .unitWithSpacing(3, 4, @spacingXl); }
+    > .gu-1of5 { #grid > .unitWithSpacing(1, 5, @spacingXl); }
+    > .gu-2of5 { #grid > .unitWithSpacing(2, 5, @spacingXl); }
+    > .gu-3of5 { #grid > .unitWithSpacing(3, 5, @spacingXl); }
+    > .gu-4of5 { #grid > .unitWithSpacing(4, 5, @spacingXl); }
+}
+
+// Zebra grid guide for "visual debugging" (to be used in conjunction with .grid-row)
+.gr-zebra {
+    .gu, .gridUnit {
+		text-align: center;
+		padding: @spacingS 0;
+		*background-color: lighten(@black, 90%);
+		
+		&:nth-child(even) { background-color: lighten(@black, 90%); }
+		&:nth-child(odd) { background-color: lighten(@black, 95%); }
+    }
+}
+/* Helpers
+ * Short CSS classes to save time and maintain consistency
+ * ----------------------------------------------------------------- */
+
+/* Spacing
+ * ----------------------------------------------------------------- */
+
+/* Margin */
+
+// None
+.pan         { padding: 0!important; }
+.ptn, .pvn   { padding-top: 0!important; }
+.prn, .phn   { padding-right: 0!important; }
+.pbn, .pvn   { padding-bottom: 0!important; }
+.pln, .phn   { padding-left: 0!important; }
+
+// Extra Small
+.paxs        { padding: @spacingXs!important; }
+.ptxs, .pvxs { padding-top: @spacingXs!important; }
+.prxs, .phxs { padding-right: @spacingXs!important; }
+.pbxs, .pvxs { padding-bottom: @spacingXs!important; }
+.plxs, .phxs { padding-left: @spacingXs!important; }
+
+// Small
+.pas         { padding: @spacingS!important; }
+.pts, .pvs   { padding-top: @spacingS!important; }
+.prs, .phs   { padding-right: @spacingS!important; }
+.pbs, .pvs   { padding-bottom: @spacingS!important; }
+.pls, .phs   { padding-left: @spacingS!important; }
+
+// Medium
+.pam         { padding: @spacingM!important; }
+.ptm, .pvm   { padding-top: @spacingM!important; }
+.prm, .phm   { padding-right: @spacingM!important; }
+.pbm, .pvm   { padding-bottom: @spacingM!important; }
+.plm, .phm   { padding-left: @spacingM!important; }
+
+// Large
+.pal         { padding: @spacingL!important; }
+.ptl, .pvl   { padding-top: @spacingL!important; }
+.prl, .phl   { padding-right: @spacingL!important; }
+.pbl, .pvl   { padding-bottom: @spacingL!important; }
+.pll, .phl   { padding-left: @spacingL!important; }
+
+// Extra Large
+.paxl        { padding: @spacingXl!important; }
+.ptxl, .pvxl { padding-top: @spacingXl!important; }
+.prxl, .phxl { padding-right: @spacingXl!important; }
+.pbxl, .pvxl { padding-bottom: @spacingXl!important; }
+.plxl, .phxl { padding-left: @spacingXl!important; }
+
+
+/* Padding */
+
+// None
+.man         { margin: 0!important; }
+.mtn, .mvn   { margin-top: 0!important; }
+.mrn, .mhn   { margin-right: 0!important; }
+.mbn, .mvn   { margin-bottom: 0!important; }
+.mln, .mhn   { margin-left: 0!important; }
+
+// Extra Small
+.maxs        { margin: @spacingXs!important; }
+.mtxs, .mvxs { margin-top: @spacingXs!important; }
+.mrxs, .mhxs { margin-right: @spacingXs!important; }
+.mbxs, .mvxs { margin-bottom: @spacingXs!important; }
+.mlxs, .mhxs { margin-left: @spacingXs!important; }
+
+// Small
+.mas         { margin: @spacingS!important; }
+.mts, .mvs   { margin-top: @spacingS!important; }
+.mrs, .mhs   { margin-right: @spacingS!important; }
+.mbs, .mvs   { margin-bottom: @spacingS!important; }
+.mls, .mhs   { margin-left: @spacingS!important; }
+
+// Medium
+.mam         { margin: @spacingM!important; }
+.mtm, .mvm   { margin-top: @spacingM!important; }
+.mrm, .mhm   { margin-right: @spacingM!important; }
+.mbm, .mvm   { margin-bottom: @spacingM!important; }
+.mlm, .mhm   { margin-left: @spacingM!important; }
+
+// Large
+.mal         { margin: @spacingL!important; }
+.mtl, .mvl   { margin-top: @spacingL!important; }
+.mrl, .mhl   { margin-right: @spacingL!important; }
+.mbl, .mvl   { margin-bottom: @spacingL!important; }
+.mll, .mhl   { margin-left: @spacingL!important; }
+
+// Extra Large
+.maxl        { margin: @spacingXl!important; }
+.mtxl, .mvxl { margin-top: @spacingXl!important; }
+.mrxl, .mhxl { margin-right: @spacingXl!important; }
+.mbxl, .mvxl { margin-bottom: @spacingXl!important; }
+.mlxl, .mhxl { margin-left: @spacingXl!important; }
+
+
+/* Border Radius
+ * ----------------------------------------------------------------- */
+
+// None
+.bran                   { .border-radius(0); }
+.brtln, .brtn, .brln    { .border-radius-topleft(0); }
+.brtrn, .brtn, .brrn    { .border-radius-topright(0); }
+.brbrn, .brbn, .brrn    { .border-radius-bottomright(0); }
+.brbln, .brbn, .brln    { .border-radius-bottomleft(0); }
+
+// Small
+.bras                   { .border-radius(@borderRadiusS); }
+.brtls, .brts, .brls    { .border-radius-topleft(@borderRadiusS); }
+.brtrs, .brts, .brrs    { .border-radius-topright(@borderRadiusS); }
+.brbrs, .brbs, .brrs    { .border-radius-bottomright(@borderRadiusS); }
+.brbls, .brbs, .brls    { .border-radius-bottomleft(@borderRadiusS); }
+
+// Medium
+.bram                   { .border-radius(@borderRadiusM); }
+.brtlm, .brtm, .brlm    { .border-radius-topleft(@borderRadiusM); }
+.brtrm, .brtm, .brrm    { .border-radius-topright(@borderRadiusM); }
+.brbrm, .brbm, .brrm    { .border-radius-bottomright(@borderRadiusM); }
+.brblm, .brbm, .brlm    { .border-radius-bottomleft(@borderRadiusM); }
+
+// Large
+.bral                   { .border-radius(@borderRadiusL); }
+.brtll, .brtl, .brll    { .border-radius-topleft(@borderRadiusL); }
+.brtrl, .brtl, .brrl    { .border-radius-topright(@borderRadiusL); }
+.brbrl, .brbl, .brrl    { .border-radius-bottomright(@borderRadiusL); }
+.brbll, .brbl, .brll    { .border-radius-bottomleft(@borderRadiusL); }
+
+
+
+/* Text Alignment
+ * ----------------------------------------------------------------- */
+.tac, .center { text-align: center; }
+.tal { text-align: left; }
+.tar { text-align: right; }
+.taj { text-align: justify; }
+.tai { text-align: inherit; }
+
+.hyph { .hyphens(); }
+
+/* Gray scale
+ * ----------------------------------------------------------------- */
+.black { color: @black; }
+.dark-gray { color: @grayDark; }
+.gray { color: @gray; }
+.light-gray { color: @grayLight; }
+.lighter-gray { color: @grayLighter; }
+.white { color: @white; }
+
+
+
+/* Miscellaneous
+ * ----------------------------------------------------------------- */
+ 
+.context        { overflow: hidden; zoom: 1; _overflow: visible; }
+.cf, .clearfix  { .clearfixHack(); }
+.clear          { clear: both; }
+.hidden         { display: none; }
+.elsewhere      { position: absolute; left: -99999px; }
+.fl, .floatL    { float: left; }
+.fr, .floatR    { float: right; }
+.outline        { outline: @grayLight dashed thin; }
+.outline-red    { outline: #FF0000 dashed thin; }
+.error          { color:#da4d4d; }
+.nowrap         { white-space: nowrap; }
+/* Typography.less
+ * Headings, body text, lists, code, and more for a versatile and durable typography system
+ * ---------------------------------------------------------------------------------------- */
+
+// Body Text
+body {
+	#font > .sansSerif(normal, @baseFontSize, @baseFontColor, @baseLineHeight);
+}
+p {
+   margin-bottom: @baseLineHeight;
+}
+a {
+    color: @linkColor;
+    text-decoration: none;
+    text-align: left;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
+    color: @linkColorHover;
+}
+
+
+// Headings
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+   font-family: Arial, sans-serif;
+   font-weight: bold;
+   margin-bottom: (@baseLineHeight / 2.5);
+   color: lighten(@baseFontColor, 10%);
+}
+h1, .h1 {
+   font-size: 20px;
+}
+h2, .h2 {
+   font-size: 18px;
+}
+h3, .h3 {
+   font-size: 16px;
+}
+h4, .h4 {
+   font-size: 15px;
+}
+h5, .h5 {
+   font-size: 14px;
+   padding-bottom: (@baseLineHeight / 3);
+}
+h6, .h6 {
+   font-size: 13px;
+   padding-bottom: (@baseLineHeight / 3);
+   text-transform: uppercase;
+   color: lighten(@baseFontColor, 40%);
+}
+
+.h-alt, .subh-alt  {
+   border-top: 3px solid @borderColor;
+   font-size: 14px;
+   margin: 0;
+   padding: @spacingXs 0;
+}
+
+.h-alt {
+   text-transform: uppercase;
+}
+
+.subh-divider {
+  padding-bottom: @spacingXs;
+  border-bottom: 1px solid @panelBorder;
+  font-size: 14px;
+}
+
+// Lists
+ul.link-list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   
+   li {
+    position: relative;
+    margin: 0 0 @spacingXs 0;
+    padding: 0 0 0 7px;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 3px;
+      height: 3px;
+      background: @linkColor;
+    }
+   }
+}
+
+ul.list-square li {
+  list-style: square;
+  margin-left: @spacingM;
+}
+
+ul.list-disc li {
+  list-style: disc;
+  margin-left: @spacingM;
+}
+
+// Panels
+.panel {
+   border-top: 1px solid #E6EAED;
+   background: #F7F9FA;
+   padding: @spacingS;
+}
+
+// Horizontal dividers
+.divider-before {
+  padding-top: @spacingS;
+  border-top: 1px dotted @borderColor;
+}
+
+.divider-after {
+  padding-bottom: @spacingS;
+  border-bottom: 1px dotted @borderColor;
+}
+
+// Emphasis
+strong {
+  font-style: inherit;
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.muted {
+  color: @gray;
+}
+
+ // Inline and block code styles
+code, pre {
+    padding: 0 3px 2px;
+    #font > .code();
+}
+code {
+    padding: 1px 3px;
+    display: inline-block;
+    .border-radius(@borderRadiusS);
+}
+pre {
+	overflow-x: scroll;
+	overflow: auto;
+}
+
+/* Forms.less
+/* Base styles for various input types, form layouts, and states
+/* ------------------------------------------------------------- */
+
+// Block level inputs
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px; /* Make inputs at least the height of their button counterpart */
+  /* Makes inputs behave like true block-level elements */
+  .box-sizing(border-box);
+}
+
+/* GENERAL STYLES
+/* -------------- */
+
+// Make all forms have space below them
+.core-form {
+	margin: 0 0 @baseLineHeight;
+
+	fieldset {
+	  padding: 0;
+	  margin: 0;
+	  border: 0;
+	}
+	
+	// Groups of fields with labels on top (legends)
+	legend {
+	  display: block;
+	  width: 100%;
+	  padding: 0;
+	  margin-bottom: @baseLineHeight * 1.5;
+	  font-size: @baseFontSize * 1.5;
+	  line-height: @baseLineHeight * 2;
+	  color: @grayDark;
+	  border: 0;
+	  border-bottom: 1px solid #eee;
+	
+	  // Small
+	  small {
+	    font-size: @baseLineHeight * .75;
+	    color: @grayLight;
+	  }
+	}
+	
+	// Set font for forms
+	label,
+	input,
+	button,
+	select,
+	textarea {
+	  #font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
+	}
+	input,
+	button,
+	select,
+	textarea {
+	  font-family: @baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
+	}
+	
+	// Identify controls by their labels
+	label {
+	  display: block;
+	  margin-bottom: 5px;
+	  color: @grayDark;
+	}
+	
+	// Inputs, Textareas, Selects
+	input,
+	textarea,
+	select,
+	.uneditable-input {
+	  display: inline-block;
+	  width: 210px;
+	  height: @baseLineHeight;
+	  padding: 4px;
+	  margin-bottom: 9px;
+	  font-size: @baseFontSize;
+	  line-height: @baseLineHeight;
+	  color: @grayDark;
+	  vertical-align: middle;
+	  border: 1px solid @inputBorder;
+	  .border-radius(3px);
+	}
+	.uneditable-textarea {
+	  width: auto;
+	  height: auto;
+	}
+	
+	// Inputs within a label
+	label input,
+	label textarea,
+	label select {
+	  display: block;
+	}
+	
+	// Mini reset for unique input types
+	input[type="image"],
+	input[type="checkbox"],
+	input[type="radio"] {
+	  width: auto;
+	  height: auto;
+	  padding: 0;
+	  margin: 3px 0;
+	  *margin-top: 0; /* IE7 */
+	  line-height: normal;
+	  cursor: pointer;
+	  .border-radius(0);
+	  border: 0 \9; /* IE9 and down */
+	}
+	input[type="image"] {
+	  border: 0;
+	}
+	
+	// Reset the file input to browser defaults
+	input[type="file"] {
+	  width: auto;
+	  padding: initial;
+	  line-height: initial;
+	  border: initial;
+	  background-color: @inputBackground;
+	  background-color: initial;
+	  .box-shadow(none);
+	}
+	
+	// Help out input buttons
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+	  width: auto;
+	  height: auto;
+	}
+	
+	// Set the height of select and file controls to match text inputs
+	select,
+	input[type="file"] {
+	  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+	  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
+	  line-height: 28px;
+	}
+	
+	// Reset line-height for IE
+	input[type="file"] {
+	  line-height: 18px \9;
+	}
+	
+	// Chrome on Linux and Mobile Safari need background-color
+	select {
+	  width: 220px; // default input width + 10px of padding that doesn't get applied
+	  background-color: @inputBackground;
+	}
+	
+	// Make multiple select elements height not fixed
+	select[multiple],
+	select[size] {
+	  height: auto;
+	}
+	
+	// Remove shadow from image inputs
+	input[type="image"] {
+	  .box-shadow(none);
+	}
+	
+	// Make textarea height behave
+	textarea {
+	  height: auto;
+	}
+	
+	// Hidden inputs
+	input[type="hidden"] {
+	  display: none;
+	}
+	
+	
+	
+	// CHECKBOXES & RADIOS
+	// -------------------
+	
+	// Indent the labels to position radios/checkboxes as hanging
+	.radio,
+	.checkbox {
+	  padding-left: 18px;
+	}
+	.radio input[type="radio"],
+	.checkbox input[type="checkbox"] {
+	  float: left;
+	  margin-left: -18px;
+	  *clear: left;
+	}
+	
+	// Move the options list down to align with labels
+	.controls > .radio:first-child,
+	.controls > .checkbox:first-child {
+	  padding-top: 5px; // has to be padding because margin collaspes
+	}
+	
+	// Radios and checkboxes on same line
+	// TODO v3: Convert .inline to .control-inline
+	.radio.inline,
+	.checkbox.inline {
+	  display: inline-block;
+	  padding-top: 5px;
+	  margin-bottom: 0;
+	  vertical-align: middle;
+	}
+	.radio.inline + .radio.inline,
+	.checkbox.inline + .checkbox.inline {
+	  margin-left: 10px; // space out consecutive inline controls
+	}
+	
+	
+	
+	// FOCUS STATE
+	// -----------
+	input,
+	textarea {
+	  .box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1));
+	  @transition: border linear .2s, box-shadow linear .2s;
+	  .transition(@transition);
+	}
+	input:focus,
+	textarea:focus {
+	  border-color: @inputBorderFocus;
+	  @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px @inputBorderFocus;
+	  .box-shadow(@shadow);
+	  outline: 0;
+	  outline: thin dotted \9; /* IE6-9 */
+	}
+	input[type="file"]:focus,
+	input[type="radio"]:focus,
+	input[type="checkbox"]:focus,
+	select:focus {
+	  .box-shadow(none); // override for file inputs
+	  .tab-focus();
+	}
+	
+	
+	// INPUT SIZES
+	// -----------
+	
+	// General classes for quick sizes
+	.input-mini       { width: 60px; }
+	.input-small      { width: 90px; }
+	.input-medium     { width: 150px; }
+	.input-large      { width: 210px; }
+	.input-xlarge     { width: 270px; }
+	.input-xxlarge    { width: 530px; }
+	.input-fullwidth  {
+        box-sizing: border-box;
+        width: 100%;
+        -moz-box-sizing: border-box;
+        *behavior: url(/javascript/coremvc/apps/companyprofile/lib/boxsizing.htc);
+	}
+	
+	// Grid style input sizes
+	input[class*="span"],
+	select[class*="span"],
+	textarea[class*="span"],
+	.uneditable-input {
+	  float: none;
+	  margin-left: 0;
+	}
+	
+	
+	
+	// GRID SIZING FOR INPUTS
+	// ----------------------
+	
+	//#grid > .input (@gridColumnWidth, @gridGutterWidth);
+	
+	
+	
+	
+	// DISABLED STATE
+	// --------------
+	
+	// Disabled and read-only inputs
+	input[disabled],
+	select[disabled],
+	textarea[disabled],
+	input[readonly],
+	select[readonly],
+	textarea[readonly] {
+	  background-color: @inputDisabledBackground;
+	  border-color: #ddd;
+	  cursor: not-allowed;
+	}
+	
+	
+	
+	
+	// FORM FIELD FEEDBACK STATES
+	// --------------------------
+	
+	// Warning
+	.control-group.warning {
+	  .formFieldState(@warningText, @warningText, @warningBackground);
+	}
+	// Error
+	.control-group.error {
+	  .formFieldState(@errorText, @errorText, @errorBackground);
+	}
+	// Success
+	.control-group.success {
+	  .formFieldState(@successText, @successBorder, @successBackground);
+	}
+	
+	// Disabled
+	.control-group.disabled {
+		label {
+	  	color: lighten(@gray, 10%);
+	  	cursor: not-allowed;
+		}
+		.help-block, .help-inline {
+			color: lighten(@gray, 25%);
+		}
+	}
+
+	// HTML5 invalid states
+	// Shares styles with the .control-group.error above
+	input:focus:required:invalid,
+	textarea:focus:required:invalid,
+	select:focus:required:invalid {
+	  color: #b94a48;
+	  border-color: #ee5f5b;
+	  &:focus {
+	    border-color: darken(#ee5f5b, 10%);
+	    .box-shadow(0 0 3px lighten(#ee5f5b, 20%));
+	  }
+	}
+	
+	
+	
+	// FORM ACTIONS
+	// ------------
+	
+	.form-actions {
+	  padding: (@baseLineHeight - 1) 20px @baseLineHeight;
+	  margin-top: @baseLineHeight;
+	  margin-bottom: @baseLineHeight;
+	  background-color: @panelBackground;
+	  border-top: 1px solid @panelBorder;
+	  .clearfixHack(); // Adding clearfix to allow for .pull-right button containers
+	}
+	
+	// For text that needs to appear as an input but should not be an input
+	.uneditable-input {
+	  display: block;
+	  background-color: @inputBackground;
+	  border-color: #eee;
+	  .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
+	  cursor: not-allowed;
+	}
+	
+	// Placeholder text gets special styles; can't be bundled together though for some reason
+	.placeholder(@grayLight);
+	
+	
+	
+	// HELP TEXT
+	// ---------
+	
+	.help-block,
+	.help-inline {
+	  color: @gray; // lighten the text some for contrast
+	}
+	
+	.help-block {
+	  display: block; // account for any element using help-block
+	  margin-bottom: @baseLineHeight / 2;
+	}
+	
+	.help-inline {
+	  display: inline-block;
+	  .ie7-inline-block();
+	  vertical-align: middle;
+	  padding-left: 5px;
+	}
+	
+	
+	
+	// INPUT GROUPS
+	// ------------
+	
+	// Allow us to put symbols and text within the input field for a cleaner look
+	.input-prepend,
+	.input-append {
+	  margin-bottom: 5px;
+	  input,
+	  select,
+	  .uneditable-input {
+	    *margin-left: 0;
+	    .border-radius(0 3px 3px 0);
+	    // remove due to conflict with javascript click event firing on firefox at least
+	    //&:focus {
+	    //  position: relative;
+	    //  z-index: 2;
+	    //}
+	  }
+	  .uneditable-input {
+	    border-left-color: #ccc;
+	  }
+	  .add-on {
+	    display: inline-block;
+	    width: auto;
+	    min-width: 16px;
+	    height: @baseLineHeight;
+	    padding: 4px 5px;
+	    font-weight: normal;
+	    line-height: @baseLineHeight;
+	    text-align: center;
+	    vertical-align: middle;
+	    background-color: @grayLighter;
+	    border: 1px solid #ccc;
+	  }
+	  .add-on,
+	  .btn {
+	    .border-radius(3px 0 0 3px);
+	  }
+	  .btn {
+	  	padding-bottom: 4px;
+    	padding-top: 4px;
+	  }
+	  .active {
+	    background-color: lighten(@green, 30);
+	    border-color: @green;
+	  }
+	}
+	.input-prepend {
+	  .add-on,
+	  .btn {
+	    margin-right: -1px;
+	  }
+	}
+	.input-append {
+	  input,
+	  select
+	  .uneditable-input {
+	    .border-radius(3px 0 0 3px);
+	  }
+	  .uneditable-input {
+	    border-left-color: #eee;
+	    border-right-color: #ccc;
+	  }
+	  .add-on,
+	  .btn {
+	    margin-left: -1px;
+	    .border-radius(0 3px 3px 0);
+	  }
+	}
+	// Remove all border-radius for inputs with both prepend and append
+	.input-prepend.input-append {
+	  input,
+	  select,
+	  .uneditable-input {
+	    .border-radius(0);
+	  }
+	  .add-on:first-child,
+	  .btn:first-child {
+	    margin-right: -1px;
+	    .border-radius(3px 0 0 3px);
+	  }
+	  .add-on:last-child,
+	  .btn:last-child {
+	    margin-left: -1px;
+	    .border-radius(0 3px 3px 0);
+	  }
+	}
+	
+	
+	
+	// SEARCH FORM
+	// -----------
+	
+	.search-query {
+	  padding-left: 14px;
+	  padding-right: 14px;
+	  margin-bottom: 0; // remove the default margin on all inputs
+	  .border-radius(14px);
+	}
+	
+	// Margin to space out fieldsets
+	.control-group {
+	  margin-bottom: @baseLineHeight / 2;
+	}
+	
+	// Legend collapses margin, so next element is responsible for spacing
+	legend + .control-group {
+	  margin-top: @baseLineHeight;
+	  -webkit-margin-top-collapse: separate;
+	}
+}
+
+// HORIZONTAL & VERTICAL FORMS
+// ---------------------------
+
+// Common properties
+// -----------------
+
+.form-search,
+.form-inline,
+.form-horizontal {
+  input,
+  textarea,
+  select,
+  .help-inline,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  // Re-hide hidden elements due to specifity
+  .hide {
+    display: none;
+  }
+}
+.form-search label,
+.form-inline label {
+  display: inline-block;
+}
+// Remove margin for input-prepend/-append
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+// Inline checkbox/radio labels (remove padding on left)
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+// Remove float and margin, set to inline-block
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 3px;
+}
+	
+// Horizontal-specific styles
+
+.form-horizontal {
+  // Increase spacing between groups
+  .control-group {
+    margin-bottom: @baseLineHeight;
+    .clearfixHack();
+  }
+  // Float the labels left
+  .control-label {
+    float: left;
+    width: 140px;
+    padding-top: 5px;
+    text-align: left;
+  }
+  // Move over all input controls and content
+  .controls {
+    margin-left: 160px;
+    /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
+    *display: inline-block;
+    *margin-left: 0;
+    *padding-left: 20px;
+  }
+  // Remove bottom margin on block level help text since that's accounted for on .control-group
+  .help-block {
+    margin-top: @baseLineHeight / 2;
+    margin-bottom: 0;
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-left: 160px;
+  }
+}
+
+/*
+ * Tables.less
+ * Tables for, you guessed it, tabular data
+ * ---------------------------------------- */
+
+
+// BASELINE STYLES
+// ---------------
+
+table.table {
+  width: 100%;
+  margin-bottom: @baseLineHeight;
+  padding: 0;
+  border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapse; /* IE7, collapse table to remove spacing */
+  font-size: @baseFontSize;
+  border: 1px solid #ddd;
+  .border-radius(4px);
+  th, td {
+    padding: 10px 10px 9px;
+    line-height: @baseLineHeight;
+    text-align: left;
+  }
+  th {
+    padding-top: 9px;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  thead th {
+    border-bottom: 1px solid #ddd;
+  }
+  td {
+    vertical-align: top;
+  }
+  th + th,
+  th + td,
+  td + td {
+    border-left: 1px solid #ddd;
+  }
+  tr + tr th, tr + tr td {
+    border-top: 1px solid #ddd;
+  }
+  tbody tr:first-child td:first-child {
+    .border-radius-topleft(4px);
+  }
+  tbody tr:first-child td:last-child {
+    .border-radius-topright(4px);
+  }
+  tbody tr:last-child td:first-child {
+    .border-radius-bottomleft(4px);
+  }
+  tbody tr:last-child td:last-child {
+    .border-radius-bottomright(4px);
+  }
+}
+
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+table.zebra {
+  tbody {
+    tr:nth-child(odd) td {
+      background-color: #f9f9f9;
+    }
+    tr:hover td {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+table.table {
+  // Tablesorting styles w/ jQuery plugin
+  .header {
+    cursor: pointer;
+    &:after {
+      content: "";
+      float: right;
+      margin-top: 7px;
+      border-width: 0 4px 4px;
+      border-style: solid;
+      border-color: #000 transparent;
+      visibility: hidden;
+    }
+  }
+  // Style the sorted column headers (THs)
+  .headerSortUp,
+  .headerSortDown {
+    background-color: rgba(141,192,219,.25);
+    text-shadow: 0 1px 1px rgba(255,255,255,.75);
+  }
+  // Style the ascending (reverse alphabetical) column header
+  .header:hover {
+    &:after {
+      visibility:visible;
+    }
+  }
+  // Style the descending (alphabetical) column header
+  .headerSortDown,
+  .headerSortDown:hover {
+    &:after {
+      visibility:visible;
+      .opacity(60);
+    }
+  }
+  // Style the ascending (reverse alphabetical) column header
+  .headerSortUp {
+    &:after {
+      border-bottom: none;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid #000;
+      visibility:visible;
+      .opacity(60);
+    }
+  }
+}
+/* Patterns.less
+ * Common interface patterns
+ * ---------------------------------------------------------------------------- */
+
+// Fixes
+.menu-container h1 { padding-bottom: 0; }
+
+// Page Headers
+.page-header {
+   margin-bottom: @baseLineHeight * 1.5;
+   padding-bottom: 5px;
+   border-bottom: 1px solid @grayLighter;
+   .clearfix();
+   
+   h1 {
+       margin: 2px 0 0 0;
+       line-height: @baseLineHeight - 0.2;
+       float: left;
+   }
+   .actions {
+        float: right;
+        
+        .btn {
+            margin-left: 5px;
+        }
+   }
+}
+
+h1 .sub {
+  color: lighten(@baseFontColor, 20%);
+  display: block;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* --- Rich container Pattern --- 
+@Modele : It's a block who contains media and a text. The img is float to the left by defaults
+@Options :  -- Add .imgRight to the container to put the img on the right
+            -- Add .imgWrap to the container to put the text above the image
+@exemple : <div class="rc">
+                <a href="#" class="img"><img src="http://static3.viadeo-static.com/v_img/navigation/logoviaducblanc.png" /></a>
+                <div class="bd">
+                    example content text
+                </div>
+           </div>
+*/
+
+.rc, .richcontainer {
+	display: block;
+	.clearfixHack();
+	
+	.bd{
+	   display: table-cell;
+	   *display: inline-block;
+	   zoom: 1;
+	   
+	   &:after {
+	       clear: both;
+	       display: block;
+	       visibility: hidden;
+	       overflow: hidden;
+	       height: 0 !important;
+	       line-height: 0;
+	       font-size: xx-large;
+	       content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
+	   }
+	   > :first-child {
+	       margin-top:0;
+	   }
+	   > :last-child {
+	       margin-bottom:0;
+	   }
+	}
+	.img, .img-left {
+        float: left;
+    }
+    .img-right, .imgRight {
+        float: right;
+    }
+}
+.rcsxs .img, .rcsxs .img-left                                               { margin-right: @spacingXs; }
+.rcss .img, .small .img, .rcss .img-left, .small .img-left                  { margin-right: @spacingS; }
+.rcsm .img, .medium .img, .rcsm .img-left, .medium .img-left                { margin-right: @spacingM; }
+.rcsl .img, .large .img, .rcsl .img-left, .large .img-left                  { margin-right: @spacingL; }
+.rcsxl .img, .xlarge .img, .rcsxl .img-left, .xlarge .img-left              { margin-right: @spacingXl; }
+
+.rcsxs .img-right, .rcsxs .imgRight                                         { margin-left: @spacingXs; }
+.rcss .img-right, .small .img-right, .rcss .imgRight, .small .imgRight      { margin-left: @spacingS; }
+.rcsm .img-right, .medium .img-right, .rcsm .imgRight, .medium .imgRight    { margin-left: @spacingM; }
+.rcsl .img-right, .large .img-right, .rcsl .imgRight, .large .imgRight      { margin-left: @spacingL; }
+.rcsxl .img-right, .xlarge .img-right, .rcsxl .imgRight, .xlarge .imgRight  { margin-left: @spacingXl; }
+
+.ui-label {
+  display: inline-block;
+  margin: 0 1px @spacingXs 0;
+  padding: 1px 14px;
+  font-size: 11px;
+  background: @panelBackground;
+  border: 1px solid @borderColor;
+  border-radius: 12px;
+  
+  .vicon {
+    margin-right: -9px;
+    color: @borderColor;
+    font-size: 8px;
+  }
+  
+  &:hover {
+    background: @panelBorder;
+    
+    .vicon {
+      color: darken(@borderColor, 25%);
+
+      &:hover {
+        color: @errorText;
+      }
+    }
+  }
+}
+
+.ui-badge {
+  #gradient > .vertical(#FF7919, #F56600);
+  background-color: #FF7919;
+  border: 1px solid #F56600;
+  color: #FFFFFF;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1px 3px;
+  .bras;
+}
+
+.ui-badge.ui-badge-alt {
+  #gradient > .vertical(lighten(@blueBright, 10%), @blueBright);
+  border-color: @blueBright;
+}
+
+.ui-tag {
+  display: inline-block;
+  margin: 0 @spacingXs @spacingXs 0;
+  padding: @spacingXs @spacingS;
+  border: 1px solid lighten(@borderColor, 5%);
+  border-radius: @borderRadiusS;
+  background: lighten(@borderColor, 10%);
+  white-space: nowrap;
+
+  .remove {
+    position: relative;
+    display: inline-block;
+    margin: 0 -1*@spacingXs 0 @spacingXs;
+    padding: 0 0 0 @spacingXs;
+    border-left: 1px solid @white;
+
+    &:before {
+      content: '';
+      position: absolute; left: -2px; top: 0;
+      width: 0; height: 100%;
+      border-left: 1px solid lighten(@grayLight, 10%);
+    }
+
+    .vicon {
+      width: 15px; height: 15px;
+      background: darken(@grayLight, 15%);
+      border-radius: 7px;
+      font-size: 6px;
+      color: white;
+      vertical-align: top;
+      line-height: 15px;
+    }
+
+    &:hover {
+      .vicon {
+        background: @gray;
+      }
+    }
+  }
+}
+
+/* Avatar Styles */
+
+@avatarBg: #D9E0E6;
+
+.avatar {
+	background: @white;
+	display: block;
+	border: 1px solid lighten(@black, 85%);
+	padding: 2px;
+	
+	img {
+	 display: block;
+   background-color: @avatarBg;
+   .transition(background-color 0.2s);
+  }
+
+  &:hover {
+    border-color: @grayLight;
+    
+    img {
+      background-color: darken(@avatarBg, 5%);
+    }
+  }
+}
+
+a:hover {
+  .avatar {
+    border-color: @grayLight;
+    img {
+      background-color: darken(@avatarBg, 5%);
+    }
+  }
+}
+/* Global Icons */
+.global-icon, .ico {
+	background: url('@{img-sprite-dir}/global-sprite2.png') no-repeat;
+	color: transparent;
+	font: 0/0 a;
+	display: inline-block;
+	height: 16px;
+	overflow: hidden;
+	vertical-align: text-top;
+	width: 16px;
+}
+
+ /* Same image, but in PNG8 for IE6 */
+.msie6 .global-icon, .msie6 .ico {
+	background-image: url('@{img-sprite-dir}/global-sprite2-8.png');
+}
+
+/* Icon Fonts */
+
+@font-face {
+  font-family: 'Viadeoicons';
+  src: url('@{fonts-dir}/viadeoicons/viadeoicons.eot');
+  src: url('@{fonts-dir}/viadeoicons/viadeoicons.eot?#iefix') format('embedded-opentype'),
+    url('@{fonts-dir}/viadeoicons/viadeoicons.woff') format('woff'),
+    url('@{fonts-dir}/viadeoicons/viadeoicons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i.vicon {
+  display: inline-block;
+  margin: 0 3px 0 0;
+  font-family: 'Viadeoicons';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.popover-display {
+	position: relative;
+  *z-index: 10;
+
+	&:hover .popover {
+		visibility: visible;
+		margin-bottom: 7px;
+		opacity: 1;
+	}
+}
+
+.popover {
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  bottom: 100%;
+  z-index: 1000;
+
+  width: 230px;
+  margin: 0 0 -7px 0;
+
+	border-radius: @borderRadiusM;
+	box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+
+	background: @white;
+	border: 2px solid #bcc8d1;
+
+	opacity: 0;
+
+	color: @black;
+	font-size: 12px;
+
+  font-weight: normal;
+  font-style: normal;
+	text-decoration: none;
+  text-shadow: none;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
+  text-transform: none;
+
+	pointer-events: none;
+
+	   -moz-transition: opacity .3s, margin .3s;
+	     -o-transition: opacity .3s, margin .3s;
+	-webkit-transition: opacity .3s, margin .3s;
+	        transition: opacity .3s, margin .3s;
+
+	&:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-color: @panelBorderDarker transparent transparent;
+    border-style: solid;
+    border-width: 10px 11px 0;
+  }
+
+	&:after {
+	  content: '';
+	  position: absolute;
+    left: 14px;
+    bottom: -7px;
+	  width: 0;
+	  height: 0;
+		border-color: @panelBackground transparent transparent;
+		border-style: solid;
+		border-width: 7px 7px 0;
+	}
+
+	.popover-header {
+	  display: block;
+	  padding: @spacingS @spacingS @spacingXs;
+	  border-bottom: 1px dotted @borderColor;
+	}
+
+	.popover-content {
+    display: block;
+    padding: @spacingS;
+  }
+
+	.popover-footer {
+    display: block;
+    padding: @spacingS;
+    background: @panelBackground;
+    border-top: 1px solid @panelBorder;
+    border-bottom-left-radius: @borderRadiusS;
+    border-bottom-right-radius: @borderRadiusS;
+  }
+}
+
+/* On bottom */
+
+.popover-display.popover-bottom {
+  &:hover .popover {
+    margin-top: 7px;
+  }
+}
+
+.popover-bottom .popover {
+  top: 100%;
+  bottom: auto;
+  margin: -7px 0 0 0;
+
+  &:before {
+    top: -10px;
+    border-color: transparent transparent @panelBorderDarker;
+    border-style: solid;
+    border-width: 0 11px 10px;
+  }
+
+  &:after {
+    top: -7px;
+    border-color: transparent transparent @white;
+    border-style: solid;
+    border-width: 0 7px 7px;
+  }
+}
+
+/* On left */
+
+.popover-left .popover {
+  right: 0;
+  left: auto;
+
+  &:before {
+    right: 10px;
+    left: auto;
+  }
+
+  &:after {
+    right: 14px;
+    left: auto;
+  }
+}
+
+/* Popover sizes */
+
+.popover-s { width: 230px; }
+.popover-m { width: 300px; }
+.popover-l { width: 400px; }
+.popover-xl { width: 530px; }
+
+.tooltip {
+	position: relative;
+
+	&:hover .tooltip-content {
+		visibility: visible;
+		margin-bottom: 7px;
+		opacity: 1;
+
+		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
+	}
+}
+
+.tooltip-content {
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  bottom: 100%;
+  z-index: 998;
+
+  min-width: 44px;
+  margin: 0 0 -7px 0;
+  padding: 2px 5px;
+
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+
+	#gradient > .vertical(lighten(@black, 25%), lighten(@black, 10%));
+
+	opacity: 0;
+
+	color: @white !important; // Avoid some context inherit problems
+	font: 11px/1.6em 'Lucida Grande', Tahoma, Arial, Verdana, sans-serif;
+
+	text-align: center;
+	text-decoration: none;
+  text-shadow: none;
+	white-space: nowrap;
+
+	pointer-events: none;
+
+	   -moz-transition: opacity .3s, margin .3s;
+	     -o-transition: opacity .3s, margin .3s;
+	-webkit-transition: opacity .3s, margin .3s;
+	        transition: opacity .3s, margin .3s;
+
+	&:after {
+	  content: '';
+	  position: absolute;
+    left: 10px;
+    bottom: -6px;
+	  width: 0;
+	  height: 0;
+		border-color: lighten(@black, 10%) transparent transparent;
+		border-style: solid;
+		border-width: 7px 7px 0;
+	}
+}
+
+/* On right */
+
+.tooltip.tooltip-right {
+  &:hover .tooltip-content {
+    margin-left: 7px;
+    *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+  }
+}
+
+.tooltip-right .tooltip-content {
+  top: 3px;
+  bottom: auto;
+  left: 100%;
+  margin: -7px 0 0 -7px;
+
+  &:after {
+    border-color: transparent lighten(@black, 17%) transparent transparent;
+    border-width: 5px 5px 5px 0;
+    left: -5px;
+    bottom: auto;
+    top: 6px;
+  }
+}
+
+/* On left */
+
+.tooltip.tooltip-left {
+  &:hover .tooltip-content {
+    margin-right: 7px;
+    *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+  }
+}
+
+.tooltip-left .tooltip-content {
+  top: 3px;
+  bottom: auto;
+  right: 100%;
+  left: auto;
+  margin: -7px -7px 0 0;
+
+  &:after {
+    border-color: transparent transparent transparent lighten(@black, 17%);
+    border-width: 5px 0 5px 5px;
+    right: -5px;
+    left: auto;
+    bottom: auto;
+    top: 6px;
+  }
+}
+
+/* On bottom */
+
+.tooltip.tooltip-bottom {
+  &:hover .tooltip-content {
+    margin-top: 7px;
+    *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+  }
+}
+
+.tooltip-bottom .tooltip-content {
+  top: 100%;
+  bottom: auto;
+  margin: -7px 0 0 0;
+
+  &:after {
+    border-color: transparent transparent lighten(@black, 25%);
+    border-width: 0 7px 7px;
+    top: -7px;
+    bottom: auto;
+  }
+}
+
+.btn {
+    /* General Properties */
+    @_padding:                     3px 10px;
+    @_borderRadius:                @borderRadiusS;
+
+    /* Rules */
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    padding: @_padding;
+    .border-radius(@_borderRadius);
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+
+    &:hover {
+        text-decoration: none;
+    	.box-shadow(0 1px 1px rgba(0,0,0,.1));
+    }
+    &:active, &.active {
+        .box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
+    }
+
+    /* Support for old layout */
+    span {
+        input, button {
+            display:inline;
+            border:none;
+            padding:0;
+            line-height: @baseLineHeight;
+            background:none;
+            text-align:center;
+            padding:0;
+            margin:0;
+            cursor:pointer;
+            font-family:inherit;
+            font-size:inherit !important;
+        }
+        img {
+            vertical-align: text-top;
+        }
+    }
+
+    // Icon font
+    .vicon.btn-icon-before {
+        margin: 0 -2px 0 -7px;
+        font-size: 8px;
+    }
+    .vicon.btn-icon-after {
+        margin: 0 -7px 0 -2px;
+        font-size: 8px;
+    }
+}
+.btn-primary, .btn-secondary, .socialAction, .eventsAction {
+    @_primaryBgColor:              @buttonPrimaryBgColor; // in browsers that don't support gradients this will be solid
+    @_primaryStartColor:           @buttonPrimaryBgColor; // the gradient start color (at the top of the button)
+    @_primaryEndColor:             @buttonPrimaryEndColor; // the gradient end color (at the bottom of the button)
+    @_primaryHoverColor:           @buttonPrimaryHoverColor;
+    @_primaryBorderColor:          @buttonPrimaryBorderColor;
+    @_primaryTextColor:            @buttonPrimaryTextColor;
+
+    color: @_primaryTextColor;
+    span, input, button { color: @_primaryTextColor; }
+    border: 1px solid @_primaryBorderColor;
+    #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
+    _background-color: @_primaryBgColor!important;
+
+    &:hover {
+        #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
+        color: @_primaryTextColor;
+    }
+    &:active {
+        #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
+    }
+    &.btn-disabled,
+    &.btn-loading {
+        background-color: lighten(@_primaryBgColor, 10%);
+        border-color: lighten(@_primaryBorderColor, 15%);
+        color: darken(@_primaryBorderColor,3%);
+        &:link,
+        &:visited,
+        &:hover,
+        &:active,
+        span {
+	        background-color: lighten(@_primaryBgColor, 10%);
+        	border-color: lighten(@_primaryBorderColor, 15%);
+	        color: darken(@_primaryBorderColor,3%);
+        }
+        .vicon {
+            color: darken(@_primaryBorderColor,3%);
+        }
+    }
+    &.btn-loading,
+    &.btn-loading:hover,
+    &.btn-loading:active {
+    		span {
+    			background: transparent url('@{img-buttons-dir}/loaders/secondary.gif') no-repeat 50% 0.3em;
+    			*background-position-y: 0;
+    		}
+    }
+    &.btn-inactive,
+    &.btn-inactive:hover {
+      border-color: @_primaryBorderColor;
+      #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
+      .box-shadow(none);
+      cursor: default;
+    }
+}
+.btn-default, .secEventsAction {
+    @_defaultBgColor:              @buttonDefaultBgColor; // in browsers that don't support gradients this will be solid
+    @_defaultStartColor:           @buttonDefaultBgColor; // the gradient start color (at the top of the button)
+    @_defaultEndColor:             @buttonDefaultEndColor; // the gradient end color (at the bottom of the button)
+    @_defaultHoverColor:           @buttonDefaultHoverColor;
+    @_defaultBorderColor:          @buttonDefaultBorderColor;
+    @_defaultTextColor:            @buttonDefaultTextColor;
+
+    border: 1px solid @_defaultBorderColor;
+    #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
+    color: @_defaultTextColor;
+    span, input, button { color: @_defaultTextColor; }
+    _background-color: @_defaultBgColor!important;
+
+    .vicon {
+        color: @gray;
+    }
+
+    &:hover {
+        #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);
+        color: @_defaultTextColor;
+
+        .vicon {
+            color: @_defaultTextColor;
+        }
+    }
+    &:active {
+        #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);
+    }
+    &.btn-disabled,
+    &.btn-loading {
+        background-color: @_defaultEndColor;
+        border-color: @_defaultBorderColor;
+        color: darken(@_defaultBorderColor,5%);
+        &:link,
+        &:visited,
+        &:hover,
+        &:active,
+        span {
+	        background-color: @_defaultEndColor;
+	        border-color: @_defaultBorderColor;
+	        color: darken(@_defaultBorderColor,5%);
+        }
+        .vicon {
+            color: darken(@_defaultBorderColor,5%);
+        }
+    }
+    &.btn-inactive,
+    &.btn-inactive:hover {
+      border-color: @_defaultBorderColor;
+      #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
+      .box-shadow(none);
+      cursor: default;
+    }
+}
+.btn-tertiary {
+    @_tertiaryBgColor:              @buttonTerBgColor; // in browsers that don't support gradients this will be solid
+    @_tertiaryStartColor:           @buttonTerBgColor; // the gradient start color (at the top of the button)
+    @_tertiaryEndColor:             @buttonTerBorderColor; // the gradient end color (at the bottom of the button)
+    @_tertiaryHoverColor:           @buttonTerHoverColor;
+    @_tertiaryBorderColor:          @buttonTerBorderColor;
+    @_tertiaryTextColor:            @buttonTerTextColor;
+
+    color: @_tertiaryTextColor;
+    span, input, button { color: @_tertiaryTextColor; }
+    border: 1px solid @_tertiaryBorderColor;
+    #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
+    _background-color: @_tertiaryBgColor!important;
+
+    .vicon {
+        color: @_tertiaryTextColor;
+    }
+
+    &:hover {
+        #gradient > .vertical(@_tertiaryStartColor, @_tertiaryHoverColor);
+        border-color: @_tertiaryHoverColor;
+        color: @_tertiaryTextColor;
+    }
+    &:active {
+        #gradient > .vertical(@_tertiaryStartColor, @_tertiaryHoverColor);
+    }
+    &.btn-disabled,
+    &.btn-loading {
+        background-color: lighten(@_tertiaryEndColor,3%);
+        border-color: @_tertiaryBorderColor;
+        color: darken(@_tertiaryBorderColor,5%);
+        &:link,
+        &:visited,
+        &:hover,
+        &:active,
+        span {
+	        background-color: lighten(@_tertiaryEndColor,3%);
+        	border-color: @_tertiaryBorderColor;
+	        color: darken(@_tertiaryBorderColor,5%);
+        }
+        .vicon {
+            color: darken(@_tertiaryBorderColor,5%);
+        }
+    }
+    &.btn-loading,
+    &.btn-loading:hover,
+    &.btn-loading:active {
+    	span {
+    		background: transparent url('@{img-buttons-dir}/buttons/loaders/primary.gif') no-repeat 50% 0.3em;
+    		*background-position-y: 0;
+    	}
+    }
+    &.btn-inactive,
+    &.btn-inactive:hover {
+      border-color: @_tertiaryBorderColor;
+      #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
+      .box-shadow(none);
+      cursor: default;
+    }
+}
+.btn-small {
+    @_padding:         1px 10px;
+    @_borderRadius:    @borderRadiusS;
+
+    padding: @_padding;
+    .border-radius(@_borderRadius);
+    font-size: 11px;
+
+    .global-icon {
+        margin: -1px 0;
+    }
+
+}
+.btn-large {
+    @_padding:         7px @spacingM;
+    @_borderRadius:    @borderRadiusS;
+
+    padding: @_padding;
+    .border-radius(@_borderRadius);
+    font-size: 13px;
+}
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:active,
+.btn-loading,
+.btn-loading:hover,
+.btn-loading:active {
+    cursor: not-allowed;
+    .box-shadow(none);
+    background-image: none;
+}
+.btn-loading,
+.btn-loading:hover,
+.btn-loading:active {
+	span {
+	   display: inline-block;
+	   overflow: hidden;
+	   height: 0;
+	   padding: 1em 0 0 0;
+	   background: transparent url('@{img-buttons-dir}/loaders/default.gif') no-repeat 50% 0.3em;
+	   *background-position-y: 0;
+	}
+}
+
+.btn-append {
+    @_borderRadius:    @borderRadiusS;
+
+    border-radius: 0 @_borderRadius @_borderRadius 0;
+    margin-left: -@_borderRadius;
+    padding-left: 0;
+    padding-right: 4px;
+}
+
+/**********************/
+/* General Properties */
+/**********************/
+
+@_padding: 3px 8px;
+@_margin: 2px -4px;
+@_textColor: @grayDark;
+@_ActiveColor: #e1eaf0;
+@_menuBorderColor: #cdd9e2;
+@_listBorder: 1px dotted #cad7e0;
+@_listBackground: @white;
+
+/* dropdown comp */
+
+.dd  {
+
+    position:relative;
+    display:inline-block;
+    .ie7-inline-block();
+    text-shadow: none;
+
+    /* dropdown button */
+
+    .dd-btn {
+        .vicon {
+            margin: 0 -6px 0 -2px;
+            line-height: 12px;
+            *line-height: 20px;
+            *margin-top: -3px;
+        }
+
+        .arrow {
+            background-position: -159px -48px;
+            left: 3px;
+            margin: 0 6px 0 -3px;
+            position: relative;
+        }
+
+        &.btn-append .arrow {
+            border: 0;
+            box-shadow: none;
+            left: auto;
+            margin: 0;
+            vertical-align: bottom;
+        }
+    }
+
+    .btn {
+    	.arrow {
+    		margin: 0 -2px 0 0;
+    	}
+    }
+
+    .btn-tertiary {
+        .arrow {
+            background-position: -159px -64px;
+        }
+    }
+
+    .btn-small {
+    	.arrow {
+		    background-position: -159px -49px;
+		    height: 14px;
+		}
+    }
+
+    /* dropdown menu */
+
+    .dd-menu {
+        background: @white;
+        border: 1px solid @_menuBorderColor;
+        .border-radius(3px);
+        .box-shadow(0 3px 4px 0 rgba(0, 0, 0, .2));
+        outline: medium none;
+        padding: 0 5px;
+        left: 0;
+        top: 100%;
+        position: absolute;
+        width: auto;
+        min-width: 100% !important;
+        z-index: 10;
+        display: none;
+
+        /* dropdown menu item */
+
+        .dd-item {
+            border-top: @_listBorder;
+            padding: 0;
+            list-style: none;
+
+            &:first-child {
+                border: 0;
+            }
+
+            /* dropdown menu link */
+            a, .label {
+                white-space: nowrap;
+                padding: @_padding;
+                margin: @_margin;
+                color: @_textColor;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+
+                &.dd-btn {
+                    padding-right: 24px;
+                }
+            }
+
+            &.active a, a:hover {
+                background-color: @_ActiveColor;
+            }
+
+            .label {
+                display: inline-block;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    /* dropdown state */
+
+    &.open {
+        .dd-menu {
+            display: block;
+        }
+    }
+
+     /* dropdown position */
+
+    &.pull-right {
+        .dd-menu {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    /* dropdown sub menu */
+
+    .dd {
+
+        .dd-btn {
+            .arrow {
+                background-position: -16px -256px;
+                position: absolute;
+                right: 5px;
+                left: auto;
+            }
+        }
+
+        .dd-menu {
+            overflow:visible;
+            min-width:auto;
+            position:absolute;
+            top:-1px;
+            left:100%;
+            background:@_listBackground;
+            display:none;
+
+        }
+
+        &.open {
+            .dd-menu {
+                display:block;
+            }
+            .dd-btn {
+                .arrow {
+                    background-position: -16px -240px;
+                }
+            }
+        }
+    }
+
+}
+
+.msie .dd .dd-menu {border:@_listBorder;}
+.msie7 .dd .dd-menu .dd-item {overflow: visible;}
+.msie6 .open,
+.msie7 .dd.open {z-index:10}
+
+// When the dropdown is appended to an input field
+.core-form .input-append .dd .active.btn-default {
+    border-color: @buttonDefaultBorderColor;
+}
+
+.popin-overlay {
+  position: fixed;
+  z-index: 4000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+  opacity: 0.6;
+  filter: ~"alpha(opacity = 60)";
+  
+  background: @black;
+  background: -webkit-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:    -moz-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:      -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:         radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  
+  -webkit-animation: popin-overlay-fadein 0.5s;
+  -moz-animation: popin-overlay-fadein 0.5s;
+}
+
+.popin-container {
+  position: fixed;
+  z-index: 4001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  
+  .popin-loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('@{img-loaders-dir}/ajax-loader.gif') no-repeat 50% 35%;
+  }
+  
+  > .gr {
+    width: @siteWidth;
+    margin: 0 auto;
+  }
+  
+  .popin {
+    margin: 125px auto 0;
+    .paxs;
+    .bram;
+    background: lighten(@overlayBorder, 5%);
+    background: fadeout(@overlayBorder, 40%);
+    box-shadow: 0 0 4px fadeout(@black, 30%);
+    
+    -webkit-animation: popin-fadein 0.15s;
+    -moz-animation: popin-fadein 0.15s;
+    
+    .popin-header {
+      .clearfixHack();
+      padding: @spacingM @spacingL @spacingXs;
+      border-bottom: 1px solid @panelBorder;
+      background: @panelBackground;
+      
+      h5 {
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+      
+      button.close {
+        float: right;
+        color: @linkColor;
+        
+        &:hover {
+          color: @linkColorHover;
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .popin-body {
+      padding: @spacingM @spacingL;
+      background: @white;
+    }
+    
+    .popin-footer {
+      .clearfixHack();
+      padding: @spacingM @spacingL;
+      border-top: 1px solid @panelBorder;
+      background: @panelBackground;
+    }
+
+    &.popin-close-animation {
+      -webkit-animation: popin-fadeout 0.3s;
+      -moz-animation: popin-fadeout 0.3s;
+    }
+  }
+}
+
+// Animations
+
+.popin-overlay-fadein() {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@-webkit-keyframes popin-overlay-fadein { .popin-overlay-fadein; }
+@-moz-keyframes popin-overlay-fadein { .popin-overlay-fadein; }
+
+.popin-fadein() {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes popin-fadein { .popin-fadein; }
+@-moz-keyframes popin-fadein { .popin-fadein; }
+
+.popin-fadeout() {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+  }
+}
+
+@-webkit-keyframes popin-fadeout { .popin-fadeout; }
+@-moz-keyframes popin-fadeout { .popin-fadeout; }
+
+.nav {
+	margin: 0;
+	margin-bottom: @baseLineHeight;
+	list-style: none;
+	text-shadow: none;
+}
+.nav li a {
+	display: block;
+	_display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// Tabs & Pills
+.nav-tabs, .nav-pills {
+	.clearfix();
+	.user-select(none);
+
+	li {
+		float: left;
+		padding: 0; // Override existing generic styles
+		position: relative;
+
+		a {
+			.transition(background-color 0.15s ease-out);
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	li.side-links {
+	   float: right;
+
+	   a {
+       padding: 8px 4px;
+       color: @gray;
+       background: none;
+       border: none;
+       box-shadow: none;
+       .transition(none);
+
+       &:focus, &:hover, &:active {
+         color: @linkColorHover;
+         text-decoration: underline;
+         background: none;
+       }
+	   }
+	}
+}
+
+// Tabs
+.nav-tabs {
+	@secondaryActiveColor:  #edf2f5;
+	@hoverColor:			#e1eaf0;
+	@barHeight:            36px;
+	@fontSize:             13px;
+	@borderWidth:          1px;
+	@verticalPadding:	   9px;
+	@horizontalPadding:    25px;
+	@tabHeight:				@barHeight - (@borderWidth * 2) - (@verticalPadding * 2);
+
+	background-color: @panelBackground;
+	border: @borderWidth solid @borderColor;
+	border-width: @borderWidth 0 @borderWidth 0;
+	padding: 0 10px;
+	height: @barHeight - (@borderWidth * 2);
+
+	a {
+		font-size: @fontSize;
+		height: @tabHeight;
+		line-height: @tabHeight;
+		padding: @verticalPadding @horizontalPadding;
+		outline: none;
+
+		&:hover {
+			background-color: @hoverColor;
+		}
+
+		&:focus {
+      background-color: @hoverColor;
+    }
+	}
+
+	.active {
+		a {
+			color: @black;
+			background-color: @white;
+			height: @tabHeight+1;
+			padding: (@verticalPadding + 2px) (@horizontalPadding - @borderWidth) @verticalPadding (@horizontalPadding - @borderWidth);
+			margin-top: -3px;
+			_margin-top: -2px;
+			border: 1px solid @borderColor;
+			border-bottom: none;
+			}
+			}
+
+	// Secondary tabs
+	&.nav-tabs-secondary {
+		background: @panelBackground;
+		border-color: @borderColor;
+		margin-bottom: 0;
+		padding: 0;
+
+		a {
+			border: solid lighten(@borderColor, 5%);
+			border-width: 0 @borderWidth 0 0;
+		}
+
+		li:first-child a {
+			border-width: 0 @borderWidth;
+		}
+
+		.active {
+
+			a {
+				background: @white;
+				border: solid @borderColor;
+				border-width: 0 @borderWidth 0 0;
+				margin: 0;
+				padding: @verticalPadding @horizontalPadding (@verticalPadding - 1px);
+
+				.inner-arrow(bottom, 8px, #FFF, 1px, @borderColor);
+			}
+		}
+	}
+}
+
+.nav-tabs-section .section {
+	display: block;
+}
+
+.nav-tabs-section .loader {
+	display: none;
+}
+
+.nav-tabs-section.loading .section {
+	display: none;
+}
+
+.nav-tabs-section.loading .loader {
+	display: block;
+}
+
+.msie6 .nav-tabs-secondary .active a,
+.msie9 .nav-tabs-secondary .active a {
+	padding-bottom: 8px; // @verticalPadding (from .nav-tabs)
+}
+
+// Pills
+.nav-pills {
+	border: 1px solid @borderColor;
+	border-width: 1px 0;
+	background: @panelBackground;
+	margin: 0;
+	padding: 6px @spacingS 2px;
+
+	li {
+		a {
+			background: @panelBackground;
+			border: 1px solid @panelBackground;
+			border-radius: @borderRadiusS;
+			line-height: @baseLineHeight;
+			margin-right: @spacingS;
+			padding: @spacingXs @spacingS;
+
+			&:hover {
+				background: lighten(@borderColor, 5%);
+				border-color: lighten(@borderColor, 5%);
+			}
+		}
+
+		&.active a {
+			color: @black;
+			border: 1px solid @borderColor;
+			background: @white;
+			cursor: default;
+		}
+
+		&.side-links {
+			a {
+				margin: 0;
+				background: none;
+				border: none;
+				.transition(none);
+
+				&:hover {
+					color: @linkColorHover;
+				}
+			}
+		}
+	}
+}
+
+.btncontainer {
+  .btn-yn {
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    
+    .lnk-yes, .lnk-no {
+      float: left;
+      padding: 0 @spacingS;
+      line-height: 22px;
+      text-decoration: none;
+      color: @grayLight;
+      border: 1px solid lighten(@black, 85%);
+      #gradient > .vertical(@white, lighten(@black, 85%));
+      *background-color: lighten(@black, 90%);
+      cursor: pointer;
+      
+      input[type='radio'] {
+        visibility: hidden;
+        margin-right: -15px;
+      }
+    }
+    
+    .lnk-yes {
+      .border-radius(@borderRadiusS 0 0 @borderRadiusS);
+    }
+    
+    .lnk-no {
+      .border-radius(0 @borderRadiusS @borderRadiusS 0);
+    }
+  }
+  
+  .btn-yes {
+    .lnk-yes {
+      color: @white;
+      border-color: @green lighten(@green, 5%) lighten(@green, 12%) lighten(@green, 10%);
+      #gradient > .vertical(@green, lighten(@green, 20%));
+      *background-color: lighten(@green, 5%);
+      cursor: default;
+    }
+  }
+  
+  .btn-no {
+    .lnk-no {
+      color: @white;
+      border-color: darken(@orange, 15%);
+      border-bottom-color: darken(@orange, 7%);
+      #gradient > .vertical(darken(@orange, 10%), @orange);
+      cursor: default;
+    }
+  }
+  
+  .btn-yes .lnk-no, .btn-no .lnk-yes {
+      &:hover, &:focus {
+        color: @grayDark;
+        border-color: lighten(@black, 75%);
+        #gradient > .vertical(lighten(@black, 95%), lighten(@black, 85%));
+        outline: none;
+      }
+  }
+  
+  .lbl {
+    overflow: auto;
+    
+    .lbl-no {
+      color: @gray;
+    }
+  }
+}
+
+.autocomplete {
+  position: relative;
+
+  .autocomplete-menu {
+    position: absolute;
+    z-index: 1000;
+
+    visibility: hidden;
+    opacity: 0;
+
+    margin-top: -@spacingS;
+
+    border: 1px solid @panelBorderDarker;
+    background: @white;
+    border-bottom-left-radius: @borderRadiusM;
+    border-bottom-right-radius: @borderRadiusM;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+
+    -moz-transition: margin-top .3s, opacity .3s;
+    -o-transition: margin-top .3s, opacity .3s;
+    -webkit-transition: margin-top .3s, opacity .3s;
+    transition: margin-top .3s, opacity .3s;
+
+    li {
+      padding: @spacingS;
+      border-top: 1px dotted @borderColor;
+      cursor: pointer;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      &:hover, &.active {
+        background: @panelBackground;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: @borderRadiusM;
+        border-bottom-right-radius: @borderRadiusM;
+      }
+    }
+  }
+
+  &.active {
+    .autocomplete-menu {
+      opacity: 1;
+      visibility: visible;
+      margin-top: -1px;
+    }
+  }
+}
+.paginator {
+	li {
+		display: inline-block;
+		margin: 0 0.1em;
+		padding: 0;
+
+		*display: inline;
+		*zoom: 1;
+
+		a {
+			display: inline-block;
+			min-width: 26px;
+			padding: @spacingXs 0;
+			text-align: center;
+			color: @grayDark;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: @baseFontSize - 1;
+			border: 1px solid lighten(@borderColor, 5%);
+			border-radius: @borderRadiusS;
+			background: @white;
+		}
+
+		&.arrow {
+			a {
+				#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+			}
+
+			.vicon {
+				margin-right: 0;
+				font-size: 7px;
+				color: @gray;
+			}
+
+			&:hover {
+				a {
+					border-color: @buttonDefaultBorderColor;
+					#gradient > .vertical(@buttonDefaultHoverColor, @buttonDefaultBorderColor);
+				}
+
+				.vicon {
+					color: @black;
+				}
+			}
+
+			&.disabled {
+				a {
+					border-color: lighten(@borderColor, 5%);
+					#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+					cursor: default;
+				}
+
+				.vicon {
+					color: @grayLight;
+				}
+			}
+		}
+
+		&.ellipsis {
+			span {
+				margin: 0 @spacingXs;
+				color: @grayLight;
+			}
+		}
+
+		&.active, &:hover {
+			a {
+				border-color: @borderColor;
+				#gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
+			}
+
+			.vicon {
+				color: @black;
+			}
+		}
+
+		&.active {
+			a {
+				cursor: default;
+			}
+		}
+
+		&:hover {
+			a {
+				box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+			}
+		}
+	}
+}
+
+.paginator-multi {
+    li {
+        padding: 0;
+        margin: 0 2px;
+        a {
+             outline: none;
+        }
+    }
+
+    .multi {
+        position: relative;
+        
+        &.open {
+            .multi-list {
+                opacity: 1;
+                visibility: visible;
+                top: 50%;
+            }
+        }
+        
+        .multi-list {
+            position: absolute;
+            z-index: 100;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            max-height: 185px;
+            overflow-x: hidden;
+            visibility: hidden;
+            opacity: 0;
+            border: 1px solid @borderColor;
+            .transition(opacity 0.5s);
+            background: @white;
+            box-shadow:
+            	inset 0 7px 21px -17px rgba(0, 0, 0, 0.7),
+            	inset 0 -7px 21px -17px rgba(0, 0, 0, 0.6);
+        }
+
+        .paginator-btn {
+        	padding-left: @spacingS;
+        	padding-right: @spacingXs;
+        	#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+
+		    	.vicon {
+						margin-right: 0;
+						margin-left: -2px;
+						font-size: 7px;
+						color: @gray;
+					}
+		    }
+
+        ul {
+            width: 150%;
+            max-height: 183px;
+            overflow-y: scroll;
+            border-radius: @borderRadiusS;
+            
+            li {
+                margin: 0;
+                padding: 0;
+                display: block;
+
+                a {
+                    display: block;
+                    text-align: center;
+                    border: 0 none;
+                    padding: 5px 10% 5px 0;
+                    background: none;
+                    border-radius: 0;
+                    box-shadow: none;
+                    outline: none;
+                    filter: none;
+                }
+                &.active, &:hover {
+                    a {
+                        #gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
+                    }
+                }
+                &.active {
+                    a {
+                        border: 1px solid @borderColor;
+                        border-width: 1px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+// Custom radio buttons
+
+// rule filter to block browsers that don't support that selector from applying rules they shouldn't
+.custom-radio:not(#unsupported) {
+	cursor: pointer;
+
+	input {
+		opacity: 0;
+		width: 20px;
+	}
+
+	.custom-radio-element {
+		display: inline-block;
+		width: 8px; height: 8px;
+		margin: 0 @spacingXs 2px -20px;
+		border: 3px solid @white;
+		border-radius: 50%;
+		background-color: @white;
+		vertical-align: middle;
+		box-shadow: 0 0 0 1px @inputBorder;
+	}
+
+	&:hover {
+		.custom-radio-element {
+			box-shadow: 0 0 0 1px @inputBorderFocus;
+		}
+	}
+
+	input:checked + .custom-radio-element {
+		background-color: @inputSelectedControl;
+	}
+}
+// Toggle buttons
+
+.btn-toggle {
+	display: inline-block;
+	padding: 4px 10px 4px 0;
+	border: 1px solid lighten(@black, 84%);
+	border-radius: @borderRadiusS;
+	color: @gray;
+	line-height: 18px;
+	#gradient > .vertical(lighten(@black, 95%), lighten(@black, 90%));
+	box-shadow: 0 1px 0 fade(@black, 16%);
+	cursor: pointer;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	input {
+		visibility: hidden;
+		width: 1px;
+	}
+
+	.btn-toggle-check {
+		display: inline-block;
+		width: 18px; height: 18px;
+		margin: 0 @spacingXs 0 0;
+		border-radius: (@borderRadiusS - 1);
+		background: lighten(@black, 99%);
+		box-shadow: inset 0 1px 2px fade(@black, 25%);
+
+		.vicon {
+			visibility: hidden;
+			font-size: 8px;
+		}
+	}
+}
+
+.btn-toggle-checked {
+	border-color: @panelBorderDarker;
+	color: darken(@linkColor, 5%);
+	#gradient > .vertical(@panelBorder, @borderColor);
+	box-shadow: inset 0 1px 0 fade(@panelBorderDarker, 80%);
+
+	.btn-toggle-check {
+		background: @panelBackground;
+		box-shadow: 1px 1px 1px fade(darken(@linkColor, 15%), 50%);
+
+		.vicon {
+			visibility: visible;
+			color: darken(@linkColor, 5%);
+		}
+	}
+}
+
+.btn-toggle:hover {
+	border-color: @panelBorderDarker;
+	#gradient > .vertical(darken(@panelBorder, 5%), darken(@borderColor, 2.5%));
+}
+
+// Toggle buttons in forms
+
+.core-form {
+	label.btn-toggle {
+		display: inline-block;
+		
+		input {
+			display: inline;
+			width: 1px;
+		}
+	}
+}

@@ -1,0 +1,157 @@
+/*! Tetra UI v1.0.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+
+tetra.model.register('navtabs', {
+
+    scope:"comp_navtabs",
+
+    req:{
+        save:{
+            url:'{0}',
+            uriParams:['url'],
+            parser:function (resp, col, cond) {
+                col[cond.uriParams.url] = {id:cond.uriParams.url, html:resp.toString()};
+                return col;
+            }
+        }
+    },
+
+    attr:{
+        html:'',
+        targetId:'',
+        url:''
+    },
+
+    methods:function (attr) {
+        return {
+            validate:function (attr, errors) {
+                return errors;
+            }
+        };
+    }
+
+});
+tetra.controller.register('navtabs', {
+    scope:'comp_navtabs', // application name
+    use:['navtabs'], // list of required models
+
+    constr:function (me, app, page, orm) {
+
+        'use strict';
+
+        return {
+            events:{
+                model:{ // events received from model
+                    'navtabs':{ // model name
+
+                        'save':function (obj) {
+                            app.notify('start loading', {
+                                targetId:obj.get('targetId')
+                            });
+                        },
+                        'saved':function (obj) {
+                            me.currentContent = obj.get('html');
+                            app
+                                .notify('end loading', {
+                                    targetId:obj.get('targetId')
+                                })
+                                .notify('set content', {
+                                    targetId:obj.get('targetId'),
+                                    content:me.currentContent,
+                                    tabRef:me.tabRef[me.tabRef.length - 1]
+                                })
+                            ;
+                        },
+                        'error':function (error) {
+
+                            me.tabRef.pop();
+
+                            app
+                                .notify('end loading', {
+                                    targetId:error.obj.get('targetId')
+                                })
+                                .notify('show error')
+                                .notify('set content', {
+                                    targetId:error.obj.get('targetId'),
+                                    content:me.currentContent,
+                                    tabRef:me.tabRef[me.tabRef.length - 1]
+                                })
+                            ;
+                        }
+                    }
+                },
+
+                view:{ // events received from view
+                    'show tab':function (data) {
+
+                        me.tabRef.push(data.url);
+                        orm('navtabs').create(data).save({ uriParams:{ url:data.url } });
+
+                    }
+                }
+            },
+
+            methods:{
+                init:function () {
+                    me.currentContent = '';
+                    me.tabRef = [];
+                }
+            }
+        };
+    }
+});
+
+tetra.view.register('navtabs', {
+    scope:'comp_navtabs', // application name
+    use:['navtabs'], // list of required controllers
+
+    constr:function (me, app, _) {
+
+        'use strict';
+
+        return {
+            events:{
+                user:{ // list of events listened on the page
+                    'click':{
+                        '.nav-tabs a':function (e, elm) {
+                            var data = {
+                                url:_(elm).attr('href'),
+                                targetId:_(elm).parents('.nav-tabs').attr('data-target-id')
+                            };
+
+                            me.methods.setActiveTab(elm);
+                            app.notify('show tab', data);
+                        }
+                    }
+                },
+
+                controller:{ // list of messages sent by controllers listened in the view
+                    'start loading':function (data) {
+                        _('#' + data.targetId).addClass('loading');
+                    },
+                    'end loading':function (data) {
+                        _('#' + data.targetId).removeClass('loading');
+                    },
+                    'set content':function (data) { // function executed at the reception
+
+                        _('#' + data.targetId).children('.section').html(data.content);
+                        var elm = _('.nav-tabs[data-target-id=' + data.targetId + ']').find('a[href="' + data.tabRef + '"]');
+                        me.methods.setActiveTab(elm);
+                    },
+                    'show error':function (error) {
+                        VNS.ui.growl(lang['notification.modification.save.error']);
+                    }
+                }
+            },
+
+            methods:{
+                init:function () {
+                    me.target = undefined;
+                    me.tabs = undefined;
+                },
+                setActiveTab:function (elm) {
+                    _(elm).parent().addClass('active').siblings().removeClass('active');
+                }
+            }
+        };
+    }
+});
