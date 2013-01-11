@@ -17,6 +17,9 @@
 
 	.flipswitch-lbl-no {
 		color: lighten(@black, 70%);
+		&:hover {
+			color: @black;
+		}
 	}
 
 	.flipswitch-sliders {
@@ -78,6 +81,7 @@
 		line-height: 23px;
 		font-size: 8px;
 		color: lighten(@black, 70%);
+		cursor: pointer;
 		text-shadow: -1px 0 0 @white;
 		box-shadow:
 			0 1px 2px fade(@black, 40%),
@@ -88,11 +92,19 @@
     -moz-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
     -o-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
     transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+
+    &:hover {
+    	background: lighten(@black, 98%);
+    	color: lighten(@black, 50%);
+    }
 	}
 
 	&.flipswitch-no {
 		.flipswitch-lbl-yes {
 			color: lighten(@black, 70%);
+			&:hover {
+				color: @black;
+			}
 		}
 		.flipswitch-lbl-no {
 			color: @black;

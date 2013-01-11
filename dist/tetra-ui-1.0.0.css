@@ -5762,6 +5762,9 @@ i.vicon {
 .flipswitch .flipswitch-lbl-no {
   color: #b3b3b3;
 }
+.flipswitch .flipswitch-lbl-no:hover {
+  color: #000000;
+}
 .flipswitch .flipswitch-sliders {
   display: inline-block;
   position: relative;
@@ -5819,6 +5822,7 @@ i.vicon {
   line-height: 23px;
   font-size: 8px;
   color: #b3b3b3;
+  cursor: pointer;
   text-shadow: -1px 0 0 #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 1px #ffffff inset, 0 -6px 12px rgba(255, 255, 255, 0.5) inset;
   -webkit-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
@@ -5826,8 +5830,15 @@ i.vicon {
   -o-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
   transition: left 0.2s ease-in, margin-left 0.2s ease-in;
 }
+.flipswitch .flipswitch-slider:hover {
+  background: #fafafa;
+  color: #808080;
+}
 .flipswitch.flipswitch-no .flipswitch-lbl-yes {
   color: #b3b3b3;
+}
+.flipswitch.flipswitch-no .flipswitch-lbl-yes:hover {
+  color: #000000;
 }
 .flipswitch.flipswitch-no .flipswitch-lbl-no {
   color: #000000;
