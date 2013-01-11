@@ -69,6 +69,120 @@
 
 <div class="gr grsl ptxl">
     <div class="gu gu-1of5">
+        <h2>Flipswitch</h2>
+    </div>
+    
+    <div class="gu gu-2of5">
+      <form class="core-form form-horizontal">
+
+        <div class="flipswitch flipswitch-yes bootnode"
+          data-view="comp_flipswitch/flipswitch"
+          data-event="click"
+          id="flipswitch-sample-1">
+
+          <label class="flipswitch-lbl-yes">
+            <input type="radio" name="flipswitch-sample-1" checked="checked" /> Yes
+          </label>
+
+          <span class="flipswitch-sliders">
+            <span class="flipswitch-outer">
+              <span class="flipswitch-inner">
+                <span class="flipswitch-btn-no"></span>
+                <span class="flipswitch-btn-yes"></span>
+              </span>
+            </span>
+            <span class="flipswitch-slider">||</span>
+          </span>
+
+          <label class="flipswitch-lbl-no">
+            <input type="radio" name="flipswitch-sample-1" /> No
+          </label>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="gu gu-last">
+      <form class="core-form form-horizontal">
+
+        <div class="flipswitch flipswitch-no bootnode"
+          data-view="comp_flipswitch/flipswitch"
+          data-event="click"
+          id="flipswitch-sample-2">
+
+          <label class="flipswitch-lbl-yes">
+            <input type="radio" name="flipswitch-sample-2" /> Yes
+          </label>
+
+          <span class="flipswitch-sliders">
+            <span class="flipswitch-outer">
+              <span class="flipswitch-inner">
+                <span class="flipswitch-btn-no"></span>
+                <span class="flipswitch-btn-yes"></span>
+              </span>
+            </span>
+            <span class="flipswitch-slider">||</span>
+          </span>
+          
+          <label class="flipswitch-lbl-no">
+            <input type="radio" name="flipswitch-sample-2" checked="checked" /> No
+          </label>
+        </div>
+
+      </form>
+    </div>
+</div>
+
+<div class="gr grsl">
+    <div class="gu gu-1of5">
+        <p class="mvxs">The flipswitch component maps a Tetra.js component to two native hidden radio buttons, the first one to yes and the second to no.</p>
+        <p class="mbxs"><strong>When yes is selected</strong>, the container has a <code class="language-markup">flipswitch-yes</code> class and the “yes” radio button is checked.</p>
+        <p class="mbxs"><strong>When no is selected</strong>, the container has a <code class="language-markup">flipswitch-no</code> class and the “no” radio button is checked.</p>
+    </div>
+
+    <div class="gu gu-last">
+      <pre class="mts"><code class="language-markup">&lt;div class="flipswitch flipswitch-yes bootnode" id="flipswitch-sample-1"
+  data-view="comp_flipswitch/flipswitch"
+  data-event="click"&gt;
+
+  &lt;label class="flipswitch-lbl-yes"&gt;
+    &lt;input type="radio" name="flipswitch-sample-1" checked="checked" /&gt; Yes
+  &lt;/label&gt;
+
+  &lt;span class="flipswitch-sliders"&gt;
+    &lt;span class="flipswitch-outer"&gt;
+      &lt;span class="flipswitch-inner"&gt;
+        &lt;span class="flipswitch-btn-no"&gt;&lt;/span&gt;
+        &lt;span class="flipswitch-btn-yes"&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class="flipswitch-slider"&gt;||&lt;/span&gt;
+  &lt;/span&gt;
+
+  &lt;label class="flipswitch-lbl-no"&gt;
+    &lt;input type="radio" name="flipswitch-sample-1" /&gt; No
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+<div class="gr grsl">
+    <div class="gu gu-1of5">
+        <p><strong>On the JavaScript part</strong>, the component fires this event, and you can set the component state from a third party controller with the same function.</p>
+    </div>
+
+    <div class="gu-last mts">  
+
+      <pre><code class="language-javascript">page.notify('flipswitch: set state', {
+  id: 'flipswitch-sample-1', /* the DOM id of the toggle button */
+  state: false /* true or false, the new state of the component */
+});</code></pre>
+
+    </div>
+</div>
+
+<div class="gr grsl ptxl">
+    <div class="gu gu-1of5">
         <h2>Toggle buttons</h2>
         <p class="mbxs">The toggle button maps a Tetra.js component to a native hidden checkbox.</p>
         <p class="mbxs"><strong>When active</strong>, the container has a <code class="language-markup">btn-toggle-checked</code> class and the hidden checkbox is checked.</p>

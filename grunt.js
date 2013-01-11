@@ -166,6 +166,10 @@ module.exports = function( grunt ) {
                 'src/js/coremvc/comps/dropdown/controller/dropdown.ctrl.js',
                 'src/js/coremvc/comps/dropdown/view/click_enabled.ui.js'],
 
+            'release/js/flipswitch.js': ['<banner>',
+                'src/js/coremvc/comps/flipswitch/controller/flipswitch.ctrl.js',
+                'src/js/coremvc/comps/flipswitch/view/flipswitch.ui.js'],
+
             'release/js/generic_autocomplete.js': ['<banner>',
                 'src/js/coremvc/comps/generic_autocomplete/model/autocomplete.class.js',
                 'src/js/coremvc/comps/generic_autocomplete/controller/autocomplete.ctrl.js',

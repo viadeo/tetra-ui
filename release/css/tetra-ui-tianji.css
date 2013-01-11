@@ -5751,3 +5751,105 @@ i.vicon {
   display: inline;
   width: 1px;
 }
+.flipswitch label {
+  display: inline;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.flipswitch label input {
+  display: none;
+}
+.flipswitch .flipswitch-lbl-yes {
+  color: #000000;
+}
+.flipswitch .flipswitch-lbl-no {
+  color: #b3b3b3;
+}
+.flipswitch .flipswitch-lbl-no:hover {
+  color: #000000;
+}
+.flipswitch .flipswitch-sliders {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 15px;
+  padding: 5px;
+  margin: 0 5px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  vertical-align: middle;
+  cursor: default;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) inset;
+}
+.flipswitch .flipswitch-outer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.flipswitch .flipswitch-inner {
+  display: block;
+  width: 200%;
+  height: 100%;
+  margin-left: -100%;
+  -webkit-transition: margin-left 0.2s ease-in;
+  -moz-transition: margin-left 0.2s ease-in;
+  -o-transition: margin-left 0.2s ease-in;
+  transition: margin-left 0.2s ease-in;
+}
+.flipswitch .flipswitch-btn-no,
+.flipswitch .flipswitch-btn-yes {
+  float: left;
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) inset, 0 -7px 7px rgba(0, 0, 0, 0.15) inset;
+}
+.flipswitch .flipswitch-btn-no {
+  background: #e35e44;
+}
+.flipswitch .flipswitch-btn-yes {
+  float: right;
+  background: #9fcc33;
+}
+.flipswitch .flipswitch-slider {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 23px;
+  height: 23px;
+  margin-left: 0;
+  border-radius: 12px;
+  background: #e6e6e6;
+  text-align: center;
+  line-height: 23px;
+  font-size: 8px;
+  color: #b3b3b3;
+  cursor: pointer;
+  text-shadow: -1px 0 0 #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 1px #ffffff inset, 0 -6px 12px rgba(255, 255, 255, 0.5) inset;
+  -webkit-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+  -moz-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+  -o-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+  transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+}
+.flipswitch .flipswitch-slider:hover {
+  background: #fafafa;
+  color: #808080;
+}
+.flipswitch.flipswitch-no .flipswitch-lbl-yes {
+  color: #b3b3b3;
+}
+.flipswitch.flipswitch-no .flipswitch-lbl-yes:hover {
+  color: #000000;
+}
+.flipswitch.flipswitch-no .flipswitch-lbl-no {
+  color: #000000;
+}
+.flipswitch.flipswitch-no .flipswitch-inner {
+  margin-left: 0;
+}
+.flipswitch.flipswitch-no .flipswitch-slider {
+  left: 100%;
+  margin-left: -23px;
+}
