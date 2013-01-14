@@ -856,6 +856,18 @@ textarea {
  * Headings, body text, lists, code, and more for a versatile and durable typography system
  * ---------------------------------------------------------------------------------------- */
 
+// Web fonts
+
+@font-face {
+  font-family: 'MuseoSlab';
+  src: url('@{fonts-dir}/museoslab/museoslab-500.eot');
+  src: url('@{fonts-dir}/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'),
+    url('@{fonts-dir}/museoslab/museoslab-500.woff') format('woff'),
+    url('@{fonts-dir}/museoslab/museoslab-500.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Body Text
 body {
 	#font > .sansSerif(normal, @baseFontSize, @baseFontColor, @baseLineHeight);
@@ -921,6 +933,30 @@ h6, .h6 {
   border-bottom: 1px solid @panelBorder;
   font-size: 14px;
 }
+
+.h-bx {
+  border-bottom: 3px solid @blueSoft;
+  font-size: 16px;
+  padding: 0 0 7px 0;
+  font: normal 16px "MuseoSlab", "Arial", sans-serif;
+
+  .h-bx-link {
+    float: right;
+
+    .vicon {
+      color: tint(@blueSoft, 50%);
+      font-size: 8px;
+      margin: 0 -1px 0 0;
+    }
+
+    &:hover {
+      .vicon {
+        color: @blueSoft;
+      }
+    }
+  }
+}
+
 
 // Lists
 ul.link-list {

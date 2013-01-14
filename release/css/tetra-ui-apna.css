@@ -3001,6 +3001,13 @@ textarea {
 /* Typography.less
  * Headings, body text, lists, code, and more for a versatile and durable typography system
  * ---------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'MuseoSlab';
+  src: url('/css/core/fonts/museoslab/museoslab-500.eot');
+  src: url('/css/core/fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/museoslab/museoslab-500.woff') format('woff'), url('/css/core/fonts/museoslab/museoslab-500.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: Arial, sans-serif;
   font-size: 12px;
@@ -3079,6 +3086,23 @@ h6,
   padding-bottom: 5px;
   border-bottom: 1px solid #e5e9ec;
   font-size: 14px;
+}
+.h-bx {
+  border-bottom: 3px solid #83a0b9;
+  font-size: 16px;
+  padding: 0 0 7px 0;
+  font: normal 16px "MuseoSlab", "Arial", sans-serif;
+}
+.h-bx .h-bx-link {
+  float: right;
+}
+.h-bx .h-bx-link .vicon {
+  color: #c1d0dc;
+  font-size: 8px;
+  margin: 0 -1px 0 0;
+}
+.h-bx .h-bx-link:hover .vicon {
+  color: #83a0b9;
 }
 ul.link-list {
   list-style: none;
@@ -5852,4 +5876,10 @@ i.vicon {
 .flipswitch.flipswitch-no .flipswitch-slider {
   left: 100%;
   margin-left: -23px;
+}
+.bx {
+  padding: 20px 20px 15px 20px;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }

@@ -1,36 +1,13 @@
-/* Fonts */
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url('@{fonts-dir}/opensans/opensans-regular.eot');
-  src: url('@{fonts-dir}/opensans/opensans-regular.eot?#iefix') format('embedded-opentype'),
-    url('@{fonts-dir}/opensans/opensans-regular.woff') format('woff'),
-    url('@{fonts-dir}/opensans/opensans-regular.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'LearningtoTrust';
-  src: url('@{fonts-dir}/learningtotrust/learningtotrust.eot');
-  src: url('@{fonts-dir}/learningtotrust/learningtotrust.eot?#iefix') format('embedded-opentype'),
-    url('@{fonts-dir}/learningtotrust/learningtotrust.woff') format('woff'),
-    url('@{fonts-dir}/learningtotrust/learningtotrust.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Common */
 
 html {
   height: 100%;
-  background: darken(@white, 2%);
+  background: #edeef0;
 }
 
 body {
   height: 100%;
-  background: darken(@white, 2%);
+  background: #edeef0;
 }
 
 p {
@@ -153,17 +130,16 @@ p {
 
 /* Documentation */
 
-.section {
+h1, h2, h3, h4 {
+  margin-bottom: @spacingL;
+  font-family: 'MuseoSlab', 'Arial', sans-serif;
+  font-weight: normal;
+}
 
+.restore-typography {
   h1, h2, h3, h4 {
-    margin-bottom: @spacingL;
-    font-family: 'OpenSans', 'Arial', sans-serif;
-  }
-  
-  .restore-typography {
-    h1, h2, h3, h4 {
-      font-family: 'Arial', sans-serif;
-    }
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
   }
 }
 
@@ -220,6 +196,7 @@ code.color-transform { font-size: 11px; margin: @spacingXs 0 0 0; background: @w
 .var-green              { background-color: @green; }
 .var-yellow             { background-color: @yellow; }
 .var-orange             { background-color: @orange; }
+.var-blue-soft             { background-color: @blueSoft; }
 .var-blue-bright         { background-color: @blueBright; }
 .var-highlight          { background-color: @highlightColor; }
 .var-link               { background-color: @linkColor; }

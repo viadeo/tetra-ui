@@ -1,110 +1,144 @@
-    <div class="page-header">
-        <h1>Rich Containers<span class="sub">One of the most common layout patterns</span></h1>
+<div class="page-header">
+    <h1>Rich Containers<span class="sub">The most common layout patterns</span></h1>
+</div>
+<div class="gr grsxl">
+    <div class="gu gu-1of3">
+        <h2>What is it?</h2>
+        <p>A rich container supports one of the most common layout patterns on Viadeo, in which there is an image (usually aligned left) and a block of text. This allows us to avoid using fixed widths on floated elements when implementing this pattern.</p>
     </div>
-    <div class="gr grsxl">
-        <div class="gu gu-1of3">
-            <h2>What is it?</h2>
-            <p>A rich container supports one of the most common layout patterns on Viadeo, in which there is an image (usually aligned left) and a block of text. This allows us to avoid using fixed widths on floated elements when implementing this pattern.</p>
-        </div>
-        <div class="gu gu-last">
-            <h3>Markup</h3>
-            <pre data-line="1-8"><code class="language-markup">&lt;div class="rc"&gt;
-    &lt;a href="#" class="img"&gt;
-        &lt;img src="..." /&gt;
-    &lt;/a&gt;
-    &lt;div class="bd"&gt;
-        ...
-    &lt;/div&gt;
+    <div class="gu gu-last">
+        <h3>Markup</h3>
+        <pre data-line="1-8"><code class="language-markup">&lt;div class="rc"&gt;
+&lt;a href="#" class="img"&gt;
+    &lt;img src="..." /&gt;
+&lt;/a&gt;
+&lt;div class="bd"&gt;
+    ...
+&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        </div>
     </div>
-    <div class="gr grsxl mvxl">
-        <div class="gu gu-2of3">
-            <h3>Spacing &amp; Alignment</h3>
-            <p>The spacing between the image and text in rich containers can be specified by adding a class name to the <code class="language-css">.rc</code> element, and the alignment by adding a class to the <code class="language-css">.img</code> element.</p>
-            <div class="gr">
-                <div class="gu gu-1of2">
-                    <div class="prxs">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Class</th>
-                                    <th>Spacing</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code class="language-css">.rcsxs</code></td>
-                                    <td>Value defined as <code class="language-css">@spacingXs</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code class="language-css">.rcss</code></td>
-                                    <td>Value defined as <code class="language-css">@spacingS</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code class="language-css">.rcsm</code></td>
-                                    <td>Value defined as <code class="language-css">@spacingM</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code class="language-css">.rcsl</code></td>
-                                    <td>Value defined as <code class="language-css">@spacingL</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code class="language-css">.rcsxl</code></td>
-                                    <td>Value defined as <code class="language-css">@spacingXl</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+</div>
+
+<div class="gr grsxl mvxl">
+    <div class="gu gu-2of3">
+        <h3>Spacing &amp; Alignment</h3>
+        <p>The spacing between the image and text in rich containers can be specified by adding a class name to the <code class="language-css">.rc</code> element, and the alignment by adding a class to the <code class="language-css">.img</code> element.</p>
+        <div class="gr">
+            <div class="gu gu-1of2">
+                <div class="prxs">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Spacing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="language-css">.rcsxs</code></td>
+                                <td>Value defined as <code class="language-css">@spacingXs</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-css">.rcss</code></td>
+                                <td>Value defined as <code class="language-css">@spacingS</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-css">.rcsm</code></td>
+                                <td>Value defined as <code class="language-css">@spacingM</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-css">.rcsl</code></td>
+                                <td>Value defined as <code class="language-css">@spacingL</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-css">.rcsxl</code></td>
+                                <td>Value defined as <code class="language-css">@spacingXl</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="gu gu-last">
-                    <div class="plxs">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Class</th>
-                                    <th>Alignment</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code class="language-css">.img-left</code></td>
-                                    <td>The image will be left aligned. Note that you can still use the old <code class="language-css">.img</code> class but it will be deprecated in the future.</td>
-                                </tr>
-                                <tr>
-                                    <td><code class="language-css">.img-right</code></td>
-                                    <td>The image will be right aligned. The previous <code class="language-css">.imgRight</code> class name is still supported but will be deprecated in the future.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            </div>
+            <div class="gu gu-last">
+                <div class="plxs">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Alignment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="language-css">.img-left</code></td>
+                                <td>The image will be left aligned. Note that you can still use the old <code class="language-css">.img</code> class but it will be deprecated in the future.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-css">.img-right</code></td>
+                                <td>The image will be right aligned. The previous <code class="language-css">.imgRight</code> class name is still supported but will be deprecated in the future.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="gu gu-last">
-            <h3>Examples</h3>
-            <div class="rc rcss">
-                <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
-                <div class="bd">
-                    <p>This rich container (<code class="language-css">.rc</code>) also has the class <code class="language-css">.rcss</code> and therefore has small spacing between the image and text.</p>
-                </div>
-           </div>
-           <div class="rc rcss mtl">
-                <a href="#" class="img-right"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
-                <div class="bd">
-                    <p>This rich container has the same spacing as the example above, although the image parent (<code class="language-markup">&lt;a&gt;</code>) element has the <code class="language-css">.img-right</code> class.</p>
-                </div>
-           </div>
-           <div class="rc rcsxl mtl">
-                <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
-                <div class="bd">
-                    <p>This is an example of a rich container with extra large spacing.</p>
-                </div>
-           </div>
-        </div>
+    </div>
+    <div class="gu gu-last">
+        <h3>Examples</h3>
+        <div class="rc rcss">
+            <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
+            <div class="bd">
+                <p>This rich container (<code class="language-css">.rc</code>) also has the class <code class="language-css">.rcss</code> and therefore has small spacing between the image and text.</p>
+            </div>
+       </div>
+       <div class="rc rcss mtl">
+            <a href="#" class="img-right"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
+            <div class="bd">
+                <p>This rich container has the same spacing as the example above, although the image parent (<code class="language-markup">&lt;a&gt;</code>) element has the <code class="language-css">.img-right</code> class.</p>
+            </div>
+       </div>
+       <div class="rc rcsxl mtl">
+            <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
+            <div class="bd">
+                <p>This is an example of a rich container with extra large spacing.</p>
+            </div>
+       </div>
+    </div>
+</div>
+
+<h2 class="mvl">Boxes</h2>
+
+<div class="gr grsxl">
+  <div class="gu gu-2of5">
+
+    <div class="bx">
+      <h2 class="h-bx">
+        <a href="" class="h-bx-link tooltip tooltip-left">
+          <i class="vicon">c</i>
+          <span class="tooltip-content">Settings</span>
+        </a>
+        Box title
+      </h2>
+      Box content
     </div>
 
-<h2 class="mvl">Avatars</h2>
+  </div>
+  <div class="gu gu-last">
+
+    <pre><code class="language-markup">&lt;div class="bx"&gt;
+  &lt;h2 class="h-bx"&gt;
+    &lt;a href="" class="h-bx-link tooltip tooltip-left"&gt;
+      &lt;i class="vicon"&gt;c&lt;/i&gt;
+      &lt;span class="tooltip-content"&gt;Settings&lt;/span&gt;
+    &lt;/a&gt;
+    Box title
+  &lt;/h2&gt;
+  Box content
+&lt;/div&gt;</code></pre>
+
+  </div>
+</div>
+
+<h2 class="mvxl">Avatars</h2>
 
 <div class="gr grsxl">
   <div class="gu gu-2of5">
