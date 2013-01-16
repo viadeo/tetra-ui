@@ -213,6 +213,6 @@ module.exports = function( grunt ) {
     });
 
 	// Default task.
-	grunt.registerTask('default', 'less lint concat');
+	grunt.registerTask('default', 'lint less concat');
 	grunt.registerTask('watch-server', 'server watch');
 };
