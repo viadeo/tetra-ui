@@ -67,6 +67,30 @@
 
   <div class="gr grsxl mbxl">
     <div class="gu gu-1of4">
+      <h3>Placeholders</h3>
+      <p>This is a polyfill to simulate the
+        <code class="language-markup">placeholder=""</code> attribute on Internet Explorer until version 9.
+        Add the <code class="language-markup">ie-ph</code> class on
+        <code class="language-markup">&lt;input&gt;</code> or <code class="language-markup">&lt;textarea&gt;</code> elements.
+      </p>
+    </div>
+    <div class="gu gu-last">
+      <form class="core-form">
+        <input type="text" class="ie-ph" placeholder="I’m a placeholder, type something…" />
+      </form>
+
+      <pre><code class="language-markup">&lt;input type="text" class="ie-ph" placeholder="I’m a placeholder, type something…" /&gt;</code></pre>
+      <p>Then call this script with conditional comments at the end of your page,
+        for example before closing the <code class="language-markup">&lt;body&gt;</code> tag:
+      </p>
+      <pre><code class="language-markup">&lt;!--[if lt IE 10]&gt;
+  &lt;script src="/tetra-ui/src/js/coremvc/comps/ie/view/iePlaceholder.ui.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="gr grsxl mbxl">
+    <div class="gu gu-1of4">
       <h3>Search form</h3>
       <p>Just add <code class="language-css">.form-search</code> for rounded search fields.</p>
     </div>
@@ -543,4 +567,5 @@
 
 </div>
 
+<!--[if lt IE 10]><script src="/tetra-ui/src/js/coremvc/comps/ie/view/iePlaceholder.ui.js"></script><![endif]-->
 <!--[if gt IE 8]><!--><script>Prism.highlightAll();</script><!--<![endif]-->
