@@ -1,6 +1,9 @@
 tetra.view.register('iePlaceholder', {
     scope:"ie",
     constr:function (me, app, _) {
+
+        'use strict';
+
         return {
             events:{
                 user:{
