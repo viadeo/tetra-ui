@@ -198,7 +198,10 @@ module.exports = function( grunt ) {
             'release/js/yesno.js': ['<banner>',
                 'src/js/coremvc/comps/yesno/model/yesno.class.js',
                 'src/js/coremvc/comps/yesno/controller/yesno.ctrl.js',
-                'src/js/coremvc/comps/yesno/view/yesno.ui.js']
+                'src/js/coremvc/comps/yesno/view/yesno.ui.js'],
+
+            'release/js/iePlaceholder.js': ['<banner>',
+                'src/js/coremvc/comps/ie/view/iePlaceholder.ui.js']
 		},
 
         server: {
