@@ -102,7 +102,9 @@ module.exports = function( grunt ) {
                 'src/less/components/autocomplete.less',
                 'src/less/components/pagination.less',
                 'src/less/components/radio.less',
-                'src/less/components/toggle.less'
+                'src/less/components/toggle.less',
+                'src/less/components/flipswitch.less',
+                'src/less/components/box.less'
             ],
             'release/less/tetra-ui-apna.less': ['<banner>',
                 'src/less/foundation/variables_apna.less',
@@ -126,7 +128,9 @@ module.exports = function( grunt ) {
                 'src/less/components/autocomplete.less',
                 'src/less/components/pagination.less',
                 'src/less/components/radio.less',
-                'src/less/components/toggle.less'
+                'src/less/components/toggle.less',
+                'src/less/components/flipswitch.less',
+                'src/less/components/box.less'
             ],
             'release/less/tetra-ui-tianji.less': ['<banner>',
                 'src/less/foundation/variables_tianji.less',
@@ -150,7 +154,9 @@ module.exports = function( grunt ) {
                 'src/less/components/autocomplete.less',
                 'src/less/components/pagination.less',
                 'src/less/components/radio.less',
-                'src/less/components/toggle.less'
+                'src/less/components/toggle.less',
+                'src/less/components/flipswitch.less',
+                'src/less/components/box.less'
             ],
 
             'release/js/autocomplete.js': ['<banner>',
