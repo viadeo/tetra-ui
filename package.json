@@ -1,14 +1,14 @@
 {
   "name": "tetra-ui",
   "description": "Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
-    "name": "Fr�d�ric Perrin",
+    "name": "Frédéric Perrin",
     "email": "fperrin@viadeoteam.com"
   },
   "contributors": [
     {
-      "name": "Fr�d�ric Perrin",
+      "name": "Frédéric Perrin",
       "email": "fperrin@viadeoteam.com"
     },
     {
