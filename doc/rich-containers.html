@@ -9,12 +9,12 @@
     <div class="gu gu-last">
         <h3>Markup</h3>
         <pre data-line="1-8"><code class="language-markup">&lt;div class="rc"&gt;
-&lt;a href="#" class="img"&gt;
+  &lt;a href="#" class="img"&gt;
     &lt;img src="..." /&gt;
-&lt;/a&gt;
-&lt;div class="bd"&gt;
+  &lt;/a&gt;
+  &lt;div class="bd"&gt;
     ...
-&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
 </div>
@@ -135,6 +135,85 @@
   Box content
 &lt;/div&gt;</code></pre>
 
+  </div>
+</div>
+
+<div class="gr grsxl">
+  <h2>Alerts</h2>
+
+  <div class="gu gu-1of5">
+    <p>Three kinds of alert boxes:
+      for success notifications, for warnings, and for error messages in forms for example.
+    </p>
+    <p>Alert boxes have an optional close button and an optional large main icon.</p>
+  </div>
+  
+  <div class="gu gu-last restore-typography">
+
+    <div class="bx-alert bx-alert-success mbl">
+      <button class="bx-alert-close bootnode" data-view="alert/alert" data-event="click">
+        <i class="vicon">×</i>
+      </button>
+
+      <i class="vicon bx-alert-icon">v</i>
+      <div class="bx-alert-content">
+        <h2 class="bx-alert-title">Title</h2>
+        <p class="mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+
+    <div class="bx-alert bx-alert-warning mbl">
+      <button class="bx-alert-close bootnode" data-view="alert/alert" data-event="click">
+        <i class="vicon">×</i>
+      </button>
+
+      <p class="tac mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <div class="bx-alert bx-alert-error mbl">
+      <button class="bx-alert-close bootnode" data-view="alert/alert" data-event="click">
+        <i class="vicon">×</i>
+      </button>
+
+      <p class="tac mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
+
+<div class="gr grsxl">
+  <div class="gu gu-1of5">
+    <p>A simple warning alert box, with a close button and a centered text message.</p>
+    <p>For an error use the <code class="language-markup">bx-alert-error</code> class instead of <code class="language-markup">bx-alert-warning</code></p>
+  </div>
+
+  <div class="gu gu-last">
+    <pre><code class="language-markup">&lt;div class="bx-alert bx-alert-warning"&gt;
+  &lt;button class="bx-alert-close bootnode" data-view="alert/alert" data-event="click"&gt;
+    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
+  &lt;/button&gt;
+
+  &lt;p class="tac mbxs"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<div class="gr grsxl">
+  <div class="gu gu-1of5">
+    <p>The most complete example, with a close button, an icon aligned to the left, a title and a text message.</p>
+  </div>
+
+  <div class="gu gu-last">
+    <pre><code class="language-markup">&lt;div class="bx-alert bx-alert-success"&gt;
+  &lt;button class="bx-alert-close bootnode" data-view="alert/alert" data-event="click"&gt;
+    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
+  &lt;/button&gt;
+
+  &lt;i class="vicon bx-alert-icon"&gt;v&lt;/i&gt;
+  &lt;div class="bx-alert-content"&gt;
+    &lt;h2 class="bx-alert-title"&gt;Title&lt;/h2&gt;
+    &lt;p class="mbxs"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
 </div>
 

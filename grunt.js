@@ -207,7 +207,10 @@ module.exports = function( grunt ) {
                 'src/js/coremvc/comps/yesno/view/yesno.ui.js'],
 
             'release/js/iePlaceholder.js': ['<banner>',
-                'src/js/coremvc/comps/ie/view/iePlaceholder.ui.js']
+                'src/js/coremvc/comps/ie/view/iePlaceholder.ui.js'],
+
+            'release/js/alert.js': ['<banner>',
+                'src/js/coremvc/comps/alert/view/alert.ui.js']
 		},
 
         server: {

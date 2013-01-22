@@ -5880,3 +5880,77 @@ i.vicon {
   background: #ffffff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
+.bx-alert {
+  position: relative;
+}
+.bx-alert .bx-alert-close {
+  position: absolute;
+  right: -5px;
+  top: -3px;
+}
+.bx-alert .bx-alert-icon {
+  float: left;
+  margin: 5px 15px 0 0;
+  font-size: 20px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px #ffffff;
+}
+.bx-alert .bx-alert-content {
+  overflow: hidden;
+}
+.bx-alert .bx-alert-title {
+  margin: 0 0 5px 0;
+}
+.bx-alert-success {
+  padding: 20px 20px 15px 20px;
+  border: 2px solid #ffffff;
+  background: #f3f6f8;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+.bx-alert-success .bx-alert-close .vicon {
+  color: #c1d0dc;
+}
+.bx-alert-success .bx-alert-close:hover .vicon {
+  color: #9cb3c7;
+}
+.bx-alert-success .bx-alert-icon {
+  color: #cdd9e3;
+}
+.bx-alert-warning {
+  padding: 15px 20px 10px 20px;
+  border-bottom: 1px dotted #e6e6e6;
+  background-color: #fbf3ba;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #fcf7d1, #fbf3ba);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcf7d1), color-stop(100%, #fbf3ba));
+  background-image: -webkit-linear-gradient(top, #fcf7d1, #fbf3ba);
+  background-image: -o-linear-gradient(top, #fcf7d1, #fbf3ba);
+  background-image: linear-gradient(to bottom, #fcf7d1, #fbf3ba);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcf7d1', endColorstr='#fbf3ba', GradientType=0);
+  *filter: none;
+}
+.bx-alert-warning .bx-alert-close .vicon {
+  color: #f1d71a;
+}
+.bx-alert-warning .bx-alert-close:hover .vicon {
+  color: #c1ac15;
+}
+.bx-alert-error {
+  padding: 15px 20px 10px 20px;
+  border-bottom: 1px dotted #e6e6e6;
+  color: #c80000;
+  background-color: #f4cccc;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #f7d9d9, #f4cccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7d9d9), color-stop(100%, #f4cccc));
+  background-image: -webkit-linear-gradient(top, #f7d9d9, #f4cccc);
+  background-image: -o-linear-gradient(top, #f7d9d9, #f4cccc);
+  background-image: linear-gradient(to bottom, #f7d9d9, #f4cccc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7d9d9', endColorstr='#f4cccc', GradientType=0);
+  *filter: none;
+}
+.bx-alert-error .bx-alert-close .vicon {
+  color: #e99999;
+}
+.bx-alert-error .bx-alert-close:hover .vicon {
+  color: #d94d4d;
+}

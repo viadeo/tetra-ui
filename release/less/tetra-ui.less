@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.2 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.3 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 /* Variables.less
  * Variables to customize the look and feel of Bootstrap
@@ -3715,4 +3715,79 @@ i.vicon {
 	border-radius: @borderRadiusS;
 	background: @white;
 	box-shadow: 1px 1px 4px fade(@black, 20%);
+}
+
+.bx-alert {
+	position: relative;
+
+	.bx-alert-close {
+		position: absolute;
+		right: -5px; top: -3px;
+	}
+
+	.bx-alert-icon {
+		float: left;
+		margin: @spacingXs @spacingM 0 0;
+		font-size: 20px;
+		text-shadow: 0 -1px 1px fade(@black, 70%), 0 1px 1px fade(@white, 100%);
+	}
+
+	.bx-alert-content {
+		overflow: hidden;
+	}
+
+	.bx-alert-title {
+		margin: 0 0 @spacingXs 0;
+	}
+}
+
+.bx-alert-success {
+	padding: @spacingL @spacingL @spacingM @spacingL;
+	border: 2px solid @white;
+	background: tint(@blueSoft, 90%);
+	box-shadow: 1px 1px 4px fade(@black, 15%);
+
+	.bx-alert-close {
+		.vicon {
+			color: tint(@blueSoft, 50%);
+		}
+		&:hover .vicon {
+			color: tint(@blueSoft, 20%);
+		}
+	}
+
+	.bx-alert-icon {
+		color: tint(@blueSoft, 60%);
+	}
+}
+
+.bx-alert-warning {
+	padding: @spacingM @spacingL @spacingS @spacingL;
+	border-bottom: 1px dotted lighten(@black, 90%);
+	#gradient > .vertical(tint(@yellow, 80%), tint(@yellow, 70%));
+
+	.bx-alert-close {
+		.vicon {
+			color: @yellow;
+		}
+		&:hover .vicon {
+			color: shade(@yellow, 20%);
+		}
+	}
+}
+
+.bx-alert-error {
+	padding: @spacingM @spacingL @spacingS @spacingL;
+	border-bottom: 1px dotted lighten(@black, 90%);
+	color: @errorText;
+	#gradient > .vertical(tint(@errorText, 85%), tint(@errorText, 80%));
+
+	.bx-alert-close {
+		.vicon {
+			color: tint(@errorText, 60%);
+		}
+		&:hover .vicon {
+			color: tint(@errorText, 30%);
+		}
+	}
 }
