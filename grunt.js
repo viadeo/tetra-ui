@@ -107,6 +107,7 @@ module.exports = function( grunt ) {
                 'src/less/components/box.less'
             ],
             'release/less/tetra-ui-apna.less': ['<banner>',
+                'src/less/foundation/variables.less',
                 'src/less/foundation/variables_apna.less',
                 'src/less/foundation/mixins.less',
                 'src/less/reset.less',
@@ -133,6 +134,7 @@ module.exports = function( grunt ) {
                 'src/less/components/box.less'
             ],
             'release/less/tetra-ui-tianji.less': ['<banner>',
+                'src/less/foundation/variables.less',
                 'src/less/foundation/variables_tianji.less',
                 'src/less/foundation/mixins.less',
                 'src/less/reset.less',

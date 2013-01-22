@@ -1,10 +1,128 @@
 /*! Tetra UI v1.0.3 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
+/* Variables.less
+ * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+
+// Static files paths
+@fonts-dir: '/css/core/fonts';
+@img-sprite-dir: '/v_img/global';
+@img-buttons-dir: '/v_img/coreui/buttons';
+@img-loaders-dir: '/v_img/profilev2';
+
+// Layout
+@siteWidth:         980px;
+
+// Spacing
+@spacingXs:         5px;
+@spacingS:          10px;
+@spacingM:          15px;
+@spacingL:          20px;
+@spacingXl:         30px;
+
+// Grayscale
+@black:             #000000;
+@blackLight:        lighten(@black, 18%);
+@grayDark:          lighten(@black, 25%);
+@gray:              lighten(@black, 50%);
+@grayLight:         lighten(@black, 75%);
+@grayLighter:       lighten(@black, 90%);
+@white:             #FFFFFF;
+
+// Colors
+@green:             #829b13;
+@yellow:            #f1d71a;
+@orange:            #ea762b;
+
+@blue:              #0A87CD;
+@blueDarker:        darken(@blue, 20%);
+@blueDark:          darken(@blue, 10%);
+@blueLight:         lighten(desaturate(@blue, 35%), 20%);
+@blueLighter:       lighten(desaturate(@blue, 35%), 40%);
+@blueBright:				#0065AE;
+@borderColor:       lighten(desaturate(@blue, 66%), 43%);
+@panelBackground:   lighten(desaturate(@blue, 70%), 55%);
+@panelBorder:       lighten(desaturate(@blue, 75%), 49%);
+@panelBorderDarker: lighten(desaturate(@blue, 73%), 35%);
+@overlayBorder:     darken(desaturate(@blue, 61%), 27%);
+
+@blueSoft: 					#83a0b9;
+
+// Button Colors
+@buttonPrimaryBgColor:     #ffd724;
+@buttonPrimaryEndColor:    #ffc906;
+@buttonPrimaryHoverColor:  #ffc906;
+@buttonPrimaryBorderColor: #ffbb02;
+@buttonPrimaryTextColor:   @blackLight;
+
+@buttonDefaultBgColor:     #fafafa;
+@buttonDefaultEndColor:    #ebebeb;
+@buttonDefaultHoverColor:  #e8e8e8;
+@buttonDefaultBorderColor: #d5d5d5;
+@buttonDefaultTextColor:   @blackLight;
+
+@buttonTerBgColor:         #91cf00;
+@buttonTerHoverColor:      #62a600;
+@buttonTerBorderColor:     #86b300;
+@buttonTerTextColor:       @white;
+
+@highlightColor:    #F4F2CA;
+
+// Link colors
+@linkColor:         @blue;
+@linkColorHover:    @blue;
+
+// Typography
+@baseFontSize:      12px;
+@smallFontSize:     @baseFontSize - 1;
+@baseFontColor:     #222222;
+@baseFontFamily:    Arial, sans-serif;
+@baseLineHeight:    1.4em;
+
+// Border Radius
+@borderRadiusS:     3px;
+@borderRadiusM:     5px;
+@borderRadiusL:     10px;
+
+// Forms
+@inputBackground:	@white;
+@inputBorder: #cbd2d6;
+@inputBorderFocus: #88a7bc;
+@inputDisabledBackground: @grayLighter;
+@inputSelectedControl: #344957;
+
+// Dropdowns
+@dropdownBackground: 			@white;
+@dropdownBorder: 				rgba(0,0,0,.2);
+@dropdownLinkColor: 			@grayDark;
+@dropdownLinkColorHover: 		@white;
+@dropdownLinkBackgroundHover: 	@linkColor;
+
+// Form states and alerts
+// -------------------------
+@warningText: 		#c09853;
+@warningBackground: #fcf8e3;
+@warningBorder: 	darken(spin(@warningBackground, -10), 3%);
+
+@errorText:         #c80000;
+@errorBackground:   lighten(@errorText, 58%);
+@errorBorder:       #c80000;
+
+@successText: 		#65a900;
+@successBackground: #dff0d8;
+@successBorder: 	#65a900;
+
+@infoText: 			#3a87ad;
+@infoBackground: 	#d9edf7;
+@infoBorder: 		darken(spin(@infoBackground, -10), 7%);
+
+// Forms requirements from bootstrap
+@gridColumns:		12;
+@gridColumnWidth:	60px;
+@gridGutterWidth:	20px;
 /* Variables_apna.less
  * Anything declared here will overwrite the variables declared in variables.less
  * ----------------------------------------------------- */
-
-@import "variables";
 
 @buttonPrimaryBgColor:     lighten(#9c1111, 7%);
 @buttonPrimaryEndColor:    #9c1111;

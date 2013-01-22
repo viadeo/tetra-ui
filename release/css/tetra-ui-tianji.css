@@ -1,8 +1,8 @@
-/* Variables_apna.less
- * Anything declared here will overwrite the variables declared in variables.less
- * ----------------------------------------------------- */
 /* Variables.less
  * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+/* Variables_apna.less
+ * Anything declared here will overwrite the variables declared in variables.less
  * ----------------------------------------------------- */
 /* Mixins.less
  * Snippets of reusable CSS to develop faster and keep code readable
