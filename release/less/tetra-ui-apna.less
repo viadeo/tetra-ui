@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.5 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.6 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 /* Variables.less
  * Variables to customize the look and feel of Bootstrap
@@ -2033,37 +2033,37 @@ h1 .sub {
 
 /* Avatar Styles */
 
-@avatarBg: #D9E0E6;
-
 .avatar {
 	background: @white;
 	display: block;
-	border: 1px solid lighten(@black, 85%);
-	padding: 2px;
+	border: 1px solid tint(@blueSoft, 79%);
+	padding: 1px;
 	
 	img {
 	 display: block;
-   background-color: @avatarBg;
+   background-color: tint(@blueSoft, 69%);
    .transition(background-color 0.2s);
   }
 
   &:hover {
-    border-color: @grayLight;
+    border-color: tint(@blueSoft, 60%);
     
     img {
-      background-color: darken(@avatarBg, 5%);
+      background-color: tint(@blueSoft, 60%);
     }
   }
 }
 
 a:hover {
   .avatar {
-    border-color: @grayLight;
+    border-color: tint(@blueSoft, 60%);
+
     img {
-      background-color: darken(@avatarBg, 5%);
+      background-color: tint(@blueSoft, 60%);
     }
   }
 }
+
 /* Global Icons */
 .global-icon, .ico {
 	background: url('@{img-sprite-dir}/global-sprite2.png') no-repeat;

@@ -4093,28 +4093,28 @@ h1 .sub {
 .avatar {
   background: #ffffff;
   display: block;
-  border: 1px solid #d9d9d9;
-  padding: 2px;
+  border: 1px solid #e5ebf0;
+  padding: 1px;
 }
 .avatar img {
   display: block;
-  background-color: #d9e0e6;
+  background-color: #d9e2e9;
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
 .avatar:hover {
-  border-color: #bfbfbf;
+  border-color: #cdd9e3;
 }
 .avatar:hover img {
-  background-color: #cad3dc;
+  background-color: #cdd9e3;
 }
 a:hover .avatar {
-  border-color: #bfbfbf;
+  border-color: #cdd9e3;
 }
 a:hover .avatar img {
-  background-color: #cad3dc;
+  background-color: #cdd9e3;
 }
 /* Global Icons */
 .global-icon,
