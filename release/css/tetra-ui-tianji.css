@@ -5699,7 +5699,7 @@ i.vicon {
   border: 1px solid #d6d6d6;
   border-radius: 3px;
   color: #808080;
-  line-height: 18px;
+  line-height: 1.4em;
   background-color: #e6e6e6;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #f2f2f2, #e6e6e6);
@@ -5772,8 +5772,7 @@ i.vicon {
   display: inline-block;
 }
 .core-form label.btn-toggle input {
-  display: inline;
-  width: 1px;
+  display: none;
 }
 .flipswitch label {
   display: inline;
