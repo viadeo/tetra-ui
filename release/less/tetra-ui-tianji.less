@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.6 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.7 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 /* Variables.less
  * Variables to customize the look and feel of Bootstrap
@@ -3537,7 +3537,7 @@ i.vicon {
 
 .btn-toggle {
 	display: inline-block;
-	padding: 4px 10px 4px 0;
+	padding: 4px 10px 4px 4px;
 	border: 1px solid lighten(@black, 84%);
 	border-radius: @borderRadiusS;
 	color: @gray;
@@ -3553,13 +3553,13 @@ i.vicon {
 	user-select: none;
 
 	input {
-		visibility: hidden;
-		width: 1px;
+		display: none;
 	}
 
 	.btn-toggle-check {
 		display: inline-block;
-		width: 18px; height: 18px;
+		width: 16px; height: 16px;
+		line-height: 15px;
 		margin: 0 @spacingXs 0 0;
 		border-radius: (@borderRadiusS - 1);
 		background: lighten(@black, 99%);
@@ -3567,7 +3567,7 @@ i.vicon {
 
 		.vicon {
 			visibility: hidden;
-			font-size: 8px;
+			font-size: 7px;
 		}
 	}
 }

@@ -5694,7 +5694,7 @@ i.vicon {
 }
 .btn-toggle {
   display: inline-block;
-  padding: 4px 10px 4px 0;
+  padding: 4px 10px 4px 4px;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
   color: #808080;
@@ -5717,13 +5717,13 @@ i.vicon {
   user-select: none;
 }
 .btn-toggle input {
-  visibility: hidden;
-  width: 1px;
+  display: none;
 }
 .btn-toggle .btn-toggle-check {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
+  line-height: 15px;
   margin: 0 5px 0 0;
   border-radius: 2px;
   background: #fcfcfc;
@@ -5731,7 +5731,7 @@ i.vicon {
 }
 .btn-toggle .btn-toggle-check .vicon {
   visibility: hidden;
-  font-size: 8px;
+  font-size: 7px;
 }
 .btn-toggle-checked {
   border-color: #bac8cf;

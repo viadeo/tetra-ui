@@ -282,7 +282,7 @@
   class="btn-toggle bootnode"
   data-view="toggle/toggle"
   data-event="click"
-  id="btn-toggle-sample-1"&gt;
+  id="btn-toggle-sample-2"&gt;
 
   &lt;input type="checkbox" /&gt;
   &lt;span class="btn-toggle-check"&gt;
@@ -296,15 +296,51 @@
 
 <div class="gr grsl">
     <div class="gu gu-1of5">
-        <p><strong>On the JavaScript part</strong>, the component fires this event, and you can set the component state from a third party controller with the same function.</p>
+        <p><strong>Events</strong> triggered and listened by the component</p>
     </div>
 
-    <div class="gu-last mts">  
+    <div class="gu-last mts">
 
-      <pre><code class="language-javascript">page.notify('toggle: set state', {
-  id: 'btn-toggle-sample-1', /* the DOM id of the toggle button */
-  state: false /* true or false, the new state of the component */
+      <table class="table">
+        
+        <tr>
+          <th>Triggered</th>
+          <td>
+            <pre><code class="language-javascript">page.notify('toggle: state changed', {
+  id: data.id, /* the DOM id of the toggle button */
+  state: data.state /* true or false, the new state of the toggle */
 });</code></pre>
+          </td>
+          <td>
+            <p>This event is triggered when the state of the toggle button has changed.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th rowspan="2">Listened</th>
+          <td>
+            <pre><code class="language-javascript">page.notify('toggle: set state', {
+  id: data.id, /* the DOM id of the toggle button */
+  state: data.state /* true or false, the value to be set */
+});</code></pre>
+          </td>
+          <td>
+            <p>This event sets the toggle button to a new state.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <pre><code class="language-javascript">page.notify('toggle: invert state', {
+  id: data.id /* the DOM id of the toggle button */
+});</code></pre>
+          </td>
+          <td>
+            <p>This event inverts the state of the toggle button.</p>
+          </td>
+        </tr>
+
+      </table>
 
     </div>
 </div>
