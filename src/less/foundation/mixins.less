@@ -332,3 +332,25 @@
     color: @color;
   }
 }
+
+// Right To Left mixins
+.float-left (@rtl) when (@rtl = false) { float: left; }
+.float-left (@rtl) when (@rtl = true) { float: right; }
+
+.float-right (@rtl) when (@rtl = false) { float: right; }
+.float-right (@rtl) when (@rtl = true) { float: left; }
+
+.margin-left (@rtl, @value) when (@rtl = false) { margin-left: @value }
+.margin-left (@rtl, @value) when (@rtl = true) { margin-right: @value }
+
+.margin-right (@rtl, @value) when (@rtl = false) { margin-right: @value }
+.margin-right (@rtl, @value) when (@rtl = true) { margin-left: @value }
+
+.padding-left (@rtl, @value) when (@rtl = false) { padding-left: @value }
+.padding-left (@rtl, @value) when (@rtl = true) { padding-right: @value }
+
+.padding-right (@rtl, @value) when (@rtl = false) { padding-right: @value }
+.padding-right (@rtl, @value) when (@rtl = true) { padding-left: @value }
+
+.text-align-left (@rtl) when (@rtl = false) { text-align: left; }
+.text-align-right (@rtl) when (@rtl = true) { text-align: right; }

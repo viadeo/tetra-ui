@@ -2577,23 +2577,23 @@ textarea {
  * ----------------------------------------------------------------- */
 /* Margin */
 .pan {
-  padding: 0!important;
+  padding: 0 !important;
 }
 .ptn,
 .pvn {
-  padding-top: 0!important;
+  padding-top: 0 !important;
 }
 .prn,
 .phn {
-  padding-right: 0!important;
+  padding-right: 0 !important;
 }
 .pbn,
 .pvn {
-  padding-bottom: 0!important;
+  padding-bottom: 0 !important;
 }
 .pln,
 .phn {
-  padding-left: 0!important;
+  padding-left: 0 !important;
 }
 .paxs {
   padding: 5px !important;
@@ -2692,23 +2692,23 @@ textarea {
 }
 /* Padding */
 .man {
-  margin: 0!important;
+  margin: 0 !important;
 }
 .mtn,
 .mvn {
-  margin-top: 0!important;
+  margin-top: 0 !important;
 }
 .mrn,
 .mhn {
-  margin-right: 0!important;
+  margin-right: 0 !important;
 }
 .mbn,
 .mvn {
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 .mln,
 .mhn {
-  margin-left: 0!important;
+  margin-left: 0 !important;
 }
 .maxs {
   margin: 5px !important;
@@ -3112,7 +3112,8 @@ ul.link-list {
 ul.link-list li {
   position: relative;
   margin: 0 0 5px 0;
-  padding: 0 0 0 7px;
+  padding: 0;
+  padding-left: 7px;
 }
 ul.link-list li:before {
   content: '';
@@ -5889,12 +5890,13 @@ i.vicon {
 }
 .bx-alert .bx-alert-close {
   position: absolute;
-  right: -5px;
   top: -3px;
+  right: -5px;
 }
 .bx-alert .bx-alert-icon {
   float: left;
-  margin: 5px 15px 0 0;
+  margin: 5px 0 0 0;
+  margin-right: 15px;
   font-size: 20px;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px #ffffff;
 }

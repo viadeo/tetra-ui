@@ -1,6 +1,9 @@
 /* Variables.less
  * Variables to customize the look and feel of Bootstrap
  * ----------------------------------------------------- */
+/* Variables_rtl.less
+ * Anything declared here will overwrite the variables declared in variables.less
+ * ----------------------------------------------------- */
 /* Mixins.less
  * Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
@@ -280,7 +283,7 @@ textarea {
 */
 .gu,
 .gridUnit {
-  float: left;
+  float: right;
 }
 .gu-1of1,
 .grid1of1 {
@@ -395,7 +398,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 49.744897959183675%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-1of3,
 .grsxs > .grid1of3 {
@@ -444,7 +447,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 32.993197278911566%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-2of3,
 .grsxs > .grid2of2 {
@@ -493,7 +496,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 66.49659863945578%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-1of4,
 .grsxs > .grid1of4 {
@@ -542,7 +545,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 24.617346938775512%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-3of4,
 .grsxs > .grid3of4 {
@@ -591,7 +594,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 74.87244897959184%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-1of5,
 .grsxs > .grid1of5 {
@@ -640,7 +643,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 19.591836734693878%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-2of5,
 .grsxs > .grid2of5 {
@@ -689,7 +692,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 39.795918367346935%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-3of5,
 .grsxs > .grid3of5 {
@@ -738,7 +741,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 59.863945578231295%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grsxs > .gu-4of5,
 .grsxs > .grid4of5 {
@@ -787,7 +790,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 79.89795918367346%;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .grss > .gu-1of2,
 .grss > .gu-2of4,
@@ -838,7 +841,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 49.48979591836735%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-1of3,
 .grss > .grid1of3 {
@@ -887,7 +890,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 32.6530612244898%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-2of3,
 .grss > .grid2of3 {
@@ -936,7 +939,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 66.32653061224491%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-1of4,
 .grss > .grid1of4 {
@@ -985,7 +988,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 24.23469387755102%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-3of4,
 .grss > .grid3of4 {
@@ -1034,7 +1037,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 74.74489795918367%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-1of5,
 .grss > .grid1of5 {
@@ -1083,7 +1086,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 19.183673469387756%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-2of5,
 .grss > .grid2of5 {
@@ -1132,7 +1135,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 39.59183673469388%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-3of5,
 .grss > .grid3of5 {
@@ -1181,7 +1184,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 59.72789115646258%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grss > .gu-4of5,
 .grss > .grid4of5 {
@@ -1230,7 +1233,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 79.79591836734694%;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .grsm > .gu-1of2,
 .grsm > .gu-2of4,
@@ -1281,7 +1284,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 49.234693877551024%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-1of3,
 .grsm > .grid1of3 {
@@ -1330,7 +1333,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 32.31292517006803%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-2of3,
 .grsm > .grid2of3 {
@@ -1379,7 +1382,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 66.15646258503402%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-1of4,
 .grsm > .grid1of4 {
@@ -1428,7 +1431,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 23.852040816326532%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-3of4,
 .grsm > .grid3of4 {
@@ -1477,7 +1480,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 74.61734693877551%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-1of5,
 .grsm > .grid1of5 {
@@ -1526,7 +1529,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 18.775510204081634%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-2of5,
 .grsm > .grid2of5 {
@@ -1575,7 +1578,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 39.38775510204081%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-3of5,
 .grsm > .grid3of5 {
@@ -1624,7 +1627,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 59.59183673469388%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsm > .gu-4of5,
 .grsm > .grid4of5 {
@@ -1673,7 +1676,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 79.6938775510204%;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .grsl > .gu-1of2,
 .grsl > .gu-2of4,
@@ -1724,7 +1727,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 48.97959183673469%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-1of3,
 .grsl > .grid1of3 {
@@ -1773,7 +1776,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 31.97278911564626%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-2of3,
 .grsl > .grid2of3 {
@@ -1822,7 +1825,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 65.98639455782313%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-1of4,
 .grsl > .grid1of4 {
@@ -1871,7 +1874,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 23.46938775510204%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-3of4,
 .grsl > .grid3of4 {
@@ -1920,7 +1923,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 74.48979591836735%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-1of5,
 .grsl > .grid1of5 {
@@ -1969,7 +1972,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 18.367346938775512%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-2of5,
 .grsl > .grid2of5 {
@@ -2018,7 +2021,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 39.183673469387756%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-3of5,
 .grsl > .grid3of5 {
@@ -2067,7 +2070,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 59.45578231292517%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsl > .gu-4of5,
 .grsl > .grid4of5 {
@@ -2116,7 +2119,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 79.59183673469387%;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .grsxl > .gu-1of2,
 .grsxl > .gu-2of4,
@@ -2167,7 +2170,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 48.46938775510204%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-1of3 {
   /* Calculate the width of the parent element, in pixels
@@ -2215,7 +2218,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 31.292517006802726%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-2of3 {
   /* Calculate the width of the parent element, in pixels
@@ -2263,7 +2266,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 65.64625850340137%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-1of4 {
   /* Calculate the width of the parent element, in pixels
@@ -2311,7 +2314,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 22.70408163265306%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-3of4 {
   /* Calculate the width of the parent element, in pixels
@@ -2359,7 +2362,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 74.23469387755102%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-1of5 {
   /* Calculate the width of the parent element, in pixels
@@ -2407,7 +2410,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 17.551020408163264%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-2of5 {
   /* Calculate the width of the parent element, in pixels
@@ -2455,7 +2458,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 38.775510204081634%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-3of5 {
   /* Calculate the width of the parent element, in pixels
@@ -2503,7 +2506,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 59.183673469387756%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .grsxl > .gu-4of5 {
   /* Calculate the width of the parent element, in pixels
@@ -2551,7 +2554,7 @@ textarea {
   /* Set the CSS properties */
 
   width: 79.38775510204081%;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .gr-zebra .gu,
 .gr-zebra .gridUnit {
@@ -2582,7 +2585,7 @@ textarea {
 }
 .prn,
 .phn {
-  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 .pbn,
 .pvn {
@@ -2590,7 +2593,7 @@ textarea {
 }
 .pln,
 .phn {
-  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .paxs {
   padding: 5px !important;
@@ -2601,7 +2604,7 @@ textarea {
 }
 .prxs,
 .phxs {
-  padding-right: 5px !important;
+  padding-left: 5px !important;
 }
 .pbxs,
 .pvxs {
@@ -2609,7 +2612,7 @@ textarea {
 }
 .plxs,
 .phxs {
-  padding-left: 5px !important;
+  padding-right: 5px !important;
 }
 .pas {
   padding: 10px !important;
@@ -2620,7 +2623,7 @@ textarea {
 }
 .prs,
 .phs {
-  padding-right: 10px !important;
+  padding-left: 10px !important;
 }
 .pbs,
 .pvs {
@@ -2628,7 +2631,7 @@ textarea {
 }
 .pls,
 .phs {
-  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 .pam {
   padding: 15px !important;
@@ -2639,7 +2642,7 @@ textarea {
 }
 .prm,
 .phm {
-  padding-right: 15px !important;
+  padding-left: 15px !important;
 }
 .pbm,
 .pvm {
@@ -2647,7 +2650,7 @@ textarea {
 }
 .plm,
 .phm {
-  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 .pal {
   padding: 20px !important;
@@ -2658,7 +2661,7 @@ textarea {
 }
 .prl,
 .phl {
-  padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 .pbl,
 .pvl {
@@ -2666,7 +2669,7 @@ textarea {
 }
 .pll,
 .phl {
-  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 .paxl {
   padding: 30px !important;
@@ -2677,7 +2680,7 @@ textarea {
 }
 .prxl,
 .phxl {
-  padding-right: 30px !important;
+  padding-left: 30px !important;
 }
 .pbxl,
 .pvxl {
@@ -2685,7 +2688,7 @@ textarea {
 }
 .plxl,
 .phxl {
-  padding-left: 30px !important;
+  padding-right: 30px !important;
 }
 /* Padding */
 .man {
@@ -2977,11 +2980,11 @@ textarea {
 }
 .fl,
 .floatL {
-  float: left;
+  float: right;
 }
 .fr,
 .floatR {
-  float: right;
+  float: left;
 }
 .outline {
   outline: #bfbfbf dashed thin;
@@ -3017,7 +3020,6 @@ p {
 a {
   color: #0a87cd;
   text-decoration: none;
-  text-align: left;
   cursor: pointer;
 }
 a:hover {
@@ -3091,7 +3093,7 @@ h6,
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
 }
 .h-bx .h-bx-link {
-  float: right;
+  float: left;
 }
 .h-bx .h-bx-link .vicon {
   color: #c1d0dc;
@@ -3110,12 +3112,12 @@ ul.link-list li {
   position: relative;
   margin: 0 0 5px 0;
   padding: 0;
-  padding-left: 7px;
+  padding-right: 7px;
 }
 ul.link-list li:before {
   content: '';
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0.5em;
   width: 3px;
   height: 3px;
@@ -3330,7 +3332,7 @@ pre {
 }
 .core-form .radio input[type="radio"],
 .core-form .checkbox input[type="checkbox"] {
-  float: left;
+  float: right;
   margin-left: -18px;
   *clear: left;
 }
@@ -3701,7 +3703,7 @@ pre {
 .form-search .checkbox input[type="checkbox"],
 .form-inline .radio input[type="radio"],
 .form-inline .checkbox input[type="checkbox"] {
-  float: left;
+  float: right;
   margin-left: 0;
   margin-right: 3px;
 }
@@ -3720,7 +3722,7 @@ pre {
   clear: both;
 }
 .form-horizontal .control-label {
-  float: left;
+  float: right;
   width: 140px;
   padding-top: 5px;
   text-align: left;
@@ -3776,7 +3778,7 @@ table.table td {
 table.table th + th,
 table.table th + td,
 table.table td + td {
-  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 table.table tr + tr th,
 table.table tr + tr td {
@@ -3860,10 +3862,10 @@ table.table .headerSortUp:after {
 .page-header h1 {
   margin: 2px 0 0 0;
   line-height: 1.2em;
-  float: left;
+  float: right;
 }
 .page-header .actions {
-  float: right;
+  float: left;
 }
 .page-header .actions .btn {
   margin-left: 5px;
@@ -3932,69 +3934,69 @@ h1 .sub {
 .richcontainer .img,
 .rc .img-left,
 .richcontainer .img-left {
-  float: left;
+  float: right;
 }
 .rc .img-right,
 .richcontainer .img-right,
 .rc .imgRight,
 .richcontainer .imgRight {
-  float: right;
+  float: left;
 }
 .rcsxs .img,
 .rcsxs .img-left {
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .rcss .img,
 .small .img,
 .rcss .img-left,
 .small .img-left {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .rcsm .img,
 .medium .img,
 .rcsm .img-left,
 .medium .img-left {
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .rcsl .img,
 .large .img,
 .rcsl .img-left,
 .large .img-left {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .rcsxl .img,
 .xlarge .img,
 .rcsxl .img-left,
 .xlarge .img-left {
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .rcsxs .img-right,
 .rcsxs .imgRight {
-  margin-left: 5px;
+  margin-right: 5px;
 }
 .rcss .img-right,
 .small .img-right,
 .rcss .imgRight,
 .small .imgRight {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .rcsm .img-right,
 .medium .img-right,
 .rcsm .imgRight,
 .medium .imgRight {
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .rcsl .img-right,
 .large .img-right,
 .rcsl .imgRight,
 .large .imgRight {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 .rcsxl .img-right,
 .xlarge .img-right,
 .rcsxl .imgRight,
 .xlarge .imgRight {
-  margin-left: 30px;
+  margin-right: 30px;
 }
 .ui-label {
   display: inline-block;
@@ -5184,7 +5186,7 @@ i.vicon {
 }
 .nav-tabs li,
 .nav-pills li {
-  float: left;
+  float: right;
   padding: 0;
   position: relative;
 }
@@ -5201,7 +5203,7 @@ i.vicon {
 }
 .nav-tabs li.side-links,
 .nav-pills li.side-links {
-  float: right;
+  float: left;
 }
 .nav-tabs li.side-links a,
 .nav-pills li.side-links a {
@@ -5888,12 +5890,12 @@ i.vicon {
 .bx-alert .bx-alert-close {
   position: absolute;
   top: -3px;
-  right: -5px;
+  left: 0;
 }
 .bx-alert .bx-alert-icon {
-  float: left;
+  float: right;
   margin: 5px 0 0 0;
-  margin-right: 15px;
+  margin-left: 15px;
   font-size: 20px;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px #ffffff;
 }

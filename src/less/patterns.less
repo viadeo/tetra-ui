@@ -15,10 +15,10 @@
    h1 {
        margin: 2px 0 0 0;
        line-height: @baseLineHeight - 0.2;
-       float: left;
+       .float-left(@rtl);
    }
    .actions {
-        float: right;
+        .float-right(@rtl);
         
         .btn {
             margin-left: 5px;
@@ -72,23 +72,23 @@ h1 .sub {
 	   }
 	}
 	.img, .img-left {
-        float: left;
+        .float-left(@rtl);
     }
     .img-right, .imgRight {
-        float: right;
+        .float-right(@rtl);
     }
 }
-.rcsxs .img, .rcsxs .img-left                                               { margin-right: @spacingXs; }
-.rcss .img, .small .img, .rcss .img-left, .small .img-left                  { margin-right: @spacingS; }
-.rcsm .img, .medium .img, .rcsm .img-left, .medium .img-left                { margin-right: @spacingM; }
-.rcsl .img, .large .img, .rcsl .img-left, .large .img-left                  { margin-right: @spacingL; }
-.rcsxl .img, .xlarge .img, .rcsxl .img-left, .xlarge .img-left              { margin-right: @spacingXl; }
+.rcsxs .img, .rcsxs .img-left                                               { .margin-right(@rtl, @spacingXs); }
+.rcss .img, .small .img, .rcss .img-left, .small .img-left                  { .margin-right(@rtl, @spacingS); }
+.rcsm .img, .medium .img, .rcsm .img-left, .medium .img-left                { .margin-right(@rtl, @spacingM); }
+.rcsl .img, .large .img, .rcsl .img-left, .large .img-left                  { .margin-right(@rtl, @spacingL); }
+.rcsxl .img, .xlarge .img, .rcsxl .img-left, .xlarge .img-left              { .margin-right(@rtl, @spacingXl); }
 
-.rcsxs .img-right, .rcsxs .imgRight                                         { margin-left: @spacingXs; }
-.rcss .img-right, .small .img-right, .rcss .imgRight, .small .imgRight      { margin-left: @spacingS; }
-.rcsm .img-right, .medium .img-right, .rcsm .imgRight, .medium .imgRight    { margin-left: @spacingM; }
-.rcsl .img-right, .large .img-right, .rcsl .imgRight, .large .imgRight      { margin-left: @spacingL; }
-.rcsxl .img-right, .xlarge .img-right, .rcsxl .imgRight, .xlarge .imgRight  { margin-left: @spacingXl; }
+.rcsxs .img-right, .rcsxs .imgRight                                         { .margin-left(@rtl, @spacingXs); }
+.rcss .img-right, .small .img-right, .rcss .imgRight, .small .imgRight      { .margin-left(@rtl, @spacingS); }
+.rcsm .img-right, .medium .img-right, .rcsm .imgRight, .medium .imgRight    { .margin-left(@rtl, @spacingM); }
+.rcsl .img-right, .large .img-right, .rcsl .imgRight, .large .imgRight      { .margin-left(@rtl, @spacingL); }
+.rcsxl .img-right, .xlarge .img-right, .rcsxl .imgRight, .xlarge .imgRight  { .margin-left(@rtl, @spacingXl); }
 
 .ui-label {
   display: inline-block;

@@ -7,6 +7,14 @@
 	   margin: 0;
 	}
 	
+  .margin (@rtl) when (@rtl = false) {
+    margin-right: @spacing;
+  }
+
+  .margin (@rtl) when (@rtl = true) {
+    margin-left: @spacing;
+  }
+
 	/**
 	* Determine width and margin for grid unit with spacing
 	*
@@ -74,8 +82,16 @@
 	   
 	   /* Set the CSS properties */
 	   width: (@baseWidth - @widthToSubtract);
-	   margin-right: @spacing;
+	   .margin(@rtl);
 	}
+
+  .gu (@rtl) when (@rtl = false) {
+    float: left;
+  }
+
+  .gu (@rtl) when (@rtl = true) {
+    float: right;
+  }
 }
 
 .fixed-container {
@@ -105,8 +121,9 @@
 * contained within the spaced grid row containers declared after these rules
 */
 .gu, .gridUnit {
-    float: left;
+  #grid > .gu(@rtl);
 }
+
 .gu-1of1, .grid1of1 { #grid > .unit(1, 1); }
 .gu-1of2, .grid1of2, .gu-2of4, .grid2of4 { #grid > .unit(1, 2); }
 .gu-1of3, .grid1of3 { #grid > .unit(1, 3); }

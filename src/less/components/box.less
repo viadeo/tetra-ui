@@ -13,13 +13,18 @@
 	position: relative;
 
 	.bx-alert-close {
+		.position (@rtl) when (@rtl = false) { right: -5px; }
+		.position (@rtl) when (@rtl = true) { left: 0; }
+
 		position: absolute;
-		right: -5px; top: -3px;
+		top: -3px;
+		.position(@rtl);
 	}
 
 	.bx-alert-icon {
-		float: left;
-		margin: @spacingXs @spacingM 0 0;
+		.float-left(@rtl);
+		margin: @spacingXs 0 0 0;
+		.margin-right(@rtl, @spacingM);
 		font-size: 20px;
 		text-shadow: 0 -1px 1px fade(@black, 70%), 0 1px 1px fade(@white, 100%);
 	}

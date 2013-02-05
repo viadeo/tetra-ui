@@ -35,7 +35,9 @@ table.table {
   th + th,
   th + td,
   td + td {
-    border-left: 1px solid #ddd;
+    .border(@rtl) when (@rtl = false) { border-left: 1px solid #ddd; }
+    .border(@rtl) when (@rtl = true) { border-right: 1px solid #ddd; }
+    .border(@rtl);
   }
   tr + tr th, tr + tr td {
     border-top: 1px solid #ddd;

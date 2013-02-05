@@ -19,7 +19,7 @@
 	.user-select(none);
 
 	li {
-		float: left;
+		.float-left(@rtl);
 		padding: 0; // Override existing generic styles
 		position: relative;
 
@@ -32,7 +32,7 @@
 		}
 	}
 	li.side-links {
-	   float: right;
+    .float-right(@rtl);
 
 	   a {
        padding: 8px 4px;

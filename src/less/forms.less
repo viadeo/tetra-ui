@@ -183,7 +183,7 @@
 	}
 	.radio input[type="radio"],
 	.checkbox input[type="checkbox"] {
-	  float: left;
+	  .float-left(@rtl);
 	  margin-left: -18px;
 	  *clear: left;
 	}
@@ -540,7 +540,7 @@
 .form-search .checkbox input[type="checkbox"],
 .form-inline .radio input[type="radio"],
 .form-inline .checkbox input[type="checkbox"] {
-  float: left;
+  .float-left(@rtl);
   margin-left: 0;
   margin-right: 3px;
 }
@@ -555,7 +555,7 @@
   }
   // Float the labels left
   .control-label {
-    float: left;
+  	.float-left(@rtl);
     width: 140px;
     padding-top: 5px;
     text-align: left;

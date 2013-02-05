@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tetra UI</title>
+  <link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/src/img/logo/favicon.ico" />
+  <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc-rtl.min.css" />
+
+  <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
+  <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
+
+  <script src="/tetra-ui/src/js/lib/jquery/1.8.3/jquery.js"></script>
+
+  <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
+  <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
+  <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
+</head>
+<body dir="rtl" class="rtl">
+
+<div class="wrap">
+  <div class="header">
+    <div class="fixed-container">
+      <a href="/tetra-ui/" class="fl viadeo-logo">Viadeo</a>
+      <a href="https://github.com/viadeo/tetra-ui" class="fr mts github">Tetra UI on GitHub</a>
+    </div>
+  </div>
+
+  <div class="headline">
+    <div class="fixed-container">
+      <h1>
+        Tetra UI: a smart, easy-to-use toolkit
+        <span class="sub">for creating rich interfaces in lightning speed!</span>
+      </h1>
+    </div>
+    <span class="arrow">∨</span>
+  </div>
+
+  <div class="content fixed-container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="/tetra-ui/index-rtl.html">Grid</a></li>
+      <li><a href="/tetra-ui/doc/rich-containers-rtl.html">Rich Containers</a></li>
+      <li><a href="/tetra-ui/doc/typography-rtl.html">Typography</a></li>
+      <li><a href="/tetra-ui/doc/forms-rtl.html">Forms</a></li>
+      <li><a href="/tetra-ui/doc/helpers-rtl.html">Helpers</a></li>
+      <li><a href="/tetra-ui/doc/variables-rtl.html">Variables</a></li>
+      <li><a href="/tetra-ui/doc/components-rtl.html">Components</a></li>
+      <li><a href="/tetra-ui/doc/icons-rtl.html">Icons</a></li>
+      <li><a href="/tetra-ui/doc/dialogs-rtl.html">Dialogs</a></li>
+    </ul>
+    <div class="nav-tabs-section">
+      <div class="section">
+
+    <div class="page-header">
+        <h1>Grid System<span class="sub">Flexible, easy to use, and fun!</span></h1>
+    </div>
+    <div class="gr grsxl">
+        <div class="gu gu-2of5">
+            <h2>How it works</h2>
+            <p>The Tetra UI grid is a percentage-based, nestable grid system. Each grid row (<code class="language-css">.gr</code>) takes up 100% of the parent containers' width and can contain up to 5 grid units (<code class="language-css">.gu</code>). These grid units can then contain nested grid rows, maximizing flexibility and laying the foundations for a responsive layout.</p>
+            <p>When creating layouts, it is often useful to have a guide. To do this just add the <code class="language-css">.gr-zebra</code> class to your grid row (<code class="language-css">.gr</code>)</p>
+        </div>
+        <div class="gu gu-last">
+            <h3>Example grid markup</h3>
+            <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <code class="language-css">.gu-last</code> class. This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
+            <pre data-line="1-7"><code class="language-markup">&lt;div class="gr"&gt;
+    &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+    &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+    &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+    &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+    &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+    
+    <h2 class="mvl">Simple grid examples</h2>
+    <div class="gr gr-zebra">
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr gr-zebra mts">
+        <div class="gu gu-1of4">.gu .gu-1of4</div>
+        <div class="gu gu-1of4">.gu .gu-1of4</div>
+        <div class="gu gu-1of4">.gu .gu-1of4</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr gr-zebra mts">
+        <div class="gu gu-1of3">.gu .gu-1of3</div>
+        <div class="gu gu-1of3">.gu .gu-1of3</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr gr-zebra mts">
+        <div class="gu gu-1of2">.gu .gu-1of2</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr gr-zebra mts">
+        <div class="gu gu-1of1">.gu .gu-1of1</div>
+    </div>
+    
+    <h2 class="mvl">Nested grid example</h2>
+    <div class="gr gr-zebra">
+        <div class="gu gu-2of3 pan pts">
+            .gu .gu-2of3
+            <div class="gr zebra mts">
+                <div class="gu gu-1of2">.gu .gu-1of2</div>
+                <div class="gu gu-last">.gu .gu-last</div>
+            </div>
+        </div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    
+    <div class="gr grsxl mvxl">
+        <div class="gu gu-1of2">
+            <h3>Nesting with siblings</h3>
+            <p>The example above shows a grid row (<code class="language-css">.gr</code>) nested within a grid unit (<code class="language-css">.gu</code>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
+            <pre data-line="1,4"><code class="language-markup">&lt;div class="gr"&gt;
+    &lt;div class="gu gu-2of3"&gt;
+        ...
+        &lt;div class="gr"&gt;
+            &lt;div class="gu gu-1of2"&gt; ... &lt;/div&gt;
+            &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="gu gu-last">
+           <h3>Direct nesting</h3>
+           <p>The other option is to nest your grid units directly in another grid unit. Just add the <code class="language-css">.gr</code> class to an element with the <code class="language-css">.gu</code> class!</p>
+           <pre data-line="2"><code class="language-markup">&lt;div class="gr"&gt;
+    &lt;div class="gu gu-2of3 gr"&gt;
+        &lt;div class="gu gu-1of2"&gt; ... &lt;/div&gt;
+        &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+    
+    <div class="gr grsm mtxl">
+        <div class="gu gu-2of5">
+            <h2>Spaced Grids</h2>
+            <p>You can assign spacing to the Tetra UI grid, using the fixed spacing sizes declared in <a href="#">variables.less</a>. The percentage widths of each grid unit will change to accomodate for the extra spacing and to ensure all units are equal widths.</p>
+            <p>NOTE: Tetra UI uses the <code class="language-css">@siteWidth</code> variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the <code class="language-css">@siteWidth</code> variable.</p>
+        </div>
+        <div class="gu gu-last">
+            <h3>Assigning grid spacing</h3>
+            <p>You just need to add one of the following class names to your parent grid row (<code class="language-css">.gr</code>).</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="language-css">.grsxs</code></td>
+                        <td>Extra small spacing, defined in variables.css as <code class="language-css">@spacingXs</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.grss</code></td>
+                        <td>Small spacing, defined in variables.css as <code class="language-css">@spacingS</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.grsm</code></td>
+                        <td>Medium spacing, defined in variables.css as <code class="language-css">@spacingM</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.grsl</code></td>
+                        <td>Large spacing, defined in variables.css as <code class="language-css">@spacingL</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.grsxl</code></td>
+                        <td>Extra large spacing, defined in variables.css as <code class="language-css">@spacingXl</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <h2 class="mtm">Spaced grid examples</h2>
+    <p>Much care has been taken to ensure that these spaced grids align perfectly with one another. For example, you can see below that position and size of the spacing between the irregular 4-1 grid and the 1-1-1-1-1 grid above it is consistent. The examples below all use the <code class="language-css">.grss</code> class, thus using the pixel value defined as <code class="language-css">@spacingS</code> in variables.less.</p>
+    <div class="gr grss gr-zebra">
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-1of5">.gu .gu-1of5</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr grss gr-zebra mts">
+        <div class="gu gu-4of5">.gu .gu-4of5</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr grss gr-zebra mts">
+        <div class="gu gu-1of3">.gu .gu-1of3</div>
+        <div class="gu gu-1of3">.gu .gu-1of3</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr grss gr-zebra mts">
+        <div class="gu gu-2of3">.gu .gu-2of3</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+    <div class="gr grss gr-zebra mts">
+        <div class="gu gu-1of2">.gu .gu-1of2</div>
+        <div class="gu gu-last">.gu .gu-last</div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="copy fixed-container">
+    <p>&copy;2013 APVO CORP.</p>
+  </div>
+</div>
+
+<!--[if gt IE 8]><!--><script>Prism.highlightAll();</script><!--<![endif]-->
+
+</body>
+</html>

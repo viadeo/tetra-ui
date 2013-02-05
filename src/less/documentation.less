@@ -133,8 +133,17 @@ p {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 
   > .nav-tabs {
+    
+    .move (@rtl) when (@rtl = false) {
+      left: -1 * @spacingL;
+    }
+
+    .move (@rtl) when (@rtl = true) {
+      left: @spacingL;
+    }
+
     position: relative;
-    left: -1 * @spacingL;
+    .move(@rtl);
     width: 100%;
     padding: 0 @spacingL;
   }

@@ -24,7 +24,7 @@ p {
 a {
     color: @linkColor;
     text-decoration: none;
-    text-align: left;
+    .text-align-left(@rtl);
     cursor: pointer;
 }
 a:hover {
@@ -87,7 +87,7 @@ h6, .h6 {
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
 
   .h-bx-link {
-    float: right;
+    .float-right(@rtl);
 
     .vicon {
       color: tint(@blueSoft, 50%);
@@ -113,12 +113,16 @@ ul.link-list {
    li {
     position: relative;
     margin: 0 0 @spacingXs 0;
-    padding: 0 0 0 7px;
-    
+    padding: 0;
+    .padding-left(@rtl, 7px);
+
     &:before {
+      .position (@rtl) when (@rtl = false) { left: 0; }
+      .position (@rtl) when (@rtl = true) { right: 0; }
+
       content: '';
       position: absolute;
-      left: 0;
+      .position(@rtl);
       top: 0.5em;
       width: 3px;
       height: 3px;
