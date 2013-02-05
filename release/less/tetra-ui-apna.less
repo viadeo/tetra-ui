@@ -1382,12 +1382,12 @@ pre {
 	// Indent the labels to position radios/checkboxes as hanging
 	.radio,
 	.checkbox {
-	  padding-left: 18px;
+	  .padding-left(@rtl, 18px);
 	}
 	.radio input[type="radio"],
 	.checkbox input[type="checkbox"] {
 	  .float-left(@rtl);
-	  margin-left: -18px;
+	  .margin-left(@rtl, -18px);
 	  *clear: left;
 	}
 	
@@ -1577,28 +1577,38 @@ pre {
 	  display: inline-block;
 	  .ie7-inline-block();
 	  vertical-align: middle;
-	  padding-left: 5px;
+	  .padding-left(@rtl, 5px);
 	}
 	
 	
 	
-	// INPUT GROUPS
-	// ------------
+// INPUT GROUPS
+// ------------
 	
+.radius-right (@rtl) when (@rtl = false) { .border-radius(0 3px 3px 0); }
+.radius-right (@rtl) when (@rtl = true) { .border-radius(3px 0 0 3px); }
+
+.radius-left (@rtl) when (@rtl = false) { .border-radius(3px 0 0 3px); }
+.radius-left (@rtl) when (@rtl = true) { .border-radius(0 3px 3px 0); }
+
 	// Allow us to put symbols and text within the input field for a cleaner look
 	.input-prepend,
 	.input-append {
 	  margin-bottom: 5px;
+
 	  input,
 	  select,
 	  .uneditable-input {
-	    *margin-left: 0;
-	    .border-radius(0 3px 3px 0);
+
+	  	.radius-right(@rtl);
+
 	    // remove due to conflict with javascript click event firing on firefox at least
 	    //&:focus {
 	    //  position: relative;
 	    //  z-index: 2;
 	    //}
+
+	    *margin-left: 0;
 	  }
 	  .uneditable-input {
 	    border-left-color: #ccc;
@@ -1618,7 +1628,7 @@ pre {
 	  }
 	  .add-on,
 	  .btn {
-	    .border-radius(3px 0 0 3px);
+	  	.radius-left(@rtl);
 	  }
 	  .btn {
 	  	padding-bottom: 4px;
@@ -1632,14 +1642,14 @@ pre {
 	.input-prepend {
 	  .add-on,
 	  .btn {
-	    margin-right: -1px;
+	    .margin-right(@rtl, -1px);
 	  }
 	}
 	.input-append {
 	  input,
 	  select
 	  .uneditable-input {
-	    .border-radius(3px 0 0 3px);
+	    .radius-left(@rtl);
 	  }
 	  .uneditable-input {
 	    border-left-color: #eee;
@@ -1647,8 +1657,8 @@ pre {
 	  }
 	  .add-on,
 	  .btn {
-	    margin-left: -1px;
-	    .border-radius(0 3px 3px 0);
+	    .margin-left(@rtl, -1px);
+	    .radius-right(@rtl);
 	  }
 	}
 	// Remove all border-radius for inputs with both prepend and append
@@ -1660,13 +1670,13 @@ pre {
 	  }
 	  .add-on:first-child,
 	  .btn:first-child {
-	    margin-right: -1px;
-	    .border-radius(3px 0 0 3px);
+	    .margin-right(@rtl, -1px);
+	    .radius-left(@rtl);
 	  }
 	  .add-on:last-child,
 	  .btn:last-child {
-	    margin-left: -1px;
-	    .border-radius(0 3px 3px 0);
+	    .margin-left(@rtl, -1px);
+	    .radius-right(@rtl);
 	  }
 	}
 	
@@ -1765,7 +1775,7 @@ pre {
   }
   // Move over all input controls and content
   .controls {
-    margin-left: 160px;
+    .margin-left(@rtl, 160px);
     /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
     *display: inline-block;
     *margin-left: 0;
@@ -2961,7 +2971,7 @@ i.vicon {
       }
       
       button.close {
-        float: right;
+        .float-right(@rtl);
         color: @linkColor;
         
         &:hover {
@@ -3546,7 +3556,9 @@ i.vicon {
 	.custom-radio-element {
 		display: inline-block;
 		width: 8px; height: 8px;
-		margin: 0 @spacingXs 2px -20px;
+		margin: 0 0 2px 0;
+		.margin-right(@rtl, @spacingXs);
+		.margin-left(@rtl, -20px);
 		border: 3px solid @white;
 		border-radius: 50%;
 		background-color: @white;

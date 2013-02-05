@@ -3568,8 +3568,8 @@ pre {
 .core-form .input-append select,
 .core-form .input-prepend .uneditable-input,
 .core-form .input-append .uneditable-input {
-  *margin-left: 0;
   border-radius: 0 3px 3px 0;
+  *margin-left: 0;
 }
 .core-form .input-prepend .uneditable-input,
 .core-form .input-append .uneditable-input {
@@ -5678,7 +5678,9 @@ i.vicon {
   display: inline-block;
   width: 8px;
   height: 8px;
-  margin: 0 5px 2px -20px;
+  margin: 0 0 2px 0;
+  margin-right: 5px;
+  margin-left: -20px;
   border: 3px solid #ffffff;
   border-radius: 50%;
   background-color: #ffffff;

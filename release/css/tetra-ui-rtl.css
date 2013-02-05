@@ -3328,12 +3328,12 @@ pre {
 }
 .core-form .radio,
 .core-form .checkbox {
-  padding-left: 18px;
+  padding-right: 18px;
 }
 .core-form .radio input[type="radio"],
 .core-form .checkbox input[type="checkbox"] {
   float: right;
-  margin-left: -18px;
+  margin-right: -18px;
   *clear: left;
 }
 .core-form .controls > .radio:first-child,
@@ -3558,7 +3558,7 @@ pre {
 
   *zoom: 1;
   vertical-align: middle;
-  padding-left: 5px;
+  padding-right: 5px;
 }
 .core-form .input-prepend,
 .core-form .input-append {
@@ -3570,8 +3570,8 @@ pre {
 .core-form .input-append select,
 .core-form .input-prepend .uneditable-input,
 .core-form .input-append .uneditable-input {
+  border-radius: 3px 0 0 3px;
   *margin-left: 0;
-  border-radius: 0 3px 3px 0;
 }
 .core-form .input-prepend .uneditable-input,
 .core-form .input-append .uneditable-input {
@@ -3595,7 +3595,7 @@ pre {
 .core-form .input-append .add-on,
 .core-form .input-prepend .btn,
 .core-form .input-append .btn {
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 3px 3px 0;
 }
 .core-form .input-prepend .btn,
 .core-form .input-append .btn {
@@ -3609,11 +3609,11 @@ pre {
 }
 .core-form .input-prepend .add-on,
 .core-form .input-prepend .btn {
-  margin-right: -1px;
+  margin-left: -1px;
 }
 .core-form .input-append input,
 .core-form .input-append select .uneditable-input {
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 3px 3px 0;
 }
 .core-form .input-append .uneditable-input {
   border-left-color: #eee;
@@ -3621,8 +3621,8 @@ pre {
 }
 .core-form .input-append .add-on,
 .core-form .input-append .btn {
-  margin-left: -1px;
-  border-radius: 0 3px 3px 0;
+  margin-right: -1px;
+  border-radius: 3px 0 0 3px;
 }
 .core-form .input-prepend.input-append input,
 .core-form .input-prepend.input-append select,
@@ -3631,13 +3631,13 @@ pre {
 }
 .core-form .input-prepend.input-append .add-on:first-child,
 .core-form .input-prepend.input-append .btn:first-child {
-  margin-right: -1px;
-  border-radius: 3px 0 0 3px;
+  margin-left: -1px;
+  border-radius: 0 3px 3px 0;
 }
 .core-form .input-prepend.input-append .add-on:last-child,
 .core-form .input-prepend.input-append .btn:last-child {
-  margin-left: -1px;
-  border-radius: 0 3px 3px 0;
+  margin-right: -1px;
+  border-radius: 3px 0 0 3px;
 }
 .core-form .search-query {
   padding-left: 14px;
@@ -3728,7 +3728,7 @@ pre {
   text-align: left;
 }
 .form-horizontal .controls {
-  margin-left: 160px;
+  margin-right: 160px;
   /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
 
   *display: inline-block;
@@ -5054,7 +5054,7 @@ i.vicon {
   text-transform: uppercase;
 }
 .popin-container .popin .popin-header button.close {
-  float: right;
+  float: left;
   color: #0a87cd;
 }
 .popin-container .popin .popin-header button.close:hover {
@@ -5680,7 +5680,9 @@ i.vicon {
   display: inline-block;
   width: 8px;
   height: 8px;
-  margin: 0 5px 2px -20px;
+  margin: 0 0 2px 0;
+  margin-left: 5px;
+  margin-right: -20px;
   border: 3px solid #ffffff;
   border-radius: 50%;
   background-color: #ffffff;
