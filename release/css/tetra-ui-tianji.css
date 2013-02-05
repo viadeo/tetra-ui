@@ -4144,7 +4144,7 @@ a:hover .avatar img {
 }
 i.vicon {
   display: inline-block;
-  margin: 0 3px 0 0;
+  margin-right: 3px;
   font-family: 'Viadeoicons';
   font-size: 10px;
   font-style: normal;
@@ -5728,7 +5728,7 @@ i.vicon {
   width: 16px;
   height: 16px;
   line-height: 15px;
-  margin: 0 5px 0 0;
+  margin-right: 5px;
   border-radius: 2px;
   background: #fcfcfc;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
