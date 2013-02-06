@@ -3009,10 +3009,10 @@ body {
   font-family: Arial, sans-serif;
   font-size: 15px;
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: 1.2em;
 }
 p {
-  margin-bottom: 1.4em;
+  margin-bottom: 1.2em;
 }
 a {
   color: #0a87cd;
@@ -3037,7 +3037,7 @@ h6,
 .h6 {
   font-family: Arial, sans-serif;
   font-weight: bold;
-  margin-bottom: 0.5599999999999999em;
+  margin-bottom: 0.48em;
   color: #3c3c3c;
 }
 h1,
@@ -3059,12 +3059,12 @@ h4,
 h5,
 .h5 {
   font-size: 14px;
-  padding-bottom: 0.4666666666666666em;
+  padding-bottom: 0.39999999999999997em;
 }
 h6,
 .h6 {
   font-size: 13px;
-  padding-bottom: 0.4666666666666666em;
+  padding-bottom: 0.39999999999999997em;
   text-transform: uppercase;
   color: #888888;
 }
@@ -3159,7 +3159,7 @@ pre {
   font-family: Monaco, Andale Mono, Courier New, monospace;
   font-size: 15px;
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: 1.2em;
 }
 code {
   padding: 1px 3px;
@@ -3189,7 +3189,7 @@ pre {
 /* GENERAL STYLES
 /* -------------- */
 .core-form {
-  margin: 0 0 1.4em;
+  margin: 0 0 1.2em;
 }
 .core-form fieldset {
   padding: 0;
@@ -3200,15 +3200,15 @@ pre {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 2.0999999999999996em;
+  margin-bottom: 1.7999999999999998em;
   font-size: 22.5px;
-  line-height: 2.8em;
+  line-height: 2.4em;
   color: #404040;
   border: 0;
   border-bottom: 1px solid #eee;
 }
 .core-form legend small {
-  font-size: 1.0499999999999998em;
+  font-size: 0.8999999999999999em;
   color: #bfbfbf;
 }
 .core-form label,
@@ -3218,7 +3218,7 @@ pre {
 .core-form textarea {
   font-size: 15px;
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: 1.2em;
 }
 .core-form input,
 .core-form button,
@@ -3237,11 +3237,11 @@ pre {
 .core-form .uneditable-input {
   display: inline-block;
   width: 210px;
-  height: 1.4em;
+  height: 1.2em;
   padding: 4px;
   margin-bottom: 9px;
   font-size: 15px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   color: #404040;
   vertical-align: middle;
   border: 1px solid #cbd2d6;
@@ -3511,9 +3511,9 @@ pre {
   box-shadow: 0 0 3px #f8b9b7;
 }
 .core-form .form-actions {
-  padding: 0.3999999999999999em 20px 1.4em;
-  margin-top: 1.4em;
-  margin-bottom: 1.4em;
+  padding: 0.19999999999999996em 20px 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
   background-color: #f6f8f9;
   border-top: 1px solid #e5e9ec;
   zoom: 1;
@@ -3548,7 +3548,7 @@ pre {
 }
 .core-form .help-block {
   display: block;
-  margin-bottom: 0.7em;
+  margin-bottom: 0.6em;
 }
 .core-form .help-inline {
   display: inline-block;
@@ -3581,10 +3581,10 @@ pre {
   display: inline-block;
   width: auto;
   min-width: 16px;
-  height: 1.4em;
+  height: 1.2em;
   padding: 4px 5px;
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: 1.2em;
   text-align: center;
   vertical-align: middle;
   background-color: #e6e6e6;
@@ -3645,10 +3645,10 @@ pre {
   border-radius: 14px;
 }
 .core-form .control-group {
-  margin-bottom: 0.7em;
+  margin-bottom: 0.6em;
 }
 .core-form legend + .control-group {
-  margin-top: 1.4em;
+  margin-top: 1.2em;
   -webkit-margin-top-collapse: separate;
 }
 .form-search input,
@@ -3707,7 +3707,7 @@ pre {
   margin-right: 3px;
 }
 .form-horizontal .control-group {
-  margin-bottom: 1.4em;
+  margin-bottom: 1.2em;
   zoom: 1;
 }
 .form-horizontal .control-group:before,
@@ -3735,11 +3735,11 @@ pre {
   *padding-left: 20px;
 }
 .form-horizontal .help-block {
-  margin-top: 0.7em;
+  margin-top: 0.6em;
   margin-bottom: 0;
 }
 .form-horizontal .form-actions {
-  padding-left: 160px;
+  padding-right: 160px;
 }
 /*
  * Tables.less
@@ -3747,7 +3747,7 @@ pre {
  * ---------------------------------------- */
 table.table {
   width: 100%;
-  margin-bottom: 1.4em;
+  margin-bottom: 1.2em;
   padding: 0;
   border-collapse: separate;
   *border-collapse: collapse;
@@ -3760,7 +3760,7 @@ table.table {
 table.table th,
 table.table td {
   padding: 10px 10px 9px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   text-align: left;
 }
 table.table th {
@@ -3843,7 +3843,7 @@ table.table .headerSortUp:after {
   padding-bottom: 0;
 }
 .page-header {
-  margin-bottom: 2.0999999999999996em;
+  margin-bottom: 1.7999999999999998em;
   padding-bottom: 5px;
   border-bottom: 1px solid #e6e6e6;
   zoom: 1;
@@ -3860,7 +3860,7 @@ table.table .headerSortUp:after {
 }
 .page-header h1 {
   margin: 2px 0 0 0;
-  line-height: 1.2em;
+  line-height: 1em;
   float: right;
 }
 .page-header .actions {
@@ -4007,7 +4007,7 @@ h1 .sub {
   border-radius: 12px;
 }
 .ui-label .vicon {
-  margin-right: -9px;
+  margin-left: -9px;
   color: #d0dce2;
   font-size: 8px;
 }
@@ -4062,14 +4062,15 @@ h1 .sub {
 .ui-tag .remove {
   position: relative;
   display: inline-block;
-  margin: 0 -5px 0 5px;
-  padding: 0 0 0 5px;
-  border-left: 1px solid #ffffff;
+  margin-left: -5px;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #ffffff;
 }
 .ui-tag .remove:before {
   content: '';
   position: absolute;
-  left: -2px;
+  right: 0;
   top: 0;
   width: 0;
   height: 100%;
@@ -4413,7 +4414,7 @@ i.vicon {
 .btn span button {
   display: inline;
   border: none;
-  line-height: 1.4em;
+  line-height: 1.2em;
   background: none;
   text-align: center;
   padding: 0;
@@ -5150,7 +5151,7 @@ i.vicon {
 }
 .nav {
   margin: 0;
-  margin-bottom: 1.4em;
+  margin-bottom: 1.2em;
   list-style: none;
   text-shadow: none;
 }
@@ -5328,7 +5329,7 @@ i.vicon {
   background: #f6f8f9;
   border: 1px solid #f6f8f9;
   border-radius: 3px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   margin-right: 10px;
   padding: 5px 10px;
 }
@@ -5700,7 +5701,7 @@ i.vicon {
   border: 1px solid #d6d6d6;
   border-radius: 3px;
   color: #808080;
-  line-height: 1.4em;
+  line-height: 1.2em;
   background-color: #e6e6e6;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #f2f2f2, #e6e6e6);

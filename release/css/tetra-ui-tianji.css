@@ -4066,8 +4066,9 @@ h1 .sub {
 .ui-tag .remove {
   position: relative;
   display: inline-block;
-  margin: 0 -5px 0 5px;
-  padding: 0 0 0 5px;
+  margin-right: -5px;
+  margin-left: 5px;
+  padding-left: 5px;
   border-left: 1px solid #ffffff;
 }
 .ui-tag .remove:before {

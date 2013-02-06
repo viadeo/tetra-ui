@@ -100,7 +100,7 @@ h1 .sub {
   border-radius: 12px;
   
   .vicon {
-    margin-right: -9px;
+    .margin-right(@rtl, -9px);
     color: @borderColor;
     font-size: 8px;
   }
@@ -144,15 +144,24 @@ h1 .sub {
   white-space: nowrap;
 
   .remove {
+    .border(@rtl) when (@rtl = false) { border-left: 1px solid @white; }
+    .border(@rtl) when (@rtl = true) { border-right: 1px solid @white; }
+
     position: relative;
     display: inline-block;
-    margin: 0 -1*@spacingXs 0 @spacingXs;
-    padding: 0 0 0 @spacingXs;
-    border-left: 1px solid @white;
+    .margin-right(@rtl, -1*@spacingXs);
+    .margin-left(@rtl, @spacingXs);
+    .padding-left(@rtl, @spacingXs);
+    .border(@rtl);
 
     &:before {
+      .position(@rtl) when (@rtl = false) { left: -2px; }
+      .position(@rtl) when (@rtl = true) { right: 0; }
+
       content: '';
-      position: absolute; left: -2px; top: 0;
+      position: absolute;
+      .position(@rtl);
+      top: 0;
       width: 0; height: 100%;
       border-left: 1px solid lighten(@grayLight, 10%);
     }
