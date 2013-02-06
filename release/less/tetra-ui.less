@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.7 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.8 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 /* Variables.less
  * Variables to customize the look and feel of Bootstrap
@@ -1446,9 +1446,7 @@ pre {
 	.input-xlarge     { width: 270px; }
 	.input-xxlarge    { width: 530px; }
 	.input-fullwidth  {
-				-moz-box-sizing: border-box;
-				-ms-box-sizing: border-box;
-        box-sizing: border-box;
+				.box-sizing(border-box);
         width: 100%;
         *width: 90%; // IE 7 doesn't support box-sizing
 	}
