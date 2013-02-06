@@ -1,9 +1,6 @@
 /* Variables.less
  * Variables to customize the look and feel of Bootstrap
  * ----------------------------------------------------- */
-/* Variables_rtl.less
- * Anything declared here will overwrite the variables declared in variables.less
- * ----------------------------------------------------- */
 /* Mixins.less
  * Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
@@ -3010,7 +3007,7 @@ textarea {
 }
 body {
   font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 1.4em;
 }
@@ -3160,7 +3157,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Monaco, Andale Mono, Courier New, monospace;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 1.4em;
 }
@@ -3204,7 +3201,7 @@ pre {
   width: 100%;
   padding: 0;
   margin-bottom: 2.0999999999999996em;
-  font-size: 18px;
+  font-size: 22.5px;
   line-height: 2.8em;
   color: #404040;
   border: 0;
@@ -3219,7 +3216,7 @@ pre {
 .core-form button,
 .core-form select,
 .core-form textarea {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 1.4em;
 }
@@ -3243,7 +3240,7 @@ pre {
   height: 1.4em;
   padding: 4px;
   margin-bottom: 9px;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4em;
   color: #404040;
   vertical-align: middle;
@@ -3399,10 +3396,11 @@ pre {
   width: 530px;
 }
 .core-form .input-fullwidth {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  -moz-box-sizing: border-box;
-  *behavior: url(/javascript/coremvc/apps/companyprofile/lib/boxsizing.htc);
+  *width: 90%;
 }
 .core-form input[class*="span"],
 .core-form select[class*="span"],
@@ -3754,7 +3752,7 @@ table.table {
   *border-collapse: collapse;
   /* IE7, collapse table to remove spacing */
 
-  font-size: 12px;
+  font-size: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -5500,7 +5498,7 @@ i.vicon {
   color: #404040;
   text-decoration: none;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 14px;
   border: 1px solid #e0e8ec;
   border-radius: 3px;
   background: #ffffff;

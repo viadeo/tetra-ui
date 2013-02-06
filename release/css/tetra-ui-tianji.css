@@ -3400,10 +3400,11 @@ pre {
   width: 530px;
 }
 .core-form .input-fullwidth {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  -moz-box-sizing: border-box;
-  *behavior: url(/javascript/coremvc/apps/companyprofile/lib/boxsizing.htc);
+  *width: 90%;
 }
 .core-form input[class*="span"],
 .core-form select[class*="span"],

@@ -10,7 +10,7 @@
 @img-buttons-dir: '/v_img/coreui/buttons';
 @img-loaders-dir: '/v_img/profilev2';
 
-// Right To Left
+// Right To Left mode (arabic)
 @rtl: false;
 
 // Layout
@@ -123,11 +123,15 @@
 @gridColumns:		12;
 @gridColumnWidth:	60px;
 @gridGutterWidth:	20px;
-/* Variables_rtl.less
- * Anything declared here will overwrite the variables declared in variables.less
- * ----------------------------------------------------- */
+// Overriding the variables declared in variables.less
+// for Right To Left languages
 
 @rtl: true;
+
+// Arabic fonts are smaller
+
+@baseFontSize: 15px;
+@smallFontSize: @baseFontSize - 1;
 
 /* Mixins.less
  * Snippets of reusable CSS to develop faster and keep code readable
@@ -1452,10 +1456,11 @@ pre {
 	.input-xlarge     { width: 270px; }
 	.input-xxlarge    { width: 530px; }
 	.input-fullwidth  {
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
         box-sizing: border-box;
         width: 100%;
-        -moz-box-sizing: border-box;
-        *behavior: url(/javascript/coremvc/apps/companyprofile/lib/boxsizing.htc);
+        *width: 90%; // IE 7 doesn't support box-sizing
 	}
 	
 	// Grid style input sizes
