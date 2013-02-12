@@ -30,7 +30,8 @@ Since it is better to install packages locally and not system wide:
 
     npm install --dev
 
-Now you should have a `node_modules` folder inside `tetra-ui' with all the required Node modules.
+Now you should have a `node_modules` folder inside `tetra-ui` with all the required Node modules.
+The `npm`command installs the dependencies located in `package.json`.
 
 #### Launching Tetra UI with Grunt’s built-in server
 
