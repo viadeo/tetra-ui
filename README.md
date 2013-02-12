@@ -24,11 +24,11 @@ The repository content must be in a `tetra-ui` folder on your computer.
 
 With the command line go to the `tetra-ui` folder:
 
-  cd tetra-ui
+    cd tetra-ui
 
 Since it is better to install packages locally and not system wide:
 
-  npm install --dev
+    npm install --dev
 
 Now you should have a `node_modules` folder inside `tetra-ui' with all the required Node modules.
 
@@ -36,11 +36,11 @@ Now you should have a `node_modules` folder inside `tetra-ui' with all the requi
 
 On Mac or Linux:
 
-  node_modules/grunt/bin/grunt watch-server
+    node_modules/grunt/bin/grunt watch-server
 
 On Windows:
 
-  node_modules\grunt\bin\grunt.cmd watch-server
+    node_modules\grunt\bin\grunt.cmd watch-server
 
 And then go to this URL in a browser: <http://localhost:8080/> or <http://127.0.0.1:8080/>.
 
