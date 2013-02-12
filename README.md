@@ -13,13 +13,6 @@ Here are the instructions to launch and build locally the whole Tetra UI project
 If it is not already done, install it here:
 <http://nodejs.org/>
 
-#### Installing required Node packages
-
-In case you do not have them installed:
-
-	npm install -g grunt
-	npm install -g less
-
 #### Getting the `tetra-ui` project
 
 You can use the default GitHub client, or your preferred Git client, or the `git` command line.
@@ -27,31 +20,31 @@ For testing purpose another solution is to get the repository as a Zip file.
 
 The repository content must be in a `tetra-ui` folder on your computer.
 
-#### Installing Less for Grunt
+#### Installing required Node packages
 
 With the command line go to the `tetra-ui` folder:
 
-	cd tetra-ui
+  cd tetra-ui
 
-Then install `grunt-contrib-less`:
+Since it is better to install packages locally and not system wide:
 
-	npm install grunt-contrib-less --save-dev
+  npm install --dev
 
-Now you should have a `node_modules` folder inside `tetra-ui`.
+Now you should have a `node_modules` folder inside `tetra-ui' with all the required Node modules.
 
 #### Launching Tetra UI with Grunt’s built-in server
 
 On Mac or Linux:
 
-	grunt watch-server
+  node_modules/grunt/bin/grunt watch-server
 
 On Windows:
 
-	grunt.cmd watch-server
+  node_modules\grunt\bin\grunt.cmd watch-server
 
 And then go to this URL in a browser: <http://localhost:8080/> or <http://127.0.0.1:8080/>.
 
-With this task every time a Less file is changed, Grunt rebuilds the required CSS files.
+With this `watch-server` task, every time a Less file is changed, Grunt rebuilds the CSS files.
 
 ### Slides about Tetra.js & Tetra UI
 
