@@ -227,7 +227,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><code>@linkColor</code></td>
+                        <td>
+                            <code>@linkColor</code>
+                            <code class="color-transform">@blue</code>
+                        </td>
                         <td>
                             <span class="var var-link tooltip">
                                 <span class="tooltip-content"></span>
@@ -237,60 +240,10 @@
                     <tr>
                         <td>
                             <code>@linkColorHover</code>
-                            <code class="color-transform">darken(@linkColor, 10%)</code>
+                            <code class="color-transform">shade(@linkColor, 10%)</code>
                         </td>
                         <td>
                             <span class="var var-link-hover tooltip">
-                                <span class="tooltip-content"></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <code>@borderColor</code>
-                        </td>
-                        <td>
-                            <span class="var var-border-color tooltip">
-                                <span class="tooltip-content"></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <code>@panelBackground</code>
-                        </td>
-                        <td>
-                            <span class="var var-panel-background tooltip">
-                                <span class="tooltip-content"></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <code>@panelBorder</code>
-                        </td>
-                        <td>
-                            <span class="var var-panel-border tooltip">
-                                <span class="tooltip-content"></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <code>@panelBorderDarker</code>
-                        </td>
-                        <td>
-                            <span class="var var-panel-border-darker tooltip">
-                                <span class="tooltip-content"></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <code>@overlayBorder</code>
-                        </td>
-                        <td>
-                            <span class="var var-overlay-border tooltip">
                                 <span class="tooltip-content"></span>
                             </span>
                         </td>
@@ -587,6 +540,74 @@
             </tr>
         </tbody>
         </table>
+    </div>
+
+    <div class="gu gu-last">
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <code>@borderColor</code>
+                            <code class="color-transform">tint(@blueSoft, 63%)</code>
+                        </td>
+                        <td>
+                            <span class="var var-border-color tooltip">
+                                <span class="tooltip-content"></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>@panelBackground</code>
+                            <code class="color-transform">tint(@blueSoft, 92%)</code>
+                        </td>
+                        <td>
+                            <span class="var var-panel-background tooltip">
+                                <span class="tooltip-content"></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>@panelBorder</code>
+                            <code class="color-transform">tint(@blueSoft, 78%)</code>
+                        </td>
+                        <td>
+                            <span class="var var-panel-border tooltip">
+                                <span class="tooltip-content"></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>@panelBorderDarker</code>
+                            <code class="color-transform">tint(@blueSoft, 42%)</code>
+                        </td>
+                        <td>
+                            <span class="var var-panel-border-darker tooltip">
+                                <span class="tooltip-content"></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>@overlayBorder</code>
+                            <code class="color-transform">shade(@blueSoft, 70%)</code>
+                        </td>
+                        <td>
+                            <span class="var var-overlay-border tooltip">
+                                <span class="tooltip-content"></span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     </div>
 </div>
 

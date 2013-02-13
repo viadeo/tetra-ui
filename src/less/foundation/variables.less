@@ -35,17 +35,17 @@
 @yellow:            #f1d71a;
 @orange:            #ea762b;
 
-@blue:              #0A87CD;
+@blue:              #007de3;
 @blueDarker:        darken(@blue, 20%);
 @blueDark:          darken(@blue, 10%);
 @blueLight:         lighten(desaturate(@blue, 35%), 20%);
 @blueLighter:       lighten(desaturate(@blue, 35%), 40%);
 @blueBright:				#0065AE;
-@borderColor:       lighten(desaturate(@blue, 66%), 43%);
-@panelBackground:   lighten(desaturate(@blue, 70%), 55%);
-@panelBorder:       lighten(desaturate(@blue, 75%), 49%);
-@panelBorderDarker: lighten(desaturate(@blue, 73%), 35%);
-@overlayBorder:     darken(desaturate(@blue, 61%), 27%);
+@borderColor:       tint(@blueSoft, 63%);
+@panelBackground:   tint(@blueSoft, 92%);
+@panelBorder:       tint(@blueSoft, 78%);
+@panelBorderDarker: tint(@blueSoft, 42%);
+@overlayBorder:     shade(@blueSoft, 70%);
 
 @blueSoft: 					#83a0b9;
 
@@ -71,7 +71,7 @@
 
 // Link colors
 @linkColor:         @blue;
-@linkColorHover:    @blue;
+@linkColorHover:    shade(@linkColor, 10%);
 
 // Typography
 @baseFontSize:      12px;

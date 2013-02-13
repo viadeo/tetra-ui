@@ -3025,7 +3025,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  color: #0a87cd;
+  color: #00559b;
 }
 h1,
 .h1,
@@ -5030,8 +5030,8 @@ i.vicon {
   margin: 125px auto 0;
   padding: 5px !important;
   border-radius: 5px;
-  background: #243843;
-  background: rgba(27, 42, 50, 0.6);
+  background: #323d46;
+  background: rgba(39, 48, 56, 0.6);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   -webkit-animation: popin-fadein 0.15s;
   -moz-animation: popin-fadein 0.15s;
@@ -5062,7 +5062,7 @@ i.vicon {
   color: #005eac;
 }
 .popin-container .popin .popin-header button.close:hover {
-  color: #0a87cd;
+  color: #00559b;
   text-decoration: underline;
 }
 .popin-container .popin .popin-body {
@@ -5227,7 +5227,7 @@ i.vicon {
 .nav-pills li.side-links a:hover,
 .nav-tabs li.side-links a:active,
 .nav-pills li.side-links a:active {
-  color: #0a87cd;
+  color: #00559b;
   text-decoration: underline;
   background: none;
 }
@@ -5357,7 +5357,7 @@ i.vicon {
   transition: none;
 }
 .nav-pills li.side-links a:hover {
-  color: #0a87cd;
+  color: #00559b;
 }
 .btncontainer .btn-yn {
   float: left;
