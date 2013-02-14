@@ -55,7 +55,6 @@ tetra.controller.register('navtabs', {
 
                         data.uriParams = { url:data.url };
                         orm('navtabs').fetch(data);
-                        //orm('navtabs').create(data).save({ uriParams: { url: data.url } });
 
                     }
                 }

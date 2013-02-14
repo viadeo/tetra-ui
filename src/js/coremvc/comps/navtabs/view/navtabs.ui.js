@@ -10,9 +10,9 @@ tetra.view.register('navtabs', {
             events:{
                 user:{ // list of events listened on the page
                     'click':{
-                        '.nav-tabs a':function (e, elm) {
+                        '.nav-tabs a[data-href]':function (e, elm) {
                             var data = {
-                                url:elm.attr('href'),
+                                url:elm.attr('data-href'),
                                 targetId:elm.parents('.nav-tabs').attr('data-target-id')
                             };
 
@@ -32,7 +32,7 @@ tetra.view.register('navtabs', {
                     'set content':function (data) { // function executed at the reception
 
                         _('#' + data.targetId).children('.section').html(data.content);
-                        var elm = _('.nav-tabs[data-target-id=' + data.targetId + ']').find('a[href="' + data.tabRef + '"]');
+                        var elm = _('.nav-tabs[data-target-id=' + data.targetId + ']').find('a[data-href="' + data.tabRef + '"]');
                         me.methods.setActiveTab(elm);
                     },
                     'show error':function (error) {
