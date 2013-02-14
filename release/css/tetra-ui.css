@@ -3601,6 +3601,12 @@ pre {
 .core-form .input-append .btn {
   padding-bottom: 4px;
   padding-top: 4px;
+  height: 1.4em;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  *height: auto;
 }
 .core-form .input-prepend .active,
 .core-form .input-append .active {
