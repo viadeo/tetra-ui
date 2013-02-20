@@ -1,6 +1,3 @@
-/* Variables.less
- * Variables to customize the look and feel of Bootstrap
- * ----------------------------------------------------- */
 /* Variables_tianji.less
  * Anything declared here will overwrite the variables declared in variables.less
  * ----------------------------------------------------- */
@@ -4146,8 +4143,8 @@ a:hover .avatar img {
 /* Icon Fonts */
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/20130220/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/20130220/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/20130220/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/20130220/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -4407,6 +4404,11 @@ i.vicon {
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   /* Support for old layout */
 
 }
@@ -4851,6 +4853,39 @@ i.vicon {
   padding-left: 0;
   padding-right: 4px;
 }
+.btn-icon {
+  padding: 10px 4px 6px;
+  border: 1px solid #dddddd;
+  background-color: #f3f3f3;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -o-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: linear-gradient(to bottom, #fafafa, #f3f3f3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0);
+  *filter: none;
+}
+.btn-icon:hover {
+  border-color: #9c1111;
+  background-color: #9c1111;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #bc1515, #9c1111);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bc1515), color-stop(100%, #9c1111));
+  background-image: -webkit-linear-gradient(top, #bc1515, #9c1111);
+  background-image: -o-linear-gradient(top, #bc1515, #9c1111);
+  background-image: linear-gradient(to bottom, #bc1515, #9c1111);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc1515', endColorstr='#9c1111', GradientType=0);
+  *filter: none;
+}
+.btn-icon:hover .vicon {
+  color: #404040;
+}
+.btn-icon .vicon {
+  font-size: 12px;
+  color: #737373;
+  margin: 0;
+}
 /**********************/
 /* General Properties */
 /**********************/
@@ -5237,6 +5272,11 @@ i.vicon {
   text-decoration: underline;
   background: none;
 }
+.nav-tabs li.side-links a .vicon,
+.nav-pills li.side-links a .vicon {
+  font-size: 9px;
+  color: #999999;
+}
 .nav-tabs {
   background-color: #f8f8f8;
   border: 1px solid #dfdfdf;
@@ -5268,49 +5308,55 @@ i.vicon {
   border-bottom: none;
 }
 .nav-tabs.nav-tabs-secondary {
-  background: #f8f8f8;
-  border-color: #dfdfdf;
+  background: none;
+  border-top: 0;
+  border-bottom-color: #dae3ea;
   margin-bottom: 0;
   padding: 0;
+  font-family: "MuseoSlab", "Arial", sans-serif;
+}
+.nav-tabs.nav-tabs-secondary:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 .nav-tabs.nav-tabs-secondary a {
-  border: solid #ebebeb;
-  border-width: 0 1px 0 0;
+  position: relative;
+}
+.nav-tabs.nav-tabs-secondary a:hover {
+  background: #e6ecf1;
 }
 .nav-tabs.nav-tabs-secondary li:first-child a {
   border-width: 0 1px;
 }
 .nav-tabs.nav-tabs-secondary .active a {
-  background: #ffffff;
-  border: solid #dfdfdf;
-  border-width: 0 1px 0 0;
+  background: none;
+  border: 0;
   margin: 0;
   padding: 9px 25px 8px;
-  position: relative;
 }
-.nav-tabs.nav-tabs-secondary .active a:after,
-.nav-tabs.nav-tabs-secondary .active a:before {
-  border: solid transparent;
-  content: '';
-  height: 0;
-  margin: -1px;
-  pointer-events: none;
+.nav-tabs.nav-tabs-secondary .active a:before,
+.nav-tabs.nav-tabs-secondary .active a:after {
+  content: "";
   position: absolute;
+  left: 50%;
+  bottom: 0;
   width: 0;
+  height: 0;
+  border-style: solid;
+}
+.nav-tabs.nav-tabs-secondary .active a:before {
+  margin-left: -10px;
+  border-color: transparent transparent #dae3ea;
+  border-width: 0 10px 10px;
 }
 .nav-tabs.nav-tabs-secondary .active a:after {
-  border-bottom-color: #ffffff;
-  border-width: 8px;
-  left: 50%;
-  margin-left: -8px;
-  bottom: 0;
-}
-.nav-tabs.nav-tabs-secondary .active a:before {
-  border-bottom-color: #dfdfdf;
-  border-width: 9px;
-  left: 50%;
-  margin-left: -9px;
-  bottom: 0;
+  bottom: -2px;
+  margin-left: -10px;
+  border-color: transparent transparent #ffffff;
+  border-width: 0 10px 10px;
 }
 .nav-tabs-section .section {
   display: block;
@@ -5970,4 +6016,85 @@ i.vicon {
 }
 .bx-alert-error .bx-alert-close:hover .vicon {
   color: #d94d4d;
+}
+.rc-card {
+  border: 2px solid #e6ecf1;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+.rc-card:hover {
+  border-color: #c1d0dc;
+}
+.rc-card .rc-card-header {
+  padding: 10px;
+}
+.rc-card .rc-card-header .name {
+  margin: 0 0 5px 0;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+.rc-card .rc-card-header .name .vicon {
+  color: #9c1111;
+}
+.rc-card .rc-card-content {
+  padding: 10px;
+  border-top: 1px dotted #cdd9e3;
+  background: #f6f8fa;
+  background-clip: padding-box;
+}
+.rc-card .rc-card-footer {
+  padding: 10px;
+  border-top: 1px dotted #cdd9e3;
+  zoom: 1;
+}
+.rc-card .rc-card-footer:before,
+.rc-card .rc-card-footer:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.rc-card .rc-card-footer:after {
+  clear: both;
+}
+.rc-card .job {
+  margin: 0 0 5px 0;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+.rc-card .where {
+  font-family: "Arial", sans-serif;
+  margin: 0 0 5px 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: #808080;
+}
+.rc-card .previously dt {
+  clear: left;
+  float: left;
+  color: #404040;
+  margin-right: 0.5em;
+}
+.rc-card-l .rc-card-header .name {
+  margin-top: 10px;
+  padding-left: 120px;
+}
+.rc-card-l .rc-card-content .avatar {
+  margin-top: -15%;
+  margin-bottom: -11px;
+}
+.rc-card-m .rc-card-header .name {
+  font-size: 14px;
+}
+.rc-card-m .rc-card-header .job {
+  font-size: 12px;
+}
+.rc-card-m .rc-card-content {
+  padding-left: 84px;
 }

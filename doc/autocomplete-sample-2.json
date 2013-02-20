@@ -1,0 +1,11 @@
+{
+  "status": "SUCCESS",
+  "data": {
+    "002ydz9e0qc2hj7": {"headline":"Designer, Company 1","email":"mail1@example.com","memberId":"002ydz9e0qc2yj7","fullName":"Mathieu"},
+    "0029n46afl9p21j": {"headline":"Consultant, Company 2","email":"mail2@example.com","memberId":"0029n46bfl9p21j","fullName":"Jasmine"},
+    "002urlypi0yx5y6": {"headline":"Head of mobile, Company 3","email":"mail3@example.com","memberId":"002urlypj0yx5y6","fullName":"Paul"},
+    "0021ws39tof3kr1d": {"headline":"Java J2EE Developer, Company 4","email":"mail4@example.com","memberId":"0022ws39tof3kr1d","fullName":"Conrad"},
+    "0021ib3a6jpyj9hl": {"headline":"Developer, Company 5","email":"mail5@example.com","memberId":"0021ib3a7jpyj9hl","fullName":"Yvan"} 
+  },
+  "count": 111
+}

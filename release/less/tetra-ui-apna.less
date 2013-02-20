@@ -1,14 +1,15 @@
-/*! Tetra UI v1.0.10 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.11 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
-/* Variables.less
- * Variables to customize the look and feel of Bootstrap
- * ----------------------------------------------------- */
+// Global variables
 
 // Static files paths
-@fonts-dir: '/css/core/fonts';
-@img-sprite-dir: '/v_img/global';
-@img-buttons-dir: '/v_img/coreui/buttons';
-@img-loaders-dir: '/v_img/profilev2';
+@img-sprite-dir: "/v_img/global";
+@img-buttons-dir: "/v_img/coreui/buttons";
+@img-loaders-dir: "/v_img/profilev2";
+
+// Fonts
+@fonts-dir: "/css/core/fonts";
+@fonts-version: "20130220";
 
 // Right To Left mode (arabic)
 @rtl: false;
@@ -2154,10 +2155,10 @@ a:hover {
 
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('@{fonts-dir}/viadeoicons/viadeoicons.eot');
-  src: url('@{fonts-dir}/viadeoicons/viadeoicons.eot?#iefix') format('embedded-opentype'),
-    url('@{fonts-dir}/viadeoicons/viadeoicons.woff') format('woff'),
-    url('@{fonts-dir}/viadeoicons/viadeoicons.ttf') format('truetype');
+  src: url('@{fonts-dir}/viadeoicons/@{fonts-version}/viadeoicons.eot');
+  src: url('@{fonts-dir}/viadeoicons/@{fonts-version}/viadeoicons.eot?#iefix') format('embedded-opentype'),
+    url('@{fonts-dir}/viadeoicons/@{fonts-version}/viadeoicons.woff') format('woff'),
+    url('@{fonts-dir}/viadeoicons/@{fonts-version}/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -2464,6 +2465,7 @@ i.vicon {
     cursor: pointer;
     white-space: nowrap;
     text-align: center;
+    .user-select(none);
 
     &:hover {
         text-decoration: none;
@@ -2724,6 +2726,27 @@ i.vicon {
     margin-left: -@_borderRadius;
     padding-left: 0;
     padding-right: 4px;
+}
+
+.btn-icon {
+    padding: 10px 4px 6px;
+    border: 1px solid lighten(@buttonDefaultBorderColor, 3%);
+    #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
+
+    &:hover {
+        border-color: @buttonPrimaryBorderColor;
+        #gradient > .vertical(@buttonPrimaryBgColor, @buttonPrimaryEndColor);
+
+        .vicon {
+            color: lighten(@black, 25%);
+        }
+    }
+    
+    .vicon {
+        font-size: 12px;
+        color: lighten(@black, 45%);
+        margin: 0;
+    }
 }
 
 /**********************/
@@ -3106,6 +3129,11 @@ i.vicon {
          text-decoration: underline;
          background: none;
        }
+
+       .vicon {
+       	font-size: 9px;
+       	color: lighten(@black, 60%);
+       }
 	   }
 	}
 }
@@ -3158,14 +3186,27 @@ i.vicon {
 
 	// Secondary tabs
 	&.nav-tabs-secondary {
-		background: @panelBackground;
-		border-color: @borderColor;
+		background: none;
+		border-top: 0;
+		border-bottom-color: tint(@blueSoft, 70%);
 		margin-bottom: 0;
 		padding: 0;
+		font-family: "MuseoSlab", "Arial", sans-serif;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			box-shadow: 0 0 2px fade(@black, 10%);
+		}
 
 		a {
-			border: solid lighten(@borderColor, 5%);
-			border-width: 0 @borderWidth 0 0;
+			position: relative;
+
+			&:hover {
+				background: tint(@blueSoft, 80%);
+			}
 		}
 
 		li:first-child a {
@@ -3173,15 +3214,32 @@ i.vicon {
 		}
 
 		.active {
-
 			a {
-				background: @white;
-				border: solid @borderColor;
-				border-width: 0 @borderWidth 0 0;
+				background: none;
+				border: 0;
 				margin: 0;
 				padding: @verticalPadding @horizontalPadding (@verticalPadding - 1px);
 
-				.inner-arrow(bottom, 8px, #FFF, 1px, @borderColor);
+				&:before, &:after {
+					content: "";
+					position: absolute;
+					left: 50%; bottom: 0;
+					width: 0; height: 0;
+					border-style: solid;
+				}
+
+				&:before {
+					margin-left: -10px;
+					border-color: transparent transparent tint(@blueSoft, 70%);
+					border-width: 0 10px 10px;
+				}
+
+				&:after {
+					bottom: -2px;
+					margin-left: -10px;
+					border-color: transparent transparent @white;
+					border-width: 0 10px 10px;
+				}
 			}
 		}
 	}

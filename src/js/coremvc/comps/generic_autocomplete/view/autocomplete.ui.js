@@ -155,13 +155,13 @@ tetra.view.register('autocomplete', {
                         return url.replace(me._param, param);
                     },
                     clickOnSuggestion:function (elm) {
-                        var value = _.trim(_(elm.find('.value')).html());
+                        var value = _.trim(_(elm.find('.value')).text());
                         me._input.val(value);
                         app.notify('autocompleteGeneric : click on suggestion', elm[0]);
                         me._containerId = null;
                     },
                     doQuery:function (elm, delay) {
-                        var param = encodeURIComponent(elm.val());
+                        var param = elm.val();
                         var url = me.methods.suggestions.replaceParam(me._container.attr('data-url'), param);
                         var data = {
                             url:url,
@@ -186,7 +186,6 @@ tetra.view.register('autocomplete', {
                             _(form).find('#schoolId').val('');
                             _(form).find('input.town').val('');
                         }
-
                         app.notify('do query', data);
                     }
                 }
