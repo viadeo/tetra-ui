@@ -4143,8 +4143,8 @@ a:hover .avatar img {
 /* Icon Fonts */
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/20130220/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/20130220/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/20130220/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/20130220/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/20130225/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/20130225/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/20130225/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/20130225/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
