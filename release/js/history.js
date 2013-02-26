@@ -1,5 +1,3 @@
-/*! Tetra UI v1.0.11 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
-
 tetra.controller.register('history', {
     scope:'history',
 
