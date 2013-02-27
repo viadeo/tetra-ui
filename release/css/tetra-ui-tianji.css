@@ -4143,8 +4143,8 @@ a:hover .avatar img {
 /* Icon Fonts */
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/20130225/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/20130225/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/20130225/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/20130225/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -4885,6 +4885,8 @@ i.vicon {
   font-size: 12px;
   color: #737373;
   margin: 0;
+  *margin: -0.5em 0 0;
+  *line-height: 2.25em;
 }
 /**********************/
 /* General Properties */
@@ -5944,42 +5946,46 @@ i.vicon {
 }
 .bx-alert {
   position: relative;
+  padding: 20px 20px 15px 20px;
+  border: 2px solid #ffffff;
+  background: #f3f6f8;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 .bx-alert .bx-alert-close {
   position: absolute;
   top: -3px;
   right: -5px;
 }
+.bx-alert .bx-alert-close .vicon {
+  color: #c1d0dc;
+}
+.bx-alert .bx-alert-close:hover .vicon {
+  color: #9cb3c7;
+}
 .bx-alert .bx-alert-icon {
-  float: left;
-  margin: 5px 0 0 0;
-  margin-right: 15px;
+  display: inline-block;
+  width: 10%;
+  height: 1.75em;
   font-size: 20px;
+  color: #cdd9e3;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px #ffffff;
+  vertical-align: middle;
+  *line-height: 2.25em;
+  *margin-top: -1.5em;
 }
 .bx-alert .bx-alert-content {
-  overflow: hidden;
+  display: inline-block;
+  width: 89%;
+  vertical-align: middle;
+  *zoom: 1;
+  *display: inline;
 }
 .bx-alert .bx-alert-title {
   margin: 0 0 5px 0;
 }
-.bx-alert-success {
-  padding: 20px 20px 15px 20px;
-  border: 2px solid #ffffff;
-  background: #f3f6f8;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
-}
-.bx-alert-success .bx-alert-close .vicon {
-  color: #c1d0dc;
-}
-.bx-alert-success .bx-alert-close:hover .vicon {
-  color: #9cb3c7;
-}
-.bx-alert-success .bx-alert-icon {
-  color: #cdd9e3;
-}
 .bx-alert-warning {
   padding: 15px 20px 10px 20px;
+  border: 0;
   border-bottom: 1px dotted #e6e6e6;
   background-color: #fbf3ba;
   background-repeat: repeat-x;
@@ -5999,6 +6005,7 @@ i.vicon {
 }
 .bx-alert-error {
   padding: 15px 20px 10px 20px;
+  border: 0;
   border-bottom: 1px dotted #e6e6e6;
   color: #c80000;
   background-color: #f4cccc;
