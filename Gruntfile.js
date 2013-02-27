@@ -240,9 +240,13 @@ module.exports = function(grunt) {
 				'src/js/coremvc/comps/alert/view/alert.ui.js']
 		},
 
-		server:{
-			port:8080,
-			base:'..'
+		connect: {
+			server: {
+				options: {
+					port: 8080,
+					base: '..'
+				}
+			}
 		},
 
 		watch:{
@@ -261,8 +265,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	// Default task.
 	grunt.registerTask('default', ['jshint', 'less', 'concat']);
-	grunt.registerTask('watch-server', ['server', 'watch']);
+	grunt.registerTask('watch-server', ['connect', 'watch']);
 };
