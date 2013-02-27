@@ -249,6 +249,10 @@ module.exports = function(grunt) {
 			less: {
 				files:['src/less/**/*.less'],
 				tasks:['less', 'concat']	
+			},
+			js: {
+				files:['src/js/coremvc/comps/**/*.js'],
+				tasks:['jshint', 'concat']	
 			}
 		}
 	});
