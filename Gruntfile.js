@@ -246,16 +246,19 @@ module.exports = function(grunt) {
 		},
 
 		watch:{
-			files:['src/less/**/*.less'],
-			tasks:'less concat'
+			less: {
+				files:['src/less/**/*.less'],
+				tasks:['less', 'concat']	
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task.
 	grunt.registerTask('default', ['jshint', 'less', 'concat']);
-	grunt.registerTask('watch-server', 'server watch');
+	grunt.registerTask('watch-server', ['server', 'watch']);
 };
