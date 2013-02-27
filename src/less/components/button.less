@@ -299,4 +299,15 @@
         *margin: -0.5em 0 0;
         *line-height: 2.25em;
     }
+
+    &.btn-disabled {
+        &:hover {
+            border-color: lighten(@buttonDefaultBorderColor, 3%);
+            #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
+        }
+
+        .vicon {
+            color: lighten(@black, 75%);
+        }
+    }
 }

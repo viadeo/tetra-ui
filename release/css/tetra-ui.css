@@ -4140,8 +4140,8 @@ a:hover .avatar img {
 /* Icon Fonts */
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1361874458/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1361971956/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1361971956/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1361971956/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1361971956/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -4884,6 +4884,21 @@ i.vicon {
   margin: 0;
   *margin: -0.5em 0 0;
   *line-height: 2.25em;
+}
+.btn-icon.btn-disabled:hover {
+  border-color: #dddddd;
+  background-color: #f3f3f3;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -o-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: linear-gradient(to bottom, #fafafa, #f3f3f3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0);
+  *filter: none;
+}
+.btn-icon.btn-disabled .vicon {
+  color: #bfbfbf;
 }
 /**********************/
 /* General Properties */
