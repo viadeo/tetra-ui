@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
   <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
 
-  <script src="/tetra-ui/src/js/lib/jquery/1.8.3/jquery.js"></script>
+  <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
 
   <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
@@ -138,7 +138,7 @@
       <form class="core-form form-horizontal">
 
         <div class="flipswitch flipswitch-yes bootnode"
-          data-view="flipswitch/flipswitch"
+          data-comp="flipswitch"
           data-event="click"
           id="flipswitch-sample-1">
 
@@ -168,7 +168,7 @@
       <form class="core-form form-horizontal">
 
         <div class="flipswitch flipswitch-no bootnode"
-          data-view="flipswitch/flipswitch"
+          data-comp="flipswitch"
           data-event="click"
           id="flipswitch-sample-2">
 
@@ -204,7 +204,7 @@
 
     <div class="gu gu-last">
       <pre class="mts"><code class="language-markup">&lt;div class="flipswitch flipswitch-yes bootnode" id="flipswitch-sample-1"
-  data-view="flipswitch/flipswitch"
+  data-comp="flipswitch"
   data-event="click"&gt;
 
   &lt;label class="flipswitch-lbl-yes"&gt;
@@ -254,7 +254,7 @@
     <div class="gu gu-2of5">
 
       <label class="btn-toggle bootnode btn-toggle-checked"
-        data-view="toggle/toggle"
+        data-comp="toggle"
         data-event="click"
         id="btn-toggle-sample-1">
 
@@ -265,7 +265,7 @@
 
       <pre class="mts"><code class="language-markup">&lt;label
   class="btn-toggle bootnode btn-toggle-checked"
-  data-view="toggle/toggle"
+  data-comp="toggle"
   data-event="click"
   id="btn-toggle-sample-1"&gt;
 
@@ -281,7 +281,7 @@
     <div class="gu gu-last">
       
       <label class="btn-toggle bootnode"
-        data-view="toggle/toggle"
+        data-comp="toggle"
         data-event="click"
         id="btn-toggle-sample-2">
 
@@ -292,7 +292,7 @@
 
       <pre class="mts"><code class="language-markup">&lt;label
   class="btn-toggle bootnode"
-  data-view="toggle/toggle"
+  data-comp="toggle"
   data-event="click"
   id="btn-toggle-sample-2"&gt;
 
@@ -369,7 +369,7 @@
     
     <div class="gu gu-2of5">
         <div class="btncontainer">
-          <div class="btn-yn bootnode btn-yes" data-view="yesno/yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample2">
+          <div class="btn-yn bootnode btn-yes" data-comp="yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample2">
               <a href="javascript:void(0);" class="lnk-yes" title="Yes">Yes</a>
               <a href="javascript:void(0);" class="lnk-no" title="No">No</a>
           </div>
@@ -379,7 +379,7 @@
         </div>
         
         <pre class="mtm"><code class="language-markup">&lt;div class="btn-yn bootnode btn-no"
-  data-view="yesno/yesno"
+  data-comp="yesno"
   data-event="click"
   data-url="yesno-model-fake.json.jsp"
   data-param="yesnoSample2"&gt;
@@ -398,7 +398,7 @@
      
      <div class="gu gu-last">
         <form class="btncontainer no-prevent">
-          <div class="btn-yn bootnode btn-no" data-view="yesno/yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample1">
+          <div class="btn-yn bootnode btn-no" data-comp="yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample1">
               <label class="lnk-yes">
                 <input type="radio" name="btn-yn-sample" value="true" />
                 It's Yes
@@ -414,7 +414,7 @@
         </form>
         
         <pre class="mtm"><code class="language-markup">&lt;div class="btn-yn bootnode btn-yes"
-  data-view="yesno/yesno"
+  data-comp="yesno"
   data-event="click"
   data-url="yesno-model-fake.json.jsp"
   data-param="yesnoSample1"&gt;
@@ -489,7 +489,7 @@
     <div class="gu gu-last">
         <h3 class="mbm">With a Tetra.js component</h3>
 
-        <ul class="nav nav-tabs bootnode" data-event="click" data-view="navtabs/navtabs" data-target-id="tab-sample-container">
+        <ul class="nav nav-tabs bootnode" data-event="click" data-comp="navtabs" data-target-id="tab-sample-container">
             <li><a data-href="/tetra-ui/doc/tab-sample-1.html">Sample 1</a></li>
             <li><a data-href="/tetra-ui/doc/tab-sample-2.html">Sample 2</a></li>
             <li><a data-href="/tetra-ui/doc/tab-sample-3.html">Sample 3</a></li>
@@ -508,7 +508,7 @@
         
         <pre class="mtm"><code class="language-markup">&lt;ul class="nav nav-tabs bootnode"
   data-event="click"
-  data-view="navtabs/navtabs"
+  data-comp="navtabs"
   data-target-id="tab-sample-container"&gt;&lt;!-- The id of the element where tab contents will be loaded --&gt;
   
   &lt;li class="active"&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-1.html"&gt;Sample 1&lt;/a&gt;&lt;/li&gt;
@@ -548,7 +548,7 @@
         <div class="gr">
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="dropdown/view">Click <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-comp="dropdown">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -558,7 +558,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-view="dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-comp="dropdown">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -568,7 +568,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-comp="dropdown">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -578,7 +578,7 @@
           </div>
           <div class="gu gu-1of5 tac">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-view="dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default" data-event="mouseover" data-comp="dropdown">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -588,7 +588,7 @@
           </div>
           <div class="gu gu-last tar">
             <span>
-               <a href="#" class="btn btn-default">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default btn-append" data-event="click" data-view="dropdown/view"><i class="vicon">∨</i></a>
+               <a href="#" class="btn btn-default">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default btn-append" data-event="click" data-comp="dropdown"><i class="vicon">∨</i></a>
                    <ul class="dd-menu no-prevent">
                        <li class="dd-item"><a href="">dropdown item</a></li>
                        <li class="dd-item"><a href="">dropdown item</a></li>
@@ -602,7 +602,7 @@
         <div class="gr mtxs">
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="click" data-view="dropdown/view">Click <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="click" data-comp="dropdown">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -612,7 +612,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="mouseover" data-view="dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="mouseover" data-comp="dropdown">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -622,7 +622,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="click" data-view="dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="click" data-comp="dropdown">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -632,7 +632,7 @@
           </div>
           <div class="gu gu-1of5 tac">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="mouseover" data-view="dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-default btn-disabled" data-event="mouseover" data-comp="dropdown">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -642,7 +642,7 @@
           </div>
           <div class="gu gu-last tar">
             <span>
-               <a href="#" class="btn btn-default btn-disabled">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default btn-append btn-disabled" data-event="click" data-view="dropdown/view"><i class="vicon">∨</i></a>
+               <a href="#" class="btn btn-default btn-disabled">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default btn-append btn-disabled" data-event="click" data-comp="dropdown"><i class="vicon">∨</i></a>
                    <ul class="dd-menu no-prevent">
                        <li class="dd-item"><a href="">dropdown item</a></li>
                        <li class="dd-item"><a href="">dropdown item</a></li>
@@ -656,7 +656,7 @@
         <div class="gr mts">
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="click" data-view="dropdown/view">Click <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="click" data-comp="dropdown">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -666,7 +666,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="mouseover" data-view="dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="mouseover" data-comp="dropdown">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -676,7 +676,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="click" data-view="dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="click" data-comp="dropdown">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -686,7 +686,7 @@
           </div>
           <div class="gu gu-1of5 tac">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="mouseover" data-view="dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary" data-event="mouseover" data-comp="dropdown">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -696,7 +696,7 @@
           </div>
           <div class="gu gu-last tar">
             <span>
-               <a href="#" class="btn btn-primary">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-primary btn-append" data-event="click" data-view="dropdown/view"><i class="vicon">∨</i></a>
+               <a href="#" class="btn btn-primary">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-primary btn-append" data-event="click" data-comp="dropdown"><i class="vicon">∨</i></a>
                    <ul class="dd-menu no-prevent">
                        <li class="dd-item"><a href="">dropdown item</a></li>
                        <li class="dd-item"><a href="">dropdown item</a></li>
@@ -710,7 +710,7 @@
         <div class="gr mtxs">
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="click" data-view="dropdown/view">Click <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="click" data-comp="dropdown">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -720,7 +720,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="mouseover" data-view="dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="mouseover" data-comp="dropdown">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -730,7 +730,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="click" data-view="dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="click" data-comp="dropdown">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -740,7 +740,7 @@
           </div>
           <div class="gu gu-1of5 tac">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="mouseover" data-view="dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-primary btn-disabled" data-event="mouseover" data-comp="dropdown">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -750,7 +750,7 @@
           </div>
           <div class="gu gu-last tar">
             <span>
-               <a href="#" class="btn btn-primary btn-disabled">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-primary btn-append btn-disabled" data-event="click" data-view="dropdown/view"><i class="vicon">∨</i></a>
+               <a href="#" class="btn btn-primary btn-disabled">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-primary btn-append btn-disabled" data-event="click" data-comp="dropdown"><i class="vicon">∨</i></a>
                    <ul class="dd-menu no-prevent">
                        <li class="dd-item"><a href="">dropdown item</a></li>
                        <li class="dd-item"><a href="">dropdown item</a></li>
@@ -764,7 +764,7 @@
         <div class="gr mts">
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="click" data-view="dropdown/view">Click <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="click" data-comp="dropdown">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -774,7 +774,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="mouseover" data-view="dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="mouseover" data-comp="dropdown">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -784,7 +784,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="click" data-view="dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="click" data-comp="dropdown">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -794,7 +794,7 @@
           </div>
           <div class="gu gu-1of5 tac">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="mouseover" data-view="dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary" data-event="mouseover" data-comp="dropdown">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -804,7 +804,7 @@
           </div>
           <div class="gu gu-last tar">
             <span>
-               <a href="#" class="btn btn-tertiary">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-tertiary btn-append" data-event="click" data-view="dropdown/view"><i class="vicon">∨</i></a>
+               <a href="#" class="btn btn-tertiary">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-tertiary btn-append" data-event="click" data-comp="dropdown"><i class="vicon">∨</i></a>
                    <ul class="dd-menu no-prevent">
                        <li class="dd-item"><a href="">dropdown item</a></li>
                        <li class="dd-item"><a href="">dropdown item</a></li>
@@ -818,7 +818,7 @@
         <div class="gr mtxs">
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="click" data-view="dropdown/view">Click <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="click" data-comp="dropdown">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -828,7 +828,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="mouseover" data-view="dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="mouseover" data-comp="dropdown">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -838,7 +838,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="click" data-view="dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="click" data-comp="dropdown">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -848,7 +848,7 @@
           </div>
           <div class="gu gu-1of5 tac">
             <div class="dd pull-right">
-               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="mouseover" data-view="dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode btn btn-tertiary btn-disabled" data-event="mouseover" data-comp="dropdown">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -858,7 +858,7 @@
           </div>
           <div class="gu gu-last tar">
             <span>
-               <a href="#" class="btn btn-tertiary btn-disabled">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-tertiary btn-append btn-disabled" data-event="click" data-view="dropdown/view"><i class="vicon">∨</i></a>
+               <a href="#" class="btn btn-tertiary btn-disabled">Primary action</a><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-tertiary btn-append btn-disabled" data-event="click" data-comp="dropdown"><i class="vicon">∨</i></a>
                    <ul class="dd-menu no-prevent">
                        <li class="dd-item"><a href="">dropdown item</a></li>
                        <li class="dd-item"><a href="">dropdown item</a></li>
@@ -872,7 +872,7 @@
         <div class="gr mtm">
           <div class="gu gu-1of5 mls">
             <div class="dd mrxl">
-               <a href="#" class="dd-btn bootnode" data-event="click" data-view="dropdown/view">Click <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode" data-event="click" data-comp="dropdown">Click <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -882,7 +882,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd mrxl">
-               <a href="#" class="dd-btn bootnode" data-event="mouseover" data-view="dropdown/view">Mouseover <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode" data-event="mouseover" data-comp="dropdown">Mouseover <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item</a></li>
                    <li class="dd-item"><a href="">dropdown item</a></li>
@@ -892,7 +892,7 @@
           </div>
           <div class="gu gu-1of5">
             <div class="dd pull-right mrxl">
-               <a href="#" class="dd-btn bootnode" data-event="click" data-view="dropdown/view">Click pull right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode" data-event="click" data-comp="dropdown">Click pull right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -902,7 +902,7 @@
           </div>
           <div class="gu gu-1of5 mlxs tac">
             <div class="dd pull-right mrxl">
-               <a href="#" class="dd-btn bootnode" data-event="mouseover" data-view="dropdown/view">Mouseover right <i class="vicon">∨</i></a>
+               <a href="#" class="dd-btn bootnode" data-event="mouseover" data-comp="dropdown">Mouseover right <i class="vicon">∨</i></a>
                <ul class="dd-menu no-prevent">
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
                    <li class="dd-item"><a href="">dropdown item pull to the right</a></li>
@@ -913,7 +913,7 @@
         </div>
 
         <pre class="mtm"><code class="language-markup">&lt;div class="dd pull-right"&gt;
-  &lt;a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="dropdown/view"&gt;
+  &lt;a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-comp="dropdown"&gt;
     Click pull right
     &lt;i class="vicon"&gt;&amp;or;&lt;/i&gt;
   &lt;/a&gt;
@@ -929,7 +929,7 @@
             <label class="control-label">Input + Dropdown button</label>
             <div class="controls">
                 <div class="input-append">
-                  <input class="span2" type="text" /><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-view="dropdown/view">Choose <i class="vicon">∨</i></a>
+                  <input class="span2" type="text" /><div class="dd pull-right"><a href="#" class="dd-btn bootnode btn btn-default" data-event="click" data-comp="dropdown">Choose <i class="vicon">∨</i></a>
                     <ul class="dd-menu no-prevent">
                      <li class="dd-item"><a href="">dropdown item</a></li>
                      <li class="dd-item"><a href="">dropdown item</a></li>
@@ -968,7 +968,7 @@
       <label>Autocomplete sample 1</label>
         
       <div class="autocomplete bootnode" id="autocomplete-sample-1"
-        data-view="autocomplete/autocomplete"
+        data-comp="autocomplete"
         data-event="click"
         data-min-length="1"
         data-template-id="autocomplete_sample_1"
@@ -993,7 +993,7 @@
       <label>Autocomplete sample 2</label>
         
       <div class="autocomplete bootnode" id="autocomplete-sample-2"
-        data-view="autocomplete/autocomplete"
+        data-comp="autocomplete"
         data-event="click"
         data-min-length="1"
         data-template-id="autocomplete_sample_2"
@@ -1016,7 +1016,7 @@
 
     <div class="gu gu-1of1">
       <pre><code class="language-markup">&lt;div class="autocomplete bootnode" id="autocomplete-sample-1"
-  data-view="autocomplete/autocomplete"
+  data-comp="autocomplete"
   data-event="click"
   data-min-length="1"
   data-typing-delay="500"
@@ -1086,8 +1086,8 @@
       <ul class="paginator paginator-multi">
         <li class="arrow"><a><i class="vicon">‹</i></a></li>
         <li class="multi">
-          <a href="#" class="bootnode paginator-btn"
-            data-view="paginator/paginator"
+          <a class="bootnode paginator-btn"
+            data-comp="paginator"
             data-event="click">
             3 <i class="vicon">↔</i>
           </a>
@@ -1112,7 +1112,7 @@
   &lt;li class="arrow"&gt;&lt;a&gt;&lt;i class="vicon"&gt;‹&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li class="multi"&gt;
     &lt;a href="#" class="bootnode paginator-btn"
-      data-view="paginator/paginator"
+      data-comp="paginator"
       data-event="click"&gt;
       3 &lt;i class="vicon"&gt;↔&lt;/i&gt;
     &lt;/a&gt;

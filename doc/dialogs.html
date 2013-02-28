@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
   <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
 
-  <script src="/tetra-ui/src/js/lib/jquery/1.8.3/jquery.js"></script>
+  <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
 
   <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
@@ -215,8 +215,7 @@
   <div class="gu gu-1of5">
     
     <p class="mtxs">
-      <a href="#"
-         data-view="popin/popin"
+      <a data-comp="popin"
          data-event="click"
          data-popin="show"
          data-target-url="/tetra-ui/doc/popin-sample-1.html"
@@ -226,8 +225,7 @@
     </p>
     
     <p>
-      <a href="#"
-         data-view="popin/popin"
+      <a data-comp="popin"
          data-event="click"
          data-popin="show"
          data-target-url="/tetra-ui/doc/popin-sample-2.html"
@@ -237,8 +235,7 @@
     </p>
     
     <p>
-      <a href="#"
-         data-view="popin/popin"
+      <a data-comp="popin"
          data-event="click"
          data-popin="show"
          data-target-id="popin-sample-4"
@@ -250,8 +247,7 @@
   </div>
   <div class="gu gu-last">
     
-    <pre><code class="language-markup">&lt;a href="#"
-  data-view="popin/popin"
+    <pre><code class="language-markup">&lt;a data-comp="popin"
   data-event="click"
   data-popin="show"
   data-target-url="[url]"
@@ -278,7 +274,7 @@
     <tbody>
       <tr>
         <td>
-          <code class="language-markup">data-view="popin/popin"</code>
+          <code class="language-markup">data-comp="popin"</code>
         </td>
         <td>
           Calls the required JavaScript component
@@ -344,7 +340,7 @@
   &lt;div class="popin-header"&gt;
     
     &lt;!-- Close button --&gt;
-    &lt;button data-view="popin/popin" data-event="click" data-popin="close" class="bootnode close"&gt;
+    &lt;button data-comp="popin" data-event="click" data-popin="close" class="bootnode close"&gt;
       Close
     &lt;/button&gt;
     
@@ -436,7 +432,7 @@
   <div class="popin gu-2of3">
     <div class="popin-header">
       <button
-         data-view="popin/popin"
+         data-comp="popin"
          data-event="click"
          data-popin="close"
          class="bootnode close">
