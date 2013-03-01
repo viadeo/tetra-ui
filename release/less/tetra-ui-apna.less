@@ -3939,3 +3939,135 @@ i.vicon {
 		}
 	}
 }
+
+// Card Rich Container
+
+.rc-card {
+	border: 2px solid tint(@blueSoft, 80%);
+	border-radius: @borderRadiusM;
+	background: @white;
+	box-shadow: 0 2px 5px fade(@black, 30%);
+	.transition(border-color 0.2s);
+
+	&:hover {
+		border-color: tint(@blueSoft, 50%);
+	}
+
+	.rc-card-header {
+		padding: @spacingS;
+
+		.name {
+			margin: 0 0 @spacingXs 0;
+			font-family: "Arial", sans-serif;
+			font-weight: bold;
+
+			.vicon {
+				color: @buttonPrimaryEndColor;
+			}
+		}
+	}
+
+	.rc-card-content {
+		padding: @spacingS;
+		border-top: 1px dotted tint(@blueSoft, 60%);
+		background: tint(@blueSoft, 93%);
+		background-clip: padding-box;
+	}
+
+	.rc-card-footer {
+		padding: @spacingS;
+		border-top: 1px dotted tint(@blueSoft, 60%);
+		.clearfix();
+	}
+
+	.job {
+		margin: 0 0 @spacingXs 0;
+		font-family: "Arial", sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+	}
+
+	.where {
+		font-family: "Arial", sans-serif;
+		margin: 0 0 @spacingXs 0;
+		font-size: @baseFontSize;
+		font-weight: normal;
+		color: @gray;
+	}
+
+	.previously {
+		dt {
+			clear: left;
+			float: left;
+			color: @grayDark;
+			margin-right: 0.5em;
+		}
+	}
+}
+
+.rc-card-l {
+	.rc-card-header {
+		.name {
+			margin-top: @spacingS;
+			padding-left: 120px;
+		}
+	}
+
+	.rc-card-content {
+		.avatar {
+			margin-top: -15%;
+			margin-bottom: ((-1 * @spacingS) - 1);
+		}
+	}
+}
+
+.rc-card-m {
+	.rc-card-header {
+		.name {
+			font-size: 14px;
+		}
+		.job {
+			font-size: 12px;
+		}
+	}
+
+	.rc-card-content {
+		padding-left: 84px;
+	}
+}
+
+.placeholding {
+  position: relative;
+  display: inline-block;
+
+  input {
+    position: relative;
+    z-index: 2;
+    background: none;
+  }
+
+  label {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    line-height: 2.3em;
+    text-indent: 5px;
+    background: @white;
+    border-radius: @borderRadiusS;
+    color: lighten(@black, 65%);
+    .transition(color 0.2s);
+  }
+
+  &.active {
+    label {
+      color: lighten(@black, 80%);
+    }
+  }
+
+  &.typing {
+    label {
+      color: @white;
+    }
+  }
+}

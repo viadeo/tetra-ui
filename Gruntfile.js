@@ -102,7 +102,9 @@ module.exports = function(grunt) {
 				'src/less/components/radio.less',
 				'src/less/components/toggle.less',
 				'src/less/components/flipswitch.less',
-				'src/less/components/box.less'
+				'src/less/components/box.less',
+				'src/less/components/card.less',
+				'src/less/components/placeholder.less'
 			],
 			'release/less/tetra-ui-apna.less':['<banner>',
 				'src/less/foundation/variables.less',
@@ -129,7 +131,9 @@ module.exports = function(grunt) {
 				'src/less/components/radio.less',
 				'src/less/components/toggle.less',
 				'src/less/components/flipswitch.less',
-				'src/less/components/box.less'
+				'src/less/components/box.less',
+				'src/less/components/card.less',
+				'src/less/components/placeholder.less'
 			],
 			'release/less/tetra-ui-tianji.less':['<banner>',
 				'src/less/foundation/variables.less',
@@ -156,7 +160,9 @@ module.exports = function(grunt) {
 				'src/less/components/radio.less',
 				'src/less/components/toggle.less',
 				'src/less/components/flipswitch.less',
-				'src/less/components/box.less'
+				'src/less/components/box.less',
+				'src/less/components/card.less',
+				'src/less/components/placeholder.less'
 			],
 			'release/less/tetra-ui-rtl.less':['<banner>',
 				'src/less/foundation/variables.less',
@@ -183,7 +189,9 @@ module.exports = function(grunt) {
 				'src/less/components/radio.less',
 				'src/less/components/toggle.less',
 				'src/less/components/flipswitch.less',
-				'src/less/components/box.less'
+				'src/less/components/box.less',
+				'src/less/components/card.less',
+				'src/less/components/placeholder.less'
 			],
 
 			'release/js/autocomplete.js':['<banner>',
