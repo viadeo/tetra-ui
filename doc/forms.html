@@ -121,23 +121,47 @@
     <div class="gu gu-1of4">
       <h3>Placeholders</h3>
       <p>This is a polyfill to simulate the
-        <code class="language-markup">placeholder=""</code> attribute on Internet Explorer until version 9.
-        Add the <code class="language-markup">ie-ph</code> class on
-        <code class="language-markup">&lt;input&gt;</code> or <code class="language-markup">&lt;textarea&gt;</code> elements.
+        <code class="language-markup">placeholder=""</code> attribute for all browsers
+        on
+        <code class="language-markup">&lt;input&gt;</code> or
+        <code class="language-markup">&lt;textarea&gt;</code> elements.
       </p>
     </div>
     <div class="gu gu-last">
-      <form class="core-form">
-        <input type="text" class="ie-ph" placeholder="I’m a placeholder, type something…" />
+
+      <form class="core-form form-horizontal">
+        <div class="control-group">
+          <label class="control-label">Placeholder (text)</label>
+          <div class="controls">
+            <span class="placeholding">
+              <input class="input-xlarge" type="text" />
+              <label class="placeholder">I’m a placeholder with a text input</label>
+            </span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Placeholder (password)</label>
+          <div class="controls">
+            <span class="placeholding">
+              <input class="input-xlarge" type="password" />
+              <label class="placeholder">I’m a placeholder with a password input</label>
+            </span>
+          </div>
+        </div>
       </form>
 
-      <pre><code class="language-markup">&lt;input type="text" class="ie-ph" placeholder="I’m a placeholder, type something…" /&gt;</code></pre>
-      <p>Then call this script with conditional comments at the end of your page,
-        for example before closing the <code class="language-markup">&lt;body&gt;</code> tag:
-      </p>
-      <pre><code class="language-markup">&lt;!--[if lt IE 10]&gt;
-  &lt;script src="/tetra-ui/src/js/coremvc/comps/ie/view/iePlaceholder.ui.js"&gt;&lt;/script&gt;
-&lt;![endif]--&gt;</code></pre>
+      <p>Call the JavaScript component at the end of your HTML page, for example just before closing the <code class="language-markup">&lt;body&gt;</code> tag:</p>
+
+      <pre><code class="language-markup">&lt;script src="/tetra-ui/release/js/placeholder.js"&gt;&lt;/script&gt;</code></pre>
+
+      <p class="mtm">Then the code for the input field is:</p>
+
+      <pre><code class="language-markup">&lt;span class="placeholding"&gt;
+  &lt;input type="text" /&gt;
+  &lt;label class="placeholder"&gt;I’m a placeholder&lt;/label&gt;
+&lt;/span&gt;</code></pre>
+
     </div>
   </div>
 
@@ -294,9 +318,8 @@
   <p>Special styles are applied on top of focused and disabled states, when the browser supports it.</p>
   <h3>Form validation</h3>
   <p>It also includes validation styles for errors, warnings, and success. To use, add the error class to the surrounding <code class="language-css">.control-group</code>.</p>
-<pre><code class="language-markup">&lt;fieldset
-  class=
-  "control-group error"&gt;
+<pre><code class="language-markup">&lt;fieldset class="
+  control-group error"&gt;
   …
 &lt;/fieldset&gt;</code></pre>
 </div>
@@ -619,7 +642,7 @@
 
 </div>
 
-<!--[if lt IE 10]><script src="/tetra-ui/src/js/coremvc/comps/ie/view/iePlaceholder.ui.js"></script><![endif]-->
+<script src="/tetra-ui/release/js/placeholder.js"></script>
 
       </div>
     </div>

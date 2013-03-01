@@ -233,6 +233,9 @@ module.exports = function(grunt) {
 				'src/js/coremvc/comps/yesno/controller/yesno.ctrl.js',
 				'src/js/coremvc/comps/yesno/view/yesno.ui.js'],
 
+			'release/js/placeholder.js':['<banner>',
+				'src/js/coremvc/comps/placeholder/view/placeholder.ui.js'],
+
 			'release/js/iePlaceholder.js':['<banner>',
 				'src/js/coremvc/comps/ie/view/iePlaceholder.ui.js'],
 
@@ -243,6 +246,7 @@ module.exports = function(grunt) {
 		connect: {
 			server: {
 				options: {
+					hostname: '0.0.0.0',
 					port: 8080,
 					base: '..'
 				}
