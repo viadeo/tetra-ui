@@ -1,3 +1,4 @@
+/*! Tetra UI v1.0.14 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 tetra.controller.register('dropdown', {
     scope:'dropdown',
     constr:function (me, app, page, orm) {
