@@ -5482,16 +5482,16 @@ i.vicon {
 }
 .btncontainer .btn-no .lnk-no {
   color: #ffffff;
-  border-color: #b65312;
-  border-bottom-color: #dc6316;
-  background-color: #ea762b;
+  border-color: #c05305;
+  border-bottom-color: #e76406;
+  background-color: #f97618;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top, #ce5d14, #ea762b);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ce5d14), color-stop(100%, #ea762b));
-  background-image: -webkit-linear-gradient(top, #ce5d14, #ea762b);
-  background-image: -o-linear-gradient(top, #ce5d14, #ea762b);
-  background-image: linear-gradient(to bottom, #ce5d14, #ea762b);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce5d14', endColorstr='#ea762b', GradientType=0);
+  background-image: -moz-linear-gradient(top, #d85e06, #f97618);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d85e06), color-stop(100%, #f97618));
+  background-image: -webkit-linear-gradient(top, #d85e06, #f97618);
+  background-image: -o-linear-gradient(top, #d85e06, #f97618);
+  background-image: linear-gradient(to bottom, #d85e06, #f97618);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d85e06', endColorstr='#f97618', GradientType=0);
   *filter: none;
   cursor: default;
 }
@@ -6002,21 +6002,21 @@ i.vicon {
   padding: 15px 20px 10px 20px;
   border: 0;
   border-bottom: 1px dotted #e6e6e6;
-  background-color: #fbf3ba;
+  background-color: #fff2bc;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top, #fcf7d1, #fbf3ba);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcf7d1), color-stop(100%, #fbf3ba));
-  background-image: -webkit-linear-gradient(top, #fcf7d1, #fbf3ba);
-  background-image: -o-linear-gradient(top, #fcf7d1, #fbf3ba);
-  background-image: linear-gradient(to bottom, #fcf7d1, #fbf3ba);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcf7d1', endColorstr='#fbf3ba', GradientType=0);
+  background-image: -moz-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff7d2), color-stop(100%, #fff2bc));
+  background-image: -webkit-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: -o-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: linear-gradient(to bottom, #fff7d2, #fff2bc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d2', endColorstr='#fff2bc', GradientType=0);
   *filter: none;
 }
 .bx-alert-warning .bx-alert-close .vicon {
-  color: #f1d71a;
+  color: #ffd520;
 }
 .bx-alert-warning .bx-alert-close:hover .vicon {
-  color: #c1ac15;
+  color: #ccaa1a;
 }
 .bx-alert-error {
   padding: 15px 20px 10px 20px;
