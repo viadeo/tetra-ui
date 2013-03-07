@@ -9,7 +9,7 @@ tetra.view.register('alert', {
 				user: {
 					'click':{
 						'.bx-alert-close': function (e, elm) {
-							elm.parents('.bx-alert').remove();
+							_(elm).parents('.bx-alert').remove();
 						}
 					}
 				},
