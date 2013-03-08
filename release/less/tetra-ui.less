@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.14 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.15 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -4067,6 +4067,158 @@ i.vicon {
   &.typing {
     label {
       color: @white;
+    }
+  }
+}
+
+// Steps
+
+.nav-steps {
+  overflow: hidden;
+  border-radius: @borderRadiusS;
+  background: @white;
+  box-shadow: 1px 1px 4px fade(@black, 20%);
+
+  dt {
+    .vicon {
+      display: inline-block;
+      vertical-align: middle;
+      color: shade(@blueSoft, 10%);
+      font-size: 16px;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      border-right: 1px solid lighten(@black, 95%);
+      margin: 0 1em 0 0;
+      padding: 0 1em 0 0;
+    }
+  }
+
+  .nav-steps-title {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 15px;
+    *display: inline;
+    *zoom: 1;
+
+    small {
+      display: block;
+      margin: 0 0 1px 0;
+      font-family: "Arial", sans-serif;
+      color: lighten(@black, 60%);
+      font-size: 13px;
+    }
+  }
+
+  dt, li {
+    position: relative;
+    padding: @spacingM 0 @spacingM @spacingM;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      margin: -50px 0 0 0;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+    }
+
+    &:before {      
+      z-index: 9;
+      margin-left: 2px;
+      border-left: 23px solid lighten(@black, 90%);
+      -webkit-filter: blur(2px);
+    }
+
+    &:after {
+      z-index: 10;
+      border-left: 20px solid @white;
+    }
+  }
+
+  .nav-steps-item {
+    display: inline-block;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    font-size: 21px;
+    color: @white;
+    background: @orange;
+    border-radius: 50%;
+    margin: 0 4% 0 8%;
+    font-family: "Arial", sans-serif;
+    font-weight: normal;
+    vertical-align: middle;
+    box-shadow:
+      0 .75em 1em fade(@white, 40%) inset,
+      0 0 0 3px tint(@blueSoft, 85%);
+
+    .vicon {
+      color: @white;
+      margin: 0;
+      font-size: 10px;
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  li {
+    font-family: "MuseoSlab", "Arial", sans-serif;
+    font-size: 15px;
+    color: lighten(@black, 30%);
+
+    &.nav-steps-todo {
+      background: lighten(@black, 95%);
+      color: lighten(@black, 80%);
+
+      &:after {
+        border-left-color: lighten(@black, 95%);
+      }
+
+      .nav-steps-item {
+        background: lighten(@black, 98%);
+        color: lighten(@black, 85%);
+        text-shadow: 0 -1px 0 fade(@black, 40%);
+        box-shadow:
+          0 .75em 1em fade(@white, 70%) inset,
+          0 0 0 3px lighten(@black, 90%);
+      }
+    }
+
+    &.nav-steps-done {
+      .nav-steps-item {
+        background: tint(@blueSoft, 50%);
+      }
+    }
+
+    &.gu-last {
+      &:before, &:after {
+        display: none;
+      }
+    }
+
+    a {
+      display: block;
+      color: lighten(@black, 30%);
+      text-decoration: none;
+
+      &:hover {
+        .nav-steps-text {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .nav-steps-text {
+      display: inline-block;
+      width: 65%;
+      vertical-align: middle;
     }
   }
 }

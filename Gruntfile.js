@@ -105,7 +105,8 @@ module.exports = function(grunt) {
 						'src/less/components/flipswitch.less',
 						'src/less/components/box.less',
 						'src/less/components/card.less',
-						'src/less/components/placeholder.less'
+						'src/less/components/placeholder.less',
+						'src/less/components/steps.less'
 					],
 
 					'release/less/tetra-ui-apna.less':['<banner>',
@@ -135,7 +136,8 @@ module.exports = function(grunt) {
 						'src/less/components/flipswitch.less',
 						'src/less/components/box.less',
 						'src/less/components/card.less',
-						'src/less/components/placeholder.less'
+						'src/less/components/placeholder.less',
+						'src/less/components/steps.less'
 					],
 
 					'release/less/tetra-ui-tianji.less':['<banner>',
@@ -165,7 +167,8 @@ module.exports = function(grunt) {
 						'src/less/components/flipswitch.less',
 						'src/less/components/box.less',
 						'src/less/components/card.less',
-						'src/less/components/placeholder.less'
+						'src/less/components/placeholder.less',
+						'src/less/components/steps.less'
 					],
 
 					'release/less/tetra-ui-rtl.less':['<banner>',
@@ -195,7 +198,8 @@ module.exports = function(grunt) {
 						'src/less/components/flipswitch.less',
 						'src/less/components/box.less',
 						'src/less/components/card.less',
-						'src/less/components/placeholder.less'
+						'src/less/components/placeholder.less',
+						'src/less/components/steps.less'
 					],
 
 					'release/js/autocomplete.js': ['<banner>', 'src/js/coremvc/comps/autocomplete/model/autocomplete.class.js', 'src/js/coremvc/comps/autocomplete/controller/autocomplete.ctrl.js', 'src/js/coremvc/comps/autocomplete/view/autocomplete.ui.js'],
