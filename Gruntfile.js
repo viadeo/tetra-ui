@@ -106,6 +106,7 @@ module.exports = function(grunt) {
 						'src/less/components/box.less',
 						'src/less/components/card.less',
 						'src/less/components/placeholder.less',
+						'src/less/components/field-helper.less',
 						'src/less/components/steps.less'
 					],
 
@@ -137,6 +138,7 @@ module.exports = function(grunt) {
 						'src/less/components/box.less',
 						'src/less/components/card.less',
 						'src/less/components/placeholder.less',
+						'src/less/components/field-helper.less',
 						'src/less/components/steps.less'
 					],
 
@@ -168,6 +170,7 @@ module.exports = function(grunt) {
 						'src/less/components/box.less',
 						'src/less/components/card.less',
 						'src/less/components/placeholder.less',
+						'src/less/components/field-helper.less',
 						'src/less/components/steps.less'
 					],
 
@@ -199,6 +202,7 @@ module.exports = function(grunt) {
 						'src/less/components/box.less',
 						'src/less/components/card.less',
 						'src/less/components/placeholder.less',
+						'src/less/components/field-helper.less',
 						'src/less/components/steps.less'
 					],
 

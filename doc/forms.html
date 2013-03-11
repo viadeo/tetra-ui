@@ -117,53 +117,129 @@
     </div>
   </div>
 
-  <div class="gr grsxl mbxl">
-    <div class="gu gu-1of4">
-      <h3>Placeholders</h3>
-      <p>This is a polyfill to simulate the
-        <code class="language-markup">placeholder=""</code> attribute for all browsers
-        on
-        <code class="language-markup">&lt;input&gt;</code> or
-        <code class="language-markup">&lt;textarea&gt;</code> elements.
-      </p>
-    </div>
-    <div class="gu gu-last">
+<div class="gr grsxl mbxl">
+  <div class="gu gu-1of4">
+    <h3>Placeholders</h3>
+    <p>This is a polyfill to simulate the
+      <code class="language-markup">placeholder=""</code> attribute for all browsers
+      on
+      <code class="language-markup">&lt;input&gt;</code> or
+      <code class="language-markup">&lt;textarea&gt;</code> elements.
+    </p>
+  </div>
+  <div class="gu gu-last">
 
-      <form class="core-form form-horizontal">
-        <div class="control-group">
-          <label class="control-label">Placeholder (text)</label>
-          <div class="controls">
-            <span class="placeholding">
-              <input class="input-xlarge" type="text" />
-              <label class="placeholder">I’m a placeholder with a text input</label>
-            </span>
-          </div>
+    <form class="core-form form-horizontal">
+      <div class="control-group">
+        <label class="control-label">Placeholder (text)</label>
+        <div class="controls">
+          <span class="placeholding">
+            <input class="input-xlarge" type="text" />
+            <label class="placeholder">I’m a placeholder with a text input</label>
+          </span>
         </div>
+      </div>
 
-        <div class="control-group">
-          <label class="control-label">Placeholder (password)</label>
-          <div class="controls">
-            <span class="placeholding">
-              <input class="input-xlarge" type="password" />
-              <label class="placeholder">I’m a placeholder with a password input</label>
-            </span>
-          </div>
+      <div class="control-group">
+        <label class="control-label">Placeholder (password)</label>
+        <div class="controls">
+          <span class="placeholding">
+            <input class="input-xlarge" type="password" />
+            <label class="placeholder">I’m a placeholder with a password input</label>
+          </span>
         </div>
-      </form>
+      </div>
+    </form>
 
-      <p>Call the JavaScript component at the end of your HTML page, for example just before closing the <code class="language-markup">&lt;body&gt;</code> tag:</p>
+    <p class="mbxs">Call the JavaScript component at the end of your HTML page, for example just before closing the <code class="language-markup">&lt;body&gt;</code> tag:</p>
 
-      <pre><code class="language-markup">&lt;script src="/tetra-ui/release/js/placeholder.js"&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-markup">&lt;script src="/tetra-ui/release/js/placeholder.js"&gt;&lt;/script&gt;</code></pre>
 
-      <p class="mtm">Then the code for the input field is:</p>
+    <p class="mtm mbxs">Then the code for the input field is:</p>
 
-      <pre><code class="language-markup">&lt;span class="placeholding"&gt;
+    <pre><code class="language-markup">&lt;span class="placeholding"&gt;
   &lt;input type="text" /&gt;
   &lt;label class="placeholder"&gt;I’m a placeholder&lt;/label&gt;
 &lt;/span&gt;</code></pre>
 
-    </div>
   </div>
+</div>
+
+<h3>Field helpers for errors</h3>
+
+<div class="gr grsxl mbxl pbl">
+  <div class="gu gu-1of4">
+    <p></p>
+  </div>
+  <div class="gu gu-1of4">
+
+    <form class="core-form">
+      <div class="control-group error">
+        <div class="controls">
+          <span class="placeholding field-helper">
+            <input class="input-large" type="text" />
+            <label class="placeholder">Error on text input (default left)</label>
+            <span class="error-inline">Please type a valid email address</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group error">
+        <div class="controls">
+          <span class="placeholding field-helper">
+            <input class="input-large" type="password" />
+            <label class="placeholder">Error on password input (default left)</label>
+            <span class="error-inline">Please type a valid password</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group error">
+        <div class="controls">
+          <span class="placeholding field-helper field-helper-bottom">
+            <input class="input-large" type="text" />
+            <label class="placeholder">Error on text input (bottom)</label>
+            <span class="error-inline">Please type a valid email address</span>
+          </span>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="gu gu-last">
+    <p class="mbxs">Using the class
+      <code class="language-markup">error</code>
+      on the
+      <code class="language-markup">control-group</code>
+      makes the field helper visible, otherwise it is hidden by default.
+    </p>
+
+    <pre><code class="language-markup">&lt;div class="control-group error"&gt;
+  &lt;div class="controls"&gt;
+    &lt;span class="field-helper"&gt;
+      &lt;input type="text" /&gt;
+      &lt;span class="error-inline"&gt;Error helper&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <p class="mbxs">To display the field helper on bottom:</p>
+
+    <pre><code class="language-markup">&lt;span class="field-helper field-helper-bottom"&gt;</code></pre>
+
+    <p class="mbxs">Placeholders and error helpers can be used at the same time:</p>
+
+    <pre><code class="language-markup">&lt;div class="control-group error"&gt;
+  &lt;div class="controls"&gt;
+    &lt;span class="placeholding field-helper"&gt;
+      &lt;input type="text" /&gt;
+      &lt;label class="placeholder"&gt;Placeholder&lt;/label&gt;
+      &lt;span class="error-inline"&gt;Error helper&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
 
   <div class="gr grsxl mbxl">
     <div class="gu gu-1of4">

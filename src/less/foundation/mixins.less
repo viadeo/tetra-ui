@@ -88,6 +88,13 @@
     // IE 10 supports the unprefixed form
 }
 
+.transition (@transition1, @transition2) {
+    -webkit-transition: @transition1, @transition2;
+       -moz-transition: @transition1, @transition2;
+         -o-transition: @transition1, @transition2;
+            transition: @transition1, @transition2;
+}
+
 // Box shadows
 .box-shadow (@values: 0 0 2px @gray) {
     -webkit-box-shadow: @values;

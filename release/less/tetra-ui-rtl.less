@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.15 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.16 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -222,6 +222,13 @@
          -o-transition: @transition;
             transition: @transition;
     // IE 10 supports the unprefixed form
+}
+
+.transition (@transition1, @transition2) {
+    -webkit-transition: @transition1, @transition2;
+       -moz-transition: @transition1, @transition2;
+         -o-transition: @transition1, @transition2;
+            transition: @transition1, @transition2;
 }
 
 // Box shadows
@@ -4056,11 +4063,14 @@ i.vicon {
     background: none;
   }
 
-  label {
+  .placeholder {
     position: absolute;
     left: 0; top: 0;
-    width: 100%; height: 100%;
+    width: 99%; height: 100%;
     z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 2.3em;
     text-indent: 5px;
     background: @white;
@@ -4070,14 +4080,68 @@ i.vicon {
   }
 
   &.active {
-    label {
+    .placeholder {
       color: lighten(@black, 80%);
     }
   }
 
   &.typing {
-    label {
+    .placeholder {
       color: @white;
+    }
+  }
+}
+
+.field-helper {
+  position: relative;
+  display: inline-block;
+
+  .error-inline {
+    visibility: hidden;
+    position: absolute;
+    right: 100%; top: (@spacingXs/-2);
+    padding: (@spacingXs/2) @spacingM;
+    margin: 0;
+    z-index: 2;
+    line-height: 2.3em;
+    white-space: nowrap;
+    background: tint(@errorText, 27%);
+    color: @white;
+    border-radius: @borderRadiusS;
+    box-shadow: 1px 1px 5px fade(@black, 30%);
+    opacity: 0;
+
+    .transition(margin .3s, opacity .3s);
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0; top: 50%;
+      margin: -6px -8px 0 0;
+      border-left: 8px solid tint(@errorText, 27%);
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
+
+    .error & {
+      visibility: visible;
+      opacity: 1;
+      margin-right: @spacingM;
+    }
+  }
+
+  &.field-helper-bottom {
+    .error-inline {
+      right: auto; left: 0;
+      top: 100%;
+
+      &:after {
+        left: 0; right: auto; top: 0;
+        margin: -14px 0 0 @spacingM;
+        border-bottom: 8px solid tint(@errorText, 27%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+      }
     }
   }
 }

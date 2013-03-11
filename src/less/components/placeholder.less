@@ -8,11 +8,14 @@
     background: none;
   }
 
-  label {
+  .placeholder {
     position: absolute;
     left: 0; top: 0;
-    width: 100%; height: 100%;
+    width: 99%; height: 100%;
     z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 2.3em;
     text-indent: 5px;
     background: @white;
@@ -22,13 +25,13 @@
   }
 
   &.active {
-    label {
+    .placeholder {
       color: lighten(@black, 80%);
     }
   }
 
   &.typing {
-    label {
+    .placeholder {
       color: @white;
     }
   }
