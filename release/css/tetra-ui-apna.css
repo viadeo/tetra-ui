@@ -6161,8 +6161,8 @@ i.vicon {
 .field-helper .error-inline {
   visibility: hidden;
   position: absolute;
-  right: 100%;
   top: -2.5px;
+  right: 100%;
   padding: 2.5px 15px;
   margin: 0;
   z-index: 2;
@@ -6181,10 +6181,11 @@ i.vicon {
 .field-helper .error-inline:after {
   content: "";
   position: absolute;
-  right: 0;
   top: 50%;
-  margin: -6px -8px 0 0;
+  right: 0;
   border-left: 8px solid #d74545;
+  margin-top: -6px;
+  margin-right: -8px;
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
 }
@@ -6195,18 +6196,23 @@ i.vicon {
 }
 .field-helper-bottom .error-inline:after,
 .field-helper-flow .error-inline:after {
+  top: 0;
+  margin-top: -14px;
+  margin-left: 15px;
   left: 0;
   right: auto;
-  top: 0;
-  margin: -14px 0 0 15px;
   border-bottom: 8px solid #d74545;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
+.error .field-helper-bottom .error-inline,
+.error .field-helper-flow .error-inline {
+  margin: 0;
+}
 .field-helper-bottom .error-inline {
-  right: auto;
-  left: 0;
   top: 100%;
+  left: 0;
+  right: auto;
 }
 .field-helper-flow .error-inline {
   position: relative;
@@ -6234,8 +6240,8 @@ i.vicon {
   height: 2em;
   line-height: 2em;
   border-right: 1px solid #f2f2f2;
-  margin: 0 1em 0 0;
-  padding: 0 1em 0 0;
+  margin-right: 1em;
+  padding-right: 1em;
 }
 .nav-steps .nav-steps-title {
   display: inline-block;
@@ -6256,7 +6262,9 @@ i.vicon {
 .nav-steps dt,
 .nav-steps li {
   position: relative;
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 15px;
+  padding-right: 0;
+  padding-left: 15px;
 }
 .nav-steps dt:before,
 .nav-steps li:before,
@@ -6294,7 +6302,8 @@ i.vicon {
   color: #ffffff;
   background: #f97618;
   border-radius: 50%;
-  margin: 0 4% 0 8%;
+  margin-right: 4%;
+  margin-left: 8%;
   font-family: "Arial", sans-serif;
   font-weight: normal;
   vertical-align: middle;
@@ -6317,7 +6326,7 @@ i.vicon {
   color: #cccccc;
 }
 .nav-steps li.nav-steps-todo:after {
-  border-left-color: #f2f2f2;
+  border-left: 20px solid #f2f2f2;
 }
 .nav-steps li.nav-steps-todo .nav-steps-item {
   background: #fafafa;

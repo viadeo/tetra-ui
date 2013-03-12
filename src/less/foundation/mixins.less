@@ -361,3 +361,15 @@
 
 .text-align-left (@rtl) when (@rtl = false) { text-align: left; }
 .text-align-right (@rtl) when (@rtl = true) { text-align: right; }
+
+.border-left (@rtl, @value) when (@rtl = false) { border-left: @value; }
+.border-left (@rtl, @value) when (@rtl = true) { border-right: @value; }
+
+.border-right (@rtl, @value) when (@rtl = false) { border-right: @value; }
+.border-right (@rtl, @value) when (@rtl = true) { border-left: @value; }
+
+.left (@rtl, @value) when (@rtl = false) { left: @value; }
+.left (@rtl, @value) when (@rtl = true) { right: @value; }
+
+.right (@rtl, @value) when (@rtl = false) { right: @value; }
+.right (@rtl, @value) when (@rtl = true) { left: @value; }
