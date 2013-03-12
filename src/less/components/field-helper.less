@@ -35,19 +35,36 @@
       margin-right: @spacingM;
     }
   }
+}
 
-  &.field-helper-bottom {
-    .error-inline {
-      right: auto; left: 0;
-      top: 100%;
+.field-helper-bottom, .field-helper-flow {
+  .error-inline {
+    &:after {
+      left: 0; right: auto; top: 0;
+      margin: -14px 0 0 @spacingM;
+      border-bottom: 8px solid tint(@errorText, 27%);
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+  }
+}
 
-      &:after {
-        left: 0; right: auto; top: 0;
-        margin: -14px 0 0 @spacingM;
-        border-bottom: 8px solid tint(@errorText, 27%);
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-      }
+.field-helper-bottom {
+  .error-inline {
+    right: auto; left: 0;
+    top: 100%;
+  }
+}
+
+.field-helper-flow {
+  .error-inline {
+    position: relative;
+    left: 0; right: auto; top: 0;
+    display: none;
+
+    .error & {
+      display: block;
+      margin-right: 0;
     }
   }
 }

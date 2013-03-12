@@ -173,7 +173,7 @@
   </div>
   <div class="gu gu-1of4">
 
-    <form class="core-form">
+    <form class="core-form mbxl">
       <div class="control-group error">
         <div class="controls">
           <span class="placeholding field-helper">
@@ -204,6 +204,28 @@
         </div>
       </div>
     </form>
+    
+    <form class="core-form ptxl">
+      <div class="control-group error">
+        <div class="controls">
+          <span class="placeholding field-helper field-helper-flow">
+            <input class="input-large" type="text" />
+            <label class="placeholder">Text input</label>
+            <span class="error-inline">Error in flow</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group error">
+        <div class="controls">
+          <span class="placeholding field-helper field-helper-flow">
+            <input class="input-large" type="text" />
+            <label class="placeholder">Text input</label>
+            <span class="error-inline">Another error in flow</span>
+          </span>
+        </div>
+      </div>
+    </form>
 
   </div>
   <div class="gu gu-last">
@@ -226,6 +248,10 @@
     <p class="mbxs">To display the field helper on bottom:</p>
 
     <pre><code class="language-markup">&lt;span class="field-helper field-helper-bottom"&gt;</code></pre>
+
+    <p class="mbxs">To display the field helper in the flow, below the field, not in an overlay:</p>
+
+    <pre><code class="language-markup">&lt;span class="field-helper field-helper-flow"&gt;</code></pre>
 
     <p class="mbxs">Placeholders and error helpers can be used at the same time:</p>
 

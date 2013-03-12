@@ -6191,12 +6191,8 @@ i.vicon {
   opacity: 1;
   margin-right: 15px;
 }
-.field-helper.field-helper-bottom .error-inline {
-  right: auto;
-  left: 0;
-  top: 100%;
-}
-.field-helper.field-helper-bottom .error-inline:after {
+.field-helper-bottom .error-inline:after,
+.field-helper-flow .error-inline:after {
   left: 0;
   right: auto;
   top: 0;
@@ -6204,6 +6200,22 @@ i.vicon {
   border-bottom: 8px solid #d74545;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
+}
+.field-helper-bottom .error-inline {
+  right: auto;
+  left: 0;
+  top: 100%;
+}
+.field-helper-flow .error-inline {
+  position: relative;
+  left: 0;
+  right: auto;
+  top: 0;
+  display: none;
+}
+.error .field-helper-flow .error-inline {
+  display: block;
+  margin-right: 0;
 }
 .nav-steps {
   overflow: hidden;
