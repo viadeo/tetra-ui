@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Tetra UI</title>
+  <title>Tetra UI | Dialogs</title>
   <link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/src/img/logo/favicon.ico" />
-  <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+
+  
+    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+  
 
   <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
   <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
@@ -15,6 +18,7 @@
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
   <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
 </head>
+
 <body>
 
 <div class="wrap">
@@ -37,20 +41,52 @@
 
   <div class="content fixed-container">
     <ul class="nav nav-tabs">
-      <li><a href="/tetra-ui/">Grid</a></li>
-      <li><a href="/tetra-ui/doc/rich-containers.html">Rich Containers</a></li>
-      <li><a href="/tetra-ui/doc/typography.html">Typography</a></li>
-      <li><a href="/tetra-ui/doc/forms.html">Forms</a></li>
-      <li><a href="/tetra-ui/doc/helpers.html">Helpers</a></li>
-      <li><a href="/tetra-ui/doc/variables.html">Variables</a></li>
-      <li><a href="/tetra-ui/doc/components.html">Components</a></li>
-      <li><a href="/tetra-ui/doc/icons.html">Icons</a></li>
-      <li class="active"><a href="/tetra-ui/doc/dialogs.html">Dialogs</a></li>
+      
+        <li>
+          <a href="/tetra-ui/doc/index.html">Grid</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/typography.html">Typography</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/forms.html">Forms</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/helpers.html">Helpers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/variables.html">Variables</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/components.html">Components</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/icons.html">Icons</a>
+        </li>
+      
+        <li class="active">
+          <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/right-to-left.html">RTL</a>
+        </li>
+      
     </ul>
     <div class="nav-tabs-section">
       <div class="section">
 
-<div class="page-header">
+        <div class="page-header">
   <h1>
     Dialogs
     <span class="sub">Tooltips, popovers, popins and more to come</span>
@@ -59,7 +95,7 @@
 
 <div class="gr grsl ptl">
   <h2>Tooltips</h2>
-  
+
   <div class="gu gu-1of5">
     <p>Roll over the links to show the tooltips. The tooltip component is pure CSS, no JavaScript required.</p>
   </div>
@@ -76,24 +112,24 @@
     <div class="gu gu-last">
       <a href="" class="tooltip tooltip-left">Tooltip on left<span class="tooltip-content">I'm on left</span></a>
     </div>
-    
+
     <pre class="mtl"><code class="language-markup">&lt;a href="" class="tooltip"&gt;&lt;!-- optionally add tooltip-right, tooltip-bottom, tooltip-left classes --&gt;
   This element has a tooltip
-  
+
   &lt;span class="tooltip-content"&gt;Tooltip content&lt;/span&gt;
-&lt;/a&gt;</code></pre>        
+&lt;/a&gt;</code></pre>
   </div>
 </div>
 
 <div class="gr grsxl mtl">
   <h2>Popovers</h2>
-  
+
   <div class="gu gu-1of5">
     <p>
       Popovers are a kind of extended tooltips: more content to display, optionally a header, optionally a footer, what else.
     </p>
   </div>
-  
+
   <div class="gu gu-last gr grsxl">
 
     <div class="gu gu-1of4">
@@ -108,7 +144,7 @@
         </span>
       </a>
     </div>
-    
+
     <div class="gu gu-1of4">
       <a href="" class="btn btn-default popover-display popover-bottom">
         Popover on bottom
@@ -120,7 +156,7 @@
         </span>
       </a>
     </div>
-    
+
     <div class="gu gu-1of4">
       <a href="" class="btn btn-default popover-display popover-left">
         Popover on top left
@@ -132,7 +168,7 @@
         </span>
       </a>
     </div>
-    
+
     <div class="gu gu-last">
       <a href="" class="btn btn-default popover-display popover-bottom popover-left">
         Popover on bottom left
@@ -154,7 +190,7 @@
         </span>
       </a>
     </div>
-    
+
     <div class="gu gu-1of4 ptl">
       <a href="" class="popover-display popover-bottom">
         Large
@@ -165,7 +201,7 @@
         </span>
       </a>
     </div>
-    
+
     <div class="gu gu-1of4 ptl">
       <a href="" class="popover-display popover-bottom">
         Medium
@@ -176,7 +212,7 @@
         </span>
       </a>
     </div>
-    
+
     <div class="gu gu-last ptl">
       <a href="" class="popover-display popover-bottom">
         Small (default)
@@ -187,25 +223,25 @@
         </span>
       </a>
     </div>
-    
+
     <pre class="mtl"><code class="language-markup">&lt;!-- optionally add popover-bottom and/or popover-left classes --&gt;
 &lt;a href="" class="btn btn-primary popover-display"&gt;
   This element has a popover.
-  
+
   &lt;span class="popover"&gt;&lt;!-- Add this to change size: popover-s, popover-m, popover-l, popover-xl --&gt;
     &lt;span class="popover-header"&gt;Header&lt;/span&gt;&lt;!-- Optional --&gt;
     &lt;span class="popover-content"&gt;Content&lt;/span&gt;
     &lt;span class="popover-footer"&gt;Footer&lt;/span&gt;&lt;!-- Optional --&gt;
   &lt;/span&gt;
-  
+
 &lt;/a&gt;</code></pre>
-    
+
   </div>
 </div>
 
 <div class="gr grsxl">
   <h2>Popins</h2>
-  
+
   <div class="gu gu-1of5">
     <p>
       Popins, or modal dialogs, or pop-up windows now are a common user experience design pattern.
@@ -213,7 +249,7 @@
     </p>
   </div>
   <div class="gu gu-1of5">
-    
+
     <p class="mtxs">
       <a data-comp="popin"
          data-event="click"
@@ -223,7 +259,7 @@
         Launch popin sample 1
       </a>
     </p>
-    
+
     <p>
       <a data-comp="popin"
          data-event="click"
@@ -233,7 +269,7 @@
         Launch popin sample 2
       </a>
     </p>
-    
+
     <p>
       <a data-comp="popin"
          data-event="click"
@@ -243,10 +279,10 @@
         Display loaded popin
       </a>
     </p>
-    
+
   </div>
   <div class="gu gu-last">
-    
+
     <pre><code class="language-markup">&lt;a data-comp="popin"
   data-event="click"
   data-popin="show"
@@ -254,7 +290,7 @@
   class="bootnode btn btn-primary"&gt;
   Launch popin
 &lt;/a&gt;</code></pre>
-    
+
   </div>
 </div>
 
@@ -263,7 +299,7 @@
     <p>Here are all the required HTML attributes to launch a popin.</p>
   </div>
   <div class="gu gu-last">
-    
+
     <table class="table">
     <thead>
       <tr>
@@ -318,12 +354,12 @@
           <code class="language-markup">class="bootnode ..."</code>
         </td>
         <td>
-          Instantiates the JavaScript framework 
+          Instantiates the JavaScript framework
         </td>
       </tr>
     </tbody>
     </table>
-    
+
   </div>
 </div>
 
@@ -332,25 +368,25 @@
     <p>A code sample of the popin itself: the target HTML fragment loaded by the component. Whether it's an Ajax call or the content of the specified id, it's the same markup.</p>
   </div>
   <div class="gu gu-last">
-    
+
     <pre><code class="language-markup">&lt;div class="gr"&gt;&lt;!-- Initializes the grid --&gt;
 
 &lt;!-- Base popin class, width set to two thirds of page width --&gt;
 &lt;div class="popin gu-2of3"&gt;
   &lt;div class="popin-header"&gt;
-    
+
     &lt;!-- Close button --&gt;
     &lt;button data-comp="popin" data-event="click" data-popin="close" class="bootnode close"&gt;
       Close
     &lt;/button&gt;
-    
+
     &lt;h5&gt;Popin header&lt;/h5&gt;
   &lt;/div&gt;
-  
+
   &lt;div class="popin-body"&gt;
     &lt;p&gt;Popin sample body&lt;/p&gt;
   &lt;/div&gt;
-  
+
   &lt;div class="popin-footer"&gt;
     &lt;a href="" class="fr mts"&gt;Footer link&lt;/a&gt;
     &lt;a href="#" class="btn btn-primary btn-large"&gt;Footer button&lt;/a&gt;
@@ -358,7 +394,7 @@
 &lt;/div&gt;
 
 &lt;/div&gt;</code></pre>
-    
+
   </div>
 </div>
 
@@ -367,7 +403,7 @@
     <p>Events listened and triggered by the popin controller.</p>
   </div>
   <div class="gu gu-last">
-    
+
     <table class="table">
       <thead>
         <tr>
@@ -397,12 +433,12 @@
             <code class="language-javascript">page.notify('popin: set content', { id: '[id]' });</code>
           </td>
           <td>
-            Displays or updates a popin with HTML code in the DOM. This code is the HTML content of the element with the given id. 
+            Displays or updates a popin with HTML code in the DOM. This code is the HTML content of the element with the given id.
           </td>
         </tr>
       </tbody>
     </table>
-    
+
     <table class="table">
       <thead>
         <tr>
@@ -422,13 +458,13 @@
         </tr>
       </tbody>
     </table>
-    
+
   </div>
 </div>
 
 <div id="popin-sample-4" class="hidden">
   <div class="gr">
-  
+
   <div class="popin gu-2of3">
     <div class="popin-header">
       <button
@@ -448,7 +484,7 @@
       <a href="#" class="btn btn-primary btn-large">Button</a>
     </div>
   </div>
-  
+
   </div>
 </div>
 

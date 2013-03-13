@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tetra UI | <%= @document.title %></title>
+  <link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/src/img/logo/favicon.ico" />
+
+  <% if @document.isRightToLeft: %>
+    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc-rtl.min.css" />
+  <% else: %>
+    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+  <% end %>
+
+  <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
+  <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
+
+  <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
+
+  <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
+  <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
+  <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
+</head>
+
+<body<% if @document.isRightToLeft: %> dir="rtl" class="rtl"<% end %>>
+
+<div class="wrap">
+  <div class="header">
+    <div class="fixed-container">
+      <a href="/tetra-ui/" class="fl viadeo-logo">Viadeo</a>
+      <a href="https://github.com/viadeo/tetra-ui" class="fr mts github">Tetra UI on GitHub</a>
+    </div>
+  </div>
+
+  <div class="headline">
+    <div class="fixed-container">
+      <h1>
+        Tetra UI: a smart, easy-to-use toolkit
+        <span class="sub">for creating rich interfaces in lightning speed!</span>
+      </h1>
+    </div>
+    <span class="arrow">∨</span>
+  </div>
+
+  <div class="content fixed-container">
+    <ul class="nav nav-tabs">
+      <% for page in @getCollection("html").findAll({ isPage: true }, [{ order: 1 }]).toJSON(): %>
+        <li<% if page.id is @document.id: %> class="active"<% end %>>
+          <a href="/tetra-ui/doc<%= page.url %>"><%= page.title %></a>
+        </li>
+      <% end %>
+    </ul>
+    <div class="nav-tabs-section">
+      <div class="section">
+
+        <%- @content %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="copy fixed-container">
+    <p>&copy;2013 APVO CORP.</p>
+  </div>
+</div>
+
+<!--[if gt IE 8]><!--><script>Prism.highlightAll();</script><!--<![endif]-->
+
+</body>
+</html>

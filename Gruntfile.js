@@ -237,11 +237,28 @@ module.exports = function(grunt) {
 		watch:{
 			less: {
 				files:['src/less/**/*.less'],
-				tasks:['less', 'concat']	
+				tasks:['less', 'concat']
 			},
 			js: {
 				files:['src/js/coremvc/comps/**/*.js'],
-				tasks:['jshint', 'concat']	
+				tasks:['jshint', 'concat']
+			},
+			doc: {
+				files:['doc/src/**/*'],
+				tasks:['docs', 'copy:doc']
+			}
+		},
+
+		docs: {
+			srcPath: 'doc/src',
+			outPath: 'doc'
+		},
+
+		copy: {
+			doc: {
+				files: [
+					{ src: ['doc/index.html'], dest: 'index.html' }
+				]
 			}
 		}
 	});
@@ -251,8 +268,15 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-docs');
 
-	// Default task.
+	// Default task
 	grunt.registerTask('default', ['jshint', 'less', 'concat']);
+
+	// Watch and local server
 	grunt.registerTask('watch-server', ['connect', 'watch']);
+
+	// Documentation generation with DocPad
+	grunt.registerTask('doc', ['docs', 'copy:doc']);
 };

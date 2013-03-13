@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Tetra UI</title>
+  <title>Tetra UI | Components</title>
   <link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/src/img/logo/favicon.ico" />
-  <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+
+  
+    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+  
 
   <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
   <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
@@ -15,6 +18,7 @@
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
   <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
 </head>
+
 <body>
 
 <div class="wrap">
@@ -37,20 +41,52 @@
 
   <div class="content fixed-container">
     <ul class="nav nav-tabs">
-      <li><a href="/tetra-ui/">Grid</a></li>
-      <li><a href="/tetra-ui/doc/rich-containers.html">Rich Containers</a></li>
-      <li><a href="/tetra-ui/doc/typography.html">Typography</a></li>
-      <li><a href="/tetra-ui/doc/forms.html">Forms</a></li>
-      <li><a href="/tetra-ui/doc/helpers.html">Helpers</a></li>
-      <li><a href="/tetra-ui/doc/variables.html">Variables</a></li>
-      <li class="active"><a href="/tetra-ui/doc/components.html">Components</a></li>
-      <li><a href="/tetra-ui/doc/icons.html">Icons</a></li>
-      <li><a href="/tetra-ui/doc/dialogs.html">Dialogs</a></li>
+      
+        <li>
+          <a href="/tetra-ui/doc/index.html">Grid</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/typography.html">Typography</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/forms.html">Forms</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/helpers.html">Helpers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/variables.html">Variables</a>
+        </li>
+      
+        <li class="active">
+          <a href="/tetra-ui/doc/components.html">Components</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/icons.html">Icons</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/right-to-left.html">RTL</a>
+        </li>
+      
     </ul>
     <div class="nav-tabs-section">
       <div class="section">
 
-<div class="page-header">
+        <div class="page-header">
   <h1>
     Components
     <span class="sub">Buttons, Tabs, Nav, Pills, Pagination &amp; More</span>
@@ -64,10 +100,44 @@
       <a class="btn btn-default">Default</a>
       <a class="btn btn-secondary">Secondary</a>
       <a class="btn btn-tertiary">Tertiary</a>
-      <pre class="mtl"><code class="language-markup">&lt;a class="btn btn-primary"&gt;1st&lt;/a&gt;</code></pre>
-      <pre class="mtl"><code class="language-markup">&lt;a class="btn btn-default"&gt;Default&lt;/a&gt;</code></pre>
-      <pre class="mtl"><code class="language-markup">&lt;a class="btn btn-secondary"&gt;2nd&lt;/a&gt;</code></pre>
-      <pre class="mtl"><code class="language-markup">&lt;a class="btn btn-tertiary"&gt;3rd&lt;/a&gt;</code></pre>
+      <pre class="mtl"><code class="language-markup">&lt;a class="btn btn-primary"&gt;1st&lt;/a&gt;
+&lt;a class="btn btn-default"&gt;Default&lt;/a&gt;
+&lt;a class="btn btn-secondary"&gt;2nd&lt;/a&gt;
+&lt;a class="btn btn-tertiary"&gt;3rd&lt;/a&gt;</code></pre>
+
+      <h3 class="mtl">Lead</h3>
+
+      <div class="gr">
+        <div class="gu gu-1of2">
+
+          <dl class="btn-desc">
+            <dd>
+              <a class="btn btn-primary btn-lead">Pri</a>
+            </dd>
+            <dt>Contextual information</dt>
+          </dl>
+
+        </div>
+        <div class="gu gu-last">
+
+          <a class="btn btn-default btn-lead">Def</a>
+
+        </div>
+      </div>
+
+      <pre class="mtl"><code class="language-markup">&lt;a class="btn btn-default btn-lead"&gt;
+  Default
+&lt;/a&gt;
+
+&lt;dl class="btn-desc"&gt;
+  &lt;dd&gt;
+    &lt;a class="btn btn-primary btn-lead"&gt;
+      Primary
+    &lt;/a&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Contextual information&lt;/dt&gt;
+&lt;/dl&gt;</code></pre>
+
   </div>
   <div class="gu gu-last">
     <div class="gr">
@@ -133,7 +203,7 @@
     <div class="gu gu-1of5">
         <h2>Flipswitch</h2>
     </div>
-    
+
     <div class="gu gu-2of5">
       <form class="core-form form-horizontal">
 
@@ -185,7 +255,7 @@
             </span>
             <span class="flipswitch-slider">||</span>
           </span>
-          
+
           <label class="flipswitch-lbl-no">
             <input type="radio" name="flipswitch-sample-2" checked="checked" /> No
           </label>
@@ -233,7 +303,7 @@
         <p><strong>On the JavaScript part</strong>, the component fires this event, and you can set the component state from a third party controller with the same function.</p>
     </div>
 
-    <div class="gu-last mts">  
+    <div class="gu-last mts">
 
       <pre><code class="language-javascript">page.notify('flipswitch: set state', {
   id: 'flipswitch-sample-1', /* the DOM id of the toggle button */
@@ -250,7 +320,7 @@
         <p class="mbxs"><strong>When active</strong>, the container has a <code class="language-markup">btn-toggle-checked</code> class and the hidden checkbox is checked.</p>
         <p><strong>When inactive</strong>, the <code class="language-markup">btn-toggle-checked</code> class is removed and the hidden checkbox is unchecked.</p>
     </div>
-    
+
     <div class="gu gu-2of5">
 
       <label class="btn-toggle bootnode btn-toggle-checked"
@@ -279,7 +349,7 @@
     </div>
 
     <div class="gu gu-last">
-      
+
       <label class="btn-toggle bootnode"
         data-comp="toggle"
         data-event="click"
@@ -300,7 +370,7 @@
   &lt;span class="btn-toggle-check"&gt;
     &lt;i class="vicon"&gt;v&lt;/i&gt;
   &lt;/span&gt;
-  
+
   Toggle button (default off)
 &lt;/label&gt;</code></pre>
     </div>
@@ -314,7 +384,7 @@
     <div class="gu-last mts">
 
       <table class="table">
-        
+
         <tr>
           <th>Triggered</th>
           <td>
@@ -366,7 +436,7 @@
           the second with hidden radio buttons and with a default value set to no.
         </p>
     </div>
-    
+
     <div class="gu gu-2of5">
         <div class="btncontainer">
           <div class="btn-yn bootnode btn-yes" data-comp="yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample2">
@@ -377,13 +447,13 @@
               <span class="lbl-yes">Yes is activated by default</span>
           </div>
         </div>
-        
+
         <pre class="mtm"><code class="language-markup">&lt;div class="btn-yn bootnode btn-no"
   data-comp="yesno"
   data-event="click"
   data-url="yesno-model-fake.json.jsp"
   data-param="yesnoSample2"&gt;
-  
+
   &lt;a href="javascript:void(0);" class="lnk-yes"&gt;
     Yes
   &lt;/a&gt;
@@ -395,7 +465,7 @@
   &lt;span class="lbl-no"&gt;No by default&lt;/span&gt;
 &lt;/div&gt;</code></pre>
      </div>
-     
+
      <div class="gu gu-last">
         <form class="btncontainer no-prevent">
           <div class="btn-yn bootnode btn-no" data-comp="yesno" data-event="click" data-url="/dev/coreui/yesno-model-fake.json.jsp" data-param="yesnoSample1">
@@ -412,13 +482,13 @@
               <span class="lbl-no">No is activated by default</span>
           </div>
         </form>
-        
+
         <pre class="mtm"><code class="language-markup">&lt;div class="btn-yn bootnode btn-yes"
   data-comp="yesno"
   data-event="click"
   data-url="yesno-model-fake.json.jsp"
   data-param="yesnoSample1"&gt;
-  
+
   &lt;label class="lnk-yes"&gt;
     &lt;input type="radio"
       name="btn-yn-sample" value="true" /&gt;
@@ -452,7 +522,7 @@
             <li><a href="#">Other</a></li>
             <li class="side-links"><a href="#">Aside Link</a></li>
         </ul>
-        
+
         <h3 class="mbl">Secondary tabs example</h3>
         <ul class="nav nav-tabs nav-tabs-secondary">
             <li class="active"><a href="#">Home</a></li>
@@ -462,7 +532,7 @@
             <li><a href="#">Other</a></li>
             <li class="side-links"><a href="#"><i class="vicon">c</i></a></li>
         </ul>
-        
+
         <h3 class="mvl">Standard pills example with aside link</h3>
         <ul class="nav nav-pills">
             <li class="active"><a href="#">Home</a></li>
@@ -472,7 +542,7 @@
             <li><a href="#">Other</a></li>
             <li class="side-links"><a href="#">Aside Link</a></li>
         </ul>
-          
+
     </div>
 </div>
 
@@ -499,18 +569,18 @@
               <h4 class="mbxs">This is the default content</h4>
               <p>It can be a server side include for example. Click on a tab to see it change.</p>
             </div>
-            
+
             <div class="loader">
                 <img src="/tetra-ui/release/img/loaders/ajax-loader.gif" />
                 <p>loading...</p>
             </div>
         </div>
-        
+
         <pre class="mtm"><code class="language-markup">&lt;ul class="nav nav-tabs bootnode"
   data-event="click"
   data-comp="navtabs"
   data-target-id="tab-sample-container"&gt;&lt;!-- The id of the element where tab contents will be loaded --&gt;
-  
+
   &lt;li class="active"&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-1.html"&gt;Sample 1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-2.html"&gt;Sample 2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-3.html"&gt;Sample 3&lt;/a&gt;&lt;/li&gt;
@@ -522,7 +592,7 @@
   &lt;div class="section"&gt;
     &lt;!-- Content displayed by default --&gt;
   &lt;/div&gt;
-  
+
   &lt;!-- If you want to display a loader, use this element --&gt;
   &lt;div class="loader"&gt;
 
@@ -532,10 +602,10 @@
 
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        
+
     </div>
 </div>
-    
+
 <div class="gr grsl mtm">
     <div class="gu gu-1of5">
         <h2>Dropdowns</h2>
@@ -544,7 +614,7 @@
     </div>
     <div class="gu gu-last">
         <h3 class="mbl">Dropdowns with multi events, positions, states, types</h3>
-        
+
         <div class="gr">
           <div class="gu gu-1of5">
             <div class="dd">
@@ -868,7 +938,7 @@
             </span>
           </div>
         </div>
-        
+
         <div class="gr mtm">
           <div class="gu gu-1of5 mls">
             <div class="dd mrxl">
@@ -966,7 +1036,7 @@
   <div class="gu gu-last gr">
     <div class="gu gu-1of2 core-form form-horizontal">
       <label>Autocomplete sample 1</label>
-        
+
       <div class="autocomplete bootnode" id="autocomplete-sample-1"
         data-comp="autocomplete"
         data-event="click"
@@ -975,9 +1045,9 @@
         data-url="/tetra-ui/doc/autocomplete-sample-1.json">
 
         <input type="text" class="input-large" />
-        
+
         <ul class="autocomplete-menu"></ul>
-        
+
         <script id="tmpl_autocomplete_sample_1" type="text/html">
           {% for (var i in data) { %}
             <li data-value="{%= data[i].fullName %}" data-ref="{%= data[i].ref %}">
@@ -991,7 +1061,7 @@
 
     <div class="gu gu-last core-form form-horizontal">
       <label>Autocomplete sample 2</label>
-        
+
       <div class="autocomplete bootnode" id="autocomplete-sample-2"
         data-comp="autocomplete"
         data-event="click"
@@ -1000,9 +1070,9 @@
         data-url="/tetra-ui/doc/autocomplete-sample-2.json">
 
         <input type="text" class="input-large" />
-        
+
         <ul class="autocomplete-menu"></ul>
-        
+
         <script id="tmpl_autocomplete_sample_2" type="text/html">
           {% for (var i in data) { %}
             <li data-value="{%= data[i].fullName %}" data-ref="{%= data[i].ref %}">
@@ -1024,9 +1094,9 @@
   data-url="/tetra-ui/doc/autocomplete-sample-1.json"&gt;
 
   &lt;input type="text" class="input-large" /&gt;
-  
+
   &lt;ul class="autocomplete-menu"&gt;&lt;/ul&gt;
-  
+
   &lt;script id="tmpl_autocomplete_sample_1" type="text/html"&gt;
     {% for (var i in data) { %}
       &lt;li data-value="{%= data[i].fullName %}" data-ref="{%= data[i].ref %}"&gt;
@@ -1071,7 +1141,7 @@
   &lt;li class="arrow"&gt;&lt;a href=""&gt;&lt;i class="vicon"&gt;›&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li class="arrow"&gt;&lt;a href=""&gt;&lt;i class="vicon"&gt;»&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-      
+
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.18 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.19 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -2690,6 +2690,7 @@ i.vicon {
       cursor: default;
     }
 }
+
 .btn-small {
     @_padding:         1px 10px;
     @_borderRadius:    @borderRadiusS;
@@ -2703,6 +2704,7 @@ i.vicon {
     }
 
 }
+
 .btn-large {
     @_padding:         7px @spacingM;
     @_borderRadius:    @borderRadiusS;
@@ -2711,6 +2713,35 @@ i.vicon {
     .border-radius(@_borderRadius);
     font-size: 13px;
 }
+
+.btn-lead {
+    position: relative;
+    z-index: 2;
+    padding: @spacingM (@spacingXl * 2);
+    font-size: (@baseFontSize * 1.25);
+    margin: 6px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -6px; right: -6px; bottom: -6px; left: -6px;
+        border-radius: 6px;
+        box-shadow: 0 1px 9px fade(@black, 10%) inset;
+    }
+}
+
+.btn-desc {
+    display: inline-block;
+    *display: inline; *zoom: 1;
+
+    dt {
+        text-align: center;
+        font-size: (@baseFontSize * .9);
+        color: @gray;
+    }
+}
+
 .btn-disabled,
 .btn-disabled:hover,
 .btn-disabled:active,
@@ -2729,7 +2760,7 @@ i.vicon {
 	   overflow: hidden;
 	   height: 0;
 	   padding: 1em 0 0 0;
-	   background: transparent url('@{img-buttons-dir}/loaders/default.gif') no-repeat 50% 0.3em;
+	   background: transparent url("@{img-buttons-dir}/loaders/default.gif") no-repeat 50% 0.3em;
 	   *background-position-y: 0;
 	}
 }
@@ -2756,7 +2787,7 @@ i.vicon {
             color: lighten(@black, 25%);
         }
     }
-    
+
     .vicon {
         font-size: 12px;
         color: lighten(@black, 45%);

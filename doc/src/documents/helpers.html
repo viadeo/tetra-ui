@@ -1,0 +1,116 @@
+---
+title: "Helpers"
+layout: "default"
+isPage: true
+order: 5
+---
+
+<div class="page-header">
+    <h1>Helpers<span class="sub">Short CSS classes to help maintain consistency and save you time</span></h1>
+</div>
+<div class="gr grsm">
+    <div class="gu gu-1of3">
+        <p>These short, structured class names are easy to remember and help you work faster. What’s more, the spacings and sizes are consistent with the values declared in variables.</a></p>
+    </div>
+    <div class="gu gu-last">
+        <div>
+            <h3>Spacing</h3>
+            <p>Usage: <code class="language-css"><em>.[type][direction][size]</em></code>. Example: <code class="language-css">.prl</code> <span class="gray">(applies a large padding to the right side of the element)</span>.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="language-css">[type]</code></td>
+                        <td>Margin (<code>m</code>) or padding (<code>p</code>).</td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">[direction]</code></td>
+                        <td>The side or axis on which to apply the spacing. Values can be all (<code>a</code>), top (<code>t</code>), right (<code>r</code>), bottom (<code>b</code>), left (<code>l</code>), horizontal (<code>h</code>), or vertical (<code>v</code>).</td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">[size]</code></td>
+                        <td>One of 5 spacing sizes, the pixel values of which are defined in the <a href="">variables.less</a> file. They can be extra small (<code>xs</code>), small (<code>s</code>), medium (<code>m</code>), large (<code>l</code>), or extra large (<code>xl</code>).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mts">
+            <h3>Border radius</h3>
+            <p>Usage: <code class="language-css"><em>.br[direction][size]</em></code>. Example: <code class="language-css">.brtlm</code> <span class="gray">(applies a medium-sized border radius to the top-left corner of the element).</span></p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="language-css">[direction]</code></td>
+                        <td>The side or corner on which to apply the border radius. Values can be all (<code>a</code>), top left (<code>tl</code>), top right (<code>tr</code>), bottom right (<code>br</code>), bottom left (<code>bl</code>), top (<code>t</code>), left (<code>l</code>), bottom (<code>b</code>), or right (<code>r</code>).</td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">[size]</code></td>
+                        <td>One of 3 sizes, defined in the <a href="">variables.less</a> file. Values can be small (<code>s</code>), medium (<code>m</code>), or large(<code>l</code>).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mts">
+            <h3>Text</h3>
+            <p>Usage: <code class="language-css"><em>.ta[alignment]</em></code>. Example: <code class="language-css">.tac</code> <span class="gray">(centers text within the element).</span></p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="language-css">[alignment]</code></td>
+                        <td>The alignment of the text. Values can be left (<code>l</code>), right (<code>r</code>), center (<code>c</code>), justify (<code>j</code>), or inherit (<code>i</code>).</td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.hyph</code></td>
+                        <td>This class activates hyphenation on paragraphs for example, or on a generic container. This is a progressive enhancement, it is now supported by Firefox, IE10, and Safari. The browser must know the language, for example with <code class="language-markup">&lt;html lang="en"&gt;</code> for a proper hyphenation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mts">
+            <h3>Miscellaneous</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Helper class name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="language-css">.cf</code></td>
+                        <td>A badass clearfix hack to clear floating elements without using presentational markup. Just apply this to the parent container and you won't need to use <code><v:content><div class="clear"></div></v:content></code> anymore. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack</a> for more details :)</td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.hidden</code></td>
+                        <td>Hides an element. Use this as opposed to inline styles.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.elsewhere</code></td>
+                        <td>Moves an element off the page, hiding it from the user.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="language-css">.fl</code> <code class="language-css">.fr</code></td>
+                        <td>Floats an element left or right, respectively.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

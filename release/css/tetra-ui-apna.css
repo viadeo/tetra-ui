@@ -4825,6 +4825,34 @@ i.vicon {
   border-radius: 3px;
   font-size: 13px;
 }
+.btn-lead {
+  position: relative;
+  z-index: 2;
+  padding: 15px 60px;
+  font-size: 15px;
+  margin: 6px;
+}
+.btn-lead:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+  border-radius: 6px;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.1) inset;
+}
+.btn-desc {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.btn-desc dt {
+  text-align: center;
+  font-size: 10.8px;
+  color: #808080;
+}
 .btn-disabled,
 .btn-disabled:hover,
 .btn-disabled:active,
@@ -4843,7 +4871,7 @@ i.vicon {
   overflow: hidden;
   height: 0;
   padding: 1em 0 0 0;
-  background: transparent url('/v_img/coreui/buttons/loaders/default.gif') no-repeat 50% 0.3em;
+  background: transparent url("/v_img/coreui/buttons/loaders/default.gif") no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
 .btn-append {

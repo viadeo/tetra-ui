@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Tetra UI</title>
+  <title>Tetra UI | Grid</title>
   <link type="images/x-icon" rel="shortcut icon" href="/tetra-ui/src/img/logo/favicon.ico" />
-  <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc-tianji.min.css" />
+
+  
+    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+  
 
   <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
   <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
@@ -15,12 +18,13 @@
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
   <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
 </head>
+
 <body>
 
 <div class="wrap">
   <div class="header">
     <div class="fixed-container">
-      <a href="/tetra-ui/index-tianji.html" class="fl tianji-logo">Tianji</a>
+      <a href="/tetra-ui/" class="fl viadeo-logo">Viadeo</a>
       <a href="https://github.com/viadeo/tetra-ui" class="fr mts github">Tetra UI on GitHub</a>
     </div>
   </div>
@@ -37,20 +41,52 @@
 
   <div class="content fixed-container">
     <ul class="nav nav-tabs">
-      <li class="active"><a href="/tetra-ui/">Grid</a></li>
-      <li><a href="/tetra-ui/doc/rich-containers.html">Rich Containers</a></li>
-      <li><a href="/tetra-ui/doc/typography.html">Typography</a></li>
-      <li><a href="/tetra-ui/doc/forms.html">Forms</a></li>
-      <li><a href="/tetra-ui/doc/helpers.html">Helpers</a></li>
-      <li><a href="/tetra-ui/doc/variables.html">Variables</a></li>
-      <li><a href="/tetra-ui/doc/components.html">Components</a></li>
-      <li><a href="/tetra-ui/doc/icons.html">Icons</a></li>
-      <li><a href="/tetra-ui/doc/dialogs.html">Dialogs</a></li>
+      
+        <li class="active">
+          <a href="/tetra-ui/doc/index.html">Grid</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/typography.html">Typography</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/forms.html">Forms</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/helpers.html">Helpers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/variables.html">Variables</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/components.html">Components</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/icons.html">Icons</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/right-to-left.html">RTL</a>
+        </li>
+      
     </ul>
     <div class="nav-tabs-section">
       <div class="section">
 
-    <div class="page-header">
+        <div class="page-header">
         <h1>Grid System<span class="sub">Flexible, easy to use, and fun!</span></h1>
     </div>
     <div class="gr grsxl">
@@ -71,7 +107,7 @@
 &lt;/div&gt;</code></pre>
         </div>
     </div>
-    
+
     <h2 class="mvl">Simple grid examples</h2>
     <div class="gr gr-zebra">
         <div class="gu gu-1of5">.gu .gu-1of5</div>
@@ -98,7 +134,7 @@
     <div class="gr gr-zebra mts">
         <div class="gu gu-1of1">.gu .gu-1of1</div>
     </div>
-    
+
     <h2 class="mvl">Nested grid example</h2>
     <div class="gr gr-zebra">
         <div class="gu gu-2of3 pan pts">
@@ -110,7 +146,7 @@
         </div>
         <div class="gu gu-last">.gu .gu-last</div>
     </div>
-    
+
     <div class="gr grsxl mvxl">
         <div class="gu gu-1of2">
             <h3>Nesting with siblings</h3>
@@ -138,7 +174,7 @@
 &lt;/div&gt;</code></pre>
         </div>
     </div>
-    
+
     <div class="gr grsm mtxl">
         <div class="gu gu-2of5">
             <h2>Spaced Grids</h2>
@@ -180,7 +216,7 @@
             </table>
         </div>
     </div>
-    
+
     <h2 class="mtm">Spaced grid examples</h2>
     <p>Much care has been taken to ensure that these spaced grids align perfectly with one another. For example, you can see below that position and size of the spacing between the irregular 4-1 grid and the 1-1-1-1-1 grid above it is consistent. The examples below all use the <code class="language-css">.grss</code> class, thus using the pixel value defined as <code class="language-css">@spacingS</code> in variables.less.</p>
     <div class="gr grss gr-zebra">
