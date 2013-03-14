@@ -251,7 +251,12 @@ module.exports = function(grunt) {
 
 		docs: {
 			srcPath: 'doc/src',
-			outPath: 'doc'
+			outPath: 'doc',
+			collections: {
+				pages: function() {
+					return this.getCollection("html").findAllLive({ isPage: true }, [{ order: 1 }]);
+				}
+			}
 		},
 
 		copy: {
