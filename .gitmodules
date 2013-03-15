@@ -1,6 +1,3 @@
-[submodule "src/js/lib/history"]
-	path = src/js/lib/history
-	url = https://github.com/balupton/history.js.git
 [submodule "src/js/lib/JSON-js"]
 	path = src/js/lib/JSON-js
 	url = https://github.com/douglascrockford/JSON-js.git

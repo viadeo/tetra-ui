@@ -5240,198 +5240,136 @@ i.vicon {
   }
 }
 .nav {
-  margin: 0;
-  margin-bottom: 1.4em;
   list-style: none;
-  text-shadow: none;
-}
-.nav li a {
-  display: block;
-  _display: inline-block;
-}
-.nav li a:hover {
-  text-decoration: none;
-}
-.nav-tabs,
-.nav-pills {
+  margin-bottom: 1.4em;
   zoom: 1;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
 }
-.nav-tabs:before,
-.nav-pills:before,
-.nav-tabs:after,
-.nav-pills:after {
+.nav:before,
+.nav:after {
   display: table;
   content: "";
   zoom: 1;
   *display: inline;
 }
-.nav-tabs:after,
-.nav-pills:after {
+.nav:after {
   clear: both;
 }
-.nav-tabs li,
-.nav-pills li {
+.nav li {
   float: left;
-  padding: 0;
-  position: relative;
 }
-.nav-tabs li a,
-.nav-pills li a {
-  -webkit-transition: background-color 0.15s ease-out;
-  -moz-transition: background-color 0.15s ease-out;
-  -o-transition: background-color 0.15s ease-out;
-  transition: background-color 0.15s ease-out;
-}
-.nav-tabs li a:hover,
-.nav-pills li a:hover {
+.nav li a {
+  display: block;
+  padding: 10px 30px;
   text-decoration: none;
+  -webkit-transition: background-color 0.15s;
+  -moz-transition: background-color 0.15s;
+  -o-transition: background-color 0.15s;
+  transition: background-color 0.15s;
 }
-.nav-tabs li.side-links,
-.nav-pills li.side-links {
+.nav li.active a {
+  cursor: default;
+}
+.nav li.side-links {
   float: right;
 }
-.nav-tabs li.side-links a,
-.nav-pills li.side-links a {
-  padding: 8px 4px;
+.nav li.side-links a {
+  padding-left: 0;
+  padding-right: 10px;
   color: #808080;
-  background: none;
-  border: none;
-  box-shadow: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
 }
-.nav-tabs li.side-links a:focus,
-.nav-pills li.side-links a:focus,
-.nav-tabs li.side-links a:hover,
-.nav-pills li.side-links a:hover,
-.nav-tabs li.side-links a:active,
-.nav-pills li.side-links a:active {
-  color: #00559b;
-  text-decoration: underline;
-  background: none;
-}
-.nav-tabs li.side-links a .vicon,
-.nav-pills li.side-links a .vicon {
+.nav li.side-links a .vicon {
+  margin: 0;
   font-size: 9px;
   color: #999999;
 }
-.nav-tabs {
-  background-color: #f8f8f8;
-  border: 1px solid #dfdfdf;
-  border-width: 1px 0 1px 0;
-  padding: 0 10px;
-  height: 34px;
-}
-.nav-tabs a {
-  font-size: 13px;
-  height: 16px;
-  line-height: 16px;
-  padding: 9px 25px;
-  outline: none;
-}
-.nav-tabs a:hover {
-  background-color: #e1eaf0;
-}
-.nav-tabs a:focus {
-  background-color: #e1eaf0;
-}
-.nav-tabs .active a {
-  color: #000000;
-  background-color: #ffffff;
-  height: 17px;
-  padding: 11px 24px 9px 24px;
-  margin-top: -3px;
-  _margin-top: -2px;
-  border: 1px solid #dfdfdf;
-  border-bottom: none;
-}
-.nav-tabs.nav-tabs-secondary {
+.nav li.side-links a:hover {
+  text-decoration: underline;
+  color: #00559b;
   background: none;
-  border-top: 0;
-  border-bottom-color: #dae3ea;
-  margin-bottom: 0;
-  padding: 0;
-  font-family: "MuseoSlab", "Arial", sans-serif;
 }
-.nav-tabs.nav-tabs-secondary:after {
+.nav li.side-links a:hover .vicon {
+  color: #000000;
+}
+.nav-tabs {
+  padding-left: 10px;
+  border-top: 1px solid #d1dce5;
+  border-bottom: 1px solid #d1dce5;
+  background: #f5f7f9;
+}
+.nav-tabs li a:hover {
+  background: #e0e7ee;
+}
+.nav-tabs li.active a {
+  padding-top: 12px;
+  padding-bottom: 11px;
+  margin: -3px -1px;
+  border: 1px solid #d1dce5;
+  border-bottom: none;
+  color: #000000;
+  background: #ffffff;
+  *zoom: 1;
+}
+.nav-tabs-secondary {
+  border-bottom: 1px solid #dae3ea;
+  font-family: "MuseoSlab", "Arial", sans-serif;
+  font-size: 13.200000000000001px;
+}
+.nav-tabs-secondary:after {
   content: "";
-  display: block;
+  position: relative;
+  top: 1px;
   width: 100%;
   height: 1px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-.nav-tabs.nav-tabs-secondary a {
+.nav-tabs-secondary li a {
   position: relative;
+  padding: 10px 20px;
+  margin-bottom: -3px;
 }
-.nav-tabs.nav-tabs-secondary a:hover {
-  background: #e6ecf1;
+.nav-tabs-secondary li a:hover {
+  background: #ecf1f5;
 }
-.nav-tabs.nav-tabs-secondary li:first-child a {
-  border-width: 0 1px;
+.nav-tabs-secondary li.active a {
+  color: #000000;
 }
-.nav-tabs.nav-tabs-secondary .active a {
-  background: none;
-  border: 0;
-  margin: 0;
-  padding: 9px 25px 8px;
-}
-.nav-tabs.nav-tabs-secondary .active a:before,
-.nav-tabs.nav-tabs-secondary .active a:after {
+.nav-tabs-secondary li.active a:before,
+.nav-tabs-secondary li.active a:after {
   content: "";
   position: absolute;
+  z-index: 5;
   left: 50%;
   bottom: 0;
   width: 0;
   height: 0;
   border-style: solid;
 }
-.nav-tabs.nav-tabs-secondary .active a:before {
+.nav-tabs-secondary li.active a:before {
   margin-left: -10px;
   border-color: transparent transparent #dae3ea;
   border-width: 0 10px 10px;
 }
-.nav-tabs.nav-tabs-secondary .active a:after {
+.nav-tabs-secondary li.active a:after {
   bottom: -2px;
   margin-left: -10px;
   border-color: transparent transparent #ffffff;
   border-width: 0 10px 10px;
 }
-.nav-tabs-section .section {
-  display: block;
-}
-.nav-tabs-section .loader {
-  display: none;
-}
-.nav-tabs-section.loading .section {
-  display: none;
-}
-.nav-tabs-section.loading .loader {
-  display: block;
-}
-.msie6 .nav-tabs-secondary .active a,
-.msie9 .nav-tabs-secondary .active a {
-  padding-bottom: 8px;
+.nav-tabs-secondary li.active a:hover {
+  background: none;
 }
 .nav-pills {
-  border: 1px solid #dfdfdf;
-  border-width: 1px 0;
-  background: #f8f8f8;
+  border-top: 1px solid #d1dce5;
+  border-bottom: 1px solid #d1dce5;
+  background: #f5f7f9;
   margin: 0;
-  padding: 6px 10px 2px;
 }
 .nav-pills li a {
+  margin: 5px 10px;
   background: #f8f8f8;
   border: 1px solid #f8f8f8;
   border-radius: 3px;
   line-height: 1.4em;
-  margin-right: 10px;
   padding: 5px 10px;
 }
 .nav-pills li a:hover {
@@ -5445,16 +5383,19 @@ i.vicon {
   cursor: default;
 }
 .nav-pills li.side-links a {
-  margin: 0;
-  background: none;
   border: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
 }
-.nav-pills li.side-links a:hover {
-  color: #00559b;
+.nav-tabs-section .section {
+  display: block;
+}
+.nav-tabs-section .loader {
+  display: none;
+}
+.nav-tabs-section.loading .section {
+  display: none;
+}
+.nav-tabs-section.loading .loader {
+  display: block;
 }
 .btncontainer .btn-yn {
   float: left;

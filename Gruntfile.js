@@ -211,7 +211,6 @@ module.exports = function(grunt) {
 					'release/js/dropdown_click_enabled.js': ['<banner>', 'src/js/coremvc/comps/dropdown/controller/dropdown.ctrl.js', 'src/js/coremvc/comps/dropdown/view/click_enabled.ui.js'],
 					'release/js/flipswitch.js': ['<banner>', 'src/js/coremvc/comps/flipswitch/controller/flipswitch.ctrl.js', 'src/js/coremvc/comps/flipswitch/view/flipswitch.ui.js'],
 					'release/js/generic_autocomplete.js': ['<banner>', 'src/js/coremvc/comps/generic_autocomplete/model/autocomplete.class.js', 'src/js/coremvc/comps/generic_autocomplete/controller/autocomplete.ctrl.js', 'src/js/coremvc/comps/generic_autocomplete/view/autocomplete.ui.js'],
-					'release/js/history.js': ['<banner>', 'src/js/coremvc/comps/history/controller/history.ctrl.js'],
 					'release/js/navtabs.js': ['<banner>', 'src/js/coremvc/comps/navtabs/model/navtabs.class.js', 'src/js/coremvc/comps/navtabs/controller/navtabs.ctrl.js', 'src/js/coremvc/comps/navtabs/view/navtabs.ui.js'],
 					'release/js/paginator.js': ['<banner>', 'src/js/coremvc/comps/paginator/view/paginator.ui.js'],
 					'release/js/popin.js': ['<banner>', 'src/js/coremvc/comps/popin/model/popin.class.js', 'src/js/coremvc/comps/popin/controller/popin.ctrl.js', 'src/js/coremvc/comps/popin/view/popin.ui.js'],

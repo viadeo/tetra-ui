@@ -1,146 +1,113 @@
 .nav {
-	margin: 0;
-	margin-bottom: @baseLineHeight;
 	list-style: none;
-	text-shadow: none;
-}
-.nav li a {
-	display: block;
-	_display: inline-block;
-
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-// Tabs & Pills
-.nav-tabs, .nav-pills {
+	margin-bottom: @baseLineHeight;
 	.clearfix();
-	.user-select(none);
 
 	li {
 		.float-left(@rtl);
-		padding: 0; // Override existing generic styles
-		position: relative;
 
 		a {
-			.transition(background-color 0.15s ease-out);
+			display: block;
+			padding: @spacingS @spacingXl;
+			text-decoration: none;
 
-			&:hover {
-				text-decoration: none;
+			.transition(background-color .15s);
+		}
+
+		&.active {
+			a {
+				cursor: default;
 			}
 		}
-	}
-	li.side-links {
-    .float-right(@rtl);
 
-	   a {
-       padding: 8px 4px;
-       color: @gray;
-       background: none;
-       border: none;
-       box-shadow: none;
-       .transition(none);
+		&.side-links {
+			.float-right(@rtl);
 
-       &:focus, &:hover, &:active {
-         color: @linkColorHover;
-         text-decoration: underline;
-         background: none;
-       }
+			a {
+				padding-left: 0;
+				padding-right: @spacingS;
+				color: @gray;
 
-       .vicon {
-       	font-size: 9px;
-       	color: lighten(@black, 60%);
-       }
-	   }
+				.vicon {
+					margin: 0;
+	       	font-size: 9px;
+	       	color: lighten(@black, 60%);
+	      }
+
+				&:hover {
+					text-decoration: underline;
+					color: @linkColorHover;
+					background: none;
+
+					.vicon {
+		       	color: @black;
+		      }
+				}
+			}
+		}
 	}
 }
 
-// Tabs
 .nav-tabs {
-	@secondaryActiveColor:  #edf2f5;
-	@hoverColor:			#e1eaf0;
-	@barHeight:            36px;
-	@fontSize:             13px;
-	@borderWidth:          1px;
-	@verticalPadding:	   9px;
-	@horizontalPadding:    25px;
-	@tabHeight:				@barHeight - (@borderWidth * 2) - (@verticalPadding * 2);
+	padding-left: @spacingS;
+	border-top: 1px solid tint(@blueSoft, 63%);
+	border-bottom: 1px solid tint(@blueSoft, 63%);
+	background: tint(@blueSoft, 92%);
 
-	background-color: @panelBackground;
-	border: @borderWidth solid @borderColor;
-	border-width: @borderWidth 0 @borderWidth 0;
-	padding: 0 10px;
-	height: @barHeight - (@borderWidth * 2);
-
-	a {
-		font-size: @fontSize;
-		height: @tabHeight;
-		line-height: @tabHeight;
-		padding: @verticalPadding @horizontalPadding;
-		outline: none;
-
-		&:hover {
-			background-color: @hoverColor;
+	li {
+		a {
+			&:hover {
+				background: tint(@blueSoft, 75%);
+			}
 		}
 
-		&:focus {
-      background-color: @hoverColor;
-    }
+		&.active {
+			a {
+				padding-top: (@spacingS + 2);
+				padding-bottom: (@spacingS + 1);
+				margin: -3px -1px;
+				border: 1px solid tint(@blueSoft, 63%);
+				border-bottom: none;
+				color: @black;
+				background: @white;
+				*zoom: 1;
+			}
+		}
+	}
+}
+
+.nav-tabs-secondary {
+	border-bottom: 1px solid tint(@blueSoft, 70%);
+	font-family: "MuseoSlab", "Arial", sans-serif;
+	font-size: (@baseFontSize * 1.1);
+
+	&:after {
+		content: "";
+		position: relative;
+		top: 1px;
+		width: 100%; height: 1px;
+		box-shadow: 0 0 2px fade(@black, 10%);
 	}
 
-	.active {
-		a {
-			color: @black;
-			background-color: @white;
-			height: @tabHeight+1;
-			padding: (@verticalPadding + 2px) (@horizontalPadding - @borderWidth) @verticalPadding (@horizontalPadding - @borderWidth);
-			margin-top: -3px;
-			_margin-top: -2px;
-			border: 1px solid @borderColor;
-			border-bottom: none;
-			}
-			}
-
-	// Secondary tabs
-	&.nav-tabs-secondary {
-		background: none;
-		border-top: 0;
-		border-bottom-color: tint(@blueSoft, 70%);
-		margin-bottom: 0;
-		padding: 0;
-		font-family: "MuseoSlab", "Arial", sans-serif;
-
-		&:after {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 1px;
-			box-shadow: 0 0 2px fade(@black, 10%);
-		}
-
+	li {
 		a {
 			position: relative;
+			padding: @spacingS @spacingL;
+			margin-bottom: -3px;
 
 			&:hover {
-				background: tint(@blueSoft, 80%);
+				background: tint(@blueSoft, 85%);
 			}
 		}
 
-		li:first-child a {
-			border-width: 0 @borderWidth;
-		}
-
-		.active {
+		&.active {
 			a {
-				background: none;
-				border: 0;
-				margin: 0;
-				padding: @verticalPadding @horizontalPadding (@verticalPadding - 1px);
+				color: @black;
 
 				&:before, &:after {
 					content: "";
 					position: absolute;
+					z-index: 5;
 					left: 50%; bottom: 0;
 					width: 0; height: 0;
 					border-style: solid;
@@ -158,47 +125,28 @@
 					border-color: transparent transparent @white;
 					border-width: 0 10px 10px;
 				}
+
+				&:hover {
+					background: none;
+				}
 			}
 		}
 	}
 }
 
-.nav-tabs-section .section {
-	display: block;
-}
-
-.nav-tabs-section .loader {
-	display: none;
-}
-
-.nav-tabs-section.loading .section {
-	display: none;
-}
-
-.nav-tabs-section.loading .loader {
-	display: block;
-}
-
-.msie6 .nav-tabs-secondary .active a,
-.msie9 .nav-tabs-secondary .active a {
-	padding-bottom: 8px; // @verticalPadding (from .nav-tabs)
-}
-
-// Pills
 .nav-pills {
-	border: 1px solid @borderColor;
-	border-width: 1px 0;
-	background: @panelBackground;
+	border-top: 1px solid tint(@blueSoft, 63%);
+	border-bottom: 1px solid tint(@blueSoft, 63%);
+	background: tint(@blueSoft, 92%);
 	margin: 0;
-	padding: 6px @spacingS 2px;
 
 	li {
 		a {
+			margin: @spacingXs @spacingS;
 			background: @panelBackground;
 			border: 1px solid @panelBackground;
 			border-radius: @borderRadiusS;
 			line-height: @baseLineHeight;
-			margin-right: @spacingS;
 			padding: @spacingXs @spacingS;
 
 			&:hover {
@@ -216,15 +164,28 @@
 
 		&.side-links {
 			a {
-				margin: 0;
-				background: none;
 				border: none;
-				.transition(none);
-
-				&:hover {
-					color: @linkColorHover;
-				}
 			}
+		}
+	}
+}
+
+.nav-tabs-section {
+	.section {
+		display: block;
+	}
+
+	.loader {
+		display: none;
+	}
+
+	&.loading {
+		.section {
+			display: none;
+		}
+
+		.loader {
+			display: block;
 		}
 	}
 }
