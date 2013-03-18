@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
   
 
-  <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
-  <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
-
   <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
-
   <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
   <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
@@ -96,14 +92,14 @@
     </div>
     <div class="gu gu-last">
         <h3>Markup</h3>
-        <pre data-line="1-8"><code class="language-markup">&lt;div class="rc"&gt;
-  &lt;a href="#" class="img"&gt;
-    &lt;img src="..." /&gt;
-  &lt;/a&gt;
-  &lt;div class="bd"&gt;
+        <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"img"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"..."</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span>&gt;</span>
     ...
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
     </div>
 </div>
 
@@ -181,7 +177,7 @@
        <div class="rc rcss mtl">
             <a href="#" class="img-right"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
             <div class="bd">
-                <p>This rich container has the same spacing as the example above, although the image parent (<code class="language-markup">&lt;a&gt;</code>) element has the <code class="language-css">.img-right</code> class.</p>
+                <p>This rich container has the same spacing as the example above, although the image parent (<code class="lang-html">&lt;a&gt;</code>) element has the <code class="language-css">.img-right</code> class.</p>
             </div>
        </div>
        <div class="rc rcsxl mtl">
@@ -212,16 +208,16 @@
   </div>
   <div class="gu gu-last">
 
-    <pre><code class="language-markup">&lt;div class="bx"&gt;
-  &lt;h2 class="h-bx"&gt;
-    &lt;a href="" class="h-bx-link tooltip tooltip-left"&gt;
-      &lt;i class="vicon"&gt;c&lt;/i&gt;
-      &lt;span class="tooltip-content"&gt;Settings&lt;/span&gt;
-    &lt;/a&gt;
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"h-bx"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"h-bx-link tooltip tooltip-left"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>c<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip-content"</span>&gt;</span>Settings<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     Box title
-  &lt;/h2&gt;
+  <span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
   Box content
-&lt;/div&gt;</code></pre>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
 
   </div>
 </div>
@@ -287,69 +283,69 @@
 
         <p class="mbxs">First case with header:</p>
 
-        <pre><code class="language-markup">&lt;dl class="gr nav-steps"&gt;&lt;!-- Using the grid with gr --&gt;
+        <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">dl</span> <span class="attribute">class</span>=<span class="value">"gr nav-steps"</span>&gt;</span><span class="comment">&lt;!-- Using the grid with gr --&gt;</span>
 
-  &lt;dt class="gu gu-1of3"&gt;&lt;!-- Header (width: 1/3) --&gt;
-    &lt;i class="vicon"&gt;o&lt;/i&gt;
-    &lt;h2 class="nav-steps-title"&gt;
-      &lt;small&gt;Lorem ipsum&lt;/small&gt;
+  <span class="tag">&lt;<span class="title">dt</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of3"</span>&gt;</span><span class="comment">&lt;!-- Header (width: 1/3) --&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>o<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"nav-steps-title"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">small</span>&gt;</span>Lorem ipsum<span class="tag">&lt;/<span class="title">small</span>&gt;</span>
       Consectetur adipisicing
-    &lt;/h2&gt;
-  &lt;/dt&gt;
+    <span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
 
-  &lt;dd class="gu gu-last"&gt;&lt;!-- Body (width: 2/3) --&gt;
-    &lt;ol class="gr"&gt;&lt;!-- List of items (using the grid) --&gt;
+  <span class="tag">&lt;<span class="title">dd</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span><span class="comment">&lt;!-- Body (width: 2/3) --&gt;</span>
+    <span class="tag">&lt;<span class="title">ol</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span><span class="comment">&lt;!-- List of items (using the grid) --&gt;</span>
 
-      &lt;!-- Item (width: 1/2) --&gt;
-      &lt;li class="gu gu-1of2"&gt;
-        &lt;b class="nav-steps-item"&gt;1&lt;/b&gt;
-        &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-      &lt;/li&gt;
+      <span class="comment">&lt;!-- Item (width: 1/2) --&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of2"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">b</span> <span class="attribute">class</span>=<span class="value">"nav-steps-item"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"nav-steps-text"</span>&gt;</span>Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
 
-      &lt;!-- Last item (not done) --&gt;
-      &lt;li class="gu gu-last nav-steps-todo"&gt;
-        &lt;b class="nav-steps-item"&gt;2&lt;/b&gt;
-        &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-      &lt;/li&gt;
+      <span class="comment">&lt;!-- Last item (not done) --&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"gu gu-last nav-steps-todo"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">b</span> <span class="attribute">class</span>=<span class="value">"nav-steps-item"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"nav-steps-text"</span>&gt;</span>Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
 
-    &lt;/ol&gt;
-  &lt;/dd&gt;
+    <span class="tag">&lt;/<span class="title">ol</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
 
-&lt;/dl&gt;</code></pre>
+<span class="tag">&lt;/<span class="title">dl</span>&gt;</span></code></pre>
 
       </div>
       <div class="gu gu-last">
 
         <p class="mbxs">Second case without header and with done and to do items:</p>
 
-        <pre><code class="language-markup">&lt;dl class="gr nav-steps"&gt;
-  &lt;dd class="gu gu-1of1"&gt;
-    &lt;ol class="gr"&gt;
-      &lt;li class="gu gu-1of4 nav-steps-done"&gt;
-        &lt;a href=""&gt;
-          &lt;b class="nav-steps-item"&gt;&lt;i class="vicon"&gt;v&lt;/i&gt;&lt;/b&gt;
-          &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="gu gu-1of4 nav-steps-done"&gt;
-        &lt;a href=""&gt;
-          &lt;b class="nav-steps-item"&gt;&lt;i class="vicon"&gt;v&lt;/i&gt;&lt;/b&gt;
-          &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="gu gu-1of4"&gt;
-        &lt;a href=""&gt;
-          &lt;b class="nav-steps-item"&gt;3&lt;/b&gt;
-          &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="gu gu-last nav-steps-todo"&gt;
-        &lt;b class="nav-steps-item"&gt;4&lt;/b&gt;
-        &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
+        <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">dl</span> <span class="attribute">class</span>=<span class="value">"gr nav-steps"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">dd</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of1"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ol</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of4 nav-steps-done"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">b</span> <span class="attribute">class</span>=<span class="value">"nav-steps-item"</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>v<span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"nav-steps-text"</span>&gt;</span>Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of4 nav-steps-done"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">b</span> <span class="attribute">class</span>=<span class="value">"nav-steps-item"</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>v<span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"nav-steps-text"</span>&gt;</span>Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of4"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">b</span> <span class="attribute">class</span>=<span class="value">"nav-steps-item"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"nav-steps-text"</span>&gt;</span>Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"gu gu-last nav-steps-todo"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">b</span> <span class="attribute">class</span>=<span class="value">"nav-steps-item"</span>&gt;</span>4<span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"nav-steps-text"</span>&gt;</span>Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ol</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">dl</span>&gt;</span>
 
 </code></pre>
 
@@ -426,17 +422,17 @@
 <div class="gr grsxl">
   <div class="gu gu-1of5">
     <p>A simple warning alert box, with a close button and a centered text message.</p>
-    <p>For an error use the <code class="language-markup">bx-alert-error</code> class instead of <code class="language-markup">bx-alert-warning</code></p>
+    <p>For an error use the <code class="lang-html">bx-alert-error</code> class instead of <code class="lang-html">bx-alert-warning</code></p>
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="language-markup">&lt;div class="bx-alert bx-alert-warning"&gt;
-  &lt;button class="bx-alert-close bootnode" data-comp="alert" data-event="click"&gt;
-    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
-  &lt;/button&gt;
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx-alert bx-alert-warning"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"bx-alert-close bootnode"</span> <span class="attribute">data-comp</span>=<span class="value">"alert"</span> <span class="attribute">data-event</span>=<span class="value">"click"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>&amp;times;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
 
-  &lt;p class="tac mbxs"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"tac mbxs"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
   </div>
 </div>
 
@@ -446,17 +442,17 @@
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="language-markup">&lt;div class="bx-alert"&gt;
-  &lt;button class="bx-alert-close bootnode" data-comp="alert" data-event="click"&gt;
-    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
-  &lt;/button&gt;
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx-alert"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"bx-alert-close bootnode"</span> <span class="attribute">data-comp</span>=<span class="value">"alert"</span> <span class="attribute">data-event</span>=<span class="value">"click"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>&amp;times;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
 
-  &lt;i class="vicon bx-alert-icon"&gt;v&lt;/i&gt;
-  &lt;div class="bx-alert-content"&gt;
-    &lt;h2 class="bx-alert-title"&gt;Title&lt;/h2&gt;
-    &lt;p class="mbxs"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon bx-alert-icon"</span>&gt;</span>v<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx-alert-content"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"bx-alert-title"</span>&gt;</span>Title<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"mbxs"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
   </div>
 </div>
 
@@ -500,35 +496,35 @@
       </div>
     </div>
 
-    <pre class="mtl"><code class="language-markup">&lt;div class="rc-card rc-card-l"&gt;
-  &lt;div class="rc-card-header"&gt;
-    &lt;h2 class="name"&gt;
-      &lt;a href=""&gt;Firstname Lastname&lt;/a&gt;
-      &lt;i class="vicon"&gt;*&lt;/i&gt;
-    &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div class="rc-card-content rc rcss"&gt;
-    &lt;a href="" class="avatar img-left"&gt;
-      &lt;img src="…/avatar-m-107x145.png"&gt;
-    &lt;/a&gt;
-    &lt;div class="bd"&gt;
-      &lt;h3 class="job"&gt;Job, Company&lt;/h3&gt;
-      &lt;h4 class="where"&gt;City, Country |
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc-card rc-card-l"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc-card-header"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"name"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>Firstname Lastname<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>*<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc-card-content rc rcss"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"avatar img-left"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"…/avatar-m-107x145.png"</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"job"</span>&gt;</span>Job, Company<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">h4</span> <span class="attribute">class</span>=<span class="value">"where"</span>&gt;</span>City, Country |
         Industry
-      &lt;/h4&gt;
-      &lt;dl class="previously"&gt;
-        &lt;dt&gt;Since 2011:&lt;/dt&gt;
-        &lt;dd&gt;Job, Company&lt;/dd&gt;
-        &lt;dt&gt;From 2008 to 2011:&lt;/dt&gt;
-        &lt;dd&gt;Job, Company&lt;/dd&gt;
-      &lt;/dl&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="rc-card-footer"&gt;
-    &lt;span class="fl mtxs"&gt;Other information&lt;/span&gt;
-    &lt;a class="btn btn-primary fr"&gt;Button&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+      <span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">dl</span> <span class="attribute">class</span>=<span class="value">"previously"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">dt</span>&gt;</span>Since 2011:<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">dd</span>&gt;</span>Job, Company<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">dt</span>&gt;</span>From 2008 to 2011:<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">dd</span>&gt;</span>Job, Company<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">dl</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc-card-footer"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"fl mtxs"</span>&gt;</span>Other information<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary fr"</span>&gt;</span>Button<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
 
   </div>
 
@@ -555,30 +551,30 @@
       </div>
     </div>
 
-    <pre class="mtl"><code class="language-markup">&lt;div class="rc-card rc-card-m"&gt;
-  &lt;div class="rc-card-header rc rcss"&gt;
-    &lt;a href="" class="avatar img-left"&gt;
-      &lt;img src="…/avatar-m-60x60.png"&gt;
-    &lt;/a&gt;
-    &lt;div class="bd"&gt;
-      &lt;h2 class="name"&gt;
-        &lt;a href=""&gt;Firstname Lastname&lt;/a&gt;
-      &lt;/h2&gt;
-      &lt;h3 class="job"&gt;Job, Company&lt;/h3&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="rc-card-content"&gt;
-    &lt;h4 class="where"&gt;City, Country |
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc-card rc-card-m"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc-card-header rc rcss"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"avatar img-left"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"…/avatar-m-60x60.png"</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"name"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>Firstname Lastname<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"job"</span>&gt;</span>Job, Company<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc-card-content"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h4</span> <span class="attribute">class</span>=<span class="value">"where"</span>&gt;</span>City, Country |
       Industry
-    &lt;/h4&gt;
-    &lt;dl class="previously"&gt;
-      &lt;dt&gt;Since 2011:&lt;/dt&gt;
-      &lt;dd&gt;Job, Company&lt;/dd&gt;
-      &lt;dt&gt;From 2008 to 2011:&lt;/dt&gt;
-      &lt;dd&gt;Job, Company&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    <span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dl</span> <span class="attribute">class</span>=<span class="value">"previously"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">dt</span>&gt;</span>Since 2011:<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">dd</span>&gt;</span>Job, Company<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">dt</span>&gt;</span>From 2008 to 2011:<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">dd</span>&gt;</span>Job, Company<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">dl</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
 
   </div>
 </div>
@@ -590,9 +586,9 @@
   <div class="gu gu-2of5">
     <h3>Image files</h3>
     <p>Avatar images are located at this URL:</p>
-    <p><code class="language-markup">img/avatars/avatar-[gender]-[w]x[h].png</code></p>
+    <p><code class="lang-html">img/avatars/avatar-[gender]-[w]x[h].png</code></p>
     <p>
-      Gender is Man (<code class="language-markup">m</code>), Woman (<code class="language-markup">w</code>), Neutral (<code class="language-markup">n</code>).
+      Gender is Man (<code class="lang-html">m</code>), Woman (<code class="lang-html">w</code>), Neutral (<code class="lang-html">n</code>).
     </p>
   </div>
 
@@ -600,19 +596,19 @@
     <h3>Container</h3>
     <p>An avatar image is displayed in a Rich Container.</p>
     <p>
-      It is possible to use a <code class="language-markup">&lt;span class="avatar img-left"&gt;</code>
-      instead of <code class="language-markup">&lt;a href="" class="avatar img-left"&gt;</code>
+      It is possible to use a <code class="lang-html">&lt;span class="avatar img-left"&gt;</code>
+      instead of <code class="lang-html">&lt;a href="" class="avatar img-left"&gt;</code>
       in case of a non clickable avatar image.
     </p>
 
-    <pre><code class="language-markup">&lt;div class="rc rcss"&gt;
-  &lt;a href="" class="avatar img-left"&gt;
-    &lt;img src="/tetra-ui/release/img/avatars/avatar-m-40x40.png" alt="" /&gt;
-  &lt;/a&gt;
-  &lt;div class="bd"&gt;
-    &lt;a href=""&gt;John Doe&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc rcss"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"avatar img-left"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"/tetra-ui/release/img/avatars/avatar-m-40x40.png"</span> <span class="attribute">alt</span>=<span class="value">""</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
   </div>
 </div>
 
@@ -662,19 +658,19 @@
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="language-markup">&lt;ul&gt;
-  &lt;li class="rc rcss"&gt;
-    &lt;a href=""&gt;
-      &lt;div class="avatar img-left"&gt;
-        &lt;img src="/tetra-ui/release/img/avatars/avatar-w-45x60.png" /&gt;
-      &lt;/div&gt;
-      &lt;div class="bd"&gt;
-        &lt;p&gt;Jane Doe&lt;/p&gt;
-        &lt;p&gt;Architect&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"rc rcss"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"avatar img-left"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"/tetra-ui/release/img/avatars/avatar-w-45x60.png"</span> /&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">p</span>&gt;</span>Jane Doe<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">p</span>&gt;</span>Architect<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></pre>
   </div>
 </div>
 
@@ -905,8 +901,6 @@
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>
-
-<!--[if gt IE 8]><!--><script>Prism.highlightAll();</script><!--<![endif]-->
 
 </body>
 </html>

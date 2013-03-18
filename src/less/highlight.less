@@ -1,0 +1,43 @@
+pre.highlighted {
+  margin: .5em 0;;
+
+  code {
+    display: block;
+    padding: 0.5em;
+    background: #f5f2f0;
+
+    .comment {
+        color: #708090;
+    }
+
+    &.xml {
+      .tag {
+        color: lighten(@black, 50%);
+
+        .title {
+          color: #905;
+        }
+
+        .attribute {
+          color: #690;
+        }
+
+        .value {
+          color: #07a;
+        }
+      }
+    }
+
+    &.javascript {
+      .string {
+        color: #690;
+      }
+
+      .literal {
+        color: #905;
+      }
+    }
+
+  }
+}
+

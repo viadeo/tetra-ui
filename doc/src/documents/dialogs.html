@@ -32,7 +32,7 @@ order: 9
       <a href="" class="tooltip tooltip-left">Tooltip on left<span class="tooltip-content">I'm on left</span></a>
     </div>
 
-    <pre class="mtl"><code class="language-markup">&lt;a href="" class="tooltip"&gt;&lt;!-- optionally add tooltip-right, tooltip-bottom, tooltip-left classes --&gt;
+    <pre class="mtl"><code class="lang-html">&lt;a href="" class="tooltip"&gt;&lt;!-- optionally add tooltip-right, tooltip-bottom, tooltip-left classes --&gt;
   This element has a tooltip
 
   &lt;span class="tooltip-content"&gt;Tooltip content&lt;/span&gt;
@@ -143,7 +143,7 @@ order: 9
       </a>
     </div>
 
-    <pre class="mtl"><code class="language-markup">&lt;!-- optionally add popover-bottom and/or popover-left classes --&gt;
+    <pre class="mtl"><code class="lang-html">&lt;!-- optionally add popover-bottom and/or popover-left classes --&gt;
 &lt;a href="" class="btn btn-primary popover-display"&gt;
   This element has a popover.
 
@@ -202,7 +202,7 @@ order: 9
   </div>
   <div class="gu gu-last">
 
-    <pre><code class="language-markup">&lt;a data-comp="popin"
+    <pre><code class="lang-html">&lt;a data-comp="popin"
   data-event="click"
   data-popin="show"
   data-target-url="[url]"
@@ -229,7 +229,7 @@ order: 9
     <tbody>
       <tr>
         <td>
-          <code class="language-markup">data-comp="popin"</code>
+          <code class="lang-html">data-comp="popin"</code>
         </td>
         <td>
           Calls the required JavaScript component
@@ -237,7 +237,7 @@ order: 9
       </tr>
       <tr>
         <td>
-          <code class="language-markup">data-event="click"</code>
+          <code class="lang-html">data-event="click"</code>
         </td>
         <td>
           Displays popin on click
@@ -245,8 +245,8 @@ order: 9
       </tr>
       <tr>
         <td>
-          <code class="language-markup">data-popin="show"</code><br />
-          <code class="language-markup">data-popin="close"</code>
+          <code class="lang-html">data-popin="show"</code><br />
+          <code class="lang-html">data-popin="close"</code>
         </td>
         <td>
           Shows or closes the popin
@@ -254,7 +254,7 @@ order: 9
       </tr>
       <tr>
         <td>
-          <code class="language-markup">data-target-url="[url]"</code>
+          <code class="lang-html">data-target-url="[url]"</code>
         </td>
         <td>
           Fetches the HTML fragment located at the target URL
@@ -262,7 +262,7 @@ order: 9
       </tr>
       <tr>
         <td>
-          <code class="language-markup">data-target-id="[id]"</code>
+          <code class="lang-html">data-target-id="[id]"</code>
         </td>
         <td>
           Displays a popin with content of the element #id
@@ -270,7 +270,7 @@ order: 9
       </tr>
       <tr>
         <td>
-          <code class="language-markup">class="bootnode ..."</code>
+          <code class="lang-html">class="bootnode ..."</code>
         </td>
         <td>
           Instantiates the JavaScript framework
@@ -288,7 +288,7 @@ order: 9
   </div>
   <div class="gu gu-last">
 
-    <pre><code class="language-markup">&lt;div class="gr"&gt;&lt;!-- Initializes the grid --&gt;
+    <pre><code class="lang-html">&lt;div class="gr"&gt;&lt;!-- Initializes the grid --&gt;
 
 &lt;!-- Base popin class, width set to two thirds of page width --&gt;
 &lt;div class="popin gu-2of3"&gt;
@@ -333,7 +333,7 @@ order: 9
       <tbody>
         <tr>
           <td>
-            <code class="language-javascript">page.notify('popin: set content', { url: '[URL]' });</code>
+            <code class="lang-javascript">page.notify('popin: set content', { url: '[URL]' });</code>
           </td>
           <td>
             Displays or updates a popin with the HTML code at the given URL with an Ajax call.
@@ -341,7 +341,7 @@ order: 9
         </tr>
         <tr>
           <td>
-            <code class="language-javascript">page.notify('popin: set content', { html: '[code]' });</code>
+            <code class="lang-javascript">page.notify('popin: set content', { html: '[code]' });</code>
           </td>
           <td>
             Displays or updates a popin with the given HTML code.
@@ -349,7 +349,7 @@ order: 9
         </tr>
         <tr>
           <td>
-            <code class="language-javascript">page.notify('popin: set content', { id: '[id]' });</code>
+            <code class="lang-javascript">page.notify('popin: set content', { id: '[id]' });</code>
           </td>
           <td>
             Displays or updates a popin with HTML code in the DOM. This code is the HTML content of the element with the given id.
@@ -368,11 +368,11 @@ order: 9
       <tbody>
         <tr>
           <td>
-            <code class="language-javascript">page.notify("popin: success", obj);</code>
+            <code class="lang-javascript">page.notify("popin: success", obj);</code>
           </td>
           <td>
             The popin controller sends this event when the popin is successfully displayed or updated.
-            The variable <code class="language-javascript">obj</code> contains the HTML code which is contained in the popin.
+            The variable <code class="lang-javascript">obj</code> contains the HTML code which is contained in the popin.
           </td>
         </tr>
       </tbody>

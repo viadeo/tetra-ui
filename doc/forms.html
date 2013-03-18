@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
   
 
-  <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
-  <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
-
   <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
-
   <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
   <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
@@ -141,15 +137,15 @@
         </label>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-<pre><code class="language-markup">&lt;form class="well"&gt;
-&lt;label&gt;Label name&lt;/label&gt;
-&lt;input type="text" class="span3" placeholder="Type something…"&gt;
-&lt;span class="help-inline"&gt;Associated help text!&lt;/span&gt;
-&lt;label class="checkbox"&gt;
-&lt;input type="checkbox"&gt; Check me out
-&lt;/label&gt;
-&lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+<pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"well"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">label</span>&gt;</span>Label name<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"span3"</span> <span class="attribute">placeholder</span>=<span class="value">"Type something…"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"help-inline"</span>&gt;</span>Associated help text!<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"checkbox"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span> Check me out
+<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"btn btn-default"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre>
     </div>
   </div>
 
@@ -157,10 +153,10 @@
   <div class="gu gu-1of4">
     <h3>Placeholders</h3>
     <p>This is a polyfill to simulate the
-      <code class="language-markup">placeholder=""</code> attribute for all browsers
+      <code class="lang-html">placeholder=""</code> attribute for all browsers
       on
-      <code class="language-markup">&lt;input&gt;</code> or
-      <code class="language-markup">&lt;textarea&gt;</code> elements.
+      <code class="lang-html">&lt;input&gt;</code> or
+      <code class="lang-html">&lt;textarea&gt;</code> elements.
     </p>
   </div>
   <div class="gu gu-last">
@@ -187,16 +183,16 @@
       </div>
     </form>
 
-    <p class="mbxs">Call the JavaScript component at the end of your HTML page, for example just before closing the <code class="language-markup">&lt;body&gt;</code> tag:</p>
+    <p class="mbxs">Call the JavaScript component at the end of your HTML page, for example just before closing the <code class="lang-html">&lt;body&gt;</code> tag:</p>
 
-    <pre><code class="language-markup">&lt;script src="/tetra-ui/release/js/placeholder.js"&gt;&lt;/script&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/tetra-ui/release/js/placeholder.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre>
 
     <p class="mtm mbxs">Then the code for the input field is:</p>
 
-    <pre><code class="language-markup">&lt;span class="placeholding"&gt;
-  &lt;input type="text" /&gt;
-  &lt;label class="placeholder"&gt;I’m a placeholder&lt;/label&gt;
-&lt;/span&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"placeholding"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"placeholder"</span>&gt;</span>I’m a placeholder<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></pre>
 
   </div>
 </div>
@@ -266,40 +262,40 @@
   </div>
   <div class="gu gu-last">
     <p class="mbxs">Using the class
-      <code class="language-markup">error</code>
+      <code class="lang-html">error</code>
       on the
-      <code class="language-markup">control-group</code>
+      <code class="lang-html">control-group</code>
       makes the field helper visible, otherwise it is hidden by default.
     </p>
 
-    <pre><code class="language-markup">&lt;div class="control-group error"&gt;
-  &lt;div class="controls"&gt;
-    &lt;span class="field-helper"&gt;
-      &lt;input type="text" /&gt;
-      &lt;span class="error-inline"&gt;Error helper&lt;/span&gt;
-    &lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"control-group error"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"controls"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"field-helper"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"error-inline"</span>&gt;</span>Error helper<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
 
     <p class="mbxs">To display the field helper on bottom:</p>
 
-    <pre><code class="language-markup">&lt;span class="field-helper field-helper-bottom"&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"field-helper field-helper-bottom"</span>&gt;</span></code></pre>
 
     <p class="mbxs">To display the field helper in the flow, below the field, not in an overlay:</p>
 
-    <pre><code class="language-markup">&lt;span class="field-helper field-helper-flow"&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"field-helper field-helper-flow"</span>&gt;</span></code></pre>
 
     <p class="mbxs">Placeholders and error helpers can be used at the same time:</p>
 
-    <pre><code class="language-markup">&lt;div class="control-group error"&gt;
-  &lt;div class="controls"&gt;
-    &lt;span class="placeholding field-helper"&gt;
-      &lt;input type="text" /&gt;
-      &lt;label class="placeholder"&gt;Placeholder&lt;/label&gt;
-      &lt;span class="error-inline"&gt;Error helper&lt;/span&gt;
-    &lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"control-group error"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"controls"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"placeholding field-helper"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"placeholder"</span>&gt;</span>Placeholder<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"error-inline"</span>&gt;</span>Error helper<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
   </div>
 </div>
 
@@ -313,10 +309,10 @@
         <input type="text" class="input-medium search-query" />
         <button type="submit" class="btn btn-default">Search</button>
       </form>
-<pre><code class="language-markup">&lt;form class="well form-search"&gt;
-&lt;input type="text" class="input-medium search-query"&gt;
-&lt;button type="submit" class="btn btn-default"&gt;Search&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+<pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"well form-search"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"input-medium search-query"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"btn btn-default"</span>&gt;</span>Search<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre>
     </div>
   </div> <!-- /row -->
 
@@ -334,14 +330,14 @@
         </label>
         <button type="submit" class="btn btn-default">Sign in</button>
       </form>
-<pre><code class="language-markup">&lt;form class="well form-inline"&gt;
-&lt;input type="text" class="input-small" placeholder="Email"&gt;
-&lt;input type="password" class="input-small" placeholder="Password"&gt;
-&lt;label class="checkbox"&gt;
-&lt;input type="checkbox"&gt; Remember me
-&lt;/label&gt;
-&lt;button type="submit" class="btn btn-default"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+<pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"well form-inline"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"input-small"</span> <span class="attribute">placeholder</span>=<span class="value">"Email"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">class</span>=<span class="value">"input-small"</span> <span class="attribute">placeholder</span>=<span class="value">"Password"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"checkbox"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span> Remember me
+<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"btn btn-default"</span>&gt;</span>Sign in<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre>
     </div>
   </div>
 </div>
@@ -432,18 +428,18 @@
       <p>Given the above example form layout, here's the markup associated with the first input and control group. The <code class="language-css">.control-group</code>, <code class="language-css">.control-label</code>, and <code class="language-css">.controls</code> classes are all required for styling.</p>
     </div>
     <div class="gu gu-last">
-<pre><code class="language-markup">&lt;form class="form-horizontal"&gt;
-&lt;fieldset&gt;
-&lt;legend&gt;Legend text&lt;/legend&gt;
-&lt;div class="control-group"&gt;
-  &lt;label class="control-label" for="input01"&gt;Text input&lt;/label&gt;
-  &lt;div class="controls"&gt;
-    &lt;input type="text" class="input-xlarge" id="input01"&gt;
-    &lt;p class="help-block"&gt;Supporting help text&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/fieldset&gt;
-&lt;/form&gt;</code></pre>
+<pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"form-horizontal"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">fieldset</span>&gt;</span>
+<span class="tag">&lt;<span class="title">legend</span>&gt;</span>Legend text<span class="tag">&lt;/<span class="title">legend</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"control-group"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"control-label"</span> <span class="attribute">for</span>=<span class="value">"input01"</span>&gt;</span>Text input<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"controls"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"input-xlarge"</span> <span class="attribute">id</span>=<span class="value">"input01"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"help-block"</span>&gt;</span>Supporting help text<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre>
     </div>
   </div>
 </div>
@@ -456,10 +452,10 @@
   <p>Special styles are applied on top of focused and disabled states, when the browser supports it.</p>
   <h3>Form validation</h3>
   <p>It also includes validation styles for errors, warnings, and success. To use, add the error class to the surrounding <code class="language-css">.control-group</code>.</p>
-<pre><code class="language-markup">&lt;fieldset class="
-  control-group error"&gt;
+<pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">fieldset</span> <span class="attribute">class</span>=<span class="value">"
+  control-group error"</span>&gt;</span>
   …
-&lt;/fieldset&gt;</code></pre>
+<span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span></code></pre>
 </div>
 
 <div class="gu gu-last">
@@ -549,7 +545,7 @@
 <h2>Extending form controls</h2>
 
 <div class="gu gu-1of4">
-  <p>To add help text for your form inputs, include inline help text with <code class="language-markup">&lt;span class="help-inline"&gt;</code> or a help text block with <code class="language-markup">&lt;p class="help-block"&gt;</code> after the input element.</p>
+  <p>To add help text for your form inputs, include inline help text with <code class="lang-html">&lt;span class="help-inline"&gt;</code> or a help text block with <code class="lang-html">&lt;p class="help-block"&gt;</code> after the input element.</p>
 </div>
 
 <div class="gu gu-last">
@@ -561,7 +557,7 @@
           <input class="input-mini" type="text" placeholder=".input-mini" />
           <input class="input-small" type="text" placeholder=".input-small" />
           <input class="input-medium" type="text" placeholder=".input-medium" />
-          <p class="help-block">You may also use static classes that don't map to the grid, adapt to the responsive CSS styles, or account for varying types of controls (e.g., <code class="language-markup">&lt;input&gt;</code> vs. <code class="language-markup">&lt;select&gt;</code>).</p>
+          <p class="help-block">You may also use static classes that don't map to the grid, adapt to the responsive CSS styles, or account for varying types of controls (e.g., <code class="lang-html">&lt;input&gt;</code> vs. <code class="lang-html">&lt;select&gt;</code>).</p>
         </div>
       </div>
       <div class="control-group">
@@ -747,35 +743,35 @@
 
   <div class="gu gu-1of4">
     <p>Just add a
-      <code class="language-markup">custom-radio</code>
+      <code class="lang-html">custom-radio</code>
       class to your existing
-      <code class="language-markup">&lt;label class="radio"&gt;</code>,
+      <code class="lang-html">&lt;label class="radio"&gt;</code>,
       and juste before your label text add a
-      <code class="language-markup">&lt;span class="custom-radio-element"&gt;</code>
+      <code class="lang-html">&lt;span class="custom-radio-element"&gt;</code>
     </p>
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="language-markup">&lt;form class="core-form form-horizontal"&gt;
-  &lt;div class="control-group"&gt;
-    &lt;label class="control-label"&gt;Custom radio buttons&lt;/label&gt;
-    &lt;div class="controls"&gt;
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"core-form form-horizontal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"control-group"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"control-label"</span>&gt;</span>Custom radio buttons<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"controls"</span>&gt;</span>
 
-      &lt;label class="radio inline custom-radio"&gt;&lt;!-- Add the inline class for horizontal --&gt;
-        &lt;input type="radio" name="customRadioButtons1" checked="checked" /&gt;
-        &lt;span class="custom-radio-element"&gt;&lt;/span&gt;&lt;!-- This must be just before your text --&gt;
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"radio inline custom-radio"</span>&gt;</span><span class="comment">&lt;!-- Add the inline class for horizontal --&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"customRadioButtons1"</span> <span class="attribute">checked</span>=<span class="value">"checked"</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"custom-radio-element"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="comment">&lt;!-- This must be just before your text --&gt;</span>
         Option one
-      &lt;/label&gt;
+      <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
 
-      &lt;label class="radio inline custom-radio"&gt;
-        &lt;input type="radio" name="customRadioButtons1" /&gt;
-        &lt;span class="custom-radio-element"&gt;&lt;/span&gt;
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"radio inline custom-radio"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"customRadioButtons1"</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"custom-radio-element"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
         Option two
-      &lt;/label&gt;
+      <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
 
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span></code></pre>
   </div>
 
 </div>
@@ -792,8 +788,6 @@
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>
-
-<!--[if gt IE 8]><!--><script>Prism.highlightAll();</script><!--<![endif]-->
 
 </body>
 </html>

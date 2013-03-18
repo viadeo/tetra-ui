@@ -60,7 +60,7 @@ order: 4
         </label>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-<pre><code class="language-markup">&lt;form class="well"&gt;
+<pre><code class="lang-html">&lt;form class="well"&gt;
 &lt;label&gt;Label name&lt;/label&gt;
 &lt;input type="text" class="span3" placeholder="Type something…"&gt;
 &lt;span class="help-inline"&gt;Associated help text!&lt;/span&gt;
@@ -76,10 +76,10 @@ order: 4
   <div class="gu gu-1of4">
     <h3>Placeholders</h3>
     <p>This is a polyfill to simulate the
-      <code class="language-markup">placeholder=""</code> attribute for all browsers
+      <code class="lang-html">placeholder=""</code> attribute for all browsers
       on
-      <code class="language-markup">&lt;input&gt;</code> or
-      <code class="language-markup">&lt;textarea&gt;</code> elements.
+      <code class="lang-html">&lt;input&gt;</code> or
+      <code class="lang-html">&lt;textarea&gt;</code> elements.
     </p>
   </div>
   <div class="gu gu-last">
@@ -106,13 +106,13 @@ order: 4
       </div>
     </form>
 
-    <p class="mbxs">Call the JavaScript component at the end of your HTML page, for example just before closing the <code class="language-markup">&lt;body&gt;</code> tag:</p>
+    <p class="mbxs">Call the JavaScript component at the end of your HTML page, for example just before closing the <code class="lang-html">&lt;body&gt;</code> tag:</p>
 
-    <pre><code class="language-markup">&lt;script src="/tetra-ui/release/js/placeholder.js"&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="lang-html">&lt;script src="/tetra-ui/release/js/placeholder.js"&gt;&lt;/script&gt;</code></pre>
 
     <p class="mtm mbxs">Then the code for the input field is:</p>
 
-    <pre><code class="language-markup">&lt;span class="placeholding"&gt;
+    <pre><code class="lang-html">&lt;span class="placeholding"&gt;
   &lt;input type="text" /&gt;
   &lt;label class="placeholder"&gt;I’m a placeholder&lt;/label&gt;
 &lt;/span&gt;</code></pre>
@@ -185,13 +185,13 @@ order: 4
   </div>
   <div class="gu gu-last">
     <p class="mbxs">Using the class
-      <code class="language-markup">error</code>
+      <code class="lang-html">error</code>
       on the
-      <code class="language-markup">control-group</code>
+      <code class="lang-html">control-group</code>
       makes the field helper visible, otherwise it is hidden by default.
     </p>
 
-    <pre><code class="language-markup">&lt;div class="control-group error"&gt;
+    <pre><code class="lang-html">&lt;div class="control-group error"&gt;
   &lt;div class="controls"&gt;
     &lt;span class="field-helper"&gt;
       &lt;input type="text" /&gt;
@@ -202,15 +202,15 @@ order: 4
 
     <p class="mbxs">To display the field helper on bottom:</p>
 
-    <pre><code class="language-markup">&lt;span class="field-helper field-helper-bottom"&gt;</code></pre>
+    <pre><code class="lang-html">&lt;span class="field-helper field-helper-bottom"&gt;</code></pre>
 
     <p class="mbxs">To display the field helper in the flow, below the field, not in an overlay:</p>
 
-    <pre><code class="language-markup">&lt;span class="field-helper field-helper-flow"&gt;</code></pre>
+    <pre><code class="lang-html">&lt;span class="field-helper field-helper-flow"&gt;</code></pre>
 
     <p class="mbxs">Placeholders and error helpers can be used at the same time:</p>
 
-    <pre><code class="language-markup">&lt;div class="control-group error"&gt;
+    <pre><code class="lang-html">&lt;div class="control-group error"&gt;
   &lt;div class="controls"&gt;
     &lt;span class="placeholding field-helper"&gt;
       &lt;input type="text" /&gt;
@@ -232,7 +232,7 @@ order: 4
         <input type="text" class="input-medium search-query" />
         <button type="submit" class="btn btn-default">Search</button>
       </form>
-<pre><code class="language-markup">&lt;form class="well form-search"&gt;
+<pre><code class="lang-html">&lt;form class="well form-search"&gt;
 &lt;input type="text" class="input-medium search-query"&gt;
 &lt;button type="submit" class="btn btn-default"&gt;Search&lt;/button&gt;
 &lt;/form&gt;</code></pre>
@@ -253,7 +253,7 @@ order: 4
         </label>
         <button type="submit" class="btn btn-default">Sign in</button>
       </form>
-<pre><code class="language-markup">&lt;form class="well form-inline"&gt;
+<pre><code class="lang-html">&lt;form class="well form-inline"&gt;
 &lt;input type="text" class="input-small" placeholder="Email"&gt;
 &lt;input type="password" class="input-small" placeholder="Password"&gt;
 &lt;label class="checkbox"&gt;
@@ -351,7 +351,7 @@ order: 4
       <p>Given the above example form layout, here's the markup associated with the first input and control group. The <code class="language-css">.control-group</code>, <code class="language-css">.control-label</code>, and <code class="language-css">.controls</code> classes are all required for styling.</p>
     </div>
     <div class="gu gu-last">
-<pre><code class="language-markup">&lt;form class="form-horizontal"&gt;
+<pre><code class="lang-html">&lt;form class="form-horizontal"&gt;
 &lt;fieldset&gt;
 &lt;legend&gt;Legend text&lt;/legend&gt;
 &lt;div class="control-group"&gt;
@@ -375,7 +375,7 @@ order: 4
   <p>Special styles are applied on top of focused and disabled states, when the browser supports it.</p>
   <h3>Form validation</h3>
   <p>It also includes validation styles for errors, warnings, and success. To use, add the error class to the surrounding <code class="language-css">.control-group</code>.</p>
-<pre><code class="language-markup">&lt;fieldset class="
+<pre><code class="lang-html">&lt;fieldset class="
   control-group error"&gt;
   …
 &lt;/fieldset&gt;</code></pre>
@@ -468,7 +468,7 @@ order: 4
 <h2>Extending form controls</h2>
 
 <div class="gu gu-1of4">
-  <p>To add help text for your form inputs, include inline help text with <code class="language-markup">&lt;span class="help-inline"&gt;</code> or a help text block with <code class="language-markup">&lt;p class="help-block"&gt;</code> after the input element.</p>
+  <p>To add help text for your form inputs, include inline help text with <code class="lang-html">&lt;span class="help-inline"&gt;</code> or a help text block with <code class="lang-html">&lt;p class="help-block"&gt;</code> after the input element.</p>
 </div>
 
 <div class="gu gu-last">
@@ -480,7 +480,7 @@ order: 4
           <input class="input-mini" type="text" placeholder=".input-mini" />
           <input class="input-small" type="text" placeholder=".input-small" />
           <input class="input-medium" type="text" placeholder=".input-medium" />
-          <p class="help-block">You may also use static classes that don't map to the grid, adapt to the responsive CSS styles, or account for varying types of controls (e.g., <code class="language-markup">&lt;input&gt;</code> vs. <code class="language-markup">&lt;select&gt;</code>).</p>
+          <p class="help-block">You may also use static classes that don't map to the grid, adapt to the responsive CSS styles, or account for varying types of controls (e.g., <code class="lang-html">&lt;input&gt;</code> vs. <code class="lang-html">&lt;select&gt;</code>).</p>
         </div>
       </div>
       <div class="control-group">
@@ -666,16 +666,16 @@ order: 4
 
   <div class="gu gu-1of4">
     <p>Just add a
-      <code class="language-markup">custom-radio</code>
+      <code class="lang-html">custom-radio</code>
       class to your existing
-      <code class="language-markup">&lt;label class="radio"&gt;</code>,
+      <code class="lang-html">&lt;label class="radio"&gt;</code>,
       and juste before your label text add a
-      <code class="language-markup">&lt;span class="custom-radio-element"&gt;</code>
+      <code class="lang-html">&lt;span class="custom-radio-element"&gt;</code>
     </p>
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="language-markup">&lt;form class="core-form form-horizontal"&gt;
+    <pre><code class="lang-html">&lt;form class="core-form form-horizontal"&gt;
   &lt;div class="control-group"&gt;
     &lt;label class="control-label"&gt;Custom radio buttons&lt;/label&gt;
     &lt;div class="controls"&gt;

@@ -1,9 +1,6 @@
 [submodule "src/js/lib/JSON-js"]
 	path = src/js/lib/JSON-js
 	url = https://github.com/douglascrockford/JSON-js.git
-[submodule "src/js/lib/prism"]
-	path = src/js/lib/prism
-	url = https://github.com/LeaVerou/prism.git
 [submodule "src/js/lib/tetra"]
 	path = src/js/lib/tetra
 	url = https://github.com/viadeo/tetra.git

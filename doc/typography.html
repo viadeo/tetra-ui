@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
   
 
-  <link rel="stylesheet" href="/tetra-ui/src/js/lib/prism/prism.css" />
-  <!--[if gt IE 8]><!--><script src="/tetra-ui/src/js/lib/prism/prism.js"></script><!--<![endif]-->
-
   <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
-
   <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
   <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
   <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
@@ -97,7 +93,7 @@
   <h2>Headings</h2>
 
   <div class="gu gu-1of5">
-    <p>All HTML headings from <code class="language-markup">&lt;h1&gt;</code> to <code class="language-markup">&lt;h6&gt;</code> are available, and there is a special case for the page header with an optional subheading.</p>
+    <p>All HTML headings from <code class="lang-html">&lt;h1&gt;</code> to <code class="lang-html">&lt;h6&gt;</code> are available, and there is a special case for the page header with an optional subheading.</p>
     <p>A set of alternate headings with borders is also available.</p>
   </div>
 
@@ -126,8 +122,8 @@
   <h2>Body copy</h2>
 
   <div class="gu gu-1of5">
-    <p>A bottom margin is applied to paragraphs elements <code class="language-markup">&lt;p&gt;</code>, this can be costomized with helpers.</p>
-    <p>To activate hyphenation, use a <code class="language-markup">class="hyph"</code> on the <code class="language-markup">&lt;p&gt;</code> tags or on a container. This is now supported by Firefox, IE10, and Safari</p>
+    <p>A bottom margin is applied to paragraphs elements <code class="lang-html">&lt;p&gt;</code>, this can be costomized with helpers.</p>
+    <p>To activate hyphenation, use a <code class="lang-html">class="hyph"</code> on the <code class="lang-html">&lt;p&gt;</code> tags or on a container. This is now supported by Firefox, IE10, and Safari</p>
   </div>
 
   <div class="gu gu-2of5 restore-typography">
@@ -160,11 +156,11 @@
     </div>
 
     <div class="gu gu-last">
-      <pre><code class="language-markup">&lt;div class="panel"&gt;Panel&lt;/div&gt;
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"panel"</span>&gt;</span>Panel<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
-&lt;div class="divider-before"&gt;Divider before&lt;/div&gt;
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"divider-before"</span>&gt;</span>Divider before<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
-&lt;div class="divider-after"&gt;Divider after&lt;/div&gt;</code></pre>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"divider-after"</span>&gt;</span>Divider after<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
     </div>
   </div>
 </div>
@@ -182,7 +178,7 @@
       <span class="ui-badge">12</span>
       <span class="ui-badge">123</span>
 
-      <pre><code class="language-markup">&lt;span class="ui-badge"&gt;123&lt;/span&gt;</code></pre>
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-badge"</span>&gt;</span>123<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></pre>
     </div>
 
     <div class="gu gu-last">
@@ -190,7 +186,7 @@
       <span class="ui-badge ui-badge-alt">12</span>
       <span class="ui-badge ui-badge-alt">123</span>
 
-      <pre><code class="language-markup">&lt;span class="ui-badge ui-badge-alt"&gt;123&lt;/span&gt;</code></pre>
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-badge ui-badge-alt"</span>&gt;</span>123<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></pre>
     </div>
   </div>
 </div>
@@ -213,9 +209,9 @@
       <span class="ui-label"><a href="">Consectetur</a></span>
       <span class="ui-label"><a href="">Adipiscing</a></span>
 
-      <pre><code class="language-markup">&lt;span class="ui-label"&gt;
-  &lt;a href=""&gt;Adipiscing&lt;/a&gt;
-&lt;/span&gt;</code></pre>
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-label"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>Adipiscing<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></pre>
     </div>
 
     <div class="gu gu-last">
@@ -249,10 +245,10 @@
         <a href=""><i class="vicon">&times;</i></a>
       </span>
 
-      <pre><code class="language-markup">&lt;span class="ui-label"&gt;
-  &lt;a href=""&gt;Adipiscing&lt;/a&gt;
-  &lt;a href=""&gt;&lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;&lt;/a&gt;
-&lt;/span&gt;</code></pre>
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-label"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>Adipiscing<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>&amp;times;<span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></pre>
     </div>
   </div>
 </div>
@@ -277,12 +273,12 @@
 
     <div class="gu gu-last">
 
-      <pre><code class="language-markup">&lt;span class="ui-tag"&gt;
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-tag"</span>&gt;</span>
   Lorem ipsum
-  &lt;a href="" class="remove"&gt;
-    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
-  &lt;/a&gt;
-&lt;/span&gt;</code></pre>
+  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"remove"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>&amp;times;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></pre>
 
     </div>
   </div>
@@ -363,8 +359,6 @@
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>
-
-<!--[if gt IE 8]><!--><script>Prism.highlightAll();</script><!--<![endif]-->
 
 </body>
 </html>
