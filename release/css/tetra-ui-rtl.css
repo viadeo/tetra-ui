@@ -5252,6 +5252,8 @@ i.vicon {
 }
 .nav li {
   float: right;
+  margin: 0;
+  padding: 0;
 }
 .nav li a {
   display: block;
@@ -5269,8 +5271,9 @@ i.vicon {
   float: left;
 }
 .nav li.side-links a {
-  padding-left: 0;
-  padding-right: 10px;
+  padding-right: 0;
+  padding-left: 10px;
+  padding-bottom: 0;
   color: #808080;
 }
 .nav li.side-links a .vicon {

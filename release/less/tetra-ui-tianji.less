@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.20 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.21 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -3165,6 +3165,8 @@ i.vicon {
 
 	li {
 		.float-left(@rtl);
+		margin: 0;
+		padding: 0;
 
 		a {
 			display: block;
@@ -3184,8 +3186,9 @@ i.vicon {
 			.float-right(@rtl);
 
 			a {
-				padding-left: 0;
-				padding-right: @spacingS;
+				.padding-left(@rtl, 0);
+				.padding-right(@rtl, @spacingS);
+				padding-bottom: 0;
 				color: @gray;
 
 				.vicon {

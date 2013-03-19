@@ -5,6 +5,8 @@
 
 	li {
 		.float-left(@rtl);
+		margin: 0;
+		padding: 0;
 
 		a {
 			display: block;
@@ -24,8 +26,9 @@
 			.float-right(@rtl);
 
 			a {
-				padding-left: 0;
-				padding-right: @spacingS;
+				.padding-left(@rtl, 0);
+				.padding-right(@rtl, @spacingS);
+				padding-bottom: 0;
 				color: @gray;
 
 				.vicon {
