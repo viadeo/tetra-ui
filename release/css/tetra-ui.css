@@ -5325,7 +5325,7 @@ i.vicon {
 .nav-tabs-secondary li a {
   position: relative;
   padding: 10px 20px;
-  margin-bottom: -3px;
+  margin-bottom: -2px;
 }
 .nav-tabs-secondary li a:hover {
   background: #ecf1f5;
