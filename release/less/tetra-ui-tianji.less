@@ -3894,10 +3894,14 @@ i.vicon {
 
 .bx-alert {
 	position: relative;
-	padding: @spacingL @spacingL @spacingM @spacingL;
+	padding: @spacingL @spacingL @spacingM;
 	border: 2px solid @white;
 	background: tint(@blueSoft, 90%);
 	box-shadow: 0 1px 4px fade(@black, 15%);
+
+	.core-form & {
+		padding: @spacingXs @spacingM @spacingXs;
+	}
 
 	.bx-alert-close {
 		.position (@rtl) when (@rtl = false) { right: -5px; }
