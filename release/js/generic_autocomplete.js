@@ -188,7 +188,9 @@ tetra.view.register('autocomplete', {
 
           'click': {
             '.autocomplete .autocomplete-menu li': function(e, elm) {
+              var prevContainerId = me._containerId;
               me.methods.suggestions.clickOnSuggestion(elm);
+              me.methods.suggestions.hide(prevContainerId);
             }
           }
         },
@@ -213,13 +215,13 @@ tetra.view.register('autocomplete', {
               _(me._menu).html(html);
             });
 
-            me._menu.find('li: first-child').addClass('active');
+            me._menu.find('li:first-child').addClass('active');
             me._container.addClass('active');
           },
 
           'display value': function(data) {
             me._input.val(data.value);
-            me.methods.suggestions.hide();
+            me.methods.suggestions.hide(me._containerId);
           }
 
         }
