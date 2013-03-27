@@ -109,8 +109,11 @@ tetra.view.register('autocomplete', {
                   // avoid enter to allow form submit
                   e.preventDefault();
                   elm = me._container.find('.autocomplete-menu li.active');
-                  me.methods.suggestions.clickOnSuggestion(elm);
-                  me.methods.suggestions.hide(me._containerId);
+                  var prevContainerId = me._containerId;
+                  if (elm.length) {
+                      me.methods.suggestions.clickOnSuggestion(elm);
+                  }
+                  me.methods.suggestions.hide(prevContainerId);
 
                   break;
 
