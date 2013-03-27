@@ -5040,6 +5040,11 @@ i.vicon {
   left: auto;
   right: 0;
 }
+.dd.pull-top .dd-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 5px;
+}
 .dd .dd .dd-btn .arrow {
   background-position: -16px -256px;
   position: absolute;
