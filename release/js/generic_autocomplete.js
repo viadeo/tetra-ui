@@ -110,7 +110,7 @@ tetra.view.register('autocomplete', {
                   e.preventDefault();
                   elm = me._container.find('.autocomplete-menu li.active');
                   me.methods.suggestions.clickOnSuggestion(elm);
-                  me.methods.suggestions.hide();
+                  me.methods.suggestions.hide(me._containerId);
 
                   break;
 
@@ -174,11 +174,12 @@ tetra.view.register('autocomplete', {
           },
 
           'blur': {
-            '.autocomplete input': function(e, elm) {
-              me.methods.reinit(elm);
-              window.setTimeout(function() {
-                me.methods.suggestions.hide();
-              }, 200);
+            '.autocomplete input':function (e, elm) {
+                var prevContainerId = me._containerId;
+                me.methods.reinit(elm);
+                window.setTimeout(function () {
+                    me.methods.suggestions.hide(prevContainerId);
+                }, 200);
             }
           },
 
@@ -250,8 +251,8 @@ tetra.view.register('autocomplete', {
             }
             items.eq(index).addClass('active');
           },
-          hide: function() {
-            me._container.removeClass('active');
+          hide: function(containerId) {
+              _('#' + containerId).removeClass('active');
           },
           replaceParam: function(url, param) {
             return url.replace(me._param, param);
