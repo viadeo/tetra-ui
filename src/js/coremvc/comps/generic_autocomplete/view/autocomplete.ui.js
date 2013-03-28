@@ -173,7 +173,7 @@ tetra.view.register('autocomplete', {
           },
           clickOnSuggestion: function(elm) {
             var value = _.trim(_(elm.find('.value')).text());
-            me._input.val(value);
+            if (typeof value !== 'undefined' && value.length > 0) me._input.val(value);
             app.notify('autocompleteGeneric : click on suggestion', elm[0]);
             me._containerId = null;
           },
