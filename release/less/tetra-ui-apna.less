@@ -658,7 +658,7 @@ textarea {
 	   width: (100% / @total) * @span;
 	   margin: 0;
 	}
-	
+
   .margin (@rtl) when (@rtl = false) {
     margin-right: @spacing;
   }
@@ -682,7 +682,7 @@ textarea {
 	* grid row and compensate in the width percentage value of each grid unit.
 	*/
 	.unitWithSpacing (@span, @total, @spacing, @parentSpan: 1, @parentTotal: 1, @parentSpacing: 0px) {
-	   
+
 	   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 	   /**
@@ -691,14 +691,14 @@ textarea {
 	   * of the grid unit, in percentage"), just concatinated.
 	   */
 	   @parentWidthPercentage: ((100% / @parentTotal) * @parentSpan) - ((((1% * ((@parentSpacing / @siteWidth) * 100)) * (@parentTotal - 1)) / @parentTotal) / @parentSpan);
-	   
+
 	   /**
 	   * Calculate the parent element width in pixels
 	   */
 	   @parentWidth: (@siteWidth / 100) * @parentWidthPercentage;
-	   
-	   
-	   
+
+
+
 	   /* Calculate the width of the grid unit, in percentage
        ====================================================== */
 	   /**
@@ -707,23 +707,23 @@ textarea {
 	   * so we just multiply 1% by the percentage value in pixels (math hack)
 	   */
 	   @spacingPercentage: 1% * ((@spacing / @parentWidth) * 100);
-	   
+
 	   /**
 	   * Calculate the base width (as if there were no spacing)
 	   */
 	   @baseWidth: (100% / @total) * @span;
-	   
+
 	   /**
 	   * As we are using margin-right, the number of units with spacing should be
 	   * one less than the total number of units
 	   */
 	   @unitsWithSpacing: @total - 1;
-	   
+
 	   /**
 	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
 	   */
 	   @totalRowSpacing: @spacingPercentage * @unitsWithSpacing;
-	   
+
 	   /**
 	   * To calculate how much width to subtract from each one of the units with
 	   * spacing, we take the total ammount of spacing in the grid row, divide it
@@ -731,7 +731,7 @@ textarea {
 	   * that the unit in question consumes :)
 	   */
 	   @widthToSubtract: (@totalRowSpacing / @total) / @span;
-	   
+
 	   /* Set the CSS properties */
 	   width: (@baseWidth - @widthToSubtract);
 	   .margin(@rtl);
@@ -857,14 +857,14 @@ textarea {
 
 // Zebra grid guide for "visual debugging" (to be used in conjunction with .grid-row)
 .gr-zebra {
-    .gu, .gridUnit {
-		text-align: center;
-		padding: @spacingS 0;
-		*background-color: lighten(@black, 90%);
-		
-		&:nth-child(even) { background-color: lighten(@black, 90%); }
-		&:nth-child(odd) { background-color: lighten(@black, 95%); }
-    }
+  .gu {
+  	text-align: center;
+  	padding: @spacingS 0;
+  	*background-color: lighten(@black, 90%);
+
+  	&:nth-child(even) { background-color: lighten(@black, 90%); }
+  	&:nth-child(odd) { background-color: lighten(@black, 95%); }
+  }
 }
 /* Helpers
  * Short CSS classes to save time and maintain consistency
@@ -1245,7 +1245,7 @@ pre {
 	  margin: 0;
 	  border: 0;
 	}
-	
+
 	// Groups of fields with labels on top (legends)
 	legend {
 	  display: block;
@@ -1257,14 +1257,14 @@ pre {
 	  color: @grayDark;
 	  border: 0;
 	  border-bottom: 1px solid #eee;
-	
+
 	  // Small
 	  small {
 	    font-size: @baseLineHeight * .75;
 	    color: @grayLight;
 	  }
 	}
-	
+
 	// Set font for forms
 	label,
 	input,
@@ -1279,14 +1279,14 @@ pre {
 	textarea {
 	  font-family: @baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
 	}
-	
+
 	// Identify controls by their labels
 	label {
 	  display: block;
 	  margin-bottom: 5px;
 	  color: @grayDark;
 	}
-	
+
 	// Inputs, Textareas, Selects
 	input,
 	textarea,
@@ -1308,14 +1308,14 @@ pre {
 	  width: auto;
 	  height: auto;
 	}
-	
+
 	// Inputs within a label
 	label input,
 	label textarea,
 	label select {
 	  display: block;
 	}
-	
+
 	// Mini reset for unique input types
 	input[type="image"],
 	input[type="checkbox"],
@@ -1333,7 +1333,7 @@ pre {
 	input[type="image"] {
 	  border: 0;
 	}
-	
+
 	// Reset the file input to browser defaults
 	input[type="file"] {
 	  width: auto;
@@ -1344,7 +1344,7 @@ pre {
 	  background-color: initial;
 	  .box-shadow(none);
 	}
-	
+
 	// Help out input buttons
 	input[type="button"],
 	input[type="reset"],
@@ -1352,7 +1352,7 @@ pre {
 	  width: auto;
 	  height: auto;
 	}
-	
+
 	// Set the height of select and file controls to match text inputs
 	select,
 	input[type="file"] {
@@ -1360,44 +1360,44 @@ pre {
 	  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
 	  line-height: 28px;
 	}
-	
+
 	// Reset line-height for IE
 	input[type="file"] {
 	  line-height: 18px \9;
 	}
-	
+
 	// Chrome on Linux and Mobile Safari need background-color
 	select {
 	  width: 220px; // default input width + 10px of padding that doesn't get applied
 	  background-color: @inputBackground;
 	}
-	
+
 	// Make multiple select elements height not fixed
 	select[multiple],
 	select[size] {
 	  height: auto;
 	}
-	
+
 	// Remove shadow from image inputs
 	input[type="image"] {
 	  .box-shadow(none);
 	}
-	
+
 	// Make textarea height behave
 	textarea {
 	  height: auto;
 	}
-	
+
 	// Hidden inputs
 	input[type="hidden"] {
 	  display: none;
 	}
-	
-	
-	
+
+
+
 	// CHECKBOXES & RADIOS
 	// -------------------
-	
+
 	// Indent the labels to position radios/checkboxes as hanging
 	.radio,
 	.checkbox {
@@ -1409,13 +1409,13 @@ pre {
 	  .margin-left(@rtl, -18px);
 	  *clear: left;
 	}
-	
+
 	// Move the options list down to align with labels
 	.controls > .radio:first-child,
 	.controls > .checkbox:first-child {
 	  padding-top: 5px; // has to be padding because margin collaspes
 	}
-	
+
 	// Radios and checkboxes on same line
 	// TODO v3: Convert .inline to .control-inline
 	.radio.inline,
@@ -1429,9 +1429,9 @@ pre {
 	.checkbox.inline + .checkbox.inline {
 	  margin-left: 10px; // space out consecutive inline controls
 	}
-	
-	
-	
+
+
+
 	// FOCUS STATE
 	// -----------
 	input,
@@ -1455,11 +1455,11 @@ pre {
 	  .box-shadow(none); // override for file inputs
 	  .tab-focus();
 	}
-	
-	
+
+
 	// INPUT SIZES
 	// -----------
-	
+
 	// General classes for quick sizes
 	.input-mini       { width: 60px; }
 	.input-small      { width: 90px; }
@@ -1470,9 +1470,10 @@ pre {
 	.input-fullwidth  {
 				.box-sizing(border-box);
         width: 100%;
+        height: auto;
         *width: 90%; // IE 7 doesn't support box-sizing
 	}
-	
+
 	// Grid style input sizes
 	input[class*="span"],
 	select[class*="span"],
@@ -1481,20 +1482,20 @@ pre {
 	  float: none;
 	  margin-left: 0;
 	}
-	
-	
-	
+
+
+
 	// GRID SIZING FOR INPUTS
 	// ----------------------
-	
+
 	//#grid > .input (@gridColumnWidth, @gridGutterWidth);
-	
-	
-	
-	
+
+
+
+
 	// DISABLED STATE
 	// --------------
-	
+
 	// Disabled and read-only inputs
 	input[disabled],
 	select[disabled],
@@ -1506,13 +1507,13 @@ pre {
 	  border-color: #ddd;
 	  cursor: not-allowed;
 	}
-	
-	
-	
-	
+
+
+
+
 	// FORM FIELD FEEDBACK STATES
 	// --------------------------
-	
+
 	// Warning
 	.control-group.warning {
 	  .formFieldState(@warningText, @warningText, @warningBackground);
@@ -1525,7 +1526,7 @@ pre {
 	.control-group.success {
 	  .formFieldState(@successText, @successBorder, @successBackground);
 	}
-	
+
 	// Disabled
 	.control-group.disabled {
 		label {
@@ -1549,12 +1550,12 @@ pre {
 	    .box-shadow(0 0 3px lighten(#ee5f5b, 20%));
 	  }
 	}
-	
-	
-	
+
+
+
 	// FORM ACTIONS
 	// ------------
-	
+
 	.form-actions {
 	  padding: (@baseLineHeight - 1) 20px @baseLineHeight;
 	  margin-top: @baseLineHeight;
@@ -1563,7 +1564,7 @@ pre {
 	  border-top: 1px solid @panelBorder;
 	  .clearfixHack(); // Adding clearfix to allow for .pull-right button containers
 	}
-	
+
 	// For text that needs to appear as an input but should not be an input
 	.uneditable-input {
 	  display: block;
@@ -1572,37 +1573,37 @@ pre {
 	  .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
 	  cursor: not-allowed;
 	}
-	
+
 	// Placeholder text gets special styles; can't be bundled together though for some reason
 	.placeholder(@grayLight);
-	
-	
-	
+
+
+
 	// HELP TEXT
 	// ---------
-	
+
 	.help-block,
 	.help-inline {
 	  color: @gray; // lighten the text some for contrast
 	}
-	
+
 	.help-block {
 	  display: block; // account for any element using help-block
 	  margin-bottom: @baseLineHeight / 2;
 	}
-	
+
 	.help-inline {
 	  display: inline-block;
 	  .ie7-inline-block();
 	  vertical-align: middle;
 	  .padding-left(@rtl, 5px);
 	}
-	
-	
-	
+
+
+
 // INPUT GROUPS
 // ------------
-	
+
 .radius-right (@rtl) when (@rtl = false) { .border-radius(0 3px 3px 0); }
 .radius-right (@rtl) when (@rtl = true) { .border-radius(3px 0 0 3px); }
 
@@ -1700,24 +1701,24 @@ pre {
 	    .radius-right(@rtl);
 	  }
 	}
-	
-	
-	
+
+
+
 	// SEARCH FORM
 	// -----------
-	
+
 	.search-query {
 	  padding-left: 14px;
 	  padding-right: 14px;
 	  margin-bottom: 0; // remove the default margin on all inputs
 	  .border-radius(14px);
 	}
-	
+
 	// Margin to space out fieldsets
 	.control-group {
 	  margin-bottom: @baseLineHeight / 2;
 	}
-	
+
 	// Legend collapses margin, so next element is responsible for spacing
 	legend + .control-group {
 	  margin-top: @baseLineHeight;
@@ -1778,7 +1779,7 @@ pre {
   margin-left: 0;
   margin-right: 3px;
 }
-	
+
 // Horizontal-specific styles
 
 .form-horizontal {

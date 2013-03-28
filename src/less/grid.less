@@ -6,7 +6,7 @@
 	   width: (100% / @total) * @span;
 	   margin: 0;
 	}
-	
+
   .margin (@rtl) when (@rtl = false) {
     margin-right: @spacing;
   }
@@ -30,7 +30,7 @@
 	* grid row and compensate in the width percentage value of each grid unit.
 	*/
 	.unitWithSpacing (@span, @total, @spacing, @parentSpan: 1, @parentTotal: 1, @parentSpacing: 0px) {
-	   
+
 	   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 	   /**
@@ -39,14 +39,14 @@
 	   * of the grid unit, in percentage"), just concatinated.
 	   */
 	   @parentWidthPercentage: ((100% / @parentTotal) * @parentSpan) - ((((1% * ((@parentSpacing / @siteWidth) * 100)) * (@parentTotal - 1)) / @parentTotal) / @parentSpan);
-	   
+
 	   /**
 	   * Calculate the parent element width in pixels
 	   */
 	   @parentWidth: (@siteWidth / 100) * @parentWidthPercentage;
-	   
-	   
-	   
+
+
+
 	   /* Calculate the width of the grid unit, in percentage
        ====================================================== */
 	   /**
@@ -55,23 +55,23 @@
 	   * so we just multiply 1% by the percentage value in pixels (math hack)
 	   */
 	   @spacingPercentage: 1% * ((@spacing / @parentWidth) * 100);
-	   
+
 	   /**
 	   * Calculate the base width (as if there were no spacing)
 	   */
 	   @baseWidth: (100% / @total) * @span;
-	   
+
 	   /**
 	   * As we are using margin-right, the number of units with spacing should be
 	   * one less than the total number of units
 	   */
 	   @unitsWithSpacing: @total - 1;
-	   
+
 	   /**
 	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
 	   */
 	   @totalRowSpacing: @spacingPercentage * @unitsWithSpacing;
-	   
+
 	   /**
 	   * To calculate how much width to subtract from each one of the units with
 	   * spacing, we take the total ammount of spacing in the grid row, divide it
@@ -79,7 +79,7 @@
 	   * that the unit in question consumes :)
 	   */
 	   @widthToSubtract: (@totalRowSpacing / @total) / @span;
-	   
+
 	   /* Set the CSS properties */
 	   width: (@baseWidth - @widthToSubtract);
 	   .margin(@rtl);
@@ -205,12 +205,12 @@
 
 // Zebra grid guide for "visual debugging" (to be used in conjunction with .grid-row)
 .gr-zebra {
-    .gu, .gridUnit {
-		text-align: center;
-		padding: @spacingS 0;
-		*background-color: lighten(@black, 90%);
-		
-		&:nth-child(even) { background-color: lighten(@black, 90%); }
-		&:nth-child(odd) { background-color: lighten(@black, 95%); }
-    }
+  .gu {
+  	text-align: center;
+  	padding: @spacingS 0;
+  	*background-color: lighten(@black, 90%);
+
+  	&:nth-child(even) { background-color: lighten(@black, 90%); }
+  	&:nth-child(odd) { background-color: lighten(@black, 95%); }
+  }
 }

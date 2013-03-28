@@ -2553,18 +2553,15 @@ textarea {
   width: 79.38775510204081%;
   margin-right: 30px;
 }
-.gr-zebra .gu,
-.gr-zebra .gridUnit {
+.gr-zebra .gu {
   text-align: center;
   padding: 10px 0;
   *background-color: #e6e6e6;
 }
-.gr-zebra .gu:nth-child(even),
-.gr-zebra .gridUnit:nth-child(even) {
+.gr-zebra .gu:nth-child(even) {
   background-color: #e6e6e6;
 }
-.gr-zebra .gu:nth-child(odd),
-.gr-zebra .gridUnit:nth-child(odd) {
+.gr-zebra .gu:nth-child(odd) {
   background-color: #f2f2f2;
 }
 /* Helpers
@@ -3402,6 +3399,7 @@ pre {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
+  height: auto;
   *width: 90%;
 }
 .core-form input[class*="span"],
