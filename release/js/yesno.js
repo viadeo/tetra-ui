@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.23 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.24 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.model.register('yesno', {
 
