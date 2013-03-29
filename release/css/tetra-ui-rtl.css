@@ -4385,7 +4385,8 @@ i.vicon {
   top: -7px;
   bottom: auto;
 }
-.btn {
+.btn,
+.core-form .btn {
   /* General Properties */
 
   /* Rules */
@@ -4401,6 +4402,8 @@ i.vicon {
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -4409,18 +4412,23 @@ i.vicon {
   /* Support for old layout */
 
 }
-.btn:hover {
+.btn:hover,
+.core-form .btn:hover {
   text-decoration: none;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .btn:active,
-.btn.active {
+.core-form .btn:active,
+.btn.active,
+.core-form .btn.active {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .btn span input,
-.btn span button {
+.core-form .btn span input,
+.btn span button,
+.core-form .btn span button {
   display: inline;
   border: none;
   line-height: 1.2em;
@@ -4432,21 +4440,26 @@ i.vicon {
   font-family: inherit;
   font-size: inherit !important;
 }
-.btn span img {
+.btn span img,
+.core-form .btn span img {
   vertical-align: text-top;
 }
-.btn .vicon.btn-icon-before {
+.btn .vicon.btn-icon-before,
+.core-form .btn .vicon.btn-icon-before {
   margin: 0 -2px 0 -7px;
   font-size: 8px;
 }
-.btn .vicon.btn-icon-after {
+.btn .vicon.btn-icon-after,
+.core-form .btn .vicon.btn-icon-after {
   margin: 0 -7px 0 -2px;
   font-size: 8px;
 }
 .btn-primary,
 .btn-secondary,
 .socialAction,
-.eventsAction {
+.eventsAction,
+.core-form .btn-primary,
+.core-form .btn-secondary {
   color: #2e2e2e;
   border: 1px solid #ffbb02;
   background-color: #ffc906;
@@ -4464,20 +4477,28 @@ i.vicon {
 .btn-secondary span,
 .socialAction span,
 .eventsAction span,
+.core-form .btn-primary span,
+.core-form .btn-secondary span,
 .btn-primary input,
 .btn-secondary input,
 .socialAction input,
 .eventsAction input,
+.core-form .btn-primary input,
+.core-form .btn-secondary input,
 .btn-primary button,
 .btn-secondary button,
 .socialAction button,
-.eventsAction button {
+.eventsAction button,
+.core-form .btn-primary button,
+.core-form .btn-secondary button {
   color: #2e2e2e;
 }
 .btn-primary:hover,
 .btn-secondary:hover,
 .socialAction:hover,
-.eventsAction:hover {
+.eventsAction:hover,
+.core-form .btn-primary:hover,
+.core-form .btn-secondary:hover {
   background-color: #ffbb02;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #ffc906, #ffbb02);
@@ -4492,7 +4513,9 @@ i.vicon {
 .btn-primary:active,
 .btn-secondary:active,
 .socialAction:active,
-.eventsAction:active {
+.eventsAction:active,
+.core-form .btn-primary:active,
+.core-form .btn-secondary:active {
   background-color: #ffbb02;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #ffc906, #ffbb02);
@@ -4507,10 +4530,14 @@ i.vicon {
 .btn-secondary.btn-disabled,
 .socialAction.btn-disabled,
 .eventsAction.btn-disabled,
+.core-form .btn-primary.btn-disabled,
+.core-form .btn-secondary.btn-disabled,
 .btn-primary.btn-loading,
 .btn-secondary.btn-loading,
 .socialAction.btn-loading,
-.eventsAction.btn-loading {
+.eventsAction.btn-loading,
+.core-form .btn-primary.btn-loading,
+.core-form .btn-secondary.btn-loading {
   background-color: #ffe057;
   border-color: #ffd04f;
   color: #f2b100;
@@ -4519,42 +4546,62 @@ i.vicon {
 .btn-secondary.btn-disabled:link,
 .socialAction.btn-disabled:link,
 .eventsAction.btn-disabled:link,
+.core-form .btn-primary.btn-disabled:link,
+.core-form .btn-secondary.btn-disabled:link,
 .btn-primary.btn-loading:link,
 .btn-secondary.btn-loading:link,
 .socialAction.btn-loading:link,
 .eventsAction.btn-loading:link,
+.core-form .btn-primary.btn-loading:link,
+.core-form .btn-secondary.btn-loading:link,
 .btn-primary.btn-disabled:visited,
 .btn-secondary.btn-disabled:visited,
 .socialAction.btn-disabled:visited,
 .eventsAction.btn-disabled:visited,
+.core-form .btn-primary.btn-disabled:visited,
+.core-form .btn-secondary.btn-disabled:visited,
 .btn-primary.btn-loading:visited,
 .btn-secondary.btn-loading:visited,
 .socialAction.btn-loading:visited,
 .eventsAction.btn-loading:visited,
+.core-form .btn-primary.btn-loading:visited,
+.core-form .btn-secondary.btn-loading:visited,
 .btn-primary.btn-disabled:hover,
 .btn-secondary.btn-disabled:hover,
 .socialAction.btn-disabled:hover,
 .eventsAction.btn-disabled:hover,
+.core-form .btn-primary.btn-disabled:hover,
+.core-form .btn-secondary.btn-disabled:hover,
 .btn-primary.btn-loading:hover,
 .btn-secondary.btn-loading:hover,
 .socialAction.btn-loading:hover,
 .eventsAction.btn-loading:hover,
+.core-form .btn-primary.btn-loading:hover,
+.core-form .btn-secondary.btn-loading:hover,
 .btn-primary.btn-disabled:active,
 .btn-secondary.btn-disabled:active,
 .socialAction.btn-disabled:active,
 .eventsAction.btn-disabled:active,
+.core-form .btn-primary.btn-disabled:active,
+.core-form .btn-secondary.btn-disabled:active,
 .btn-primary.btn-loading:active,
 .btn-secondary.btn-loading:active,
 .socialAction.btn-loading:active,
 .eventsAction.btn-loading:active,
+.core-form .btn-primary.btn-loading:active,
+.core-form .btn-secondary.btn-loading:active,
 .btn-primary.btn-disabled span,
 .btn-secondary.btn-disabled span,
 .socialAction.btn-disabled span,
 .eventsAction.btn-disabled span,
+.core-form .btn-primary.btn-disabled span,
+.core-form .btn-secondary.btn-disabled span,
 .btn-primary.btn-loading span,
 .btn-secondary.btn-loading span,
 .socialAction.btn-loading span,
-.eventsAction.btn-loading span {
+.eventsAction.btn-loading span,
+.core-form .btn-primary.btn-loading span,
+.core-form .btn-secondary.btn-loading span {
   background-color: #ffe057;
   border-color: #ffd04f;
   color: #f2b100;
@@ -4563,24 +4610,34 @@ i.vicon {
 .btn-secondary.btn-disabled .vicon,
 .socialAction.btn-disabled .vicon,
 .eventsAction.btn-disabled .vicon,
+.core-form .btn-primary.btn-disabled .vicon,
+.core-form .btn-secondary.btn-disabled .vicon,
 .btn-primary.btn-loading .vicon,
 .btn-secondary.btn-loading .vicon,
 .socialAction.btn-loading .vicon,
-.eventsAction.btn-loading .vicon {
+.eventsAction.btn-loading .vicon,
+.core-form .btn-primary.btn-loading .vicon,
+.core-form .btn-secondary.btn-loading .vicon {
   color: #f2b100;
 }
 .btn-primary.btn-loading span,
 .btn-secondary.btn-loading span,
 .socialAction.btn-loading span,
 .eventsAction.btn-loading span,
+.core-form .btn-primary.btn-loading span,
+.core-form .btn-secondary.btn-loading span,
 .btn-primary.btn-loading:hover span,
 .btn-secondary.btn-loading:hover span,
 .socialAction.btn-loading:hover span,
 .eventsAction.btn-loading:hover span,
+.core-form .btn-primary.btn-loading:hover span,
+.core-form .btn-secondary.btn-loading:hover span,
 .btn-primary.btn-loading:active span,
 .btn-secondary.btn-loading:active span,
 .socialAction.btn-loading:active span,
-.eventsAction.btn-loading:active span {
+.eventsAction.btn-loading:active span,
+.core-form .btn-primary.btn-loading:active span,
+.core-form .btn-secondary.btn-loading:active span {
   background: transparent url('/v_img/coreui/buttons/loaders/secondary.gif') no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
@@ -4588,10 +4645,14 @@ i.vicon {
 .btn-secondary.btn-inactive,
 .socialAction.btn-inactive,
 .eventsAction.btn-inactive,
+.core-form .btn-primary.btn-inactive,
+.core-form .btn-secondary.btn-inactive,
 .btn-primary.btn-inactive:hover,
 .btn-secondary.btn-inactive:hover,
 .socialAction.btn-inactive:hover,
-.eventsAction.btn-inactive:hover {
+.eventsAction.btn-inactive:hover,
+.core-form .btn-primary.btn-inactive:hover,
+.core-form .btn-secondary.btn-inactive:hover {
   border-color: #ffbb02;
   background-color: #ffc906;
   background-repeat: repeat-x;
@@ -4607,7 +4668,8 @@ i.vicon {
   cursor: default;
 }
 .btn-default,
-.secEventsAction {
+.secEventsAction,
+.core-form .btn-default {
   border: 1px solid #d5d5d5;
   background-color: #ebebeb;
   background-repeat: repeat-x;
@@ -4623,18 +4685,23 @@ i.vicon {
 }
 .btn-default span,
 .secEventsAction span,
+.core-form .btn-default span,
 .btn-default input,
 .secEventsAction input,
+.core-form .btn-default input,
 .btn-default button,
-.secEventsAction button {
+.secEventsAction button,
+.core-form .btn-default button {
   color: #2e2e2e;
 }
 .btn-default .vicon,
-.secEventsAction .vicon {
+.secEventsAction .vicon,
+.core-form .btn-default .vicon {
   color: #808080;
 }
 .btn-default:hover,
-.secEventsAction:hover {
+.secEventsAction:hover,
+.core-form .btn-default:hover {
   background-color: #d5d5d5;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #e8e8e8, #d5d5d5);
@@ -4647,11 +4714,13 @@ i.vicon {
   color: #2e2e2e;
 }
 .btn-default:hover .vicon,
-.secEventsAction:hover .vicon {
+.secEventsAction:hover .vicon,
+.core-form .btn-default:hover .vicon {
   color: #2e2e2e;
 }
 .btn-default:active,
-.secEventsAction:active {
+.secEventsAction:active,
+.core-form .btn-default:active {
   background-color: #d5d5d5;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #e8e8e8, #d5d5d5);
@@ -4664,46 +4733,62 @@ i.vicon {
 }
 .btn-default.btn-disabled,
 .secEventsAction.btn-disabled,
+.core-form .btn-default.btn-disabled,
 .btn-default.btn-loading,
-.secEventsAction.btn-loading {
+.secEventsAction.btn-loading,
+.core-form .btn-default.btn-loading {
   background-color: #ebebeb;
   border-color: #d5d5d5;
   color: #c8c8c8;
 }
 .btn-default.btn-disabled:link,
 .secEventsAction.btn-disabled:link,
+.core-form .btn-default.btn-disabled:link,
 .btn-default.btn-loading:link,
 .secEventsAction.btn-loading:link,
+.core-form .btn-default.btn-loading:link,
 .btn-default.btn-disabled:visited,
 .secEventsAction.btn-disabled:visited,
+.core-form .btn-default.btn-disabled:visited,
 .btn-default.btn-loading:visited,
 .secEventsAction.btn-loading:visited,
+.core-form .btn-default.btn-loading:visited,
 .btn-default.btn-disabled:hover,
 .secEventsAction.btn-disabled:hover,
+.core-form .btn-default.btn-disabled:hover,
 .btn-default.btn-loading:hover,
 .secEventsAction.btn-loading:hover,
+.core-form .btn-default.btn-loading:hover,
 .btn-default.btn-disabled:active,
 .secEventsAction.btn-disabled:active,
+.core-form .btn-default.btn-disabled:active,
 .btn-default.btn-loading:active,
 .secEventsAction.btn-loading:active,
+.core-form .btn-default.btn-loading:active,
 .btn-default.btn-disabled span,
 .secEventsAction.btn-disabled span,
+.core-form .btn-default.btn-disabled span,
 .btn-default.btn-loading span,
-.secEventsAction.btn-loading span {
+.secEventsAction.btn-loading span,
+.core-form .btn-default.btn-loading span {
   background-color: #ebebeb;
   border-color: #d5d5d5;
   color: #c8c8c8;
 }
 .btn-default.btn-disabled .vicon,
 .secEventsAction.btn-disabled .vicon,
+.core-form .btn-default.btn-disabled .vicon,
 .btn-default.btn-loading .vicon,
-.secEventsAction.btn-loading .vicon {
+.secEventsAction.btn-loading .vicon,
+.core-form .btn-default.btn-loading .vicon {
   color: #c8c8c8;
 }
 .btn-default.btn-inactive,
 .secEventsAction.btn-inactive,
+.core-form .btn-default.btn-inactive,
 .btn-default.btn-inactive:hover,
-.secEventsAction.btn-inactive:hover {
+.secEventsAction.btn-inactive:hover,
+.core-form .btn-default.btn-inactive:hover {
   border-color: #d5d5d5;
   background-color: #ebebeb;
   background-repeat: repeat-x;
