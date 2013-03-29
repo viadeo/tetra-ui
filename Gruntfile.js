@@ -76,7 +76,7 @@ module.exports = function(grunt) {
           'release/css/tetra-ui.min.css': ['<banner>', 'release/css/tetra-ui.min.css'],
           'release/css/tetra-ui-apna.min.css': ['<banner>', 'release/css/tetra-ui-apna.min.css'],
           'release/css/tetra-ui-doc.min.css': ['<banner>', 'release/css/tetra-ui-doc.min.css'],
-          'release/css/tetra-ui-tianji.min.css': ['<banner>', 'release/css/tetra-ui-tianji.min.css'],
+          'release/css/tetra-ui-light.min.css': ['<banner>', 'release/css/tetra-ui-light.min.css'],
 
           'release/less/tetra-ui.less': ['<banner>',
             'src/less/foundation/variables.less',
