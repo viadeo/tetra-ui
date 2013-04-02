@@ -544,6 +544,52 @@
 
 <div class="gr grsl pvl">
     <div class="gu gu-1of5">
+        <h2>Tabs sections</h2>
+        <p>When tab contents are already loaded in the page, the component displays the corresponding section of the clicked title.
+        </p>
+    </div>
+    <div class="gu gu-last">
+        <ul class="nav nav-tabs bootnode" data-event="click" data-comp="navtabs" data-target-id="tab-sample-container-1">
+            <li class="active"><a data-section="tab-sample-1">Sample 1</a></li>
+            <li><a data-section="tab-sample-2">Sample 2</a></li>
+            <li><a data-section="tab-sample-3">Sample 3</a></li>
+        </ul>
+
+        <div class="nav-tabs-section loading" id="tab-sample-container-1">
+            <div class="section active" id="tab-sample-1">
+              <h4 class="mbxs">Sample content 1</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="section" id="tab-sample-2">
+              <h4 class="mbxs">Sample content 2</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+            </div>
+            <div class="section" id="tab-sample-3">
+              <h4 class="mbxs">Sample content 3</h4>
+              <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+        </div>
+
+        <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav nav-tabs bootnode"</span> <span class="attribute">data-event</span>=<span class="value">"click"</span> <span class="attribute">data-comp</span>=<span class="value">"navtabs"</span> <span class="attribute">data-target-id</span>=<span class="value">"tab-container"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">data-section</span>=<span class="value">"tab-sample-1"</span>&gt;</span>Sample 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">data-section</span>=<span class="value">"tab-sample-2"</span>&gt;</span>Sample 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"nav-tabs-section loading"</span> <span class="attribute">id</span>=<span class="value">"tab-sample-container-1"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"section active"</span> <span class="attribute">id</span>=<span class="value">"tab-sample-1"</span>&gt;</span>
+    <span class="comment">&lt;!-- Sample content 1 --&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"section"</span> <span class="attribute">id</span>=<span class="value">"tab-sample-2"</span>&gt;</span>
+    <span class="comment">&lt;!-- Sample content 2 --&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+    </div>
+</div>
+
+
+<div class="gr grsl pvl">
+    <div class="gu gu-1of5">
         <h2>Ajax Tabs</h2>
         <p>
           Set tab content via Ajax for the tabs by setting an href value in the tab links.
@@ -553,14 +599,12 @@
         </p>
     </div>
     <div class="gu gu-last">
-        <h3 class="mbm">With a Tetra.js component</h3>
-
-        <ul class="nav nav-tabs bootnode" data-event="click" data-comp="navtabs" data-target-id="tab-sample-container">
+        <ul class="nav nav-tabs bootnode" data-event="click" data-comp="navtabs" data-target-id="tab-sample-container-2">
             <li><a data-href="/tetra-ui/doc/tab-sample-1.html">Sample 1</a></li>
             <li><a data-href="/tetra-ui/doc/tab-sample-2.html">Sample 2</a></li>
             <li><a data-href="/tetra-ui/doc/tab-sample-3.html">Sample 3</a></li>
         </ul>
-        <div class="nav-tabs-section" id="tab-sample-container">
+        <div class="nav-tabs-section" id="tab-sample-container-2">
             <div class="section">
               <h4 class="mbxs">This is the default content</h4>
               <p>It can be a server side include for example. Click on a tab to see it change.</p>

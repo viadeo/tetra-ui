@@ -5485,6 +5485,9 @@ i.vicon {
 .nav-tabs-section.loading .section {
   display: none;
 }
+.nav-tabs-section.loading .section.active {
+  display: block;
+}
 .nav-tabs-section.loading .loader {
   display: block;
 }
