@@ -1141,7 +1141,7 @@ ul.link-list {
    list-style: none;
    margin: 0;
    padding: 0;
-   
+
    li {
     position: relative;
     margin: 0 0 @spacingXs 0;
@@ -1947,7 +1947,7 @@ table.table {
    padding-bottom: 5px;
    border-bottom: 1px solid @grayLighter;
    .clearfix();
-   
+
    h1 {
        margin: 2px 0 0 0;
        line-height: @baseLineHeight - 0.2;
@@ -1955,7 +1955,7 @@ table.table {
    }
    .actions {
         .float-right(@rtl);
-        
+
         .btn {
             margin-left: 5px;
         }
@@ -1969,7 +1969,7 @@ h1 .sub {
   font-size: 15px;
 }
 
-/* --- Rich container Pattern --- 
+/* --- Rich container Pattern ---
 @Modele : It's a block who contains media and a text. The img is float to the left by defaults
 @Options :  -- Add .imgRight to the container to put the img on the right
             -- Add .imgWrap to the container to put the text above the image
@@ -1984,12 +1984,12 @@ h1 .sub {
 .rc, .richcontainer {
 	display: block;
 	.clearfixHack();
-	
+
 	.bd{
 	   display: table-cell;
 	   *display: inline-block;
 	   zoom: 1;
-	   
+
 	   &:after {
 	       clear: both;
 	       display: block;
@@ -2034,16 +2034,16 @@ h1 .sub {
   background: @panelBackground;
   border: 1px solid @borderColor;
   border-radius: 12px;
-  
+
   .vicon {
     .margin-right(@rtl, -9px);
     color: @borderColor;
     font-size: 8px;
   }
-  
+
   &:hover {
     background: @panelBorder;
-    
+
     .vicon {
       color: darken(@borderColor, 25%);
 
@@ -2135,7 +2135,7 @@ h1 .sub {
 	display: block;
 	border: 1px solid tint(@blueSoft, 79%);
 	padding: 1px;
-	
+
 	img {
 	 display: block;
    background-color: tint(@blueSoft, 69%);
@@ -2145,7 +2145,7 @@ h1 .sub {
   &:hover,
   &:focus {
     border-color: tint(@blueSoft, 60%);
-    
+
     img {
       background-color: tint(@blueSoft, 60%);
     }

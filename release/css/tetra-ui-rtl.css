@@ -3881,7 +3881,7 @@ h1 .sub {
   font-weight: normal;
   font-size: 15px;
 }
-/* --- Rich container Pattern --- 
+/* --- Rich container Pattern ---
 @Modele : It's a block who contains media and a text. The img is float to the left by defaults
 @Options :  -- Add .imgRight to the container to put the img on the right
             -- Add .imgWrap to the container to put the text above the image
