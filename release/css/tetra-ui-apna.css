@@ -3019,7 +3019,8 @@ a {
   text-align: left;
   cursor: pointer;
 }
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
   color: #0071cc;
 }
@@ -3097,7 +3098,8 @@ h6,
   font-size: 8px;
   margin: 0 -1px 0 0;
 }
-.h-bx .h-bx-link:hover .vicon {
+.h-bx .h-bx-link:hover .vicon,
+.h-bx .h-bx-link:focus .vicon {
   color: #83a0b9;
 }
 ul.link-list {
@@ -4027,6 +4029,10 @@ h1 .sub {
 .ui-label:hover .vicon:hover {
   color: #c80000;
 }
+.ui-label a:hover .vicon,
+.ui-label a:focus .vicon {
+  color: #c80000;
+}
 .ui-badge {
   background-color: #f56600;
   background-repeat: repeat-x;
@@ -4093,7 +4099,8 @@ h1 .sub {
   vertical-align: top;
   line-height: 15px;
 }
-.ui-tag .remove:hover .vicon {
+.ui-tag .remove:hover .vicon,
+.ui-tag .remove:focus .vicon {
   background: #808080;
 }
 /* Avatar Styles */
@@ -4111,16 +4118,20 @@ h1 .sub {
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.avatar:hover {
+.avatar:hover,
+.avatar:focus {
   border-color: #cdd9e3;
 }
-.avatar:hover img {
+.avatar:hover img,
+.avatar:focus img {
   background-color: #cdd9e3;
 }
-a:hover .avatar {
+a:hover .avatar,
+a:focus .avatar {
   border-color: #cdd9e3;
 }
-a:hover .avatar img {
+a:hover .avatar img,
+a:focus .avatar img {
   background-color: #cdd9e3;
 }
 /* Global Icons */
@@ -4161,7 +4172,8 @@ i.vicon {
   position: relative;
   *z-index: 10;
 }
-.popover-display:hover .popover {
+.popover-display:hover .popover,
+.popover-display:focus .popover {
   visibility: visible;
   margin-bottom: 7px;
   opacity: 1;
@@ -4235,7 +4247,8 @@ i.vicon {
   border-bottom-right-radius: 3px;
 }
 /* On bottom */
-.popover-display.popover-bottom:hover .popover {
+.popover-display.popover-bottom:hover .popover,
+.popover-display.popover-bottom:focus .popover {
   margin-top: 7px;
 }
 .popover-bottom .popover {
@@ -4284,7 +4297,8 @@ i.vicon {
 .tooltip {
   position: relative;
 }
-.tooltip:hover .tooltip-content {
+.tooltip:hover .tooltip-content,
+.tooltip:focus .tooltip-content {
   visibility: visible;
   margin-bottom: 7px;
   opacity: 1;
@@ -4335,7 +4349,8 @@ i.vicon {
   border-width: 7px 7px 0;
 }
 /* On right */
-.tooltip.tooltip-right:hover .tooltip-content {
+.tooltip.tooltip-right:hover .tooltip-content,
+.tooltip.tooltip-right:focus .tooltip-content {
   margin-left: 7px;
   *margin-left: 5px;
 }
@@ -4353,7 +4368,8 @@ i.vicon {
   top: 6px;
 }
 /* On left */
-.tooltip.tooltip-left:hover .tooltip-content {
+.tooltip.tooltip-left:hover .tooltip-content,
+.tooltip.tooltip-left:focus .tooltip-content {
   margin-right: 7px;
   *margin-right: 5px;
 }
@@ -4373,7 +4389,8 @@ i.vicon {
   top: 6px;
 }
 /* On bottom */
-.tooltip.tooltip-bottom:hover .tooltip-content {
+.tooltip.tooltip-bottom:hover .tooltip-content,
+.tooltip.tooltip-bottom:focus .tooltip-content {
   margin-top: 7px;
   *margin-top: 2px;
 }
@@ -4416,7 +4433,9 @@ i.vicon {
 
 }
 .btn:hover,
-.core-form .btn:hover {
+.core-form .btn:hover,
+.btn:focus,
+.core-form .btn:focus {
   text-decoration: none;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -4501,7 +4520,13 @@ i.vicon {
 .socialAction:hover,
 .eventsAction:hover,
 .core-form .btn-primary:hover,
-.core-form .btn-secondary:hover {
+.core-form .btn-secondary:hover,
+.btn-primary:focus,
+.btn-secondary:focus,
+.socialAction:focus,
+.eventsAction:focus,
+.core-form .btn-primary:focus,
+.core-form .btn-secondary:focus {
   background-color: #ffbb02;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #ffc906, #ffbb02);
@@ -4581,6 +4606,18 @@ i.vicon {
 .eventsAction.btn-loading:hover,
 .core-form .btn-primary.btn-loading:hover,
 .core-form .btn-secondary.btn-loading:hover,
+.btn-primary.btn-disabled:focus,
+.btn-secondary.btn-disabled:focus,
+.socialAction.btn-disabled:focus,
+.eventsAction.btn-disabled:focus,
+.core-form .btn-primary.btn-disabled:focus,
+.core-form .btn-secondary.btn-disabled:focus,
+.btn-primary.btn-loading:focus,
+.btn-secondary.btn-loading:focus,
+.socialAction.btn-loading:focus,
+.eventsAction.btn-loading:focus,
+.core-form .btn-primary.btn-loading:focus,
+.core-form .btn-secondary.btn-loading:focus,
 .btn-primary.btn-disabled:active,
 .btn-secondary.btn-disabled:active,
 .socialAction.btn-disabled:active,
@@ -4635,6 +4672,12 @@ i.vicon {
 .eventsAction.btn-loading:hover span,
 .core-form .btn-primary.btn-loading:hover span,
 .core-form .btn-secondary.btn-loading:hover span,
+.btn-primary.btn-loading:focus span,
+.btn-secondary.btn-loading:focus span,
+.socialAction.btn-loading:focus span,
+.eventsAction.btn-loading:focus span,
+.core-form .btn-primary.btn-loading:focus span,
+.core-form .btn-secondary.btn-loading:focus span,
 .btn-primary.btn-loading:active span,
 .btn-secondary.btn-loading:active span,
 .socialAction.btn-loading:active span,
@@ -4655,7 +4698,13 @@ i.vicon {
 .socialAction.btn-inactive:hover,
 .eventsAction.btn-inactive:hover,
 .core-form .btn-primary.btn-inactive:hover,
-.core-form .btn-secondary.btn-inactive:hover {
+.core-form .btn-secondary.btn-inactive:hover,
+.btn-primary.btn-inactive:focus,
+.btn-secondary.btn-inactive:focus,
+.socialAction.btn-inactive:focus,
+.eventsAction.btn-inactive:focus,
+.core-form .btn-primary.btn-inactive:focus,
+.core-form .btn-secondary.btn-inactive:focus {
   border-color: #ffbb02;
   background-color: #ffc906;
   background-repeat: repeat-x;
@@ -4704,7 +4753,10 @@ i.vicon {
 }
 .btn-default:hover,
 .secEventsAction:hover,
-.core-form .btn-default:hover {
+.core-form .btn-default:hover,
+.btn-default:focus,
+.secEventsAction:focus,
+.core-form .btn-default:focus {
   background-color: #d5d5d5;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #e8e8e8, #d5d5d5);
@@ -4718,7 +4770,10 @@ i.vicon {
 }
 .btn-default:hover .vicon,
 .secEventsAction:hover .vicon,
-.core-form .btn-default:hover .vicon {
+.core-form .btn-default:hover .vicon,
+.btn-default:focus .vicon,
+.secEventsAction:focus .vicon,
+.core-form .btn-default:focus .vicon {
   color: #2e2e2e;
 }
 .btn-default:active,
@@ -4762,6 +4817,12 @@ i.vicon {
 .btn-default.btn-loading:hover,
 .secEventsAction.btn-loading:hover,
 .core-form .btn-default.btn-loading:hover,
+.btn-default.btn-disabled:focus,
+.secEventsAction.btn-disabled:focus,
+.core-form .btn-default.btn-disabled:focus,
+.btn-default.btn-loading:focus,
+.secEventsAction.btn-loading:focus,
+.core-form .btn-default.btn-loading:focus,
 .btn-default.btn-disabled:active,
 .secEventsAction.btn-disabled:active,
 .core-form .btn-default.btn-disabled:active,
@@ -4791,7 +4852,10 @@ i.vicon {
 .core-form .btn-default.btn-inactive,
 .btn-default.btn-inactive:hover,
 .secEventsAction.btn-inactive:hover,
-.core-form .btn-default.btn-inactive:hover {
+.core-form .btn-default.btn-inactive:hover,
+.btn-default.btn-inactive:focus,
+.secEventsAction.btn-inactive:focus,
+.core-form .btn-default.btn-inactive:focus {
   border-color: #d5d5d5;
   background-color: #ebebeb;
   background-repeat: repeat-x;
@@ -4828,7 +4892,8 @@ i.vicon {
 .btn-tertiary .vicon {
   color: #ffffff;
 }
-.btn-tertiary:hover {
+.btn-tertiary:hover,
+.btn-tertiary:focus {
   background-color: #62a600;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #91cf00, #62a600);
@@ -4864,6 +4929,8 @@ i.vicon {
 .btn-tertiary.btn-loading:visited,
 .btn-tertiary.btn-disabled:hover,
 .btn-tertiary.btn-loading:hover,
+.btn-tertiary.btn-disabled:focus,
+.btn-tertiary.btn-loading:focus,
 .btn-tertiary.btn-disabled:active,
 .btn-tertiary.btn-loading:active,
 .btn-tertiary.btn-disabled span,
@@ -4878,12 +4945,14 @@ i.vicon {
 }
 .btn-tertiary.btn-loading span,
 .btn-tertiary.btn-loading:hover span,
+.btn-tertiary.btn-loading:focus span,
 .btn-tertiary.btn-loading:active span {
   background: transparent url('/v_img/coreui/buttons/buttons/loaders/primary.gif') no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
 .btn-tertiary.btn-inactive,
-.btn-tertiary.btn-inactive:hover {
+.btn-tertiary.btn-inactive:hover,
+.btn-tertiary.btn-loading:focus {
   border-color: #86b300;
   background-color: #86b300;
   background-repeat: repeat-x;
@@ -4941,9 +5010,11 @@ i.vicon {
 }
 .btn-disabled,
 .btn-disabled:hover,
+.btn-disabled:focus,
 .btn-disabled:active,
 .btn-loading,
 .btn-loading:hover,
+.btn-loading:focus,
 .btn-loading:active {
   cursor: not-allowed;
   -webkit-box-shadow: none;
@@ -4952,6 +5023,7 @@ i.vicon {
 }
 .btn-loading span,
 .btn-loading:hover span,
+.btn-loading:focus span,
 .btn-loading:active span {
   display: inline-block;
   overflow: hidden;
@@ -4979,7 +5051,8 @@ i.vicon {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0);
   *filter: none;
 }
-.btn-icon:hover {
+.btn-icon:hover,
+.btn-icon:focus {
   border-color: #ffbb02;
   background-color: #ffc906;
   background-repeat: repeat-x;
@@ -4991,7 +5064,8 @@ i.vicon {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd724', endColorstr='#ffc906', GradientType=0);
   *filter: none;
 }
-.btn-icon:hover .vicon {
+.btn-icon:hover .vicon,
+.btn-icon:focus .vicon {
   color: #404040;
 }
 .btn-icon .vicon {
@@ -5001,7 +5075,8 @@ i.vicon {
   *margin: -0.5em 0 0;
   *line-height: 2.25em;
 }
-.btn-icon.btn-disabled:hover {
+.btn-icon.btn-disabled:hover,
+.btn-icon.btn-disabled:focus {
   border-color: #dddddd;
   background-color: #f3f3f3;
   background-repeat: repeat-x;
@@ -5375,12 +5450,14 @@ i.vicon {
   font-size: 9px;
   color: #999999;
 }
-.nav li.side-links a:hover {
+.nav li.side-links a:hover,
+.nav li.side-links a:focus {
   text-decoration: underline;
   color: #0071cc;
   background: none;
 }
-.nav li.side-links a:hover .vicon {
+.nav li.side-links a:hover .vicon,
+.nav li.side-links a:focus .vicon {
   color: #000000;
 }
 .nav-tabs {
@@ -5389,7 +5466,8 @@ i.vicon {
   border-bottom: 1px solid #d1dce5;
   background: #f5f7f9;
 }
-.nav-tabs li a:hover {
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
   background: #e0e7ee;
 }
 .nav-tabs li.active a {
@@ -5420,7 +5498,8 @@ i.vicon {
   padding: 10px 20px;
   margin-bottom: -2px;
 }
-.nav-tabs-secondary li a:hover {
+.nav-tabs-secondary li a:hover,
+.nav-tabs-secondary li a:focus {
   background: #ecf1f5;
 }
 .nav-tabs-secondary li.active a {
@@ -5448,7 +5527,8 @@ i.vicon {
   border-color: transparent transparent #ffffff;
   border-width: 0 10px 10px;
 }
-.nav-tabs-secondary li.active a:hover {
+.nav-tabs-secondary li.active a:hover,
+.nav-tabs-secondary li.active a:focus {
   background: none;
 }
 .nav-pills {
@@ -5465,7 +5545,8 @@ i.vicon {
   line-height: 1.4em;
   padding: 5px 10px;
 }
-.nav-pills li a:hover {
+.nav-pills li a:hover,
+.nav-pills li a:focus {
   background: #e1e8ee;
   border-color: #e1e8ee;
 }
@@ -5486,7 +5567,8 @@ i.vicon {
 .nav-menu li a {
   position: relative;
 }
-.nav-menu li a:hover {
+.nav-menu li a:hover,
+.nav-menu li a:focus {
   background: #ecf1f5;
 }
 .nav-menu li.active a {
@@ -5514,7 +5596,8 @@ i.vicon {
   border-color: #ffffff transparent transparent transparent;
   border-width: 10px 10px 0 10px;
 }
-.nav-menu li.active a:hover {
+.nav-menu li.active a:hover,
+.nav-menu li.active a:focus {
   background: none;
 }
 .nav-tabs-section .section {
@@ -5693,12 +5776,8 @@ i.vicon {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
   *filter: none;
 }
-.paginator li.arrow .vicon {
-  margin-right: 0;
-  font-size: 7px;
-  color: #808080;
-}
-.paginator li.arrow:hover a {
+.paginator li.arrow a:hover,
+.paginator li.arrow a:focus {
   border-color: #d5d5d5;
   background-color: #d5d5d5;
   background-repeat: repeat-x;
@@ -5710,8 +5789,14 @@ i.vicon {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#d5d5d5', GradientType=0);
   *filter: none;
 }
-.paginator li.arrow:hover .vicon {
+.paginator li.arrow a:hover .vicon,
+.paginator li.arrow a:focus .vicon {
   color: #000000;
+}
+.paginator li.arrow .vicon {
+  margin-right: 0;
+  font-size: 7px;
+  color: #808080;
 }
 .paginator li.arrow.disabled a {
   border-color: #e1e8ee;
@@ -5726,15 +5811,14 @@ i.vicon {
   *filter: none;
   cursor: default;
 }
-.paginator li.arrow.disabled .vicon {
+.paginator li.arrow.disabled a .vicon {
   color: #bfbfbf;
 }
 .paginator li.ellipsis span {
   margin: 0 5px;
   color: #bfbfbf;
 }
-.paginator li.active a,
-.paginator li:hover a {
+.paginator li.active a {
   border-color: #d1dce5;
   background-color: #e1e8ee;
   background-repeat: repeat-x;
@@ -5746,15 +5830,29 @@ i.vicon {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f8', endColorstr='#e1e8ee', GradientType=0);
   *filter: none;
 }
-.paginator li.active .vicon,
-.paginator li:hover .vicon {
+.paginator li.active .vicon {
   color: #000000;
 }
 .paginator li.active a {
   cursor: default;
 }
-.paginator li:hover a {
+.paginator li a:hover,
+.paginator li a:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-color: #d1dce5;
+  background-color: #e1e8ee;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #f2f5f8, #e1e8ee);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f5f8), color-stop(100%, #e1e8ee));
+  background-image: -webkit-linear-gradient(top, #f2f5f8, #e1e8ee);
+  background-image: -o-linear-gradient(top, #f2f5f8, #e1e8ee);
+  background-image: linear-gradient(to bottom, #f2f5f8, #e1e8ee);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f8', endColorstr='#e1e8ee', GradientType=0);
+  *filter: none;
+}
+.paginator li a:hover .vicon,
+.paginator li a:focus .vicon {
+  color: #000000;
 }
 .paginator-multi li {
   padding: 0;
@@ -5762,6 +5860,9 @@ i.vicon {
 }
 .paginator-multi li a {
   outline: none;
+}
+.paginator-multi li a:focus {
+  outline: thin dotted;
 }
 .paginator-multi .multi {
   position: relative;
@@ -5830,8 +5931,9 @@ i.vicon {
   outline: none;
   filter: none;
 }
-.paginator-multi .multi ul li.active a,
-.paginator-multi .multi ul li:hover a {
+.paginator-multi .multi ul li a.active,
+.paginator-multi .multi ul li a:hover,
+.paginator-multi .multi ul li a:focus {
   background-color: #e1e8ee;
   background-repeat: repeat-x;
   background-image: -moz-linear-gradient(top, #f2f5f8, #e1e8ee);
@@ -5842,7 +5944,7 @@ i.vicon {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f8', endColorstr='#e1e8ee', GradientType=0);
   *filter: none;
 }
-.paginator-multi .multi ul li.active a {
+.paginator-multi .multi ul li a.active {
   border: 1px solid #d1dce5;
   border-width: 1px 0;
 }
@@ -5852,6 +5954,10 @@ i.vicon {
 .custom-radio:not(#unsupported) input {
   opacity: 0;
   width: 20px;
+}
+.custom-radio:not(#unsupported) input:focus + .custom-radio-element {
+  box-shadow: 0 0 0 1px #88a7bc;
+  outline: thin dotted;
 }
 .custom-radio:not(#unsupported) .custom-radio-element {
   display: inline-block;
@@ -6081,8 +6187,12 @@ i.vicon {
 .bx-alert .bx-alert-close .vicon {
   color: #c1d0dc;
 }
-.bx-alert .bx-alert-close:hover .vicon {
+.bx-alert .bx-alert-close:hover .vicon,
+.bx-alert .bx-alert-close:focus .vicon {
   color: #9cb3c7;
+}
+.bx-alert .bx-alert-close:focus {
+  outline: thin dotted;
 }
 .bx-alert .bx-alert-icon {
   display: inline-block;
@@ -6122,7 +6232,8 @@ i.vicon {
 .bx-alert-warning .bx-alert-close .vicon {
   color: #ffd520;
 }
-.bx-alert-warning .bx-alert-close:hover .vicon {
+.bx-alert-warning .bx-alert-close:hover .vicon,
+.bx-alert-warning .bx-alert-close:focus .vicon {
   color: #ccaa1a;
 }
 .bx-alert-error {
@@ -6143,7 +6254,8 @@ i.vicon {
 .bx-alert-error .bx-alert-close .vicon {
   color: #e99999;
 }
-.bx-alert-error .bx-alert-close:hover .vicon {
+.bx-alert-error .bx-alert-close:hover .vicon,
+.bx-alert-error .bx-alert-close:focus .vicon {
   color: #d94d4d;
 }
 .rc-card {
@@ -6454,7 +6566,8 @@ i.vicon {
   color: #4d4d4d;
   text-decoration: none;
 }
-.nav-steps li a:hover .nav-steps-text {
+.nav-steps li a:hover .nav-steps-text,
+.nav-steps li a:focus .nav-steps-text {
   text-decoration: underline;
 }
 .nav-steps li .nav-steps-text {

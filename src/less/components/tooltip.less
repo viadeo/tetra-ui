@@ -1,13 +1,16 @@
 .tooltip {
 	position: relative;
 
-	&:hover .tooltip-content {
-		visibility: visible;
-		margin-bottom: 7px;
-		opacity: 1;
+	&:hover,
+  &:focus {
+    .tooltip-content {
+  		visibility: visible;
+  		margin-bottom: 7px;
+  		opacity: 1;
 
-		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
-	}
+  		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
+  	}
+  }
 }
 
 .tooltip-content {
@@ -59,9 +62,12 @@
 /* On right */
 
 .tooltip.tooltip-right {
-  &:hover .tooltip-content {
-    margin-left: 7px;
-    *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-left: 7px;
+      *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -83,9 +89,12 @@
 /* On left */
 
 .tooltip.tooltip-left {
-  &:hover .tooltip-content {
-    margin-right: 7px;
-    *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-right: 7px;
+      *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -109,9 +118,12 @@
 /* On bottom */
 
 .tooltip.tooltip-bottom {
-  &:hover .tooltip-content {
-    margin-top: 7px;
-    *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-top: 7px;
+      *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 

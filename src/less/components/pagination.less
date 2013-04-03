@@ -24,6 +24,16 @@
 		&.arrow {
 			a {
 				#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+
+				&:hover,
+				&:focus {
+					border-color: @buttonDefaultBorderColor;
+					#gradient > .vertical(@buttonDefaultHoverColor, @buttonDefaultBorderColor);
+
+					.vicon {
+						color: @black;
+					}
+				}
 			}
 
 			.vicon {
@@ -32,26 +42,15 @@
 				color: @gray;
 			}
 
-			&:hover {
-				a {
-					border-color: @buttonDefaultBorderColor;
-					#gradient > .vertical(@buttonDefaultHoverColor, @buttonDefaultBorderColor);
-				}
-
-				.vicon {
-					color: @black;
-				}
-			}
-
 			&.disabled {
 				a {
 					border-color: lighten(@borderColor, 5%);
 					#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
 					cursor: default;
-				}
 
-				.vicon {
-					color: @grayLight;
+					.vicon {
+						color: @grayLight;
+					}
 				}
 			}
 		}
@@ -63,7 +62,7 @@
 			}
 		}
 
-		&.active, &:hover {
+		&.active {
 			a {
 				border-color: @borderColor;
 				#gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
@@ -80,99 +79,106 @@
 			}
 		}
 
-		&:hover {
-			a {
-				box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+		a:hover,
+		a:focus {
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+			border-color: @borderColor;
+			#gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
+
+
+			.vicon {
+				color: @black;
 			}
 		}
 	}
 }
 
 .paginator-multi {
-    li {
-        padding: 0;
-        margin: 0 2px;
-        a {
-             outline: none;
-        }
-    }
+	li {
+		padding: 0;
+		margin: 0 2px;
+		a {
+			outline: none;
+			&:focus {
+				outline: thin dotted;
+			}
+		}
+	}
 
-    .multi {
-        position: relative;
-        
-        &.open {
-            .multi-list {
-                opacity: 1;
-                visibility: visible;
-                top: 50%;
-            }
-        }
-        
-        .multi-list {
-            position: absolute;
-            z-index: 100;
-            left: 0;
-            top: 100%;
-            width: 100%;
-            max-height: 185px;
-            overflow-x: hidden;
-            visibility: hidden;
-            opacity: 0;
-            border: 1px solid @borderColor;
-            .transition(opacity 0.5s);
-            background: @white;
-            box-shadow:
-            	inset 0 7px 21px -17px rgba(0, 0, 0, 0.7),
-            	inset 0 -7px 21px -17px rgba(0, 0, 0, 0.6);
-        }
+	.multi {
+		position: relative;
 
-        .paginator-btn {
-        	padding-left: @spacingS;
-        	padding-right: @spacingXs;
-        	#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+		&.open {
+			.multi-list {
+				opacity: 1;
+				visibility: visible;
+				top: 50%;
+			}
+		}
 
-		    	.vicon {
-						margin-right: 0;
-						margin-left: -2px;
-						font-size: 7px;
-						color: @gray;
+		.multi-list {
+			position: absolute;
+			z-index: 100;
+			left: 0;
+			top: 100%;
+			width: 100%;
+			max-height: 185px;
+			overflow-x: hidden;
+			visibility: hidden;
+			opacity: 0;
+			border: 1px solid @borderColor;
+			.transition(opacity 0.5s);
+			background: @white;
+			box-shadow:
+				inset 0 7px 21px -17px rgba(0, 0, 0, 0.7),
+				inset 0 -7px 21px -17px rgba(0, 0, 0, 0.6);
+		}
+
+		.paginator-btn {
+			padding-left: @spacingS;
+			padding-right: @spacingXs;
+			#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+
+			.vicon {
+				margin-right: 0;
+				margin-left: -2px;
+				font-size: 7px;
+				color: @gray;
+			}
+		}
+
+		ul {
+			width: 150%;
+			max-height: 183px;
+			overflow-y: scroll;
+			border-radius: @borderRadiusS;
+
+			li {
+				margin: 0;
+				padding: 0;
+				display: block;
+
+				a {
+					display: block;
+					text-align: center;
+					border: 0 none;
+					padding: 5px 10% 5px 0;
+					background: none;
+					border-radius: 0;
+					box-shadow: none;
+					outline: none;
+					filter: none;
+
+					&.active, &:hover, &:focus {
+						#gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
 					}
-		    }
 
-        ul {
-            width: 150%;
-            max-height: 183px;
-            overflow-y: scroll;
-            border-radius: @borderRadiusS;
-            
-            li {
-                margin: 0;
-                padding: 0;
-                display: block;
-
-                a {
-                    display: block;
-                    text-align: center;
-                    border: 0 none;
-                    padding: 5px 10% 5px 0;
-                    background: none;
-                    border-radius: 0;
-                    box-shadow: none;
-                    outline: none;
-                    filter: none;
-                }
-                &.active, &:hover {
-                    a {
-                        #gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
-                    }
-                }
-                &.active {
-                    a {
-                        border: 1px solid @borderColor;
-                        border-width: 1px 0;
-                    }
-                }
-            }
-        }
-    }
+					&.active {
+						border: 1px solid @borderColor;
+						border-width: 1px 0;
+					}
+				}
+			}
+		}
+	}
 }

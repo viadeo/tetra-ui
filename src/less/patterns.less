@@ -116,6 +116,13 @@ h1 .sub {
       }
     }
   }
+
+  a:hover,
+  a:focus {
+    .vicon {
+      color: @errorText;
+    }
+  }
 }
 
 .ui-badge {
@@ -176,7 +183,8 @@ h1 .sub {
       line-height: 15px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .vicon {
         background: @gray;
       }

@@ -31,8 +31,14 @@
 		.vicon {
 			color: tint(@blueSoft, 50%);
 		}
-		&:hover .vicon {
-			color: tint(@blueSoft, 20%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: tint(@blueSoft, 20%);
+			}
+		}
+		&:focus {
+			outline: thin dotted;
 		}
 	}
 
@@ -71,8 +77,11 @@
 		.vicon {
 			color: @yellow;
 		}
-		&:hover .vicon {
-			color: shade(@yellow, 20%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: shade(@yellow, 20%);
+			}
 		}
 	}
 }
@@ -88,8 +97,11 @@
 		.vicon {
 			color: tint(@errorText, 60%);
 		}
-		&:hover .vicon {
-			color: tint(@errorText, 30%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: tint(@errorText, 30%);
+			}
 		}
 	}
 }

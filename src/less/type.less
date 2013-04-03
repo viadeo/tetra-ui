@@ -27,7 +27,7 @@ a {
     .text-align-left(@rtl);
     cursor: pointer;
 }
-a:hover {
+a:hover, a:focus {
     text-decoration: underline;
     color: @linkColorHover;
 }
@@ -95,7 +95,8 @@ h6, .h6 {
       margin: 0 -1px 0 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .vicon {
         color: @blueSoft;
       }

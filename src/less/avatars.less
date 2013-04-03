@@ -12,7 +12,8 @@
    .transition(background-color 0.2s);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: tint(@blueSoft, 60%);
     
     img {
@@ -21,7 +22,7 @@
   }
 }
 
-a:hover {
+a:hover, a:focus {
   .avatar {
     border-color: tint(@blueSoft, 60%);
 

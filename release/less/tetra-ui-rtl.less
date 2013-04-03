@@ -1069,7 +1069,7 @@ a {
     .text-align-left(@rtl);
     cursor: pointer;
 }
-a:hover {
+a:hover, a:focus {
     text-decoration: underline;
     color: @linkColorHover;
 }
@@ -1137,7 +1137,8 @@ h6, .h6 {
       margin: 0 -1px 0 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .vicon {
         color: @blueSoft;
       }
@@ -2062,6 +2063,13 @@ h1 .sub {
       }
     }
   }
+
+  a:hover,
+  a:focus {
+    .vicon {
+      color: @errorText;
+    }
+  }
 }
 
 .ui-badge {
@@ -2122,7 +2130,8 @@ h1 .sub {
       line-height: 15px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .vicon {
         background: @gray;
       }
@@ -2144,7 +2153,8 @@ h1 .sub {
    .transition(background-color 0.2s);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: tint(@blueSoft, 60%);
     
     img {
@@ -2153,7 +2163,7 @@ h1 .sub {
   }
 }
 
-a:hover {
+a:hover, a:focus {
   .avatar {
     border-color: tint(@blueSoft, 60%);
 
@@ -2206,11 +2216,14 @@ i.vicon {
 	position: relative;
   *z-index: 10;
 
-	&:hover .popover {
-		visibility: visible;
-		margin-bottom: 7px;
-		opacity: 1;
-	}
+	&:hover,
+  &:focus {
+    .popover {
+  		visibility: visible;
+  		margin-bottom: 7px;
+  		opacity: 1;
+  	}
+  }
 }
 
 .popover {
@@ -2298,8 +2311,11 @@ i.vicon {
 /* On bottom */
 
 .popover-display.popover-bottom {
-  &:hover .popover {
-    margin-top: 7px;
+  &:hover,
+  &:focus {
+    .popover {
+      margin-top: 7px;
+    }
   }
 }
 
@@ -2350,13 +2366,16 @@ i.vicon {
 .tooltip {
 	position: relative;
 
-	&:hover .tooltip-content {
-		visibility: visible;
-		margin-bottom: 7px;
-		opacity: 1;
+	&:hover,
+  &:focus {
+    .tooltip-content {
+  		visibility: visible;
+  		margin-bottom: 7px;
+  		opacity: 1;
 
-		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
-	}
+  		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
+  	}
+  }
 }
 
 .tooltip-content {
@@ -2408,9 +2427,12 @@ i.vicon {
 /* On right */
 
 .tooltip.tooltip-right {
-  &:hover .tooltip-content {
-    margin-left: 7px;
-    *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-left: 7px;
+      *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -2432,9 +2454,12 @@ i.vicon {
 /* On left */
 
 .tooltip.tooltip-left {
-  &:hover .tooltip-content {
-    margin-right: 7px;
-    *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-right: 7px;
+      *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -2458,9 +2483,12 @@ i.vicon {
 /* On bottom */
 
 .tooltip.tooltip-bottom {
-  &:hover .tooltip-content {
-    margin-top: 7px;
-    *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-top: 7px;
+      *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -2497,9 +2525,9 @@ i.vicon {
   .box-shadow(none);
   .user-select(none);
 
-  &:hover {
+  &:hover, &:focus {
     text-decoration: none;
-  	.box-shadow(0 1px 1px rgba(0,0,0,.1));
+    .box-shadow(0 1px 1px rgba(0,0,0,.1));
   }
   &:active, &.active {
     .box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
@@ -2550,7 +2578,7 @@ i.vicon {
   #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
   _background-color: @_primaryBgColor!important;
 
-  &:hover {
+  &:hover, &:focus {
     #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
     color: @_primaryTextColor;
   }
@@ -2565,6 +2593,7 @@ i.vicon {
     &:link,
     &:visited,
     &:hover,
+    &:focus,
     &:active,
     span {
 	    background-color: lighten(@_primaryBgColor, 10%);
@@ -2577,6 +2606,7 @@ i.vicon {
   }
   &.btn-loading,
   &.btn-loading:hover,
+  &.btn-loading:focus,
   &.btn-loading:active {
   		span {
   			background: transparent url('@{img-buttons-dir}/loaders/secondary.gif') no-repeat 50% 0.3em;
@@ -2584,7 +2614,8 @@ i.vicon {
   		}
   }
   &.btn-inactive,
-  &.btn-inactive:hover {
+  &.btn-inactive:hover,
+  &.btn-inactive:focus {
     border-color: @_primaryBorderColor;
     #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
     .box-shadow(none);
@@ -2609,7 +2640,8 @@ i.vicon {
     color: @gray;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);
     color: @_defaultTextColor;
 
@@ -2628,6 +2660,7 @@ i.vicon {
     &:link,
     &:visited,
     &:hover,
+    &:focus,
     &:active,
     span {
 	    background-color: @_defaultEndColor;
@@ -2639,7 +2672,8 @@ i.vicon {
     }
   }
   &.btn-inactive,
-  &.btn-inactive:hover {
+  &.btn-inactive:hover,
+  &.btn-inactive:focus {
     border-color: @_defaultBorderColor;
     #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
     .box-shadow(none);
@@ -2664,7 +2698,8 @@ i.vicon {
     color: @_tertiaryTextColor;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     #gradient > .vertical(@_tertiaryStartColor, @_tertiaryHoverColor);
     border-color: @_tertiaryHoverColor;
     color: @_tertiaryTextColor;
@@ -2680,6 +2715,7 @@ i.vicon {
     &:link,
     &:visited,
     &:hover,
+    &:focus,
     &:active,
     span {
 	    background-color: lighten(@_tertiaryEndColor,3%);
@@ -2692,6 +2728,7 @@ i.vicon {
   }
   &.btn-loading,
   &.btn-loading:hover,
+  &.btn-loading:focus,
   &.btn-loading:active {
   	span {
   		background: transparent url('@{img-buttons-dir}/buttons/loaders/primary.gif') no-repeat 50% 0.3em;
@@ -2699,7 +2736,8 @@ i.vicon {
   	}
   }
   &.btn-inactive,
-  &.btn-inactive:hover {
+  &.btn-inactive:hover,
+  &.btn-loading:focus {
     border-color: @_tertiaryBorderColor;
     #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
     .box-shadow(none);
@@ -2760,9 +2798,11 @@ i.vicon {
 
 .btn-disabled,
 .btn-disabled:hover,
+.btn-disabled:focus,
 .btn-disabled:active,
 .btn-loading,
 .btn-loading:hover,
+.btn-loading:focus,
 .btn-loading:active {
   cursor: not-allowed;
   .box-shadow(none);
@@ -2770,6 +2810,7 @@ i.vicon {
 }
 .btn-loading,
 .btn-loading:hover,
+.btn-loading:focus,
 .btn-loading:active {
 	span {
 	   display: inline-block;
@@ -2795,7 +2836,8 @@ i.vicon {
   border: 1px solid lighten(@buttonDefaultBorderColor, 3%);
   #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @buttonPrimaryBorderColor;
     #gradient > .vertical(@buttonPrimaryBgColor, @buttonPrimaryEndColor);
 
@@ -2813,7 +2855,8 @@ i.vicon {
   }
 
   &.btn-disabled {
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: lighten(@buttonDefaultBorderColor, 3%);
       #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
     }
@@ -2823,6 +2866,7 @@ i.vicon {
     }
   }
 }
+
 /**********************/
 /* General Properties */
 /**********************/
@@ -3201,7 +3245,8 @@ i.vicon {
 	       	color: lighten(@black, 60%);
 	      }
 
-				&:hover {
+				&:hover,
+				&:focus {
 					text-decoration: underline;
 					color: @linkColorHover;
 					background: none;
@@ -3223,7 +3268,8 @@ i.vicon {
 
 	li {
 		a {
-			&:hover {
+			&:hover,
+			&:focus {
 				background: tint(@blueSoft, 75%);
 			}
 		}
@@ -3262,7 +3308,8 @@ i.vicon {
 			padding: @spacingS @spacingL;
 			margin-bottom: -2px;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: tint(@blueSoft, 85%);
 			}
 		}
@@ -3293,7 +3340,8 @@ i.vicon {
 					border-width: 0 10px 10px;
 				}
 
-				&:hover {
+				&:hover,
+				&:focus {
 					background: none;
 				}
 			}
@@ -3316,7 +3364,8 @@ i.vicon {
 			line-height: @baseLineHeight;
 			padding: @spacingXs @spacingS;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: lighten(@borderColor, 5%);
 				border-color: lighten(@borderColor, 5%);
 			}
@@ -3346,7 +3395,8 @@ i.vicon {
 		a {
 			position: relative;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: tint(@blueSoft, 85%);
 			}
 		}
@@ -3377,7 +3427,8 @@ i.vicon {
 					border-width: 10px 10px 0 10px;
 				}
 
-				&:hover {
+				&:hover,
+				&:focus {
 					background: none;
 				}
 			}
@@ -3557,6 +3608,16 @@ i.vicon {
 		&.arrow {
 			a {
 				#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+
+				&:hover,
+				&:focus {
+					border-color: @buttonDefaultBorderColor;
+					#gradient > .vertical(@buttonDefaultHoverColor, @buttonDefaultBorderColor);
+
+					.vicon {
+						color: @black;
+					}
+				}
 			}
 
 			.vicon {
@@ -3565,26 +3626,15 @@ i.vicon {
 				color: @gray;
 			}
 
-			&:hover {
-				a {
-					border-color: @buttonDefaultBorderColor;
-					#gradient > .vertical(@buttonDefaultHoverColor, @buttonDefaultBorderColor);
-				}
-
-				.vicon {
-					color: @black;
-				}
-			}
-
 			&.disabled {
 				a {
 					border-color: lighten(@borderColor, 5%);
 					#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
 					cursor: default;
-				}
 
-				.vicon {
-					color: @grayLight;
+					.vicon {
+						color: @grayLight;
+					}
 				}
 			}
 		}
@@ -3596,7 +3646,7 @@ i.vicon {
 			}
 		}
 
-		&.active, &:hover {
+		&.active {
 			a {
 				border-color: @borderColor;
 				#gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
@@ -3613,102 +3663,110 @@ i.vicon {
 			}
 		}
 
-		&:hover {
-			a {
-				box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+		a:hover,
+		a:focus {
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+			border-color: @borderColor;
+			#gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
+
+
+			.vicon {
+				color: @black;
 			}
 		}
 	}
 }
 
 .paginator-multi {
-    li {
-        padding: 0;
-        margin: 0 2px;
-        a {
-             outline: none;
-        }
-    }
+	li {
+		padding: 0;
+		margin: 0 2px;
+		a {
+			outline: none;
+			&:focus {
+				outline: thin dotted;
+			}
+		}
+	}
 
-    .multi {
-        position: relative;
-        
-        &.open {
-            .multi-list {
-                opacity: 1;
-                visibility: visible;
-                top: 50%;
-            }
-        }
-        
-        .multi-list {
-            position: absolute;
-            z-index: 100;
-            left: 0;
-            top: 100%;
-            width: 100%;
-            max-height: 185px;
-            overflow-x: hidden;
-            visibility: hidden;
-            opacity: 0;
-            border: 1px solid @borderColor;
-            .transition(opacity 0.5s);
-            background: @white;
-            box-shadow:
-            	inset 0 7px 21px -17px rgba(0, 0, 0, 0.7),
-            	inset 0 -7px 21px -17px rgba(0, 0, 0, 0.6);
-        }
+	.multi {
+		position: relative;
 
-        .paginator-btn {
-        	padding-left: @spacingS;
-        	padding-right: @spacingXs;
-        	#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+		&.open {
+			.multi-list {
+				opacity: 1;
+				visibility: visible;
+				top: 50%;
+			}
+		}
 
-		    	.vicon {
-						margin-right: 0;
-						margin-left: -2px;
-						font-size: 7px;
-						color: @gray;
+		.multi-list {
+			position: absolute;
+			z-index: 100;
+			left: 0;
+			top: 100%;
+			width: 100%;
+			max-height: 185px;
+			overflow-x: hidden;
+			visibility: hidden;
+			opacity: 0;
+			border: 1px solid @borderColor;
+			.transition(opacity 0.5s);
+			background: @white;
+			box-shadow:
+				inset 0 7px 21px -17px rgba(0, 0, 0, 0.7),
+				inset 0 -7px 21px -17px rgba(0, 0, 0, 0.6);
+		}
+
+		.paginator-btn {
+			padding-left: @spacingS;
+			padding-right: @spacingXs;
+			#gradient > .vertical(@buttonDefaultBgColor, @buttonDefaultEndColor);
+
+			.vicon {
+				margin-right: 0;
+				margin-left: -2px;
+				font-size: 7px;
+				color: @gray;
+			}
+		}
+
+		ul {
+			width: 150%;
+			max-height: 183px;
+			overflow-y: scroll;
+			border-radius: @borderRadiusS;
+
+			li {
+				margin: 0;
+				padding: 0;
+				display: block;
+
+				a {
+					display: block;
+					text-align: center;
+					border: 0 none;
+					padding: 5px 10% 5px 0;
+					background: none;
+					border-radius: 0;
+					box-shadow: none;
+					outline: none;
+					filter: none;
+
+					&.active, &:hover, &:focus {
+						#gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
 					}
-		    }
 
-        ul {
-            width: 150%;
-            max-height: 183px;
-            overflow-y: scroll;
-            border-radius: @borderRadiusS;
-            
-            li {
-                margin: 0;
-                padding: 0;
-                display: block;
-
-                a {
-                    display: block;
-                    text-align: center;
-                    border: 0 none;
-                    padding: 5px 10% 5px 0;
-                    background: none;
-                    border-radius: 0;
-                    box-shadow: none;
-                    outline: none;
-                    filter: none;
-                }
-                &.active, &:hover {
-                    a {
-                        #gradient > .vertical(lighten(@borderColor, 10%), lighten(@borderColor, 5%));
-                    }
-                }
-                &.active {
-                    a {
-                        border: 1px solid @borderColor;
-                        border-width: 1px 0;
-                    }
-                }
-            }
-        }
-    }
+					&.active {
+						border: 1px solid @borderColor;
+						border-width: 1px 0;
+					}
+				}
+			}
+		}
+	}
 }
+
 // Custom radio buttons
 
 // rule filter to block browsers that don't support that selector from applying rules they shouldn't
@@ -3718,6 +3776,11 @@ i.vicon {
 	input {
 		opacity: 0;
 		width: 20px;
+
+		&:focus + .custom-radio-element {
+			box-shadow: 0 0 0 1px @inputBorderFocus;
+			outline: thin dotted;
+		}
 	}
 
 	.custom-radio-element {
@@ -3743,6 +3806,7 @@ i.vicon {
 		background-color: @inputSelectedControl;
 	}
 }
+
 // Toggle buttons
 
 .btn-toggle {
@@ -3970,8 +4034,14 @@ i.vicon {
 		.vicon {
 			color: tint(@blueSoft, 50%);
 		}
-		&:hover .vicon {
-			color: tint(@blueSoft, 20%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: tint(@blueSoft, 20%);
+			}
+		}
+		&:focus {
+			outline: thin dotted;
 		}
 	}
 
@@ -4010,8 +4080,11 @@ i.vicon {
 		.vicon {
 			color: @yellow;
 		}
-		&:hover .vicon {
-			color: shade(@yellow, 20%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: shade(@yellow, 20%);
+			}
 		}
 	}
 }
@@ -4027,8 +4100,11 @@ i.vicon {
 		.vicon {
 			color: tint(@errorText, 60%);
 		}
-		&:hover .vicon {
-			color: tint(@errorText, 30%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: tint(@errorText, 30%);
+			}
 		}
 	}
 }
@@ -4336,7 +4412,7 @@ i.vicon {
       border-bottom: 50px solid transparent;
     }
 
-    &:before {      
+    &:before {
       z-index: 9;
       .margin-left(@rtl, 2px);
       .border-left(@rtl, 23px solid lighten(@black, 90%));
@@ -4417,7 +4493,8 @@ i.vicon {
       color: lighten(@black, 30%);
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &:focus {
         .nav-steps-text {
           text-decoration: underline;
         }

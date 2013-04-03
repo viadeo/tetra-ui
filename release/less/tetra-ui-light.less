@@ -1058,7 +1058,7 @@ a {
     .text-align-left(@rtl);
     cursor: pointer;
 }
-a:hover {
+a:hover, a:focus {
     text-decoration: underline;
     color: @linkColorHover;
 }
@@ -1126,7 +1126,8 @@ h6, .h6 {
       margin: 0 -1px 0 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .vicon {
         color: @blueSoft;
       }
@@ -1931,6 +1932,13 @@ h1 .sub {
       }
     }
   }
+
+  a:hover,
+  a:focus {
+    .vicon {
+      color: @errorText;
+    }
+  }
 }
 
 .ui-badge {
@@ -1991,7 +1999,8 @@ h1 .sub {
       line-height: 15px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .vicon {
         background: @gray;
       }
@@ -2013,7 +2022,8 @@ h1 .sub {
    .transition(background-color 0.2s);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: tint(@blueSoft, 60%);
     
     img {
@@ -2022,7 +2032,7 @@ h1 .sub {
   }
 }
 
-a:hover {
+a:hover, a:focus {
   .avatar {
     border-color: tint(@blueSoft, 60%);
 
@@ -2075,11 +2085,14 @@ i.vicon {
 	position: relative;
   *z-index: 10;
 
-	&:hover .popover {
-		visibility: visible;
-		margin-bottom: 7px;
-		opacity: 1;
-	}
+	&:hover,
+  &:focus {
+    .popover {
+  		visibility: visible;
+  		margin-bottom: 7px;
+  		opacity: 1;
+  	}
+  }
 }
 
 .popover {
@@ -2167,8 +2180,11 @@ i.vicon {
 /* On bottom */
 
 .popover-display.popover-bottom {
-  &:hover .popover {
-    margin-top: 7px;
+  &:hover,
+  &:focus {
+    .popover {
+      margin-top: 7px;
+    }
   }
 }
 
@@ -2219,13 +2235,16 @@ i.vicon {
 .tooltip {
 	position: relative;
 
-	&:hover .tooltip-content {
-		visibility: visible;
-		margin-bottom: 7px;
-		opacity: 1;
+	&:hover,
+  &:focus {
+    .tooltip-content {
+  		visibility: visible;
+  		margin-bottom: 7px;
+  		opacity: 1;
 
-		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
-	}
+  		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
+  	}
+  }
 }
 
 .tooltip-content {
@@ -2277,9 +2296,12 @@ i.vicon {
 /* On right */
 
 .tooltip.tooltip-right {
-  &:hover .tooltip-content {
-    margin-left: 7px;
-    *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-left: 7px;
+      *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -2301,9 +2323,12 @@ i.vicon {
 /* On left */
 
 .tooltip.tooltip-left {
-  &:hover .tooltip-content {
-    margin-right: 7px;
-    *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-right: 7px;
+      *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -2327,9 +2352,12 @@ i.vicon {
 /* On bottom */
 
 .tooltip.tooltip-bottom {
-  &:hover .tooltip-content {
-    margin-top: 7px;
-    *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-top: 7px;
+      *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+    }
   }
 }
 
@@ -2366,9 +2394,9 @@ i.vicon {
   .box-shadow(none);
   .user-select(none);
 
-  &:hover {
+  &:hover, &:focus {
     text-decoration: none;
-  	.box-shadow(0 1px 1px rgba(0,0,0,.1));
+    .box-shadow(0 1px 1px rgba(0,0,0,.1));
   }
   &:active, &.active {
     .box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
@@ -2419,7 +2447,7 @@ i.vicon {
   #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
   _background-color: @_primaryBgColor!important;
 
-  &:hover {
+  &:hover, &:focus {
     #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
     color: @_primaryTextColor;
   }
@@ -2434,6 +2462,7 @@ i.vicon {
     &:link,
     &:visited,
     &:hover,
+    &:focus,
     &:active,
     span {
 	    background-color: lighten(@_primaryBgColor, 10%);
@@ -2446,6 +2475,7 @@ i.vicon {
   }
   &.btn-loading,
   &.btn-loading:hover,
+  &.btn-loading:focus,
   &.btn-loading:active {
   		span {
   			background: transparent url('@{img-buttons-dir}/loaders/secondary.gif') no-repeat 50% 0.3em;
@@ -2453,7 +2483,8 @@ i.vicon {
   		}
   }
   &.btn-inactive,
-  &.btn-inactive:hover {
+  &.btn-inactive:hover,
+  &.btn-inactive:focus {
     border-color: @_primaryBorderColor;
     #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
     .box-shadow(none);
@@ -2478,7 +2509,8 @@ i.vicon {
     color: @gray;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);
     color: @_defaultTextColor;
 
@@ -2497,6 +2529,7 @@ i.vicon {
     &:link,
     &:visited,
     &:hover,
+    &:focus,
     &:active,
     span {
 	    background-color: @_defaultEndColor;
@@ -2508,7 +2541,8 @@ i.vicon {
     }
   }
   &.btn-inactive,
-  &.btn-inactive:hover {
+  &.btn-inactive:hover,
+  &.btn-inactive:focus {
     border-color: @_defaultBorderColor;
     #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
     .box-shadow(none);
@@ -2533,7 +2567,8 @@ i.vicon {
     color: @_tertiaryTextColor;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     #gradient > .vertical(@_tertiaryStartColor, @_tertiaryHoverColor);
     border-color: @_tertiaryHoverColor;
     color: @_tertiaryTextColor;
@@ -2549,6 +2584,7 @@ i.vicon {
     &:link,
     &:visited,
     &:hover,
+    &:focus,
     &:active,
     span {
 	    background-color: lighten(@_tertiaryEndColor,3%);
@@ -2561,6 +2597,7 @@ i.vicon {
   }
   &.btn-loading,
   &.btn-loading:hover,
+  &.btn-loading:focus,
   &.btn-loading:active {
   	span {
   		background: transparent url('@{img-buttons-dir}/buttons/loaders/primary.gif') no-repeat 50% 0.3em;
@@ -2568,7 +2605,8 @@ i.vicon {
   	}
   }
   &.btn-inactive,
-  &.btn-inactive:hover {
+  &.btn-inactive:hover,
+  &.btn-loading:focus {
     border-color: @_tertiaryBorderColor;
     #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
     .box-shadow(none);
@@ -2629,9 +2667,11 @@ i.vicon {
 
 .btn-disabled,
 .btn-disabled:hover,
+.btn-disabled:focus,
 .btn-disabled:active,
 .btn-loading,
 .btn-loading:hover,
+.btn-loading:focus,
 .btn-loading:active {
   cursor: not-allowed;
   .box-shadow(none);
@@ -2639,6 +2679,7 @@ i.vicon {
 }
 .btn-loading,
 .btn-loading:hover,
+.btn-loading:focus,
 .btn-loading:active {
 	span {
 	   display: inline-block;
@@ -2664,7 +2705,8 @@ i.vicon {
   border: 1px solid lighten(@buttonDefaultBorderColor, 3%);
   #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @buttonPrimaryBorderColor;
     #gradient > .vertical(@buttonPrimaryBgColor, @buttonPrimaryEndColor);
 
@@ -2682,7 +2724,8 @@ i.vicon {
   }
 
   &.btn-disabled {
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: lighten(@buttonDefaultBorderColor, 3%);
       #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
     }
@@ -2692,6 +2735,7 @@ i.vicon {
     }
   }
 }
+
 /**********************/
 /* General Properties */
 /**********************/
@@ -3070,7 +3114,8 @@ i.vicon {
 	       	color: lighten(@black, 60%);
 	      }
 
-				&:hover {
+				&:hover,
+				&:focus {
 					text-decoration: underline;
 					color: @linkColorHover;
 					background: none;
@@ -3092,7 +3137,8 @@ i.vicon {
 
 	li {
 		a {
-			&:hover {
+			&:hover,
+			&:focus {
 				background: tint(@blueSoft, 75%);
 			}
 		}
@@ -3131,7 +3177,8 @@ i.vicon {
 			padding: @spacingS @spacingL;
 			margin-bottom: -2px;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: tint(@blueSoft, 85%);
 			}
 		}
@@ -3162,7 +3209,8 @@ i.vicon {
 					border-width: 0 10px 10px;
 				}
 
-				&:hover {
+				&:hover,
+				&:focus {
 					background: none;
 				}
 			}
@@ -3185,7 +3233,8 @@ i.vicon {
 			line-height: @baseLineHeight;
 			padding: @spacingXs @spacingS;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: lighten(@borderColor, 5%);
 				border-color: lighten(@borderColor, 5%);
 			}
@@ -3215,7 +3264,8 @@ i.vicon {
 		a {
 			position: relative;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: tint(@blueSoft, 85%);
 			}
 		}
@@ -3246,7 +3296,8 @@ i.vicon {
 					border-width: 10px 10px 0 10px;
 				}
 
-				&:hover {
+				&:hover,
+				&:focus {
 					background: none;
 				}
 			}
@@ -3338,6 +3389,11 @@ i.vicon {
 	input {
 		opacity: 0;
 		width: 20px;
+
+		&:focus + .custom-radio-element {
+			box-shadow: 0 0 0 1px @inputBorderFocus;
+			outline: thin dotted;
+		}
 	}
 
 	.custom-radio-element {
@@ -3363,6 +3419,7 @@ i.vicon {
 		background-color: @inputSelectedControl;
 	}
 }
+
 // Box
 
 .bx {
@@ -3396,8 +3453,14 @@ i.vicon {
 		.vicon {
 			color: tint(@blueSoft, 50%);
 		}
-		&:hover .vicon {
-			color: tint(@blueSoft, 20%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: tint(@blueSoft, 20%);
+			}
+		}
+		&:focus {
+			outline: thin dotted;
 		}
 	}
 
@@ -3436,8 +3499,11 @@ i.vicon {
 		.vicon {
 			color: @yellow;
 		}
-		&:hover .vicon {
-			color: shade(@yellow, 20%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: shade(@yellow, 20%);
+			}
 		}
 	}
 }
@@ -3453,8 +3519,11 @@ i.vicon {
 		.vicon {
 			color: tint(@errorText, 60%);
 		}
-		&:hover .vicon {
-			color: tint(@errorText, 30%);
+		&:hover,
+		&:focus {
+			.vicon {
+				color: tint(@errorText, 30%);
+			}
 		}
 	}
 }
