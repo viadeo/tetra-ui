@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.25 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.26 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -3324,6 +3324,54 @@ i.vicon {
 		&.side-links {
 			a {
 				border: none;
+			}
+		}
+	}
+}
+
+.nav-menu {
+	border-radius: @borderRadiusS;
+	background: @white;
+	box-shadow: 1px 1px 4px fade(@black, 20%);
+
+	li {
+		a {
+			position: relative;
+
+			&:hover {
+				background: tint(@blueSoft, 85%);
+			}
+		}
+
+		&.active {
+			a {
+				color: @black;
+
+				&:before, &:after {
+					content: "";
+					position: absolute;
+					z-index: 5;
+					left: 50%; top: 100%;
+					width: 0; height: 0;
+					border-style: solid;
+				}
+
+				&:before {
+					margin-top: 2px;
+					margin-left: -10px;
+					border-color: tint(@black, 87%) transparent transparent transparent;
+					border-width: 10px 10px 0 10px;
+				}
+
+				&:after {
+					margin-left: -10px;
+					border-color: @white transparent transparent transparent;
+					border-width: 10px 10px 0 10px;
+				}
+
+				&:hover {
+					background: none;
+				}
 			}
 		}
 	}

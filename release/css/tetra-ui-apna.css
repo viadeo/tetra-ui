@@ -5478,6 +5478,45 @@ i.vicon {
 .nav-pills li.side-links a {
   border: none;
 }
+.nav-menu {
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.nav-menu li a {
+  position: relative;
+}
+.nav-menu li a:hover {
+  background: #ecf1f5;
+}
+.nav-menu li.active a {
+  color: #000000;
+}
+.nav-menu li.active a:before,
+.nav-menu li.active a:after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.nav-menu li.active a:before {
+  margin-top: 2px;
+  margin-left: -10px;
+  border-color: #dedede transparent transparent transparent;
+  border-width: 10px 10px 0 10px;
+}
+.nav-menu li.active a:after {
+  margin-left: -10px;
+  border-color: #ffffff transparent transparent transparent;
+  border-width: 10px 10px 0 10px;
+}
+.nav-menu li.active a:hover {
+  background: none;
+}
 .nav-tabs-section .section {
   display: block;
 }
