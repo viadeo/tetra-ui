@@ -4975,27 +4975,32 @@ i.vicon {
   box-shadow: none;
   cursor: default;
 }
-.btn-small {
+.btn-small,
+.core-form .btn-small {
   padding: 1px 10px;
   border-radius: 3px;
   font-size: 11px;
 }
-.btn-small .global-icon {
+.btn-small .global-icon,
+.core-form .btn-small .global-icon {
   margin: -1px 0;
 }
-.btn-large {
+.btn-large,
+.core-form .btn-large {
   padding: 7px 15px;
   border-radius: 3px;
   font-size: 13px;
 }
-.btn-lead {
+.btn-lead,
+.core-form .btn-lead {
   position: relative;
   z-index: 2;
   padding: 15px 60px;
   font-size: 15px;
   margin: 6px;
 }
-.btn-lead:before {
+.btn-lead:before,
+.core-form .btn-lead:before {
   content: "";
   position: absolute;
   z-index: 1;
