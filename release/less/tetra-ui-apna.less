@@ -323,7 +323,7 @@
   .position(right, @size)  { left: 100%; margin-top: @size; top: 50%; }
   .position(bottom, @size) { left: 50%; margin-left: @size; top: 100%; }
   .position(left, @size)   { margin-top: @size; right: 100%; top: 50%; }
-  
+
   &:after, &:before {
     border: solid transparent;
     content: '';
@@ -360,7 +360,7 @@
   .position(right, @size)  { right: 0; margin-top: @size; top: 50%; }
   .position(bottom, @size) { left: 50%; margin-left: @size; bottom: 0; }
   .position(left, @size)   { margin-top: @size; left: 0; top: 50%; }
-  
+
   &:after, &:before {
     border: solid transparent;
     content: '';
@@ -488,7 +488,10 @@
 .padding-right (@rtl, @value) when (@rtl = true) { padding-left: @value }
 
 .text-align-left (@rtl) when (@rtl = false) { text-align: left; }
-.text-align-right (@rtl) when (@rtl = true) { text-align: right; }
+.text-align-left (@rtl) when (@rtl = true) { text-align: right; }
+
+.text-align-right (@rtl) when (@rtl = false) { text-align: right; }
+.text-align-right (@rtl) when (@rtl = true) { text-align: left; }
 
 .border-left (@rtl, @value) when (@rtl = false) { border-left: @value; }
 .border-left (@rtl, @value) when (@rtl = true) { border-right: @value; }
@@ -923,44 +926,44 @@ textarea {
 // None
 .man         { margin: 0 !important; }
 .mtn, .mvn   { margin-top: 0 !important; }
-.mrn, .mhn   { margin-right: 0 !important; }
+.mrn, .mhn   { .margin-right(@rtl, 0) !important; }
 .mbn, .mvn   { margin-bottom: 0 !important; }
-.mln, .mhn   { margin-left: 0 !important; }
+.mln, .mhn   { .margin-left(@rtl, 0) !important; }
 
 // Extra Small
 .maxs        { margin: @spacingXs !important; }
 .mtxs, .mvxs { margin-top: @spacingXs !important; }
-.mrxs, .mhxs { margin-right: @spacingXs !important; }
+.mrxs, .mhxs { .margin-right(@rtl, @spacingXs) !important; }
 .mbxs, .mvxs { margin-bottom: @spacingXs !important; }
-.mlxs, .mhxs { margin-left: @spacingXs !important; }
+.mlxs, .mhxs { .margin-left(@rtl, @spacingXs) !important; }
 
 // Small
 .mas         { margin: @spacingS !important; }
 .mts, .mvs   { margin-top: @spacingS !important; }
-.mrs, .mhs   { margin-right: @spacingS !important; }
+.mrs, .mhs   { .margin-right(@rtl, @spacingS) !important; }
 .mbs, .mvs   { margin-bottom: @spacingS !important; }
-.mls, .mhs   { margin-left: @spacingS !important; }
+.mls, .mhs   { .margin-left(@rtl, @spacingS) !important; }
 
 // Medium
 .mam         { margin: @spacingM !important; }
 .mtm, .mvm   { margin-top: @spacingM !important; }
-.mrm, .mhm   { margin-right: @spacingM !important; }
+.mrm, .mhm   { .margin-right(@rtl, @spacingM) !important; }
 .mbm, .mvm   { margin-bottom: @spacingM !important; }
-.mlm, .mhm   { margin-left: @spacingM !important; }
+.mlm, .mhm   { .margin-left(@rtl, @spacingM) !important; }
 
 // Large
 .mal         { margin: @spacingL !important; }
 .mtl, .mvl   { margin-top: @spacingL !important; }
-.mrl, .mhl   { margin-right: @spacingL !important; }
+.mrl, .mhl   { .margin-right(@rtl, @spacingL) !important; }
 .mbl, .mvl   { margin-bottom: @spacingL !important; }
-.mll, .mhl   { margin-left: @spacingL !important; }
+.mll, .mhl   { .margin-left(@rtl, @spacingL) !important; }
 
 // Extra Large
 .maxl        { margin: @spacingXl !important; }
 .mtxl, .mvxl { margin-top: @spacingXl !important; }
-.mrxl, .mhxl { margin-right: @spacingXl !important; }
+.mrxl, .mhxl { .margin-right(@rtl, @spacingXl) !important; }
 .mbxl, .mvxl { margin-bottom: @spacingXl !important; }
-.mlxl, .mhxl { margin-left: @spacingXl !important; }
+.mlxl, .mhxl { .margin-left(@rtl, @spacingXl) !important; }
 
 
 /* Border Radius
@@ -999,12 +1002,18 @@ textarea {
 /* Text Alignment
  * ----------------------------------------------------------------- */
 .tac, .center { text-align: center; }
-.tal { text-align: left; }
-.tar { text-align: right; }
+.tal { .text-align-left(@rtl); }
+.tar { .text-align-right(@rtl); }
 .taj { text-align: justify; }
 .tai { text-align: inherit; }
 
 .hyph { .hyphens(); }
+
+/* Block Alignment
+ * ----------------------------------------------------------------- */
+
+.bac, .bal { margin-right: auto !important; }
+.bac, .bar { margin-left: auto !important; }
 
 /* Gray scale
  * ----------------------------------------------------------------- */

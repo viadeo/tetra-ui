@@ -195,7 +195,7 @@
   .position(right, @size)  { left: 100%; margin-top: @size; top: 50%; }
   .position(bottom, @size) { left: 50%; margin-left: @size; top: 100%; }
   .position(left, @size)   { margin-top: @size; right: 100%; top: 50%; }
-  
+
   &:after, &:before {
     border: solid transparent;
     content: '';
@@ -232,7 +232,7 @@
   .position(right, @size)  { right: 0; margin-top: @size; top: 50%; }
   .position(bottom, @size) { left: 50%; margin-left: @size; bottom: 0; }
   .position(left, @size)   { margin-top: @size; left: 0; top: 50%; }
-  
+
   &:after, &:before {
     border: solid transparent;
     content: '';
@@ -360,7 +360,10 @@
 .padding-right (@rtl, @value) when (@rtl = true) { padding-left: @value }
 
 .text-align-left (@rtl) when (@rtl = false) { text-align: left; }
-.text-align-right (@rtl) when (@rtl = true) { text-align: right; }
+.text-align-left (@rtl) when (@rtl = true) { text-align: right; }
+
+.text-align-right (@rtl) when (@rtl = false) { text-align: right; }
+.text-align-right (@rtl) when (@rtl = true) { text-align: left; }
 
 .border-left (@rtl, @value) when (@rtl = false) { border-left: @value; }
 .border-left (@rtl, @value) when (@rtl = true) { border-right: @value; }

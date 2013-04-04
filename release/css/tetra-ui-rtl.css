@@ -2691,7 +2691,7 @@ textarea {
 }
 .mrn,
 .mhn {
-  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 .mbn,
 .mvn {
@@ -2699,7 +2699,7 @@ textarea {
 }
 .mln,
 .mhn {
-  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 .maxs {
   margin: 5px !important;
@@ -2710,7 +2710,7 @@ textarea {
 }
 .mrxs,
 .mhxs {
-  margin-right: 5px !important;
+  margin-left: 5px !important;
 }
 .mbxs,
 .mvxs {
@@ -2718,7 +2718,7 @@ textarea {
 }
 .mlxs,
 .mhxs {
-  margin-left: 5px !important;
+  margin-right: 5px !important;
 }
 .mas {
   margin: 10px !important;
@@ -2729,7 +2729,7 @@ textarea {
 }
 .mrs,
 .mhs {
-  margin-right: 10px !important;
+  margin-left: 10px !important;
 }
 .mbs,
 .mvs {
@@ -2737,7 +2737,7 @@ textarea {
 }
 .mls,
 .mhs {
-  margin-left: 10px !important;
+  margin-right: 10px !important;
 }
 .mam {
   margin: 15px !important;
@@ -2748,7 +2748,7 @@ textarea {
 }
 .mrm,
 .mhm {
-  margin-right: 15px !important;
+  margin-left: 15px !important;
 }
 .mbm,
 .mvm {
@@ -2756,7 +2756,7 @@ textarea {
 }
 .mlm,
 .mhm {
-  margin-left: 15px !important;
+  margin-right: 15px !important;
 }
 .mal {
   margin: 20px !important;
@@ -2767,7 +2767,7 @@ textarea {
 }
 .mrl,
 .mhl {
-  margin-right: 20px !important;
+  margin-left: 20px !important;
 }
 .mbl,
 .mvl {
@@ -2775,7 +2775,7 @@ textarea {
 }
 .mll,
 .mhl {
-  margin-left: 20px !important;
+  margin-right: 20px !important;
 }
 .maxl {
   margin: 30px !important;
@@ -2786,7 +2786,7 @@ textarea {
 }
 .mrxl,
 .mhxl {
-  margin-right: 30px !important;
+  margin-left: 30px !important;
 }
 .mbxl,
 .mvxl {
@@ -2794,7 +2794,7 @@ textarea {
 }
 .mlxl,
 .mhxl {
-  margin-left: 30px !important;
+  margin-right: 30px !important;
 }
 /* Border Radius
  * ----------------------------------------------------------------- */
@@ -2897,10 +2897,10 @@ textarea {
   text-align: center;
 }
 .tal {
-  text-align: left;
+  text-align: right;
 }
 .tar {
-  text-align: right;
+  text-align: left;
 }
 .taj {
   text-align: justify;
@@ -2914,6 +2914,16 @@ textarea {
   -ms-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
+}
+/* Block Alignment
+ * ----------------------------------------------------------------- */
+.bac,
+.bal {
+  margin-right: auto !important;
+}
+.bac,
+.bar {
+  margin-left: auto !important;
 }
 /* Gray scale
  * ----------------------------------------------------------------- */
@@ -3014,6 +3024,7 @@ p {
 a {
   color: #007de3;
   text-decoration: none;
+  text-align: right;
   cursor: pointer;
 }
 a:hover,

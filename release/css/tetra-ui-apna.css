@@ -2917,6 +2917,16 @@ textarea {
   -o-hyphens: auto;
   hyphens: auto;
 }
+/* Block Alignment
+ * ----------------------------------------------------------------- */
+.bac,
+.bal {
+  margin-right: auto !important;
+}
+.bac,
+.bar {
+  margin-left: auto !important;
+}
 /* Gray scale
  * ----------------------------------------------------------------- */
 .black {
