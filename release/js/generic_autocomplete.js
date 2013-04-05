@@ -211,6 +211,7 @@ tetra.view.register('autocomplete', {
 
             var suggestions = {};
             suggestions.data = suggestionsPack.data.completion;
+            suggestions.query = me._input.val();
             app.exec(me._templateRef, suggestions, function(html) {
               _(me._menu).html(html);
             });
