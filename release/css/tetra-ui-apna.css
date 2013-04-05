@@ -2921,10 +2921,12 @@ textarea {
  * ----------------------------------------------------------------- */
 .bac,
 .bal {
+  float: none;
   margin-right: auto !important;
 }
 .bac,
 .bar {
+  float: none;
   margin-left: auto !important;
 }
 /* Gray scale
