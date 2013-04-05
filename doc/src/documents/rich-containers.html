@@ -6,110 +6,110 @@ order: 2
 ---
 
 <div class="page-header">
-    <h1>Rich Containers<span class="sub">The most common layout patterns</span></h1>
+  <h1>Rich Containers<span class="sub">The most common layout patterns</span></h1>
 </div>
 <div class="gr grsxl">
-    <div class="gu gu-1of3">
-        <h2>What is it?</h2>
-        <p>A rich container supports one of the most common layout patterns on Viadeo, in which there is an image (usually aligned left) and a block of text. This allows us to avoid using fixed widths on floated elements when implementing this pattern.</p>
-    </div>
-    <div class="gu gu-last">
-        <h3>Markup</h3>
-        <pre data-line="1-8"><code class="lang-html">&lt;div class="rc"&gt;
+  <div class="gu gu-1of3">
+    <h2>What is it?</h2>
+    <p>A rich container supports one of the most common layout patterns on Viadeo, in which there is an image (usually aligned left) and a block of text. This allows us to avoid using fixed widths on floated elements when implementing this pattern.</p>
+  </div>
+  <div class="gu gu-last">
+    <h3>Markup</h3>
+    <pre data-line="1-8"><code class="lang-html">&lt;div class="rc"&gt;
   &lt;a href="#" class="img"&gt;
-    &lt;img src="..." /&gt;
+  &lt;img src="..." /&gt;
   &lt;/a&gt;
   &lt;div class="bd"&gt;
-    ...
+  ...
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-    </div>
+  </div>
 </div>
 
 <div class="gr grsxl mvxl">
-    <div class="gu gu-2of3">
-        <h3>Spacing &amp; Alignment</h3>
-        <p>The spacing between the image and text in rich containers can be specified by adding a class name to the <code class="language-css">.rc</code> element, and the alignment by adding a class to the <code class="language-css">.img</code> element.</p>
-        <div class="gr">
-            <div class="gu gu-1of2">
-                <div class="prxs">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Spacing</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code class="language-css">.rcsxs</code></td>
-                                <td>Value defined as <code class="language-css">@spacingXs</code></td>
-                            </tr>
-                            <tr>
-                                <td><code class="language-css">.rcss</code></td>
-                                <td>Value defined as <code class="language-css">@spacingS</code></td>
-                            </tr>
-                            <tr>
-                                <td><code class="language-css">.rcsm</code></td>
-                                <td>Value defined as <code class="language-css">@spacingM</code></td>
-                            </tr>
-                            <tr>
-                                <td><code class="language-css">.rcsl</code></td>
-                                <td>Value defined as <code class="language-css">@spacingL</code></td>
-                            </tr>
-                            <tr>
-                                <td><code class="language-css">.rcsxl</code></td>
-                                <td>Value defined as <code class="language-css">@spacingXl</code></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="gu gu-last">
-                <div class="plxs">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Alignment</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code class="language-css">.img-left</code></td>
-                                <td>The image will be left aligned. Note that you can still use the old <code class="language-css">.img</code> class but it will be deprecated in the future.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="language-css">.img-right</code></td>
-                                <td>The image will be right aligned. The previous <code class="language-css">.imgRight</code> class name is still supported but will be deprecated in the future.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+  <div class="gu gu-2of3">
+    <h3>Spacing &amp; Alignment</h3>
+    <p>The spacing between the image and text in rich containers can be specified by adding a class name to the <code class="language-css">.rc</code> element, and the alignment by adding a class to the <code class="language-css">.img</code> element.</p>
+    <div class="gr">
+      <div class="gu gu-1of2">
+        <div class="prxs">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Spacing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="language-css">.rcsxs</code></td>
+                <td>Value defined as <code class="language-css">@spacingXs</code></td>
+              </tr>
+              <tr>
+                <td><code class="language-css">.rcss</code></td>
+                <td>Value defined as <code class="language-css">@spacingS</code></td>
+              </tr>
+              <tr>
+                <td><code class="language-css">.rcsm</code></td>
+                <td>Value defined as <code class="language-css">@spacingM</code></td>
+              </tr>
+              <tr>
+                <td><code class="language-css">.rcsl</code></td>
+                <td>Value defined as <code class="language-css">@spacingL</code></td>
+              </tr>
+              <tr>
+                <td><code class="language-css">.rcsxl</code></td>
+                <td>Value defined as <code class="language-css">@spacingXl</code></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+      <div class="gu gu-last">
+        <div class="plxs">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Alignment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="language-css">.img-left</code></td>
+                <td>The image will be left aligned. Note that you can still use the old <code class="language-css">.img</code> class but it will be deprecated in the future.</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">.img-right</code></td>
+                <td>The image will be right aligned. The previous <code class="language-css">.imgRight</code> class name is still supported but will be deprecated in the future.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="gu gu-last">
-        <h3>Examples</h3>
-        <div class="rc rcss">
-            <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
-            <div class="bd">
-                <p>This rich container (<code class="language-css">.rc</code>) also has the class <code class="language-css">.rcss</code> and therefore has small spacing between the image and text.</p>
-            </div>
-       </div>
-       <div class="rc rcss mtl">
-            <a href="#" class="img-right"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
-            <div class="bd">
-                <p>This rich container has the same spacing as the example above, although the image parent (<code class="lang-html">&lt;a&gt;</code>) element has the <code class="language-css">.img-right</code> class.</p>
-            </div>
-       </div>
-       <div class="rc rcsxl mtl">
-            <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
-            <div class="bd">
-                <p>This is an example of a rich container with extra large spacing.</p>
-            </div>
-       </div>
-    </div>
+  </div>
+  <div class="gu gu-last">
+    <h3>Examples</h3>
+    <div class="rc rcss">
+      <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
+      <div class="bd">
+        <p>This rich container (<code class="language-css">.rc</code>) also has the class <code class="language-css">.rcss</code> and therefore has small spacing between the image and text.</p>
+      </div>
+     </div>
+     <div class="rc rcss mtl">
+      <a href="#" class="img-right"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
+      <div class="bd">
+        <p>This rich container has the same spacing as the example above, although the image parent (<code class="lang-html">&lt;a&gt;</code>) element has the <code class="language-css">.img-right</code> class.</p>
+      </div>
+     </div>
+     <div class="rc rcsxl mtl">
+      <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
+      <div class="bd">
+        <p>This is an example of a rich container with extra large spacing.</p>
+      </div>
+     </div>
+  </div>
 </div>
 
 <h2 class="mvl">Boxes</h2>
@@ -117,13 +117,24 @@ order: 2
 <div class="gr grsxl">
   <div class="gu gu-2of5">
 
-    <div class="bx">
+    <div class="bx mbl">
       <h2 class="h-bx">
-        <a href="" class="h-bx-link tooltip tooltip-left">
-          <i class="vicon">c</i>
-          <span class="tooltip-content">Settings</span>
-        </a>
-        Box title
+      <a href="" class="h-bx-link tooltip tooltip-left">
+        <i class="vicon">c</i>
+        <span class="tooltip-content">Settings</span>
+      </a>
+      Box title
+      </h2>
+      Box content
+    </div>
+
+    <div class="bx">
+      <h2 class="h-bx h-bx-main">
+      <a href="" class="h-bx-link tooltip tooltip-left">
+        <i class="vicon">c</i>
+        <span class="tooltip-content">Settings</span>
+      </a>
+      Box title main
       </h2>
       Box content
     </div>
@@ -131,7 +142,7 @@ order: 2
   </div>
   <div class="gu gu-last">
 
-    <pre><code class="lang-html">&lt;div class="bx"&gt;
+  <pre><code class="lang-html">&lt;div class="bx"&gt;
   &lt;h2 class="h-bx"&gt;
     &lt;a href="" class="h-bx-link tooltip tooltip-left"&gt;
       &lt;i class="vicon"&gt;c&lt;/i&gt;
@@ -150,130 +161,130 @@ order: 2
 <div class="gr grsxl">
   <div class="gu gu-last">
 
-    <dl class="gr nav-steps mbl">
-      <dt class="gu gu-1of3">
-        <i class="vicon">o</i>
-        <h2 class="nav-steps-title">
-          <small>Lorem ipsum</small>
-          Consectetur adipisicing
-        </h2>
-      </dt>
-      <dd class="gu gu-last">
-        <ol class="gr">
-          <li class="gu gu-1of2">
-            <b class="nav-steps-item">1</b>
-            <span class="nav-steps-text">Sed do eiusmod tempor incididunt</span>
-          </li>
-          <li class="gu gu-last nav-steps-todo">
-            <b class="nav-steps-item">2</b>
-            <span class="nav-steps-text">Ut labore et dolore magna</span>
-          </li>
-        </ol>
-      </dd>
-    </dl>
+  <dl class="gr nav-steps mbl">
+    <dt class="gu gu-1of3">
+    <i class="vicon">o</i>
+    <h2 class="nav-steps-title">
+      <small>Lorem ipsum</small>
+      Consectetur adipisicing
+    </h2>
+    </dt>
+    <dd class="gu gu-last">
+    <ol class="gr">
+      <li class="gu gu-1of2">
+      <b class="nav-steps-item">1</b>
+      <span class="nav-steps-text">Sed do eiusmod tempor incididunt</span>
+      </li>
+      <li class="gu gu-last nav-steps-todo">
+      <b class="nav-steps-item">2</b>
+      <span class="nav-steps-text">Ut labore et dolore magna</span>
+      </li>
+    </ol>
+    </dd>
+  </dl>
 
-    <dl class="gr nav-steps mbl">
-      <dd class="gu gu-1of1">
-        <ol class="gr">
-          <li class="gu gu-1of4 nav-steps-done">
-            <a href="">
-              <b class="nav-steps-item"><i class="vicon">v</i></b>
-              <span class="nav-steps-text">Sed do eiusmod tempor incididunt</span>
-            </a>
-          </li>
-          <li class="gu gu-1of4 nav-steps-done">
-            <a href="">
-              <b class="nav-steps-item"><i class="vicon">v</i></b>
-              <span class="nav-steps-text">Et dolore magna</span>
-            </a>
-          </li>
-          <li class="gu gu-1of4">
-            <a href="">
-              <b class="nav-steps-item">3</b>
-              <span class="nav-steps-text">Ut labore et dolore magna</span>
-            </a>
-          </li>
-          <li class="gu gu-last nav-steps-todo">
-            <b class="nav-steps-item">4</b>
-            <span class="nav-steps-text">Nostrud exercitation</span>
-          </li>
-        </ol>
-      </dd>
-    </dl>
+  <dl class="gr nav-steps mbl">
+    <dd class="gu gu-1of1">
+    <ol class="gr">
+      <li class="gu gu-1of4 nav-steps-done">
+      <a href="">
+        <b class="nav-steps-item"><i class="vicon">v</i></b>
+        <span class="nav-steps-text">Sed do eiusmod tempor incididunt</span>
+      </a>
+      </li>
+      <li class="gu gu-1of4 nav-steps-done">
+      <a href="">
+        <b class="nav-steps-item"><i class="vicon">v</i></b>
+        <span class="nav-steps-text">Et dolore magna</span>
+      </a>
+      </li>
+      <li class="gu gu-1of4">
+      <a href="">
+        <b class="nav-steps-item">3</b>
+        <span class="nav-steps-text">Ut labore et dolore magna</span>
+      </a>
+      </li>
+      <li class="gu gu-last nav-steps-todo">
+      <b class="nav-steps-item">4</b>
+      <span class="nav-steps-text">Nostrud exercitation</span>
+      </li>
+    </ol>
+    </dd>
+  </dl>
 
-    <div class="gr grsl">
-      <div class="gu gu-1of2">
+  <div class="gr grsl">
+    <div class="gu gu-1of2">
 
-        <p class="mbxs">First case with header:</p>
+    <p class="mbxs">First case with header:</p>
 
-        <pre><code class="lang-html">&lt;dl class="gr nav-steps"&gt;&lt;!-- Using the grid with gr --&gt;
+    <pre><code class="lang-html">&lt;dl class="gr nav-steps"&gt;&lt;!-- Using the grid with gr --&gt;
 
   &lt;dt class="gu gu-1of3"&gt;&lt;!-- Header (width: 1/3) --&gt;
-    &lt;i class="vicon"&gt;o&lt;/i&gt;
-    &lt;h2 class="nav-steps-title"&gt;
-      &lt;small&gt;Lorem ipsum&lt;/small&gt;
-      Consectetur adipisicing
-    &lt;/h2&gt;
+  &lt;i class="vicon"&gt;o&lt;/i&gt;
+  &lt;h2 class="nav-steps-title"&gt;
+    &lt;small&gt;Lorem ipsum&lt;/small&gt;
+    Consectetur adipisicing
+  &lt;/h2&gt;
   &lt;/dt&gt;
 
   &lt;dd class="gu gu-last"&gt;&lt;!-- Body (width: 2/3) --&gt;
-    &lt;ol class="gr"&gt;&lt;!-- List of items (using the grid) --&gt;
+  &lt;ol class="gr"&gt;&lt;!-- List of items (using the grid) --&gt;
 
-      &lt;!-- Item (width: 1/2) --&gt;
-      &lt;li class="gu gu-1of2"&gt;
-        &lt;b class="nav-steps-item"&gt;1&lt;/b&gt;
-        &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-      &lt;/li&gt;
+    &lt;!-- Item (width: 1/2) --&gt;
+    &lt;li class="gu gu-1of2"&gt;
+    &lt;b class="nav-steps-item"&gt;1&lt;/b&gt;
+    &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
+    &lt;/li&gt;
 
-      &lt;!-- Last item (not done) --&gt;
-      &lt;li class="gu gu-last nav-steps-todo"&gt;
-        &lt;b class="nav-steps-item"&gt;2&lt;/b&gt;
-        &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-      &lt;/li&gt;
+    &lt;!-- Last item (not done) --&gt;
+    &lt;li class="gu gu-last nav-steps-todo"&gt;
+    &lt;b class="nav-steps-item"&gt;2&lt;/b&gt;
+    &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
+    &lt;/li&gt;
 
-    &lt;/ol&gt;
+  &lt;/ol&gt;
   &lt;/dd&gt;
 
 &lt;/dl&gt;</code></pre>
 
-      </div>
-      <div class="gu gu-last">
+    </div>
+    <div class="gu gu-last">
 
-        <p class="mbxs">Second case without header and with done and to do items:</p>
+    <p class="mbxs">Second case without header and with done and to do items:</p>
 
-        <pre><code class="lang-html">&lt;dl class="gr nav-steps"&gt;
+    <pre><code class="lang-html">&lt;dl class="gr nav-steps"&gt;
   &lt;dd class="gu gu-1of1"&gt;
-    &lt;ol class="gr"&gt;
-      &lt;li class="gu gu-1of4 nav-steps-done"&gt;
-        &lt;a href=""&gt;
-          &lt;b class="nav-steps-item"&gt;&lt;i class="vicon"&gt;v&lt;/i&gt;&lt;/b&gt;
-          &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="gu gu-1of4 nav-steps-done"&gt;
-        &lt;a href=""&gt;
-          &lt;b class="nav-steps-item"&gt;&lt;i class="vicon"&gt;v&lt;/i&gt;&lt;/b&gt;
-          &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="gu gu-1of4"&gt;
-        &lt;a href=""&gt;
-          &lt;b class="nav-steps-item"&gt;3&lt;/b&gt;
-          &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="gu gu-last nav-steps-todo"&gt;
-        &lt;b class="nav-steps-item"&gt;4&lt;/b&gt;
-        &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
+  &lt;ol class="gr"&gt;
+    &lt;li class="gu gu-1of4 nav-steps-done"&gt;
+    &lt;a href=""&gt;
+      &lt;b class="nav-steps-item"&gt;&lt;i class="vicon"&gt;v&lt;/i&gt;&lt;/b&gt;
+      &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="gu gu-1of4 nav-steps-done"&gt;
+    &lt;a href=""&gt;
+      &lt;b class="nav-steps-item"&gt;&lt;i class="vicon"&gt;v&lt;/i&gt;&lt;/b&gt;
+      &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="gu gu-1of4"&gt;
+    &lt;a href=""&gt;
+      &lt;b class="nav-steps-item"&gt;3&lt;/b&gt;
+      &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="gu gu-last nav-steps-todo"&gt;
+    &lt;b class="nav-steps-item"&gt;4&lt;/b&gt;
+    &lt;span class="nav-steps-text"&gt;Text&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
   &lt;/dd&gt;
 &lt;/dl&gt;
 
 </code></pre>
 
-      </div>
     </div>
+  </div>
 
   </div>
 </div>
@@ -282,76 +293,76 @@ order: 2
   <h2>Alerts</h2>
 
   <div class="gu gu-1of5">
-    <p>Three kinds of alert boxes:
-      for success notifications, for warnings, and for error messages in forms for example.
-    </p>
-    <p>Alert boxes have an optional close button and an optional large main icon.</p>
+  <p>Three kinds of alert boxes:
+    for success notifications, for warnings, and for error messages in forms for example.
+  </p>
+  <p>Alert boxes have an optional close button and an optional large main icon.</p>
   </div>
 
   <div class="gu gu-last restore-typography">
 
-    <div class="bx-alert mbl">
-      <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
-        <i class="vicon">×</i>
-      </button>
+  <div class="bx-alert mbl">
+    <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
+    <i class="vicon">×</i>
+    </button>
 
-      <i class="vicon bx-alert-icon">v</i>
-      <div class="bx-alert-content">
-        <h2 class="bx-alert-title">Title</h2>
-        <p class="mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
+    <i class="vicon bx-alert-icon">v</i>
+    <div class="bx-alert-content">
+    <h2 class="bx-alert-title">Title</h2>
+    <p class="mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
+  </div>
 
-    <div class="bx-alert mbl">
-      <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
-        <i class="vicon">×</i>
-      </button>
+  <div class="bx-alert mbl">
+    <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
+    <i class="vicon">×</i>
+    </button>
 
-      <i class="vicon bx-alert-icon">v</i>
-      <div class="bx-alert-content">
-        <p class="mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
+    <i class="vicon bx-alert-icon">v</i>
+    <div class="bx-alert-content">
+    <p class="mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
+  </div>
 
-    <div class="bx-alert mbl">
-      <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
-        <i class="vicon">×</i>
-      </button>
+  <div class="bx-alert mbl">
+    <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
+    <i class="vicon">×</i>
+    </button>
 
-      <i class="vicon bx-alert-icon">v</i>
-      <div class="bx-alert-content">
-        <p class="mbxs">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
+    <i class="vicon bx-alert-icon">v</i>
+    <div class="bx-alert-content">
+    <p class="mbxs">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
+  </div>
 
-    <div class="bx-alert bx-alert-warning mbl">
-      <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
-        <i class="vicon">×</i>
-      </button>
+  <div class="bx-alert bx-alert-warning mbl">
+    <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
+    <i class="vicon">×</i>
+    </button>
 
-      <p class="tac mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
+    <p class="tac mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
 
-    <div class="bx-alert bx-alert-error mbl">
-      <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
-        <i class="vicon">×</i>
-      </button>
+  <div class="bx-alert bx-alert-error mbl">
+    <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
+    <i class="vicon">×</i>
+    </button>
 
-      <p class="tac mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
+    <p class="tac mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
   </div>
 </div>
 
 <div class="gr grsxl">
   <div class="gu gu-1of5">
-    <p>A simple warning alert box, with a close button and a centered text message.</p>
-    <p>For an error use the <code class="lang-html">bx-alert-error</code> class instead of <code class="lang-html">bx-alert-warning</code></p>
+  <p>A simple warning alert box, with a close button and a centered text message.</p>
+  <p>For an error use the <code class="lang-html">bx-alert-error</code> class instead of <code class="lang-html">bx-alert-warning</code></p>
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="lang-html">&lt;div class="bx-alert bx-alert-warning"&gt;
+  <pre><code class="lang-html">&lt;div class="bx-alert bx-alert-warning"&gt;
   &lt;button class="bx-alert-close bootnode" data-comp="alert" data-event="click"&gt;
-    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
+  &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
   &lt;/button&gt;
 
   &lt;p class="tac mbxs"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
@@ -361,19 +372,19 @@ order: 2
 
 <div class="gr grsxl">
   <div class="gu gu-1of5">
-    <p>The most complete example, with a close button, an icon aligned to the left, a title and a text message.</p>
+  <p>The most complete example, with a close button, an icon aligned to the left, a title and a text message.</p>
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="lang-html">&lt;div class="bx-alert"&gt;
+  <pre><code class="lang-html">&lt;div class="bx-alert"&gt;
   &lt;button class="bx-alert-close bootnode" data-comp="alert" data-event="click"&gt;
-    &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
+  &lt;i class="vicon"&gt;&amp;times;&lt;/i&gt;
   &lt;/button&gt;
 
   &lt;i class="vicon bx-alert-icon"&gt;v&lt;/i&gt;
   &lt;div class="bx-alert-content"&gt;
-    &lt;h2 class="bx-alert-title"&gt;Title&lt;/h2&gt;
-    &lt;p class="mbxs"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+  &lt;h2 class="bx-alert-title"&gt;Title&lt;/h2&gt;
+  &lt;p class="mbxs"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
   </div>
@@ -383,69 +394,69 @@ order: 2
   <h2>Cards</h2>
 
   <div class="gu gu-1of5">
-    <p>This is not really a component but rather a style guide
-      to make your own card components using the right typography, colors, alignments.
-      Feel free to use it as a skeleton!
-    </p>
+  <p>This is not really a component but rather a style guide
+    to make your own card components using the right typography, colors, alignments.
+    Feel free to use it as a skeleton!
+  </p>
   </div>
 
   <div class="gu gu-2of5">
 
-    <div class="rc-card rc-card-l">
-      <div class="rc-card-header">
-        <h2 class="name">
-          <a href="">Firstname Lastname</a>
-          <i class="vicon">*</i>
-        </h2>
-      </div>
-      <div class="rc-card-content rc rcss">
-        <a href="" class="avatar img-left">
-          <img src="/tetra-ui/release/img/avatars/avatar-m-107x145.png">
-        </a>
-        <div class="bd">
-          <h3 class="job">Job, Company</h3>
-          <h4 class="where">City, Country | Industry</h4>
-          <dl class="previously">
-            <dt>Since 2011:</dt>
-            <dd>Job, Company</dd>
-            <dt>From 2008 to 2011:</dt>
-            <dd>Job, Company</dd>
-          </dl>
-        </div>
-      </div>
-      <div class="rc-card-footer">
-        <span class="fl mtxs">Other information</span>
-        <a href="" class="btn btn-primary fr">Action button</a>
-      </div>
+  <div class="rc-card rc-card-l">
+    <div class="rc-card-header">
+    <h2 class="name">
+      <a href="">Firstname Lastname</a>
+      <i class="vicon">*</i>
+    </h2>
     </div>
+    <div class="rc-card-content rc rcss">
+    <a href="" class="avatar img-left">
+      <img src="/tetra-ui/release/img/avatars/avatar-m-107x145.png">
+    </a>
+    <div class="bd">
+      <h3 class="job">Job, Company</h3>
+      <h4 class="where">City, Country | Industry</h4>
+      <dl class="previously">
+      <dt>Since 2011:</dt>
+      <dd>Job, Company</dd>
+      <dt>From 2008 to 2011:</dt>
+      <dd>Job, Company</dd>
+      </dl>
+    </div>
+    </div>
+    <div class="rc-card-footer">
+    <span class="fl mtxs">Other information</span>
+    <a href="" class="btn btn-primary fr">Action button</a>
+    </div>
+  </div>
 
-    <pre class="mtl"><code class="lang-html">&lt;div class="rc-card rc-card-l"&gt;
+  <pre class="mtl"><code class="lang-html">&lt;div class="rc-card rc-card-l"&gt;
   &lt;div class="rc-card-header"&gt;
-    &lt;h2 class="name"&gt;
-      &lt;a href=""&gt;Firstname Lastname&lt;/a&gt;
-      &lt;i class="vicon"&gt;*&lt;/i&gt;
-    &lt;/h2&gt;
+  &lt;h2 class="name"&gt;
+    &lt;a href=""&gt;Firstname Lastname&lt;/a&gt;
+    &lt;i class="vicon"&gt;*&lt;/i&gt;
+  &lt;/h2&gt;
   &lt;/div&gt;
   &lt;div class="rc-card-content rc rcss"&gt;
-    &lt;a href="" class="avatar img-left"&gt;
-      &lt;img src="…/avatar-m-107x145.png"&gt;
-    &lt;/a&gt;
-    &lt;div class="bd"&gt;
-      &lt;h3 class="job"&gt;Job, Company&lt;/h3&gt;
-      &lt;h4 class="where"&gt;City, Country |
-        Industry
-      &lt;/h4&gt;
-      &lt;dl class="previously"&gt;
-        &lt;dt&gt;Since 2011:&lt;/dt&gt;
-        &lt;dd&gt;Job, Company&lt;/dd&gt;
-        &lt;dt&gt;From 2008 to 2011:&lt;/dt&gt;
-        &lt;dd&gt;Job, Company&lt;/dd&gt;
-      &lt;/dl&gt;
-    &lt;/div&gt;
+  &lt;a href="" class="avatar img-left"&gt;
+    &lt;img src="…/avatar-m-107x145.png"&gt;
+  &lt;/a&gt;
+  &lt;div class="bd"&gt;
+    &lt;h3 class="job"&gt;Job, Company&lt;/h3&gt;
+    &lt;h4 class="where"&gt;City, Country |
+    Industry
+    &lt;/h4&gt;
+    &lt;dl class="previously"&gt;
+    &lt;dt&gt;Since 2011:&lt;/dt&gt;
+    &lt;dd&gt;Job, Company&lt;/dd&gt;
+    &lt;dt&gt;From 2008 to 2011:&lt;/dt&gt;
+    &lt;dd&gt;Job, Company&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="rc-card-footer"&gt;
-    &lt;span class="fl mtxs"&gt;Other information&lt;/span&gt;
-    &lt;a class="btn btn-primary fr"&gt;Button&lt;/a&gt;
+  &lt;span class="fl mtxs"&gt;Other information&lt;/span&gt;
+  &lt;a class="btn btn-primary fr"&gt;Button&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
@@ -453,49 +464,49 @@ order: 2
 
   <div class="gu gu-last">
 
-    <div class="rc-card rc-card-m">
-      <div class="rc-card-header rc rcss">
-        <a href="" class="avatar img-left">
-          <img src="/tetra-ui/release/img/avatars/avatar-m-60x60.png">
-        </a>
-        <div class="bd">
-          <h2 class="name"><a href="">Firstname Lastname</a></h2>
-          <h3 class="job">Job, Company</h3>
-        </div>
-      </div>
-      <div class="rc-card-content">
-        <h4 class="where">City, Country | Industry</h4>
-        <dl class="previously">
-          <dt>Since 2011:</dt>
-          <dd>Job, Company</dd>
-          <dt>From 2008 to 2011:</dt>
-          <dd>Job, Company</dd>
-        </dl>
-      </div>
+  <div class="rc-card rc-card-m">
+    <div class="rc-card-header rc rcss">
+    <a href="" class="avatar img-left">
+      <img src="/tetra-ui/release/img/avatars/avatar-m-60x60.png">
+    </a>
+    <div class="bd">
+      <h2 class="name"><a href="">Firstname Lastname</a></h2>
+      <h3 class="job">Job, Company</h3>
     </div>
+    </div>
+    <div class="rc-card-content">
+    <h4 class="where">City, Country | Industry</h4>
+    <dl class="previously">
+      <dt>Since 2011:</dt>
+      <dd>Job, Company</dd>
+      <dt>From 2008 to 2011:</dt>
+      <dd>Job, Company</dd>
+    </dl>
+    </div>
+  </div>
 
-    <pre class="mtl"><code class="lang-html">&lt;div class="rc-card rc-card-m"&gt;
+  <pre class="mtl"><code class="lang-html">&lt;div class="rc-card rc-card-m"&gt;
   &lt;div class="rc-card-header rc rcss"&gt;
-    &lt;a href="" class="avatar img-left"&gt;
-      &lt;img src="…/avatar-m-60x60.png"&gt;
-    &lt;/a&gt;
-    &lt;div class="bd"&gt;
-      &lt;h2 class="name"&gt;
-        &lt;a href=""&gt;Firstname Lastname&lt;/a&gt;
-      &lt;/h2&gt;
-      &lt;h3 class="job"&gt;Job, Company&lt;/h3&gt;
-    &lt;/div&gt;
+  &lt;a href="" class="avatar img-left"&gt;
+    &lt;img src="…/avatar-m-60x60.png"&gt;
+  &lt;/a&gt;
+  &lt;div class="bd"&gt;
+    &lt;h2 class="name"&gt;
+    &lt;a href=""&gt;Firstname Lastname&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;h3 class="job"&gt;Job, Company&lt;/h3&gt;
+  &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="rc-card-content"&gt;
-    &lt;h4 class="where"&gt;City, Country |
-      Industry
-    &lt;/h4&gt;
-    &lt;dl class="previously"&gt;
-      &lt;dt&gt;Since 2011:&lt;/dt&gt;
-      &lt;dd&gt;Job, Company&lt;/dd&gt;
-      &lt;dt&gt;From 2008 to 2011:&lt;/dt&gt;
-      &lt;dd&gt;Job, Company&lt;/dd&gt;
-    &lt;/dl&gt;
+  &lt;h4 class="where"&gt;City, Country |
+    Industry
+  &lt;/h4&gt;
+  &lt;dl class="previously"&gt;
+    &lt;dt&gt;Since 2011:&lt;/dt&gt;
+    &lt;dd&gt;Job, Company&lt;/dd&gt;
+    &lt;dt&gt;From 2008 to 2011:&lt;/dt&gt;
+    &lt;dd&gt;Job, Company&lt;/dd&gt;
+  &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
@@ -507,29 +518,29 @@ order: 2
 
 <div class="gr grsxl">
   <div class="gu gu-2of5">
-    <h3>Image files</h3>
-    <p>Avatar images are located at this URL:</p>
-    <p><code class="lang-html">img/avatars/avatar-[gender]-[w]x[h].png</code></p>
-    <p>
-      Gender is Man (<code class="lang-html">m</code>), Woman (<code class="lang-html">w</code>), Neutral (<code class="lang-html">n</code>).
-    </p>
+  <h3>Image files</h3>
+  <p>Avatar images are located at this URL:</p>
+  <p><code class="lang-html">img/avatars/avatar-[gender]-[w]x[h].png</code></p>
+  <p>
+    Gender is Man (<code class="lang-html">m</code>), Woman (<code class="lang-html">w</code>), Neutral (<code class="lang-html">n</code>).
+  </p>
   </div>
 
   <div class="gu gu-last">
-    <h3>Container</h3>
-    <p>An avatar image is displayed in a Rich Container.</p>
-    <p>
-      It is possible to use a <code class="lang-html">&lt;span class="avatar img-left"&gt;</code>
-      instead of <code class="lang-html">&lt;a href="" class="avatar img-left"&gt;</code>
-      in case of a non clickable avatar image.
-    </p>
+  <h3>Container</h3>
+  <p>An avatar image is displayed in a Rich Container.</p>
+  <p>
+    It is possible to use a <code class="lang-html">&lt;span class="avatar img-left"&gt;</code>
+    instead of <code class="lang-html">&lt;a href="" class="avatar img-left"&gt;</code>
+    in case of a non clickable avatar image.
+  </p>
 
-    <pre><code class="lang-html">&lt;div class="rc rcss"&gt;
+  <pre><code class="lang-html">&lt;div class="rc rcss"&gt;
   &lt;a href="" class="avatar img-left"&gt;
-    &lt;img src="/tetra-ui/release/img/avatars/avatar-m-40x40.png" alt="" /&gt;
+  &lt;img src="/tetra-ui/release/img/avatars/avatar-m-40x40.png" alt="" /&gt;
   &lt;/a&gt;
   &lt;div class="bd"&gt;
-    &lt;a href=""&gt;John Doe&lt;/a&gt;
+  &lt;a href=""&gt;John Doe&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
   </div>
@@ -539,59 +550,59 @@ order: 2
   <h3>Special case</h3>
 
   <div class="gu gu-1of5">
-    <p>When the whole avatar is embedded in a link, for example in a list of contacts.</p>
+  <p>When the whole avatar is embedded in a link, for example in a list of contacts.</p>
   </div>
 
   <div class="gu gu-1of5 ptxs">
-    <ul>
-      <li class="rc rcss mbm">
-        <a href="">
-          <div class="avatar img-left">
-            <img src="/tetra-ui/release/img/avatars/avatar-m-45x60.png" />
-          </div>
-          <div class="bd">
-            <p class="fn mbxs">John Doe</p>
-            <p class="title">Architect</p>
-          </div>
-        </a>
-      </li>
-      <li class="rc rcss mbm">
-        <a href="">
-          <div class="avatar img-left">
-            <img src="/tetra-ui/release/img/avatars/avatar-w-45x60.png" />
-          </div>
-          <div class="bd">
-            <p class="fn mbxs">Jane Doe</p>
-            <p class="title">Architect</p>
-          </div>
-        </a>
-      </li>
-      <li class="rc rcss mbm">
-        <a href="">
-          <div class="avatar img-left">
-            <img src="/tetra-ui/release/img/avatars/avatar-n-45x60.png" />
-          </div>
-          <div class="bd">
-            <p class="fn mbxs">J. Doe</p>
-            <p class="title">Architect</p>
-          </div>
-        </a>
-      </li>
-    </ul>
+  <ul>
+    <li class="rc rcss mbm">
+    <a href="">
+      <div class="avatar img-left">
+      <img src="/tetra-ui/release/img/avatars/avatar-m-45x60.png" />
+      </div>
+      <div class="bd">
+      <p class="fn mbxs">John Doe</p>
+      <p class="title">Architect</p>
+      </div>
+    </a>
+    </li>
+    <li class="rc rcss mbm">
+    <a href="">
+      <div class="avatar img-left">
+      <img src="/tetra-ui/release/img/avatars/avatar-w-45x60.png" />
+      </div>
+      <div class="bd">
+      <p class="fn mbxs">Jane Doe</p>
+      <p class="title">Architect</p>
+      </div>
+    </a>
+    </li>
+    <li class="rc rcss mbm">
+    <a href="">
+      <div class="avatar img-left">
+      <img src="/tetra-ui/release/img/avatars/avatar-n-45x60.png" />
+      </div>
+      <div class="bd">
+      <p class="fn mbxs">J. Doe</p>
+      <p class="title">Architect</p>
+      </div>
+    </a>
+    </li>
+  </ul>
   </div>
 
   <div class="gu gu-last">
-    <pre><code class="lang-html">&lt;ul&gt;
+  <pre><code class="lang-html">&lt;ul&gt;
   &lt;li class="rc rcss"&gt;
-    &lt;a href=""&gt;
-      &lt;div class="avatar img-left"&gt;
-        &lt;img src="/tetra-ui/release/img/avatars/avatar-w-45x60.png" /&gt;
-      &lt;/div&gt;
-      &lt;div class="bd"&gt;
-        &lt;p&gt;Jane Doe&lt;/p&gt;
-        &lt;p&gt;Architect&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
+  &lt;a href=""&gt;
+    &lt;div class="avatar img-left"&gt;
+    &lt;img src="/tetra-ui/release/img/avatars/avatar-w-45x60.png" /&gt;
+    &lt;/div&gt;
+    &lt;div class="bd"&gt;
+    &lt;p&gt;Jane Doe&lt;/p&gt;
+    &lt;p&gt;Architect&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
   </div>
@@ -599,217 +610,217 @@ order: 2
 
 <div class="gr mvl">
   <div class="gu gu-1of1">
-    <h3>Standard sizes</h3>
+  <h3>Standard sizes</h3>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <td></td>
-          <td colspan="4">Square</td>
-          <td colspan="2">Portrait</td>
-          <td colspan="2">Profile</td>
-        </tr>
-        <tr>
-          <th></th>
-          <th>30&times;30 (non native, browser scaled)</th>
-          <th>40&times;40</th>
-          <th>60&times;60</th>
-          <th>160&times;160</th>
-          <th>26&times;35</th>
-          <th>45&times;60</th>
-          <th>107&times;145 (non native, browser scaled)</th>
-          <th>140&times;185</th>
-        </tr>
-      </thead>
-      <tbody>
+  <table class="table">
+    <thead>
+    <tr>
+      <td></td>
+      <td colspan="4">Square</td>
+      <td colspan="2">Portrait</td>
+      <td colspan="2">Profile</td>
+    </tr>
+    <tr>
+      <th></th>
+      <th>30&times;30 (non native, browser scaled)</th>
+      <th>40&times;40</th>
+      <th>60&times;60</th>
+      <th>160&times;160</th>
+      <th>26&times;35</th>
+      <th>45&times;60</th>
+      <th>107&times;145 (non native, browser scaled)</th>
+      <th>140&times;185</th>
+    </tr>
+    </thead>
+    <tbody>
 
-        <tr>
-          <th>
-            Man
-          </th>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-30x30.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-40x40.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-60x60.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-160x160.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-26x35.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-45x60.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-107x145.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-m-140x185.png" />
-              </a>
-            </div>
-          </td>
-        </tr>
+    <tr>
+      <th>
+      Man
+      </th>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-30x30.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-40x40.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-60x60.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-160x160.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-26x35.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-45x60.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-107x145.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-m-140x185.png" />
+        </a>
+      </div>
+      </td>
+    </tr>
 
-        <tr>
-          <th>
-            Woman
-          </th>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-30x30.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-40x40.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-60x60.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-160x160.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-26x35.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-45x60.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-107x145.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-w-140x185.png" />
-              </a>
-            </div>
-          </td>
-        </tr>
+    <tr>
+      <th>
+      Woman
+      </th>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-30x30.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-40x40.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-60x60.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-160x160.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-26x35.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-45x60.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-107x145.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-w-140x185.png" />
+        </a>
+      </div>
+      </td>
+    </tr>
 
-        <tr>
-          <th>
-            Neutral
-          </th>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-30x30.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-40x40.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-60x60.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-160x160.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-26x35.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-45x60.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-107x145.png" />
-              </a>
-            </div>
-          </td>
-          <td>
-            <div class="rc rcss">
-              <a href="" class="avatar img-left">
-                <img src="/tetra-ui/release/img/avatars/avatar-n-140x185.png" />
-              </a>
-            </div>
-          </td>
-        </tr>
+    <tr>
+      <th>
+      Neutral
+      </th>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-30x30.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-40x40.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-60x60.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-160x160.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-26x35.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-45x60.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-107x145.png" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div class="rc rcss">
+        <a href="" class="avatar img-left">
+        <img src="/tetra-ui/release/img/avatars/avatar-n-140x185.png" />
+        </a>
+      </div>
+      </td>
+    </tr>
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
   </div>
 </div>

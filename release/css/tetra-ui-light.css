@@ -3112,6 +3112,12 @@ h6,
 .h-bx .h-bx-link:focus .vicon {
   color: #83a0b9;
 }
+.h-bx.h-bx-main {
+  border-bottom-color: #f97618;
+}
+.h-bx.h-bx-main .h-bx-link .vicon {
+  color: #fcbb8c;
+}
 ul.link-list {
   list-style: none;
   margin: 0;
@@ -5705,7 +5711,6 @@ i.vicon {
   border-radius: 3px;
   background: #ffffff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
   position: relative;
 }
 .bx-alert {
