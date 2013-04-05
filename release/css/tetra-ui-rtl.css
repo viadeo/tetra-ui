@@ -6434,6 +6434,20 @@ i.vicon {
   opacity: 1;
   margin-left: 15px;
 }
+.field-helper-right .error-inline {
+  right: 100%;
+  left: auto;
+}
+.field-helper-right .error-inline:after {
+  right: 0;
+  left: auto;
+  border-left: 8px solid #d74545;
+  border-right: 0;
+  margin-right: -8px;
+}
+.error .field-helper-right .error-inline {
+  margin-right: 15px;
+}
 .field-helper-bottom .error-inline:after,
 .field-helper-flow .error-inline:after {
   top: 0;

@@ -4310,6 +4310,39 @@ i.vicon {
   }
 }
 
+.field-helper-right {
+  .error-inline {
+    .position (@rtl) when (@rtl = false) {
+      left: 100%; right: auto;
+    }
+    .position (@rtl) when (@rtl = true) {
+      right: 100%; left: auto;
+    }
+
+    .position(@rtl);
+
+    &:after {
+      .arrow (@rtl) when (@rtl = false) {
+        left: 0; right: auto;
+        border-right: 8px solid tint(@errorText, 27%);
+        border-left: 0;
+      }
+      .arrow (@rtl) when (@rtl = true) {
+        right: 0; left: auto;
+        border-left: 8px solid tint(@errorText, 27%);
+        border-right: 0;
+      }
+
+      .arrow(@rtl);
+      .margin-left(@rtl, -8px);
+    }
+
+    .error & {
+      .margin-left(@rtl, @spacingM);
+    }
+  }
+}
+
 .field-helper-bottom, .field-helper-flow {
   .error-inline {
     &:after {

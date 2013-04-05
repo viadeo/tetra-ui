@@ -5877,6 +5877,20 @@ i.vicon {
   opacity: 1;
   margin-right: 15px;
 }
+.field-helper-right .error-inline {
+  left: 100%;
+  right: auto;
+}
+.field-helper-right .error-inline:after {
+  left: 0;
+  right: auto;
+  border-right: 8px solid #d74545;
+  border-left: 0;
+  margin-left: -8px;
+}
+.error .field-helper-right .error-inline {
+  margin-left: 15px;
+}
 .field-helper-bottom .error-inline:after,
 .field-helper-flow .error-inline:after {
   top: 0;
