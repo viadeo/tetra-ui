@@ -4694,7 +4694,7 @@ i.vicon {
 .eventsAction.btn-loading:active span,
 .core-form .btn-primary.btn-loading:active span,
 .core-form .btn-secondary.btn-loading:active span {
-  background: transparent url('/v_img/coreui/buttons/loaders/secondary.gif') no-repeat 50% 0.3em;
+  background: transparent url("/v_img/coreui/buttons/loaders/secondary.gif") no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
 .btn-primary.btn-inactive,
@@ -6361,7 +6361,7 @@ i.vicon {
 .placeholding input {
   position: relative;
   z-index: 2;
-  background: none;
+  background: transparent url("/v_img/globalglobal-sprite2.png") no-repeat 0 110%;
 }
 .placeholding .placeholder {
   position: absolute;

@@ -2618,7 +2618,7 @@ i.vicon {
   &.btn-loading:focus,
   &.btn-loading:active {
   		span {
-  			background: transparent url('@{img-buttons-dir}/loaders/secondary.gif') no-repeat 50% 0.3em;
+  			background: transparent url("@{img-buttons-dir}/loaders/secondary.gif") no-repeat 50% 0.3em;
   			*background-position-y: 0;
   		}
   }
@@ -3550,7 +3550,7 @@ i.vicon {
     visibility: hidden;
     opacity: 0;
 
-    margin-top: -@spacingS;
+    margin-top: (-1 * @spacingS);
 
     border: 1px solid @panelBorderDarker;
     background: @white;
@@ -4221,7 +4221,9 @@ i.vicon {
   input {
     position: relative;
     z-index: 2;
-    background: none;
+    // For IE 7,8 we must put a fake background image
+    // on other browsers a simple transparent background is ok
+    background: transparent url("@{img-sprite-dir}global-sprite2.png") no-repeat 0 110%;
   }
 
   .placeholder {
