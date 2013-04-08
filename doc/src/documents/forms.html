@@ -647,7 +647,7 @@ order: 4
 </div>
 
 <div class="gr grsxl mtxl">
-  <h3>Custom radio buttons</h3>
+  <h3>Custom radio &amp; checkboxes</h3>
 
   <div class="gu gu-1of4">
     <p>Only works in modern browsers, falls back to standard radio buttons in legacy browsers. These custom radio buttons are pure CSS3, no JavaScript required.</p>
@@ -696,22 +696,65 @@ order: 4
           </label>
         </div>
       </div>
+
+      <div class="control-group">
+        <label class="control-label">Horizontal checkboxes</label>
+        <div class="controls">
+          <label class="checkbox inline custom-checkbox mrl">
+            <input type="checkbox" checked="checked" />
+            <span class="custom-checkbox-element"></span>
+            Option one
+          </label>
+          <label class="checkbox inline custom-checkbox mrl">
+            <input type="checkbox" />
+            <span class="custom-checkbox-element"></span>
+            Option two
+          </label>
+          <label class="checkbox inline custom-checkbox mrl">
+            <input type="checkbox" />
+            <span class="custom-checkbox-element"></span>
+            Option three
+          </label>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Vertical checkboxes</label>
+        <div class="controls">
+          <label class="checkbox custom-checkbox">
+            <input type="checkbox" checked="checked" />
+            <span class="custom-checkbox-element"></span>
+            Option one
+          </label>
+          <label class="checkbox custom-checkbox">
+            <input type="checkbox" />
+            <span class="custom-checkbox-element"></span>
+            Option two
+          </label>
+          <label class="checkbox custom-checkbox">
+            <input type="checkbox" />
+            <span class="custom-checkbox-element"></span>
+            Option three
+          </label>
+        </div>
+      </div>
     </form>
   </div>
 
   <div class="gu gu-1of4">
     <p>Just add a
-      <code class="lang-html">custom-radio</code>
+      <code>custom-radio</code> or <code>custom-checkbox</code>
       class to your existing
-      <code class="lang-html">&lt;label class="radio"&gt;</code>,
-      and juste before your label text add a
-      <code class="lang-html">&lt;span class="custom-radio-element"&gt;</code>
+      <code>&lt;label class="radio"&gt;</code> or <code>&lt;label class="checkbox"&gt;</code>,
+      and just after your <code>&lt;input /&gt;</code> field add an empty
+      <code>&lt;span class="custom-radio-element"&gt;</code> or <code>&lt;span class="custom-checkbox-element"&gt;</code>.
     </p>
   </div>
 
   <div class="gu gu-last">
     <pre><code class="lang-html">&lt;form class="core-form form-horizontal"&gt;
   &lt;div class="control-group"&gt;
+
     &lt;label class="control-label"&gt;Custom radio buttons&lt;/label&gt;
     &lt;div class="controls"&gt;
 
@@ -728,6 +771,24 @@ order: 4
       &lt;/label&gt;
 
     &lt;/div&gt;
+
+    &lt;label class="control-label"&gt;Custom checkboxes&lt;/label&gt;
+    &lt;div class="controls"&gt;
+
+      &lt;label class="checkbox inline custom-checkbox"&gt;&lt;!-- Add the inline class for horizontal --&gt;
+        &lt;input type="checkbox" checked="checked" /&gt;
+        &lt;span class="custom-checkbox-element"&gt;&lt;/span&gt;&lt;!-- This must be just before your text --&gt;
+        Option one
+      &lt;/label&gt;
+
+      &lt;label class="checkbox inline custom-checkbox"&gt;
+        &lt;input type="checkbox" /&gt;
+        &lt;span class="custom-checkbox-element"&gt;&lt;/span&gt;
+        Option two
+      &lt;/label&gt;
+
+    &lt;/div&gt;
+
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
   </div>

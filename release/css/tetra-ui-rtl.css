@@ -5999,6 +5999,43 @@ i.vicon {
 .custom-radio:not(#unsupported) input:checked + .custom-radio-element {
   background-color: #344957;
 }
+.custom-checkbox:not(#unsupported) {
+  cursor: pointer;
+}
+.custom-checkbox:not(#unsupported) input {
+  opacity: 0;
+  width: 20px;
+}
+.custom-checkbox:not(#unsupported) input:focus + .custom-checkbox-element {
+  box-shadow: 0 0 0 1px #88a7bc;
+  outline: thin dotted;
+}
+.custom-checkbox:not(#unsupported) .custom-checkbox-element {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 16px;
+  margin: 0 0 2px 0;
+  margin-left: 5px;
+  margin-right: -20px;
+  border: 1px solid #cbd2d6;
+  border-radius: 2px;
+  vertical-align: middle;
+  text-align: center;
+}
+.custom-checkbox:not(#unsupported) .custom-checkbox-element:after {
+  content: "v";
+  font-family: 'Viadeoicons';
+  font-size: 6px;
+  color: #344957;
+  visibility: hidden;
+}
+.custom-checkbox:not(#unsupported):hover .custom-checkbox-element {
+  border-color: #88a7bc;
+}
+.custom-checkbox:not(#unsupported) input:checked + .custom-checkbox-element:after {
+  visibility: visible;
+}
 .btn-toggle {
   display: inline-block;
   padding: 4px 10px 4px 4px;
