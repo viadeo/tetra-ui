@@ -37,6 +37,10 @@ p {
   #gradient > .vertical(lighten(@black, 17%), lighten(@black, 14%));
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
+  .fixed-container {
+    width: 1010px;
+  }
+
   .viadeo-logo {
     display: block;
     width: 97px; height: 0;
@@ -47,6 +51,12 @@ p {
 
   a.github {
     color: @orange;
+  }
+}
+
+.headline {
+  .fixed-container {
+    width: 1010px;
   }
 }
 
@@ -97,8 +107,7 @@ p {
     width: 70px; height: 70px;
     margin-left: -35px;
     border-radius: 50%;
-    background: @white;
-    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 4px 6px -5px rgba(0, 0, 0, 0.3) inset;
   }
 
   h1 {
@@ -139,24 +148,24 @@ p {
 /* Content */
 
 .content {
-  padding: 50px @spacingL 80px;
-  background: @white;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 0 80px;
 
-  > .nav-tabs {
+  &.fixed-container {
+    width: 1020px;
+  }
 
-    .move (@rtl) when (@rtl = false) {
-      left: -1 * @spacingL;
+  > .nav {
+    li {
+      a {
+        padding: @spacingS @spacingL;
+      }
     }
+  }
 
-    .move (@rtl) when (@rtl = true) {
-      left: @spacingL;
-    }
-
-    position: relative;
-    .move(@rtl);
-    width: 100%;
-    padding: 0 @spacingL;
+  > .nav-tabs-section {
+    padding: @spacingL;
+    background: @white;
+    box-shadow: 1px 1px 4px fade(@black, 20%);
   }
 }
 

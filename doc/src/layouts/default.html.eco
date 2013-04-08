@@ -38,7 +38,7 @@
   </div>
 
   <div class="content fixed-container">
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-menu">
       <% for page in @getCollection("pages").toJSON(): %>
         <li<% if page.id is @document.id: %> class="active"<% end %>>
           <a href="/tetra-ui/doc<%= page.url %>"><%= page.title %></a>
