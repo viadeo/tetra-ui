@@ -7,9 +7,13 @@ tetra.view.register('alert', {
 		return {
 			events: {
 				user: {
-					'click':{
+					'click': {
 						'.bx-alert-close': function (e, elm) {
 							_(elm).parents('.bx-alert').remove();
+						},
+
+						'.bx-close': function (e, elm) {
+							_(elm).parents('.bx').remove();
 						}
 					}
 				},

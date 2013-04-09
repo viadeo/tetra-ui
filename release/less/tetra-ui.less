@@ -2212,7 +2212,6 @@ a:hover, a:focus {
 
 i.vicon {
   display: inline-block;
-  .margin-right(@rtl, 3px);
   font-family: 'Viadeoicons';
   font-size: 10px;
   font-style: normal;
@@ -4067,6 +4066,23 @@ i.vicon {
 	box-shadow: 1px 1px 4px fade(@black, 20%);
 	position: relative;
 	margin-bottom: @spacingXl;
+
+	.bx-close {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		.vicon {
+			color: tint(@blueSoft, 40%);
+			font-size: 8px;
+		}
+
+		&:hover {
+			.vicon {
+				color: @blueSoft;
+			}
+		}
+	}
 }
 
 .bx-alert {

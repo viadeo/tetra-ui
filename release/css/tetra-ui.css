@@ -4177,7 +4177,6 @@ a:focus .avatar img {
 }
 i.vicon {
   display: inline-block;
-  margin-right: 3px;
   font-family: 'Viadeoicons';
   font-size: 10px;
   font-style: normal;
@@ -6226,6 +6225,18 @@ i.vicon {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   position: relative;
   margin-bottom: 30px;
+}
+.bx .bx-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.bx .bx-close .vicon {
+  color: #b5c6d5;
+  font-size: 8px;
+}
+.bx .bx-close:hover .vicon {
+  color: #83a0b9;
 }
 .bx-alert {
   position: relative;

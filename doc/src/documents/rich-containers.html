@@ -117,7 +117,7 @@ order: 2
 <div class="gr grsxl">
   <div class="gu gu-2of5">
 
-    <div class="bx mbl">
+    <div class="bx mbm">
       <h2 class="h-bx">
       <a href="" class="h-bx-link tooltip tooltip-left">
         <i class="vicon">c</i>
@@ -128,7 +128,7 @@ order: 2
       Box content
     </div>
 
-    <div class="bx">
+    <div class="bx mbm">
       <h2 class="h-bx h-bx-main">
       <a href="" class="h-bx-link tooltip tooltip-left">
         <i class="vicon">c</i>
@@ -139,10 +139,25 @@ order: 2
       Box content
     </div>
 
+    <div class="bx">
+      <button type="button" class="bx-close bootnode" data-comp="alert" data-event="click">
+        <i class="vicon">×</i>
+      </button>
+      Box with close button
+    </div>
+
   </div>
   <div class="gu gu-last">
 
   <pre><code class="lang-html">&lt;div class="bx"&gt;
+
+  &lt;!-- Displaying a close button --&gt;
+  &lt;button type="button" class="bx-close bootnode"
+    data-comp="alert" data-event="click"&gt;
+    &lt;i class="vicon"&gt;×&lt;/i&gt;
+  &lt;/button&gt;
+
+  &lt;!-- Displaying a title with a sample aside link --&gt;
   &lt;h2 class="h-bx"&gt;
     &lt;a href="" class="h-bx-link tooltip tooltip-left"&gt;
       &lt;i class="vicon"&gt;c&lt;/i&gt;
@@ -150,6 +165,7 @@ order: 2
     &lt;/a&gt;
     Box title
   &lt;/h2&gt;
+
   Box content
 &lt;/div&gt;</code></pre>
 

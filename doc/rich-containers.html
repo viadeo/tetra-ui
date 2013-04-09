@@ -194,7 +194,7 @@
 <div class="gr grsxl">
   <div class="gu gu-2of5">
 
-    <div class="bx mbl">
+    <div class="bx mbm">
       <h2 class="h-bx">
       <a href="" class="h-bx-link tooltip tooltip-left">
         <i class="vicon">c</i>
@@ -205,7 +205,7 @@
       Box content
     </div>
 
-    <div class="bx">
+    <div class="bx mbm">
       <h2 class="h-bx h-bx-main">
       <a href="" class="h-bx-link tooltip tooltip-left">
         <i class="vicon">c</i>
@@ -216,10 +216,25 @@
       Box content
     </div>
 
+    <div class="bx">
+      <button type="button" class="bx-close bootnode" data-comp="alert" data-event="click">
+        <i class="vicon">×</i>
+      </button>
+      Box with close button
+    </div>
+
   </div>
   <div class="gu gu-last">
 
   <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Displaying a close button --&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"bx-close bootnode"</span>
+    <span class="attribute">data-comp</span>=<span class="value">"alert"</span> <span class="attribute">data-event</span>=<span class="value">"click"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>×<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Displaying a title with a sample aside link --&gt;</span>
   <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"h-bx"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"h-bx-link tooltip tooltip-left"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>c<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
@@ -227,6 +242,7 @@
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     Box title
   <span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+
   Box content
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
 
