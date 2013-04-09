@@ -5821,7 +5821,7 @@ i.vicon {
 .placeholding input {
   position: relative;
   z-index: 2;
-  background: transparent url("/v_img/globalglobal-sprite2.png") no-repeat 0 110%;
+  background: transparent url("/v_img/global/global-sprite2.png") no-repeat 0 110%;
 }
 .placeholding .placeholder {
   position: absolute;

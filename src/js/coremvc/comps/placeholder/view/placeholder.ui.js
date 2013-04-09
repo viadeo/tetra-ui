@@ -56,11 +56,14 @@ tetra.view.register('placeholder', {
 				init: function() {
 
 					_(document).ready(function() {
-						_('.placeholding input').each(function() {
-							if (_(this).val().length > 0) {
-								_(this).parent().addClass('typing');
+						var fields = _('.placeholding input');
+
+						for (var i = 0; i < fields.length; i++) {
+							var input = fields[i];
+							if (_(input).val().length > 0) {
+								_(input).parent().addClass('typing');
 							}
-						});
+						}
 					});
 
 				}
