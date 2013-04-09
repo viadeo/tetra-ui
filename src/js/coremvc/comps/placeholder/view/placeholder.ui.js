@@ -10,32 +10,32 @@ tetra.view.register('placeholder', {
 
 					'click': {
 						'.placeholding': function(e, elm) {
-							elm.addClass('active');
+							_(elm).addClass('active');
 						}
 					},
 
 					'clickout': {
 						'.placeholding': function(e, elm) {
-							elm.removeClass('active');
+							_(elm).removeClass('active');
 						}
 					},
 
 					'focus': {
 						'.placeholding input': function(e, elm) {
-							elm.parent().addClass('active');
+							_(elm).parent().addClass('active');
 						}
 					},
 
 					'blur': {
 						'.placeholding input': function(e, elm) {
-							elm.parent().removeClass('active');
+							_(elm).parent().removeClass('active');
 						}
 					},
 
 					'keyup': {
 						'.placeholding input': function(e, elm) {
-							var placeholding = elm.parent();
-							var typed = elm.prop('value').length;
+							var placeholding = _(elm).parent();
+							var typed = _(elm).val().length;
 
 							if (typed > 0) {
 								if (! placeholding.hasClass('typing')) {
@@ -57,7 +57,7 @@ tetra.view.register('placeholder', {
 
 					_(document).ready(function() {
 						_('.placeholding input').each(function() {
-							if (_(this).prop('value').length > 0) {
+							if (_(this).val().length > 0) {
 								_(this).parent().addClass('typing');
 							}
 						});
