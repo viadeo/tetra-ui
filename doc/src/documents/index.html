@@ -8,7 +8,7 @@ order: 1
 <div class="page-header">
   <h1>Grid System<span class="sub">Flexible, easy to use, and fun!</span></h1>
 </div>
-<div class="gr grsxl">
+<div class="gr grsxl" id="basics">
   <div class="gu gu-2of5">
     <h2>How it works</h2>
     <p>The Tetra UI grid is a percentage-based, nestable grid system. Each grid row (<code class="language-css">.gr</code>) takes up 100% of the parent containers' width and can contain up to 5 grid units (<code class="language-css">.gu</code>). These grid units can then contain nested grid rows, maximizing flexibility and laying the foundations for a responsive layout.</p>
@@ -27,7 +27,7 @@ order: 1
   </div>
 </div>
 
-<h2 class="mvl">Simple grid examples</h2>
+<h2 class="mvl" id="examples">Simple grid examples</h2>
 <div class="gr gr-zebra">
   <div class="gu gu-1of5">.gu .gu-1of5</div>
   <div class="gu gu-1of5">.gu .gu-1of5</div>
@@ -54,7 +54,7 @@ order: 1
   <div class="gu gu-1of1">.gu .gu-1of1</div>
 </div>
 
-<h2 class="mvl">Nested grid example</h2>
+<h2 class="mvl" id="nested-grid">Nested grid example</h2>
 <div class="gr gr-zebra">
   <div class="gu gu-2of3 pan pts">
     .gu .gu-2of3
@@ -96,7 +96,7 @@ order: 1
 
 <div class="gr grsm mtxl">
   <div class="gu gu-2of5">
-    <h2>Spaced Grids</h2>
+    <h2 id="spaced-grids">Spaced Grids</h2>
     <p>You can assign spacing to the Tetra UI grid, using the fixed spacing sizes declared in <a href="#">variables.less</a>. The percentage widths of each grid unit will change to accomodate for the extra spacing and to ensure all units are equal widths.</p>
     <p>NOTE: Tetra UI uses the <code class="language-css">@siteWidth</code> variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the <code class="language-css">@siteWidth</code> variable.</p>
   </div>
@@ -163,7 +163,7 @@ order: 1
   <div class="gu gu-last">.gu .gu-last</div>
 </div>
 
-<h2 class="mtm">Centering columns</h2>
+<h2 class="mtm" id="centering">Centering columns</h2>
 <p>Using the <code>.bac</code> (Block Align Center) class as described on the <a href="/tetra-ui/doc/helpers.html">helpers page</a>.</p>
 <div class="gr gr-zebra">
   <div class="gu gu-1of5 bac">.gu .gu-1of5 .bac</div>
