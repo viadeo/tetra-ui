@@ -2929,6 +2929,14 @@ textarea {
   float: none;
   margin-left: auto !important;
 }
+/* Vertical Alignment
+ * ----------------------------------------------------------------- */
+.vam {
+  vertical-align: middle;
+}
+.vab {
+  vertical-align: bottom;
+}
 /* Gray scale
  * ----------------------------------------------------------------- */
 .black {
