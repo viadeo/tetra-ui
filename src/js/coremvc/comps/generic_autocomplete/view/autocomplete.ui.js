@@ -15,11 +15,11 @@ tetra.view.register('autocomplete', {
               switch (e.which) {
 
                 case 13: // enter
-                  // avoid enter to allow form submit
-                  e.preventDefault();
                   elm = me._container.find('.autocomplete-menu li.active');
                   var prevContainerId = me._containerId;
                   if (elm.length) {
+                      // avoid enter to allow form submit
+                      e.preventDefault();
                       me.methods.suggestions.clickOnSuggestion(elm);
                   }
                   me.methods.suggestions.hide(prevContainerId);
@@ -115,6 +115,8 @@ tetra.view.register('autocomplete', {
             }
             if (!havingSuggestion) {
                 // No suggestion to show
+                me._container.removeClass('active');
+                _(me._menu).empty();
                 return;
             }
 
