@@ -1,5 +1,5 @@
-tetra.view.register('card', {
-	scope: 'card',
+tetra.view.register('flipbox', {
+	scope: 'flipbox',
 
 	constr: function(me, app, _) {
 		'use strict';
