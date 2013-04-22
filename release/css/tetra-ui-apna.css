@@ -6248,6 +6248,10 @@ i.vicon {
 .bx .bx-close:hover .vicon {
   color: #83a0b9;
 }
+.bx.bx-default {
+  border: 1px solid #d1dce5;
+  box-shadow: none;
+}
 .bx-alert {
   position: relative;
   padding: 20px 20px 15px;
