@@ -142,7 +142,7 @@
 }
 
 .bx-flip-back {
-	background: @grayDark;
+	background: @blueSoft;
 	bottom: 0;
 	color: @white;
 	left: 0;
@@ -152,8 +152,13 @@
 	-webkit-transform: perspective(700px) rotateY(180deg);
 	transform        : perspective(700px) rotateY(180deg);
 
-	.h-bx, .vicon, h2, label {
+	.h-bx, .vicon, h2, label,
+	.h-bx-link .vicon, .h-bx-link:focus .vicon, .h-bx-link:hover .vicon {
 		color: @white;
+	}
+
+	.h-bx {
+		border-color: @white;
 	}
 
 }
