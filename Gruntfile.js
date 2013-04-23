@@ -212,7 +212,8 @@ module.exports = function(grunt) {
           'release/js/yesno.js': ['<banner>', 'src/js/coremvc/comps/yesno/model/yesno.class.js', 'src/js/coremvc/comps/yesno/controller/yesno.ctrl.js', 'src/js/coremvc/comps/yesno/view/yesno.ui.js'],
           'release/js/placeholder.js': ['<banner>', 'src/js/coremvc/comps/placeholder/view/placeholder.ui.js'],
           'release/js/iePlaceholder.js': ['<banner>', 'src/js/coremvc/comps/ie/view/iePlaceholder.ui.js'],
-          'release/js/alert.js': ['<banner>', 'src/js/coremvc/comps/alert/view/alert.ui.js']
+          'release/js/alert.js': ['<banner>', 'src/js/coremvc/comps/alert/view/alert.ui.js'],
+          'release/js/flipbox.js': ['<banner>', 'src/js/coremvc/comps/flipbox/view/flipbox.ui.js']
         }
       }
     },
