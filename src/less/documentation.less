@@ -59,6 +59,15 @@ p {
     &:hover {
       #gradient > .vertical(lighten(@black, 35%), lighten(@black, 30%));
     }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 14px; height: 14px;
+      vertical-align: middle;
+      margin: 0 0 .2em .6em;
+      background: rgba(0, 0, 0, 0) url("/tetra-ui/release/img/tetra-ui/github.svg") no-repeat;
+    }
   }
 }
 
