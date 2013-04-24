@@ -8,7 +8,8 @@ tetra.model.register('popin', {
             parser:function (resp, col, cond) {
                 col[cond.uriParams.url] = {
                     id:cond.uriParams.url,
-                    html:resp.toString()
+                    html:resp.toString(),
+                    timestamp:cond.timestamp
                 };
                 return col;
             }
@@ -17,7 +18,8 @@ tetra.model.register('popin', {
 
     attr:{
         html:'',
-        url:''
+        url:'',
+        timestamp:''
     },
 
     methods:function (attr) {
