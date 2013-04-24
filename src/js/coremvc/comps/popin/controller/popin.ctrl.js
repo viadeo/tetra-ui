@@ -18,11 +18,17 @@ tetra.controller.register('popin', {
                         },
                         'append':function (col) {
 
+                            var data = {
+                                html:col[0].get('html'),
+                                url:col[0].get('id'),
+                                _timestamp:col[0].get('timestamp')
+                            };
+
                             app.notify('end loading').notify('set content', {
-                                content:col[0].get('html')
+                                content:data.html
                             });
 
-                            page.notify("popin: success", col[0].get('html'));
+                            page.notify("popin: success", data);
                         },
                         'error':function (error) {
                             app.notify('end loading').notify('show error', error);
@@ -97,7 +103,10 @@ tetra.controller.register('popin', {
 
                         me.url = data.url;
                         me.id = null;
-                        orm('popin').fetch({ uriParams:{ url:data.url } });
+                        orm('popin').fetch({ 
+                            uriParams:{ url:data.url },
+                            timestamp:data._timestamp
+                         });
 
                     } else if (data.id) { // loading popin from the dom
 
