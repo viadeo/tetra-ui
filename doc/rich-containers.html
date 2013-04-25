@@ -254,6 +254,76 @@
   </div>
 </div>
 
+<h2 class="mvl" id="boxes">Flippable boxes</h2>
+
+<div class="gr grsxl">
+  <div class="gu gu-2of5">
+
+    <div class="bx-flip mbm">
+      <div class="bx bx-flip-front">
+        <h2 class="h-bx">
+        <button class="h-bx-link bx-flip-turn tooltip tooltip-left bootnode" data-event="click" data-comp="flipbox">
+          <i class="vicon">c</i>
+          <span class="tooltip-content">Settings</span>
+        </button>
+        Box title
+        </h2>
+        Content on the front side
+      </div>
+      <div class="bx bx-flip-back">
+        <h2 class="h-bx">
+        <button class="h-bx-link bx-flip-turn tooltip tooltip-left bootnode" data-event="click" data-comp="flipbox">
+          <i class="vicon">×</i>
+          <span class="tooltip-content">Close</span>
+        </button>
+        Box settings
+        </h2>
+        Content on the back side
+      </div>
+    </div>
+
+  </div>
+  <div class="gu gu-last">
+
+  <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx-flip mbm"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Displaying the front side of the box --&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx bx-flip-front"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"h-bx"</span>&gt;</span>
+
+    <span class="comment">&lt;!-- Displaying a title with a flip button --&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"h-bx-link bx-flip tooltip tooltip-left bootnode"</span>
+      <span class="attribute">data-event</span>=<span class="value">"click"</span> <span class="attribute">data-comp</span>=<span class="value">"flipbox"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>c<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip-content"</span>&gt;</span>Settings<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    Box title
+    <span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+
+    Content on the front side
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Displaying the back side of the box --&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bx bx-flip-back"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"h-bx"</span>&gt;</span>
+
+    <span class="comment">&lt;!-- Displaying a title with a flip back button --&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"h-bx-link bx-flip tooltip tooltip-left bootnode"</span>
+      <span class="attribute">data-event</span>=<span class="value">"click"</span> <span class="attribute">data-comp</span>=<span class="value">"flipbox"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"vicon"</span>&gt;</span>×<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip-content"</span>&gt;</span>Close<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    Box settings
+    <span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+
+    Content on the back side
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+  </div>
+</div>
+
 <h2 class="mvl" id="nav-steps">Navigation with steps</h2>
 
 <div class="gr grsxl">
