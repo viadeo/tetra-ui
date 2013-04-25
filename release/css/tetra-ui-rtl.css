@@ -3774,10 +3774,6 @@ pre {
 .form-horizontal .form-actions {
   padding-right: 160px;
 }
-/*
- * Tables.less
- * Tables for, you guessed it, tabular data
- * ---------------------------------------- */
 table.table {
   width: 100%;
   margin-bottom: 1.2em;
@@ -3829,10 +3825,7 @@ table.table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 4px;
 }
 table.zebra tbody tr:nth-child(odd) td {
-  background-color: #f9f9f9;
-}
-table.zebra tbody tr:hover td {
-  background-color: #f5f5f5;
+  background-color: #f9fafc;
 }
 table.table .header {
   cursor: pointer;
@@ -3868,6 +3861,25 @@ table.table .headerSortUp:after {
   visibility: visible;
   filter: alpha(opacity=60);
   opacity: 0.6;
+}
+table.table-text {
+  border: none;
+}
+table.table-text thead th {
+  border: none;
+  border-bottom: 3px solid #d1dce5;
+  font-family: "MuseoSlab", "Arial", sans-serif;
+  font-weight: normal;
+}
+table.table-text td + td {
+  border: none;
+}
+table.table-text tr + tr td {
+  border-top: 1px dotted #ddd;
+}
+table.table-hover tbody tr:hover > td,
+table.table-hover tbody tr:hover > th {
+  background-color: #f5f7f9;
 }
 /* Patterns.less
  * Common interface patterns
@@ -6338,6 +6350,54 @@ i.vicon {
 .bx-alert-error .bx-alert-close:hover .vicon,
 .bx-alert-error .bx-alert-close:focus .vicon {
   color: #d94d4d;
+}
+.bx-flip {
+  position: relative;
+  margin-bottom: 20px;
+}
+.bx-flip-front,
+.bx-flip-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+.bx-flip-front {
+  position: relative;
+  z-index: 1;
+}
+.bx-flip-back {
+  background: #83a0b9;
+  bottom: 0;
+  color: #ffffff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: perspective(700px) rotateY(180deg);
+  transform: perspective(700px) rotateY(180deg);
+}
+.bx-flip-back .h-bx,
+.bx-flip-back .vicon,
+.bx-flip-back h2,
+.bx-flip-back label,
+.bx-flip-back .h-bx-link .vicon,
+.bx-flip-back .h-bx-link:focus .vicon,
+.bx-flip-back .h-bx-link:hover .vicon {
+  color: #ffffff;
+}
+.bx-flip-back .h-bx {
+  border-color: #ffffff;
+}
+.bx-flip-flipped .bx-flip-front {
+  -webkit-transform: perspective(700px) rotateY(-180deg);
+  transform: perspective(700px) rotateY(-180deg);
+}
+.bx-flip-flipped .bx-flip-back {
+  -webkit-transform: perspective(700px) rotateY(0);
+  transform: perspective(700px) rotateY(0);
+  z-index: 2;
 }
 .rc-card {
   min-height: 145px;

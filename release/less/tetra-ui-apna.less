@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.29 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.30 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -1842,14 +1842,7 @@ pre {
   }
 }
 
-/*
- * Tables.less
- * Tables for, you guessed it, tabular data
- * ---------------------------------------- */
-
-
-// BASELINE STYLES
-// ---------------
+// Tables
 
 table.table {
   width: 100%;
@@ -1908,10 +1901,7 @@ table.table {
 table.zebra {
   tbody {
     tr:nth-child(odd) td {
-      background-color: #f9f9f9;
-    }
-    tr:hover td {
-      background-color: #f5f5f5;
+      background-color: tint(@blueSoft, 95%);
     }
   }
 }
@@ -1962,6 +1952,38 @@ table.table {
     }
   }
 }
+
+table.table-text {
+  border: none;
+
+  thead {
+    th {
+      border: none;
+      border-bottom: 3px solid @borderColor;
+      font-family: "MuseoSlab", "Arial", sans-serif;
+      font-weight: normal;
+    }
+  }
+
+  td + td {
+    border: none;
+  }
+
+  tr + tr td {
+    border-top: 1px dotted #ddd;
+  }
+}
+
+table.table-hover {
+  tbody {
+    tr:hover {
+      > td, > th {
+        background-color: @panelBackground;
+      }
+    }
+  }
+}
+
 /* Patterns.less
  * Common interface patterns
  * ---------------------------------------------------------------------------- */
@@ -4194,6 +4216,61 @@ i.vicon {
 			}
 		}
 	}
+}
+
+.bx-flip {
+	position: relative;
+	margin-bottom: @spacingL;
+}
+
+.bx-flip-front, .bx-flip-back {
+	-webkit-backface-visibility: hidden;
+	backface-visibility        : hidden;
+	margin: 0;
+	-webkit-transition: -webkit-transform .4s ease-in-out;
+	transition        :         transform .4s ease-in-out;
+}
+
+.bx-flip-front {
+	position: relative;
+	z-index: 1;
+}
+
+.bx-flip-back {
+	background: @blueSoft;
+	bottom: 0;
+	color: @white;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-transform: perspective(700px) rotateY(180deg);
+	transform        : perspective(700px) rotateY(180deg);
+
+	.h-bx, .vicon, h2, label,
+	.h-bx-link .vicon, .h-bx-link:focus .vicon, .h-bx-link:hover .vicon {
+		color: @white;
+	}
+
+	.h-bx {
+		border-color: @white;
+	}
+
+}
+
+.bx-flip-flipped {
+
+	.bx-flip-front {
+		-webkit-transform: perspective(700px) rotateY(-180deg);
+		transform        : perspective(700px) rotateY(-180deg);
+	}
+
+	.bx-flip-back {
+		-webkit-transform: perspective(700px) rotateY(0);
+		transform        : perspective(700px) rotateY(0);
+		z-index: 2;
+	}
+
 }
 
 // Card Rich Container

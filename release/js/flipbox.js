@@ -1,7 +1,7 @@
 /*! Tetra UI v1.0.30 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
-tetra.view.register('alert', {
-	scope: 'alert',
+tetra.view.register('flipbox', {
+	scope: 'flipbox',
 
 	constr: function(me, app, _) {
 		'use strict';
@@ -10,12 +10,8 @@ tetra.view.register('alert', {
 			events: {
 				user: {
 					'click': {
-						'.bx-alert-close': function (e, elm) {
-							_(elm).parents('.bx-alert').remove();
-						},
-
-						'.bx-close': function (e, elm) {
-							_(elm).parents('.bx').remove();
+						'.bx-flip .bx-flip-turn': function (e, elm) {
+							_(elm).parents('.bx-flip').first().toggleClass('bx-flip-flipped');
 						}
 					}
 				},
