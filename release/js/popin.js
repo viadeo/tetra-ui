@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.29 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.30 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.model.register('popin', {
     scope:'popin',
@@ -10,7 +10,8 @@ tetra.model.register('popin', {
             parser:function (resp, col, cond) {
                 col[cond.uriParams.url] = {
                     id:cond.uriParams.url,
-                    html:resp.toString()
+                    html:resp.toString(),
+                    timestamp:cond.timestamp
                 };
                 return col;
             }
@@ -19,7 +20,8 @@ tetra.model.register('popin', {
 
     attr:{
         html:'',
-        url:''
+        url:'',
+        timestamp:''
     },
 
     methods:function (attr) {
@@ -34,6 +36,7 @@ tetra.model.register('popin', {
     }
 
 });
+
 tetra.controller.register('popin', {
     scope:'popin',
     use:['popin'],
@@ -54,11 +57,17 @@ tetra.controller.register('popin', {
                         },
                         'append':function (col) {
 
+                            var data = {
+                                html:col[0].get('html'),
+                                url:col[0].get('id'),
+                                _timestamp:col[0].get('timestamp')
+                            };
+
                             app.notify('end loading').notify('set content', {
-                                content:col[0].get('html')
+                                content:data.html
                             });
 
-                            page.notify("popin: success", col[0].get('html'));
+                            page.notify("popin: success", data);
                         },
                         'error':function (error) {
                             app.notify('end loading').notify('show error', error);
@@ -133,7 +142,10 @@ tetra.controller.register('popin', {
 
                         me.url = data.url;
                         me.id = null;
-                        orm('popin').fetch({ uriParams:{ url:data.url } });
+                        orm('popin').fetch({ 
+                            uriParams:{ url:data.url },
+                            timestamp:data._timestamp
+                         });
 
                     } else if (data.id) { // loading popin from the dom
 
