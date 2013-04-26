@@ -16,13 +16,12 @@ tetra.view.register('autocomplete', {
 
 								case 13: // enter
 									elm = me._container.find('.autocomplete-menu li.active');
-									var prevContainerId = me._containerId;
 									if(elm.length) {
 										// avoid enter to allow form submit
 										e.preventDefault();
 										me.methods.suggestions.clickOnSuggestion(elm);
 									}
-									me.methods.suggestions.hide(prevContainerId);
+									me.methods.suggestions.hide(me._container);
 
 									break;
 
@@ -50,7 +49,7 @@ tetra.view.register('autocomplete', {
 									break;
 
 								case 27: // esc
-									me.methods.suggestions.hide(me._containerId);
+									me.methods.suggestions.hide(me._container);
 									break;
 
 								case 38: // up
@@ -66,8 +65,8 @@ tetra.view.register('autocomplete', {
 										me.methods.suggestions.doQuery(elm, true);
 									}
 
-									if(elm.val().length === 0) {
-										me.methods.suggestions.hide(me._containerId);
+									if(!elm.val().length) {
+										me.methods.suggestions.hide(me._container);
 									}
 
 									break;
@@ -77,7 +76,7 @@ tetra.view.register('autocomplete', {
 
 					'focus': {
 						'.autocomplete input': function(e, elm) {
-							me._containerId = null;
+							me._container = null;
 							me.methods.reinit(elm);
 							if(elm.val().length >= parseInt(me._container.attr('data-min-length'), 10)) {
 								me.methods.suggestions.doQuery(elm, true);
@@ -87,19 +86,17 @@ tetra.view.register('autocomplete', {
 
 					'blur': {
 						'.autocomplete input': function(e, elm) {
-							var prevContainerId = me._containerId;
 							me.methods.reinit(elm);
 							window.setTimeout(function() {
-								me.methods.suggestions.hide(prevContainerId);
+								me.methods.suggestions.hide(me._container);
 							}, 200);
 						}
 					},
 
 					'click': {
 						'.autocomplete .autocomplete-menu li': function(e, elm) {
-							var prevContainerId = me._containerId;
 							me.methods.suggestions.clickOnSuggestion(elm);
-							me.methods.suggestions.hide(prevContainerId);
+							me.methods.suggestions.hide(me._container);
 						}
 					}
 				},
@@ -107,57 +104,58 @@ tetra.view.register('autocomplete', {
 				controller: {
 
 					'display suggestions': function(suggestionsPack) {
-						// Check if the response content one or many suggestions
+						// Check if the response contains one or many suggestions
 						var hasSuggestion;
 						for(var suggestion in suggestionsPack.data.completion) {
 							hasSuggestion = true;
 							break;
 						}
-						if(!hasSuggestion) {
-							// No suggestion to show
+
+						if(hasSuggestion) {
+							var suggestions = {
+								data: suggestionsPack.data.completion,
+								query: _.trim(me._input.val())
+							};
+							app.exec(me._templateRef, suggestions, function(html) {
+								me._menu.html(html);
+							});
+
+							me._menu.find('li:first-child').addClass('active');
+							me._container.addClass('active');
+						} else {
 							me._container.removeClass('active');
-							_(me._menu).empty();
-							return;
+							me._menu.empty();
 						}
-
-						var suggestions = {};
-						suggestions.data = suggestionsPack.data.completion;
-						suggestions.query = me._input.val();
-						app.exec(me._templateRef, suggestions, function(html) {
-							_(me._menu).html(html);
-						});
-
-						me._menu.find('li:first-child').addClass('active');
-						me._container.addClass('active');
 					},
 
 					'display value': function(data) {
 						me._input.val(data.value);
-						me.methods.suggestions.hide(me._containerId);
+						me.methods.suggestions.hide(me._container);
 					}
-
 				}
 			},
 
 			methods: {
+
 				init: function() {
 					me._param = '%param%';
-					me._containerId = null;
+					me._container = null;
 				},
+
 				reinit: function(elm) {
-					if(!me._containerId) {
-						me._containerId = _(elm.parents('.autocomplete'))[0].id;
-						me._container = _('#' + me._containerId);
+					if(!me._container) {
+						me._container = _(elm.parents('.autocomplete')[0]);
 						me._paramName = me._container.attr('data-param') || 'param';
 						me._input = me._container.find('input');
 						me._menu = me._container.find('#' + me._container.attr('data-suggest-container-id'));
 						me._templateRef = me._container.attr('data-suggest-template-ref');
 
-						if(_('#tmpl_' + me._templateRef).length === 0) {
+						if(!_('#tmpl_' + me._templateRef).length) {
 							me._templateRef = me._templateRef.substring(0, me._templateRef.indexOf('_')) + '_1';
 						}
 					}
 				},
+
 				suggestions: {
 					select: function(direction) {
 						var items = me._container.find('.autocomplete-menu li');
@@ -168,45 +166,46 @@ tetra.view.register('autocomplete', {
 						}
 						items.eq(index).addClass('active');
 					},
-					hide: function(containerId) {
-						_('#' + containerId).removeClass('active');
+
+					hide: function(container) {
+						container.removeClass('active');
 					},
+
 					replaceParam: function(url, param) {
 						return url.replace(me._param, param);
 					},
+
 					clickOnSuggestion: function(elm) {
-						var value = _.trim(_(elm.find('.value')).text());
-						if(typeof value !== 'undefined' && value.length > 0) {
+						var value = _.trim(elm.find('.value').text());
+						if(value && value.length > 0) {
 							me._input.val(value);
 						}
 						app.notify('autocompleteGeneric : click on suggestion', elm[0]);
-						me._containerId = null;
+						me._container = null;
 					},
+
 					doQuery: function(elm, delay) {
 						var param = elm.val();
 						var url = me.methods.suggestions.replaceParam(me._container.attr('data-url'), param);
 						var data = {
 							url: url,
-							id: me._containerId
+							id: me._container.attr('id'),
+							typingDelay: me._container.attr('data-typing-delay')
 						};
-						if(delay) {
-							data.typingDelay = me._container.attr('data-typing-delay') || undefined;
-						}
 						data[me._paramName] = param;
+
 						// PARTICULAR CASES
-						var form;
+						var form = _(_(elm.parents('.core-form'))[0]);
 						if(elm.hasClass('schoolDepartment')) {
-							form = _(elm.parents('.core-form'))[0];
-							_(form).find('#schoolId').val('');
-							data.itemName = _(form).find('.autocompleteSchool').val();
+							form.find('#schoolId').val('');
+							data.itemName = form.find('.autocompleteSchool').val();
 							if(data.itemName.blank()) {
 								return;
 							}
-							data.town = _(form).find('input.town').val();
+							data.town = form.find('input.town').val();
 						} else if(elm.hasClass('autocompleteSchool')) {
-							form = _(elm.parents('.core-form'))[0];
-							_(form).find('#schoolId').val('');
-							_(form).find('input.town').val('');
+							form.find('#schoolId').val('');
+							form.find('input.town').val('');
 						}
 						app.notify('do query', data);
 					}

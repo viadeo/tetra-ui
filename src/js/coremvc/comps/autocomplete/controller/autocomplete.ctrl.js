@@ -10,16 +10,13 @@ tetra.controller.register('autocomplete', {
 			events: {
 				model: {
 					'suggestions': {
-
 						'append': function(col) {
 							app.notify('display suggestions', col[0].getAll());
 						}
-
 					}
 				},
 
 				view: {
-
 					'do query': function(data) {
 						me.methods.startCountDown(function(data) {
 							orm('suggestions').select({
@@ -30,11 +27,9 @@ tetra.controller.register('autocomplete', {
 								id: data.id
 							});
 						}, data);
-
 					},
 
 					'select suggestion': function(data) {
-
 						var packRef = data.ref.split(':')[0];
 						var objRef = data.ref.split(':')[1];
 
@@ -46,9 +41,7 @@ tetra.controller.register('autocomplete', {
 						});
 
 						app.notify('display value', data);
-
 					}
-
 				}
 			},
 
