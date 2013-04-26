@@ -24,30 +24,28 @@ tetra.controller.register('autocomplete', {
 							url: data.url
 						};
 						me.methods.startCountDown(function() {
-							orm('autocomplete').select(data);
-						}, data);
+							orm('autocomplete').fetch(data);
+						}, data.typingDelay);
 					},
 					'autocompleteGeneric : click on suggestion': function(elm) {
 						page.notify('autocompleteGeneric : click on suggestion', elm);
 					}
-
 				}
 			},
 			methods: {
 				init: function() {
 					me.defaultTypingDelay = 150; // default delay before sending server-side request
-					me.countDown = null;
 				},
-				startCountDown: function(callback, data) {
+				startCountDown: function(callback, delay) {
 					// it is considered that user types only one field at a time, so no need to consider origin
 					// cancel previous counter if it exists
 					if(me.countDown) {
 						window.clearTimeout(me.countDown);
 					}
-					// updates typing delay if precised
-					var typingDelay = (typeof data.typingDelay !== 'undefined') ? data.typingDelay : me.defaultTypingDelay;
+					// updates typing delay if not specified
+					delay = delay || me.defaultTypingDelay;
 					// set a new counter
-					me.countDown = window.setTimeout(callback, typingDelay, data);
+					me.countDown = window.setTimeout(callback, delay);
 				}
 			}
 
