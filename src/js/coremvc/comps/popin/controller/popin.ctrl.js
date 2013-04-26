@@ -1,133 +1,131 @@
 tetra.controller.register('popin', {
-    scope:'popin',
-    use:['popin'],
+	scope: 'popin',
+	use: ['popin'],
 
-    constr:function (me, app, page, orm) {
+	constr: function(me, app, page, orm) {
 
-        'use strict';
+		'use strict';
 
-        return {
-            events:{
-                model:{ // events received from model
-                    'popin':{ // model name
+		return {
+			events: {
+				model: { // events received from model
+					'popin': { // model name
 
-                        'fetch':function (obj) {
+						'fetch': function() {
+							app.notify('start loading');
+						},
+						'append': function(col) {
 
-                            app.notify('start loading');
+							var data = {
+								html: col[0].get('html'),
+								url: col[0].get('id'),
+								_timestamp: col[0].get('timestamp')
+							};
 
-                        },
-                        'append':function (col) {
+							app.notify('end loading').notify('set content', {
+								content: data.html
+							});
 
-                            var data = {
-                                html:col[0].get('html'),
-                                url:col[0].get('id'),
-                                _timestamp:col[0].get('timestamp')
-                            };
+							page.notify("popin: success", data);
+						},
+						'error': function(error) {
+							app.notify('end loading').notify('show error', error);
+						}
+					}
+				},
 
-                            app.notify('end loading').notify('set content', {
-                                content:data.html
-                            });
+				view: {
+					'popin: set content': function(data) {
 
-                            page.notify("popin: success", data);
-                        },
-                        'error':function (error) {
-                            app.notify('end loading').notify('show error', error);
-                        }
-                    }
-                },
+						me.methods.setContent(data);
 
-                view:{
-                    'popin: set content':function (data) {
+					},
+					'popin: close': function() {
 
-                        me.methods.setContent(data);
+						app.notify('clear', {
+							url: me.url,
+							id: me.id
+						});
 
-                    },
-                    'popin: close':function () {
+					}
+				},
 
-                        app.notify('clear', {
-                            url:me.url,
-                            id:me.id
-                        });
+				controller: { // events received from view or third party controllers
+					'popin: loading': function() {
+						app.notify('start loading');
+					},
+					'popin: set content': function(data) {
+						me.methods.setContent(data);
+					},
+					'popin: close': function() {
+						app.notify('clear', {
+							url: me.url,
+							id: me.id
+						});
+					},
+					'popin: fadeout': function() {
 
-                    }
-                },
+						app.notify('fadeout', {
+							url: me.url,
+							id: me.id
+						});
 
-                controller:{ // events received from view or third party controllers
-                    'popin: loading':function (data) {
-                        app.notify('start loading');
-                    },
-                    'popin: set content':function (data) {
-                        me.methods.setContent(data);
-                    },
-                    'popin: close':function () {
-                        app.notify('clear', {
-                            url:me.url,
-                            id:me.id
-                        });
-                    },
-                    'popin: fadeout':function () {
+						window.setTimeout(function() {
+							app.notify('clear', {
+								url: me.url,
+								id: me.id
+							});
+						}, 300);
 
-                        app.notify('fadeout', {
-                            url:me.url,
-                            id:me.id
-                        });
+					},
+					'popin: show loader': function() {
+						app.notify('show loader');
+					},
+					'popin: hide loader': function() {
+						app.notify('hide loader');
+					}
+				}
+			},
 
-                        window.setTimeout(function () {
-                            app.notify('clear', {
-                                url:me.url,
-                                id:me.id
-                            });
-                        }, 300);
+			methods: {
+				init: function() {
+					me.id = null;
+					me.url = null;
+				},
 
-                    },
-                    'popin: show loader':function () {
-                        app.notify('show loader');
-                    },
-                    'popin: hide loader':function () {
-                        app.notify('hide loader');
-                    }
-                }
-            },
+				setContent: function(data) {
 
-            methods:{
-                init:function () {
-                    me.id = null;
-                    me.url = null;
-                },
+					data._timestamp = (new Date()).getTime();
 
-                setContent:function (data) {
+					if(data.url) { // loading popin with ajax
 
-                    data._timestamp = (new Date()).getTime();
+						me.url = data.url;
+						me.id = null;
+						orm('popin').fetch({
+							uriParams: { url: data.url },
+							timestamp: data._timestamp
+						});
 
-                    if (data.url) { // loading popin with ajax
+					} else if(data.id) { // loading popin from the dom
 
-                        me.url = data.url;
-                        me.id = null;
-                        orm('popin').fetch({ 
-                            uriParams:{ url:data.url },
-                            timestamp:data._timestamp
-                         });
+						me.id = data.id;
+						me.url = null;
+						app.notify('start loading').notify('load from dom', data.id);
+						page.notify("popin: success", data);
 
-                    } else if (data.id) { // loading popin from the dom
+					} else if(data.html) { // updating with html content
 
-                        me.id = data.id;
-                        me.url = null;
-                        app.notify('start loading').notify('load from dom', data.id);
-                        page.notify("popin: success", data);
+						me.id = null;
+						me.url = null;
+						app.notify('start loading').notify('set content', {
+							content: data.html
+						});
+						page.notify("popin: success", data);
 
-                    } else if (data.html) { // updating with html content
+					}
 
-                        me.id = null;
-                        me.url = null;
-                        app.notify('start loading').notify('set content', {
-                            content:data.html
-                        });
-                        page.notify("popin: success", data);
-
-                    }
-
-                }
-            }
-        };
-    }
+				}
+			}
+		};
+	}
 });

@@ -1,37 +1,35 @@
 tetra.controller.register('flipswitch', {
-    scope:'flipswitch',
+	scope: 'flipswitch',
 
-    constr:function (me, app, page, orm) {
+	constr: function(me, app, page) {
 
-        'use strict';
+		'use strict';
 
-        return {
-            events:{
-                view:{
-                    'change flipswitch state':function (data) {
+		return {
+			events: {
+				view: {
+					'change flipswitch state': function(data) {
+						page.notify('flipswitch: set state', {
+							id: data.id,
+							state: !data.state
+						});
+					}
+				},
 
-                        page.notify('flipswitch: set state', {
-                            id:data.id,
-                            state:!data.state
-                        });
+				controller: {
+					'flipswitch: set state': function(data) {
+						app.notify('set state', {
+							id: data.id,
+							state: data.state
+						});
+					}
+				}
+			},
 
-                    }
-                },
-
-                controller:{
-                    'flipswitch: set state':function (data) {
-                        app.notify('set state', {
-                            id:data.id,
-                            state:data.state
-                        });
-                    }
-                }
-            },
-
-            methods:{
-                init:function () {
-                }
-            }
-        };
-    }
+			methods: {
+				init: function() {
+				}
+			}
+		};
+	}
 });

@@ -8,11 +8,11 @@ tetra.view.register('alert', {
 			events: {
 				user: {
 					'click': {
-						'.bx-alert-close': function (e, elm) {
+						'.bx-alert-close': function(e, elm) {
 							_(elm).parents('.bx-alert').remove();
 						},
 
-						'.bx-close': function (e, elm) {
+						'.bx-close': function(e, elm) {
 							_(elm).parents('.bx').remove();
 						}
 					}
@@ -21,8 +21,9 @@ tetra.view.register('alert', {
 				controller: {}
 			},
 
-			methods:{
-				init: function () {}
+			methods: {
+				init: function() {
+				}
 			}
 		};
 	}

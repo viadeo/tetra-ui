@@ -5,43 +5,43 @@
  * 
  * */
 tetra.controller.register('yesno', {
-    scope:'yesno',
-    use:['yesno'],
-    constr:function (me, app, page, orm) {
+	scope: 'yesno',
+	use: ['yesno'],
+	constr: function(me, app, page, orm) {
 
-        'use strict';
+		'use strict';
 
-        return {
-            events:{
-                model:{
-                    'yesno':{
-                        'error':function (error) {
-                            app.notify('switchback yesno after error', error.obj);
-                        }
-                    }
-                },
-                view:{
-                    "save state":function (data) {
-                        if (typeof data.oparam !== 'undefined') {
-                            orm('yesno').create({}).setCustom(data.oparam).save({param:data.param, status:true, uriParams:{url:data.url}});
-                        } else {
-                            orm('yesno').create({}).save({param:data.param, status:true, uriParams:{url:data.url}});
-                        }
+		return {
+			events: {
+				model: {
+					'yesno': {
+						'error': function(error) {
+							app.notify('switchback yesno after error', error.obj);
+						}
+					}
+				},
+				view: {
+					"save state": function(data) {
+						if(typeof data.oparam !== 'undefined') {
+							orm('yesno').create({}).setCustom(data.oparam).save({param: data.param, status: true, uriParams: {url: data.url}});
+						} else {
+							orm('yesno').create({}).save({param: data.param, status: true, uriParams: {url: data.url}});
+						}
 
-                    },
-                    "delete state":function (data) {
-                        if (typeof data.oparam !== 'undefined') {
-                            orm('yesno').create({}).setCustom(data.oparam).remove({param:data.param, status:false, uriParams:{url:data.url}});
-                        } else {
-                            orm('yesno').create({}).remove({param:data.param, status:false, uriParams:{url:data.url}});
-                        }
-                    }
-                }
-            },
-            methods:{
-                init:function () {
-                }
-            }
-        };
-    }
+					},
+					"delete state": function(data) {
+						if(typeof data.oparam !== 'undefined') {
+							orm('yesno').create({}).setCustom(data.oparam).remove({param: data.param, status: false, uriParams: {url: data.url}});
+						} else {
+							orm('yesno').create({}).remove({param: data.param, status: false, uriParams: {url: data.url}});
+						}
+					}
+				}
+			},
+			methods: {
+				init: function() {
+				}
+			}
+		};
+	}
 });
