@@ -39,8 +39,8 @@ tetra.view.register('placeholder', {
 							var placeholding = _(elm).parent();
 							var typed = _(elm).val().length;
 
-							if (typed > 0) {
-								if (! placeholding.hasClass('typing')) {
+							if(typed > 0) {
+								if(!placeholding.hasClass('typing')) {
 									placeholding.addClass('typing');
 								}
 							} else {
@@ -54,15 +54,15 @@ tetra.view.register('placeholder', {
 				controller: {}
 			},
 
-			methods:{
+			methods: {
 				init: function() {
 
 					_(document).ready(function() {
 						var fields = _('.placeholding input');
 
-						for (var i = 0; i < fields.length; i++) {
+						for(var i = 0; i < fields.length; i++) {
 							var input = fields[i];
-							if (_(input).val().length > 0) {
+							if(_(input).val().length > 0) {
 								_(input).parent().addClass('typing');
 							}
 						}

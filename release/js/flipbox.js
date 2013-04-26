@@ -10,7 +10,7 @@ tetra.view.register('flipbox', {
 			events: {
 				user: {
 					'click': {
-						'.bx-flip .bx-flip-turn': function (e, elm) {
+						'.bx-flip .bx-flip-turn': function(e, elm) {
 							_(elm).parents('.bx-flip').first().toggleClass('bx-flip-flipped');
 						}
 					}
@@ -19,8 +19,9 @@ tetra.view.register('flipbox', {
 				controller: {}
 			},
 
-			methods:{
-				init: function () {}
+			methods: {
+				init: function() {
+				}
 			}
 		};
 	}
