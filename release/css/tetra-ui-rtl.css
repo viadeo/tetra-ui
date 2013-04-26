@@ -6339,6 +6339,54 @@ i.vicon {
 .bx-alert-error .bx-alert-close:focus .vicon {
   color: #d94d4d;
 }
+.bx-flip {
+  position: relative;
+  margin-bottom: 20px;
+}
+.bx-flip-front,
+.bx-flip-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+.bx-flip-front {
+  position: relative;
+  z-index: 1;
+}
+.bx-flip-back {
+  background: #83a0b9;
+  bottom: 0;
+  color: #ffffff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: perspective(700px) rotateY(180deg);
+  transform: perspective(700px) rotateY(180deg);
+}
+.bx-flip-back .h-bx,
+.bx-flip-back .vicon,
+.bx-flip-back h2,
+.bx-flip-back label,
+.bx-flip-back .h-bx-link .vicon,
+.bx-flip-back .h-bx-link:focus .vicon,
+.bx-flip-back .h-bx-link:hover .vicon {
+  color: #ffffff;
+}
+.bx-flip-back .h-bx {
+  border-color: #ffffff;
+}
+.bx-flip-flipped .bx-flip-front {
+  -webkit-transform: perspective(700px) rotateY(-180deg);
+  transform: perspective(700px) rotateY(-180deg);
+}
+.bx-flip-flipped .bx-flip-back {
+  -webkit-transform: perspective(700px) rotateY(0);
+  transform: perspective(700px) rotateY(0);
+  z-index: 2;
+}
 .rc-card {
   min-height: 145px;
   border: 2px solid #e6ecf1;
