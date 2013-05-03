@@ -92,6 +92,12 @@ tetra.view.register('autocomplete', {
 							}, 200);
 						}
 					},
+					
+					'mouseover': {
+						'.autocomplete .autocomplete-menu li': function(e, elm) {
+							elm.addClass('active').siblings().removeClass('active');
+						}
+					},
 
 					'click': {
 						'.autocomplete .autocomplete-menu li': function(e, elm) {
