@@ -2979,7 +2979,8 @@ textarea {
 .clearfix:after {
   clear: both;
 }
-.clear {
+.clear,
+.clr {
   clear: both;
 }
 .hidden {
