@@ -4194,8 +4194,8 @@ a:focus .avatar img {
 /* Icon Fonts */
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1367334670/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1367334670/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1367334670/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1367334670/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1367930663/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1367930663/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1367930663/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1367930663/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
