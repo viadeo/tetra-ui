@@ -3456,13 +3456,13 @@ i.vicon {
 	border-radius: @borderRadiusS;
 	background: @white;
 	box-shadow: 1px 1px 4px fade(@black, 20%);
-	position: relative;
 	margin-bottom: @spacingL;
 
 	.bx-close {
-		position: absolute;
-		right: 0;
-		top: 0;
+		float: right;
+		position: relative;
+		left: @spacingL;
+		top: (-1 * @spacingL);
 
 		.vicon {
 			color: tint(@blueSoft, 40%);

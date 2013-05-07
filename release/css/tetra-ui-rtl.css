@@ -6244,13 +6244,13 @@ i.vicon {
   border-radius: 3px;
   background: #ffffff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
   margin-bottom: 20px;
 }
 .bx .bx-close {
-  position: absolute;
-  right: 0;
-  top: 0;
+  float: right;
+  position: relative;
+  left: 20px;
+  top: -20px;
 }
 .bx .bx-close .vicon {
   color: #b5c6d5;
