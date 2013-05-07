@@ -1135,6 +1135,10 @@ h6, .h6 {
   padding: 0 0 7px 0;
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
 
+  &.h-bx-normal {
+    font-family: "Arial", sans-serif;
+  }
+
   .h-bx-link {
     .float-right(@rtl);
 
@@ -1960,8 +1964,6 @@ table.table-text {
     th {
       border: none;
       border-bottom: 3px solid @borderColor;
-      font-family: "MuseoSlab", "Arial", sans-serif;
-      font-weight: normal;
     }
   }
 
@@ -3601,7 +3603,7 @@ i.vicon {
         border-top: 0;
       }
 
-      &:hover, &.active {
+      &.active {
         background: @panelBackground;
       }
 
@@ -3620,6 +3622,7 @@ i.vicon {
     }
   }
 }
+
 .paginator {
 	li {
 		display: inline-block;

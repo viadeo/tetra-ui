@@ -1132,6 +1132,10 @@ h6, .h6 {
   padding: 0 0 7px 0;
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
 
+  &.h-bx-normal {
+    font-family: "Arial", sans-serif;
+  }
+
   .h-bx-link {
     .float-right(@rtl);
 
@@ -3385,7 +3389,7 @@ i.vicon {
         border-top: 0;
       }
 
-      &:hover, &.active {
+      &.active {
         background: @panelBackground;
       }
 
@@ -3404,6 +3408,7 @@ i.vicon {
     }
   }
 }
+
 // Custom radio buttons
 
 // rule filter to block browsers that don't support that selector from applying rules they shouldn't

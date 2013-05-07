@@ -3109,6 +3109,9 @@ h6,
   padding: 0 0 7px 0;
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
 }
+.h-bx.h-bx-normal {
+  font-family: "Arial", sans-serif;
+}
 .h-bx .h-bx-link {
   float: right;
 }
@@ -3869,8 +3872,6 @@ table.table-text {
 table.table-text thead th {
   border: none;
   border-bottom: 3px solid #d1dce5;
-  font-family: "MuseoSlab", "Arial", sans-serif;
-  font-weight: normal;
 }
 table.table-text td + td {
   border: none;
@@ -5683,7 +5684,6 @@ i.vicon {
 .autocomplete .autocomplete-menu li:first-child {
   border-top: 0;
 }
-.autocomplete .autocomplete-menu li:hover,
 .autocomplete .autocomplete-menu li.active {
   background: #f5f7f9;
 }
