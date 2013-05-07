@@ -122,6 +122,9 @@ tetra.view.register('autocomplete', {
 								data: suggestionsPack.data.completion,
 								query: _.trim(me._input.val())
 							};
+							
+							if(me._boldifyTerms) suggestions = me.methods.suggestions.boldify(suggestions);
+							
 							app.exec(me._templateRef, suggestions, function(html) {
 								me._menu.html(html);
 							});
@@ -155,6 +158,7 @@ tetra.view.register('autocomplete', {
 						me._input = me._container.find('input');
 						me._menu = me._container.find('#' + me._container.attr('data-suggest-container-id'));
 						me._templateRef = me._container.attr('data-suggest-template-ref');
+						me._boldifyTerms = me._container.attr('data-boldify') ? me._container.attr('data-boldify').split(',') : 0;
 
 						if(!_('#tmpl_' + me._templateRef).length) {
 							me._templateRef = me._templateRef.substring(0, me._templateRef.indexOf('_')) + '_1';
@@ -171,6 +175,18 @@ tetra.view.register('autocomplete', {
 							index = 0;
 						}
 						items.eq(index).addClass('active');
+					},
+
+					boldify: function(suggestions) {
+						var boldTermsLen = me._boldifyTerms.length, re = new RegExp('('+suggestions.query+')', 'gi'), item, term, i, j;
+						for (i in suggestions.data) {
+							item = suggestions.data[i];
+							for(j=0;j<boldTermsLen;j++){
+								term = me._boldifyTerms[j];
+								suggestions.data[i][term] = item[term].replace(re, '<b>$1</b>');
+							}
+						}
+						return suggestions;
 					},
 
 					hide: function(container) {
