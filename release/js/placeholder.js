@@ -23,19 +23,19 @@ tetra.view.register('placeholder', {
 					},
 
 					'focus': {
-						'.placeholding input': function(e, elm) {
+						'.placeholding input,.placeholding textarea': function(e, elm) {
 							_(elm).parent().addClass('active');
 						}
 					},
 
 					'blur': {
-						'.placeholding input': function(e, elm) {
+						'.placeholding input,.placeholding textarea': function(e, elm) {
 							_(elm).parent().removeClass('active');
 						}
 					},
 
 					'keyup': {
-						'.placeholding input': function(e, elm) {
+						'.placeholding input,.placeholding textarea': function(e, elm) {
 							var placeholding = _(elm).parent();
 							var typed = _(elm).val().length;
 
@@ -58,7 +58,7 @@ tetra.view.register('placeholder', {
 				init: function() {
 
 					_(document).ready(function() {
-						var fields = _('.placeholding input');
+						var fields = _('.placeholding input,.placeholding textarea');
 
 						for(var i = 0; i < fields.length; i++) {
 							var input = fields[i];

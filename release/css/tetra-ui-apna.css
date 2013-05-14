@@ -6500,7 +6500,8 @@ i.vicon {
   position: relative;
   display: inline-block;
 }
-.placeholding input {
+.placeholding input,
+.placeholding textarea {
   position: relative;
   z-index: 2;
   background: transparent url("/v_img/global/global-sprite2.png") no-repeat 0 110%;
