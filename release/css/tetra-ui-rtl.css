@@ -6263,6 +6263,19 @@ i.vicon {
   border: 1px solid #d1dce5;
   box-shadow: none;
 }
+.bx-empty {
+  border: 2px dashed #cccccc;
+  background: #f0f0f0;
+  box-shadow: none;
+  color: #666666;
+}
+.bx-empty .h-bx {
+  border-bottom-color: #d4d4d4;
+  color: #666666;
+}
+.bx-empty:hover {
+  background: #fffbec;
+}
 .bx-alert {
   position: relative;
   padding: 20px 20px 15px;
