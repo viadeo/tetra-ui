@@ -1,4 +1,4 @@
-/*! Tetra UI v1.0.31 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.0.32 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.model.register('autocomplete', {
 	scope: 'generic_autocomplete',
