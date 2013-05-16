@@ -4003,6 +4003,9 @@ pre {
   background-color: #fff1f1;
   border-color: #c80000;
 }
+.core-form .control-group.error .input-append .btn {
+  border-color: #c80000;
+}
 .core-form .control-group.success > label,
 .core-form .control-group.success .help-block,
 .core-form .control-group.success .help-inline {

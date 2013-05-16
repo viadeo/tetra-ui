@@ -1584,6 +1584,12 @@ pre {
 	// Error
 	.control-group.error {
 	  .formFieldState(@errorText, @errorText, @errorBackground);
+
+	  .input-append {
+	  	.btn {
+	  		border-color: @errorText;
+	  	}
+	  }
 	}
 	// Success
 	.control-group.success {
