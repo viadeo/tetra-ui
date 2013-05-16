@@ -287,16 +287,19 @@ textarea {
 .gu-1of2,
 .grid1of2,
 .gu-2of4,
-.grid2of4 {
+.grid2of4,
+.gu-3of6 {
   width: 50%;
   margin: 0;
 }
 .gu-1of3,
+.gu-2of6,
 .grid1of3 {
   width: 33.333333333333336%;
   margin: 0;
 }
 .gu-2of3,
+.gu-4of6,
 .grid2of3 {
   width: 66.66666666666667%;
   margin: 0;
@@ -354,7 +357,8 @@ textarea {
 .grsxs > .gu-1of2,
 .grsxs > .gu-2of4,
 .grsxs > .grid1of2,
-.grsxs > .grid2of4 {
+.grsxs > .grid2of4,
+.grsxs > .gu-3of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -403,7 +407,8 @@ textarea {
   margin-left: 5px;
 }
 .grsxs > .gu-1of3,
-.grsxs > .grid1of3 {
+.grsxs > .grid1of3,
+.grsxs > .gu-2of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -452,7 +457,8 @@ textarea {
   margin-left: 5px;
 }
 .grsxs > .gu-2of3,
-.grsxs > .grid2of2 {
+.grsxs > .grid2of3,
+.grsxs > .gu-4of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -893,7 +899,8 @@ textarea {
 .grss > .gu-1of2,
 .grss > .gu-2of4,
 .grss > .grid1of2,
-.grss > .grid2of4 {
+.grss > .grid2of4,
+.grss > .gu-3of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -942,7 +949,8 @@ textarea {
   margin-left: 10px;
 }
 .grss > .gu-1of3,
-.grss > .grid1of3 {
+.grss > .grid1of3,
+.grss > .gu-2of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -991,7 +999,8 @@ textarea {
   margin-left: 10px;
 }
 .grss > .gu-2of3,
-.grss > .grid2of3 {
+.grss > .grid2of3,
+.grss > .gu-4of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -1432,7 +1441,8 @@ textarea {
 .grsm > .gu-1of2,
 .grsm > .gu-2of4,
 .grsm > .grid1of2,
-.grsm > .grid2of4 {
+.grsm > .grid2of4,
+.grsm > .gu-3of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -1481,7 +1491,8 @@ textarea {
   margin-left: 15px;
 }
 .grsm > .gu-1of3,
-.grsm > .grid1of3 {
+.grsm > .grid1of3,
+.grsm > .gu-2of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -1530,7 +1541,8 @@ textarea {
   margin-left: 15px;
 }
 .grsm > .gu-2of3,
-.grsm > .grid2of3 {
+.grsm > .grid2of3,
+.grsm > .gu-4of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -1971,7 +1983,8 @@ textarea {
 .grsl > .gu-1of2,
 .grsl > .gu-2of4,
 .grsl > .grid1of2,
-.grsl > .grid2of4 {
+.grsl > .grid2of4,
+.grsl > .gu-3of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -2020,7 +2033,8 @@ textarea {
   margin-left: 20px;
 }
 .grsl > .gu-1of3,
-.grsl > .grid1of3 {
+.grsl > .grid1of3,
+.grsl > .gu-2of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -2069,7 +2083,8 @@ textarea {
   margin-left: 20px;
 }
 .grsl > .gu-2of3,
-.grsl > .grid2of3 {
+.grsl > .grid2of3,
+.grsl > .gu-4of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -2510,7 +2525,8 @@ textarea {
 .grsxl > .gu-1of2,
 .grsxl > .gu-2of4,
 .grsxl > .grid1of2,
-.grsxl > .grid2of4 {
+.grsxl > .grid2of4,
+.grsxl > .gu-3of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -2558,7 +2574,8 @@ textarea {
   width: 48.46938775510204%;
   margin-left: 30px;
 }
-.grsxl > .gu-1of3 {
+.grsxl > .gu-1of3,
+.grsxl > .gu-2of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
@@ -2606,7 +2623,8 @@ textarea {
   width: 31.292517006802726%;
   margin-left: 30px;
 }
-.grsxl > .gu-2of3 {
+.grsxl > .gu-2of3,
+.grsxl > .gu-4of6 {
   /* Calculate the width of the parent element, in pixels
 	   ====================================================== */
 
