@@ -21,29 +21,26 @@ tetra.view.register('placeholder', {
 					},
 
 					'focus': {
-						'.placeholding input,.placeholding textarea': function(e, elm) {
+						'.placeholding input, .placeholding textarea': function(e, elm) {
 							_(elm).parent().addClass('active');
 						}
 					},
 
 					'blur': {
-						'.placeholding input,.placeholding textarea': function(e, elm) {
+						'.placeholding input, .placeholding textarea': function(e, elm) {
 							_(elm).parent().removeClass('active');
 						}
 					},
 
-					'keyup': {
-						'.placeholding input,.placeholding textarea': function(e, elm) {
-							var placeholding = _(elm).parent();
-							var typed = _(elm).val().length;
+					'input': {
+						'.placeholding input': function(e, elm) { // fired when user selects an entry in native autocomplete
+							me.methods.isTyping(elm);
+						}
+					},
 
-							if(typed > 0) {
-								if(!placeholding.hasClass('typing')) {
-									placeholding.addClass('typing');
-								}
-							} else {
-								placeholding.removeClass('typing');
-							}
+					'keyup': {
+						'.placeholding input, .placeholding textarea': function(e, elm) {
+							me.methods.isTyping(elm);
 						}
 					}
 
@@ -56,7 +53,7 @@ tetra.view.register('placeholder', {
 				init: function() {
 
 					_(document).ready(function() {
-						var fields = _('.placeholding input,.placeholding textarea');
+						var fields = _('.placeholding input, .placeholding textarea');
 
 						for(var i = 0; i < fields.length; i++) {
 							var input = fields[i];
@@ -66,6 +63,19 @@ tetra.view.register('placeholder', {
 						}
 					});
 
+				},
+
+				isTyping: function(elm) {
+					var placeholding = _(elm).parent();
+					var typed = _(elm).val().length;
+
+					if (typed > 0) {
+						if (!placeholding.hasClass('typing')) {
+							placeholding.addClass('typing');
+						}
+					} else {
+						placeholding.removeClass('typing');
+					}
 				}
 			}
 		};
