@@ -10,6 +10,7 @@
 // Fonts
 @fonts-dir: "/css/core/fonts";
 @fonts-version: "1367930663";
+@font-stack: "Arial", sans-serif;
 
 // Right To Left mode (arabic)
 @rtl: false;
@@ -1099,7 +1100,8 @@ textarea {
 
 // Body Text
 body {
-	#font > .sansSerif(normal, @baseFontSize, @baseFontColor, @baseLineHeight);
+  font: normal ~"@{baseFontSize}/@{baseLineHeight}" @font-stack;
+  color: @baseFontColor;
 }
 p {
    margin-bottom: @baseLineHeight;

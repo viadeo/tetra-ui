@@ -16,7 +16,8 @@
 
 // Body Text
 body {
-	#font > .sansSerif(normal, @baseFontSize, @baseFontColor, @baseLineHeight);
+  font: normal ~"@{baseFontSize}/@{baseLineHeight}" @font-stack;
+  color: @baseFontColor;
 }
 p {
    margin-bottom: @baseLineHeight;
