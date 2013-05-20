@@ -3532,7 +3532,10 @@ textarea {
   font-style: normal;
 }
 body {
-  font: normal 12px/1.4em "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.4em;
+  font-family: "Arial", sans-serif;
   color: #222222;
 }
 p {

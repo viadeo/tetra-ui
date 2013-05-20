@@ -1100,7 +1100,10 @@ textarea {
 
 // Body Text
 body {
-  font: normal ~"@{baseFontSize}/@{baseLineHeight}" @font-stack;
+  font-weight: normal;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  font-family: @font-stack;
   color: @baseFontColor;
 }
 p {

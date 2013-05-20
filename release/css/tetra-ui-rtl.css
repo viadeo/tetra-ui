@@ -3530,7 +3530,10 @@ textarea {
   font-style: normal;
 }
 body {
-  font: normal 15px/1.2em "Simplified Arabic", "Baghdad", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.2em;
+  font-family: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
   color: #222222;
 }
 p {
