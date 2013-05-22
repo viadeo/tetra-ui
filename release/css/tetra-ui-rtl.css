@@ -5638,10 +5638,6 @@ i.vicon {
 .btn-icon.btn-disabled .vicon {
   color: #bfbfbf;
 }
-/**********************/
-/* General Properties */
-/**********************/
-/* dropdown comp */
 .dd {
   position: relative;
   display: inline-block;
@@ -5650,27 +5646,17 @@ i.vicon {
 
   *zoom: 1;
   text-shadow: none;
-  /* dropdown button */
-
-  /* dropdown menu */
-
-  /* dropdown state */
-
-  /* dropdown position */
-
-  /* dropdown sub menu */
-
 }
 .dd .dd-btn .vicon {
-  margin: 0 -6px 0 -2px;
+  margin: 0 -2px 0 -6px;
   line-height: 12px;
   *line-height: 20px;
   *margin-top: -3px;
 }
 .dd .dd-btn .arrow {
   background-position: -159px -48px;
-  left: 3px;
-  margin: 0 6px 0 -3px;
+  right: 3px;
+  margin: 0 -3px 0 6px;
   position: relative;
 }
 .dd .dd-btn.btn-append .arrow {
@@ -5681,7 +5667,7 @@ i.vicon {
   vertical-align: bottom;
 }
 .dd .btn .arrow {
-  margin: 0 -2px 0 0;
+  margin: 0 0 0 -2px;
 }
 .dd .btn-tertiary .arrow {
   background-position: -159px -64px;
@@ -5698,22 +5684,18 @@ i.vicon {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
   outline: medium none;
   padding: 0 5px;
-  left: 0;
+  right: 0;
   top: 100%;
   position: absolute;
   width: auto;
   min-width: 100% !important;
   z-index: 10;
   display: none;
-  /* dropdown menu item */
-
 }
 .dd .dd-menu .dd-item {
   border-top: 1px dotted #cad7e0;
   padding: 0;
   list-style: none;
-  /* dropdown menu link */
-
 }
 .dd .dd-menu .dd-item:first-child {
   border: 0;
@@ -5744,8 +5726,8 @@ i.vicon {
   display: block;
 }
 .dd.pull-right .dd-menu {
-  left: auto;
-  right: 0;
+  right: auto;
+  left: 0;
 }
 .dd.pull-top .dd-menu {
   top: auto;

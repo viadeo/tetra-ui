@@ -5640,10 +5640,6 @@ i.vicon {
 .btn-icon.btn-disabled .vicon {
   color: #bfbfbf;
 }
-/**********************/
-/* General Properties */
-/**********************/
-/* dropdown comp */
 .dd {
   position: relative;
   display: inline-block;
@@ -5652,16 +5648,6 @@ i.vicon {
 
   *zoom: 1;
   text-shadow: none;
-  /* dropdown button */
-
-  /* dropdown menu */
-
-  /* dropdown state */
-
-  /* dropdown position */
-
-  /* dropdown sub menu */
-
 }
 .dd .dd-btn .vicon {
   margin: 0 -6px 0 -2px;
@@ -5707,15 +5693,11 @@ i.vicon {
   min-width: 100% !important;
   z-index: 10;
   display: none;
-  /* dropdown menu item */
-
 }
 .dd .dd-menu .dd-item {
   border-top: 1px dotted #cad7e0;
   padding: 0;
   list-style: none;
-  /* dropdown menu link */
-
 }
 .dd .dd-menu .dd-item:first-child {
   border: 0;

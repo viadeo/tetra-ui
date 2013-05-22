@@ -1,6 +1,4 @@
-/**********************/
-/* General Properties */
-/**********************/
+// General Properties
 
 @_padding: 3px 8px;
 @_margin: 2px -4px;
@@ -10,7 +8,7 @@
 @_listBorder: 1px dotted #cad7e0;
 @_listBackground: @white;
 
-/* dropdown comp */
+// Dropdown
 
 .dd  {
 
@@ -19,11 +17,11 @@
   .ie7-inline-block();
   text-shadow: none;
 
-  /* dropdown button */
+  // Button
 
   .dd-btn {
     .vicon {
-      margin: 0 -6px 0 -2px;
+      .margin(@rtl, 0, -6px, 0, -2px);
       line-height: 12px;
       *line-height: 20px;
       *margin-top: -3px;
@@ -31,8 +29,8 @@
 
     .arrow {
       background-position: -159px -48px;
-      left: 3px;
-      margin: 0 6px 0 -3px;
+      .left(@rtl, 3px);
+      .margin(@rtl, 0, 6px, 0, -3px);
       position: relative;
     }
 
@@ -47,7 +45,7 @@
 
   .btn {
   	.arrow {
-  		margin: 0 -2px 0 0;
+      .margin(@rtl, 0, -2px, 0, 0);
   	}
   }
 
@@ -64,7 +62,7 @@
 		}
   }
 
-  /* dropdown menu */
+  // Menu
 
   .dd-menu {
     background: @white;
@@ -73,7 +71,7 @@
     .box-shadow(0 3px 4px 0 rgba(0, 0, 0, .2));
     outline: medium none;
     padding: 0 5px;
-    left: 0;
+    .left(@rtl, 0);
     top: 100%;
     position: absolute;
     width: auto;
@@ -81,7 +79,7 @@
     z-index: 10;
     display: none;
 
-    /* dropdown menu item */
+    // Menu item
 
     .dd-item {
       border-top: @_listBorder;
@@ -92,7 +90,7 @@
         border: 0;
       }
 
-      /* dropdown menu link */
+      // Menu link
       a, .label {
         white-space: nowrap;
         padding: @_padding;
@@ -121,7 +119,7 @@
 
   }
 
-  /* dropdown state */
+  // State
 
   &.open {
     .dd-menu {
@@ -129,12 +127,12 @@
     }
   }
 
-   /* dropdown position */
+   // Position
 
   &.pull-right {
     .dd-menu {
-      left: auto;
-      right: 0;
+      .left(@rtl, auto);
+      .right(@rtl, 0);
     }
   }
 
@@ -146,7 +144,7 @@
     }
   }
 
-  /* dropdown sub menu */
+  // Sub menu
 
   .dd {
 
