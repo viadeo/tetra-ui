@@ -5658,6 +5658,7 @@ i.vicon {
   right: 3px;
   margin: 0 -3px 0 6px;
   position: relative;
+  vertical-align: middle;
 }
 .dd .dd-btn.btn-append .arrow {
   border: 0;
