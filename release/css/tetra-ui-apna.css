@@ -1,10 +1,6 @@
 /* Variables_apna.less
  * Anything declared here will overwrite the variables declared in variables.less
- * ----------------------------------------------------- *//* Mixins.less
- * Snippets of reusable CSS to develop faster and keep code readable
- * ----------------------------------------------------------------- */
-/* Yeah ! Duplicate code ! Thanks to LESS and his lack of conditions */
-/* Reset.less
+ * ----------------------------------------------------- *//* Reset.less
  * An adapted version of the adapted version of eric mayers reset for Twitter's Bootstrap
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 html,

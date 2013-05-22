@@ -158,9 +158,8 @@
 @baseLineHeight: 1.2em;
 @font-stack: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
 
-/* Mixins.less
- * Snippets of reusable CSS to develop faster and keep code readable
- * ----------------------------------------------------------------- */
+// Mixins
+// Snippets of reusable CSS to develop faster and keep code readable
 
 // Clearfix for clearing floats like a boss h5bp.com/q -> No presentational code needed :)
 .clearfixHack() {
@@ -379,7 +378,6 @@
   }
 }
 
-/* Yeah ! Duplicate code ! Thanks to LESS and his lack of conditions */
 .inner-arrow(@position: top, @size: 10px, @color:  black,  @borderWidth: 0, @borderColor: transparent) {
   position: relative;
 
@@ -506,6 +504,9 @@
 
 .float-right (@rtl) when (@rtl = false) { float: right; }
 .float-right (@rtl) when (@rtl = true) { float: left; }
+
+.margin (@rtl, @top, @right, @bottom, @left) when (@rtl = false) { margin: @top @right @bottom @left; }
+.margin (@rtl, @top, @right, @bottom, @left) when (@rtl = true) { margin: @top @left @bottom @right; }
 
 .margin-left (@rtl, @value) when (@rtl = false) { margin-left: @value }
 .margin-left (@rtl, @value) when (@rtl = true) { margin-right: @value }
