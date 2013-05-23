@@ -677,8 +677,7 @@ textarea {
   overflow: auto; // Remove vertical scrollbar in IE6-9
   vertical-align: top; // Readability and alignment cross-browser
 }
-/* Grid Specific Mixins
- * ----------------------------------------------------------------- */
+// Grid mixins
 
 #grid {
 	.unit (@span, @total) {
@@ -694,72 +693,62 @@ textarea {
     margin-left: @spacing;
   }
 
-	/**
-	* Determine width and margin for grid unit with spacing
-	*
-	* @param (integer)span           the column span of the grid unit                                          required
-	* @param (integer)total          the total number of columns in the grid row                               required
-	* @param (pixels)spacing         the ammount of spacing required between grid units                        required
-	* @param (integer)parentSpan     the column span of the parent grid unit, used for nested grids            optional
-	* @param (integer)parentTotal    the total number of columns in the parent grid unit's grid row            optional
-	* @param (pixels)parentSpacing   the ammount of spacing between grid units in the parent unit's grid row   optional
-	*
-	* The width of the grid unit is a percentage value, and the margin is in pixels.
-	* We therefore need to first calculate the margin as a percentage of the parent
-	* grid row and compensate in the width percentage value of each grid unit.
-	*/
+	// Determine width and margin for grid unit with spacing
+	//
+	// @param (integer)span           the column span of the grid unit                                          required
+	// @param (integer)total          the total number of columns in the grid row                               required
+	// @param (pixels)spacing         the ammount of spacing required between grid units                        required
+	// @param (integer)parentSpan     the column span of the parent grid unit, used for nested grids            optional
+	// @param (integer)parentTotal    the total number of columns in the parent grid unit's grid row            optional
+	// @param (pixels)parentSpacing   the ammount of spacing between grid units in the parent unit's grid row   optional
+	//
+	// The width of the grid unit is a percentage value, and the margin is in pixels.
+	// We therefore need to first calculate the margin as a percentage of the parent
+	// grid row and compensate in the width percentage value of each grid unit.
+
 	.unitWithSpacing (@span, @total, @spacing, @parentSpan: 1, @parentTotal: 1, @parentSpacing: 0px) {
 
-	   /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-	   /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
+	   // Calculate the width of the parent element, in pixels
+
+	   // Get the parent width percentage.
+	   // Uses exactly the same logic as the section below ("Calculate the width
+	   // of the grid unit, in percentage"), just concatinated.
+
 	   @parentWidthPercentage: ((100% / @parentTotal) * @parentSpan) - ((((1% * ((@parentSpacing / @siteWidth) * 100)) * (@parentTotal - 1)) / @parentTotal) / @parentSpan);
 
-	   /**
-	   * Calculate the parent element width in pixels
-	   */
-	   @parentWidth: (@siteWidth / 100) * @parentWidthPercentage;
+	   // Calculate the parent element width in pixels
 
+     @parentWidth: (@siteWidth / 100) * @parentWidthPercentage;
 
+	   // Calculate the width of the grid unit, in percentage
 
-	   /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-	   /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
+	   // Calculate the spacing width as a percentage of the parent width.
+	   // There is no LESS function to change a variable from pixels to percentage,
+	   // so we just multiply 1% by the percentage value in pixels (math hack)
+
 	   @spacingPercentage: 1% * ((@spacing / @parentWidth) * 100);
 
-	   /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
+	   // Calculate the base width (as if there were no spacing)
+
 	   @baseWidth: (100% / @total) * @span;
 
-	   /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
+	   // As we are using margin-right, the number of units with spacing should be
+	   // one less than the total number of units
+
 	   @unitsWithSpacing: @total - 1;
 
-	   /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
+	   // Calculate the proporsion of the grid row consumed by spacing (percentage)
+
 	   @totalRowSpacing: @spacingPercentage * @unitsWithSpacing;
 
-	   /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
+	   // To calculate how much width to subtract from each one of the units with
+	   // spacing, we take the total ammount of spacing in the grid row, divide it
+	   // by the total number of columns, then divide that by the the number of columns
+	   // that the unit in question consumes :)
+
 	   @widthToSubtract: (@totalRowSpacing / @total) / @span;
 
-	   /* Set the CSS properties */
+	   // Set the CSS properties
 	   width: (@baseWidth - @widthToSubtract);
 	   .margin(@rtl);
 	}
@@ -779,13 +768,9 @@ textarea {
   .clearfixHack();
 }
 
-/* Grid System
- * ----------------------------------------------------------------- */
-
-/*
-*   This grid system is retro-compatiable with the old one, but the
-*   old one must not be used in new projects.
-*/
+// Grid System
+// This grid system is retro-compatiable with the old one, but the
+// old one must not be used in new projects.
 
 // Grid Row
 .gr, .line {
@@ -794,11 +779,10 @@ textarea {
 }
 
 // Grid Units
-/**
-* NOTE: When ready to remove IE6/7 support, all selectors beginning with .grs
-* can be removed, and add direct decendant indicators (>) to the grid units
-* contained within the spaced grid row containers declared after these rules
-*/
+// NOTE: When ready to remove IE6/7 support, all selectors beginning with .grs
+// can be removed, and add direct decendant indicators (>) to the grid units
+// contained within the spaced grid row containers declared after these rules
+
 .gu, .gridUnit {
   #grid > .gu(@rtl);
 }
@@ -1291,21 +1275,19 @@ pre {
 	overflow: auto;
 }
 
-/* Forms.less
-/* Base styles for various input types, form layouts, and states
-/* ------------------------------------------------------------- */
+// Forms
+// Base styles for various input types, form layouts, and states
 
 // Block level inputs
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 28px; /* Make inputs at least the height of their button counterpart */
-  /* Makes inputs behave like true block-level elements */
+  min-height: 28px; // Make inputs at least the height of their button counterpart
+  // Makes inputs behave like true block-level elements
   .box-sizing(border-box);
 }
 
-/* GENERAL STYLES
-/* -------------- */
+// General styles
 
 // Make all forms have space below them
 .core-form {
@@ -1427,8 +1409,8 @@ pre {
 	// Set the height of select and file controls to match text inputs
 	select,
 	input[type="file"] {
-	  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
-	  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
+	  height: 28px; // In IE7, the height of the select element cannot be changed by height, only font-size
+	  *margin-top: 4px; // For IE7, add top margin to align select with labels
 	  line-height: 28px;
 	}
 
@@ -3009,6 +2991,7 @@ i.vicon {
       .margin(@rtl, 0, 6px, 0, -3px);
       position: relative;
       vertical-align: middle;
+      height: 15px;
     }
 
     &.btn-append .arrow {

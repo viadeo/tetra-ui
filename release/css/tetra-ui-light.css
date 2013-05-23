@@ -208,25 +208,6 @@ textarea {
   overflow: auto;
   vertical-align: top;
 }
-/* Grid Specific Mixins
- * ----------------------------------------------------------------- */
-#grid {
-  /**
-	* Determine width and margin for grid unit with spacing
-	*
-	* @param (integer)span           the column span of the grid unit                                          required
-	* @param (integer)total          the total number of columns in the grid row                               required
-	* @param (pixels)spacing         the ammount of spacing required between grid units                        required
-	* @param (integer)parentSpan     the column span of the parent grid unit, used for nested grids            optional
-	* @param (integer)parentTotal    the total number of columns in the parent grid unit's grid row            optional
-	* @param (pixels)parentSpacing   the ammount of spacing between grid units in the parent unit's grid row   optional
-	*
-	* The width of the grid unit is a percentage value, and the margin is in pixels.
-	* We therefore need to first calculate the margin as a percentage of the parent
-	* grid row and compensate in the width percentage value of each grid unit.
-	*/
-
-}
 .fixed-container {
   width: 980px;
   margin: 0 auto;
@@ -242,12 +223,6 @@ textarea {
 .fixed-container:after {
   clear: both;
 }
-/* Grid System
- * ----------------------------------------------------------------- */
-/*
-*   This grid system is retro-compatiable with the old one, but the
-*   old one must not be used in new projects.
-*/
 .gr,
 .line {
   width: 100%;
@@ -266,11 +241,6 @@ textarea {
 .line:after {
   clear: both;
 }
-/**
-* NOTE: When ready to remove IE6/7 support, all selectors beginning with .grs
-* can be removed, and add direct decendant indicators (>) to the grid units
-* contained within the spaced grid row containers declared after these rules
-*/
 .gu,
 .gridUnit {
   float: left;
@@ -355,540 +325,56 @@ textarea {
 .grsxs > .grid1of2,
 .grsxs > .grid2of4,
 .grsxs > .gu-3of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 49.744897959183675%;
   margin-right: 5px;
 }
 .grsxs > .gu-1of3,
 .grsxs > .grid1of3,
 .grsxs > .gu-2of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 32.993197278911566%;
   margin-right: 5px;
 }
 .grsxs > .gu-2of3,
 .grsxs > .grid2of3,
 .grsxs > .gu-4of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 66.49659863945578%;
   margin-right: 5px;
 }
 .grsxs > .gu-1of4,
 .grsxs > .grid1of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 24.617346938775512%;
   margin-right: 5px;
 }
 .grsxs > .gu-3of4,
 .grsxs > .grid3of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 74.87244897959184%;
   margin-right: 5px;
 }
 .grsxs > .gu-1of5,
 .grsxs > .grid1of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 19.591836734693878%;
   margin-right: 5px;
 }
 .grsxs > .gu-2of5,
 .grsxs > .grid2of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 39.795918367346935%;
   margin-right: 5px;
 }
 .grsxs > .gu-3of5,
 .grsxs > .grid3of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 59.863945578231295%;
   margin-right: 5px;
 }
 .grsxs > .gu-4of5,
 .grsxs > .grid4of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 79.89795918367346%;
   margin-right: 5px;
 }
 .grsxs > .gu-1of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 16.241496598639458%;
   margin-right: 5px;
 }
 .grsxs > .gu-5of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 83.2482993197279%;
   margin-right: 5px;
 }
@@ -897,540 +383,56 @@ textarea {
 .grss > .grid1of2,
 .grss > .grid2of4,
 .grss > .gu-3of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 49.48979591836735%;
   margin-right: 10px;
 }
 .grss > .gu-1of3,
 .grss > .grid1of3,
 .grss > .gu-2of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 32.6530612244898%;
   margin-right: 10px;
 }
 .grss > .gu-2of3,
 .grss > .grid2of3,
 .grss > .gu-4of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 66.32653061224491%;
   margin-right: 10px;
 }
 .grss > .gu-1of4,
 .grss > .grid1of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 24.23469387755102%;
   margin-right: 10px;
 }
 .grss > .gu-3of4,
 .grss > .grid3of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 74.74489795918367%;
   margin-right: 10px;
 }
 .grss > .gu-1of5,
 .grss > .grid1of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 19.183673469387756%;
   margin-right: 10px;
 }
 .grss > .gu-2of5,
 .grss > .grid2of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 39.59183673469388%;
   margin-right: 10px;
 }
 .grss > .gu-3of5,
 .grss > .grid3of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 59.72789115646258%;
   margin-right: 10px;
 }
 .grss > .gu-4of5,
 .grss > .grid4of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 79.79591836734694%;
   margin-right: 10px;
 }
 .grss > .gu-1of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 15.816326530612246%;
   margin-right: 10px;
 }
 .grss > .gu-5of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 83.16326530612245%;
   margin-right: 10px;
 }
@@ -1439,540 +441,56 @@ textarea {
 .grsm > .grid1of2,
 .grsm > .grid2of4,
 .grsm > .gu-3of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 49.234693877551024%;
   margin-right: 15px;
 }
 .grsm > .gu-1of3,
 .grsm > .grid1of3,
 .grsm > .gu-2of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 32.31292517006803%;
   margin-right: 15px;
 }
 .grsm > .gu-2of3,
 .grsm > .grid2of3,
 .grsm > .gu-4of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 66.15646258503402%;
   margin-right: 15px;
 }
 .grsm > .gu-1of4,
 .grsm > .grid1of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 23.852040816326532%;
   margin-right: 15px;
 }
 .grsm > .gu-3of4,
 .grsm > .grid3of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 74.61734693877551%;
   margin-right: 15px;
 }
 .grsm > .gu-1of5,
 .grsm > .grid1of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 18.775510204081634%;
   margin-right: 15px;
 }
 .grsm > .gu-2of5,
 .grsm > .grid2of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 39.38775510204081%;
   margin-right: 15px;
 }
 .grsm > .gu-3of5,
 .grsm > .grid3of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 59.59183673469388%;
   margin-right: 15px;
 }
 .grsm > .gu-4of5,
 .grsm > .grid4of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 79.6938775510204%;
   margin-right: 15px;
 }
 .grsm > .gu-1of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 15.391156462585036%;
   margin-right: 15px;
 }
 .grsm > .gu-5of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 83.07823129251702%;
   margin-right: 15px;
 }
@@ -1981,540 +499,56 @@ textarea {
 .grsl > .grid1of2,
 .grsl > .grid2of4,
 .grsl > .gu-3of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 48.97959183673469%;
   margin-right: 20px;
 }
 .grsl > .gu-1of3,
 .grsl > .grid1of3,
 .grsl > .gu-2of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 31.97278911564626%;
   margin-right: 20px;
 }
 .grsl > .gu-2of3,
 .grsl > .grid2of3,
 .grsl > .gu-4of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 65.98639455782313%;
   margin-right: 20px;
 }
 .grsl > .gu-1of4,
 .grsl > .grid1of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 23.46938775510204%;
   margin-right: 20px;
 }
 .grsl > .gu-3of4,
 .grsl > .grid3of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 74.48979591836735%;
   margin-right: 20px;
 }
 .grsl > .gu-1of5,
 .grsl > .grid1of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 18.367346938775512%;
   margin-right: 20px;
 }
 .grsl > .gu-2of5,
 .grsl > .grid2of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 39.183673469387756%;
   margin-right: 20px;
 }
 .grsl > .gu-3of5,
 .grsl > .grid3of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 59.45578231292517%;
   margin-right: 20px;
 }
 .grsl > .gu-4of5,
 .grsl > .grid4of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 79.59183673469387%;
   margin-right: 20px;
 }
 .grsl > .gu-1of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 14.965986394557824%;
   margin-right: 20px;
 }
 .grsl > .gu-5of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 82.99319727891158%;
   margin-right: 20px;
 }
@@ -2523,532 +557,48 @@ textarea {
 .grsxl > .grid1of2,
 .grsxl > .grid2of4,
 .grsxl > .gu-3of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 48.46938775510204%;
   margin-right: 30px;
 }
 .grsxl > .gu-1of3,
 .grsxl > .gu-2of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 31.292517006802726%;
   margin-right: 30px;
 }
 .grsxl > .gu-2of3,
 .grsxl > .gu-4of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 65.64625850340137%;
   margin-right: 30px;
 }
 .grsxl > .gu-1of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 22.70408163265306%;
   margin-right: 30px;
 }
 .grsxl > .gu-3of4 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 74.23469387755102%;
   margin-right: 30px;
 }
 .grsxl > .gu-1of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 17.551020408163264%;
   margin-right: 30px;
 }
 .grsxl > .gu-2of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 38.775510204081634%;
   margin-right: 30px;
 }
 .grsxl > .gu-3of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 59.183673469387756%;
   margin-right: 30px;
 }
 .grsxl > .gu-4of5 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 79.38775510204081%;
   margin-right: 30px;
 }
 .grsxl > .gu-1of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 14.115646258503403%;
   margin-right: 30px;
 }
 .grsxl > .gu-5of6 {
-  /* Calculate the width of the parent element, in pixels
-	   ====================================================== */
-
-  /**
-	   * Get the parent width percentage.
-	   * Uses exactly the same logic as the section below ("Calculate the width
-	   * of the grid unit, in percentage"), just concatinated.
-	   */
-
-  /**
-	   * Calculate the parent element width in pixels
-	   */
-
-  /* Calculate the width of the grid unit, in percentage
-       ====================================================== */
-
-  /**
-	   * Calculate the spacing width as a percentage of the parent width.
-	   * There is no LESS function to change a variable from pixels to percentage,
-	   * so we just multiply 1% by the percentage value in pixels (math hack)
-	   */
-
-  /**
-	   * Calculate the base width (as if there were no spacing)
-	   */
-
-  /**
-	   * As we are using margin-right, the number of units with spacing should be
-	   * one less than the total number of units
-	   */
-
-  /**
-	   * Calculate the proporsion of the grid row consumed by spacing (percentage)
-	   */
-
-  /**
-	   * To calculate how much width to subtract from each one of the units with
-	   * spacing, we take the total ammount of spacing in the grid row, divide it
-	   * by the total number of columns, then divide that by the the number of columns
-	   * that the unit in question consumes :)
-	   */
-
-  /* Set the CSS properties */
-
   width: 82.82312925170069%;
   margin-right: 30px;
 }
@@ -3702,24 +1252,15 @@ pre {
   overflow-x: scroll;
   overflow: auto;
 }
-/* Forms.less
-/* Base styles for various input types, form layouts, and states
-/* ------------------------------------------------------------- */
 .input-block-level {
   display: block;
   width: 100%;
   min-height: 28px;
-  /* Make inputs at least the height of their button counterpart */
-
-  /* Makes inputs behave like true block-level elements */
-
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* GENERAL STYLES
-/* -------------- */
 .core-form {
   margin: 0 0 1.4em;
 }
@@ -3827,11 +1368,7 @@ pre {
 .core-form select,
 .core-form input[type="file"] {
   height: 28px;
-  /* In IE7, the height of the select element cannot be changed by height, only font-size */
-
   *margin-top: 4px;
-  /* For IE7, add top margin to align select with labels */
-
   line-height: 28px;
 }
 .core-form input[type="file"] {
@@ -5669,6 +3206,7 @@ i.vicon {
   margin: 0 6px 0 -3px;
   position: relative;
   vertical-align: middle;
+  height: 15px;
 }
 .dd .dd-btn.btn-append .arrow {
   border: 0;
