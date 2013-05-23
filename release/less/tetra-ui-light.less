@@ -417,7 +417,7 @@
 }
 // IE7 inline-block
 .ie7-inline-block() {
-  *display: inline; /* IE7 inline-block hack */
+  *display: inline; // IE7 inline-block hack
   *zoom: 1;
 }
 
@@ -526,13 +526,11 @@
 .right (@rtl, @value) when (@rtl = false) { right: @value; }
 .right (@rtl, @value) when (@rtl = true) { left: @value; }
 
-/* Reset.less
- * An adapted version of the adapted version of eric mayers reset for Twitter's Bootstrap
- * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+// Reset
+// An adapted version of the adapted version of eric mayers reset for Twitter's Bootstrap
 
 
 // ERIC MEYER RESET
-// --------------------------------------------------
 
 html, body { background: #FFFFFF; }
 body, h1, h2, h3, h4, h5, h6, p, div, span, blockquote, pre, a, button, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; background: transparent; } // NOTE: If any properties are added or removed, be sure to update the .inherit() mixin.
@@ -2098,7 +2096,8 @@ a:hover, a:focus {
   }
 }
 
-/* Global Icons */
+// Global Icons
+
 .global-icon, .ico {
 	background: url('@{img-sprite-dir}/global-sprite2.png') no-repeat;
 	color: transparent;
@@ -2110,12 +2109,7 @@ a:hover, a:focus {
 	width: 16px;
 }
 
- /* Same image, but in PNG8 for IE6 */
-.msie6 .global-icon, .msie6 .ico {
-	background-image: url('@{img-sprite-dir}/global-sprite2-8.png');
-}
-
-/* Icon Fonts */
+// Icon Fonts
 
 @font-face {
   font-family: 'Viadeoicons';
@@ -2452,11 +2446,11 @@ i.vicon {
 }
 
 .btn, .core-form .btn {
-  /* General Properties */
+  // General Properties
   @_padding:           3px 10px;
   @_borderRadius:        @borderRadiusS;
 
-  /* Rules */
+  // Rules
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
@@ -2479,7 +2473,7 @@ i.vicon {
     .box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
   }
 
-  /* Support for old layout */
+  // Support for old layout
   span {
     input, button {
       display:inline;

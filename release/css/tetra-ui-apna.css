@@ -1,9 +1,6 @@
 /* Variables_apna.less
  * Anything declared here will overwrite the variables declared in variables.less
- * ----------------------------------------------------- *//* Reset.less
- * An adapted version of the adapted version of eric mayers reset for Twitter's Bootstrap
- * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-html,
+ * ----------------------------------------------------- */html,
 body {
   background: #FFFFFF;
 }
@@ -1628,8 +1625,6 @@ pre {
 .core-form .help-inline {
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
   vertical-align: middle;
   padding-left: 5px;
@@ -2216,7 +2211,6 @@ a:hover .avatar img,
 a:focus .avatar img {
   background-color: #cdd9e3;
 }
-/* Global Icons */
 .global-icon,
 .ico {
   background: url('/v_img/global/global-sprite2.png') no-repeat;
@@ -2228,12 +2222,6 @@ a:focus .avatar img {
   vertical-align: text-top;
   width: 16px;
 }
-/* Same image, but in PNG8 for IE6 */
-.msie6 .global-icon,
-.msie6 .ico {
-  background-image: url('/v_img/global/global-sprite2-8.png');
-}
-/* Icon Fonts */
 @font-face {
   font-family: 'Viadeoicons';
   src: url('/css/core/fonts/viadeoicons/1368795020/viadeoicons.eot');
@@ -2498,10 +2486,6 @@ i.vicon {
 }
 .btn,
 .core-form .btn {
-  /* General Properties */
-
-  /* Rules */
-
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
@@ -2520,8 +2504,6 @@ i.vicon {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-  /* Support for old layout */
-
 }
 .btn:hover,
 .core-form .btn:hover,
@@ -3191,8 +3173,6 @@ i.vicon {
   position: relative;
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
   text-shadow: none;
 }
