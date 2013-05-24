@@ -143,10 +143,15 @@ tetra.view.register('autocomplete', {
 					select: function(containerId, direction) {
 						var items = _('#' + containerId).find('.autocomplete-menu li');
 						var index = items.filter('.active').removeClass('active').index();
+
 						index += (direction === 'next') ? 1 : -1;
-						if(index >= items.length) {
+
+						if (index >= items.length) {
 							index = 0;
+						} else if (index < -1) {
+							index = items.length - 1;
 						}
+
 						items.eq(index).addClass('active');
 					},
 
