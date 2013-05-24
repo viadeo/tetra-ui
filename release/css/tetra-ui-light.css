@@ -3701,11 +3701,14 @@ i.vicon {
   border-top: 0;
 }
 .autocomplete .autocomplete-menu li.active {
-  background: #f5f7f9;
+  background: #ecf1f5;
 }
 .autocomplete .autocomplete-menu li:last-child {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.autocomplete .autocomplete-menu li:hover {
+  background: #dae3ea;
 }
 .autocomplete.active .autocomplete-menu {
   opacity: 1;

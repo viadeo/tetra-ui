@@ -31,12 +31,16 @@
       }
 
       &.active {
-        background: @panelBackground;
+        background: tint(@blueSoft, 85%);
       }
 
       &:last-child {
         border-bottom-left-radius: @borderRadiusM;
         border-bottom-right-radius: @borderRadiusM;
+      }
+
+      &:hover {
+        background: tint(@blueSoft, 70%);
       }
     }
   }

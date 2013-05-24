@@ -198,7 +198,11 @@ tetra.view.register('autocomplete', {
 							_(menu).html(html);
 						});
 
-						menu.find('li:first-child').addClass('active');
+						// testing if we must select the first item by default
+						if (! container.attr('data-no-default')) {
+							menu.find('li:first-child').addClass('active');
+						}
+
 						container.addClass('active');
 					},
 
