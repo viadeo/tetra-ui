@@ -1,0 +1,39 @@
+.highlight-overlay {
+  position: fixed;
+  z-index: 9998;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+  opacity: 0.6;
+  filter: ~"alpha(opacity = 60)";
+  
+  background: @black;
+  background: -webkit-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:    -moz-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:      -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:         radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  
+  -webkit-animation: highlight-overlay-fadein 0.5s;
+  -moz-animation: highlight-overlay-fadein 0.5s;
+  animation: highlight-overlay-fadein 0.5s;
+}
+
+.highlight-target {
+  z-index : 9999;
+  position : relative;
+}
+
+.highlight-overlay-fadein() {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@-webkit-keyframes highlight-overlay-fadein { .highlight-overlay-fadein; }
+@-moz-keyframes highlight-overlay-fadein { .highlight-overlay-fadein; }
+@keyframes highlight-overlay-fadein { .highlight-overlay-fadein; }
