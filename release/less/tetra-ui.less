@@ -210,6 +210,14 @@
     .border-radius-topright (@size);
     .border-radius-bottomright (@size);
 }
+.border-radius-right (@rtl, @size) when (@rtl = false) {
+    .border-radius-topright (@size);
+    .border-radius-bottomright (@size);
+}
+.border-radius-right (@rtl, @size) when (@rtl = true) {
+    .border-radius-topleft (@size);
+    .border-radius-bottomleft (@size);
+}
 .border-radius-bottom (@size) {
     .border-radius-bottomright (@size);
     .border-radius-bottomleft (@size);
@@ -217,6 +225,14 @@
 .border-radius-left (@size) {
     .border-radius-topleft (@size);
     .border-radius-bottomleft (@size);
+}
+.border-radius-left (@rtl, @size) when (@rtl = false) {
+    .border-radius-topleft (@size);
+    .border-radius-bottomleft (@size);
+}
+.border-radius-left (@rtl, @size) when (@rtl = true) {
+    .border-radius-topright (@size);
+    .border-radius-bottomright (@size);
 }
 
 // Disable text selection
@@ -497,6 +513,9 @@
 
 .margin (@rtl, @top, @right, @bottom, @left) when (@rtl = false) { margin: @top @right @bottom @left; }
 .margin (@rtl, @top, @right, @bottom, @left) when (@rtl = true) { margin: @top @left @bottom @right; }
+
+.padding (@rtl, @top, @right, @bottom, @left) when (@rtl = false) { padding: @top @right @bottom @left; }
+.padding (@rtl, @top, @right, @bottom, @left) when (@rtl = true) { padding: @top @left @bottom @right; }
 
 .margin-left (@rtl, @value) when (@rtl = false) { margin-left: @value }
 .margin-left (@rtl, @value) when (@rtl = true) { margin-right: @value }
@@ -2154,52 +2173,33 @@ h1 .sub {
 }
 
 .ui-tag {
+  position: relative;
   display: inline-block;
   margin: 0 @spacingXs @spacingXs 0;
-  padding: @spacingXs @spacingS;
-  border: 1px solid lighten(@borderColor, 5%);
+  .padding(@rtl, @spacingXs, @spacingXl, @spacingXs, @spacingS);
   border-radius: @borderRadiusS;
-  background: lighten(@borderColor, 10%);
+  background: @green-2;
+  color: @white;
   white-space: nowrap;
 
   .remove {
-    .border(@rtl) when (@rtl = false) { border-left: 1px solid @white; }
-    .border(@rtl) when (@rtl = true) { border-right: 1px solid @white; }
-
-    position: relative;
-    display: inline-block;
-    .margin-right(@rtl, -1*@spacingXs);
-    .margin-left(@rtl, @spacingXs);
-    .padding-left(@rtl, @spacingXs);
-    .border(@rtl);
-
-    &:before {
-      .position(@rtl) when (@rtl = false) { left: -2px; }
-      .position(@rtl) when (@rtl = true) { right: 0; }
-
-      content: '';
-      position: absolute;
-      .position(@rtl);
-      top: 0;
-      width: 0; height: 100%;
-      border-left: 1px solid lighten(@grayLight, 10%);
-    }
+    position: absolute;
+    top: 0;
+    .right(@rtl, 0);
+    height: 100%;
+    background: shade(@green-2, 10%);
+    .border-radius-right(@rtl, @borderRadiusS);
+    padding: 0 (@spacingXs / 2);
+    line-height: 2.1em;
 
     .vicon {
-      width: 15px; height: 15px;
-      background: darken(@grayLight, 15%);
-      border-radius: 7px;
-      font-size: 6px;
+      font-size: 8px;
       color: white;
-      vertical-align: top;
-      line-height: 15px;
     }
 
     &:hover,
     &:focus {
-      .vicon {
-        background: @gray;
-      }
+      background: shade(@green-2, 25%);
     }
   }
 }

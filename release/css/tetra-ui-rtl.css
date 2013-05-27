@@ -2139,44 +2139,33 @@ h1 .sub {
   border-color: #0065ae;
 }
 .ui-tag {
+  position: relative;
   display: inline-block;
   margin: 0 5px 5px 0;
-  padding: 5px 10px;
-  border: 1px solid #e1e8ee;
+  padding: 5px 10px 5px 30px;
   border-radius: 3px;
-  background: #f2f5f8;
+  background: #0c9f9b;
+  color: #ffffff;
   white-space: nowrap;
 }
 .ui-tag .remove {
-  position: relative;
-  display: inline-block;
-  margin-left: -5px;
-  margin-right: 5px;
-  padding-right: 5px;
-  border-right: 1px solid #ffffff;
-}
-.ui-tag .remove:before {
-  content: '';
   position: absolute;
-  right: 0;
   top: 0;
-  width: 0;
+  left: 0;
   height: 100%;
-  border-left: 1px solid #d9d9d9;
+  background: #0b8f8c;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 0 2.5px;
+  line-height: 2.1em;
 }
 .ui-tag .remove .vicon {
-  width: 15px;
-  height: 15px;
-  background: #999999;
-  border-radius: 7px;
-  font-size: 6px;
+  font-size: 8px;
   color: white;
-  vertical-align: top;
-  line-height: 15px;
 }
-.ui-tag .remove:hover .vicon,
-.ui-tag .remove:focus .vicon {
-  background: #808080;
+.ui-tag .remove:hover,
+.ui-tag .remove:focus {
+  background: #097774;
 }
 /* Avatar Styles */
 .avatar {
