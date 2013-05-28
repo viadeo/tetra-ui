@@ -3451,6 +3451,52 @@ i.vicon {
     -moz-transform: translateY(-30px);
   }
 }
+.highlight-overlay {
+  position: fixed;
+  z-index: 9998;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  filter: alpha(opacity = 60);
+  background: #000000;
+  background: -webkit-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
+  background: -moz-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
+  background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
+  background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
+  -webkit-animation: highlight-overlay-fadein 0.5s;
+  -moz-animation: highlight-overlay-fadein 0.5s;
+  animation: highlight-overlay-fadein 0.5s;
+}
+.highlight-target {
+  z-index: 9999;
+  position: relative;
+}
+@-webkit-keyframes highlight-overlay-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@-moz-keyframes highlight-overlay-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@keyframes highlight-overlay-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
 .nav {
   list-style: none;
   margin-bottom: 1.2em;

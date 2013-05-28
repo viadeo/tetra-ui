@@ -409,3 +409,79 @@ order: 9
 
   </div>
 </div>
+
+<div class="gr grsxl mtl">
+  <h2 id="higlight">Highlights</h2>
+
+  <div class="gu gu-1of5">
+    <p>
+      Highlights are a way to put focus a specific item on a page.
+      You can use it to feature a preview or a tutorial step on the page.
+    </p>
+  </div>
+
+  <div class="gu gu-last gr grsxl">
+
+    <div class="bx mbm" id="highlight_demo">
+      <h2 class="h-bx">Interesting box</h2>
+      <p>This box looks really interesting, you shoud highlight it.</p>
+      <a data-comp="highlight"
+         data-event="click"
+         data-highlight="#highlight_demo"
+         class="bootnode btn btn-primary">
+        Highlight me !
+      </a>
+    </div>
+
+    <pre>
+      <code class="lang-html">&lt;a data-comp="highlight"
+    data-event="click"
+    data-highlight="[css selector of the target]"
+    class="bootnode btn btn-primary"&gt;
+    Highlight me !
+  &lt;/a&gt;
+      </code>
+    </pre>
+
+  </div>
+
+</div>
+
+<div class="gr grsxl mtl">
+
+  <div class="gu gu-1of5">
+    <p>
+    Events listened by the highlight controller.
+    </p>
+  </div>
+
+  <div class="gu gu-last gr grsxl">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Events listened by the controller</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code class="lang-javascript">page.notify('highlight: display', [css selector of the target]);</code>
+          </td>
+          <td>
+            Highlight the element provided as an argument on the page.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code class="lang-javascript">page.notify('highlight: close');</code>
+          </td>
+          <td>
+            Remove the current highlight off the page.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
