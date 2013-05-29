@@ -2213,8 +2213,8 @@ a:focus .avatar img {
 }
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1369663001/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1369663001/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1369663001/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1369663001/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1369832973/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1369832973/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1369832973/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1369832973/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
