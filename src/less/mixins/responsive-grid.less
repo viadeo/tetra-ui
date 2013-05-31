@@ -21,37 +21,43 @@
 
 // Setting the base layout of a column
 
-.column (@span, @total, @margin) {
+.column (@span, @total, @margin, @first-column: false) {
 	float: left;
 	.column-width(@span, @total, @margin);
 }
 
-.column (@span, @total, @margin) when (@total > 1) { // More than one column
-	.column-spacing(@margin); // Setting the gutter
+// Only one full width column
+.column (@span, @total, @margin, @first-column: false) when (@total = 1) {
+	.column-spacing(0); // No margin needed
 }
 
-.column (@span, @total, @margin) when (@total = 1) { // Only one full width column
+// More than one column
+.column (@span, @total, @margin, @first-column: false) when (@total > 1) and (@first-column) {
 	.column-spacing(0); // No margin needed
+}
+
+.column (@span, @total, @margin, @first-column: false) when (@total > 1) and not (@first-column) {
+	.column-spacing(@margin); // Setting the gutter
 }
 
 // Updating a column, no need to repeat all the CSS properties
 
-.column-update (@span, @total, @margin) {
+.column-update (@span, @total, @margin, @first-column: false) {
 	.column-width(@span, @total, @margin);
 }
 
-.column-update (@span, @total, @margin) when (@total > 1) { // More than one column
-	.column-spacing(@margin); // Setting the gutter
-}
-
-.column-update (@span, @total, @margin) when (@total = 1) { // Only one full width column
+// Only one full width column
+.column-update (@span, @total, @margin, @first-column: false) when (@total = 1) {
 	.column-spacing(0); // No margin needed
 }
 
-// When beginning a new row within the grid
+// More than one column
+.column-update (@span, @total, @margin, @first-column: false) when (@total > 1) and (@first-column) {
+	.column-spacing(0); // No margin needed
+}
 
-.column-new-line () {
-	.column-spacing(0);
+.column-update (@span, @total, @margin, @first-column: false) when (@total > 1) and not (@first-column) {
+	.column-spacing(@margin); // Setting the gutter
 }
 
 // Evenly splitting columns within the grid
