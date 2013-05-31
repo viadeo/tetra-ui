@@ -1,0 +1,88 @@
+// Variables
+
+@grid-spacing-n: 0;
+@grid-spacing-xs: percentage(5px / 980px);
+@grid-spacing-s: percentage(10px / 980px);
+@grid-spacing-m: percentage(15px / 980px);
+@grid-spacing-l: percentage(20px / 980px);
+@grid-spacing-xl: percentage(30px / 980px);
+
+// Setting the width of a column
+
+.column-width (@span, @total, @margin) {
+	width: ((@span / @total) * 100% - ((@total - @span) / @total) * @margin);
+}
+
+// Setting the gutter between columns
+
+.column-spacing (@margin) {
+	margin-left: @margin;
+}
+
+// Setting the base layout of a column
+
+.column (@span, @total, @margin) {
+	float: left;
+	.column-width(@span, @total, @margin);
+}
+
+.column (@span, @total, @margin) when (@total > 1) { // More than one column
+	.column-spacing(@margin); // Setting the gutter
+}
+
+.column (@span, @total, @margin) when (@total = 1) { // Only one full width column
+	.column-spacing(0); // No margin needed
+}
+
+// Updating a column, no need to repeat all the CSS properties
+
+.column-update (@span, @total, @margin) {
+	.column-width(@span, @total, @margin);
+}
+
+.column-update (@span, @total, @margin) when (@total > 1) { // More than one column
+	.column-spacing(@margin); // Setting the gutter
+}
+
+.column-update (@span, @total, @margin) when (@total = 1) { // Only one full width column
+	.column-spacing(0); // No margin needed
+}
+
+// When beginning a new row within the grid
+
+.column-new-line () {
+	.column-spacing(0);
+}
+
+// Evenly splitting columns within the grid
+
+.column-grid-clean-previous (@split, @margin) {
+	@siblings: ~"@{split}n+1";
+
+	&:nth-child(@siblings) {
+		.column-spacing(@margin);
+	}
+}
+
+.column-grid-clear (@split) {
+	@siblings: ~"@{split}n+1";
+
+	&:nth-child(@siblings) {
+		.column-spacing(0);
+	}
+}
+
+.column-grid (@split, @margin) {
+	.column(1, @split, @margin);
+	.column-grid-clear(@split);
+
+	&:first-child { // Supporting IE 7 at least for the first row
+		.column-spacing(0);
+	}
+}
+
+.column-grid-update (@from, @to, @margin) {
+	.column-width(1, @to, @margin);
+	.column-grid-clean-previous(@from, @margin);
+	.column-grid-clear(@to);
+}
