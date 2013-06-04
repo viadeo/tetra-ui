@@ -136,7 +136,11 @@ tetra.view.register('autocomplete', {
               _(me._menu).html(html);
             });
 
-            me._menu.find('li:first-child').addClass('active');
+            // testing if we must select the first item by default
+            if (! me._container.attr('data-no-default')) {
+              me._menu.find('li:first-child').addClass('active');
+            }
+
             me._container.addClass('active');
           },
 
