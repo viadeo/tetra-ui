@@ -14,372 +14,382 @@
 
 // Make all forms have space below them
 .core-form {
-	margin: 0 0 @baseLineHeight;
+  margin: 0 0 @baseLineHeight;
 
-	fieldset {
-	  padding: 0;
-	  margin: 0;
-	  border: 0;
-	}
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
 
-	// Groups of fields with labels on top (legends)
-	legend {
-	  display: block;
-	  width: 100%;
-	  padding: 0;
-	  margin-bottom: @baseLineHeight * 1.5;
-	  font-size: @baseFontSize * 1.5;
-	  line-height: @baseLineHeight * 2;
-	  color: @grayDark;
-	  border: 0;
-	  border-bottom: 1px solid #eee;
+  // Groups of fields with labels on top (legends)
+  legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: @baseLineHeight * 1.5;
+    font-size: @baseFontSize * 1.5;
+    line-height: @baseLineHeight * 2;
+    color: @grayDark;
+    border: 0;
+    border-bottom: 1px solid #eee;
 
-	  // Small
-	  small {
-	    font-size: @baseLineHeight * .75;
-	    color: @grayLight;
-	  }
-	}
+    // Small
+    small {
+      font-size: @baseLineHeight * .75;
+      color: @grayLight;
+    }
+  }
 
-	// Set font for forms
-	label,
-	input,
-	button,
-	select,
-	textarea {
-	  #font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
-	}
-	input,
-	button,
-	select,
-	textarea {
-	  font-family: @baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
-	}
+  // Set font for forms
+  label,
+  input,
+  button,
+  select,
+  textarea {
+    #font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
+  }
+  input,
+  button,
+  select,
+  textarea {
+    font-family: @baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
+  }
 
-	// Identify controls by their labels
-	label {
-	  display: block;
-	  margin-bottom: 5px;
-	  color: @grayDark;
-	}
+  // Identify controls by their labels
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: @grayDark;
+  }
 
-	// Inputs, Textareas, Selects
-	input,
-	textarea,
-	select,
-	.uneditable-input {
-	  display: inline-block;
-	  width: 210px;
-	  height: @baseLineHeight;
-	  padding: 4px;
-	  margin-bottom: 9px;
-	  font-size: @baseFontSize;
-	  line-height: @baseLineHeight;
-	  color: @grayDark;
-	  vertical-align: middle;
-	  border: 1px solid @inputBorder;
-	  .border-radius(3px);
-	}
-	.uneditable-textarea {
-	  width: auto;
-	  height: auto;
-	}
+  // Inputs, Textareas, Selects
+  input,
+  textarea,
+  select,
+  .uneditable-input {
+    display: inline-block;
+    width: 210px;
+    height: @baseLineHeight;
+    padding: 4px;
+    margin-bottom: 9px;
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    color: @grayDark;
+    vertical-align: middle;
+    border: 1px solid @inputBorder;
+    .border-radius(3px);
+  }
+  .uneditable-textarea {
+    width: auto;
+    height: auto;
+  }
 
-	// Inputs within a label
-	label input,
-	label textarea,
-	label select {
-	  display: block;
-	}
+  // Inputs within a label
+  label input,
+  label textarea,
+  label select {
+    display: block;
+  }
 
-	// Mini reset for unique input types
-	input[type="image"],
-	input[type="checkbox"],
-	input[type="radio"] {
-	  width: auto;
-	  height: auto;
-	  padding: 0;
-	  margin: 3px 0;
-	  *margin-top: 0; /* IE7 */
-	  line-height: normal;
-	  cursor: pointer;
-	  .border-radius(0);
-	  border: 0 \9; /* IE9 and down */
-	}
-	input[type="image"] {
-	  border: 0;
-	}
+  // Mini reset for unique input types
+  input[type="image"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 3px 0;
+    *margin-top: 0; /* IE7 */
+    line-height: normal;
+    cursor: pointer;
+    .border-radius(0);
+    border: 0 \9; /* IE9 and down */
+  }
+  input[type="image"] {
+    border: 0;
+  }
 
-	// Reset the file input to browser defaults
-	input[type="file"] {
-	  width: auto;
-	  padding: initial;
-	  line-height: initial;
-	  border: initial;
-	  background-color: @inputBackground;
-	  background-color: initial;
-	  .box-shadow(none);
-	}
+  // Reset the file input to browser defaults
+  input[type="file"] {
+    width: auto;
+    padding: initial;
+    line-height: initial;
+    border: initial;
+    background-color: @inputBackground;
+    background-color: initial;
+    .box-shadow(none);
+  }
 
-	// Help out input buttons
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"] {
-	  width: auto;
-	  height: auto;
-	}
+  // Help out input buttons
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    width: auto;
+    height: auto;
+  }
 
-	// Set the height of select and file controls to match text inputs
-	select,
-	input[type="file"] {
-	  height: 28px; // In IE7, the height of the select element cannot be changed by height, only font-size
-	  *margin-top: 4px; // For IE7, add top margin to align select with labels
-	  line-height: 28px;
-	}
+  // Set the height of select and file controls to match text inputs
+  select,
+  input[type="file"] {
+    height: 28px; // In IE7, the height of the select element cannot be changed by height, only font-size
+    *margin-top: 4px; // For IE7, add top margin to align select with labels
+    line-height: 28px;
+  }
 
-	// Reset line-height for IE
-	input[type="file"] {
-	  line-height: 18px \9;
-	}
+  // Reset line-height for IE
+  input[type="file"] {
+    line-height: 18px \9;
+  }
 
-	// Chrome on Linux and Mobile Safari need background-color
-	select {
-	  width: 220px; // default input width + 10px of padding that doesn't get applied
-	  background-color: @inputBackground;
-	}
+  // Chrome on Linux and Mobile Safari need background-color
+  select {
+    width: 220px; // default input width + 10px of padding that doesn't get applied
+    background-color: @inputBackground;
+  }
 
-	// Make multiple select elements height not fixed
-	select[multiple],
-	select[size] {
-	  height: auto;
-	}
+  // Make multiple select elements height not fixed
+  select[multiple],
+  select[size] {
+    height: auto;
+  }
 
-	// Remove shadow from image inputs
-	input[type="image"] {
-	  .box-shadow(none);
-	}
+  // Remove shadow from image inputs
+  input[type="image"] {
+    .box-shadow(none);
+  }
 
-	// Make textarea height behave
-	textarea {
-	  height: auto;
-	}
+  // Make textarea height behave
+  textarea {
+    height: auto;
+  }
 
-	// Hidden inputs
-	input[type="hidden"] {
-	  display: none;
-	}
-
-
-
-	// CHECKBOXES & RADIOS
-	// -------------------
-
-	// Indent the labels to position radios/checkboxes as hanging
-	.radio,
-	.checkbox {
-	  .padding-left(@rtl, 18px);
-	}
-	.radio input[type="radio"],
-	.checkbox input[type="checkbox"] {
-	  .float-left(@rtl);
-	  .margin-left(@rtl, -18px);
-	  *clear: left;
-	}
-
-	// Move the options list down to align with labels
-	.controls > .radio:first-child,
-	.controls > .checkbox:first-child {
-	  padding-top: 5px; // has to be padding because margin collaspes
-	}
-
-	// Radios and checkboxes on same line
-	// TODO v3: Convert .inline to .control-inline
-	.radio.inline,
-	.checkbox.inline {
-	  display: inline-block;
-	  padding-top: 5px;
-	  margin-bottom: 0;
-	  vertical-align: middle;
-	}
-	.radio.inline + .radio.inline,
-	.checkbox.inline + .checkbox.inline {
-	  margin-left: 10px; // space out consecutive inline controls
-	}
+  // Hidden inputs
+  input[type="hidden"] {
+    display: none;
+  }
 
 
 
-	// FOCUS STATE
-	// -----------
-	input,
-	textarea {
-	  .box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1));
-	  @transition: border linear .2s, box-shadow linear .2s;
-	  .transition(@transition);
-	}
-	input:focus,
-	textarea:focus {
-	  border-color: @inputBorderFocus;
-	  @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px @inputBorderFocus;
-	  .box-shadow(@shadow);
-	  outline: 0;
-	  outline: thin dotted \9; /* IE6-9 */
-	}
-	input[type="file"]:focus,
-	input[type="radio"]:focus,
-	input[type="checkbox"]:focus,
-	select:focus {
-	  .box-shadow(none); // override for file inputs
-	  .tab-focus();
-	}
+  // CHECKBOXES & RADIOS
+  // -------------------
+
+  // Indent the labels to position radios/checkboxes as hanging
+  .radio,
+  .checkbox {
+    .padding-left(@rtl, 18px);
+  }
+  .radio input[type="radio"],
+  .checkbox input[type="checkbox"] {
+    .float-left(@rtl);
+    .margin-left(@rtl, -18px);
+    *clear: left;
+  }
+
+  // Move the options list down to align with labels
+  .controls > .radio:first-child,
+  .controls > .checkbox:first-child {
+    padding-top: 5px; // has to be padding because margin collaspes
+  }
+
+  // Radios and checkboxes on same line
+  // TODO v3: Convert .inline to .control-inline
+  .radio.inline,
+  .checkbox.inline {
+    display: inline-block;
+    padding-top: 5px;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .radio.inline + .radio.inline,
+  .checkbox.inline + .checkbox.inline {
+    margin-left: 10px; // space out consecutive inline controls
+  }
 
 
-	// INPUT SIZES
-	// -----------
 
-	// General classes for quick sizes
-	.input-mini       { width: 60px; }
-	.input-small      { width: 90px; }
-	.input-medium     { width: 150px; }
-	.input-large      { width: 210px; }
-	.input-xlarge     { width: 270px; }
-	.input-xxlarge    { width: 530px; }
-	.input-fullwidth  {
-				.box-sizing(border-box);
+  // FOCUS STATE
+  // -----------
+  input,
+  textarea {
+    .box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1));
+    @transition: border linear .2s, box-shadow linear .2s;
+    .transition(@transition);
+  }
+  input:focus,
+  textarea:focus {
+    border-color: @inputBorderFocus;
+    @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px @inputBorderFocus;
+    .box-shadow(@shadow);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+  input[type="file"]:focus,
+  input[type="radio"]:focus,
+  input[type="checkbox"]:focus,
+  select:focus {
+    .box-shadow(none); // override for file inputs
+    .tab-focus();
+  }
+
+  // General classes for quick sizes
+  @size-mini: 60px;
+  @size-small: 90px;
+  @size-medium: 150px;
+  @size-large: 210px;
+  @size-xlarge: 270px;
+  @size-xxlarge: 530px;
+
+  .input-mini { width: @size-mini; }
+  .input-small { width: @size-small; }
+  .input-medium { width: @size-medium; }
+  .input-large { width: @size-large; }
+  .input-xlarge { width: @size-xlarge; }
+  .input-xxlarge { width: @size-xxlarge; }
+
+  .input-fullwidth {
+        .box-sizing(border-box);
         width: 100%;
         height: auto;
         *width: 90%; // IE 7 doesn't support box-sizing
-	}
+  }
 
-	// Grid style input sizes
-	input[class*="span"],
-	select[class*="span"],
-	textarea[class*="span"],
-	.uneditable-input {
-	  float: none;
-	  margin-left: 0;
-	}
+  select.input-small { width: (@size-small + 10px); }
+  select.input-medium { width: (@size-medium + 10px); }
+  select.input-large { width: (@size-large + 10px); }
+  select.input-xlarge { width: (@size-xlarge + 10px); }
+  select.input-xxlarge { width: (@size-xxlarge + 10px); }
 
-
-
-	// GRID SIZING FOR INPUTS
-	// ----------------------
-
-	//#grid > .input (@gridColumnWidth, @gridGutterWidth);
-
+  // Grid style input sizes
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    float: none;
+    margin-left: 0;
+  }
 
 
 
-	// DISABLED STATE
-	// --------------
+  // GRID SIZING FOR INPUTS
+  // ----------------------
 
-	// Disabled and read-only inputs
-	input[disabled],
-	select[disabled],
-	textarea[disabled],
-	input[readonly],
-	select[readonly],
-	textarea[readonly] {
-	  background-color: @inputDisabledBackground;
-	  border-color: #ddd;
-	  cursor: not-allowed;
-	}
+  //#grid > .input (@gridColumnWidth, @gridGutterWidth);
 
 
 
 
-	// FORM FIELD FEEDBACK STATES
-	// --------------------------
+  // DISABLED STATE
+  // --------------
 
-	// Warning
-	.control-group.warning {
-	  .formFieldState(@warningText, @warningText, @warningBackground);
-	}
-	// Error
-	.control-group.error {
-	  .formFieldState(@errorText, @errorText, @errorBackground);
-
-	  .input-append {
-	  	.btn {
-	  		border-color: @errorText;
-	  	}
-	  }
-	}
-	// Success
-	.control-group.success {
-	  .formFieldState(@successText, @successBorder, @successBackground);
-	}
-
-	// Disabled
-	.control-group.disabled {
-		label {
-	  	color: lighten(@gray, 10%);
-	  	cursor: not-allowed;
-		}
-		.help-block, .help-inline {
-			color: lighten(@gray, 25%);
-		}
-	}
-
-	// HTML5 invalid states
-	// Shares styles with the .control-group.error above
-	input:focus:required:invalid,
-	textarea:focus:required:invalid,
-	select:focus:required:invalid {
-	  color: #b94a48;
-	  border-color: #ee5f5b;
-	  &:focus {
-	    border-color: darken(#ee5f5b, 10%);
-	    .box-shadow(0 0 3px lighten(#ee5f5b, 20%));
-	  }
-	}
+  // Disabled and read-only inputs
+  input[disabled],
+  select[disabled],
+  textarea[disabled],
+  input[readonly],
+  select[readonly],
+  textarea[readonly] {
+    background-color: @inputDisabledBackground;
+    border-color: #ddd;
+    cursor: not-allowed;
+  }
 
 
 
-	// FORM ACTIONS
-	// ------------
 
-	.form-actions {
-	  padding: (@baseLineHeight - 1) 20px @baseLineHeight;
-	  margin-top: @baseLineHeight;
-	  margin-bottom: @baseLineHeight;
-	  background-color: @panelBackground;
-	  border-top: 1px solid @panelBorder;
-	  .clearfixHack(); // Adding clearfix to allow for .pull-right button containers
-	}
+  // FORM FIELD FEEDBACK STATES
+  // --------------------------
 
-	// For text that needs to appear as an input but should not be an input
-	.uneditable-input {
-	  display: block;
-	  background-color: @inputBackground;
-	  border-color: #eee;
-	  .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
-	  cursor: not-allowed;
-	}
+  // Warning
+  .control-group.warning {
+    .formFieldState(@warningText, @warningText, @warningBackground);
+  }
+  // Error
+  .control-group.error {
+    .formFieldState(@errorText, @errorText, @errorBackground);
 
-	// Placeholder text gets special styles; can't be bundled together though for some reason
-	.placeholder(@grayLight);
+    .input-append {
+      .btn {
+        border-color: @errorText;
+      }
+    }
+  }
+  // Success
+  .control-group.success {
+    .formFieldState(@successText, @successBorder, @successBackground);
+  }
+
+  // Disabled
+  .control-group.disabled {
+    label {
+      color: lighten(@gray, 10%);
+      cursor: not-allowed;
+    }
+    .help-block, .help-inline {
+      color: lighten(@gray, 25%);
+    }
+  }
+
+  // HTML5 invalid states
+  // Shares styles with the .control-group.error above
+  input:focus:required:invalid,
+  textarea:focus:required:invalid,
+  select:focus:required:invalid {
+    color: #b94a48;
+    border-color: #ee5f5b;
+    &:focus {
+      border-color: darken(#ee5f5b, 10%);
+      .box-shadow(0 0 3px lighten(#ee5f5b, 20%));
+    }
+  }
 
 
 
-	// HELP TEXT
-	// ---------
+  // FORM ACTIONS
+  // ------------
 
-	.help-block,
-	.help-inline {
-	  color: @gray; // lighten the text some for contrast
-	}
+  .form-actions {
+    padding: (@baseLineHeight - 1) 20px @baseLineHeight;
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+    background-color: @panelBackground;
+    border-top: 1px solid @panelBorder;
+    .clearfixHack(); // Adding clearfix to allow for .pull-right button containers
+  }
 
-	.help-block {
-	  display: block; // account for any element using help-block
-	  margin-bottom: @baseLineHeight / 2;
-	}
+  // For text that needs to appear as an input but should not be an input
+  .uneditable-input {
+    display: block;
+    background-color: @inputBackground;
+    border-color: #eee;
+    .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
+    cursor: not-allowed;
+  }
 
-	.help-inline {
-	  display: inline-block;
-	  .ie7-inline-block();
-	  vertical-align: middle;
-	  .padding-left(@rtl, 5px);
-	}
+  // Placeholder text gets special styles; can't be bundled together though for some reason
+  .placeholder(@grayLight);
+
+
+
+  // HELP TEXT
+  // ---------
+
+  .help-block,
+  .help-inline {
+    color: @gray; // lighten the text some for contrast
+  }
+
+  .help-block {
+    display: block; // account for any element using help-block
+    margin-bottom: @baseLineHeight / 2;
+  }
+
+  .help-inline {
+    display: inline-block;
+    .ie7-inline-block();
+    vertical-align: middle;
+    .padding-left(@rtl, 5px);
+  }
 
 
 
@@ -392,120 +402,120 @@
 .radius-left (@rtl) when (@rtl = false) { .border-radius(3px 0 0 3px); }
 .radius-left (@rtl) when (@rtl = true) { .border-radius(0 3px 3px 0); }
 
-	// Allow us to put symbols and text within the input field for a cleaner look
-	.input-prepend,
-	.input-append {
-	  margin-bottom: 5px;
+  // Allow us to put symbols and text within the input field for a cleaner look
+  .input-prepend,
+  .input-append {
+    margin-bottom: 5px;
 
-	  input,
-	  select,
-	  .uneditable-input {
+    input,
+    select,
+    .uneditable-input {
 
-	  	.radius-right(@rtl);
+      .radius-right(@rtl);
 
-	    // remove due to conflict with javascript click event firing on firefox at least
-	    //&:focus {
-	    //  position: relative;
-	    //  z-index: 2;
-	    //}
+      // remove due to conflict with javascript click event firing on firefox at least
+      //&:focus {
+      //  position: relative;
+      //  z-index: 2;
+      //}
 
-	    *margin-left: 0;
-	  }
-	  .uneditable-input {
-	    border-left-color: #ccc;
-	  }
-	  .add-on {
-	    display: inline-block;
-	    width: auto;
-	    min-width: 16px;
-	    height: @baseLineHeight;
-	    padding: 4px 5px;
-	    font-weight: normal;
-	    line-height: @baseLineHeight;
-	    text-align: center;
-	    vertical-align: middle;
-	    background-color: @grayLighter;
-	    border: 1px solid #ccc;
-	  }
-	  .add-on,
-	  .btn {
-	  	.radius-left(@rtl);
-	  }
-	  .btn {
-	  	padding-bottom: 4px;
-    	padding-top: 4px;
-    	height: @baseLineHeight;
-    	.box-sizing(content-box);
-    	*height: auto;
-	  }
-	  .active {
-	    background-color: lighten(@green, 30);
-	    border-color: @green;
-	  }
-	}
-	.input-prepend {
-	  .add-on,
-	  .btn {
-	    .margin-right(@rtl, -1px);
-	  }
-	}
-	.input-append {
-	  input,
-	  select
-	  .uneditable-input {
-	    .radius-left(@rtl);
-	  }
-	  .uneditable-input {
-	    border-left-color: #eee;
-	    border-right-color: #ccc;
-	  }
-	  .add-on,
-	  .btn {
-	    .margin-left(@rtl, -1px);
-	    .radius-right(@rtl);
-	  }
-	}
-	// Remove all border-radius for inputs with both prepend and append
-	.input-prepend.input-append {
-	  input,
-	  select,
-	  .uneditable-input {
-	    .border-radius(0);
-	  }
-	  .add-on:first-child,
-	  .btn:first-child {
-	    .margin-right(@rtl, -1px);
-	    .radius-left(@rtl);
-	  }
-	  .add-on:last-child,
-	  .btn:last-child {
-	    .margin-left(@rtl, -1px);
-	    .radius-right(@rtl);
-	  }
-	}
+      *margin-left: 0;
+    }
+    .uneditable-input {
+      border-left-color: #ccc;
+    }
+    .add-on {
+      display: inline-block;
+      width: auto;
+      min-width: 16px;
+      height: @baseLineHeight;
+      padding: 4px 5px;
+      font-weight: normal;
+      line-height: @baseLineHeight;
+      text-align: center;
+      vertical-align: middle;
+      background-color: @grayLighter;
+      border: 1px solid #ccc;
+    }
+    .add-on,
+    .btn {
+      .radius-left(@rtl);
+    }
+    .btn {
+      padding-bottom: 4px;
+      padding-top: 4px;
+      height: @baseLineHeight;
+      .box-sizing(content-box);
+      *height: auto;
+    }
+    .active {
+      background-color: lighten(@green, 30);
+      border-color: @green;
+    }
+  }
+  .input-prepend {
+    .add-on,
+    .btn {
+      .margin-right(@rtl, -1px);
+    }
+  }
+  .input-append {
+    input,
+    select
+    .uneditable-input {
+      .radius-left(@rtl);
+    }
+    .uneditable-input {
+      border-left-color: #eee;
+      border-right-color: #ccc;
+    }
+    .add-on,
+    .btn {
+      .margin-left(@rtl, -1px);
+      .radius-right(@rtl);
+    }
+  }
+  // Remove all border-radius for inputs with both prepend and append
+  .input-prepend.input-append {
+    input,
+    select,
+    .uneditable-input {
+      .border-radius(0);
+    }
+    .add-on:first-child,
+    .btn:first-child {
+      .margin-right(@rtl, -1px);
+      .radius-left(@rtl);
+    }
+    .add-on:last-child,
+    .btn:last-child {
+      .margin-left(@rtl, -1px);
+      .radius-right(@rtl);
+    }
+  }
 
 
 
-	// SEARCH FORM
-	// -----------
+  // SEARCH FORM
+  // -----------
 
-	.search-query {
-	  padding-left: 14px;
-	  padding-right: 14px;
-	  margin-bottom: 0; // remove the default margin on all inputs
-	  .border-radius(14px);
-	}
+  .search-query {
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 0; // remove the default margin on all inputs
+    .border-radius(14px);
+  }
 
-	// Margin to space out fieldsets
-	.control-group {
-	  margin-bottom: @baseLineHeight / 2;
-	}
+  // Margin to space out fieldsets
+  .control-group {
+    margin-bottom: @baseLineHeight / 2;
+  }
 
-	// Legend collapses margin, so next element is responsible for spacing
-	legend + .control-group {
-	  margin-top: @baseLineHeight;
-	  -webkit-margin-top-collapse: separate;
-	}
+  // Legend collapses margin, so next element is responsible for spacing
+  legend + .control-group {
+    margin-top: @baseLineHeight;
+    -webkit-margin-top-collapse: separate;
+  }
 }
 
 // HORIZONTAL & VERTICAL FORMS
@@ -572,7 +582,7 @@
   }
   // Float the labels left
   .control-label {
-  	.float-left(@rtl);
+    .float-left(@rtl);
     width: 140px;
     padding-top: 5px;
     text-align: left;

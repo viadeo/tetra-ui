@@ -2112,6 +2112,21 @@ pre {
   height: auto;
   *width: 90%;
 }
+.core-form select.input-small {
+  width: 100px;
+}
+.core-form select.input-medium {
+  width: 160px;
+}
+.core-form select.input-large {
+  width: 220px;
+}
+.core-form select.input-xlarge {
+  width: 280px;
+}
+.core-form select.input-xxlarge {
+  width: 540px;
+}
 .core-form input[class*="span"],
 .core-form select[class*="span"],
 .core-form textarea[class*="span"],
