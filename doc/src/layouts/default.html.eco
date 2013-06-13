@@ -21,7 +21,7 @@
 
 <div class="wrap">
   <div class="header">
-    <div class="fixed-container">
+    <div class="fluid-container">
       <h1 class="fl">Powered by <i class="vicon">o</i>
         <a href="/tetra-ui/" class="logo">Tetra UI</a>
       </h1>
@@ -30,14 +30,14 @@
   </div>
 
   <div class="headline">
-    <div class="fixed-container">
-      <h1>A smart, easy-to-use toolkit
+    <div class="fluid-container">
+      <h1 class="h1">A smart, easy-to-use toolkit
         <span class="sub">for creating rich interfaces in lightning speed!</span>
       </h1>
     </div>
   </div>
 
-  <div class="content fixed-container">
+  <div class="content fluid-container">
     <ul class="nav nav-menu">
       <% for page in @getCollection("pages").toJSON(): %>
         <li<% if page.id is @document.id: %> class="active"<% end %>>
@@ -46,17 +46,13 @@
       <% end %>
     </ul>
     <div class="nav-tabs-section">
-      <div class="section">
-
-        <%- @content %>
-
-      </div>
+      <%- @content %>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <div class="copy fixed-container">
+  <div class="copy fluid-container">
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>

@@ -1,11 +1,4 @@
-/* Helpers
- * Short CSS classes to save time and maintain consistency
- * ----------------------------------------------------------------- */
-
-/* Spacing
- * ----------------------------------------------------------------- */
-
-/* Margin */
+// Margins
 
 // None
 .pan         { padding: 0 !important; }
@@ -50,7 +43,7 @@
 .plxl, .phxl { .padding-left(@rtl, @spacingXl) !important; }
 
 
-/* Padding */
+// Padding
 
 // None
 .man         { margin: 0 !important; }
@@ -95,8 +88,7 @@
 .mlxl, .mhxl { .margin-left(@rtl, @spacingXl) !important; }
 
 
-/* Border Radius
- * ----------------------------------------------------------------- */
+// Border Radius
 
 // None
 .bran                   { .border-radius(0); }
@@ -128,8 +120,8 @@
 
 
 
-/* Text Alignment
- * ----------------------------------------------------------------- */
+// Text Alignment
+
 .tac, .center { text-align: center; }
 .tal { .text-align-left(@rtl); }
 .tar { .text-align-right(@rtl); }
@@ -138,20 +130,18 @@
 
 .hyph { .hyphens(); }
 
-/* Block Alignment
- * ----------------------------------------------------------------- */
+// Block Alignment
 
 .bac, .bal { float: none; margin-right: auto !important; }
 .bac, .bar { float: none; margin-left: auto !important; }
 
-/* Vertical Alignment
- * ----------------------------------------------------------------- */
+// Vertical Alignment
 
 .vam { vertical-align: middle; }
 .vab { vertical-align: bottom; }
 
-/* Gray scale
- * ----------------------------------------------------------------- */
+// Gray scale
+
 .black { color: @black; }
 .dark-gray { color: @grayDark; }
 .gray { color: @gray; }
@@ -160,9 +150,8 @@
 .white { color: @white; }
 
 
+// Miscellaneous
 
-/* Miscellaneous
- * ----------------------------------------------------------------- */
 .context        { overflow: hidden; zoom: 1; _overflow: visible; }
 .cf, .clearfix  { .clearfixHack(); }
 .clear, .clr    { clear: both; }
@@ -175,3 +164,11 @@
 .error          { color:#da4d4d; }
 .nowrap         { white-space: nowrap; }
 .layered        { position: absolute; }
+
+// Responsive
+
+.fluid-media {
+  width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic; // IE 7
+}

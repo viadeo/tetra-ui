@@ -19,7 +19,7 @@
 
 <div class="wrap">
   <div class="header">
-    <div class="fixed-container">
+    <div class="fluid-container">
       <h1 class="fl">Powered by <i class="vicon">o</i>
         <a href="/tetra-ui/" class="logo">Tetra UI</a>
       </h1>
@@ -28,14 +28,14 @@
   </div>
 
   <div class="headline">
-    <div class="fixed-container">
-      <h1>A smart, easy-to-use toolkit
+    <div class="fluid-container">
+      <h1 class="h1">A smart, easy-to-use toolkit
         <span class="sub">for creating rich interfaces in lightning speed!</span>
       </h1>
     </div>
   </div>
 
-  <div class="content fixed-container">
+  <div class="content fluid-container">
     <ul class="nav nav-menu">
       
         <li>
@@ -78,20 +78,24 @@
           <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
         </li>
       
+        <li>
+          <a href="/tetra-ui/doc/responsive.html">Responsive</a>
+        </li>
+      
     </ul>
     <div class="nav-tabs-section">
-      <div class="section">
+      <div class="bx">
 
-        <div class="page-header">
-  <h1>Rich Containers<span class="sub">The most common layout patterns</span></h1>
+<div class="page-header">
+  <h1 class="h1">Rich Containers<span class="sub">The most common layout patterns</span></h1>
 </div>
 <div class="gr grsxl">
   <div class="gu gu-1of3">
-    <h2 id="basics">What is it?</h2>
+    <h2 class="h2" id="basics">What is it?</h2>
     <p>A rich container supports one of the most common layout patterns on Viadeo, in which there is an image (usually aligned left) and a block of text. This allows us to avoid using fixed widths on floated elements when implementing this pattern.</p>
   </div>
   <div class="gu gu-last">
-    <h3>Markup</h3>
+    <h3 class="h3">Markup</h3>
     <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"rc"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"img"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"..."</span> /&gt;</span>
@@ -105,7 +109,7 @@
 
 <div class="gr grsxl mvxl">
   <div class="gu gu-2of3">
-    <h3 id="spacing-align">Spacing &amp; Alignment</h3>
+    <h3 class="h3" id="spacing-align">Spacing &amp; Alignment</h3>
     <p>The spacing between the image and text in rich containers can be specified by adding a class name to the <code class="language-css">.rc</code> element, and the alignment by adding a class to the <code class="language-css">.img</code> element.</p>
     <div class="gr">
       <div class="gu gu-1of2">
@@ -167,7 +171,7 @@
     </div>
   </div>
   <div class="gu gu-last">
-    <h3>Examples</h3>
+    <h3 class="h3">Examples</h3>
     <div class="rc rcss">
       <a href="#" class="img-left"><img src="http://placehold.it/70x70" width="70" height="70" /></a>
       <div class="bd">
@@ -189,7 +193,7 @@
   </div>
 </div>
 
-<h2 class="mvl" id="boxes">Boxes</h2>
+<h2 class="h2 mvl" id="boxes">Boxes</h2>
 
 <div class="gr grsxl">
   <div class="gu gu-2of5">
@@ -270,7 +274,7 @@
   </div>
 </div>
 
-<h2 class="mvl" id="flippable-boxes">Flippable boxes</h2>
+<h2 class="h2 mvl" id="flippable-boxes">Flippable boxes</h2>
 
 <div class="gr grsxl">
   <div class="gu gu-2of5">
@@ -340,7 +344,7 @@
   </div>
 </div>
 
-<h2 class="mvl" id="nav-steps">Navigation with steps</h2>
+<h2 class="h2 mvl" id="nav-steps">Navigation with steps</h2>
 
 <div class="gr grsxl">
   <div class="gu gu-last">
@@ -474,7 +478,7 @@
 </div>
 
 <div class="gr grsxl mtxl">
-  <h2 id="alerts">Alerts</h2>
+  <h2 class="h2" id="alerts">Alerts</h2>
 
   <div class="gu gu-1of5">
   <p>Three kinds of alert boxes:
@@ -483,7 +487,7 @@
   <p>Alert boxes have an optional close button and an optional large main icon.</p>
   </div>
 
-  <div class="gu gu-last restore-typography">
+  <div class="gu gu-last">
 
   <div class="bx-alert mbl">
     <button class="bx-alert-close bootnode" data-comp="alert" data-event="click">
@@ -575,7 +579,7 @@
 </div>
 
 <div class="gr grsxl">
-  <h2 id="cards">Cards</h2>
+  <h2 class="h2" id="cards">Cards</h2>
 
   <div class="gu gu-1of5">
   <p>This is not really a component but rather a style guide
@@ -698,11 +702,11 @@
 </div>
 
 
-<h2 class="mvxl" id="avatars">Avatars</h2>
+<h2 class="h2 mvxl" id="avatars">Avatars</h2>
 
 <div class="gr grsxl">
   <div class="gu gu-2of5">
-  <h3>Image files</h3>
+  <h3 class="h3">Image files</h3>
   <p>Avatar images are located at this URL:</p>
   <p><code class="lang-html">img/avatars/avatar-[gender]-[w]x[h].png</code></p>
   <p>
@@ -711,7 +715,7 @@
   </div>
 
   <div class="gu gu-last">
-  <h3>Container</h3>
+  <h3 class="h3">Container</h3>
   <p>An avatar image is displayed in a Rich Container.</p>
   <p>
     It is possible to use a <code class="lang-html">&lt;span class="avatar img-left"&gt;</code>
@@ -731,7 +735,7 @@
 </div>
 
 <div class="gr grsxl">
-  <h3>Special case</h3>
+  <h3 class="h3">Special case</h3>
 
   <div class="gu gu-1of5">
   <p>When the whole avatar is embedded in a link, for example in a list of contacts.</p>
@@ -794,7 +798,7 @@
 
 <div class="gr mvl">
   <div class="gu gu-1of1">
-  <h3>Standard sizes</h3>
+  <h3 class="h3">Standard sizes</h3>
 
   <table class="table">
     <thead>
@@ -1009,13 +1013,13 @@
   </div>
 </div>
 
-      </div>
+</div>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <div class="copy fixed-container">
+  <div class="copy fluid-container">
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>

@@ -38,33 +38,21 @@ a:hover, a:focus {
 
 // Headings
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-   font-family: Arial, sans-serif;
-   font-weight: bold;
-   margin-bottom: (@baseLineHeight / 2.5);
-   color: lighten(@baseFontColor, 10%);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: (@baseLineHeight / 2.5);
+  color: lighten(@baseFontColor, 10%);
 }
-h1, .h1 {
-   font-size: 20px;
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "MuseoSlab", Arial, sans-serif;
+  font-weight: normal;
 }
-h2, .h2 {
-   font-size: 18px;
-}
-h3, .h3 {
-   font-size: 16px;
-}
-h4, .h4 {
-   font-size: 15px;
-}
-h5, .h5 {
-   font-size: 14px;
-   padding-bottom: (@baseLineHeight / 3);
-}
-h6, .h6 {
-   font-size: 13px;
-   padding-bottom: (@baseLineHeight / 3);
-   text-transform: uppercase;
-   color: lighten(@baseFontColor, 40%);
-}
+h1, .h1 { font-size: 20px; }
+h2, .h2 { font-size: 18px; }
+h3, .h3 { font-size: 16px; }
+h4, .h4 { font-size: 15px; }
+h5, .h5 { font-size: 14px; padding-bottom: (@baseLineHeight / 3); }
+h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
 
 .h-alt, .subh-alt  {
    border-top: 3px solid @borderColor;

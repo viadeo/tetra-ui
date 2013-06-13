@@ -19,7 +19,7 @@
 
 <div class="wrap">
   <div class="header">
-    <div class="fixed-container">
+    <div class="fluid-container">
       <h1 class="fl">Powered by <i class="vicon">o</i>
         <a href="/tetra-ui/" class="logo">Tetra UI</a>
       </h1>
@@ -28,14 +28,14 @@
   </div>
 
   <div class="headline">
-    <div class="fixed-container">
-      <h1>A smart, easy-to-use toolkit
+    <div class="fluid-container">
+      <h1 class="h1">A smart, easy-to-use toolkit
         <span class="sub">for creating rich interfaces in lightning speed!</span>
       </h1>
     </div>
   </div>
 
-  <div class="content fixed-container">
+  <div class="content fluid-container">
     <ul class="nav nav-menu">
       
         <li class="active">
@@ -78,21 +78,25 @@
           <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
         </li>
       
+        <li>
+          <a href="/tetra-ui/doc/responsive.html">Responsive</a>
+        </li>
+      
     </ul>
     <div class="nav-tabs-section">
-      <div class="section">
+      <div class="bx">
 
-        <div class="page-header">
-  <h1>Grid System<span class="sub">Flexible, easy to use, and fun!</span></h1>
+<div class="page-header">
+  <h1 class="h1">Grid System<span class="sub">Flexible, easy to use, and fun!</span></h1>
 </div>
 <div class="gr grsxl" id="basics">
   <div class="gu gu-2of5">
-    <h2>How it works</h2>
+    <h2 class="h2">How it works</h2>
     <p>The Tetra UI grid is a percentage-based, nestable grid system. Each grid row (<code class="language-css">.gr</code>) takes up 100% of the parent containers' width and can contain up to 5 grid units (<code class="language-css">.gu</code>). These grid units can then contain nested grid rows, maximizing flexibility and laying the foundations for a responsive layout.</p>
     <p>When creating layouts, it is often useful to have a guide. To do this just add the <code class="language-css">.gr-zebra</code> class to your grid row (<code class="language-css">.gr</code>)</p>
   </div>
   <div class="gu gu-last">
-    <h3>Example grid markup</h3>
+    <h3 class="h3">Example grid markup</h3>
     <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <code class="language-css">.gu-last</code> class. This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
     <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -104,7 +108,7 @@
   </div>
 </div>
 
-<h2 class="mvl" id="examples">Simple grid examples</h2>
+<h2 class="h2 mvl" id="examples">Simple grid examples</h2>
 <div class="gr gr-zebra">
   <div class="gu gu-1of5">.gu .gu-1of5</div>
   <div class="gu gu-1of5">.gu .gu-1of5</div>
@@ -131,7 +135,7 @@
   <div class="gu gu-1of1">.gu .gu-1of1</div>
 </div>
 
-<h2 class="mvl" id="nested-grid">Nested grid example</h2>
+<h2 class="h2 mvl" id="nested-grid">Nested grid example</h2>
 <div class="gr gr-zebra">
   <div class="gu gu-2of3 pan pts">
     .gu .gu-2of3
@@ -145,7 +149,7 @@
 
 <div class="gr grsxl mvxl">
   <div class="gu gu-1of2">
-    <h3>Nesting with siblings</h3>
+    <h3 class="h3">Nesting with siblings</h3>
     <p>The example above shows a grid row (<code class="language-css">.gr</code>) nested within a grid unit (<code class="language-css">.gu</code>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
     <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-2of3"</span>&gt;</span>
@@ -159,7 +163,7 @@
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
   </div>
   <div class="gu gu-last">
-     <h3>Direct nesting</h3>
+     <h3 class="h3">Direct nesting</h3>
      <p>The other option is to nest your grid units directly in another grid unit. Just add the <code class="language-css">.gr</code> class to an element with the <code class="language-css">.gu</code> class!</p>
      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-2of3 gr"</span>&gt;</span>
@@ -173,12 +177,12 @@
 
 <div class="gr grsm mtxl">
   <div class="gu gu-2of5">
-    <h2 id="spaced-grids">Spaced Grids</h2>
+    <h2 class="h2" id="spaced-grids">Spaced Grids</h2>
     <p>You can assign spacing to the Tetra UI grid, using the fixed spacing sizes declared in <a href="#">variables.less</a>. The percentage widths of each grid unit will change to accomodate for the extra spacing and to ensure all units are equal widths.</p>
     <p>NOTE: Tetra UI uses the <code class="language-css">@siteWidth</code> variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the <code class="language-css">@siteWidth</code> variable.</p>
   </div>
   <div class="gu gu-last">
-    <h3>Assigning grid spacing</h3>
+    <h3 class="h3">Assigning grid spacing</h3>
     <p>You just need to add one of the following class names to your parent grid row (<code class="language-css">.gr</code>).</p>
     <table class="table">
       <thead>
@@ -213,7 +217,7 @@
   </div>
 </div>
 
-<h2 class="mtm">Spaced grid examples</h2>
+<h2 class="h2 mtm">Spaced grid examples</h2>
 <p>Much care has been taken to ensure that these spaced grids align perfectly with one another. For example, you can see below that position and size of the spacing between the irregular 4-1 grid and the 1-1-1-1-1 grid above it is consistent. The examples below all use the <code class="language-css">.grss</code> class, thus using the pixel value defined as <code class="language-css">@spacingS</code> in variables.less.</p>
 <div class="gr grss gr-zebra">
   <div class="gu gu-1of5">.gu .gu-1of5</div>
@@ -240,7 +244,7 @@
   <div class="gu gu-last">.gu .gu-last</div>
 </div>
 
-<h2 class="mtm" id="centering">Centering columns</h2>
+<h2 class="h2 mtm" id="centering">Centering columns</h2>
 <p>Using the <code>.bac</code> (Block Align Center) class as described on the <a href="/tetra-ui/doc/helpers.html">helpers page</a>.</p>
 <div class="gr gr-zebra">
   <div class="gu gu-1of5 bac">.gu .gu-1of5 .bac</div>
@@ -249,13 +253,13 @@
   <div class="gu gu-1of2 bac">.gu .gu-1of2 .bac</div>
 </div>
 
-      </div>
+</div>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <div class="copy fixed-container">
+  <div class="copy fluid-container">
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>

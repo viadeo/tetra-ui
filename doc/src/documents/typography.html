@@ -5,15 +5,17 @@ isPage: true
 order: 3
 ---
 
+<div class="bx">
+
 <div class="page-header">
-  <h1>
+  <h1 class="h1">
     Typography
     <span class="sub">Headings, paragraphs, panels, labels, badges, lists and other elements</span>
   </h1>
 </div>
 
 <div class="gr grsxl">
-  <h2 id="headings">Headings</h2>
+  <h2 class="h2" id="headings">Headings</h2>
 
   <div class="gu gu-1of5">
     <p>All HTML headings from <code class="lang-html">&lt;h1&gt;</code> to <code class="lang-html">&lt;h6&gt;</code> are available, and there is a special case for the page header with an optional subheading.</p>
@@ -21,7 +23,7 @@ order: 3
   </div>
 
   <div class="gu gu-last gr grsxl">
-    <div class="gu gu-1of2 restore-typography">
+    <div class="gu gu-1of2">
       <div class="page-header">
         <h1>h1. Page heading <span class="sub">With sub-heading</span></h1>
       </div>
@@ -33,7 +35,7 @@ order: 3
       <h6>h6. Heading 6</h6>
     </div>
 
-    <div class="gu gu-last restore-typography">
+    <div class="gu gu-last">
       <h2 class="h-alt">Heading</h2>
       <h3 class="subh-alt">Subheading</h3>
       <h3 class="subh-divider">Subheading with divider</h3>
@@ -42,21 +44,21 @@ order: 3
 </div>
 
 <div class="gr grsxl mtxl">
-  <h2 id="paragraphs">Body copy</h2>
+  <h2 class="h2" id="paragraphs">Body copy</h2>
 
   <div class="gu gu-1of5">
     <p>A bottom margin is applied to paragraphs elements <code class="lang-html">&lt;p&gt;</code>, this can be costomized with helpers.</p>
     <p>To activate hyphenation, use a <code class="lang-html">class="hyph"</code> on the <code class="lang-html">&lt;p&gt;</code> tags or on a container. This is now supported by Firefox, IE10, and Safari</p>
   </div>
 
-  <div class="gu gu-2of5 restore-typography">
-    <h3 class="subh-divider">Paragraphs</h3>
+  <div class="gu gu-2of5">
+    <h3 class="h3 subh-divider">Paragraphs</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
   </div>
 
-  <div class="gu gu-last restore-typography">
-    <h3 class="subh-divider">Paragraphs with hyphenation</h3>
+  <div class="gu gu-last">
+    <h3 class="h3 subh-divider">Paragraphs with hyphenation</h3>
     <div class="hyph">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
@@ -65,7 +67,7 @@ order: 3
 </div>
 
 <div class="gr grsxl mtxl">
-  <h2 id="panels">Panels</h2>
+  <h2 class="h2" id="panels">Panels</h2>
 
   <div class="gu gu-1of5">
     <p>A panel is a simple helpful CSS class that enables to easily outline sections of the page.</p>
@@ -89,7 +91,7 @@ order: 3
 </div>
 
 <div class="gr grsxl mtxl">
-  <h2 id="badges">Badges</h2>
+  <h2 class="h2" id="badges">Badges</h2>
 
   <div class="gu gu-1of5">
     <p>Badges are used as notification indicators (new messages, new requests).</p>
@@ -115,7 +117,7 @@ order: 3
 </div>
 
 <div class="gr grsxl mts">
-  <h2 id="labels">Labels</h2>
+  <h2 class="h2" id="labels">Labels</h2>
 
   <div class="gu gu-1of5">
     <p>Labels are essentially used for clickable keywords.</p>
@@ -177,7 +179,7 @@ order: 3
 </div>
 
 <div class="gr grsxl">
-  <h2 id="tags">Tags</h2>
+  <h2 class="h2" id="tags">Tags</h2>
 
   <div class="gu gu-1of5">
     <p>Tags are not clickable, they only have a remove button.</p>
@@ -208,7 +210,7 @@ order: 3
 </div>
 
 <div class="gr grsxl mtxl">
-  <h2 id="lists">Lists</h2>
+  <h2 class="h2" id="lists">Lists</h2>
 
   <div class="gu gu-1of5">
     <p>Different styles to display lists.</p>
@@ -217,7 +219,7 @@ order: 3
   <div class="gu gu-last gr grsxl">
     <div class="gu gu-1of5">
 
-      <h3>Links</h3>
+      <h3 class="h3">Links</h3>
 
       <ul class="link-list">
         <li><a href="">Lorem ipsum</a></li>
@@ -235,7 +237,7 @@ order: 3
     </div>
     <div class="gu gu-2of5">
 
-      <h3>Square</h3>
+      <h3 class="h3">Square</h3>
 
       <ul class="list-square">
         <li>Lorem ipsum dolor sit amet</li>
@@ -253,7 +255,7 @@ order: 3
     </div>
     <div class="gu gu-last">
 
-      <h3>Disc</h3>
+      <h3 class="h3">Disc</h3>
 
       <ul class="list-disc">
         <li>Lorem ipsum dolor sit amet</li>
@@ -273,7 +275,7 @@ order: 3
 </div>
 
 <div class="gr grsxl mtxl">
-  <h2 id="tables">Tables</h2>
+  <h2 class="h2" id="tables">Tables</h2>
 
   <div class="gu gu-1of5">
     <p>Different styles for tables.</p>
@@ -422,4 +424,6 @@ order: 3
     </table>
 
   </div>
+</div>
+
 </div>

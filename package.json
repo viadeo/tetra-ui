@@ -26,15 +26,15 @@
   ],
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-less": "~0.5.0",
-    "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-concat": "~0.2.0",
-    "grunt-contrib-watch": "~0.3.1",
-    "grunt-contrib-connect": "~0.3.0",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-docs": "~0.5.0",
-    "docpad-plugin-eco": "~2.0.2",
-    "docpad-plugin-highlightjs": "~2.1.4"
+    "grunt-contrib-less": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-docs": "*",
+    "docpad-plugin-eco": "*",
+    "docpad-plugin-highlightjs": "*"
   },
   "repository": {
     "type": "git",

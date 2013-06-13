@@ -1,4 +1,8 @@
-/* Common */
+// Syntax highlighting
+
+@import "highlight.less";
+
+// Common
 
 html {
   height: 100%;
@@ -14,7 +18,7 @@ p {
   line-height: 20px;
 }
 
-/* Header */
+// Header
 
 .header {
   position: fixed;
@@ -24,10 +28,6 @@ p {
   padding: @spacingS 0;
   background: lighten(@black, 16%);
   border-bottom: 2px solid @orange;
-
-  .fixed-container {
-    width: 1010px;
-  }
 
   h1 {
     margin: 0;
@@ -71,7 +71,7 @@ p {
   }
 }
 
-/* Wrapper for sticky footer */
+// Wrapper for sticky footer
 
 .wrap {
   min-height: 100%;
@@ -88,7 +88,7 @@ p {
   }
 }
 
-/* Footer */
+// Footer
 
 .footer {
   height: 40px;
@@ -102,19 +102,14 @@ p {
   }
 }
 
-/* Headline */
+// Headline
 
 .headline {
   position: relative;
   z-index: 99;
   padding: 85px 0 0 0;
 
-  .fixed-container {
-    width: 1010px;
-  }
-
   h1 {
-    font-size: 20px;
     line-height: 28px;
     text-align: center;
 
@@ -126,14 +121,10 @@ p {
   }
 }
 
-/* Content */
+// Content
 
 .content {
   padding: 0 0 80px;
-
-  &.fixed-container {
-    width: 1020px;
-  }
 
   > .nav {
     li {
@@ -143,28 +134,9 @@ p {
     }
   }
 
-  > .nav-tabs-section {
-    padding: @spacingL;
-    background: @white;
-    border-radius: @borderRadiusS;
-    box-shadow: 1px 1px 4px fade(@black, 20%);
-  }
 }
 
-/* Documentation */
-
-h1, h2, h3, h4 {
-  margin-bottom: @spacingL;
-  font-family: 'MuseoSlab', 'Arial', sans-serif;
-  font-weight: normal;
-}
-
-.restore-typography {
-  h1, h2, h3, h4 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-  }
-}
+// Documentation
 
 .section-container-loading {
 	.section {
@@ -208,6 +180,7 @@ pre {
 code.color-transform { font-size: 11px; margin: @spacingXs 0 0 0; background: @white; color: @gray; }
 
 // Grayscale
+
 .var-black              { background-color: @black; }
 .var-gray-dark          { background-color: @grayDark; }
 .var-gray               { background-color: @gray; }
@@ -217,6 +190,7 @@ code.color-transform { font-size: 11px; margin: @spacingXs 0 0 0; background: @w
 .var-page-background    { background-color: @page-background; }
 
 // Colors
+
 .var-green              { background-color: @green; }
 .var-yellow             { background-color: @yellow; }
 .var-orange             { background-color: @orange; }
@@ -259,6 +233,7 @@ code.color-transform { font-size: 11px; margin: @spacingXs 0 0 0; background: @w
 .var-blue-soft-shade-100 { background-color: shade(@blueSoft, 100%); }
 
 // Typo
+
 .var-base-font-color    { background-color: @baseFontColor; }
 
 .var-tooltip {
@@ -334,4 +309,3 @@ code.color-transform { font-size: 11px; margin: @spacingXs 0 0 0; background: @w
   }
 }
 
-@import "highlight.less";

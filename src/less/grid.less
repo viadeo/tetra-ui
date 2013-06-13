@@ -16,12 +16,12 @@
 
 	// Determine width and margin for grid unit with spacing
 	//
-	// @param (integer)span           the column span of the grid unit                                          required
-	// @param (integer)total          the total number of columns in the grid row                               required
-	// @param (pixels)spacing         the ammount of spacing required between grid units                        required
-	// @param (integer)parentSpan     the column span of the parent grid unit, used for nested grids            optional
-	// @param (integer)parentTotal    the total number of columns in the parent grid unit's grid row            optional
-	// @param (pixels)parentSpacing   the ammount of spacing between grid units in the parent unit's grid row   optional
+  // span: the column span of the grid unit (required)
+	// total: the total number of columns in the grid row (required)
+	// spacing: the ammount of spacing required between grid units (required)
+	// parentSpan: the column span of the parent grid unit, used for nested grids (optional)
+	// parentTotal: the total number of columns in the parent grid unit's grid row (optional)
+	// parentSpacing: the ammount of spacing between grid units in the parent unit's grid row (optional)
 	//
 	// The width of the grid unit is a percentage value, and the margin is in pixels.
 	// We therefore need to first calculate the margin as a percentage of the parent
@@ -122,81 +122,275 @@
 .gu-5of6 { #grid > .unit(5, 6); }
 
 .gu-last, .gridLastUnit {
-    zoom: 1;
-    display: table-cell;
-    *display: block;
-    float: none;
-    width: 2000px;
-    *width: auto;
-    _position: relative;
-    _left: -3px;
-    _margin-right: -3px;
+  display: table-cell;
+  float: none;
+  width: 2000px;
+  *display: block;
+  *zoom: 1;
+  *width: auto;
 }
 
 .grsxs {
-    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXs); }
-    > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXs); }
-    > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXs); }
-    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingXs); }
-    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingXs); }
-    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingXs); }
-    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingXs); }
-    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingXs); }
-    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingXs); }
-    > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXs); }
-    > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXs); }
+  > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXs); }
+  > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXs); }
+  > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXs); }
+  > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingXs); }
+  > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingXs); }
+  > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingXs); }
+  > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingXs); }
+  > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingXs); }
+  > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingXs); }
+  > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXs); }
+  > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXs); }
 }
 .grss {
-    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingS); }
-    > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingS); }
-    > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingS); }
-    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingS); }
-    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingS); }
-    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingS); }
-    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingS); }
-    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingS); }
-    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingS); }
-    > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingS); }
-    > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingS); }
+  > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingS); }
+  > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingS); }
+  > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingS); }
+  > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingS); }
+  > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingS); }
+  > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingS); }
+  > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingS); }
+  > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingS); }
+  > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingS); }
+  > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingS); }
+  > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingS); }
 }
 .grsm {
-    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingM); }
-    > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingM); }
-    > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingM); }
-    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingM); }
-    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingM); }
-    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingM); }
-    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingM); }
-    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingM); }
-    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingM); }
-    > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingM); }
-    > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingM); }
+  > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingM); }
+  > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingM); }
+  > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingM); }
+  > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingM); }
+  > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingM); }
+  > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingM); }
+  > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingM); }
+  > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingM); }
+  > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingM); }
+  > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingM); }
+  > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingM); }
 }
 .grsl {
-    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingL); }
-    > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingL); }
-    > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingL); }
-    > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingL); }
-    > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingL); }
-    > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingL); }
-    > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingL); }
-    > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingL); }
-    > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingL); }
-    > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingL); }
-    > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingL); }
+  > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingL); }
+  > .gu-1of3, > .grid1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingL); }
+  > .gu-2of3, > .grid2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingL); }
+  > .gu-1of4, > .grid1of4 { #grid > .unitWithSpacing(1, 4, @spacingL); }
+  > .gu-3of4, > .grid3of4 { #grid > .unitWithSpacing(3, 4, @spacingL); }
+  > .gu-1of5, > .grid1of5 { #grid > .unitWithSpacing(1, 5, @spacingL); }
+  > .gu-2of5, > .grid2of5 { #grid > .unitWithSpacing(2, 5, @spacingL); }
+  > .gu-3of5, > .grid3of5 { #grid > .unitWithSpacing(3, 5, @spacingL); }
+  > .gu-4of5, > .grid4of5 { #grid > .unitWithSpacing(4, 5, @spacingL); }
+  > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingL); }
+  > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingL); }
 }
 .grsxl {
-    > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXl); }
-    > .gu-1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXl); }
-    > .gu-2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXl); }
-    > .gu-1of4 { #grid > .unitWithSpacing(1, 4, @spacingXl); }
-    > .gu-3of4 { #grid > .unitWithSpacing(3, 4, @spacingXl); }
-    > .gu-1of5 { #grid > .unitWithSpacing(1, 5, @spacingXl); }
-    > .gu-2of5 { #grid > .unitWithSpacing(2, 5, @spacingXl); }
-    > .gu-3of5 { #grid > .unitWithSpacing(3, 5, @spacingXl); }
-    > .gu-4of5 { #grid > .unitWithSpacing(4, 5, @spacingXl); }
-    > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXl); }
-    > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXl); }
+  > .gu-1of2, > .gu-2of4, > .grid1of2, > .grid2of4, > .gu-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXl); }
+  > .gu-1of3, > .gu-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXl); }
+  > .gu-2of3, > .gu-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXl); }
+  > .gu-1of4 { #grid > .unitWithSpacing(1, 4, @spacingXl); }
+  > .gu-3of4 { #grid > .unitWithSpacing(3, 4, @spacingXl); }
+  > .gu-1of5 { #grid > .unitWithSpacing(1, 5, @spacingXl); }
+  > .gu-2of5 { #grid > .unitWithSpacing(2, 5, @spacingXl); }
+  > .gu-3of5 { #grid > .unitWithSpacing(3, 5, @spacingXl); }
+  > .gu-4of5 { #grid > .unitWithSpacing(4, 5, @spacingXl); }
+  > .gu-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXl); }
+  > .gu-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXl); }
+}
+
+// Responsive
+
+.fluid-container {
+  width: @page-width;
+  max-width: @page-width-max;
+  margin: 0 auto;
+  .clearfixHack();
+}
+
+// Medium responsive breakpoint
+
+@media screen and (max-width: @breakpoint-m) {
+  .fluid-container { width: @page-width-m; }
+
+  .gu-m-1of1 { #grid > .unit(1, 1); }
+  .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unit(1, 2); }
+  .gu-m-1of3, > .gu-m-2of6 { #grid > .unit(1, 3); }
+  .gu-m-2of3, > .gu-m-4of6 { #grid > .unit(2, 3); }
+  .gu-m-1of4 { #grid > .unit(1, 4); }
+  .gu-m-3of4 { #grid > .unit(3, 4); }
+  .gu-m-1of5 { #grid > .unit(1, 5); }
+  .gu-m-2of5 { #grid > .unit(2, 5); }
+  .gu-m-3of5 { #grid > .unit(3, 5); }
+  .gu-m-4of5 { #grid > .unit(4, 5); }
+  .gu-m-1of6 { #grid > .unit(1, 6); }
+  .gu-m-5of6 { #grid > .unit(5, 6); }
+
+  .grsxs {
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXs); }
+    > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXs); }
+    > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXs); }
+    > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXs); }
+    > .gu-m-1of4 { #grid > .unitWithSpacing(1, 4, @spacingXs); }
+    > .gu-m-3of4 { #grid > .unitWithSpacing(3, 4, @spacingXs); }
+    > .gu-m-1of5 { #grid > .unitWithSpacing(1, 5, @spacingXs); }
+    > .gu-m-2of5 { #grid > .unitWithSpacing(2, 5, @spacingXs); }
+    > .gu-m-3of5 { #grid > .unitWithSpacing(3, 5, @spacingXs); }
+    > .gu-m-4of5 { #grid > .unitWithSpacing(4, 5, @spacingXs); }
+    > .gu-m-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXs); }
+    > .gu-m-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXs); }
+  }
+
+  .grss {
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingS); }
+    > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingS); }
+    > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingS); }
+    > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingS); }
+    > .gu-m-1of4 { #grid > .unitWithSpacing(1, 4, @spacingS); }
+    > .gu-m-3of4 { #grid > .unitWithSpacing(3, 4, @spacingS); }
+    > .gu-m-1of5 { #grid > .unitWithSpacing(1, 5, @spacingS); }
+    > .gu-m-2of5 { #grid > .unitWithSpacing(2, 5, @spacingS); }
+    > .gu-m-3of5 { #grid > .unitWithSpacing(3, 5, @spacingS); }
+    > .gu-m-4of5 { #grid > .unitWithSpacing(4, 5, @spacingS); }
+    > .gu-m-1of6 { #grid > .unitWithSpacing(1, 6, @spacingS); }
+    > .gu-m-5of6 { #grid > .unitWithSpacing(5, 6, @spacingS); }
+  }
+
+  .grsm {
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingM); }
+    > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingM); }
+    > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingM); }
+    > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingM); }
+    > .gu-m-1of4 { #grid > .unitWithSpacing(1, 4, @spacingM); }
+    > .gu-m-3of4 { #grid > .unitWithSpacing(3, 4, @spacingM); }
+    > .gu-m-1of5 { #grid > .unitWithSpacing(1, 5, @spacingM); }
+    > .gu-m-2of5 { #grid > .unitWithSpacing(2, 5, @spacingM); }
+    > .gu-m-3of5 { #grid > .unitWithSpacing(3, 5, @spacingM); }
+    > .gu-m-4of5 { #grid > .unitWithSpacing(4, 5, @spacingM); }
+    > .gu-m-1of6 { #grid > .unitWithSpacing(1, 6, @spacingM); }
+    > .gu-m-5of6 { #grid > .unitWithSpacing(5, 6, @spacingM); }
+  }
+
+  .grsl {
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingL); }
+    > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingL); }
+    > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingL); }
+    > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingL); }
+    > .gu-m-1of4 { #grid > .unitWithSpacing(1, 4, @spacingL); }
+    > .gu-m-3of4 { #grid > .unitWithSpacing(3, 4, @spacingL); }
+    > .gu-m-1of5 { #grid > .unitWithSpacing(1, 5, @spacingL); }
+    > .gu-m-2of5 { #grid > .unitWithSpacing(2, 5, @spacingL); }
+    > .gu-m-3of5 { #grid > .unitWithSpacing(3, 5, @spacingL); }
+    > .gu-m-4of5 { #grid > .unitWithSpacing(4, 5, @spacingL); }
+    > .gu-m-1of6 { #grid > .unitWithSpacing(1, 6, @spacingL); }
+    > .gu-m-5of6 { #grid > .unitWithSpacing(5, 6, @spacingL); }
+  }
+
+  .grsxl {
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXl); }
+    > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXl); }
+    > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXl); }
+    > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXl); }
+    > .gu-m-1of4 { #grid > .unitWithSpacing(1, 4, @spacingXl); }
+    > .gu-m-3of4 { #grid > .unitWithSpacing(3, 4, @spacingXl); }
+    > .gu-m-1of5 { #grid > .unitWithSpacing(1, 5, @spacingXl); }
+    > .gu-m-2of5 { #grid > .unitWithSpacing(2, 5, @spacingXl); }
+    > .gu-m-3of5 { #grid > .unitWithSpacing(3, 5, @spacingXl); }
+    > .gu-m-4of5 { #grid > .unitWithSpacing(4, 5, @spacingXl); }
+    > .gu-m-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXl); }
+    > .gu-m-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXl); }
+  }
+}
+
+// Small responsive breakpoint
+
+@media screen and (max-width: @breakpoint-s) {
+  .fluid-container { width: @page-width-s; }
+
+  .gu-s-1of1 { #grid > .unit(1, 1); }
+  .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unit(1, 2); }
+  .gu-s-1of3, > .gu-s-2of6 { #grid > .unit(1, 3); }
+  .gu-s-2of3, > .gu-s-4of6 { #grid > .unit(2, 3); }
+  .gu-s-1of4 { #grid > .unit(1, 4); }
+  .gu-s-3of4 { #grid > .unit(3, 4); }
+  .gu-s-1of5 { #grid > .unit(1, 5); }
+  .gu-s-2of5 { #grid > .unit(2, 5); }
+  .gu-s-3of5 { #grid > .unit(3, 5); }
+  .gu-s-4of5 { #grid > .unit(4, 5); }
+  .gu-s-1of6 { #grid > .unit(1, 6); }
+  .gu-s-5of6 { #grid > .unit(5, 6); }
+
+  .grsxs {
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXs); }
+    > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXs); }
+    > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXs); }
+    > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXs); }
+    > .gu-s-1of4 { #grid > .unitWithSpacing(1, 4, @spacingXs); }
+    > .gu-s-3of4 { #grid > .unitWithSpacing(3, 4, @spacingXs); }
+    > .gu-s-1of5 { #grid > .unitWithSpacing(1, 5, @spacingXs); }
+    > .gu-s-2of5 { #grid > .unitWithSpacing(2, 5, @spacingXs); }
+    > .gu-s-3of5 { #grid > .unitWithSpacing(3, 5, @spacingXs); }
+    > .gu-s-4of5 { #grid > .unitWithSpacing(4, 5, @spacingXs); }
+    > .gu-s-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXs); }
+    > .gu-s-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXs); }
+  }
+
+  .grss {
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingS); }
+    > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingS); }
+    > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingS); }
+    > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingS); }
+    > .gu-s-1of4 { #grid > .unitWithSpacing(1, 4, @spacingS); }
+    > .gu-s-3of4 { #grid > .unitWithSpacing(3, 4, @spacingS); }
+    > .gu-s-1of5 { #grid > .unitWithSpacing(1, 5, @spacingS); }
+    > .gu-s-2of5 { #grid > .unitWithSpacing(2, 5, @spacingS); }
+    > .gu-s-3of5 { #grid > .unitWithSpacing(3, 5, @spacingS); }
+    > .gu-s-4of5 { #grid > .unitWithSpacing(4, 5, @spacingS); }
+    > .gu-s-1of6 { #grid > .unitWithSpacing(1, 6, @spacingS); }
+    > .gu-s-5of6 { #grid > .unitWithSpacing(5, 6, @spacingS); }
+  }
+
+  .grsm {
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingM); }
+    > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingM); }
+    > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingM); }
+    > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingM); }
+    > .gu-s-1of4 { #grid > .unitWithSpacing(1, 4, @spacingM); }
+    > .gu-s-3of4 { #grid > .unitWithSpacing(3, 4, @spacingM); }
+    > .gu-s-1of5 { #grid > .unitWithSpacing(1, 5, @spacingM); }
+    > .gu-s-2of5 { #grid > .unitWithSpacing(2, 5, @spacingM); }
+    > .gu-s-3of5 { #grid > .unitWithSpacing(3, 5, @spacingM); }
+    > .gu-s-4of5 { #grid > .unitWithSpacing(4, 5, @spacingM); }
+    > .gu-s-1of6 { #grid > .unitWithSpacing(1, 6, @spacingM); }
+    > .gu-s-5of6 { #grid > .unitWithSpacing(5, 6, @spacingM); }
+  }
+
+  .grsl {
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingL); }
+    > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingL); }
+    > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingL); }
+    > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingL); }
+    > .gu-s-1of4 { #grid > .unitWithSpacing(1, 4, @spacingL); }
+    > .gu-s-3of4 { #grid > .unitWithSpacing(3, 4, @spacingL); }
+    > .gu-s-1of5 { #grid > .unitWithSpacing(1, 5, @spacingL); }
+    > .gu-s-2of5 { #grid > .unitWithSpacing(2, 5, @spacingL); }
+    > .gu-s-3of5 { #grid > .unitWithSpacing(3, 5, @spacingL); }
+    > .gu-s-4of5 { #grid > .unitWithSpacing(4, 5, @spacingL); }
+    > .gu-s-1of6 { #grid > .unitWithSpacing(1, 6, @spacingL); }
+    > .gu-s-5of6 { #grid > .unitWithSpacing(5, 6, @spacingL); }
+  }
+
+  .grsxl {
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXl); }
+    > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXl); }
+    > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXl); }
+    > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXl); }
+    > .gu-s-1of4 { #grid > .unitWithSpacing(1, 4, @spacingXl); }
+    > .gu-s-3of4 { #grid > .unitWithSpacing(3, 4, @spacingXl); }
+    > .gu-s-1of5 { #grid > .unitWithSpacing(1, 5, @spacingXl); }
+    > .gu-s-2of5 { #grid > .unitWithSpacing(2, 5, @spacingXl); }
+    > .gu-s-3of5 { #grid > .unitWithSpacing(3, 5, @spacingXl); }
+    > .gu-s-4of5 { #grid > .unitWithSpacing(4, 5, @spacingXl); }
+    > .gu-s-1of6 { #grid > .unitWithSpacing(1, 6, @spacingXl); }
+    > .gu-s-5of6 { #grid > .unitWithSpacing(5, 6, @spacingXl); }
+  }
 }
 
 // Zebra grid guide for "visual debugging" (to be used in conjunction with .grid-row)

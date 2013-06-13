@@ -1,0 +1,115 @@
+---
+title: "Responsive"
+layout: "default"
+isPage: true
+order: 11
+---
+
+<div class="bx">
+  <div class="page-header">
+    <h1 class="h1">Responsive Web Design
+      <span class="sub">Responsive grid system</span>
+    </h1>
+  </div>
+
+  <div class="gr grsxl">
+    <div class="gu gu-2of5 gu-m-1of1">
+      <h2 class="h2">How it works</h2>
+      <p>The responsive grid has a desktop first approach. It comes with two breakpoints:</p>
+      <ul class="link-list mbl">
+        <li><strong>a medium breakpoint</strong> (<code>m</code>) for middle sized devices, tablets for example</li>
+        <li><strong>a small breakpoint</strong> (<code>s</code>) for small devices like mobiles</li>
+      </ul>
+      <p>The responsive grid is used in cunjunction with a fluid page container which has the following properties:</p>
+      <ul class="link-list mbl">
+        <li>horizontally centered</li>
+        <li>three different percentage widths for desktop, tablet, mobile applied with media queries</li>
+        <li>a maximum width when in desktop mode to prevent the page from being to large.</li>
+      </ul>
+    </div>
+    <div class="gu gu-last">
+      <h3 class="h4">Fluid container</h3>
+      <pre><code class="lang-html">&lt;div class="fluid-container"&gt; ... &lt;/div&gt;</code></pre>
+
+      <h3 class="h4 mtm">Example grid markup</h3>
+      <pre><code class="lang-html">&lt;div class="gr"&gt;
+  &lt;div class="gu gu-1of5 gu-m-1of1"&gt;
+    This column is a 1/5 width column in desktop mode,
+    then a full width column after the medium breakpoint.
+  &lt;/div&gt;
+  &lt;div class="gu gu-3of5 gu-m-3of5 gu-s-1of1"&gt;
+    This column is a 3/5 width column in desktop mode,
+    then a 3/5 width column after the medium breakpoint,
+    then a full width column after the small breakpoint.
+  &lt;/div&gt;
+  &lt;div class="gu gu-last"&gt;
+    This column remains the last one
+    and fills the remaining free space.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <h2 class="h2 mvl">Responsive grid example</h2>
+
+  <div class="gr grss gr-zebra">
+    <div class="gu gu-1of5 gu-m-1of1 mbs">.gu .gu-1of5 .gu-m-1of1</div>
+    <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1 mbs">.gu .gu-3of5 .gu-m-3of5 .gu-s-1of1</div>
+    <div class="gu gu-last mbs">.gu .gu-last</div>
+  </div>
+</div>
+
+<div class="gr grsl">
+
+  <div class="gu gu-1of5 gu-m-1of1">
+
+    <div class="bx">
+      <h2 class="h-bx">Menu</h2>
+      <ul class="link-list">
+        <li><a href="">Lorem ipsum</a></li>
+        <li><a href="">Consectetur</a></li>
+        <li><a href="">Sed do eiusmod</a></li>
+        <li><a href="">Et dolore magna aliqua</a></li>
+        <li><a href="">Ut enim ad minim</a></li>
+        <li><a href="">Quis nostrud</a></li>
+        <li><a href="">Nisi ut aliquip</a></li>
+        <li><a href="">Duis aute irure</a></li>
+        <li><a href="">In voluptate velit</a></li>
+        <li><a href="">Eu fugiat nulla</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1">
+
+    <div class="bx">
+      <h2 class="h-bx h-bx-main">Main content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+
+  </div>
+
+  <div class="gu gu-last">
+
+    <div class="bx">
+      <h2 class="h-bx">Aside</h2>
+      <ul>
+        <li>Lorem ipsum</li>
+        <li>Consectetur</li>
+        <li>Sed do eiusmod</li>
+        <li>Et dolore magna aliqua</li>
+      </ul>
+    </div>
+
+    <div class="bx">
+      <h2 class="h-bx">Picture</h2>
+      <img src="http://placehold.it/400x400" alt="" class="fluid-media" />
+    </div>
+
+  </div>
+
+</div>

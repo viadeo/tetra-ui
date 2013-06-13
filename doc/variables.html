@@ -19,7 +19,7 @@
 
 <div class="wrap">
   <div class="header">
-    <div class="fixed-container">
+    <div class="fluid-container">
       <h1 class="fl">Powered by <i class="vicon">o</i>
         <a href="/tetra-ui/" class="logo">Tetra UI</a>
       </h1>
@@ -28,14 +28,14 @@
   </div>
 
   <div class="headline">
-    <div class="fixed-container">
-      <h1>A smart, easy-to-use toolkit
+    <div class="fluid-container">
+      <h1 class="h1">A smart, easy-to-use toolkit
         <span class="sub">for creating rich interfaces in lightning speed!</span>
       </h1>
     </div>
   </div>
 
-  <div class="content fixed-container">
+  <div class="content fluid-container">
     <ul class="nav nav-menu">
       
         <li>
@@ -78,20 +78,24 @@
           <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
         </li>
       
+        <li>
+          <a href="/tetra-ui/doc/responsive.html">Responsive</a>
+        </li>
+      
     </ul>
     <div class="nav-tabs-section">
-      <div class="section">
+      <div class="bx">
 
-        <div class="section" id="section-variables">
+<div class="section" id="section-variables">
   <div class="page-header">
-    <h1>
+    <h1 class="h1">
       Variables
       <span class="sub">Visual identity &amp; branding colors</span>
     </h1>
   </div>
   <div class="gr grsm">
     <div class="gu gu-1of4">
-      <h3 id="layout-spacing">Layout &amp; Spacing</h3>
+      <h3 class="h3" id="layout-spacing">Layout &amp; Spacing</h3>
       <table class="table">
         <thead>
           <tr>
@@ -128,7 +132,7 @@
       </table>
     </div>
     <div class="gu gu-1of4">
-       <h3 id="grayscale">Grayscale</h3>
+       <h3 class="h3" id="grayscale">Grayscale</h3>
       <table class="table">
         <thead>
           <tr>
@@ -209,7 +213,7 @@
       </table>
     </div>
     <div class="gu gu-1of4">
-       <h3 id="colors">Colors</h3>
+       <h3 class="h3" id="colors">Colors</h3>
       <table class="table">
         <thead>
           <tr>
@@ -302,7 +306,7 @@
       </table>
     </div>
     <div class="gu gu-last">
-      <h3 id="typo-border-radius">Typo &amp; Border Radius</h3>
+      <h3 class="h3" id="typo-border-radius">Typo &amp; Border Radius</h3>
       <table class="table">
         <thead>
           <tr>
@@ -345,7 +349,7 @@
   </div>
 </div>
 
-<h2 id="tints-shades">Using tints and shades with LESS</h2>
+<h2 class="h2" id="tints-shades">Using tints and shades with LESS</h2>
 
 <div class="gr grsm">
   <div class="gu gu-1of3">
@@ -651,6 +655,8 @@
   </div>
 </div>
 
+</div>
+
 <script>
 jQuery('.var').each(function() {
   var color = jQuery(this).css('background-color');
@@ -658,14 +664,12 @@ jQuery('.var').each(function() {
   jQuery(tooltipContent).text(color);
 });
 </script>
-
-      </div>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <div class="copy fixed-container">
+  <div class="copy fluid-container">
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>

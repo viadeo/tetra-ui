@@ -19,7 +19,7 @@
 
 <div class="wrap">
   <div class="header">
-    <div class="fixed-container">
+    <div class="fluid-container">
       <h1 class="fl">Powered by <i class="vicon">o</i>
         <a href="/tetra-ui/" class="logo">Tetra UI</a>
       </h1>
@@ -28,14 +28,14 @@
   </div>
 
   <div class="headline">
-    <div class="fixed-container">
-      <h1>A smart, easy-to-use toolkit
+    <div class="fluid-container">
+      <h1 class="h1">A smart, easy-to-use toolkit
         <span class="sub">for creating rich interfaces in lightning speed!</span>
       </h1>
     </div>
   </div>
 
-  <div class="content fixed-container">
+  <div class="content fluid-container">
     <ul class="nav nav-menu">
       
         <li>
@@ -78,12 +78,16 @@
           <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
         </li>
       
+        <li>
+          <a href="/tetra-ui/doc/responsive.html">Responsive</a>
+        </li>
+      
     </ul>
     <div class="nav-tabs-section">
-      <div class="section">
+      <div class="bx">
 
-        <div class="page-header">
-    <h1>Forms
+<div class="page-header">
+    <h1 class="h1">Forms
       <span class="sub">Four types of forms, control states, and extending form controls</span>
     </h1>
 </div>
@@ -125,7 +129,7 @@
 <div class="mtxl">
   <div class="gr grsxl mbxl">
     <div class="gu gu-1of4">
-      <h3 id="basics">Basic form</h3>
+      <h3 class="h3" id="basics">Basic form</h3>
     </div>
     <div class="gu gu-last">
       <form class="core-form well">
@@ -151,7 +155,7 @@
 
 <div class="gr grsxl mbxl">
   <div class="gu gu-1of4">
-    <h3 id="placeholders">Placeholders</h3>
+    <h3 class="h3" id="placeholders">Placeholders</h3>
     <p>This is a polyfill to simulate the
       <code class="lang-html">placeholder=""</code> attribute for all browsers
       on
@@ -197,7 +201,7 @@
   </div>
 </div>
 
-<h3 id="error-helpers">Field helpers for errors</h3>
+<h3 class="h3" id="error-helpers">Field helpers for errors</h3>
 
 <div class="gr grsxl mbxl pbl">
   <div class="gu gu-1of4">
@@ -330,7 +334,7 @@
 
   <div class="gr grsxl mbxl">
     <div class="gu gu-1of4">
-      <h3 id="search">Search form</h3>
+      <h3 class="h3" id="search">Search form</h3>
       <p>Just add <code class="language-css">.form-search</code> for rounded search fields.</p>
     </div>
     <div class="gu gu-last">
@@ -347,7 +351,7 @@
 
   <div class="gr grsxl">
     <div class="gu gu-1of4">
-      <h3 id="inline">Inline form</h3>
+      <h3 class="h3" id="inline">Inline form</h3>
       <p>Inputs are block elements by default. They are inline-block with <code class="language-css">.form-inline</code> and <code class="language-css">.form-horizontal</code>.</p>
     </div>
     <div class="gu gu-last">
@@ -372,7 +376,7 @@
 </div>
 
 <div class="mtxl">
-  <h2 id="horizontal">Horizontal forms</h2>
+  <h2 class="h2" id="horizontal">Horizontal forms</h2>
   <div class="gr grsxl">
     <div class="gu gu-1of4">
       <p>Here are the supported form elements:</p>
@@ -453,7 +457,7 @@
 
   <div class="gr grsxl">
     <div class="gu gu-1of4">
-      <h3>Example markup</h3>
+      <h3 class="h3">Example markup</h3>
       <p>Given the above example form layout, here's the markup associated with the first input and control group. The <code class="language-css">.control-group</code>, <code class="language-css">.control-label</code>, and <code class="language-css">.controls</code> classes are all required for styling.</p>
     </div>
     <div class="gu gu-last">
@@ -474,12 +478,12 @@
 </div>
 
 <div class="gr grsxl mtxl">
-<h2 id="control-states">Form control states</h2>
+<h2 class="h2" id="control-states">Form control states</h2>
 
 <div class="gu gu-1of4">
-<h3>Redesigned browser states</h3>
+<h3 class="h3">Redesigned browser states</h3>
   <p>Special styles are applied on top of focused and disabled states, when the browser supports it.</p>
-  <h3>Form validation</h3>
+  <h3 class="h3">Form validation</h3>
   <p>It also includes validation styles for errors, warnings, and success. To use, add the error class to the surrounding <code class="language-css">.control-group</code>.</p>
 <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">fieldset</span> <span class="attribute">class</span>=<span class="value">"
   control-group error"</span>&gt;</span>
@@ -571,7 +575,7 @@
 </div>
 
 <div class="gr grsxl mtxl">
-<h2 id="extending-controls">Extending form controls</h2>
+<h2 class="h2" id="extending-controls">Extending form controls</h2>
 
 <div class="gu gu-1of4">
   <p>To add help text for your form inputs, include inline help text with <code class="lang-html">&lt;span class="help-inline"&gt;</code> or a help text block with <code class="lang-html">&lt;p class="help-block"&gt;</code> after the input element.</p>
@@ -751,7 +755,7 @@
 </div>
 
 <div class="gr grsxl mtxl">
-  <h3 id="custom-radio-checkboxes">Custom radio &amp; checkboxes</h3>
+  <h3 class="h3" id="custom-radio-checkboxes">Custom radio &amp; checkboxes</h3>
 
   <div class="gu gu-1of4">
     <p>Only works in modern browsers, falls back to standard radio buttons in legacy browsers. These custom radio buttons are pure CSS3, no JavaScript required.</p>
@@ -899,15 +903,15 @@
 
 </div>
 
-<script src="/tetra-ui/release/js/placeholder.js"></script>
+</div>
 
-      </div>
+<script src="/tetra-ui/release/js/placeholder.js"></script>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <div class="copy fixed-container">
+  <div class="copy fluid-container">
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>

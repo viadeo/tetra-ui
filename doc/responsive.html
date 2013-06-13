@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tetra UI | Responsive</title>
+  <link rel="icon" href="/tetra-ui/release/img/tetra-ui/favicon.png" />
+
+  
+    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+  
+
+  <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
+  <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
+  <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
+  <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
+</head>
+
+<body>
+
+<div class="wrap">
+  <div class="header">
+    <div class="fluid-container">
+      <h1 class="fl">Powered by <i class="vicon">o</i>
+        <a href="/tetra-ui/" class="logo">Tetra UI</a>
+      </h1>
+      <a href="https://github.com/viadeo/tetra-ui" class="fr mts btn btn-default btn-large github">Tetra UI on GitHub</a>
+    </div>
+  </div>
+
+  <div class="headline">
+    <div class="fluid-container">
+      <h1 class="h1">A smart, easy-to-use toolkit
+        <span class="sub">for creating rich interfaces in lightning speed!</span>
+      </h1>
+    </div>
+  </div>
+
+  <div class="content fluid-container">
+    <ul class="nav nav-menu">
+      
+        <li>
+          <a href="/tetra-ui/doc/index.html">Grid</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/typography.html">Typography</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/forms.html">Forms</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/helpers.html">Helpers</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/variables.html">Variables</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/components.html">Components</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/icons.html">Icons</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
+        </li>
+      
+        <li>
+          <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
+        </li>
+      
+        <li class="active">
+          <a href="/tetra-ui/doc/responsive.html">Responsive</a>
+        </li>
+      
+    </ul>
+    <div class="nav-tabs-section">
+      <div class="bx">
+  <div class="page-header">
+    <h1 class="h1">Responsive Web Design
+      <span class="sub">Responsive grid system</span>
+    </h1>
+  </div>
+
+  <div class="gr grsxl">
+    <div class="gu gu-2of5 gu-m-1of1">
+      <h2 class="h2">How it works</h2>
+      <p>The responsive grid has a desktop first approach. It comes with two breakpoints:</p>
+      <ul class="link-list mbl">
+        <li><strong>a medium breakpoint</strong> (<code>m</code>) for middle sized devices, tablets for example</li>
+        <li><strong>a small breakpoint</strong> (<code>s</code>) for small devices like mobiles</li>
+      </ul>
+      <p>The responsive grid is used in cunjunction with a fluid page container which has the following properties:</p>
+      <ul class="link-list mbl">
+        <li>horizontally centered</li>
+        <li>three different percentage widths for desktop, tablet, mobile applied with media queries</li>
+        <li>a maximum width when in desktop mode to prevent the page from being to large.</li>
+      </ul>
+    </div>
+    <div class="gu gu-last">
+      <h3 class="h4">Fluid container</h3>
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fluid-container"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+      <h3 class="h4 mtm">Example grid markup</h3>
+      <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5 gu-m-1of1"</span>&gt;</span>
+    This column is a 1/5 width column in desktop mode,
+    then a full width column after the medium breakpoint.
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-3of5 gu-m-3of5 gu-s-1of1"</span>&gt;</span>
+    This column is a 3/5 width column in desktop mode,
+    then a 3/5 width column after the medium breakpoint,
+    then a full width column after the small breakpoint.
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span>
+    This column remains the last one
+    and fills the remaining free space.
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+    </div>
+  </div>
+
+  <h2 class="h2 mvl">Responsive grid example</h2>
+
+  <div class="gr grss gr-zebra">
+    <div class="gu gu-1of5 gu-m-1of1 mbs">.gu .gu-1of5 .gu-m-1of1</div>
+    <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1 mbs">.gu .gu-3of5 .gu-m-3of5 .gu-s-1of1</div>
+    <div class="gu gu-last mbs">.gu .gu-last</div>
+  </div>
+</div>
+
+<div class="gr grsl">
+
+  <div class="gu gu-1of5 gu-m-1of1">
+
+    <div class="bx">
+      <h2 class="h-bx">Menu</h2>
+      <ul class="link-list">
+        <li><a href="">Lorem ipsum</a></li>
+        <li><a href="">Consectetur</a></li>
+        <li><a href="">Sed do eiusmod</a></li>
+        <li><a href="">Et dolore magna aliqua</a></li>
+        <li><a href="">Ut enim ad minim</a></li>
+        <li><a href="">Quis nostrud</a></li>
+        <li><a href="">Nisi ut aliquip</a></li>
+        <li><a href="">Duis aute irure</a></li>
+        <li><a href="">In voluptate velit</a></li>
+        <li><a href="">Eu fugiat nulla</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1">
+
+    <div class="bx">
+      <h2 class="h-bx h-bx-main">Main content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+
+  </div>
+
+  <div class="gu gu-last">
+
+    <div class="bx">
+      <h2 class="h-bx">Aside</h2>
+      <ul>
+        <li>Lorem ipsum</li>
+        <li>Consectetur</li>
+        <li>Sed do eiusmod</li>
+        <li>Et dolore magna aliqua</li>
+      </ul>
+    </div>
+
+    <div class="bx">
+      <h2 class="h-bx">Picture</h2>
+      <img src="http://placehold.it/400x400" alt="" class="fluid-media" />
+    </div>
+
+  </div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="copy fluid-container">
+    <p>&copy;2013 APVO CORP.</p>
+  </div>
+</div>
+
+</body>
+</html>
