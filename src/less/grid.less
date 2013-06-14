@@ -56,18 +56,18 @@
 	   // As we are using margin-right, the number of units with spacing should be
 	   // one less than the total number of units
 
-	   @unitsWithSpacing: @total - 1;
+	   @unitsWithSpacing: (@total - 1);
 
 	   // Calculate the proporsion of the grid row consumed by spacing (percentage)
 
-	   @totalRowSpacing: @spacingPercentage * @unitsWithSpacing;
+	   @totalRowSpacing: (@spacingPercentage * @unitsWithSpacing);
 
 	   // To calculate how much width to subtract from each one of the units with
 	   // spacing, we take the total ammount of spacing in the grid row, divide it
 	   // by the total number of columns, then divide that by the the number of columns
 	   // that the unit in question consumes :)
 
-	   @widthToSubtract: (@totalRowSpacing / @total) / @span;
+	   @widthToSubtract: ((@totalRowSpacing / @total) / @span);
 
 	   // Set the CSS properties
 	   width: (@baseWidth - @widthToSubtract);

@@ -773,18 +773,18 @@ textarea {
 	   // As we are using margin-right, the number of units with spacing should be
 	   // one less than the total number of units
 
-	   @unitsWithSpacing: @total - 1;
+	   @unitsWithSpacing: (@total - 1);
 
 	   // Calculate the proporsion of the grid row consumed by spacing (percentage)
 
-	   @totalRowSpacing: @spacingPercentage * @unitsWithSpacing;
+	   @totalRowSpacing: (@spacingPercentage * @unitsWithSpacing);
 
 	   // To calculate how much width to subtract from each one of the units with
 	   // spacing, we take the total ammount of spacing in the grid row, divide it
 	   // by the total number of columns, then divide that by the the number of columns
 	   // that the unit in question consumes :)
 
-	   @widthToSubtract: (@totalRowSpacing / @total) / @span;
+	   @widthToSubtract: ((@totalRowSpacing / @total) / @span);
 
 	   // Set the CSS properties
 	   width: (@baseWidth - @widthToSubtract);
@@ -1534,16 +1534,16 @@ pre {
     display: block;
     width: 100%;
     padding: 0;
-    margin-bottom: @baseLineHeight * 1.5;
-    font-size: @baseFontSize * 1.5;
-    line-height: @baseLineHeight * 2;
+    margin-bottom: (@baseLineHeight * 1.5);
+    font-size: (@baseFontSize * 1.5);
+    line-height: (@baseLineHeight * 2);
     color: @grayDark;
     border: 0;
     border-bottom: 1px solid #eee;
 
     // Small
     small {
-      font-size: @baseLineHeight * .75;
+      font-size: (@baseLineHeight * .75);
       color: @grayLight;
     }
   }
@@ -2104,7 +2104,7 @@ pre {
   }
   // Remove bottom margin on block level help text since that's accounted for on .control-group
   .help-block {
-    margin-top: @baseLineHeight / 2;
+    margin-top: (@baseLineHeight / 2);
     margin-bottom: 0;
   }
   // Move over buttons in .form-actions to align with .controls

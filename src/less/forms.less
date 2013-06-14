@@ -27,16 +27,16 @@
     display: block;
     width: 100%;
     padding: 0;
-    margin-bottom: @baseLineHeight * 1.5;
-    font-size: @baseFontSize * 1.5;
-    line-height: @baseLineHeight * 2;
+    margin-bottom: (@baseLineHeight * 1.5);
+    font-size: (@baseFontSize * 1.5);
+    line-height: (@baseLineHeight * 2);
     color: @grayDark;
     border: 0;
     border-bottom: 1px solid #eee;
 
     // Small
     small {
-      font-size: @baseLineHeight * .75;
+      font-size: (@baseLineHeight * .75);
       color: @grayLight;
     }
   }
@@ -597,7 +597,7 @@
   }
   // Remove bottom margin on block level help text since that's accounted for on .control-group
   .help-block {
-    margin-top: @baseLineHeight / 2;
+    margin-top: (@baseLineHeight / 2);
     margin-bottom: 0;
   }
   // Move over buttons in .form-actions to align with .controls
