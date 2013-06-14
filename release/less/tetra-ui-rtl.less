@@ -402,7 +402,7 @@
     @outerSize: `Math.round(parseInt('@{borderWidth}') * 1.41421356)`;
     .border(@position, @borderColor);
     border-width: @size + @outerSize;
-    .position(@position, -1 * (@size + @outerSize));
+    .position(@position, (-1 * (@size + @outerSize)));
   }
 }
 
@@ -423,7 +423,7 @@
     border: solid transparent;
     content: '';
     height: 0;
-    margin: @borderWidth * -1;
+    margin: (@borderWidth * -1);
     pointer-events: none;
     position: absolute;
     width: 0;
@@ -432,14 +432,14 @@
   &:after {
     .border(@position, @color);
     border-width: @size;
-    .position(@position, @size * -1);
+    .position(@position, (@size * -1));
   }
 
   &:before {
     @outerSize: `Math.round(parseInt('@{borderWidth}') * 1.41421356)`;
     .border(@position, @borderColor);
     border-width: @size + @outerSize;
-    .position(@position, -1 * (@size + @outerSize));
+    .position(@position, (-1 * (@size + @outerSize)));
   }
 }
 
@@ -2262,14 +2262,14 @@ table.table-hover {
 
 // Page Headers
 .page-header {
-   margin-bottom: @baseLineHeight * 1.5;
+   margin-bottom: (@baseLineHeight * 1.5);
    padding-bottom: 5px;
    border-bottom: 1px solid @grayLighter;
    .clearfix();
 
    h1 {
        margin: 2px 0 0 0;
-       line-height: @baseLineHeight - 0.2;
+       line-height: (@baseLineHeight - 0.2);
        .float-left(@rtl);
    }
    .actions {

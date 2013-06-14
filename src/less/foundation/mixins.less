@@ -230,7 +230,7 @@
     @outerSize: `Math.round(parseInt('@{borderWidth}') * 1.41421356)`;
     .border(@position, @borderColor);
     border-width: @size + @outerSize;
-    .position(@position, -1 * (@size + @outerSize));
+    .position(@position, (-1 * (@size + @outerSize)));
   }
 }
 
@@ -251,7 +251,7 @@
     border: solid transparent;
     content: '';
     height: 0;
-    margin: @borderWidth * -1;
+    margin: (@borderWidth * -1);
     pointer-events: none;
     position: absolute;
     width: 0;
@@ -260,14 +260,14 @@
   &:after {
     .border(@position, @color);
     border-width: @size;
-    .position(@position, @size * -1);
+    .position(@position, (@size * -1));
   }
 
   &:before {
     @outerSize: `Math.round(parseInt('@{borderWidth}') * 1.41421356)`;
     .border(@position, @borderColor);
     border-width: @size + @outerSize;
-    .position(@position, -1 * (@size + @outerSize));
+    .position(@position, (-1 * (@size + @outerSize)));
   }
 }
 
