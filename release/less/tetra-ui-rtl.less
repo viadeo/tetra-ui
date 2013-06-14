@@ -1296,6 +1296,19 @@ textarea {
   -ms-interpolation-mode: bicubic; // IE 7
 }
 
+.hide-l { display: none; }
+.show-l { display: block; }
+
+@media screen and (max-width: @breakpoint-m) {
+  .hide-m { display: none; }
+  .show-m { display: block; }
+}
+
+@media screen and (max-width: @breakpoint-s) {
+  .hide-s { display: none; }
+  .show-s { display: block; }
+}
+
 /* Typography.less
  * Headings, body text, lists, code, and more for a versatile and durable typography system
  * ---------------------------------------------------------------------------------------- */
