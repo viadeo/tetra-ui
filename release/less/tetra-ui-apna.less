@@ -568,10 +568,10 @@
 
 html, body { background: #FFFFFF; }
 body, h1, h2, h3, h4, h5, h6, p, div, span, blockquote, pre, a, button, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; background: transparent; } // NOTE: If any properties are added or removed, be sure to update the .inherit() mixin.
-table { border-collapse: collapse; border-spacing: 0; text-align: left; width: 100%; }
+table { border-collapse: collapse; border-spacing: 0; .text-align-left(@rtl); width: 100%; }
 address,caption,cite,code,dfn,strong,th,var,optgroup { font-style: inherit; }
 del,ins { text-decoration: none; }
-caption,th { text-align: left; }
+caption,th { .text-align-left(@rtl); }
 abbr,acronym { font-variant:normal; cursor: help; border-bottom: 1px dotted @gray; &:hover { cursor: help; } }
 sup,sub { vertical-align: baseline; }
 ol, ul { list-style: none; }

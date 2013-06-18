@@ -62,7 +62,7 @@ td {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  text-align: left;
+  text-align: right;
   width: 100%;
 }
 address,
@@ -82,7 +82,7 @@ ins {
 }
 caption,
 th {
-  text-align: left;
+  text-align: right;
 }
 abbr,
 acronym {
