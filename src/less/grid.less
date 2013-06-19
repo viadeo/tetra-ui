@@ -81,6 +81,15 @@
   .gu (@rtl) when (@rtl = true) {
     float: right;
   }
+
+  .last () {
+    display: table-cell;
+    float: none;
+    width: 2000px;
+    *display: block;
+    *zoom: 1;
+    *width: auto;
+  }
 }
 
 .fixed-container {
@@ -122,12 +131,7 @@
 .gu-5of6 { #grid > .unit(5, 6); }
 
 .gu-last, .gridLastUnit {
-  display: table-cell;
-  float: none;
-  width: 2000px;
-  *display: block;
-  *zoom: 1;
-  *width: auto;
+  #grid > .last();
 }
 
 .grsxs {
