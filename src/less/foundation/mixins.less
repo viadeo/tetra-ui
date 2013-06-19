@@ -266,7 +266,7 @@
   &:before {
     @outerSize: `Math.round(parseInt('@{borderWidth}') * 1.41421356)`;
     .border(@position, @borderColor);
-    border-width: @size + @outerSize;
+    border-width: (@size + @outerSize);
     .position(@position, (-1 * (@size + @outerSize)));
   }
 }
