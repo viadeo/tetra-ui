@@ -91,199 +91,195 @@
   <h1 class="h1">Helpers<span class="sub">Short CSS classes to help maintain consistency and save you time</span></h1>
 </div>
 <div class="gr grsm">
-  <div class="gu gu-1of3">
+  <div class="gu gu-1of3 gu-m-1of1">
     <p>These short, structured class names are easy to remember and help you work faster. What’s more, the spacings and sizes are consistent with the values declared in variables.</a></p>
   </div>
   <div class="gu gu-last">
-    <div>
-      <h3 class="h3" id="spacing">Spacing</h3>
-      <p>Usage: <code><em>.[type][direction][size]</em></code>. Example: <code>.prl</code> <span class="gray">(applies a large padding to the right side of the element)</span>.</p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Value</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>[type]</code></td>
-            <td>Margin (<code>m</code>) or padding (<code>p</code>).</td>
-          </tr>
-          <tr>
-            <td><code>[direction]</code></td>
-            <td>
-              <p>The side or axis on which to apply the spacing:</p>
-              <ul class="link-list">
-                <li><code>a</code> All</li>
-                <li><code>t</code> Top</li>
-                <li><code>r</code> Right</li>
-                <li><code>b</code> Bottom</li>
-                <li><code>l</code> Left</li>
-                <li><code>h</code> Horizontal</li>
-                <li><code>v</code> Vertical</li>
-              </ul>
-          </tr>
-          <tr>
-            <td><code>[size]</code></td>
-            <td>
-              <p>One of 6 spacing sizes, the pixel values of which are defined in the <a href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L19-L23" target="_blank">variables.less</a> file:
-              </p>
-              <ul class="link-list">
-                <li><code>n</code> Null</li>
-                <li><code>xs</code> eXtra Small</li>
-                <li><code>s</code> Small</li>
-                <li><code>m</code> Medium</li>
-                <li><code>l</code> Large</li>
-                <li><code>xl</code> eXtra Large</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="mts">
-      <h3 class="h3" id="border-radius">Border radius</h3>
-      <p>Usage: <code><em>.br[direction][size]</em></code>. Example: <code>.brtlm</code> <span class="gray">(applies a medium-sized border radius to the top-left corner of the element).</span></p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Value</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>[direction]</code></td>
-            <td>The side or corner on which to apply the border radius. Values can be all (<code>a</code>), top left (<code>tl</code>), top right (<code>tr</code>), bottom right (<code>br</code>), bottom left (<code>bl</code>), top (<code>t</code>), left (<code>l</code>), bottom (<code>b</code>), or right (<code>r</code>).</td>
-          </tr>
-          <tr>
-            <td><code>[size]</code></td>
-            <td>One of 3 sizes, defined in the <a href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L84-L86" target="_blank">variables.less</a> file. Values can be small (<code>s</code>), medium (<code>m</code>), or large(<code>l</code>).</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="mts">
-      <h3 class="h3" id="text-alignment">Text alignment</h3>
-      <p>Usage: <code><em>.ta[alignment]</em></code>. Example: <code>.tac</code> <span class="gray">(centers text within the element).</span></p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Value</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>[alignment]</code></td>
-            <td>
-              <p>The alignment of the text. Values can be:</p>
-              <ul class="link-list">
-                <li><code>l</code> Left</li>
-                <li><code>r</code> Right</li>
-                <li><code>c</code> Center</li>
-                <li><code>j</code> Justify</li>
-                <li><code>i</code> Inherit</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><code>.hyph</code></td>
-            <td>This class activates hyphenation on paragraphs for example, or on a generic container. This is a progressive enhancement, it is now supported by Firefox, IE10, and Safari. The browser must know the language, for example with <code class="lang-html">&lt;html lang="en"&gt;</code> for a proper hyphenation.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <div class="mts">
-      <h3 class="h3" id="block-alignment">Block alignment</h3>
-      <p>Usage: <code><em>.ba[alignment]</em></code>. Example: <code>.bac</code> <span class="gray">(centers a block element within its container).</span></p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Value</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>[alignment]</code></td>
-            <td>
-              <p>The alignment of the text. Values can be:</p>
-              <ul class="link-list">
-                <li><code>l</code> Left</li>
-                <li><code>r</code> Right</li>
-                <li><code>c</code> Center</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h3 class="h3" id="spacing">Spacing</h3>
+    <p>Usage: <code><em>.[type][direction][size]</em></code>. Example: <code>.prl</code> <span class="gray">(applies a large padding to the right side of the element)</span>.</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>[type]</code></td>
+          <td>Margin (<code>m</code>) or padding (<code>p</code>).</td>
+        </tr>
+        <tr>
+          <td><code>[direction]</code></td>
+          <td>
+            <p>The side or axis on which to apply the spacing:</p>
+            <ul class="link-list">
+              <li><code>a</code> All</li>
+              <li><code>t</code> Top</li>
+              <li><code>r</code> Right</li>
+              <li><code>b</code> Bottom</li>
+              <li><code>l</code> Left</li>
+              <li><code>h</code> Horizontal</li>
+              <li><code>v</code> Vertical</li>
+            </ul>
+        </tr>
+        <tr>
+          <td><code>[size]</code></td>
+          <td>
+            <p>One of 6 spacing sizes, the pixel values of which are defined in the <a href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L19-L23" target="_blank">variables.less</a> file:
+            </p>
+            <ul class="link-list">
+              <li><code>n</code> Null</li>
+              <li><code>xs</code> eXtra Small</li>
+              <li><code>s</code> Small</li>
+              <li><code>m</code> Medium</li>
+              <li><code>l</code> Large</li>
+              <li><code>xl</code> eXtra Large</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-    <div class="mts">
-      <h3 class="h3" id="block-alignment">Vertical alignment</h3>
-      <p>Usage: <code><em>.va[alignment]</em></code>. Example: <code>.vam</code> <span class="gray">(vertically alignment of an element to the middle).</span></p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Value</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>[alignment]</code></td>
-            <td>
-              <p>The vertical alignment. Values can be:</p>
-              <ul class="link-list">
-                <li><code>m</code> Middle</li>
-                <li><code>b</code> Bottom</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <div class="mts">
-      <h3 class="h3" id="misc">Miscellaneous</h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Helper class name</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>.cf</code></td>
-            <td>A badass clearfix hack to clear floating elements without using presentational markup. Just apply this to the parent container and you won't need to use <code><v:content><div class="clear"></div></v:content></code> anymore. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack</a> for more details :)</td>
-          </tr>
-          <tr>
-            <td><code>.hidden</code></td>
-            <td>Hides an element. Use this as opposed to inline styles.</td>
-          </tr>
-          <tr>
-            <td><code>.elsewhere</code></td>
-            <td>Moves an element off the page, hiding it from the user.</td>
-          </tr>
-          <tr>
-            <td><code>.fl</code> <code>.fr</code></td>
-            <td>Floats an element left or right, respectively.</td>
-          </tr>
-          <tr>
-            <td><code>.clr</code></td>
-            <td>Clearing floated elements.</td>
-          </tr>
-          <tr>
-            <td><code>.layered</code></td>
-            <td>Absolutely positioning an element: removing it from the flow of the document.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h3 class="h3" id="border-radius">Border radius</h3>
+    <p>Usage: <code><em>.br[direction][size]</em></code>. Example: <code>.brtlm</code> <span class="gray">(applies a medium-sized border radius to the top-left corner of the element).</span></p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>[direction]</code></td>
+          <td>The side or corner on which to apply the border radius. Values can be all (<code>a</code>), top left (<code>tl</code>), top right (<code>tr</code>), bottom right (<code>br</code>), bottom left (<code>bl</code>), top (<code>t</code>), left (<code>l</code>), bottom (<code>b</code>), or right (<code>r</code>).</td>
+        </tr>
+        <tr>
+          <td><code>[size]</code></td>
+          <td>One of 3 sizes, defined in the <a href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L84-L86" target="_blank">variables.less</a> file. Values can be small (<code>s</code>), medium (<code>m</code>), or large(<code>l</code>).</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h3 class="h3" id="text-alignment">Text alignment</h3>
+    <p>Usage: <code><em>.ta[alignment]</em></code>. Example: <code>.tac</code> <span class="gray">(centers text within the element).</span></p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>[alignment]</code></td>
+          <td>
+            <p>The alignment of the text. Values can be:</p>
+            <ul class="link-list">
+              <li><code>l</code> Left</li>
+              <li><code>r</code> Right</li>
+              <li><code>c</code> Center</li>
+              <li><code>j</code> Justify</li>
+              <li><code>i</code> Inherit</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code>.hyph</code></td>
+          <td>This class activates hyphenation on paragraphs for example, or on a generic container. This is a progressive enhancement, it is now supported by Firefox, IE10, and Safari. The browser must know the language, for example with <code class="lang-html">&lt;html lang="en"&gt;</code> for a proper hyphenation.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h3 class="h3" id="block-alignment">Block alignment</h3>
+    <p>Usage: <code><em>.ba[alignment]</em></code>. Example: <code>.bac</code> <span class="gray">(centers a block element within its container).</span></p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>[alignment]</code></td>
+          <td>
+            <p>The alignment of the text. Values can be:</p>
+            <ul class="link-list">
+              <li><code>l</code> Left</li>
+              <li><code>r</code> Right</li>
+              <li><code>c</code> Center</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="h3" id="block-alignment">Vertical alignment</h3>
+    <p>Usage: <code><em>.va[alignment]</em></code>. Example: <code>.vam</code> <span class="gray">(vertically alignment of an element to the middle).</span></p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>[alignment]</code></td>
+          <td>
+            <p>The vertical alignment. Values can be:</p>
+            <ul class="link-list">
+              <li><code>m</code> Middle</li>
+              <li><code>b</code> Bottom</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h3 class="h3" id="misc">Miscellaneous</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Helper class name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.cf</code></td>
+          <td>A badass clearfix hack to clear floating elements without using presentational markup. Just apply this to the parent container and you won't need to use <code><v:content><div class="clear"></div></v:content></code> anymore. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack</a> for more details :)</td>
+        </tr>
+        <tr>
+          <td><code>.hidden</code></td>
+          <td>Hides an element. Use this as opposed to inline styles.</td>
+        </tr>
+        <tr>
+          <td><code>.elsewhere</code></td>
+          <td>Moves an element off the page, hiding it from the user.</td>
+        </tr>
+        <tr>
+          <td><code>.fl</code> <code>.fr</code></td>
+          <td>Floats an element left or right, respectively.</td>
+        </tr>
+        <tr>
+          <td><code>.clr</code></td>
+          <td>Clearing floated elements.</td>
+        </tr>
+        <tr>
+          <td><code>.layered</code></td>
+          <td>Absolutely positioning an element: removing it from the flow of the document.</td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 </div>
 
