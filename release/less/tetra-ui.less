@@ -919,7 +919,9 @@ textarea {
 @media screen and (max-width: @breakpoint-m) {
   .fluid-container { width: @page-width-m; }
 
-  .gu-m-1of1 { #grid > .unit(1, 1); }
+  .gu-m-1of1 { clear: both; display: block; #grid > .unit(1, 1); }
+  .gu-m-last { #grid > .last(); }
+
   .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unit(1, 2); }
   .gu-m-1of3, > .gu-m-2of6 { #grid > .unit(1, 3); }
   .gu-m-2of3, > .gu-m-4of6 { #grid > .unit(2, 3); }
@@ -933,7 +935,9 @@ textarea {
   .gu-m-5of6 { #grid > .unit(5, 6); }
 
   .grsxs {
-    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXs); }
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-m-last { #grid > .last(); }
+
     > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXs); }
     > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXs); }
     > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXs); }
@@ -948,7 +952,9 @@ textarea {
   }
 
   .grss {
-    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingS); }
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-m-last { #grid > .last(); }
+
     > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingS); }
     > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingS); }
     > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingS); }
@@ -963,7 +969,9 @@ textarea {
   }
 
   .grsm {
-    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingM); }
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-m-last { #grid > .last(); }
+
     > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingM); }
     > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingM); }
     > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingM); }
@@ -978,7 +986,9 @@ textarea {
   }
 
   .grsl {
-    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingL); }
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-m-last { #grid > .last(); }
+
     > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingL); }
     > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingL); }
     > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingL); }
@@ -993,7 +1003,9 @@ textarea {
   }
 
   .grsxl {
-    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXl); }
+    > .gu-m-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-m-last { #grid > .last(); }
+
     > .gu-m-1of2, > .gu-m-2of4, > .gu-m-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXl); }
     > .gu-m-1of3, > .gu-m-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXl); }
     > .gu-m-2of3, > .gu-m-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXl); }
@@ -1013,7 +1025,9 @@ textarea {
 @media screen and (max-width: @breakpoint-s) {
   .fluid-container { width: @page-width-s; }
 
-  .gu-s-1of1 { #grid > .unit(1, 1); }
+  .gu-s-1of1 { clear: both; display: block; #grid > .unit(1, 1); }
+  .gu-s-last { #grid > .last(); }
+
   .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unit(1, 2); }
   .gu-s-1of3, > .gu-s-2of6 { #grid > .unit(1, 3); }
   .gu-s-2of3, > .gu-s-4of6 { #grid > .unit(2, 3); }
@@ -1027,7 +1041,9 @@ textarea {
   .gu-s-5of6 { #grid > .unit(5, 6); }
 
   .grsxs {
-    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXs); }
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-s-last { #grid > .last(); }
+
     > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXs); }
     > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXs); }
     > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXs); }
@@ -1042,7 +1058,9 @@ textarea {
   }
 
   .grss {
-    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingS); }
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-s-last { #grid > .last(); }
+
     > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingS); }
     > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingS); }
     > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingS); }
@@ -1057,7 +1075,9 @@ textarea {
   }
 
   .grsm {
-    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingM); }
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-s-last { #grid > .last(); }
+
     > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingM); }
     > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingM); }
     > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingM); }
@@ -1072,7 +1092,9 @@ textarea {
   }
 
   .grsl {
-    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingL); }
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-s-last { #grid > .last(); }
+
     > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingL); }
     > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingL); }
     > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingL); }
@@ -1087,7 +1109,9 @@ textarea {
   }
 
   .grsxl {
-    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, @spacingXl); }
+    > .gu-s-1of1 { #grid > .unitWithSpacing(1, 1, 0); }
+    > .gu-s-last { #grid > .last(); }
+
     > .gu-s-1of2, > .gu-s-2of4, > .gu-s-3of6 { #grid > .unitWithSpacing(1, 2, @spacingXl); }
     > .gu-s-1of3, > .gu-s-2of6 { #grid > .unitWithSpacing(1, 3, @spacingXl); }
     > .gu-s-2of3, > .gu-s-4of6 { #grid > .unitWithSpacing(2, 3, @spacingXl); }
