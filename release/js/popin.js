@@ -183,15 +183,15 @@ tetra.view.register('popin', {
 					'click': {
 						'[data-popin]': function(e, elm) {
 
-							if(elm.attr('data-popin') === 'show') {
+							if (elm.attr('data-popin') === 'show') {
 
-								if(elm.attr('data-target-url')) {
+								if (elm.attr('data-target-url')) {
 
 									app.notify('popin: set content', {
 										url: elm.attr('data-target-url')
 									});
 
-								} else if(elm.attr('data-target-id')) {
+								} else if (elm.attr('data-target-id')) {
 
 									app.notify('popin: set content', {
 										id: elm.attr('data-target-id')
@@ -199,7 +199,7 @@ tetra.view.register('popin', {
 
 								}
 
-							} else if(elm.attr('data-popin') === 'close') {
+							} else if (elm.attr('data-popin') === 'close') {
 
 								app.notify('popin: close');
 
@@ -210,7 +210,7 @@ tetra.view.register('popin', {
 				},
 				window: {
 					'keyup': function(e) {
-						if(e.keyCode === 27) {
+						if ((e.keyCode === 27) && (! _('.popin-container .popin').attr('data-noesc'))) {
 							app.notify('popin: close');
 						}
 					}

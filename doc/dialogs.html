@@ -376,6 +376,7 @@
     <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span><span class="comment">&lt;!-- Initializes the grid --&gt;</span>
 
 <span class="comment">&lt;!-- Base popin class, width set to two thirds of page width --&gt;</span>
+<span class="comment">&lt;!-- Put a data-noesc="true" if you want to prevent the popin from being closed by the esc key --&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"popin gu-2of3"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"popin-header"</span>&gt;</span>
 
@@ -397,6 +398,21 @@
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+  </div>
+</div>
+
+<div class="gr grsxl">
+  <div class="gu gu-1of5">
+    <p>If you want to prevent the popin from being closed by a press on the Esc key,
+      put the <code>data-noesc="true"</code> attribute on the popin element.
+    </p>
+  </div>
+  <div class="gu gu-last">
+
+    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"popin gu-2of3"</span> <span class="attribute">data-noesc</span>=<span class="value">"true"</span>&gt;</span>
+  ...
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
 
   </div>

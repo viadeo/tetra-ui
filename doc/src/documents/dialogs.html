@@ -296,6 +296,7 @@ order: 9
     <pre><code class="lang-html">&lt;div class="gr"&gt;&lt;!-- Initializes the grid --&gt;
 
 &lt;!-- Base popin class, width set to two thirds of page width --&gt;
+&lt;!-- Put a data-noesc="true" if you want to prevent the popin from being closed by the esc key --&gt;
 &lt;div class="popin gu-2of3"&gt;
   &lt;div class="popin-header"&gt;
 
@@ -317,6 +318,21 @@ order: 9
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;/div&gt;</code></pre>
+
+  </div>
+</div>
+
+<div class="gr grsxl">
+  <div class="gu gu-1of5">
+    <p>If you want to prevent the popin from being closed by a press on the Esc key,
+      put the <code>data-noesc="true"</code> attribute on the popin element.
+    </p>
+  </div>
+  <div class="gu gu-last">
+
+    <pre><code class="lang-html">&lt;div class="popin gu-2of3" data-noesc="true"&gt;
+  ...
 &lt;/div&gt;</code></pre>
 
   </div>
