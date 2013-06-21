@@ -1963,11 +1963,11 @@ ul.link-list li:before {
 }
 ul.list-square li {
   list-style: square;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 ul.list-disc li {
   list-style: disc;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .panel {
   border-top: 1px solid #E6EAED;
