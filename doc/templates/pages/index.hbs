@@ -1,91 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Tetra UI | Grid</title>
-  <link rel="icon" href="/tetra-ui/release/img/tetra-ui/favicon.png" />
+---
+title: "Grid"
+---
 
-  
-    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
-  
-
-  <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
-  <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
-  <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
-  <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
-</head>
-
-<body>
-
-<div class="wrap">
-  <div class="header">
-    <div class="fluid-container">
-      <h1 class="fl">Powered by <i class="vicon">o</i>
-        <a href="/tetra-ui/" class="logo">Tetra UI</a>
-      </h1>
-      <a href="https://github.com/viadeo/tetra-ui" class="fr mts btn btn-default btn-large github">Tetra UI on GitHub</a>
-    </div>
-  </div>
-
-  <div class="headline">
-    <div class="fluid-container">
-      <h1 class="h1">A smart, easy-to-use toolkit
-        <span class="sub">for creating rich interfaces in lightning speed!</span>
-      </h1>
-    </div>
-  </div>
-
-  <div class="content fluid-container">
-    <ul class="nav nav-menu">
-      
-        <li class="active">
-          <a href="/tetra-ui/doc/index.html">Grid</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/typography.html">Typography</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/forms.html">Forms</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/helpers.html">Helpers</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/variables.html">Variables</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/components.html">Components</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/icons.html">Icons</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/responsive.html">Responsive</a>
-        </li>
-      
-    </ul>
-    <div class="nav-tabs-section">
-      <div class="bx">
+<div class="bx">
 
 <div class="page-header">
   <h1 class="h1">Grid System<span class="sub">Flexible, easy to use, and fun!</span></h1>
@@ -99,13 +16,13 @@
   <div class="gu gu-last">
     <h3 class="h3">Example grid markup</h3>
     <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <code class="language-css">.gu-last</code> class. This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
-    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+    <pre data-line="1-7"><code class="lang-html">&lt;div class="gr"&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
 </div>
 
@@ -152,27 +69,27 @@
   <div class="gu gu-1of2 gu-m-1of1">
     <h3 class="h3">Nesting with siblings</h3>
     <p>The example above shows a grid row (<code class="language-css">.gr</code>) nested within a grid unit (<code class="language-css">.gu</code>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
-    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-2of3"</span>&gt;</span>
+    <pre data-line="1,4"><code class="lang-html">&lt;div class="gr"&gt;
+  &lt;div class="gu gu-2of3"&gt;
     ...
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of2"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+    &lt;div class="gr"&gt;
+      &lt;div class="gu gu-1of2"&gt; ... &lt;/div&gt;
+      &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
   <div class="gu gu-last">
      <h3 class="h3">Direct nesting</h3>
      <p>The other option is to nest your grid units directly in another grid unit. Just add the <code class="language-css">.gr</code> class to an element with the <code class="language-css">.gu</code> class!</p>
-     <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-2of3 gr"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of2"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+     <pre data-line="2"><code class="lang-html">&lt;div class="gr"&gt;
+  &lt;div class="gu gu-2of3 gr"&gt;
+    &lt;div class="gu gu-1of2"&gt; ... &lt;/div&gt;
+    &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
 </div>
 
@@ -255,15 +172,3 @@
 </div>
 
 </div>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <div class="copy fluid-container">
-    <p>&copy;2013 APVO CORP.</p>
-  </div>
-</div>
-
-</body>
-</html>

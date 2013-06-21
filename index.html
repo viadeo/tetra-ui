@@ -38,54 +38,44 @@
 
   <div class="content fluid-container">
     <ul class="nav nav-menu">
-      
-        <li class="active">
-          <a href="/tetra-ui/doc/index.html">Grid</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/typography.html">Typography</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/forms.html">Forms</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/helpers.html">Helpers</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/variables.html">Variables</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/components.html">Components</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/icons.html">Icons</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
-        </li>
-      
-        <li>
-          <a href="/tetra-ui/doc/responsive.html">Responsive</a>
-        </li>
-      
+      <li class="active">
+        <a href="/tetra-ui/index.html">Grid</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/typography.html">Typography</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/forms.html">Forms</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/helpers.html">Helpers</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/variables.html">Variables</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/components.html">Components</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/icons.html">Icons</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
+      </li>
+      <li>
+        <a href="/tetra-ui/doc/responsive.html">Responsive</a>
+      </li>
     </ul>
     <div class="nav-tabs-section">
-      <div class="bx">
+      
+
+<div class="bx">
 
 <div class="page-header">
   <h1 class="h1">Grid System<span class="sub">Flexible, easy to use, and fun!</span></h1>
@@ -99,13 +89,13 @@
   <div class="gu gu-last">
     <h3 class="h3">Example grid markup</h3>
     <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <code class="language-css">.gu-last</code> class. This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
-    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of5"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+    <pre data-line="1-7"><code class="lang-html">&lt;div class="gr"&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
+  &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
 </div>
 
@@ -152,27 +142,27 @@
   <div class="gu gu-1of2 gu-m-1of1">
     <h3 class="h3">Nesting with siblings</h3>
     <p>The example above shows a grid row (<code class="language-css">.gr</code>) nested within a grid unit (<code class="language-css">.gu</code>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
-    <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-2of3"</span>&gt;</span>
+    <pre data-line="1,4"><code class="lang-html">&lt;div class="gr"&gt;
+  &lt;div class="gu gu-2of3"&gt;
     ...
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of2"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+    &lt;div class="gr"&gt;
+      &lt;div class="gu gu-1of2"&gt; ... &lt;/div&gt;
+      &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
   <div class="gu gu-last">
      <h3 class="h3">Direct nesting</h3>
      <p>The other option is to nest your grid units directly in another grid unit. Just add the <code class="language-css">.gr</code> class to an element with the <code class="language-css">.gu</code> class!</p>
-     <pre class="highlighted"><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gr"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-2of3 gr"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-1of2"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"gu gu-last"</span>&gt;</span> ... <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+     <pre data-line="2"><code class="lang-html">&lt;div class="gr"&gt;
+  &lt;div class="gu gu-2of3 gr"&gt;
+    &lt;div class="gu gu-1of2"&gt; ... &lt;/div&gt;
+    &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
 </div>
 
@@ -255,6 +245,7 @@
 </div>
 
 </div>
+
     </div>
   </div>
 </div>

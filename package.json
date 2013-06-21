@@ -25,16 +25,14 @@
     }
   ],
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-docs": "*",
-    "docpad-plugin-eco": "*",
-    "docpad-plugin-highlightjs": "*"
+    "grunt-contrib-clean": "*",
+    "assemble": "*"
   },
   "repository": {
     "type": "git",
@@ -42,8 +40,5 @@
   },
   "engines": {
     "node": ">= 0.10.5"
-  },
-  "scripts": {
-    "postinstall": "grunt default --verbose"
   }
 }

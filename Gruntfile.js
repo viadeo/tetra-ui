@@ -246,28 +246,31 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'concat']
       },
       doc: {
-        files: ['doc/src/**/*'],
-        tasks: ['docs', 'copy:doc']
+        files: ['doc/templates/**/*'],
+        tasks: ['clean:doc', 'assemble']
       }
     },
 
-    docs: {
-      srcPath: 'doc/src',
-      outPath: 'doc',
-      collections: {
-        pages: function() {
-          return this.getCollection("html").findAllLive({ isPage: true }, [{ order: 1 }]);
-        }
-      }
-    },
-
-    copy: {
-      doc: {
+    assemble: {
+      options: {
+        assets: 'dist/assets'
+      },
+      pages: {
+        options: {
+          flatten: true,
+          layout: 'doc/templates/layouts/default.hbs'
+        },
         files: [
-          { src: ['doc/index.html'], dest: 'index.html' }
+          { expand: true, cwd: 'doc/templates/pages', src: ['*.hbs', '!index.hbs'], dest: 'doc/' },
+          { expand: true, cwd: 'doc/templates/pages', src: ['index.hbs'], dest: './' }
         ]
       }
+    },
+
+    clean: {
+      doc: ['doc/*.html', 'index.html']
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -275,8 +278,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-docs');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('assemble');
 
   // Default task
   grunt.registerTask('default', ['jshint', 'less', 'concat']);
@@ -285,5 +288,5 @@ module.exports = function(grunt) {
   grunt.registerTask('watch-server', ['connect', 'watch']);
 
   // Documentation generation with DocPad
-  grunt.registerTask('doc', ['docs', 'copy:doc']);
+  grunt.registerTask('doc', ['clean:doc', 'assemble']);
 };
