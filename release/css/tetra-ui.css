@@ -1936,10 +1936,10 @@ h6,
   color: #83a0b9;
 }
 .h-bx.h-bx-main {
-  border-bottom-color: #f97618;
+  border-bottom-color: #f56600;
 }
 .h-bx.h-bx-main .h-bx-link .vicon {
-  color: #fcbb8c;
+  color: #fab380;
 }
 ul.link-list {
   list-style: none;
@@ -4539,16 +4539,16 @@ i.vicon {
 }
 .btncontainer .btn-no .lnk-no {
   color: #ffffff;
-  border-color: #c05305;
-  border-bottom-color: #e76406;
-  background-color: #f97618;
+  border-color: #a94600;
+  border-bottom-color: #d15700;
+  background-color: #f56600;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top, #d85e06, #f97618);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d85e06), color-stop(100%, #f97618));
-  background-image: -webkit-linear-gradient(top, #d85e06, #f97618);
-  background-image: -o-linear-gradient(top, #d85e06, #f97618);
-  background-image: linear-gradient(to bottom, #d85e06, #f97618);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d85e06', endColorstr='#f97618', GradientType=0);
+  background-image: -moz-linear-gradient(top, #c25100, #f56600);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c25100), color-stop(100%, #f56600));
+  background-image: -webkit-linear-gradient(top, #c25100, #f56600);
+  background-image: -o-linear-gradient(top, #c25100, #f56600);
+  background-image: linear-gradient(to bottom, #c25100, #f56600);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c25100', endColorstr='#f56600', GradientType=0);
   *filter: none;
   cursor: default;
 }
@@ -5521,7 +5521,7 @@ i.vicon {
   text-align: center;
   font-size: 21px;
   color: #ffffff;
-  background: #f97618;
+  background: #f56600;
   border-radius: 50%;
   margin-right: 4%;
   margin-left: 8%;
