@@ -1,7 +1,3 @@
-// Syntax highlighting
-
-@import "highlight.less";
-
 // Common
 
 html {
@@ -16,6 +12,14 @@ body {
 
 p {
   line-height: 20px;
+}
+
+// Syntax highlighting
+
+@import (less) "../../doc/lib/prism/prism.css";
+
+code[class*="language-"], pre[class*="language-"] {
+  white-space: pre-wrap;
 }
 
 // Header

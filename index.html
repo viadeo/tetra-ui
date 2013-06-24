@@ -89,7 +89,7 @@
   <div class="gu gu-last">
     <h3 class="h3">Example grid markup</h3>
     <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <code class="language-css">.gu-last</code> class. This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
-    <pre data-line="1-7"><code class="lang-html">&lt;div class="gr"&gt;
+    <pre><code class="language-markup">&lt;div class="gr"&gt;
   &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
   &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
   &lt;div class="gu gu-1of5"&gt; ... &lt;/div&gt;
@@ -142,7 +142,7 @@
   <div class="gu gu-1of2 gu-m-1of1">
     <h3 class="h3">Nesting with siblings</h3>
     <p>The example above shows a grid row (<code class="language-css">.gr</code>) nested within a grid unit (<code class="language-css">.gu</code>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
-    <pre data-line="1,4"><code class="lang-html">&lt;div class="gr"&gt;
+    <pre><code class="language-markup">&lt;div class="gr"&gt;
   &lt;div class="gu gu-2of3"&gt;
     ...
     &lt;div class="gr"&gt;
@@ -156,7 +156,7 @@
   <div class="gu gu-last">
      <h3 class="h3">Direct nesting</h3>
      <p>The other option is to nest your grid units directly in another grid unit. Just add the <code class="language-css">.gr</code> class to an element with the <code class="language-css">.gu</code> class!</p>
-     <pre data-line="2"><code class="lang-html">&lt;div class="gr"&gt;
+     <pre><code class="language-markup">&lt;div class="gr"&gt;
   &lt;div class="gu gu-2of3 gr"&gt;
     &lt;div class="gu gu-1of2"&gt; ... &lt;/div&gt;
     &lt;div class="gu gu-last"&gt; ... &lt;/div&gt;
@@ -236,7 +236,7 @@
 </div>
 
 <h2 class="h2 mtm" id="centering">Centering columns</h2>
-<p>Using the <code>.bac</code> (Block Align Center) class as described on the <a href="/tetra-ui/doc/helpers.html">helpers page</a>.</p>
+<p>Using the <code class="language-css">.bac</code> (Block Align Center) class as described on the <a href="/tetra-ui/doc/helpers.html">helpers page</a>.</p>
 <div class="gr gr-zebra">
   <div class="gu gu-1of5 bac"><span class="hide-s">.gu</span> .gu-1of5 .bac</div>
   <div class="gu gu-1of4 bac"><span class="hide-s">.gu</span> .gu-1of4 .bac</div>
@@ -255,6 +255,8 @@
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>
+
+<script src="/tetra-ui/doc/lib/prism/prism.js"></script>
 
 </body>
 </html>

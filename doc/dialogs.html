@@ -107,7 +107,7 @@
       <p><a class="tooltip tooltip-left">Tooltip on left<span class="tooltip-content">I'm on left</span></a></p>
     </div>
 
-    <pre class="mtl"><code class="lang-html">&lt;a href="" class="tooltip"&gt;&lt;!-- optionally add tooltip-right, tooltip-bottom, tooltip-left classes --&gt;
+    <pre><code class="language-markup">&lt;a href="" class="tooltip"&gt;&lt;!-- optionally add tooltip-right, tooltip-bottom, tooltip-left classes --&gt;
   This element has a tooltip
 
   &lt;span class="tooltip-content"&gt;Tooltip content&lt;/span&gt;
@@ -234,7 +234,7 @@
       </p>
     </div>
 
-    <pre class="mtl"><code class="lang-html">&lt;!-- optionally add popover-bottom and/or popover-left classes --&gt;
+    <pre><code class="language-markup">&lt;!-- optionally add popover-bottom and/or popover-left classes --&gt;
 &lt;a href="" class="btn btn-primary popover-display"&gt;
   This element has a popover.
 
@@ -264,7 +264,7 @@
       <a data-comp="popin"
          data-event="click"
          data-popin="show"
-         data-target-url="/tetra-ui/doc/popin-sample-1.html"
+         data-target-url="/tetra-ui/doc/xhr/popin-sample-1.html"
          class="bootnode btn btn-primary">
         Popin sample 1
       </a>
@@ -274,7 +274,7 @@
       <a data-comp="popin"
          data-event="click"
          data-popin="show"
-         data-target-url="/tetra-ui/doc/popin-sample-2.html"
+         data-target-url="/tetra-ui/doc/xhr/popin-sample-2.html"
          class="bootnode btn btn-tertiary">
         Popin sample 2
       </a>
@@ -293,7 +293,7 @@
   </div>
   <div class="gu gu-last">
 
-    <pre><code class="lang-html">&lt;a data-comp="popin"
+    <pre><code class="language-markup">&lt;a data-comp="popin"
   data-event="click"
   data-popin="show"
   data-target-url="[url]"
@@ -320,7 +320,7 @@
     <tbody>
       <tr>
         <td>
-          <code class="lang-html">data-comp="popin"</code>
+          <code class="language-markup">data-comp="popin"</code>
         </td>
         <td>
           Calls the required JavaScript component
@@ -328,7 +328,7 @@
       </tr>
       <tr>
         <td>
-          <code class="lang-html">data-event="click"</code>
+          <code class="language-markup">data-event="click"</code>
         </td>
         <td>
           Displays popin on click
@@ -336,8 +336,8 @@
       </tr>
       <tr>
         <td>
-          <code class="lang-html">data-popin="show"</code><br />
-          <code class="lang-html">data-popin="close"</code>
+          <code class="language-markup">data-popin="show"</code><br />
+          <code class="language-markup">data-popin="close"</code>
         </td>
         <td>
           Shows or closes the popin
@@ -345,7 +345,7 @@
       </tr>
       <tr>
         <td>
-          <code class="lang-html">data-target-url="[url]"</code>
+          <code class="language-markup">data-target-url="[url]"</code>
         </td>
         <td>
           Fetches the HTML fragment located at the target URL
@@ -353,7 +353,7 @@
       </tr>
       <tr>
         <td>
-          <code class="lang-html">data-target-id="[id]"</code>
+          <code class="language-markup">data-target-id="[id]"</code>
         </td>
         <td>
           Displays a popin with content of the element #id
@@ -361,7 +361,7 @@
       </tr>
       <tr>
         <td>
-          <code class="lang-html">class="bootnode ..."</code>
+          <code class="language-markup">class="bootnode ..."</code>
         </td>
         <td>
           Instantiates the JavaScript framework
@@ -379,7 +379,7 @@
   </div>
   <div class="gu gu-last">
 
-    <pre><code class="lang-html">&lt;div class="gr"&gt;&lt;!-- Initializes the grid --&gt;
+    <pre><code class="language-markup">&lt;div class="gr"&gt;&lt;!-- Initializes the grid --&gt;
 
 &lt;!-- Base popin class, width set to two thirds of page width --&gt;
 &lt;!-- Put a data-noesc="true" if you want to prevent the popin from being closed by the esc key --&gt;
@@ -417,7 +417,7 @@
   </div>
   <div class="gu gu-last">
 
-    <pre><code class="lang-html">&lt;div class="popin gu-2of3" data-noesc="true"&gt;
+    <pre><code class="language-markup">&lt;div class="popin gu-2of3" data-noesc="true"&gt;
   ...
 &lt;/div&gt;</code></pre>
 
@@ -537,15 +537,12 @@
       </a>
     </div>
 
-    <pre>
-      <code class="lang-html">&lt;a data-comp="highlight"
-    data-event="click"
-    data-highlight="[css selector of the target]"
-    class="bootnode btn btn-primary"&gt;
-    Highlight me !
-  &lt;/a&gt;
-      </code>
-    </pre>
+    <pre><code class="language-markup">&lt;a data-comp="highlight"
+  data-event="click"
+  data-highlight="[css selector of the target]"
+  class="bootnode btn btn-primary"&gt;
+  Highlight me !
+&lt;/a&gt;</code></pre>
 
   </div>
 
@@ -601,6 +598,8 @@
     <p>&copy;2013 APVO CORP.</p>
   </div>
 </div>
+
+<script src="/tetra-ui/doc/lib/prism/prism.js"></script>
 
 </body>
 </html>
