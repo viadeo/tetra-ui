@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Tetra UI{{#if title}} | {{ title }}{{else}}{{/if}}</title>
-  <link rel="icon" href="/tetra-ui/release/img/tetra-ui/favicon.png" />
+  <link rel="icon" href="{{path}}/release/img/tetra-ui/favicon.png" />
   {{#if rtl}}
-    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc-rtl.min.css" />
+    <link rel="stylesheet" href="{{path}}/release/css/tetra-ui-doc-rtl.min.css" />
   {{else}}
-    <link rel="stylesheet" href="/tetra-ui/release/css/tetra-ui-doc.min.css" />
+    <link rel="stylesheet" href="{{path}}/release/css/tetra-ui-doc.min.css" />
   {{/if}}
-  <script src="/tetra-ui/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
-  <!--[if lt IE 8]><script src="/tetra-ui/src/js/lib/JSON-js/json2.js"></script><![endif]-->
-  <script src="/tetra-ui/src/js/lib/tetra/release/tetra-core.js"></script>
-  <script src="/tetra-ui/src/js/conf/tetra-start.js"></script>
+  <script src="{{path}}/src/js/lib/jquery/1.9.1/jquery.min.js"></script>
+  <!--[if lt IE 8]><script src="{{path}}/src/js/lib/JSON-js/json2.js"></script><![endif]-->
+  <script src="{{path}}/src/js/lib/tetra/release/tetra-core.js"></script>
+  <script src="{{path}}/src/js/conf/tetra-start.js"></script>
 </head>
 
 <body{{#if rtl}} dir="rtl" class="rtl"{{/if}}>
@@ -22,7 +22,7 @@
   <div class="header">
     <div class="fluid-container">
       <h1 class="fl">Powered by <i class="vicon">o</i>
-        <a href="/tetra-ui/" class="logo">Tetra UI</a>
+        <a href="{{path}}/" class="logo">Tetra UI</a>
       </h1>
       <a href="https://github.com/viadeo/tetra-ui" class="fr mts btn btn-default btn-large github">Tetra UI on GitHub</a>
     </div>
@@ -51,7 +51,7 @@
   </div>
 </div>
 
-<script src="/tetra-ui/doc/lib/prism/prism.js"></script>
+<script src="{{path}}/doc/lib/prism/prism.js"></script>
 
 </body>
 </html>

@@ -253,7 +253,7 @@ module.exports = function(grunt) {
 
     assemble: {
       options: {
-        assets: 'dist/assets',
+        path: '/tetra-ui',
         partials: ['doc/templates/partials/**/*.hbs']
       },
       pages: {

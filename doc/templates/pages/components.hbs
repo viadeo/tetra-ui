@@ -531,9 +531,9 @@ title: "Components"
     </div>
     <div class="gu gu-last">
         <ul class="nav nav-tabs bootnode" data-event="click" data-comp="navtabs" data-target-id="tab-sample-container-2">
-            <li><a data-href="/tetra-ui/doc/xhr/tab-sample-1.html">Sample 1</a></li>
-            <li><a data-href="/tetra-ui/doc/xhr/tab-sample-2.html">Sample 2</a></li>
-            <li><a data-href="/tetra-ui/doc/xhr/tab-sample-3.html">Sample 3</a></li>
+            <li><a data-href="{{path}}/doc/xhr/tab-sample-1.html">Sample 1</a></li>
+            <li><a data-href="{{path}}/doc/xhr/tab-sample-2.html">Sample 2</a></li>
+            <li><a data-href="{{path}}/doc/xhr/tab-sample-3.html">Sample 3</a></li>
         </ul>
         <div class="nav-tabs-section" id="tab-sample-container-2">
             <div class="section">
@@ -542,7 +542,7 @@ title: "Components"
             </div>
 
             <div class="loader">
-                <img src="/tetra-ui/release/img/loaders/ajax-loader.gif" />
+                <img src="{{path}}/release/img/loaders/ajax-loader.gif" />
                 <p>loading...</p>
             </div>
         </div>
@@ -552,9 +552,9 @@ title: "Components"
   data-comp="navtabs"
   data-target-id="tab-sample-container"&gt;&lt;!-- The id of the element where tab contents will be loaded --&gt;
 
-  &lt;li class="active"&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-1.html"&gt;Sample 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-2.html"&gt;Sample 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-3.html"&gt;Sample 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a data-href="{{path}}/doc/tab-sample-1.html"&gt;Sample 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-href="{{path}}/doc/tab-sample-2.html"&gt;Sample 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-href="{{path}}/doc/tab-sample-3.html"&gt;Sample 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class="nav-tabs-section" id="tab-sample-container"&gt;
@@ -568,7 +568,7 @@ title: "Components"
   &lt;div class="loader"&gt;
 
     &lt;!-- Here, put whatever you want --&gt;
-    &lt;img src="/tetra-ui/src/img/loaders/ajax-loader.gif" /&gt;
+    &lt;img src="{{path}}/src/img/loaders/ajax-loader.gif" /&gt;
     &lt;p&gt;loading...&lt;/p&gt;
 
   &lt;/div&gt;
@@ -1033,11 +1033,11 @@ title: "Components"
       <h2 class="h2" id="autocomplete">Autocomplete</h2>
       <p>A generic autocomplete component with Ajax calls and templating.</p>
       <p>The first autocomplete component sample calls this JSON response:<br />
-        <a href="/tetra-ui/doc/xhr/autocomplete-sample-1.json" target="_blank">autocomplete-sample-1.json</a>
+        <a href="{{path}}/doc/xhr/autocomplete-sample-1.json" target="_blank">autocomplete-sample-1.json</a>
       </p>
       <p></p>
       <p>And the second sample:<br />
-        <a href="/tetra-ui/doc/xhr/autocomplete-sample-2.json" target="_blank">autocomplete-sample-2.json</a>
+        <a href="{{path}}/doc/xhr/autocomplete-sample-2.json" target="_blank">autocomplete-sample-2.json</a>
       </p>
       <p>The <code class="language-markup">data-typing-delay=""</code>
         attribute (not required) sets the delay in milliseconds before sending the server-side request.
@@ -1056,7 +1056,7 @@ title: "Components"
         data-event="click"
         data-min-length="1"
         data-template-id="autocomplete_sample_1"
-        data-url="/tetra-ui/doc/xhr/autocomplete-sample-1.json">
+        data-url="{{path}}/doc/xhr/autocomplete-sample-1.json">
 
         <input type="text" class="input-large" />
 
@@ -1082,7 +1082,7 @@ title: "Components"
         data-no-default="true"
         data-min-length="1"
         data-template-id="autocomplete_sample_2"
-        data-url="/tetra-ui/doc/xhr/autocomplete-sample-2.json">
+        data-url="{{path}}/doc/xhr/autocomplete-sample-2.json">
 
         <input type="text" class="input-large" />
 
@@ -1106,7 +1106,7 @@ title: "Components"
   data-min-length="1"
   data-typing-delay="500"
   data-template-id="autocomplete_sample_1"
-  data-url="/tetra-ui/doc/xhr/autocomplete-sample-1.json"&gt;
+  data-url="{{path}}/doc/xhr/autocomplete-sample-1.json"&gt;
 
   &lt;input type="text" class="input-large" /&gt;
 
