@@ -253,7 +253,8 @@ module.exports = function(grunt) {
 
     assemble: {
       options: {
-        assets: 'dist/assets'
+        assets: 'dist/assets',
+        partials: ['doc/templates/partials/**/*.hbs']
       },
       pages: {
         options: {
