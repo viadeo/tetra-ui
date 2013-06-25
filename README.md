@@ -33,6 +33,14 @@ Since it is better to install packages locally and not system wide:
 Now you should have a `node_modules` folder inside `tetra-ui` with all the required Node modules.
 The `npm`command installs the dependencies located in `package.json`.
 
+#### Upadting submodules
+
+Tetra UI require 2 different submodule (JSON-js and Tetra) so you have to get them too.
+Run these commands in the `tetra-ui` folder:
+
+    git submodule init
+    git submodule update
+
 #### Launching Tetra UI with Grunt’s built-in server
 
     grunt watch-server
