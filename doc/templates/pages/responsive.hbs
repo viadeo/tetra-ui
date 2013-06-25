@@ -114,28 +114,75 @@ title: "Responsive"
     </tr>
   </table>
 
+  <h2 class="h2 mvl">Responsive helpers</h2>
+
+  <table class="table">
+    <tr>
+      <th></th>
+      <th>Large devices</th>
+      <th>Medium devices</th>
+      <th>Small devices</th>
+    </tr>
+    <tr>
+      <th>Float</th>
+      <td>
+        <code class="language-css">.fl</code>
+        <code class="language-css">.fr</code>
+        <code class="language-css">.fno</code>
+        <p class="mbn">Floats left, right or unfloats on large devices and down</p>
+      </td>
+      <td>
+        <code class="language-css">.fl-m</code>
+        <code class="language-css">.fr-m</code>
+        <code class="language-css">.fno-m</code>
+        <p class="mbn">Floats left, right or unfloats on medium devices and down</p>
+      </td>
+      <td>
+        <code class="language-css">.fl-s</code>
+        <code class="language-css">.fr-s</code>
+        <code class="language-css">.fno-s</code>
+        <p class="mbn">Floats left, right or unfloats on small devices only</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Align</th>
+      <td>
+        <code class="language-css">.tal</code> <code class="language-css">.tar</code>
+        <p class="mbn">Aligns left or right on large devices and down</p>
+      </td>
+      <td>
+        <code class="language-css">.tal-m</code> <code class="language-css">.tar-m</code>
+        <p class="mbn">Aligns left or right on medium devices and down</p>
+      </td>
+      <td>
+        <code class="language-css">.tal-s</code> <code class="language-css">.tar-s</code>
+        <p class="mbn">Aligns left or right on small devices only</p>
+      </td>
+    </tr>
+  </table>
+
   <h2 class="h2 mvl">Responsive grid example</h2>
 
   <div class="gr grss gr-zebra">
     <div class="gu gu-1of5 gu-m-1of1 mbs">
       <ul>
-        <li><strong>Desktop</strong> .gu .gu-1of5</li>
-        <li><strong>Tablet</strong> .gu-m-1of1</li>
-        <li><strong>Mobile</strong> inherited</li>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-1of5</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-1of1</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
       </ul>
     </div>
     <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1 mbs">
       <ul>
-        <li><strong>Desktop</strong> .gu .gu-3of5</li>
-        <li><strong>Tablet</strong> .gu-m-3of5</li>
-        <li><strong>Mobile</strong> .gu-s-1of1</li>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-3of5</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-3of5</li>
+        <li><strong class="mrs">Mobile</strong> .gu-s-1of1</li>
       </ul>
     </div>
     <div class="gu gu-last">
       <ul>
-        <li><strong>Desktop</strong> .gu .gu-last</li>
-        <li><strong>Tablet</strong> inherited</li>
-        <li><strong>Mobile</strong> inherited</li>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-last</li>
+        <li><strong class="mrs">Tablet</strong> inherited</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
       </ul>
     </div>
   </div>
@@ -145,23 +192,23 @@ title: "Responsive"
   <div class="gr grss gr-zebra">
     <div class="gu gu-1of4 gu-m-1of3 gu-s-1of1 mbs">
       <ul>
-        <li><strong>Desktop</strong> .gu .gu-1of4</li>
-        <li><strong>Tablet</strong> .gu-m-1of3</li>
-        <li><strong>Mobile</strong> .gu-s-1of1</li>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-1of4</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-1of3</li>
+        <li><strong class="mrs">Mobile</strong> .gu-s-1of1</li>
       </ul>
     </div>
     <div class="gu gu-1of2 gu-m-last mbs">
       <ul>
-        <li><strong>Desktop</strong> .gu .gu-1of2</li>
-        <li><strong>Tablet</strong> .gu-m-last</li>
-        <li><strong>Mobile</strong> inherited</li>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-1of2</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-last</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
       </ul>
     </div>
     <div class="gu gu-last gu-m-1of1">
       <ul>
-        <li><strong>Desktop</strong> .gu .gu-last</li>
-        <li><strong>Tablet</strong> .gu-m-1of1</li>
-        <li><strong>Mobile</strong> inherited</li>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-last</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-1of1</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
       </ul>
     </div>
   </div>

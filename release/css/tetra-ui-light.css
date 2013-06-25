@@ -1775,6 +1775,9 @@ textarea {
 .floatR {
   float: right;
 }
+.fno {
+  float: none;
+}
 .outline {
   outline: #bfbfbf dashed thin;
 }
@@ -1808,6 +1811,21 @@ textarea {
   .show-m {
     display: block;
   }
+  .tal-m {
+    text-align: left;
+  }
+  .tar-m {
+    text-align: right;
+  }
+  .fl-m {
+    float: left;
+  }
+  .fr-m {
+    float: right;
+  }
+  .fno-m {
+    float: none;
+  }
 }
 @media screen and (max-width: 480px) {
   .hide-s {
@@ -1815,6 +1833,21 @@ textarea {
   }
   .show-s {
     display: block;
+  }
+  .tal-s {
+    text-align: left;
+  }
+  .tar-s {
+    text-align: right;
+  }
+  .fl-s {
+    float: left;
+  }
+  .fr-s {
+    float: right;
+  }
+  .fno-s {
+    float: none;
   }
 }
 /* Typography.less
