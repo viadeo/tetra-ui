@@ -4474,6 +4474,9 @@ i.vicon {
 .nav-menu li a:focus {
   background: #ecf1f5;
 }
+.nav-menu li:first-child a {
+  border-radius: 3px 0 0 3px;
+}
 .nav-menu li.active a {
   color: #000000;
 }
