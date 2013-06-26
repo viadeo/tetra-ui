@@ -11,11 +11,11 @@ tetra.view.register('alert', {
 				user: {
 					'click': {
 						'.bx-alert-close': function(e, elm) {
-							_(elm).parents('.bx-alert').remove();
+							_(elm).parent('.bx-alert').remove();
 						},
 
 						'.bx-close': function(e, elm) {
-							_(elm).parents('.bx').remove();
+							_(elm).parent('.bx').remove();
 						}
 					}
 				},
