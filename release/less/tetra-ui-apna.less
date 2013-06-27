@@ -1320,6 +1320,10 @@ textarea {
 .hide-l { display: none; }
 .show-l { display: block; }
 
+.dispb { display: block; }
+.dispib { display: inline-block; }
+.dispi { display: inline; }
+
 @media screen and (max-width: @breakpoint-m) {
   .hide-m { display: none; }
   .show-m { display: block; }
@@ -1330,6 +1334,10 @@ textarea {
   .fl-m { .float-left(@rtl); }
   .fr-m { .float-right(@rtl); }
   .fno-m { float: none; }
+
+  .dispb-m { display: block; }
+  .dispib-m { display: inline-block; }
+  .dispi-m { display: inline; }
 }
 
 @media screen and (max-width: @breakpoint-s) {
@@ -1342,6 +1350,10 @@ textarea {
   .fl-s { .float-left(@rtl); }
   .fr-s { .float-right(@rtl); }
   .fno-s { float: none; }
+
+  .dispb-s { display: block; }
+  .dispib-s { display: inline-block; }
+  .dispi-s { display: inline; }
 }
 
 /* Typography.less

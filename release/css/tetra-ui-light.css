@@ -1804,6 +1804,15 @@ textarea {
 .show-l {
   display: block;
 }
+.dispb {
+  display: block;
+}
+.dispib {
+  display: inline-block;
+}
+.dispi {
+  display: inline;
+}
 @media screen and (max-width: 768px) {
   .hide-m {
     display: none;
@@ -1825,6 +1834,15 @@ textarea {
   }
   .fno-m {
     float: none;
+  }
+  .dispb-m {
+    display: block;
+  }
+  .dispib-m {
+    display: inline-block;
+  }
+  .dispi-m {
+    display: inline;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1848,6 +1866,15 @@ textarea {
   }
   .fno-s {
     float: none;
+  }
+  .dispb-s {
+    display: block;
+  }
+  .dispib-s {
+    display: inline-block;
+  }
+  .dispi-s {
+    display: inline;
   }
 }
 /* Typography.less

@@ -120,6 +120,231 @@
     </div>
   </div>
 
+  <h2 class="h2 mvl">Responsive grid example</h2>
+
+  <div class="gr grss gr-zebra">
+    <div class="gu gu-1of5 gu-m-1of1 mbs">
+      <ul>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-1of5</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-1of1</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
+      </ul>
+    </div>
+    <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1 mbs">
+      <ul>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-3of5</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-3of5</li>
+        <li><strong class="mrs">Mobile</strong> .gu-s-1of1</li>
+      </ul>
+    </div>
+    <div class="gu gu-last">
+      <ul>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-last</li>
+        <li><strong class="mrs">Tablet</strong> inherited</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="h2 mvl">Another responsive grid example</h2>
+
+  <div class="gr grss gr-zebra">
+    <div class="gu gu-1of4 gu-m-1of3 gu-s-1of1 mbs">
+      <ul>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-1of4</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-1of3</li>
+        <li><strong class="mrs">Mobile</strong> .gu-s-1of1</li>
+      </ul>
+    </div>
+    <div class="gu gu-1of2 gu-m-last mbs">
+      <ul>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-1of2</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-last</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
+      </ul>
+    </div>
+    <div class="gu gu-last gu-m-1of1">
+      <ul>
+        <li><strong class="mrs">Desktop</strong> .gu .gu-last</li>
+        <li><strong class="mrs">Tablet</strong> .gu-m-1of1</li>
+        <li><strong class="mrs">Mobile</strong> inherited</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="h2 mvl">Visibility classes</h2>
+
+  <p>Resizing your browser window will show the effect of the different show and hide classes.</p>
+
+  <table class="table">
+    <tr>
+      <th></th>
+      <th>Large devices</th>
+      <th>Medium devices</th>
+      <th>Small devices</th>
+    </tr>
+    <tr>
+      <th>Hide</th>
+      <td>
+        <span class="hide-l fr"><i class="vicon">v</i></span>
+        <code class="language-css">.hide-l</code>
+        <p class="mbn">Hide on large devices and down</p>
+      </td>
+      <td>
+        <span class="hide-m fr"><i class="vicon">v</i></span>
+        <code class="language-css">.hide-m</code>
+        <p class="mbn">Hide on medium devices and down</p>
+      </td>
+      <td>
+        <span class="hide-s fr"><i class="vicon">v</i></span>
+        <code class="language-css">.hide-s</code>
+        <p class="mbn">Hide on small devices only</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Show</th>
+      <td>
+        <span class="show-l fr"><i class="vicon">v</i></span>
+        <code class="language-css">.show-l</code>
+        <p class="mbn">Show on large devices and down</p>
+      </td>
+      <td>
+        <span class="show-m fr"><i class="vicon">v</i></span>
+        <code class="language-css">.show-m</code>
+        <p class="mbn">Show on medium devices and down</p>
+      </td>
+      <td>
+        <span class="show-s fr"><i class="vicon">v</i></span>
+        <code class="language-css">.show-s</code>
+        <p class="mbn">Show on small devices</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Samples</th>
+      <td>
+        <span class="hide-m fr"><i class="vicon">v</i></span>
+        <code class="language-css">.hide-m</code>
+        <p class="mbn">Show only on large devices</p>
+      </td>
+      <td>
+        <span class="hide-l show-m hide-s fr"><i class="vicon">v</i></span>
+        <code class="language-css">.hide-l .show-m .hide-s</code>
+        <p class="mbn">Show only on medium devices</p>
+      </td>
+      <td>
+        <span class="hide-l show-s fr"><i class="vicon">v</i></span>
+        <code class="language-css">.hide-l .show-s</code>
+        <p class="mbn">Show only on small devices</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2 class="h2 mvl">Responsive helpers</h2>
+
+  <div class="gr grsl">
+    <div class="gu gu-1of2 gu-m-1of1">
+      <table class="table">
+        <tr>
+          <th></th>
+          <th>Large devices</th>
+          <th>Medium devices</th>
+          <th>Small devices</th>
+        </tr>
+        <tr>
+          <th>Float</th>
+          <td>
+            <code class="language-css">.fl</code>
+            <code class="language-css">.fr</code>
+            <code class="language-css">.fno</code>
+            <p class="mbn">Floats left, right or unfloats on large devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.fl-m</code>
+            <code class="language-css">.fr-m</code>
+            <code class="language-css">.fno-m</code>
+            <p class="mbn">Floats left, right or unfloats on medium devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.fl-s</code>
+            <code class="language-css">.fr-s</code>
+            <code class="language-css">.fno-s</code>
+            <p class="mbn">Floats left, right or unfloats on small devices only</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Align</th>
+          <td>
+            <code class="language-css">.tal</code> <code class="language-css">.tar</code>
+            <p class="mbn">Aligns left or right on large devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.tal-m</code> <code class="language-css">.tar-m</code>
+            <p class="mbn">Aligns left or right on medium devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.tal-s</code> <code class="language-css">.tar-s</code>
+            <p class="mbn">Aligns left or right on small devices only</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="gu gu-last">
+      <table class="table">
+        <tr>
+          <th></th>
+          <th>Large devices</th>
+          <th>Medium devices</th>
+          <th>Small devices</th>
+        </tr>
+        <tr>
+          <th>Block</th>
+          <td>
+            <code class="language-css">.dispb</code>
+            <p class="mbn">Block layout on large devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.dispb-m</code>
+            <p class="mbn">Block layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.dispb-s</code>
+            <p class="mbn">Block layout on small devices and down</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Inline block</th>
+          <td>
+            <code class="language-css">.dispib</code>
+            <p class="mbn">Inline block layout on large devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.dispib-m</code>
+            <p class="mbn">Inline block layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.dispib-s</code>
+            <p class="mbn">Inline block layout on small devices and down</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Inline</th>
+          <td>
+            <code class="language-css">.dispi</code>
+            <p class="mbn">Inline layout on large devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.dispi-m</code>
+            <p class="mbn">Inline layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class="language-css">.dispi-s</code>
+            <p class="mbn">Inline layout on small devices and down</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
   <h2 class="h2 mvl">Variables in Less</h2>
 
   <div class="gr grsl">
@@ -181,171 +406,6 @@
     </div>
   </div>
 
-  <h2 class="h2 mvl">Visibility classes</h2>
-
-  <p>Resizing your browser window will show the effect of the different show and hide classes.</p>
-
-  <table class="table">
-    <tr>
-      <th></th>
-      <th>Large devices</th>
-      <th>Medium devices</th>
-      <th>Small devices</th>
-    </tr>
-    <tr>
-      <th>Hide</th>
-      <td>
-        <span class="hide-l fl"><i class="vicon">v</i></span>
-        <code class="language-css">.hide-l</code>
-        <p class="mbn">Hide on large devices and down</p>
-      </td>
-      <td>
-        <span class="hide-m fl"><i class="vicon">v</i></span>
-        <code class="language-css">.hide-m</code>
-        <p class="mbn">Hide on medium devices and down</p>
-      </td>
-      <td>
-        <span class="hide-s fl"><i class="vicon">v</i></span>
-        <code class="language-css">.hide-s</code>
-        <p class="mbn">Hide on small devices only</p>
-      </td>
-    </tr>
-    <tr>
-      <th>Show</th>
-      <td>
-        <span class="show-l fl"><i class="vicon">v</i></span>
-        <code class="language-css">.show-l</code>
-        <p class="mbn">Show on large devices and down</p>
-      </td>
-      <td>
-        <span class="show-m fl"><i class="vicon">v</i></span>
-        <code class="language-css">.show-m</code>
-        <p class="mbn">Show on medium devices and down</p>
-      </td>
-      <td>
-        <span class="show-s fl"><i class="vicon">v</i></span>
-        <code class="language-css">.show-s</code>
-        <p class="mbn">Show on small devices</p>
-      </td>
-    </tr>
-    <tr>
-      <th>Samples</th>
-      <td>
-        <span class="hide-m fl"><i class="vicon">v</i></span>
-        <code class="language-css">.hide-m</code>
-        <p class="mbn">Show only on large devices</p>
-      </td>
-      <td>
-        <span class="hide-l show-m hide-s fl"><i class="vicon">v</i></span>
-        <code class="language-css">.hide-l .show-m .hide-s</code>
-        <p class="mbn">Show only on medium devices</p>
-      </td>
-      <td>
-        <span class="hide-l show-s fl"><i class="vicon">v</i></span>
-        <code class="language-css">.hide-l .show-s</code>
-        <p class="mbn">Show only on small devices</p>
-      </td>
-    </tr>
-  </table>
-
-  <h2 class="h2 mvl">Responsive helpers</h2>
-
-  <table class="table">
-    <tr>
-      <th></th>
-      <th>Large devices</th>
-      <th>Medium devices</th>
-      <th>Small devices</th>
-    </tr>
-    <tr>
-      <th>Float</th>
-      <td>
-        <code class="language-css">.fl</code>
-        <code class="language-css">.fr</code>
-        <code class="language-css">.fno</code>
-        <p class="mbn">Floats left, right or unfloats on large devices and down</p>
-      </td>
-      <td>
-        <code class="language-css">.fl-m</code>
-        <code class="language-css">.fr-m</code>
-        <code class="language-css">.fno-m</code>
-        <p class="mbn">Floats left, right or unfloats on medium devices and down</p>
-      </td>
-      <td>
-        <code class="language-css">.fl-s</code>
-        <code class="language-css">.fr-s</code>
-        <code class="language-css">.fno-s</code>
-        <p class="mbn">Floats left, right or unfloats on small devices only</p>
-      </td>
-    </tr>
-    <tr>
-      <th>Align</th>
-      <td>
-        <code class="language-css">.tal</code> <code class="language-css">.tar</code>
-        <p class="mbn">Aligns left or right on large devices and down</p>
-      </td>
-      <td>
-        <code class="language-css">.tal-m</code> <code class="language-css">.tar-m</code>
-        <p class="mbn">Aligns left or right on medium devices and down</p>
-      </td>
-      <td>
-        <code class="language-css">.tal-s</code> <code class="language-css">.tar-s</code>
-        <p class="mbn">Aligns left or right on small devices only</p>
-      </td>
-    </tr>
-  </table>
-
-  <h2 class="h2 mvl">Responsive grid example</h2>
-
-  <div class="gr grss gr-zebra">
-    <div class="gu gu-1of5 gu-m-1of1 mbs">
-      <ul>
-        <li><strong class="mrs">Desktop</strong> .gu .gu-1of5</li>
-        <li><strong class="mrs">Tablet</strong> .gu-m-1of1</li>
-        <li><strong class="mrs">Mobile</strong> inherited</li>
-      </ul>
-    </div>
-    <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1 mbs">
-      <ul>
-        <li><strong class="mrs">Desktop</strong> .gu .gu-3of5</li>
-        <li><strong class="mrs">Tablet</strong> .gu-m-3of5</li>
-        <li><strong class="mrs">Mobile</strong> .gu-s-1of1</li>
-      </ul>
-    </div>
-    <div class="gu gu-last">
-      <ul>
-        <li><strong class="mrs">Desktop</strong> .gu .gu-last</li>
-        <li><strong class="mrs">Tablet</strong> inherited</li>
-        <li><strong class="mrs">Mobile</strong> inherited</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2 class="h2 mvl">Another responsive grid example</h2>
-
-  <div class="gr grss gr-zebra">
-    <div class="gu gu-1of4 gu-m-1of3 gu-s-1of1 mbs">
-      <ul>
-        <li><strong class="mrs">Desktop</strong> .gu .gu-1of4</li>
-        <li><strong class="mrs">Tablet</strong> .gu-m-1of3</li>
-        <li><strong class="mrs">Mobile</strong> .gu-s-1of1</li>
-      </ul>
-    </div>
-    <div class="gu gu-1of2 gu-m-last mbs">
-      <ul>
-        <li><strong class="mrs">Desktop</strong> .gu .gu-1of2</li>
-        <li><strong class="mrs">Tablet</strong> .gu-m-last</li>
-        <li><strong class="mrs">Mobile</strong> inherited</li>
-      </ul>
-    </div>
-    <div class="gu gu-last gu-m-1of1">
-      <ul>
-        <li><strong class="mrs">Desktop</strong> .gu .gu-last</li>
-        <li><strong class="mrs">Tablet</strong> .gu-m-1of1</li>
-        <li><strong class="mrs">Mobile</strong> inherited</li>
-      </ul>
-    </div>
-  </div>
 </div>
 
 <div class="gr grsl">
