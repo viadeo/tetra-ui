@@ -1327,6 +1327,7 @@ textarea {
 
   .tal-m { .text-align-left(@rtl); }
   .tar-m { .text-align-right(@rtl); }
+  .tac-m { text-align: center; }
 
   .fl-m { .float-left(@rtl); }
   .fr-m { .float-right(@rtl); }
@@ -1343,6 +1344,7 @@ textarea {
 
   .tal-s { .text-align-left(@rtl); }
   .tar-s { .text-align-right(@rtl); }
+  .tac-s { text-align: center; }
 
   .fl-s { .float-left(@rtl); }
   .fr-s { .float-right(@rtl); }
@@ -3280,16 +3282,16 @@ i.vicon {
   top: 0;
   width: 100%;
   height: 100%;
-  
+
   opacity: 0.6;
   filter: ~"alpha(opacity = 60)";
-  
+
   background: @black;
   background: -webkit-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
   background:    -moz-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
   background:      -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
   background:         radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
-  
+
   -webkit-animation: popin-overlay-fadein 0.5s;
   -moz-animation: popin-overlay-fadein 0.5s;
 }
@@ -3302,7 +3304,7 @@ i.vicon {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  
+
   .popin-loader {
     position: absolute;
     left: 0;
@@ -3311,12 +3313,13 @@ i.vicon {
     height: 100%;
     background: url('@{img-loaders-dir}/ajax-loader.gif') no-repeat 50% 35%;
   }
-  
+
   > .gr {
-    width: @siteWidth;
+    width: @page-width;
+    max-width: @page-width-max;
     margin: 0 auto;
   }
-  
+
   .popin {
     margin: 125px auto 0;
     .paxs;
@@ -3324,38 +3327,38 @@ i.vicon {
     background: lighten(@overlayBorder, 5%);
     background: fadeout(@overlayBorder, 40%);
     box-shadow: 0 0 4px fadeout(@black, 30%);
-    
+
     -webkit-animation: popin-fadein 0.15s;
     -moz-animation: popin-fadein 0.15s;
-    
+
     .popin-header {
       .clearfixHack();
       padding: @spacingM @spacingL @spacingXs;
       border-bottom: 1px solid @panelBorder;
       background: @panelBackground;
-      
+
       h5 {
         margin: 0;
         padding: 0;
         text-transform: uppercase;
       }
-      
+
       button.close {
         .float-right(@rtl);
         color: @linkColor;
-        
+
         &:hover {
           color: @linkColorHover;
           text-decoration: underline;
         }
       }
     }
-    
+
     .popin-body {
       padding: @spacingM @spacingL;
       background: @white;
     }
-    
+
     .popin-footer {
       .clearfixHack();
       padding: @spacingM @spacingL;

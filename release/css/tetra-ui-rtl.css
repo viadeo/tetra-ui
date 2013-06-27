@@ -1826,6 +1826,9 @@ textarea {
   .tar-m {
     text-align: left;
   }
+  .tac-m {
+    text-align: center;
+  }
   .fl-m {
     float: right;
   }
@@ -1857,6 +1860,9 @@ textarea {
   }
   .tar-s {
     text-align: left;
+  }
+  .tac-s {
+    text-align: center;
   }
   .fl-s {
     float: right;
@@ -4158,7 +4164,8 @@ i.vicon {
   background: url('/v_img/profilev2/ajax-loader.gif') no-repeat 50% 35%;
 }
 .popin-container > .gr {
-  width: 980px;
+  width: 85%;
+  max-width: 1020px;
   margin: 0 auto;
 }
 .popin-container .popin {
