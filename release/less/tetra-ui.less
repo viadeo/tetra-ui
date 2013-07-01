@@ -9,7 +9,7 @@
 
 // Fonts
 @fonts-dir: "/css/core/fonts";
-@fonts-version: "1372151483";
+@fonts-version: "1372674005";
 @font-stack: "Arial", sans-serif;
 
 // Right To Left mode (arabic)
@@ -4504,30 +4504,35 @@ i.vicon {
 
 .bx-alert {
 	position: relative;
-	padding: @spacingL @spacingL @spacingM;
-	border: 2px solid @white;
-	background: tint(@blueSoft, 90%);
-	box-shadow: 0 1px 4px fade(@black, 15%);
+	display: table;
+	width: 100%;
+	padding: 0;
+	border-radius: @borderRadiusS;
+	background: @blue-2;
+	color: @white;
+	box-shadow: 1px 1px 4px fade(@black, 20%);
 
 	.core-form & {
-		padding: @spacingXs @spacingM @spacingXs;
+		padding: 0;
 	}
 
 	.bx-alert-close {
-		.position (@rtl) when (@rtl = false) { right: -5px; }
+		.position (@rtl) when (@rtl = false) { right: 0; }
 		.position (@rtl) when (@rtl = true) { left: 0; }
 
 		position: absolute;
-		top: -3px;
+		top: -2px;
 		.position(@rtl);
 
 		.vicon {
-			color: tint(@blueSoft, 50%);
+			color: @black;
+			font-size: 10px;
+			opacity: 0.4;
 		}
 		&:hover,
 		&:focus {
 			.vicon {
-				color: tint(@blueSoft, 20%);
+				opacity: 1;
 			}
 		}
 		&:focus {
@@ -4536,66 +4541,77 @@ i.vicon {
 	}
 
 	.bx-alert-icon {
-		display: inline-block;
-		width: 10%;
-		height: 1.75em;
-		font-size: 20px;
-		color: tint(@blueSoft, 60%);
-		text-shadow: 0 -1px 1px fade(@black, 70%), 0 1px 1px fade(@white, 100%);
+		display: table-cell;
+		padding: 0 @spacingM;
+		font-size: 12px;
+		color: @white;
 		vertical-align: middle;
-    *line-height: 2.25em;
-    *margin-top: -1.5em;
+		background: shade(@blue-2, 10%);
+		border-radius: @borderRadiusS 0 0 @borderRadiusS;
+		*float: left; // IE 7 needs hacks (lack of table-cell support)
+		*padding: @spacingM;
+		*background: none;
 	}
 
 	.bx-alert-content {
-		display: inline-block;
-		width: 89%;
+		display: table-cell;
+		width: 100%;
 		vertical-align: middle;
+		padding: @spacingM @spacingL;
+		*width: auto; // IE 7 needs hacks (lack of table-cell support)
 		*zoom: 1;
-		*display: inline;
 	}
 
 	.bx-alert-title {
 		margin: 0 0 @spacingXs 0;
+		color: @white;
 	}
 }
 
 .bx-alert-warning {
-	padding: @spacingM @spacingL @spacingS @spacingL;
-	border: 0;
-	border-bottom: 1px dotted lighten(@black, 90%);
-	#gradient > .vertical(tint(@yellow, 80%), tint(@yellow, 70%));
+	background: lighten(@orange-4, 30%);
+	color: @baseFontColor;
 
-	.bx-alert-close {
-		.vicon {
-			color: @yellow;
-		}
-		&:hover,
-		&:focus {
-			.vicon {
-				color: shade(@yellow, 20%);
-			}
-		}
+	.bx-alert-icon {
+		background: lighten(@orange-4, 15%);
+		*background: none;
 	}
 }
 
 .bx-alert-error {
-	padding: @spacingM @spacingL @spacingS @spacingL;
-	border: 0;
-	border-bottom: 1px dotted lighten(@black, 90%);
-	color: @errorText;
-	#gradient > .vertical(tint(@errorText, 85%), tint(@errorText, 80%));
+	background: @orange-2;
 
-	.bx-alert-close {
-		.vicon {
-			color: tint(@errorText, 60%);
-		}
-		&:hover,
-		&:focus {
-			.vicon {
-				color: tint(@errorText, 30%);
-			}
-		}
+	.bx-alert-icon {
+		background: shade(@orange-2, 10%);
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
+	}
+}
+
+.bx-alert-ok {
+	background: @green-2;
+
+	.bx-alert-icon {
+		background: shade(@green-2, 10%);
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
+	}
+}
+
+.bx-alert-notification {
+	background: @blue-4;
+
+	.bx-alert-icon {
+		background: shade(@blue-4, 10%);
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
+	}
+}
+
+.bx-alert-premium {
+	background: tint(@black, 24%);
+
+	.bx-alert-icon {
+		background: shade(tint(@black, 24%), 10%);
+		color: @orange-4;
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
