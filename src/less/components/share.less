@@ -1,0 +1,71 @@
+// Share links
+
+.share-links {
+	dt, dd, ul {
+		display: inline;
+	}
+
+	dt {
+		margin-right: @spacingS;
+	}
+
+	ul:hover {
+		a {
+			opacity: 0.3;
+		}
+	}
+
+	li {
+		display: inline;
+
+		a {
+			display: inline-block;
+			width: 2.1em;
+			height: 2.1em;
+			border-radius: @borderRadiusS;
+			text-align: center;
+			margin: 0 @spacingXs;
+			white-space: nowrap;
+			text-decoration: none;
+
+			.transition(opacity 0.3s);
+
+			.vicon {
+				color: @white;
+				font-size: 9px;
+				line-height: 2.8em;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.facebook {
+				background: #3b5999;
+			}
+
+			&.google {
+				background: #d1402d;
+			}
+
+			&.twitter {
+				background: #02abee;
+			}
+
+			&.viadeo {
+				background: #272727;
+
+				.vicon {
+					color: @orange-1;
+
+					&:first-child {
+						margin-right: -2.78em;
+						color: @white;
+					}
+				}
+			}
+
+		}
+
+	}
+}

@@ -5704,3 +5704,58 @@ i.vicon {
 .progressbar.pb-large .pb-mask {
   border-radius: 20px;
 }
+.share-links dt,
+.share-links dd,
+.share-links ul {
+  display: inline;
+}
+.share-links dt {
+  margin-right: 10px;
+}
+.share-links ul:hover a {
+  opacity: 0.3;
+}
+.share-links li {
+  display: inline;
+}
+.share-links li a {
+  display: inline-block;
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0 5px;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.share-links li a .vicon {
+  color: #ffffff;
+  font-size: 9px;
+  line-height: 2.8em;
+}
+.share-links li a:hover {
+  opacity: 1;
+}
+.share-links li a.facebook {
+  background: #3b5999;
+}
+.share-links li a.google {
+  background: #d1402d;
+}
+.share-links li a.twitter {
+  background: #02abee;
+}
+.share-links li a.viadeo {
+  background: #272727;
+}
+.share-links li a.viadeo .vicon {
+  color: #f56600;
+}
+.share-links li a.viadeo .vicon:first-child {
+  margin-right: -2.78em;
+  color: #ffffff;
+}
