@@ -32,7 +32,8 @@
 	opacity: 0;
 
 	color: @white !important; // Avoid some context inherit problems
-	font: 11px/1.6em 'Lucida Grande', Tahoma, Arial, Verdana, sans-serif;
+	font: 11px 'Arial', sans-serif;
+  line-height: 1.6em;
 
 	text-align: center;
 	text-decoration: none;
@@ -41,10 +42,9 @@
 
 	pointer-events: none;
 
-	   -moz-transition: opacity .3s, margin .3s;
-	     -o-transition: opacity .3s, margin .3s;
-	-webkit-transition: opacity .3s, margin .3s;
-	        transition: opacity .3s, margin .3s;
+  -webkit-transition: opacity .3s, margin .3s;
+	-moz-transition: opacity .3s, margin .3s;
+  transition: opacity .3s, margin .3s;
 
 	&:after {
 	  content: '';

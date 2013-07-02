@@ -2730,7 +2730,8 @@ i.vicon {
 	opacity: 0;
 
 	color: @white !important; // Avoid some context inherit problems
-	font: 11px/1.6em 'Lucida Grande', Tahoma, Arial, Verdana, sans-serif;
+	font: 11px 'Arial', sans-serif;
+  line-height: 1.6em;
 
 	text-align: center;
 	text-decoration: none;
@@ -2739,10 +2740,9 @@ i.vicon {
 
 	pointer-events: none;
 
-	   -moz-transition: opacity .3s, margin .3s;
-	     -o-transition: opacity .3s, margin .3s;
-	-webkit-transition: opacity .3s, margin .3s;
-	        transition: opacity .3s, margin .3s;
+  -webkit-transition: opacity .3s, margin .3s;
+	-moz-transition: opacity .3s, margin .3s;
+  transition: opacity .3s, margin .3s;
 
 	&:after {
 	  content: '';
@@ -4572,12 +4572,12 @@ i.vicon {
 }
 
 .bx-alert-warning {
-	background: lighten(@orange-4, 30%);
+	#gradient > .vertical(tint(@yellow, 80%), tint(@yellow, 70%));
 	color: @baseFontColor;
 
 	.bx-alert-icon {
-		background: lighten(@orange-4, 15%);
-		*background: none;
+		background: none;
+		color: @yellow;
 	}
 }
 
@@ -5176,7 +5176,7 @@ i.vicon {
 
 	ul:hover {
 		a {
-			opacity: 0.3;
+			opacity: .3;
 		}
 	}
 
@@ -5193,7 +5193,7 @@ i.vicon {
 			white-space: nowrap;
 			text-decoration: none;
 
-			.transition(opacity 0.3s);
+			.transition(opacity .3s);
 
 			.vicon {
 				color: @white;
@@ -5201,30 +5201,17 @@ i.vicon {
 				line-height: 2.8em;
 			}
 
-			&:hover {
-				opacity: 1;
-			}
+			&:hover { opacity: 1; }
 
-			&.facebook {
-				background: #3b5999;
-			}
-
-			&.google {
-				background: #d1402d;
-			}
-
-			&.twitter {
-				background: #02abee;
-			}
-
-			&.viadeo {
-				background: #272727;
-
+			&.facebook { background: #3b5999; }
+			&.google { background: #d1402d; }
+			&.twitter { background: #02abee; }
+			&.viadeo { background: #272727;
 				.vicon {
 					color: @orange-1;
 
 					&:first-child {
-						margin-right: -2.78em;
+						margin-right: -2.8em;
 						color: @white;
 					}
 				}
@@ -5232,5 +5219,9 @@ i.vicon {
 
 		}
 
+	}
+
+	.tooltip-content {
+		transition-delay: .4s;
 	}
 }

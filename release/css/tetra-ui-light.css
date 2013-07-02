@@ -3225,15 +3225,15 @@ i.vicon {
   *filter: none;
   opacity: 0;
   color: #ffffff !important;
-  font: 11px/1.6em 'Lucida Grande', Tahoma, Arial, Verdana, sans-serif;
+  font: 11px 'Arial', sans-serif;
+  line-height: 1.6em;
   text-align: center;
   text-decoration: none;
   text-shadow: none;
   white-space: nowrap;
   pointer-events: none;
-  -moz-transition: opacity .3s, margin .3s;
-  -o-transition: opacity .3s, margin .3s;
   -webkit-transition: opacity .3s, margin .3s;
+  -moz-transition: opacity .3s, margin .3s;
   transition: opacity .3s, margin .3s;
 }
 .tooltip-content:after {
@@ -4673,12 +4673,20 @@ i.vicon {
   color: #ffffff;
 }
 .bx-alert-warning {
-  background: #ffebcd;
+  background-color: #fff2bc;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff7d2), color-stop(100%, #fff2bc));
+  background-image: -webkit-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: -o-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: linear-gradient(to bottom, #fff7d2, #fff2bc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d2', endColorstr='#fff2bc', GradientType=0);
+  *filter: none;
   color: #222222;
 }
 .bx-alert-warning .bx-alert-icon {
-  background: #fecd81;
-  *background: none;
+  background: none;
+  color: #ffd520;
 }
 .bx-alert-error {
   background: #f1532e;

@@ -11,7 +11,7 @@
 
 	ul:hover {
 		a {
-			opacity: 0.3;
+			opacity: .3;
 		}
 	}
 
@@ -28,7 +28,7 @@
 			white-space: nowrap;
 			text-decoration: none;
 
-			.transition(opacity 0.3s);
+			.transition(opacity .3s);
 
 			.vicon {
 				color: @white;
@@ -36,30 +36,17 @@
 				line-height: 2.8em;
 			}
 
-			&:hover {
-				opacity: 1;
-			}
+			&:hover { opacity: 1; }
 
-			&.facebook {
-				background: #3b5999;
-			}
-
-			&.google {
-				background: #d1402d;
-			}
-
-			&.twitter {
-				background: #02abee;
-			}
-
-			&.viadeo {
-				background: #272727;
-
+			&.facebook { background: #3b5999; }
+			&.google { background: #d1402d; }
+			&.twitter { background: #02abee; }
+			&.viadeo { background: #272727;
 				.vicon {
 					color: @orange-1;
 
 					&:first-child {
-						margin-right: -2.78em;
+						margin-right: -2.8em;
 						color: @white;
 					}
 				}
@@ -67,5 +54,9 @@
 
 		}
 
+	}
+
+	.tooltip-content {
+		transition-delay: .4s;
 	}
 }
