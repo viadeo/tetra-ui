@@ -3882,14 +3882,15 @@ i.vicon {
 		.position (@rtl) when (@rtl = true) { left: 0; }
 
 		position: absolute;
-		top: @spacingXs;
+		top: 0;
 		.position(@rtl);
 
 		.vicon {
 			color: @black;
 			font-size: 10px;
 			opacity: 0.4;
-			line-height: 1em;
+			height: 2em;
+			line-height: 2em;
 		}
 		&:hover,
 		&:focus {
