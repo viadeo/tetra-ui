@@ -4533,14 +4533,14 @@ i.vicon {
 		.position (@rtl) when (@rtl = true) { left: 0; }
 
 		position: absolute;
-		top: 0;
+		top: @spacingXs;
 		.position(@rtl);
 
 		.vicon {
 			color: @black;
 			font-size: 10px;
 			opacity: 0.4;
-			line-height: 8px;
+			line-height: 1em;
 		}
 		&:hover,
 		&:focus {
