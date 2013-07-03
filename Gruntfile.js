@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     less: {
-      development: {
+      uncompressed: {
         options: {
           paths: ['src/less']
         },
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         }
       },
 
-      production: {
+      minified: {
         options: {
           paths: ['src/less'],
           yuicompress: true
@@ -71,13 +71,17 @@ module.exports = function(grunt) {
         banner: "/*! Tetra UI v<%= pkg.version %> | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */\n\n"
       },
 
-      release: {
+      css: {
         files: {
           'release/css/tetra-ui.min.css': ['<banner>', 'release/css/tetra-ui.min.css'],
           'release/css/tetra-ui-apna.min.css': ['<banner>', 'release/css/tetra-ui-apna.min.css'],
           'release/css/tetra-ui-doc.min.css': ['<banner>', 'release/css/tetra-ui-doc.min.css'],
-          'release/css/tetra-ui-light.min.css': ['<banner>', 'release/css/tetra-ui-light.min.css'],
+          'release/css/tetra-ui-light.min.css': ['<banner>', 'release/css/tetra-ui-light.min.css']
+        }
+      },
 
+      less: {
+        files: {
           'release/less/tetra-ui.less': ['<banner>',
             'src/less/foundation/variables.less',
             'src/less/foundation/mixins.less',
@@ -147,7 +151,6 @@ module.exports = function(grunt) {
             'src/less/components/steps.less',
             'src/less/components/progressbar.less',
             'src/less/components/share.less'
-
           ],
 
           'release/less/tetra-ui-rtl.less': ['<banner>',
@@ -210,7 +213,11 @@ module.exports = function(grunt) {
             'src/less/components/placeholder.less',
             'src/less/components/field-helper.less'
           ],
+        }
+      },
 
+      js: {
+        files: {
           'release/js/autocomplete.js': ['<banner>', 'src/js/coremvc/comps/autocomplete/model/autocomplete.class.js', 'src/js/coremvc/comps/autocomplete/controller/autocomplete.ctrl.js', 'src/js/coremvc/comps/autocomplete/view/autocomplete.ui.js'],
           'release/js/dropdown.js': ['<banner>', 'src/js/coremvc/comps/dropdown/controller/dropdown.ctrl.js', 'src/js/coremvc/comps/dropdown/view/view.ui.js'],
           'release/js/dropdown_click_enabled.js': ['<banner>', 'src/js/coremvc/comps/dropdown/controller/dropdown.ctrl.js', 'src/js/coremvc/comps/dropdown/view/click_enabled.ui.js'],
@@ -243,11 +250,11 @@ module.exports = function(grunt) {
     watch: {
       less: {
         files: ['src/less/**/*.less'],
-        tasks: ['less', 'concat']
+        tasks: ['less', 'concat:css', 'concat:less']
       },
       js: {
         files: ['src/js/coremvc/comps/**/*.js'],
-        tasks: ['jshint', 'concat']
+        tasks: ['jshint', 'concat:js']
       },
       doc: {
         files: ['doc/templates/**/*'],
