@@ -19,7 +19,7 @@
     z-index: 2;
     line-height: 2.3em;
     white-space: nowrap;
-    background: tint(@errorText, 27%);
+    background: @errorText;
     color: @white;
     border-radius: @borderRadiusS;
     box-shadow: 1px 1px 5px fade(@black, 30%);
@@ -30,11 +30,11 @@
     &:after {
       .arrow (@rtl) when (@rtl = false) {
         right: 0;
-        border-left: 8px solid tint(@errorText, 27%);
+        border-left: 8px solid @errorText;
       }
       .arrow (@rtl) when (@rtl = true) {
         left: 0;
-        border-right: 8px solid tint(@errorText, 27%);
+        border-right: 8px solid @errorText;
       }
 
       content: "";
@@ -69,12 +69,12 @@
     &:after {
       .arrow (@rtl) when (@rtl = false) {
         left: 0; right: auto;
-        border-right: 8px solid tint(@errorText, 27%);
+        border-right: 8px solid @errorText;
         border-left: 0;
       }
       .arrow (@rtl) when (@rtl = true) {
         right: 0; left: auto;
-        border-left: 8px solid tint(@errorText, 27%);
+        border-left: 8px solid @errorText;
         border-right: 0;
       }
 
@@ -102,7 +102,7 @@
       margin-top: -14px;
       .margin-left(@rtl, @spacingM);
       .position(@rtl);
-      border-bottom: 8px solid tint(@errorText, 27%);
+      border-bottom: 8px solid @errorText;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
     }

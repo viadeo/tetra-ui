@@ -2356,28 +2356,28 @@ pre {
 .core-form .control-group.error > label,
 .core-form .control-group.error .help-block,
 .core-form .control-group.error .help-inline {
-  color: #c80000;
+  color: #d63333;
 }
 .core-form .control-group.error input,
 .core-form .control-group.error select,
 .core-form .control-group.error textarea {
-  border-color: #c80000;
+  border-color: #d63333;
 }
 .core-form .control-group.error input:focus,
 .core-form .control-group.error select:focus,
 .core-form .control-group.error textarea:focus {
-  border-color: #950000;
-  -webkit-box-shadow: 0 0 6px rgba(200, 0, 0, 0.6);
-  box-shadow: 0 0 6px rgba(200, 0, 0, 0.6);
+  border-color: #b22424;
+  -webkit-box-shadow: 0 0 6px rgba(214, 51, 51, 0.6);
+  box-shadow: 0 0 6px rgba(214, 51, 51, 0.6);
 }
 .core-form .control-group.error .input-prepend .add-on,
 .core-form .control-group.error .input-append .add-on {
-  color: #c80000;
-  background-color: #fff1f1;
-  border-color: #c80000;
+  color: #d63333;
+  background-color: #ffffff;
+  border-color: #d63333;
 }
 .core-form .control-group.error .input-append .btn {
-  border-color: #c80000;
+  border-color: #d63333;
 }
 .core-form .control-group.success > label,
 .core-form .control-group.success .help-block,
@@ -2945,11 +2945,11 @@ h1 .sub {
   color: #809db7;
 }
 .ui-label:hover .vicon:hover {
-  color: #c80000;
+  color: #d63333;
 }
 .ui-label a:hover .vicon,
 .ui-label a:focus .vicon {
-  color: #c80000;
+  color: #d63333;
 }
 .ui-badge {
   background-color: #f56600;
@@ -5192,13 +5192,14 @@ i.vicon {
 }
 .bx-alert .bx-alert-close {
   position: absolute;
-  top: -2px;
+  top: 0;
   right: 0;
 }
 .bx-alert .bx-alert-close .vicon {
   color: #000000;
   font-size: 10px;
   opacity: 0.4;
+  line-height: 8px;
 }
 .bx-alert .bx-alert-close:hover .vicon,
 .bx-alert .bx-alert-close:focus .vicon {
@@ -5252,6 +5253,13 @@ i.vicon {
 }
 .bx-alert-error .bx-alert-icon {
   background: #d94b29;
+  *background: none;
+}
+.bx-alert-error-form {
+  background: #d63333;
+}
+.bx-alert-error-form .bx-alert-icon {
+  background: #c12e2e;
   *background: none;
 }
 .bx-alert-ok {
@@ -5455,7 +5463,7 @@ i.vicon {
   z-index: 2;
   line-height: 2.3em;
   white-space: nowrap;
-  background: #d74545;
+  background: #d63333;
   color: #ffffff;
   border-radius: 3px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
@@ -5470,7 +5478,7 @@ i.vicon {
   position: absolute;
   top: 50%;
   right: 0;
-  border-left: 8px solid #d74545;
+  border-left: 8px solid #d63333;
   margin-top: -6px;
   margin-right: -8px;
   border-top: 6px solid transparent;
@@ -5488,7 +5496,7 @@ i.vicon {
 .field-helper-right .error-inline:after {
   left: 0;
   right: auto;
-  border-right: 8px solid #d74545;
+  border-right: 8px solid #d63333;
   border-left: 0;
   margin-left: -8px;
 }
@@ -5502,7 +5510,7 @@ i.vicon {
   margin-left: 15px;
   left: 0;
   right: auto;
-  border-bottom: 8px solid #d74545;
+  border-bottom: 8px solid #d63333;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
