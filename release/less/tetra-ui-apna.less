@@ -4519,6 +4519,15 @@ i.vicon {
 		padding: 0;
 	}
 
+	a {
+		color: @white;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	.bx-alert-close {
 		.position (@rtl) when (@rtl = false) { right: 0; }
 		.position (@rtl) when (@rtl = true) { left: 0; }
@@ -4576,6 +4585,10 @@ i.vicon {
 .bx-alert-warning {
 	#gradient > .vertical(tint(@yellow, 80%), tint(@yellow, 70%));
 	color: @baseFontColor;
+
+	a {
+		color: @baseFontColor;
+	}
 
 	.bx-alert-icon {
 		background: none;

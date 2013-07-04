@@ -5190,6 +5190,13 @@ i.vicon {
 .core-form .bx-alert {
   padding: 0;
 }
+.bx-alert a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.bx-alert a:hover {
+  text-decoration: none;
+}
 .bx-alert .bx-alert-close {
   position: absolute;
   top: 0;
@@ -5243,6 +5250,9 @@ i.vicon {
   background-image: linear-gradient(to bottom, #fff7d2, #fff2bc);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d2', endColorstr='#fff2bc', GradientType=0);
   *filter: none;
+  color: #222222;
+}
+.bx-alert-warning a {
   color: #222222;
 }
 .bx-alert-warning .bx-alert-icon {
