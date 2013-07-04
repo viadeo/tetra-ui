@@ -57,18 +57,20 @@ tetra.view.register('popin', {
 					},
 					'show error': function(error) {
 						me.methods.clear();
-						if(error.errorCode !== 401) {
+						if (error.errorCode !== 401) {
 							VNS.ui.growl(lang['notification.modification.save.error'], {type: 'warn'});
 						}
 					},
 					'clear': function(data) {
-						if(data.id) { // putting back the popin content to where it was in the dom
+						if (data.id) { // putting back the popin content to where it was in the dom
 							var content = _('.popin-container').html();
 							me.methods.clear();
 							_('#' + data.id).html(content);
 						} else {
 							me.methods.clear();
 						}
+
+						app.notify('popin: closed', data);
 					},
 					'fadeout': function() {
 						_('.popin-overlay').remove();

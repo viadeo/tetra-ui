@@ -79,6 +79,7 @@ tetra.controller.register('popin', {
 						me.methods.setContent(data);
 
 					},
+
 					'popin: close': function() {
 
 						app.notify('clear', {
@@ -86,10 +87,16 @@ tetra.controller.register('popin', {
 							id: me.id
 						});
 
+					},
+
+					'popin: closed': function(data) {
+
+						page.notify('popin: closed', data);
+
 					}
 				},
 
-				controller: { // events received from view or third party controllers
+				controller: {
 					'popin: loading': function() {
 						app.notify('start loading');
 					},
@@ -228,18 +235,20 @@ tetra.view.register('popin', {
 					},
 					'show error': function(error) {
 						me.methods.clear();
-						if(error.errorCode !== 401) {
+						if (error.errorCode !== 401) {
 							VNS.ui.growl(lang['notification.modification.save.error'], {type: 'warn'});
 						}
 					},
 					'clear': function(data) {
-						if(data.id) { // putting back the popin content to where it was in the dom
+						if (data.id) { // putting back the popin content to where it was in the dom
 							var content = _('.popin-container').html();
 							me.methods.clear();
 							_('#' + data.id).html(content);
 						} else {
 							me.methods.clear();
 						}
+
+						app.notify('popin: closed', data);
 					},
 					'fadeout': function() {
 						_('.popin-overlay').remove();

@@ -40,6 +40,7 @@ tetra.controller.register('popin', {
 						me.methods.setContent(data);
 
 					},
+
 					'popin: close': function() {
 
 						app.notify('clear', {
@@ -47,10 +48,16 @@ tetra.controller.register('popin', {
 							id: me.id
 						});
 
+					},
+
+					'popin: closed': function(data) {
+
+						page.notify('popin: closed', data);
+
 					}
 				},
 
-				controller: { // events received from view or third party controllers
+				controller: {
 					'popin: loading': function() {
 						app.notify('start loading');
 					},

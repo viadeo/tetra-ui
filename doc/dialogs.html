@@ -440,7 +440,7 @@
       <tbody>
         <tr>
           <td>
-            <code class="lang-javascript">page.notify('popin: set content', { url: '[URL]' });</code>
+            <code class="lang-javascript">page.notify('popin: set content', { url: '[URL]' })</code>
           </td>
           <td>
             Displays or updates a popin with the HTML code at the given URL with an Ajax call.
@@ -448,7 +448,7 @@
         </tr>
         <tr>
           <td>
-            <code class="lang-javascript">page.notify('popin: set content', { html: '[code]' });</code>
+            <code class="lang-javascript">page.notify('popin: set content', { html: '[code]' })</code>
           </td>
           <td>
             Displays or updates a popin with the given HTML code.
@@ -456,7 +456,7 @@
         </tr>
         <tr>
           <td>
-            <code class="lang-javascript">page.notify('popin: set content', { id: '[id]' });</code>
+            <code class="lang-javascript">page.notify('popin: set content', { id: '[id]' })</code>
           </td>
           <td>
             Displays or updates a popin with HTML code in the DOM. This code is the HTML content of the element with the given id.
@@ -475,11 +475,20 @@
       <tbody>
         <tr>
           <td>
-            <code class="lang-javascript">page.notify("popin: success", obj);</code>
+            <code class="lang-javascript">page.notify("popin: success", obj)</code>
           </td>
           <td>
             The popin controller sends this event when the popin is successfully displayed or updated.
             The variable <code class="lang-javascript">obj</code> contains the HTML code which is contained in the popin.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code class="lang-javascript">page.notify("popin: closed", data)</code>
+          </td>
+          <td>
+            The popin controller sends this event when the popin has just been closed.
+            The variable <code class="lang-javascript">data</code> contains the URL where the popin was loaded.
           </td>
         </tr>
       </tbody>
