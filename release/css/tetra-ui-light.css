@@ -2035,6 +2035,16 @@ ul.list-disc li {
   list-style: disc;
   margin-left: 15px;
 }
+.list-bx {
+  list-style: none;
+}
+.list-bx li {
+  border-top: 1px solid #dae3ea;
+  padding: 7.5px 0;
+}
+.list-bx li:first-child {
+  border-top: none;
+}
 .panel {
   border-top: 1px solid #E6EAED;
   background: #F7F9FA;
@@ -2763,9 +2773,6 @@ table.table-hover tbody tr:hover > td,
 table.table-hover tbody tr:hover > th {
   background-color: #f5f7f9;
 }
-/* Patterns.less
- * Common interface patterns
- * ---------------------------------------------------------------------------- */
 .menu-container h1 {
   padding-bottom: 0;
 }
@@ -2802,17 +2809,6 @@ h1 .sub {
   font-weight: normal;
   font-size: 15px;
 }
-/* --- Rich container Pattern ---
-@Modele : It's a block who contains media and a text. The img is float to the left by defaults
-@Options :  -- Add .imgRight to the container to put the img on the right
-            -- Add .imgWrap to the container to put the text above the image
-@exemple : <div class="rc">
-                <a href="#" class="img"><img src="http://static3.viadeo-static.com/v_img/navigation/logoviaducblanc.png" /></a>
-                <div class="bd">
-                    example content text
-                </div>
-           </div>
-*/
 .rc,
 .richcontainer {
   display: block;
@@ -4617,6 +4613,14 @@ i.vicon {
 }
 .bx-empty:hover {
   background: #fffbec;
+}
+.bx-aside {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+.bx-aside .h-bx {
+  border-bottom-color: #42a2d6;
 }
 .bx-alert {
   position: relative;

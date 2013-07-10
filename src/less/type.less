@@ -109,8 +109,8 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
   }
 }
 
-
 // Lists
+
 ul.link-list {
    list-style: none;
    margin: 0;
@@ -145,6 +145,19 @@ ul.list-square li {
 ul.list-disc li {
   list-style: disc;
   .margin-left(@rtl, @spacingM);
+}
+
+.list-bx {
+  list-style: none;
+
+  li {
+    border-top: 1px solid tint(@blueSoft, 70%);
+    padding: (@spacingXs * 1.5) 0;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
 }
 
 // Panels
