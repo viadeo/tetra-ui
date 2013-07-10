@@ -852,8 +852,114 @@ title: "Forms"
 &lt;/form&gt;</code></pre>
   </div>
 
+<div class="gr grsxl mtxl">
+  <h3 class="h3" id="asynchronous-upload">Asynchronous files upload</h3>
+
+  <div class="gu gu-1of4">
+    <p>Use HTML5 Form Data when possible and fallback to hidden iframe in &ldquo;less capable&rdquo; browsers.</p>
+  </div>
+  <div class="gu gu-last">
+    <form class="core-form form-horizontal form-async-upload" id="async-test-form" enctype="multipart/form-data" action="{{path}}/doc/xhr/file-upload-success.html" method="GET">
+      <fieldset>
+        <div class="control-group">
+          <label class="control-label" for="input01">Some input</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="input01" name="input01"/>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="fileInput">File input</label>
+          <div class="controls">
+            <input class="input-file" id="fileInput" type="file" name="file" />
+          </div>
+        </div>
+        <div class="form-actions ptm">
+          <button type="submit" class="btn btn-secondary">Upload</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div
+
+<div class="gr grsxl mtxl">
+  <div class="gu gu-1of4">
+    <p>Just add a
+      <code class="language-css">.form-async-upload</code> class to your form.<br />
+      You also have to specify an id for it in order to receive the callbacks events correctly.
+    </p>
+  </div>
+
+  <div class="gu gu-last">
+    <pre class=" language-markup">
+<code class="language-markup">&lt;form class="core-form form-horizontal form-async-upload"
+      id="upload_file" enctype="multipart/form-data" action="/upload" method="POST"&gt;
+   ...
+&lt;/form&gt;</code></pre>
+  </div>
+</div>
+
+<div class="gr grsxl mtl">
+  <div class="gu gu-1of4 gu-m-1of1">
+    <p>Events listened and triggered by the asynchronous file upload controller.</p>
+  </div>
+  <div class="gu gu-last">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Events listened by the controller</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code class="lang-javascript">page.notify('file_upload: submit', selector);</code>
+          </td>
+          <td>
+            Submit the form identified by the css 3 <code class="lang-javascript">selector</code> (exemple : <code class="lang-javascript">"#myForm"</code>)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Events triggered by the controller</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code class="lang-javascript">page.notify("file_upload: submitted", data);</code>
+          </td>
+          <td>
+            The file upload controller sends this event when the form is triggered.
+            The variable <code class="lang-javascript">data.id</code> contains the CSS id of the form (in order for you to identify wich form was submitted if several are present on the page and take actions on it like display a loading state).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code class="lang-javascript">page.notify("file_upload: response", data);</code>
+          </td>
+          <td>
+            The file upload controller sends this event when the form is successfully submitted.<br />
+            The variable <code class="lang-javascript">data.resp</code> contains the JSON response sent by the server and <code class="lang-javascript">data.id</code> the CSS id of the form.<br />
+            <strong>Important note :</strong> the server response has to be sent in <code class="lang-javascript">text/html</code> or <code class="lang-javascript">text/plain</code> content-type in order to be handled by Internet Explorer, otherwise it will fail.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
 </div>
 
 </div>
 
+</div>
+
+<script src="{{path}}/test/lib/sinon-1.6.0.js"></script>
 <script src="{{path}}/release/js/placeholder.js"></script>
+<script src="{{path}}/release/js/file_upload.js"></script>
