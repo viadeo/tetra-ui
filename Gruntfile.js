@@ -215,6 +215,7 @@ module.exports = function(grunt) {
           'release/js/navtabs.js': ['<banner>', 'src/js/coremvc/comps/navtabs/model/navtabs.class.js', 'src/js/coremvc/comps/navtabs/controller/navtabs.ctrl.js', 'src/js/coremvc/comps/navtabs/view/navtabs.ui.js'],
           'release/js/paginator.js': ['<banner>', 'src/js/coremvc/comps/paginator/view/paginator.ui.js'],
           'release/js/popin.js': ['<banner>', 'src/js/coremvc/comps/popin/model/popin.class.js', 'src/js/coremvc/comps/popin/controller/popin.ctrl.js', 'src/js/coremvc/comps/popin/view/popin.ui.js'],
+          'release/js/file_upload.js': ['<banner>', 'src/js/coremvc/comps/file_upload/model/file_upload.class.js', 'src/js/coremvc/comps/file_upload/controller/file_upload.ctrl.js', 'src/js/coremvc/comps/file_upload/view/file_upload.ui.js'],
           'release/js/highlight.js': ['<banner>', 'src/js/coremvc/comps/highlight/controller/highlight.ctrl.js', 'src/js/coremvc/comps/highlight/view/highlight.ui.js'],
           'release/js/toggle.js': ['<banner>', 'src/js/coremvc/comps/toggle/controller/toggle.ctrl.js', 'src/js/coremvc/comps/toggle/view/toggle.ui.js'],
           'release/js/yesno.js': ['<banner>', 'src/js/coremvc/comps/yesno/model/yesno.class.js', 'src/js/coremvc/comps/yesno/controller/yesno.ctrl.js', 'src/js/coremvc/comps/yesno/view/yesno.ui.js'],
