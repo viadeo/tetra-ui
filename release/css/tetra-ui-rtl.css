@@ -4087,8 +4087,8 @@ i.vicon {
   display: block;
 }
 .dd.pull-right .dd-menu {
-  right: auto;
-  left: 0;
+  left: auto;
+  right: 0;
 }
 .dd.pull-top .dd-menu {
   top: auto;
