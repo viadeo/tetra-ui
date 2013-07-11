@@ -156,7 +156,17 @@
 .cf, .clearfix { .clearfixHack(); }
 .clear, .clr { clear: both; }
 .hidden { display: none; }
-.elsewhere { position: absolute; left: -99999px; }
+
+// Hiding content for accessibility
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.elsewhere {
+  position: absolute;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); // IE7
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .fl, .floatL { .float-left(@rtl); }
 .fr, .floatR { .float-right(@rtl); }
 .fno { float: none; }
