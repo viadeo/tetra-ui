@@ -203,16 +203,16 @@
 // Responsive
 
 .fluid-container {
-  width: @page-width;
-  max-width: @page-width-max;
+  width: @pageWidth;
+  max-width: @pageWidthMax;
   margin: 0 auto;
   .clearfixHack();
 }
 
 // Medium responsive breakpoint
 
-@media screen and (max-width: @breakpoint-m) {
-  .fluid-container { width: @page-width-m; }
+@media screen and (max-width: @breakpointM) {
+  .fluid-container { width: @pageWidthM; }
 
   .gu-m-1of1 { clear: both; display: block; #grid > .unit(1, 1); }
   .gu-m-last { #grid > .last(); }
@@ -317,8 +317,8 @@
 
 // Small responsive breakpoint
 
-@media screen and (max-width: @breakpoint-s) {
-  .fluid-container { width: @page-width-s; }
+@media screen and (max-width: @breakpointS) {
+  .fluid-container { width: @pageWidthS; }
 
   .gu-s-1of1 { clear: both; display: block; #grid > .unit(1, 1); }
   .gu-s-last { #grid > .last(); }

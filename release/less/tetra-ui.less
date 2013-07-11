@@ -19,14 +19,14 @@
 @siteWidth:         980px;
 
 // Responsive
-@page-width: 85%;
-@page-width-m: 90%; // when reaching the tablet breakpoint
-@page-width-s: 97%; // when reaching the smartphone breakpoint
+@pageWidth: 85%;
+@pageWidthM: 90%; // when reaching the tablet breakpoint
+@pageWidthS: 97%; // when reaching the smartphone breakpoint
 
-@page-width-max: 1020px;
+@pageWidthMax: 1020px;
 
-@breakpoint-m: 768px; // breakpoint for tablets
-@breakpoint-s: 480px; // breakpoint for smartphones
+@breakpointM: 768px; // breakpoint for tablets
+@breakpointS: 480px; // breakpoint for smartphones
 
 // Spacing
 @spacingXs:         5px;
@@ -46,33 +46,33 @@
 
 // Extended palette
 
-@orange-1: #f56600;
-@orange-2: #f1532e;
-@orange-3: #f78d2d;
-@orange-4: #feae35;
+@orange1: #f56600;
+@orange2: #f1532e;
+@orange3: #f78d2d;
+@orange4: #feae35;
 
-@green-1: #019875;
-@green-2: #0c9f9b;
-@green-3: #53c1af;
-@green-4: #c6e6d7;
+@green1: #019875;
+@green2: #0c9f9b;
+@green3: #53c1af;
+@green4: #c6e6d7;
 
-@blue-1: #006aa8;
-@blue-2: #007bc2;
-@blue-3: #42a2d6;
-@blue-4: #1f668c;
-@blue-5: #7dcde3;
+@blue1: #006aa8;
+@blue2: #007bc2;
+@blue3: #42a2d6;
+@blue4: #1f668c;
+@blue5: #7dcde3;
 
-@purple-1: #471d63;
-@purple-2: #685985;
-@purple-3: #685985;
-@purple-4: #685985;
+@purple1: #471d63;
+@purple2: #685985;
+@purple3: #685985;
+@purple4: #685985;
 
-@page-bg: #e9e9eb;
+@pageBg: #e9e9eb;
 
 // Colors
 @green:             #829b13;
 @yellow:            #ffd520;
-@orange:            @orange-1;
+@orange:            @orange1;
 
 @blue:              #007de3;
 @blueSoft:          #83a0b9;
@@ -909,16 +909,16 @@ textarea {
 // Responsive
 
 .fluid-container {
-  width: @page-width;
-  max-width: @page-width-max;
+  width: @pageWidth;
+  max-width: @pageWidthMax;
   margin: 0 auto;
   .clearfixHack();
 }
 
 // Medium responsive breakpoint
 
-@media screen and (max-width: @breakpoint-m) {
-  .fluid-container { width: @page-width-m; }
+@media screen and (max-width: @breakpointM) {
+  .fluid-container { width: @pageWidthM; }
 
   .gu-m-1of1 { clear: both; display: block; #grid > .unit(1, 1); }
   .gu-m-last { #grid > .last(); }
@@ -1023,8 +1023,8 @@ textarea {
 
 // Small responsive breakpoint
 
-@media screen and (max-width: @breakpoint-s) {
-  .fluid-container { width: @page-width-s; }
+@media screen and (max-width: @breakpointS) {
+  .fluid-container { width: @pageWidthS; }
 
   .gu-s-1of1 { clear: both; display: block; #grid > .unit(1, 1); }
   .gu-s-last { #grid > .last(); }
@@ -1321,7 +1321,7 @@ textarea {
 .dispib { display: inline-block; }
 .dispi { display: inline; }
 
-@media screen and (max-width: @breakpoint-m) {
+@media screen and (max-width: @breakpointM) {
   .hide-m { display: none; }
   .show-m { display: block; }
 
@@ -1338,7 +1338,7 @@ textarea {
   .dispi-m { display: inline; }
 }
 
-@media screen and (max-width: @breakpoint-s) {
+@media screen and (max-width: @breakpointS) {
   .hide-s { display: none; }
   .show-s { display: block; }
 
@@ -2449,7 +2449,7 @@ h1 .sub {
   margin: 0 @spacingXs @spacingXs 0;
   .padding(@rtl, @spacingXs, @spacingXl, @spacingXs, @spacingS);
   border-radius: @borderRadiusS;
-  background: @green-2;
+  background: @green2;
   color: @white;
   white-space: nowrap;
 
@@ -2458,7 +2458,7 @@ h1 .sub {
     top: 0;
     .right(@rtl, 0);
     height: 100%;
-    background: shade(@green-2, 10%);
+    background: shade(@green2, 10%);
     .border-radius-right(@rtl, @borderRadiusS);
     padding: 0 (@spacingXs / 2);
     line-height: 2.1em;
@@ -2470,7 +2470,7 @@ h1 .sub {
 
     &:hover,
     &:focus {
-      background: shade(@green-2, 25%);
+      background: shade(@green2, 25%);
     }
   }
 }
@@ -3456,8 +3456,8 @@ i.vicon {
   }
 
   > .gr {
-    width: @page-width;
-    max-width: @page-width-max;
+    width: @pageWidth;
+    max-width: @pageWidthMax;
     margin: 0 auto;
   }
 
@@ -4509,7 +4509,7 @@ i.vicon {
 	box-shadow: none;
 
 	.h-bx {
-		border-bottom-color: @blue-3;
+		border-bottom-color: @blue3;
 	}
 }
 
@@ -4519,7 +4519,7 @@ i.vicon {
 	width: 100%;
 	padding: 0;
 	border-radius: @borderRadiusS;
-	background: @blue-2;
+	background: @blue2;
 	color: @white;
 	box-shadow: 1px 1px 4px fade(@black, 20%);
 
@@ -4568,7 +4568,7 @@ i.vicon {
 		font-size: 12px;
 		color: @white;
 		vertical-align: middle;
-		background: shade(@blue-2, 10%);
+		background: shade(@blue2, 10%);
 		border-radius: @borderRadiusS 0 0 @borderRadiusS;
 		*float: left; // IE 7 needs hacks (lack of table-cell support)
 		*padding: @spacingM;
@@ -4605,10 +4605,10 @@ i.vicon {
 }
 
 .bx-alert-error {
-	background: @orange-2;
+	background: @orange2;
 
 	.bx-alert-icon {
-		background: shade(@orange-2, 10%);
+		background: shade(@orange2, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -4623,19 +4623,19 @@ i.vicon {
 }
 
 .bx-alert-ok {
-	background: @green-2;
+	background: @green2;
 
 	.bx-alert-icon {
-		background: shade(@green-2, 10%);
+		background: shade(@green2, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
 .bx-alert-notification {
-	background: @blue-4;
+	background: @blue4;
 
 	.bx-alert-icon {
-		background: shade(@blue-4, 10%);
+		background: shade(@blue4, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -4645,7 +4645,7 @@ i.vicon {
 
 	.bx-alert-icon {
 		background: shade(tint(@black, 24%), 10%);
-		color: @orange-4;
+		color: @orange4;
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -5240,7 +5240,7 @@ i.vicon {
 			&.twitter { background: #02abee; }
 			&.viadeo { background: #272727;
 				.vicon {
-					color: @orange-1;
+					color: @orange1;
 
 					&:first-child {
 						margin-right: -2.8em;
