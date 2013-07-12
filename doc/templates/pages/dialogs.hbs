@@ -320,19 +320,20 @@ title: "Dialogs"
 
 &lt;!-- Base popin class, width set to two thirds of page width --&gt;
 &lt;!-- Put a data-noesc="true" if you want to prevent the popin from being closed by the esc key --&gt;
-&lt;div class="popin gu-2of3"&gt;
+&lt;div class="popin gu-2of3"&gt;&lt;!-- Add the class popin-edit for the edit style --&gt;
   &lt;div class="popin-header"&gt;
 
     &lt;!-- Close button --&gt;
     &lt;button data-comp="popin" data-event="click" data-popin="close" class="bootnode close"&gt;
-      Close
+      &lt;i class="vicon"&gt;×&lt;/i&gt;
+      &lt;span&gt;Close&lt;/span&gt;
     &lt;/button&gt;
 
-    &lt;h5&gt;Popin header&lt;/h5&gt;
+    &lt;h2 class="h2"&gt;Popin header&lt;/h2&gt;
   &lt;/div&gt;
 
   &lt;div class="popin-body"&gt;
-    &lt;p&gt;Popin sample body&lt;/p&gt;
+    Popin body
   &lt;/div&gt;
 
   &lt;div class="popin-footer"&gt;
