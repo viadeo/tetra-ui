@@ -191,9 +191,9 @@ title: "Dialogs"
       <a data-comp="popin"
          data-event="click"
          data-popin="show"
-         data-target-url="{{path}}/doc/xhr/popin-sample-1.html"
+         data-target-url="{{path}}/doc/xhr/popin-default.html"
          class="bootnode btn btn-primary">
-        Popin sample 1
+        Default popin
       </a>
     </p>
 
@@ -201,9 +201,9 @@ title: "Dialogs"
       <a data-comp="popin"
          data-event="click"
          data-popin="show"
-         data-target-url="{{path}}/doc/xhr/popin-sample-2.html"
-         class="bootnode btn btn-tertiary">
-        Alternative style
+         data-target-url="{{path}}/doc/xhr/popin-edit.html"
+         class="bootnode btn btn-primary">
+        Popin with edit style
       </a>
     </p>
 
@@ -211,7 +211,17 @@ title: "Dialogs"
       <a data-comp="popin"
          data-event="click"
          data-popin="show"
-         data-target-id="popin-sample-4"
+         data-target-url="{{path}}/doc/xhr/popin-no-footer.html"
+         class="bootnode btn btn-primary">
+        Popin without footer
+      </a>
+    </p>
+
+    <p>
+      <a data-comp="popin"
+         data-event="click"
+         data-popin="show"
+         data-target-id="popin-dom"
          class="bootnode btn btn-default">
         Popin in the DOM
       </a>
@@ -424,7 +434,7 @@ title: "Dialogs"
   </div>
 </div>
 
-<div id="popin-sample-4" class="hidden">
+<div id="popin-dom" class="hidden">
   <div class="gr">
 
   <div class="popin gu-2of3">
@@ -436,10 +446,10 @@ title: "Dialogs"
          class="bootnode close">
         Close
       </button>
-      <h5>Popin sample 4 loaded from the DOM</h5>
+      <h5>Popin loaded from the DOM</h5>
     </div>
     <div class="popin-body">
-      <p>Popin sample 4</p>
+      <p>Popin content</p>
     </div>
     <div class="popin-footer">
       <a href="" class="fr mts">Alternate link</a>

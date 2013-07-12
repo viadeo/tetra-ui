@@ -4243,17 +4243,17 @@ i.vicon {
   -webkit-animation: popin-fadeout 0.3s;
   -moz-animation: popin-fadeout 0.3s;
 }
-.popin-container .popin-alt .popin-header {
+.popin-container .popin-edit .popin-header {
   background: #007bc2;
 }
-.popin-container .popin-alt .popin-header .close {
+.popin-container .popin-edit .popin-header .close {
   background: #006faf;
   color: #cce5f3;
 }
-.popin-container .popin-alt .popin-header .close .vicon {
+.popin-container .popin-edit .popin-header .close .vicon {
   color: #cce5f3;
 }
-.popin-container .popin-alt .popin-header .close:hover {
+.popin-container .popin-edit .popin-header .close:hover {
   background: #00629b;
 }
 @-webkit-keyframes popin-overlay-fadein {
