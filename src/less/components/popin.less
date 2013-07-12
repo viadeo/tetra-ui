@@ -45,53 +45,91 @@
 
   .popin {
     margin: 125px auto 0;
-    .paxs;
-    .bram;
-    background: lighten(@overlayBorder, 5%);
-    background: fadeout(@overlayBorder, 40%);
-    box-shadow: 0 0 4px fadeout(@black, 30%);
+    border-radius: @borderRadiusM;
+    box-shadow: 0 0 12px fade(@black, 25%);
 
     -webkit-animation: popin-fadein 0.15s;
     -moz-animation: popin-fadein 0.15s;
 
     .popin-header {
-      .clearfixHack();
-      padding: @spacingM @spacingL @spacingXs;
-      border-bottom: 1px solid @panelBorder;
-      background: @panelBackground;
+      position: relative;
+      padding: @spacingL @spacingXl @spacingS;
+      background: tint(@black, 20%);
+      color: @white;
+      border-radius: @borderRadiusM @borderRadiusM 0 0;
 
-      h5 {
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
+      h1, h2, h3, h4, h5, h6 {
+        color: @white;
       }
 
-      button.close {
-        .float-right(@rtl);
-        color: @linkColor;
+      .close {
+        position: absolute;
+        right: 0; top: 0; bottom: 0;
+        padding: 0 @spacingM;
+        background: tint(@black, 15%);
+        color: tint(@black, 60%);
+        text-decoration: none;
+        border-top-right-radius: @borderRadiusM;
+
+        span {
+          display: inline-block;
+          width: 0;
+          overflow: hidden;
+        }
+
+        .vicon {
+          margin-right: -0.2em;
+          color: tint(@black, 60%);
+        }
 
         &:hover {
-          color: @linkColorHover;
-          text-decoration: underline;
+          background: @black;
+
+          span {
+            width: auto;
+          }
         }
       }
     }
 
     .popin-body {
-      padding: @spacingM @spacingL;
-      background: @white;
+      padding: @spacingL @spacingXl;
+      background: @pageBg;
+
+      &:last-child {
+        border-radius: 0 0 @borderRadiusM @borderRadiusM;
+      }
     }
 
     .popin-footer {
       .clearfixHack();
-      padding: @spacingM @spacingL;
-      border-top: 1px solid @panelBorder;
-      background: @panelBackground;
+      padding: @spacingL @spacingXl;
+      background: @white;
+      border-radius: 0 0 @borderRadiusM @borderRadiusM;
     }
 
     &.popin-close-animation {
       -webkit-animation: popin-fadeout 0.3s;
       -moz-animation: popin-fadeout 0.3s;
+    }
+  }
+
+  .popin-alt {
+    .popin-header {
+      background: @blue2;
+
+      .close {
+        background: shade(@blue2, 10%);
+        color: tint(@blue2, 80%);
+
+        .vicon {
+          color: tint(@blue2, 80%);
+        }
+
+        &:hover {
+          background: shade(@blue2, 20%);
+        }
+      }
     }
   }
 }

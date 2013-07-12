@@ -12,7 +12,7 @@ table.table {
   th, td {
     padding: 10px 10px 9px;
     line-height: @baseLineHeight;
-    text-align: left;
+    .text-align-left(@rtl);
   }
   th {
     padding-top: 9px;
@@ -50,8 +50,7 @@ table.table {
 }
 
 
-// ZEBRA-STRIPING
-// --------------
+// Zebra striping
 
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 table.zebra {
