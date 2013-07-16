@@ -3056,8 +3056,8 @@ a:focus .avatar img {
 }
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1372674005/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1372674005/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1372674005/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1372674005/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1373964555/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1373964555/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1373964555/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1373964555/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -5820,6 +5820,9 @@ i.vicon {
 .share-links li a.viadeo .vicon:first-child {
   margin-right: -2.8em;
   color: #ffffff;
+}
+.share-links li a.apnacircle {
+  background: #0065ae;
 }
 .share-links .tooltip-content {
   transition-delay: .4s;
