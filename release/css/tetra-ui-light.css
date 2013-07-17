@@ -4181,6 +4181,17 @@ i.vicon {
   background: #333333;
   color: #ffffff;
   border-radius: 5px 5px 0 0;
+  zoom: 1;
+}
+.popin-container .popin .popin-header:before,
+.popin-container .popin .popin-header:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.popin-container .popin .popin-header:after {
+  clear: both;
 }
 .popin-container .popin .popin-header h1,
 .popin-container .popin .popin-header h2,
