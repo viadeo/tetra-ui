@@ -3483,7 +3483,7 @@ i.vicon {
 
     .popin-header {
       position: relative;
-      padding: @spacingL @spacingXl @spacingS;
+      padding: @spacingL @spacingXl;
       background: tint(@black, 20%);
       color: @white;
       border-radius: @borderRadiusM @borderRadiusM 0 0;
@@ -3491,6 +3491,8 @@ i.vicon {
 
       h1, h2, h3, h4, h5, h6 {
         color: @white;
+        margin: 0;
+        padding: 0;
       }
 
       .close {
@@ -3512,6 +3514,7 @@ i.vicon {
         .vicon {
           margin-right: -0.2em;
           color: tint(@black, 60%);
+          vertical-align: top;
         }
 
         &:hover {

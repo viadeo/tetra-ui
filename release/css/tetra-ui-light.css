@@ -4177,7 +4177,7 @@ i.vicon {
 }
 .popin-container .popin .popin-header {
   position: relative;
-  padding: 20px 30px 10px;
+  padding: 20px 30px;
   background: #333333;
   color: #ffffff;
   border-radius: 5px 5px 0 0;
@@ -4200,6 +4200,8 @@ i.vicon {
 .popin-container .popin .popin-header h5,
 .popin-container .popin .popin-header h6 {
   color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 .popin-container .popin .popin-header .close {
   position: absolute;
@@ -4221,6 +4223,7 @@ i.vicon {
 .popin-container .popin .popin-header .close .vicon {
   margin-right: -0.2em;
   color: #999999;
+  vertical-align: top;
 }
 .popin-container .popin .popin-header .close:hover {
   background: #000000;
