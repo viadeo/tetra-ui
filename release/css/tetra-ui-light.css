@@ -4458,6 +4458,9 @@ i.vicon {
   border-color: transparent transparent #ffffff;
   border-width: 0 10px 10px;
 }
+.popin .nav-tabs-secondary li.active a:after {
+  border-bottom-color: #e8e9eb;
+}
 .nav-tabs-secondary li.active a:hover,
 .nav-tabs-secondary li.active a:focus {
   background: none;
