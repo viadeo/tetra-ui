@@ -63,10 +63,12 @@ tetra.view.register('autocomplete', {
 
                 default:
                   if (elm.val().length >= parseInt(me._container.attr('data-min-length'), 10)) {
+                    me._sts = me._sts > 0 ? me._sts : Math.round(new Date().getTime() / 1000);
                     me.methods.suggestions.doQuery(elm, true);
                   }
 
                   if (elm.val().length === 0) {
+                    me._sts = 0;
                     me.methods.suggestions.hide(me._containerId);
                   }
 
@@ -156,6 +158,8 @@ tetra.view.register('autocomplete', {
         init: function() {
           me._param = '%param%';
           me._containerId = null;
+          me._sts = 0; // custom var whose state needs to be persisted
+         },
         },
         reinit: function(elm) {
           if (!me._containerId) {
@@ -220,6 +224,10 @@ tetra.view.register('autocomplete', {
             }
             data[me._paramName] = param;
             // PARTICULAR CASES
+            if (elm.prop('id') === 'quicksearch-input') {
+              elm.attr('data-sts', me._sts);
+              data.sts = me._sts;
+            }
             var form;
             if (elm.hasClass('schoolDepartment')) {
               form = _(elm.parents('.core-form'))[0];
