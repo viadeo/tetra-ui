@@ -238,6 +238,25 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+      comps: {
+        options: {
+          banner: "/*! Tetra UI v<%= pkg.version %> | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */\n\n",
+          report: 'min',
+          preserveComments: false
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'release/js/',
+            src: ['*.js'],
+            dest: 'release/js/min/',
+            ext: '.min.js'
+          }
+        ]
+      }
+    },
+
     connect: {
       server: {
         options: {
@@ -255,7 +274,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['src/js/coremvc/comps/**/*.js'],
-        tasks: ['jshint', 'concat:js']
+        tasks: ['jshint', 'concat:js', 'uglify']
       },
       doc: {
         files: ['doc/templates/**/*'],
@@ -288,6 +307,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -295,7 +315,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble');
 
   // Default task
-  grunt.registerTask('default', ['jshint', 'less', 'concat']);
+  grunt.registerTask('default', ['jshint', 'less', 'concat', 'uglify']);
 
   // Watch and local server
   grunt.registerTask('watch-server', ['connect', 'watch']);
