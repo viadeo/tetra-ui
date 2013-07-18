@@ -32,6 +32,7 @@
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-clean": "*",
+    "grunt-contrib-uglify": "*",
     "assemble": "*"
   },
   "repository": {
