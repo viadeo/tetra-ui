@@ -152,10 +152,12 @@ tetra.view.register('autocomplete', {
 
                 default:
                   if (elm.val().length >= parseInt(me._container.attr('data-min-length'), 10)) {
+                    me._sts = me._sts > 0 ? me._sts : Math.round(new Date().getTime() / 1000);
                     me.methods.suggestions.doQuery(elm, true);
                   }
 
                   if (elm.val().length === 0) {
+                    me._sts = 0;
                     me.methods.suggestions.hide(me._containerId);
                   }
 
@@ -242,10 +244,13 @@ tetra.view.register('autocomplete', {
       },
 
       methods: {
+
         init: function() {
           me._param = '%param%';
           me._containerId = null;
+          me._sts = 0; // custom var whose state needs to be persisted
         },
+
         reinit: function(elm) {
           if (!me._containerId) {
             me._containerId = _(elm.parents('.autocomplete'))[0].id;
@@ -261,6 +266,7 @@ tetra.view.register('autocomplete', {
             }
           }
         },
+
         suggestions: {
           select: function(direction) {
             var items = me._container.find('.autocomplete-menu li');
@@ -297,6 +303,7 @@ tetra.view.register('autocomplete', {
             app.notify('autocompleteGeneric : click on suggestion', elm[0]);
             me._containerId = null;
           },
+
           doQuery: function(elm, delay) {
             var param = elm.val();
             var url = me.methods.suggestions.replaceParam(me._container.attr('data-url'), param);
@@ -309,6 +316,10 @@ tetra.view.register('autocomplete', {
             }
             data[me._paramName] = param;
             // PARTICULAR CASES
+            if (elm.prop('id') === 'quicksearch-input') {
+              elm.attr('data-sts', me._sts);
+              data.sts = me._sts;
+            }
             var form;
             if (elm.hasClass('schoolDepartment')) {
               form = _(elm.parents('.core-form'))[0];
@@ -325,6 +336,7 @@ tetra.view.register('autocomplete', {
             }
             app.notify('do query', data);
           }
+
         }
       }
     };

@@ -155,12 +155,13 @@ tetra.view.register('autocomplete', {
       },
 
       methods: {
+
         init: function() {
           me._param = '%param%';
           me._containerId = null;
           me._sts = 0; // custom var whose state needs to be persisted
-         },
         },
+
         reinit: function(elm) {
           if (!me._containerId) {
             me._containerId = _(elm.parents('.autocomplete'))[0].id;
@@ -176,6 +177,7 @@ tetra.view.register('autocomplete', {
             }
           }
         },
+
         suggestions: {
           select: function(direction) {
             var items = me._container.find('.autocomplete-menu li');
@@ -212,6 +214,7 @@ tetra.view.register('autocomplete', {
             app.notify('autocompleteGeneric : click on suggestion', elm[0]);
             me._containerId = null;
           },
+
           doQuery: function(elm, delay) {
             var param = elm.val();
             var url = me.methods.suggestions.replaceParam(me._container.attr('data-url'), param);
@@ -244,6 +247,7 @@ tetra.view.register('autocomplete', {
             }
             app.notify('do query', data);
           }
+
         }
       }
     };
