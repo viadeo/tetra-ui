@@ -152,7 +152,7 @@ tetra.view.register('autocomplete', {
 
                 default:
                   if (elm.val().length >= parseInt(me._container.attr('data-min-length'), 10)) {
-                    me._sts = me._sts > 0 ? me._sts : Math.round(new Date().getTime() / 1000);
+                    me._sts = me._sts > 0 ? me._sts : (new Date()).getTime();
                     me.methods.suggestions.doQuery(elm, true);
                   }
 
