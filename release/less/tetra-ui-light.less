@@ -119,14 +119,15 @@
 @baseLineHeight:    1.4em;
 
 // Border Radius
-@borderRadiusS:     3px;
-@borderRadiusM:     5px;
-@borderRadiusL:     10px;
+@borderRadiusXs: 2px;
+@borderRadiusS: 3px;
+@borderRadiusM: 6px;
+@borderRadiusL: 10px;
 
 // Forms
 @inputBackground:	@white;
-@inputBorder: #cbd2d6;
-@inputBorderFocus: #88a7bc;
+@inputBorder: #c5c7c5;
+@inputBorderFocus: @blue2;
 @inputDisabledBackground: @grayLighter;
 @inputSelectedControl: #344957;
 
@@ -143,13 +144,13 @@
 @warningBackground: #fcf8e3;
 @warningBorder: 	darken(spin(@warningBackground, -10), 3%);
 
-@errorText:         #d63333;
+@errorText:         #d54243;
 @errorBackground:   lighten(@errorText, 58%);
-@errorBorder:       #d63333;
+@errorBorder:       @errorText;
 
-@successText: 		#65a900;
-@successBackground: #dff0d8;
-@successBorder: 	#65a900;
+@successText: @green2;
+@successBackground: @green2;
+@successBorder: @green2;
 
 @infoText: 			#3a87ad;
 @infoBackground: 	#d9edf7;
@@ -451,33 +452,6 @@
 }
 
 // FORMS
-
-// Mixin for form field states
-.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
-  // Set the text color
-  > label,
-  .help-block,
-  .help-inline {
-    color: @textColor;
-  }
-  // Style inputs accordingly
-  input,
-  select,
-  textarea {
-    border-color: @borderColor;
-    &:focus {
-      border-color: darken(@borderColor, 10%);
-      .box-shadow(0 0 6px fadeout(@borderColor, 40%));
-    }
-  }
-  // Give a small background color for input-prepend/-append
-  .input-prepend .add-on,
-  .input-append .add-on {
-    color: @textColor;
-    background-color: @backgroundColor;
-    border-color: @textColor;
-  }
-}
 
 // Misc. use by forms
 #font {
@@ -1645,7 +1619,7 @@ pre {
     color: @grayDark;
     vertical-align: middle;
     border: 1px solid @inputBorder;
-    .border-radius(3px);
+    border-radius: @borderRadiusXs;
   }
   .uneditable-textarea {
     width: auto;
@@ -1773,23 +1747,19 @@ pre {
     margin-left: 10px; // space out consecutive inline controls
   }
 
+  // Focus state
 
-
-  // FOCUS STATE
-  // -----------
   input,
   textarea {
-    .box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1));
-    @transition: border linear .2s, box-shadow linear .2s;
-    .transition(@transition);
+    box-shadow: none;
+    .transition(border .2s, box-shadow .2s);
   }
   input:focus,
   textarea:focus {
     border-color: @inputBorderFocus;
-    @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px @inputBorderFocus;
-    .box-shadow(@shadow);
+    box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
     outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
+    outline: thin dotted \9; // IE 6-9
   }
   input[type="file"]:focus,
   input[type="radio"]:focus,
@@ -1800,6 +1770,7 @@ pre {
   }
 
   // General classes for quick sizes
+
   @size-mini: 60px;
   @size-small: 90px;
   @size-medium: 150px;
@@ -1828,6 +1799,7 @@ pre {
   select.input-xxlarge { width: (@size-xxlarge + 10px); }
 
   // Grid style input sizes
+
   input[class*="span"],
   select[class*="span"],
   textarea[class*="span"],
@@ -1836,20 +1808,8 @@ pre {
     margin-left: 0;
   }
 
-
-
-  // GRID SIZING FOR INPUTS
-  // ----------------------
-
-  //#grid > .input (@gridColumnWidth, @gridGutterWidth);
-
-
-
-
-  // DISABLED STATE
-  // --------------
-
   // Disabled and read-only inputs
+
   input[disabled],
   select[disabled],
   textarea[disabled],
@@ -1861,32 +1821,55 @@ pre {
     cursor: not-allowed;
   }
 
-
-
-
-  // FORM FIELD FEEDBACK STATES
-  // --------------------------
-
-  // Warning
-  .control-group.warning {
-    .formFieldState(@warningText, @warningText, @warningBackground);
-  }
   // Error
+
   .control-group.error {
-    .formFieldState(@errorText, @errorText, @errorBackground);
+    > label, .help-block, .help-inline {
+      color: @errorText;
+    }
+
+    input, select, textarea {
+      border-color: @errorText;
+      box-shadow: 0 0 6px fade(@errorText, 40%);
+
+      &:focus {
+        border-color: @blue2;
+        box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
+
+        + .btn {
+          border-color: @blue2;
+          box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
+        }
+      }
+    }
 
     .input-append {
       .btn {
-        border-color: @errorText;
+        border-top-color: @errorText;
+        border-right-color: @errorText;
+        border-bottom-color: @errorText;
+        box-shadow: 0 0 6px fade(@errorText, 40%);
       }
     }
   }
+
   // Success
+
+  .control-group {
+    .control-success {
+      display: none;
+      color: @successText;
+    }
+  }
+
   .control-group.success {
-    .formFieldState(@successText, @successBorder, @successBackground);
+    .control-success {
+      display: block;
+    }
   }
 
   // Disabled
+
   .control-group.disabled {
     label {
       color: lighten(@gray, 10%);
@@ -1899,6 +1882,7 @@ pre {
 
   // HTML5 invalid states
   // Shares styles with the .control-group.error above
+
   input:focus:required:invalid,
   textarea:focus:required:invalid,
   select:focus:required:invalid {
@@ -1912,8 +1896,7 @@ pre {
 
 
 
-  // FORM ACTIONS
-  // ------------
+  // Form actions
 
   .form-actions {
     padding: (@baseLineHeight - 1) 20px @baseLineHeight;
@@ -1936,10 +1919,7 @@ pre {
   // Placeholder text gets special styles; can't be bundled together though for some reason
   .placeholder(@grayLight);
 
-
-
-  // HELP TEXT
-  // ---------
+  // Help texts
 
   .help-block,
   .help-inline {
@@ -1958,16 +1938,13 @@ pre {
     .padding-left(@rtl, 5px);
   }
 
+  // Input groups
 
+  .radius-right (@rtl) when (@rtl = false) { .border-radius(0 3px 3px 0); }
+  .radius-right (@rtl) when (@rtl = true) { .border-radius(3px 0 0 3px); }
 
-// INPUT GROUPS
-// ------------
-
-.radius-right (@rtl) when (@rtl = false) { .border-radius(0 3px 3px 0); }
-.radius-right (@rtl) when (@rtl = true) { .border-radius(3px 0 0 3px); }
-
-.radius-left (@rtl) when (@rtl = false) { .border-radius(3px 0 0 3px); }
-.radius-left (@rtl) when (@rtl = true) { .border-radius(0 3px 3px 0); }
+  .radius-left (@rtl) when (@rtl = false) { .border-radius(3px 0 0 3px); }
+  .radius-left (@rtl) when (@rtl = true) { .border-radius(0 3px 3px 0); }
 
   // Allow us to put symbols and text within the input field for a cleaner look
   .input-prepend,
@@ -1977,15 +1954,7 @@ pre {
     input,
     select,
     .uneditable-input {
-
       .radius-right(@rtl);
-
-      // remove due to conflict with javascript click event firing on firefox at least
-      //&:focus {
-      //  position: relative;
-      //  z-index: 2;
-      //}
-
       *margin-left: 0;
     }
     .uneditable-input {
@@ -2059,18 +2028,6 @@ pre {
       .margin-left(@rtl, -1px);
       .radius-right(@rtl);
     }
-  }
-
-
-
-  // SEARCH FORM
-  // -----------
-
-  .search-query {
-    padding-left: 14px;
-    padding-right: 14px;
-    margin-bottom: 0; // remove the default margin on all inputs
-    .border-radius(14px);
   }
 
   // Margin to space out fieldsets
@@ -3332,7 +3289,7 @@ i.vicon {
 
     .popin-header {
       position: relative;
-      padding: @spacingL @spacingXl;
+      padding: 17px 28px;
       min-height: 1.3em;
       background: tint(@black, 20%);
       color: @white;
@@ -3348,8 +3305,8 @@ i.vicon {
       .close {
         position: absolute;
         right: 0; top: 0; bottom: 0;
-        padding: 0 @spacingM;
-        line-height: 4.5em;
+        padding: 0 12px;
+        line-height: 4.4em;
         background: tint(@black, 15%);
         color: tint(@black, 60%);
         text-decoration: none;
@@ -3378,7 +3335,7 @@ i.vicon {
     }
 
     .popin-body {
-      padding: @spacingL @spacingXl;
+      padding: @spacingL 28px;
       background: @pageBg;
 
       &:last-child {
@@ -3388,7 +3345,7 @@ i.vicon {
 
     .popin-footer {
       .clearfixHack();
-      padding: @spacingL @spacingXl;
+      padding: 18px 28px;
       background: @white;
       border-radius: 0 0 @borderRadiusM @borderRadiusM;
     }
@@ -3855,12 +3812,12 @@ i.vicon {
 
 	&:hover {
 		.custom-radio-element {
-			box-shadow: 0 0 0 1px @inputBorderFocus;
+			box-shadow: 0 0 0 1px shade(@inputBorder, 25%);
 		}
 	}
 
 	input:checked + .custom-radio-element {
-		background-color: @inputSelectedControl;
+		background-color: tint(@black, 20%);
 	}
 }
 

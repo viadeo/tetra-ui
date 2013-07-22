@@ -117,14 +117,15 @@
 @baseLineHeight:    1.4em;
 
 // Border Radius
-@borderRadiusS:     3px;
-@borderRadiusM:     5px;
-@borderRadiusL:     10px;
+@borderRadiusXs: 2px;
+@borderRadiusS: 3px;
+@borderRadiusM: 6px;
+@borderRadiusL: 10px;
 
 // Forms
 @inputBackground:	@white;
-@inputBorder: #cbd2d6;
-@inputBorderFocus: #88a7bc;
+@inputBorder: #c5c7c5;
+@inputBorderFocus: @blue2;
 @inputDisabledBackground: @grayLighter;
 @inputSelectedControl: #344957;
 
@@ -141,13 +142,13 @@
 @warningBackground: #fcf8e3;
 @warningBorder: 	darken(spin(@warningBackground, -10), 3%);
 
-@errorText:         #d63333;
+@errorText:         #d54243;
 @errorBackground:   lighten(@errorText, 58%);
-@errorBorder:       #d63333;
+@errorBorder:       @errorText;
 
-@successText: 		#65a900;
-@successBackground: #dff0d8;
-@successBorder: 	#65a900;
+@successText: @green2;
+@successBackground: @green2;
+@successBorder: @green2;
 
 @infoText: 			#3a87ad;
 @infoBackground: 	#d9edf7;

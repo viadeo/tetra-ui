@@ -189,7 +189,7 @@ code.color-transform { font-size: 11px; margin: @spacingXs 0 0 0; background: @w
 .var-panel-border { background: @panelBorder; .tooltip-content:before { content: "@{panelBorder}"; } }
 .var-panel-border-darker { background: @panelBorderDarker; .tooltip-content:before { content: "@{panelBorderDarker}"; } }
 .var-overlay-border { background: @overlayBorder; .tooltip-content:before { content: "@{overlayBorder}"; } }
-.var-error-text { @v: tint(@errorText, 27%); background: @v; .tooltip-content:before { content: "@{v}"; } }
+.var-error-text { background: @errorText; .tooltip-content:before { content: "@{errorText}"; } }
 
 // Tint and shade
 
