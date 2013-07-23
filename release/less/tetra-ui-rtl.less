@@ -1847,20 +1847,28 @@ pre {
       &:focus {
         border-color: @blue2;
         box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
-
-        + .btn {
-          border-color: @blue2;
-          box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
-        }
       }
     }
 
     .input-append {
       .btn {
+        .border-right-color (@rtl) when (@rtl = false) { border-right-color: @errorText; }
+        .border-right-color (@rtl) when (@rtl = true) { border-left-color: @errorText; }
+
         border-top-color: @errorText;
-        border-right-color: @errorText;
+        .border-right-color(@rtl);
         border-bottom-color: @errorText;
         box-shadow: 0 0 6px fade(@errorText, 40%);
+      }
+
+      input:focus + .btn {
+        .border-right-color (@rtl) when (@rtl = false) { border-right-color: @blue2; }
+        .border-right-color (@rtl) when (@rtl = true) { border-left-color: @blue2; }
+
+        border-top-color: @blue2;
+        .border-right-color(@rtl);
+        border-bottom-color: @blue2;
+        box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
       }
     }
   }
@@ -1952,11 +1960,11 @@ pre {
 
   // Input groups
 
-  .radius-right (@rtl) when (@rtl = false) { .border-radius(0 3px 3px 0); }
-  .radius-right (@rtl) when (@rtl = true) { .border-radius(3px 0 0 3px); }
+  .radius-right (@rtl) when (@rtl = false) { .border-radius(0 @borderRadiusXs @borderRadiusXs 0); }
+  .radius-right (@rtl) when (@rtl = true) { .border-radius(@borderRadiusXs 0 0 @borderRadiusXs); }
 
-  .radius-left (@rtl) when (@rtl = false) { .border-radius(3px 0 0 3px); }
-  .radius-left (@rtl) when (@rtl = true) { .border-radius(0 3px 3px 0); }
+  .radius-left (@rtl) when (@rtl = false) { .border-radius(@borderRadiusXs 0 0 @borderRadiusXs); }
+  .radius-left (@rtl) when (@rtl = true) { .border-radius(0 @borderRadiusXs @borderRadiusXs 0); }
 
   // Allow us to put symbols and text within the input field for a cleaner look
   .input-prepend,
@@ -1969,9 +1977,11 @@ pre {
       .radius-right(@rtl);
       *margin-left: 0;
     }
+
     .uneditable-input {
       border-left-color: #ccc;
     }
+
     .add-on {
       display: inline-block;
       width: auto;
@@ -1985,10 +1995,12 @@ pre {
       background-color: @grayLighter;
       border: 1px solid #ccc;
     }
+
     .add-on,
     .btn {
       .radius-left(@rtl);
     }
+
     .btn {
       padding-bottom: 4px;
       padding-top: 4px;
@@ -1996,27 +2008,42 @@ pre {
       .box-sizing(content-box);
       *height: auto;
     }
+
     .active {
       background-color: lighten(@green, 30);
       border-color: @green;
     }
   }
+
   .input-prepend {
     .add-on,
     .btn {
       .margin-right(@rtl, -1px);
     }
   }
+
   .input-append {
     input,
     select
     .uneditable-input {
       .radius-left(@rtl);
     }
+
+    input:focus + .btn {
+      .border-right-color (@rtl) when (@rtl = false) { border-right-color: @blue2; }
+      .border-right-color (@rtl) when (@rtl = true) { border-left-color: @blue2; }
+
+      border-top-color: @blue2;
+      .border-right-color(@rtl);
+      border-bottom-color: @blue2;
+      box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
+    }
+
     .uneditable-input {
       border-left-color: #eee;
       border-right-color: #ccc;
     }
+
     .add-on,
     .btn {
       .margin-left(@rtl, -1px);
@@ -2054,13 +2081,8 @@ pre {
   }
 }
 
-// HORIZONTAL & VERTICAL FORMS
-// ---------------------------
+// Horizontal & vertical forms
 
-// Common properties
-// -----------------
-
-.form-search,
 .form-inline,
 .form-horizontal {
   input,
@@ -2078,17 +2100,18 @@ pre {
     display: none;
   }
 }
-.form-search label,
+
 .form-inline label {
   display: inline-block;
 }
+
 // Remove margin for input-prepend/-append
-.form-search .input-append,
 .form-inline .input-append,
 .form-search .input-prepend,
 .form-inline .input-prepend {
   margin-bottom: 0;
 }
+
 // Inline checkbox/radio labels (remove padding on left)
 .form-search .radio,
 .form-search .checkbox,
@@ -2098,6 +2121,7 @@ pre {
   margin-bottom: 0;
   vertical-align: middle;
 }
+
 // Remove float and margin, set to inline-block
 .form-search .radio input[type="radio"],
 .form-search .checkbox input[type="checkbox"],

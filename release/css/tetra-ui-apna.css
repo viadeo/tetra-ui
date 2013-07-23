@@ -2359,17 +2359,17 @@ pre {
   border-color: #007bc2;
   box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
 }
-.core-form .control-group.error input:focus + .btn,
-.core-form .control-group.error select:focus + .btn,
-.core-form .control-group.error textarea:focus + .btn {
-  border-color: #007bc2;
-  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
-}
 .core-form .control-group.error .input-append .btn {
   border-top-color: #d54243;
   border-right-color: #d54243;
   border-bottom-color: #d54243;
   box-shadow: 0 0 6px rgba(213, 66, 67, 0.4);
+}
+.core-form .control-group.error .input-append input:focus + .btn {
+  border-top-color: #007bc2;
+  border-right-color: #007bc2;
+  border-bottom-color: #007bc2;
+  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
 }
 .core-form .control-group .control-success {
   display: none;
@@ -2456,7 +2456,7 @@ pre {
 .core-form .input-append select,
 .core-form .input-prepend .uneditable-input,
 .core-form .input-append .uneditable-input {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 2px 2px 0;
   *margin-left: 0;
 }
 .core-form .input-prepend .uneditable-input,
@@ -2481,7 +2481,7 @@ pre {
 .core-form .input-append .add-on,
 .core-form .input-prepend .btn,
 .core-form .input-append .btn {
-  border-radius: 3px 0 0 3px;
+  border-radius: 2px 0 0 2px;
 }
 .core-form .input-prepend .btn,
 .core-form .input-append .btn {
@@ -2505,7 +2505,13 @@ pre {
 }
 .core-form .input-append input,
 .core-form .input-append select .uneditable-input {
-  border-radius: 3px 0 0 3px;
+  border-radius: 2px 0 0 2px;
+}
+.core-form .input-append input:focus + .btn {
+  border-top-color: #007bc2;
+  border-right-color: #007bc2;
+  border-bottom-color: #007bc2;
+  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
 }
 .core-form .input-append .uneditable-input {
   border-left-color: #eee;
@@ -2514,7 +2520,7 @@ pre {
 .core-form .input-append .add-on,
 .core-form .input-append .btn {
   margin-left: -1px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 2px 2px 0;
 }
 .core-form .input-prepend.input-append input,
 .core-form .input-prepend.input-append select,
@@ -2524,12 +2530,12 @@ pre {
 .core-form .input-prepend.input-append .add-on:first-child,
 .core-form .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 2px 0 0 2px;
 }
 .core-form .input-prepend.input-append .add-on:last-child,
 .core-form .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 2px 2px 0;
 }
 .core-form .control-group {
   margin-bottom: 0.7em;
@@ -2538,40 +2544,30 @@ pre {
   margin-top: 1.4em;
   -webkit-margin-top-collapse: separate;
 }
-.form-search input,
 .form-inline input,
 .form-horizontal input,
-.form-search textarea,
 .form-inline textarea,
 .form-horizontal textarea,
-.form-search select,
 .form-inline select,
 .form-horizontal select,
-.form-search .help-inline,
 .form-inline .help-inline,
 .form-horizontal .help-inline,
-.form-search .uneditable-input,
 .form-inline .uneditable-input,
 .form-horizontal .uneditable-input,
-.form-search .input-prepend,
 .form-inline .input-prepend,
 .form-horizontal .input-prepend,
-.form-search .input-append,
 .form-inline .input-append,
 .form-horizontal .input-append {
   display: inline-block;
   margin-bottom: 0;
 }
-.form-search .hide,
 .form-inline .hide,
 .form-horizontal .hide {
   display: none;
 }
-.form-search label,
 .form-inline label {
   display: inline-block;
 }
-.form-search .input-append,
 .form-inline .input-append,
 .form-search .input-prepend,
 .form-inline .input-prepend {
