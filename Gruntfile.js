@@ -114,7 +114,8 @@ module.exports = function(grunt) {
             'src/less/components/field-helper.less',
             'src/less/components/steps.less',
             'src/less/components/progressbar.less',
-            'src/less/components/share.less'
+            'src/less/components/share.less',
+            'src/less/components/select.less'
           ],
 
           'release/less/tetra-ui-apna.less': ['<banner>',
@@ -150,7 +151,8 @@ module.exports = function(grunt) {
             'src/less/components/field-helper.less',
             'src/less/components/steps.less',
             'src/less/components/progressbar.less',
-            'src/less/components/share.less'
+            'src/less/components/share.less',
+            'src/less/components/select.less'
           ],
 
           'release/less/tetra-ui-rtl.less': ['<banner>',
@@ -186,7 +188,8 @@ module.exports = function(grunt) {
             'src/less/components/field-helper.less',
             'src/less/components/steps.less',
             'src/less/components/progressbar.less',
-            'src/less/components/share.less'
+            'src/less/components/share.less',
+            'src/less/components/select.less'
           ],
 
           'release/less/tetra-ui-light.less': ['<banner>',

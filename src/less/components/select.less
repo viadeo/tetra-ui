@@ -1,0 +1,59 @@
+// Custom select
+
+.custom-select {
+	position: relative;
+	display: inline-block;
+	height: @baseLineHeight;
+	overflow: hidden;
+	padding: 4px;
+	line-height: @baseLineHeight;
+	border: 1px solid @inputBorder;
+	background: @white;
+	border-radius: @borderRadiusXs;
+
+	*border: 0; // IE 7
+	*background: none;
+
+	select {
+		position: absolute;
+		z-index: 2;
+		left: 0; top: 0;
+		width: 120%;
+		padding: 4px;
+		line-height: @baseLineHeight;
+		border: 0;
+		background: transparent;
+		cursor: pointer;
+
+		-webkit-appearance: none;
+
+		&:focus {
+			outline: none;
+
+			+ .vicon {
+				z-index: 3;
+			}
+		}
+
+		*width: 100%; // IE 7
+	}
+
+	.vicon {
+		position: absolute;
+		z-index: 1;
+		right: 0; top: 0; bottom: -1px;
+		padding: 4px;
+		border-left: 1px solid @inputBorder;
+		background: @white;
+		font-size: 8px;
+		color: shade(@inputBorder, 50%);
+		line-height: 2.5em;
+		pointer-events: none;
+
+		*display: none; // IE 7
+	}
+
+	&:hover {
+		border-color: shade(@inputBorder, 25%);
+	}
+}

@@ -3004,8 +3004,8 @@ a:focus .avatar img {
 }
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -5787,4 +5787,55 @@ i.vicon {
 }
 .share-links .tooltip-content {
   transition-delay: .4s;
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+  height: 1.4em;
+  overflow: hidden;
+  padding: 4px;
+  line-height: 1.4em;
+  border: 1px solid #c5c7c5;
+  background: #ffffff;
+  border-radius: 2px;
+  *border: 0;
+  *background: none;
+}
+.custom-select select {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 120%;
+  padding: 4px;
+  line-height: 1.4em;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  *width: 100%;
+}
+.custom-select select:focus {
+  outline: none;
+}
+.custom-select select:focus + .vicon {
+  z-index: 3;
+}
+.custom-select .vicon {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  bottom: -1px;
+  padding: 4px;
+  border-left: 1px solid #c5c7c5;
+  background: #ffffff;
+  font-size: 8px;
+  color: #636463;
+  line-height: 2.5em;
+  pointer-events: none;
+  *display: none;
+}
+.custom-select:hover {
+  border-color: #949594;
 }

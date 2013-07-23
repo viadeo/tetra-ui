@@ -3004,8 +3004,8 @@ a:focus .avatar img {
 }
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1374070935/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
