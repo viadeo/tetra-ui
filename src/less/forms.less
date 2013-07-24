@@ -476,7 +476,8 @@
       .radius-left(@rtl);
     }
 
-    input:focus + .btn {
+    input:focus + .btn,
+    input:focus + .custom-select {
       .border-right-color (@rtl) when (@rtl = false) { border-right-color: @blue2; }
       .border-right-color (@rtl) when (@rtl = true) { border-left-color: @blue2; }
 

@@ -2505,7 +2505,8 @@ pre {
 .core-form .input-append select .uneditable-input {
   border-radius: 2px 0 0 2px;
 }
-.core-form .input-append input:focus + .btn {
+.core-form .input-append input:focus + .btn,
+.core-form .input-append input:focus + .custom-select {
   border-top-color: #007bc2;
   border-right-color: #007bc2;
   border-bottom-color: #007bc2;

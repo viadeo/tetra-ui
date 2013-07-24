@@ -2507,7 +2507,8 @@ pre {
 .core-form .input-append select .uneditable-input {
   border-radius: 2px 0 0 2px;
 }
-.core-form .input-append input:focus + .btn {
+.core-form .input-append input:focus + .btn,
+.core-form .input-append input:focus + .custom-select {
   border-top-color: #007bc2;
   border-right-color: #007bc2;
   border-bottom-color: #007bc2;
@@ -5798,13 +5799,14 @@ i.vicon {
   padding: 4px;
   border: 1px solid #c5c7c5;
   background: #ffffff;
+  vertical-align: middle;
   border-radius: 2px;
 }
 .custom-select label {
   position: absolute;
   left: 0;
   top: 0;
-  right: 2.5em;
+  right: 2em;
   bottom: 0;
   padding: 4px;
   line-height: 1.4em;
@@ -5838,4 +5840,10 @@ i.vicon {
 }
 .custom-select:hover {
   border-color: #949594;
+}
+.input-append .custom-select {
+  margin-left: -1px;
+}
+.input-append .custom-select .vicon {
+  border: none;
 }

@@ -2029,7 +2029,8 @@ pre {
       .radius-left(@rtl);
     }
 
-    input:focus + .btn {
+    input:focus + .btn,
+    input:focus + .custom-select {
       .border-right-color (@rtl) when (@rtl = false) { border-right-color: @blue2; }
       .border-right-color (@rtl) when (@rtl = true) { border-left-color: @blue2; }
 
@@ -5299,12 +5300,13 @@ i.vicon {
 	padding: 4px;
 	border: 1px solid @inputBorder;
 	background: @white;
+	vertical-align: middle;
 	border-radius: @borderRadiusXs;
 
 	label {
 		position: absolute;
 		left: 0; top: 0;
-		right: 2.5em; bottom: 0;
+		right: 2em; bottom: 0;
 		padding: 4px;
 		line-height: @baseLineHeight;
 		white-space: nowrap;
@@ -5338,5 +5340,13 @@ i.vicon {
 
 	&:hover {
 		border-color: shade(@inputBorder, 25%);
+	}
+
+	.input-append & {
+		margin-left: -1px;
+
+		.vicon {
+			border: none;
+		}
 	}
 }

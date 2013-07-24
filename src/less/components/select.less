@@ -8,12 +8,13 @@
 	padding: 4px;
 	border: 1px solid @inputBorder;
 	background: @white;
+	vertical-align: middle;
 	border-radius: @borderRadiusXs;
 
 	label {
 		position: absolute;
 		left: 0; top: 0;
-		right: 2.5em; bottom: 0;
+		right: 2em; bottom: 0;
 		padding: 4px;
 		line-height: @baseLineHeight;
 		white-space: nowrap;
@@ -47,5 +48,13 @@
 
 	&:hover {
 		border-color: shade(@inputBorder, 25%);
+	}
+
+	.input-append & {
+		margin-left: -1px;
+
+		.vicon {
+			border: none;
+		}
 	}
 }
