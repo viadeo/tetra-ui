@@ -100,9 +100,9 @@
 @buttonDefaultBorderColor: #d5d5d5;
 @buttonDefaultTextColor:   @blackLight;
 
-@buttonTerBgColor:         #91cf00;
-@buttonTerHoverColor:      #62a600;
-@buttonTerBorderColor:     #86b300;
+@buttonTerBgColor:         lighten(@green2, 4%);
+@buttonTerHoverColor:      darken(@green2, 3%);
+@buttonTerBorderColor:     @green2;
 @buttonTerTextColor:       @white;
 
 @highlightColor:    #F4F2CA;
@@ -2911,7 +2911,6 @@ i.vicon {
   span, input, button { color: @_primaryTextColor; }
   border: 1px solid @_primaryBorderColor;
   #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
-  _background-color: @_primaryBgColor!important;
 
   &:hover, &:focus {
     #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
@@ -2969,7 +2968,6 @@ i.vicon {
   #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
   color: @_defaultTextColor;
   span, input, button { color: @_defaultTextColor; }
-  _background-color: @_defaultBgColor!important;
 
   .vicon {
     color: @gray;
@@ -3027,7 +3025,6 @@ i.vicon {
   span, input, button { color: @_tertiaryTextColor; }
   border: 1px solid @_tertiaryBorderColor;
   #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
-  _background-color: @_tertiaryBgColor!important;
 
   .vicon {
     color: @_tertiaryTextColor;
@@ -4295,12 +4292,11 @@ i.vicon {
 .btn-toggle {
 	display: inline-block;
 	padding: 4px 10px 4px 4px;
-	border: 1px solid lighten(@black, 84%);
+	border: 1px solid tint(@black, 70%);
 	border-radius: @borderRadiusS;
-	color: @gray;
+	color: @white;
 	line-height: @baseLineHeight;
-	#gradient > .vertical(lighten(@black, 95%), lighten(@black, 90%));
-	box-shadow: 0 1px 0 fade(@black, 16%);
+	background: tint(@black, 70%);
 	cursor: pointer;
 
 	-webkit-user-select: none;
@@ -4319,8 +4315,7 @@ i.vicon {
 		line-height: 15px;
 		.margin-right(@rtl, @spacingXs);
 		border-radius: (@borderRadiusS - 1);
-		background: lighten(@black, 99%);
-		box-shadow: inset 0 1px 2px fade(@black, 25%);
+		background: @white;
 
 		.vicon {
 			visibility: hidden;
@@ -4330,25 +4325,20 @@ i.vicon {
 }
 
 .btn-toggle-checked {
-	border-color: @panelBorderDarker;
-	color: darken(@linkColor, 5%);
-	#gradient > .vertical(@panelBorder, @borderColor);
-	box-shadow: inset 0 1px 0 fade(@panelBorderDarker, 80%);
+	border-color: @green2;
+	background: @green2;
 
 	.btn-toggle-check {
-		background: @panelBackground;
-		box-shadow: 1px 1px 1px fade(darken(@linkColor, 15%), 50%);
-
 		.vicon {
 			visibility: visible;
-			color: darken(@linkColor, 5%);
+			color: @green2;
 		}
 	}
 }
 
 .btn-toggle:hover {
-	border-color: @panelBorderDarker;
-	#gradient > .vertical(darken(@panelBorder, 5%), darken(@borderColor, 2.5%));
+	border-color: darken(@green2, 3%);
+	background: darken(@green2, 3%);
 }
 
 // Toggle buttons in forms
@@ -4356,7 +4346,7 @@ i.vicon {
 .core-form {
 	label.btn-toggle {
 		display: inline-block;
-		
+
 		input {
 			display: none;
 		}

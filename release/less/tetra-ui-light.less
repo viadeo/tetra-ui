@@ -100,9 +100,9 @@
 @buttonDefaultBorderColor: #d5d5d5;
 @buttonDefaultTextColor:   @blackLight;
 
-@buttonTerBgColor:         #91cf00;
-@buttonTerHoverColor:      #62a600;
-@buttonTerBorderColor:     #86b300;
+@buttonTerBgColor:         lighten(@green2, 4%);
+@buttonTerHoverColor:      darken(@green2, 3%);
+@buttonTerBorderColor:     @green2;
 @buttonTerTextColor:       @white;
 
 @highlightColor:    #F4F2CA;
@@ -2772,7 +2772,6 @@ i.vicon {
   span, input, button { color: @_primaryTextColor; }
   border: 1px solid @_primaryBorderColor;
   #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
-  _background-color: @_primaryBgColor!important;
 
   &:hover, &:focus {
     #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
@@ -2830,7 +2829,6 @@ i.vicon {
   #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
   color: @_defaultTextColor;
   span, input, button { color: @_defaultTextColor; }
-  _background-color: @_defaultBgColor!important;
 
   .vicon {
     color: @gray;
@@ -2888,7 +2886,6 @@ i.vicon {
   span, input, button { color: @_tertiaryTextColor; }
   border: 1px solid @_tertiaryBorderColor;
   #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
-  _background-color: @_tertiaryBgColor!important;
 
   .vicon {
     color: @_tertiaryTextColor;
