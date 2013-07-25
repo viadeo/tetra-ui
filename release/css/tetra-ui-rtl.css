@@ -2587,6 +2587,7 @@ pre {
   width: 140px;
   padding-top: 5px;
   text-align: left;
+  text-align: right;
 }
 .form-horizontal .controls {
   margin-right: 160px;
@@ -5747,9 +5748,9 @@ i.vicon {
 }
 .custom-select label {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  right: 2em;
+  left: 2em;
   bottom: 0;
   padding: 4px;
   line-height: 1.2em;
@@ -5759,7 +5760,7 @@ i.vicon {
 }
 .custom-select .vicon {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   bottom: -1px;
   padding: 4px;
@@ -5785,7 +5786,7 @@ i.vicon {
   border-color: #949594;
 }
 .input-append .custom-select {
-  margin-left: -1px;
+  margin-right: -1px;
 }
 .input-append .custom-select .vicon {
   border: none;

@@ -2128,6 +2128,7 @@ pre {
     width: 140px;
     padding-top: 5px;
     text-align: left;
+    .text-align-left(@rtl);
   }
   // Move over all input controls and content
   .controls {
@@ -5276,8 +5277,8 @@ i.vicon {
 
 	label {
 		position: absolute;
-		left: 0; top: 0;
-		right: 2em; bottom: 0;
+		.left(@rtl, 0); top: 0;
+		.right(@rtl, 2em); bottom: 0;
 		padding: 4px;
 		line-height: @baseLineHeight;
 		white-space: nowrap;
@@ -5287,7 +5288,7 @@ i.vicon {
 
 	.vicon {
 		position: absolute;
-		right: 0; top: 0; bottom: -1px;
+		.right(@rtl, 0); top: 0; bottom: -1px;
 		padding: 4px;
 		border-left: 1px solid @inputBorder;
 		background: @white;
@@ -5314,7 +5315,7 @@ i.vicon {
 	}
 
 	.input-append & {
-		margin-left: -1px;
+		.margin-left(@rtl, -1px);
 
 		.vicon {
 			border: none;
