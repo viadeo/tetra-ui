@@ -2463,22 +2463,6 @@ pre {
 .core-form .input-append .uneditable-input {
   border-left-color: #ccc;
 }
-.core-form .input-prepend .add-on,
-.core-form .input-append .add-on {
-  display: inline-block;
-  width: auto;
-  min-width: 16px;
-  height: 1.4em;
-  padding: 4px 5px;
-  font-weight: normal;
-  line-height: 1.4em;
-  text-align: center;
-  vertical-align: middle;
-  background-color: #e6e6e6;
-  border: 1px solid #ccc;
-}
-.core-form .input-prepend .add-on,
-.core-form .input-append .add-on,
 .core-form .input-prepend .btn,
 .core-form .input-append .btn {
   border-radius: 2px 0 0 2px;
@@ -2499,7 +2483,6 @@ pre {
   background-color: #d1eb5c;
   border-color: #829b13;
 }
-.core-form .input-prepend .add-on,
 .core-form .input-prepend .btn {
   margin-right: -1px;
 }
@@ -2518,7 +2501,6 @@ pre {
   border-left-color: #eee;
   border-right-color: #ccc;
 }
-.core-form .input-append .add-on,
 .core-form .input-append .btn {
   margin-left: -1px;
   border-radius: 0 2px 2px 0;
@@ -2528,12 +2510,10 @@ pre {
 .core-form .input-prepend.input-append .uneditable-input {
   border-radius: 0;
 }
-.core-form .input-prepend.input-append .add-on:first-child,
 .core-form .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
   border-radius: 2px 0 0 2px;
 }
-.core-form .input-prepend.input-append .add-on:last-child,
 .core-form .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
   border-radius: 0 2px 2px 0;
