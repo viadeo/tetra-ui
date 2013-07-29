@@ -9,7 +9,7 @@
 
 // Fonts
 @fonts-dir: "/css/core/fonts";
-@fonts-version: "1374593599";
+@fonts-version: "1375102151";
 @font-stack: "Arial", sans-serif;
 
 // Right To Left mode (arabic)
@@ -114,7 +114,7 @@
 // Typography
 @baseFontSize:      12px;
 @smallFontSize:     @baseFontSize - 1;
-@baseFontColor:     #222222;
+@baseFontColor:     tint(@black, 15%);
 @baseFontFamily:    Arial, sans-serif;
 @baseLineHeight:    1.4em;
 
@@ -1407,7 +1407,7 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
 }
 
 .h-bx {
-  border-bottom: 3px solid @blueSoft;
+  border-bottom: 3px solid @blue3;
   font-size: 16px;
   padding: 0 0 7px 0;
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
@@ -1420,7 +1420,7 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
     .float-right(@rtl);
 
     .vicon {
-      color: tint(@blueSoft, 50%);
+      color: tint(@blue3, 50%);
       font-size: 8px;
       margin: 0 -1px 0 0;
     }
@@ -1428,7 +1428,7 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
     &:hover,
     &:focus {
       .vicon {
-        color: @blueSoft;
+        color: @blue3;
       }
     }
   }
@@ -1779,6 +1779,7 @@ pre {
   @size-medium: 150px;
   @size-large: 210px;
   @size-xlarge: 270px;
+  @size-xmlarge: 400px;
   @size-xxlarge: 530px;
 
   .input-mini { width: @size-mini; }
@@ -1786,6 +1787,7 @@ pre {
   .input-medium { width: @size-medium; }
   .input-large { width: @size-large; }
   .input-xlarge { width: @size-xlarge; }
+  .input-xmlarge { width: @size-xmlarge; }
   .input-xxlarge { width: @size-xxlarge; }
 
   .input-fullwidth {
@@ -1910,11 +1912,9 @@ pre {
   // Form actions
 
   .form-actions {
-    padding: (@baseLineHeight - 1) 20px @baseLineHeight;
+    padding: @baseLineHeight @spacingL;
     margin-top: @baseLineHeight;
     margin-bottom: @baseLineHeight;
-    background-color: @panelBackground;
-    border-top: 1px solid @panelBorder;
     .clearfixHack(); // Adding clearfix to allow for .pull-right button containers
   }
 

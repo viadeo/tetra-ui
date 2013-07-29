@@ -1902,7 +1902,7 @@ body {
   font-size: 15px;
   line-height: 1.2em;
   font-family: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
-  color: #222222;
+  color: #262626;
 }
 p {
   margin-bottom: 1.2em;
@@ -1932,7 +1932,7 @@ h6,
   font-family: Arial, sans-serif;
   font-weight: bold;
   margin-bottom: 0.48em;
-  color: #3c3c3c;
+  color: #404040;
 }
 .h1,
 .h2,
@@ -1985,7 +1985,7 @@ h6,
   font-size: 14px;
 }
 .h-bx {
-  border-bottom: 3px solid #83a0b9;
+  border-bottom: 3px solid #42a2d6;
   font-size: 16px;
   padding: 0 0 7px 0;
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
@@ -1997,13 +1997,13 @@ h6,
   float: left;
 }
 .h-bx .h-bx-link .vicon {
-  color: #c1d0dc;
+  color: #a1d1eb;
   font-size: 8px;
   margin: 0 -1px 0 0;
 }
 .h-bx .h-bx-link:hover .vicon,
 .h-bx .h-bx-link:focus .vicon {
-  color: #83a0b9;
+  color: #42a2d6;
 }
 .h-bx.h-bx-main {
   border-bottom-color: #f56600;
@@ -2296,6 +2296,9 @@ pre {
 .core-form .input-xlarge {
   width: 270px;
 }
+.core-form .input-xmlarge {
+  width: 400px;
+}
 .core-form .input-xxlarge {
   width: 530px;
 }
@@ -2398,11 +2401,9 @@ pre {
   box-shadow: 0 0 3px #f8b9b7;
 }
 .core-form .form-actions {
-  padding: 0.19999999999999996em 20px 1.2em;
+  padding: 1.2em 20px;
   margin-top: 1.2em;
   margin-bottom: 1.2em;
-  background-color: #f5f7f9;
-  border-top: 1px solid #e4eaf0;
   zoom: 1;
 }
 .core-form .form-actions:before,
@@ -2740,7 +2741,7 @@ table.table-hover tbody tr:hover > th {
   margin-left: 5px;
 }
 h1 .sub {
-  color: #555555;
+  color: #595959;
   display: block;
   font-weight: normal;
   font-size: 15px;
@@ -2986,8 +2987,8 @@ a:focus .avatar img {
 }
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1374593599/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -5193,10 +5194,10 @@ i.vicon {
   background-image: linear-gradient(to bottom, #fff7d2, #fff2bc);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d2', endColorstr='#fff2bc', GradientType=0);
   *filter: none;
-  color: #222222;
+  color: #262626;
 }
 .bx-alert-warning a {
-  color: #222222;
+  color: #262626;
 }
 .bx-alert-warning .bx-alert-icon {
   background: none;
