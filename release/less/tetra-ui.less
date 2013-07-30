@@ -490,6 +490,7 @@
 }
 
 // Right To Left mixins
+
 .float-left (@rtl) when (@rtl = false) { float: left; }
 .float-left (@rtl) when (@rtl = true) { float: right; }
 
@@ -531,6 +532,12 @@
 
 .right (@rtl, @value) when (@rtl = false) { right: @value; }
 .right (@rtl, @value) when (@rtl = true) { left: @value; }
+
+.border-top-right-radius (@rtl, @value) when (@rtl = false) { border-top-right-radius: @value; }
+.border-top-right-radius (@rtl, @value) when (@rtl = true) { border-top-left-radius: @value; }
+
+.border-top-left-radius (@rtl, @value) when (@rtl = false) { border-top-left-radius: @value; }
+.border-top-left-radius (@rtl, @value) when (@rtl = true) { border-top-right-radius: @value; }
 
 // Reset
 // An adapted version of the adapted version of Eric Meyer's reset for Twitter's Bootstrap
@@ -3447,13 +3454,14 @@ i.vicon {
 
       .close {
         position: absolute;
-        right: 0; top: 0; bottom: 0;
+        top: 0; bottom: 0;
+        .right(@rtl, 0);
         padding: 0 12px;
         line-height: 4.4em;
         background: tint(@black, 15%);
         color: tint(@black, 60%);
         text-decoration: none;
-        border-top-right-radius: @borderRadiusM;
+        .border-top-right-radius(@rtl, @borderRadiusM);
 
         span {
           display: inline-block;
@@ -3462,7 +3470,7 @@ i.vicon {
         }
 
         .vicon {
-          margin-right: -0.2em;
+          .margin-right(@rtl, -0.2em);
           color: tint(@black, 60%);
           vertical-align: top;
         }
@@ -4678,6 +4686,69 @@ i.vicon {
 		border-color: @white;
 	}
 
+}
+
+.bx-editable {
+	position: relative;
+
+	.bx-edit-btn {
+		position: absolute;
+		.right(@rtl, 100%);
+    min-width: 8em;
+		.margin-right(@rtl, @spacingL);
+    .text-align-right(@rtl);
+
+		.bx-edit {
+			.border-radius (@rtl) when (@rtl = false) {
+				border-radius: @borderRadiusS 0 0 @borderRadiusS;
+			}
+			.border-radius (@rtl) when (@rtl = true) {
+				border-radius: 0 @borderRadiusS @borderRadiusS 0;
+			}
+
+      display: inline-block;
+      margin: 0 0 @spacingS 0;
+			padding: 8px @spacingXs 6px;
+			line-height: @baseLineHeight;
+			background: @blue2;
+      .border-radius(@rtl);
+			white-space: nowrap;
+      text-decoration: none;
+      color: @white;
+
+      .vicon {
+        font-size: 8px;
+        color: @white;
+        vertical-align: top;
+      }
+
+      span {
+        display: inline-block;
+        width: 0;
+        max-width: 0;
+        overflow: hidden;
+        .transition(max-width 0.3s);
+      }
+
+      &:hover {
+        background: shade(@blue2, 20%);
+
+        span {
+        	width: auto;
+          max-width: 10em;
+        }
+      }
+		}
+
+    .bx-edit-rm {
+      background: tint(@black, 20%);
+
+      &:hover {
+        background: @black;
+      }
+    }
+
+	}
 }
 
 .bx-flip-flipped {

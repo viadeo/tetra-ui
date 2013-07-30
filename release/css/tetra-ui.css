@@ -4135,9 +4135,9 @@ i.vicon {
 }
 .popin-container .popin .popin-header .close {
   position: absolute;
-  right: 0;
   top: 0;
   bottom: 0;
+  right: 0;
   padding: 0 12px;
   line-height: 4.4em;
   background: #262626;
@@ -5275,6 +5275,55 @@ i.vicon {
 }
 .bx-flip-back .h-bx {
   border-color: #ffffff;
+}
+.bx-editable {
+  position: relative;
+}
+.bx-editable .bx-edit-btn {
+  position: absolute;
+  right: 100%;
+  min-width: 8em;
+  margin-right: 20px;
+  text-align: right;
+}
+.bx-editable .bx-edit-btn .bx-edit {
+  display: inline-block;
+  margin: 0 0 10px 0;
+  padding: 8px 5px 6px;
+  line-height: 1.4em;
+  background: #007bc2;
+  border-radius: 3px 0 0 3px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #ffffff;
+}
+.bx-editable .bx-edit-btn .bx-edit .vicon {
+  font-size: 8px;
+  color: #ffffff;
+  vertical-align: top;
+}
+.bx-editable .bx-edit-btn .bx-edit span {
+  display: inline-block;
+  width: 0;
+  max-width: 0;
+  overflow: hidden;
+  -webkit-transition: max-width 0.3s;
+  -moz-transition: max-width 0.3s;
+  -o-transition: max-width 0.3s;
+  transition: max-width 0.3s;
+}
+.bx-editable .bx-edit-btn .bx-edit:hover {
+  background: #00629b;
+}
+.bx-editable .bx-edit-btn .bx-edit:hover span {
+  width: auto;
+  max-width: 10em;
+}
+.bx-editable .bx-edit-btn .bx-edit-rm {
+  background: #333333;
+}
+.bx-editable .bx-edit-btn .bx-edit-rm:hover {
+  background: #000000;
 }
 .bx-flip-flipped .bx-flip-front {
   -webkit-transform: perspective(700px) rotateY(-180deg);

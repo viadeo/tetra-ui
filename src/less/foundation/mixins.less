@@ -328,6 +328,7 @@
 }
 
 // Right To Left mixins
+
 .float-left (@rtl) when (@rtl = false) { float: left; }
 .float-left (@rtl) when (@rtl = true) { float: right; }
 
@@ -369,3 +370,9 @@
 
 .right (@rtl, @value) when (@rtl = false) { right: @value; }
 .right (@rtl, @value) when (@rtl = true) { left: @value; }
+
+.border-top-right-radius (@rtl, @value) when (@rtl = false) { border-top-right-radius: @value; }
+.border-top-right-radius (@rtl, @value) when (@rtl = true) { border-top-left-radius: @value; }
+
+.border-top-left-radius (@rtl, @value) when (@rtl = false) { border-top-left-radius: @value; }
+.border-top-left-radius (@rtl, @value) when (@rtl = true) { border-top-right-radius: @value; }

@@ -4136,15 +4136,15 @@ i.vicon {
 }
 .popin-container .popin .popin-header .close {
   position: absolute;
-  right: 0;
   top: 0;
   bottom: 0;
+  left: 0;
   padding: 0 12px;
   line-height: 4.4em;
   background: #262626;
   color: #999999;
   text-decoration: none;
-  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 .popin-container .popin .popin-header .close span {
   display: inline-block;
@@ -4152,7 +4152,7 @@ i.vicon {
   overflow: hidden;
 }
 .popin-container .popin .popin-header .close .vicon {
-  margin-right: -0.2em;
+  margin-left: -0.2em;
   color: #999999;
   vertical-align: top;
 }
@@ -5276,6 +5276,55 @@ i.vicon {
 }
 .bx-flip-back .h-bx {
   border-color: #ffffff;
+}
+.bx-editable {
+  position: relative;
+}
+.bx-editable .bx-edit-btn {
+  position: absolute;
+  left: 100%;
+  min-width: 8em;
+  margin-left: 20px;
+  text-align: left;
+}
+.bx-editable .bx-edit-btn .bx-edit {
+  display: inline-block;
+  margin: 0 0 10px 0;
+  padding: 8px 5px 6px;
+  line-height: 1.2em;
+  background: #007bc2;
+  border-radius: 0 3px 3px 0;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #ffffff;
+}
+.bx-editable .bx-edit-btn .bx-edit .vicon {
+  font-size: 8px;
+  color: #ffffff;
+  vertical-align: top;
+}
+.bx-editable .bx-edit-btn .bx-edit span {
+  display: inline-block;
+  width: 0;
+  max-width: 0;
+  overflow: hidden;
+  -webkit-transition: max-width 0.3s;
+  -moz-transition: max-width 0.3s;
+  -o-transition: max-width 0.3s;
+  transition: max-width 0.3s;
+}
+.bx-editable .bx-edit-btn .bx-edit:hover {
+  background: #00629b;
+}
+.bx-editable .bx-edit-btn .bx-edit:hover span {
+  width: auto;
+  max-width: 10em;
+}
+.bx-editable .bx-edit-btn .bx-edit-rm {
+  background: #333333;
+}
+.bx-editable .bx-edit-btn .bx-edit-rm:hover {
+  background: #000000;
 }
 .bx-flip-flipped .bx-flip-front {
   -webkit-transform: perspective(700px) rotateY(-180deg);

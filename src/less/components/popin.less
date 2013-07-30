@@ -68,13 +68,14 @@
 
       .close {
         position: absolute;
-        right: 0; top: 0; bottom: 0;
+        top: 0; bottom: 0;
+        .right(@rtl, 0);
         padding: 0 12px;
         line-height: 4.4em;
         background: tint(@black, 15%);
         color: tint(@black, 60%);
         text-decoration: none;
-        border-top-right-radius: @borderRadiusM;
+        .border-top-right-radius(@rtl, @borderRadiusM);
 
         span {
           display: inline-block;
@@ -83,7 +84,7 @@
         }
 
         .vicon {
-          margin-right: -0.2em;
+          .margin-right(@rtl, -0.2em);
           color: tint(@black, 60%);
           vertical-align: top;
         }
