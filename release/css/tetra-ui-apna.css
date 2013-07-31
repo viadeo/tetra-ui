@@ -1941,7 +1941,8 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6,
+.h-lead {
   font-family: "MuseoSlab", Arial, sans-serif;
   font-weight: normal;
 }
@@ -1970,6 +1971,13 @@ h6,
 .h6 {
   font-size: 13px;
   padding-bottom: 0.4666666666666666em;
+}
+.h-lead {
+  font-size: 30px;
+}
+.h-sub {
+  font-size: 15px;
+  font-weight: normal;
 }
 .h-alt,
 .subh-alt {
