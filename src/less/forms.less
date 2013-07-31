@@ -349,29 +349,13 @@
     }
   }
 
-  // HTML5 invalid states
-  // Shares styles with the .control-group.error above
-
-  input:focus:required:invalid,
-  textarea:focus:required:invalid,
-  select:focus:required:invalid {
-    color: #b94a48;
-    border-color: #ee5f5b;
-    &:focus {
-      border-color: darken(#ee5f5b, 10%);
-      .box-shadow(0 0 3px lighten(#ee5f5b, 20%));
-    }
-  }
-
-
-
   // Form actions
 
   .form-actions {
     padding: @baseLineHeight @spacingL;
     margin-top: @baseLineHeight;
     margin-bottom: @baseLineHeight;
-    .clearfixHack(); // Adding clearfix to allow for .pull-right button containers
+    .clearfixHack();
   }
 
   // For text that needs to appear as an input but should not be an input

@@ -2384,19 +2384,6 @@ pre {
 .core-form .control-group.disabled .help-inline {
   color: #bfbfbf;
 }
-.core-form input:focus:required:invalid,
-.core-form textarea:focus:required:invalid,
-.core-form select:focus:required:invalid {
-  color: #b94a48;
-  border-color: #ee5f5b;
-}
-.core-form input:focus:required:invalid:focus,
-.core-form textarea:focus:required:invalid:focus,
-.core-form select:focus:required:invalid:focus {
-  border-color: #e9322d;
-  -webkit-box-shadow: 0 0 3px #f8b9b7;
-  box-shadow: 0 0 3px #f8b9b7;
-}
 .core-form .form-actions {
   padding: 1.2em 20px;
   margin-top: 1.2em;
