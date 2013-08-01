@@ -10,7 +10,8 @@ tetra.view.register('select', {
           'change': {
             '.custom-select select': function(e, elm) {
               var container = _(elm).parents('.custom-select:first');
-              container.find('label').html(_(elm).val());
+              var selectedText = container.find('option:selected').html();
+              container.find('label').html(selectedText);
             }
           }
         },
