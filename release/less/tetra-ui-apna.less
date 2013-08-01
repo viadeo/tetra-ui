@@ -1719,10 +1719,13 @@ pre {
     display: none;
   }
 
+  // Phone numbers
+  input.tel {
+    direction: ltr; // force left to right writing mode
+    unicode-bidi: bidi-override;
+  }
 
-
-  // CHECKBOXES & RADIOS
-  // -------------------
+  // Checkbox & radio
 
   // Indent the labels to position radios/checkboxes as hanging
   .radio,

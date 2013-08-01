@@ -2236,6 +2236,10 @@ pre {
 .core-form input[type="hidden"] {
   display: none;
 }
+.core-form input.tel {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
 .core-form .radio,
 .core-form .checkbox {
   padding-left: 18px;
