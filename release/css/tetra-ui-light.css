@@ -3773,13 +3773,6 @@ i.vicon {
 .btn-tertiary.btn-loading .vicon {
   color: #0a8784;
 }
-.btn-tertiary.btn-loading span,
-.btn-tertiary.btn-loading:hover span,
-.btn-tertiary.btn-loading:focus span,
-.btn-tertiary.btn-loading:active span {
-  background: transparent url('/v_img/coreui/buttons/buttons/loaders/primary.gif') no-repeat 50% 0.3em;
-  *background-position-y: 0;
-}
 .btn-tertiary.btn-inactive,
 .btn-tertiary.btn-inactive:hover,
 .btn-tertiary.btn-loading:focus {
