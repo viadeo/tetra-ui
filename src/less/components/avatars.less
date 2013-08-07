@@ -1,0 +1,28 @@
+// Avatars
+
+.avatar {
+	display: block;
+	border: 1px solid transparent;
+	padding: 1px;
+
+	img {
+	 display: block;
+   opacity: 1;
+   .transition(opacity 0.2s);
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      opacity: 0.8;
+    }
+  }
+}
+
+a:hover, a:focus {
+  .avatar {
+    img {
+      opacity: 0.8;
+    }
+  }
+}

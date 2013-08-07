@@ -2443,40 +2443,6 @@ h1 .sub {
   }
 }
 
-/* Avatar Styles */
-
-.avatar {
-	background: @white;
-	display: block;
-	border: 1px solid tint(@blueSoft, 79%);
-	padding: 1px;
-
-	img {
-	 display: block;
-   background-color: tint(@blueSoft, 69%);
-   .transition(background-color 0.2s);
-  }
-
-  &:hover,
-  &:focus {
-    border-color: tint(@blueSoft, 60%);
-
-    img {
-      background-color: tint(@blueSoft, 60%);
-    }
-  }
-}
-
-a:hover, a:focus {
-  .avatar {
-    border-color: tint(@blueSoft, 60%);
-
-    img {
-      background-color: tint(@blueSoft, 60%);
-    }
-  }
-}
-
 // Global Icons
 
 .global-icon, .ico {
@@ -2509,6 +2475,35 @@ i.vicon {
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
+}
+
+// Avatars
+
+.avatar {
+	display: block;
+	border: 1px solid transparent;
+	padding: 1px;
+
+	img {
+	 display: block;
+   opacity: 1;
+   .transition(opacity 0.2s);
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      opacity: 0.8;
+    }
+  }
+}
+
+a:hover, a:focus {
+  .avatar {
+    img {
+      opacity: 0.8;
+    }
+  }
 }
 
 .popover-display {

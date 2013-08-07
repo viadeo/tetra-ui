@@ -2938,37 +2938,6 @@ h1 .sub {
 .ui-tag .remove:focus {
   background: #097774;
 }
-/* Avatar Styles */
-.avatar {
-  background: #ffffff;
-  display: block;
-  border: 1px solid #e5ebf0;
-  padding: 1px;
-}
-.avatar img {
-  display: block;
-  background-color: #d9e2e9;
-  -webkit-transition: background-color 0.2s;
-  -moz-transition: background-color 0.2s;
-  -o-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-.avatar:hover,
-.avatar:focus {
-  border-color: #cdd9e3;
-}
-.avatar:hover img,
-.avatar:focus img {
-  background-color: #cdd9e3;
-}
-a:hover .avatar,
-a:focus .avatar {
-  border-color: #cdd9e3;
-}
-a:hover .avatar img,
-a:focus .avatar img {
-  background-color: #cdd9e3;
-}
 .global-icon,
 .ico {
   background: url('/v_img/global/global-sprite2.png') no-repeat;
@@ -2994,6 +2963,27 @@ i.vicon {
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
+}
+.avatar {
+  display: block;
+  border: 1px solid transparent;
+  padding: 1px;
+}
+.avatar img {
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.avatar:hover img,
+.avatar:focus img {
+  opacity: 0.8;
+}
+a:hover .avatar img,
+a:focus .avatar img {
+  opacity: 0.8;
 }
 .popover-display {
   position: relative;
