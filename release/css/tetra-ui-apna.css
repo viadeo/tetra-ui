@@ -5587,6 +5587,9 @@ a:focus .avatar img {
   z-index: 10;
   border-left: 20px solid #ffffff;
 }
+.nav-steps dd.gu-1of1 li:first-child {
+  padding-left: 0;
+}
 .nav-steps .nav-steps-item {
   display: inline-block;
   width: 1.6em;
