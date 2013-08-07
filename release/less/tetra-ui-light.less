@@ -2091,8 +2091,8 @@ pre {
 .form-inline .radio input[type="radio"],
 .form-inline .checkbox input[type="checkbox"] {
   .float-left(@rtl);
-  margin-left: 0;
-  margin-right: 3px;
+  .margin-left(@rtl, 0);
+  .margin-right(@rtl, @spacingXs);
 }
 
 // Horizontal-specific styles
@@ -2108,7 +2108,6 @@ pre {
     .float-left(@rtl);
     width: 140px;
     padding-top: 5px;
-    text-align: left;
     .text-align-left(@rtl);
   }
   // Move over all input controls and content

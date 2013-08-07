@@ -2565,7 +2565,7 @@ pre {
 .form-inline .checkbox input[type="checkbox"] {
   float: left;
   margin-left: 0;
-  margin-right: 3px;
+  margin-right: 5px;
 }
 .form-horizontal .control-group {
   margin-bottom: 1.4em;
