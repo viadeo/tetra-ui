@@ -1889,9 +1889,6 @@ textarea {
     display: inline;
   }
 }
-/* Typography.less
- * Headings, body text, lists, code, and more for a versatile and durable typography system
- * ---------------------------------------------------------------------------------------- */
 @font-face {
   font-family: 'MuseoSlab';
   src: url('/css/core/fonts/museoslab/museoslab-500.eot');
@@ -1918,6 +1915,18 @@ a:hover,
 a:focus {
   text-decoration: underline;
   color: #0071cc;
+}
+a.lnk-title {
+  color: #666666;
+}
+a.lnk-title:hover {
+  color: #000000;
+}
+a.lnk-text {
+  color: #262626;
+}
+a.lnk-text:hover {
+  color: #000000;
 }
 h1,
 .h1,

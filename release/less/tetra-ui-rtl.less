@@ -1349,9 +1349,7 @@ textarea {
   .dispi-s { display: inline; }
 }
 
-/* Typography.less
- * Headings, body text, lists, code, and more for a versatile and durable typography system
- * ---------------------------------------------------------------------------------------- */
+// Typography
 
 // Web fonts
 
@@ -1366,6 +1364,7 @@ textarea {
 }
 
 // Body Text
+
 body {
   font-weight: normal;
   font-size: @baseFontSize;
@@ -1373,21 +1372,42 @@ body {
   font-family: @font-stack;
   color: @baseFontColor;
 }
+
 p {
-   margin-bottom: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
 }
+
+// Links
+
 a {
-    color: @linkColor;
-    text-decoration: none;
-    cursor: pointer;
-}
-a:hover, a:focus {
+  color: @linkColor;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover, &:focus {
     text-decoration: underline;
     color: @linkColorHover;
+  }
+
+  &.lnk-title {
+    color: tint(@black, 40%);
+
+    &:hover {
+      color: @black;
+    }
+  }
+
+  &.lnk-text {
+    color: @baseFontColor;
+
+    &:hover {
+      color: @black;
+    }
+  }
 }
 
-
 // Headings
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: Arial, sans-serif;
   font-weight: bold;
