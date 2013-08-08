@@ -5299,6 +5299,8 @@ a:hover, a:focus {
 
 			.transition(opacity .3s);
 
+			-webkit-transform: translateZ(0); // Fixing animation artifacts on Chrome
+
 			.vicon {
 				color: @white;
 				font-size: 9px;

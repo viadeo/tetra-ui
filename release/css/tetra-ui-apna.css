@@ -5744,6 +5744,7 @@ a:focus .avatar img {
   -moz-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-transform: translateZ(0);
 }
 .share-links li a .vicon {
   color: #ffffff;
