@@ -3439,6 +3439,7 @@ a:hover, a:focus {
     .popin-header {
       position: relative;
       padding: 17px 28px;
+      .padding-right(@rtl, 60px);
       min-height: 1.3em;
       background: tint(@black, 20%);
       color: @white;
@@ -3465,7 +3466,10 @@ a:hover, a:focus {
         span {
           display: inline-block;
           width: 0;
+          max-width: 0;
           overflow: hidden;
+          white-space: nowrap;
+          .transition(max-width 0.3s);
         }
 
         .vicon {
@@ -3479,6 +3483,7 @@ a:hover, a:focus {
 
           span {
             width: auto;
+            max-width: 10em;
           }
         }
       }

@@ -4088,6 +4088,7 @@ a:focus .avatar img {
 .popin-container .popin .popin-header {
   position: relative;
   padding: 17px 28px;
+  padding-right: 60px;
   min-height: 1.3em;
   background: #333333;
   color: #ffffff;
@@ -4129,7 +4130,13 @@ a:focus .avatar img {
 .popin-container .popin .popin-header .close span {
   display: inline-block;
   width: 0;
+  max-width: 0;
   overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: max-width 0.3s;
+  -moz-transition: max-width 0.3s;
+  -o-transition: max-width 0.3s;
+  transition: max-width 0.3s;
 }
 .popin-container .popin .popin-header .close .vicon {
   margin-right: -0.2em;
@@ -4141,6 +4148,7 @@ a:focus .avatar img {
 }
 .popin-container .popin .popin-header .close:hover span {
   width: auto;
+  max-width: 10em;
 }
 .popin-container .popin .popin-body {
   padding: 20px 28px;
