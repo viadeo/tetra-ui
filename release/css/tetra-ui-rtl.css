@@ -4962,6 +4962,17 @@ a:focus .avatar img {
   border-color: #0b918d;
   background: #0b918d;
 }
+.btn-toggle-alt.btn-toggle-checked {
+  border-color: #1f668c;
+  background: #1f668c;
+}
+.btn-toggle-alt.btn-toggle-checked .btn-toggle-check .vicon {
+  color: #1f668c;
+}
+.btn-toggle-alt:hover {
+  border-color: #1c5d7f;
+  background: #1c5d7f;
+}
 .core-form label.btn-toggle {
   display: inline-block;
 }

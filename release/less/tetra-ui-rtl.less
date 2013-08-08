@@ -4335,6 +4335,25 @@ a:hover, a:focus {
 	background: darken(@green2, 3%);
 }
 
+.btn-toggle-alt {
+	&.btn-toggle-checked {
+		border-color: @blue4;
+		background: @blue4;
+
+		.btn-toggle-check {
+			.vicon {
+				color: @blue4;
+			}
+		}
+	}
+
+	&:hover {
+		border-color: darken(@blue4, 3%);
+		background: darken(@blue4, 3%);
+	}
+}
+
+
 // Toggle buttons in forms
 
 .core-form {
