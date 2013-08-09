@@ -4738,8 +4738,7 @@ a:focus .avatar img {
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transform: perspective(700px) rotateY(180deg);
-  transform: perspective(700px) rotateY(180deg);
+  visibility: hidden;
 }
 .bx-flip-back .h-bx,
 .bx-flip-back .vicon,
@@ -4752,6 +4751,23 @@ a:focus .avatar img {
 }
 .bx-flip-back .h-bx {
   border-color: #ffffff;
+}
+.bx-flip-back:not(#unsupported) {
+  visibility: visible;
+  -webkit-transform: perspective(700px) rotateY(180deg);
+  transform: perspective(700px) rotateY(180deg);
+}
+.bx-flip-flipped .bx-flip-front {
+  -webkit-transform: perspective(700px) rotateY(-180deg);
+  transform: perspective(700px) rotateY(-180deg);
+}
+.bx-flip-flipped .bx-flip-back {
+  z-index: 2;
+  visibility: visible;
+}
+.bx-flip-flipped .bx-flip-back:not(#unsupported) {
+  -webkit-transform: perspective(700px) rotateY(0);
+  transform: perspective(700px) rotateY(0);
 }
 .bx-editable {
   position: relative;
@@ -4801,15 +4817,6 @@ a:focus .avatar img {
 }
 .bx-editable .bx-edit-btn .bx-edit-rm:hover {
   background: #000000;
-}
-.bx-flip-flipped .bx-flip-front {
-  -webkit-transform: perspective(700px) rotateY(-180deg);
-  transform: perspective(700px) rotateY(-180deg);
-}
-.bx-flip-flipped .bx-flip-back {
-  -webkit-transform: perspective(700px) rotateY(0);
-  transform: perspective(700px) rotateY(0);
-  z-index: 2;
 }
 .placeholding {
   position: relative;

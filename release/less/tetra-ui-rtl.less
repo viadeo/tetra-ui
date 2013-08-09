@@ -4692,6 +4692,8 @@ a:hover, a:focus {
 	}
 }
 
+// Flippable box
+
 .bx-flip {
 	position: relative;
 	margin-bottom: @spacingL;
@@ -4699,10 +4701,10 @@ a:hover, a:focus {
 
 .bx-flip-front, .bx-flip-back {
 	-webkit-backface-visibility: hidden;
-	backface-visibility        : hidden;
+	backface-visibility: hidden;
 	margin: 0;
 	-webkit-transition: -webkit-transform .4s ease-in-out;
-	transition        :         transform .4s ease-in-out;
+	transition: transform .4s ease-in-out;
 }
 
 .bx-flip-front {
@@ -4717,8 +4719,7 @@ a:hover, a:focus {
 	position: absolute;
 	right: 0;
 	top: 0;
-	-webkit-transform: perspective(700px) rotateY(180deg);
-	transform        : perspective(700px) rotateY(180deg);
+	visibility: hidden;
 
 	.h-bx, .vicon, h2, label,
 	.h-bx-link .vicon, .h-bx-link:focus .vicon, .h-bx-link:hover .vicon {
@@ -4728,8 +4729,32 @@ a:hover, a:focus {
 	.h-bx {
 		border-color: @white;
 	}
-
 }
+
+.bx-flip-back:not(#unsupported) {
+	visibility: visible;
+	-webkit-transform: perspective(700px) rotateY(180deg);
+	transform: perspective(700px) rotateY(180deg);
+}
+
+.bx-flip-flipped {
+	.bx-flip-front {
+		-webkit-transform: perspective(700px) rotateY(-180deg);
+		transform: perspective(700px) rotateY(-180deg);
+	}
+
+	.bx-flip-back {
+		z-index: 2;
+		visibility: visible;
+	}
+
+	.bx-flip-back:not(#unsupported) {
+		-webkit-transform: perspective(700px) rotateY(0);
+		transform: perspective(700px) rotateY(0);
+	}
+}
+
+// Editable box
 
 .bx-editable {
 	position: relative;
@@ -4792,21 +4817,6 @@ a:hover, a:focus {
     }
 
 	}
-}
-
-.bx-flip-flipped {
-
-	.bx-flip-front {
-		-webkit-transform: perspective(700px) rotateY(-180deg);
-		transform        : perspective(700px) rotateY(-180deg);
-	}
-
-	.bx-flip-back {
-		-webkit-transform: perspective(700px) rotateY(0);
-		transform        : perspective(700px) rotateY(0);
-		z-index: 2;
-	}
-
 }
 
 // Card Rich Container
