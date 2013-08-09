@@ -5149,6 +5149,10 @@ a:focus .avatar img {
 .bx-alert a:hover {
   text-decoration: none;
 }
+.bx-alert a.btn {
+  color: #262626;
+  text-decoration: none;
+}
 .bx-alert .bx-alert-close {
   position: absolute;
   top: 0;
