@@ -854,8 +854,6 @@
         <div class="controls">
 
           <span class="custom-select input-large">
-            <label>Choose</label>
-            <i class="vicon">&#9662;</i>
             <select>
               <option value="1">Lorem ipsum dolor sit amet</option>
               <option value="2">Consectetur adipisicing elit</option>
@@ -863,6 +861,9 @@
               <option value="4">Et dolore magna aliqua</option>
               <option value="5">Ut enim ad minim veniam</option>
             </select>
+
+            <label>Choose</label>
+            <i class="vicon">&#9662;</i>
           </span>
 
         </div>
@@ -875,6 +876,7 @@
             <input type="text" /><span class="custom-select input-medium">
               <label>Choose</label>
               <i class="vicon">&#9662;</i>
+
               <select>
                 <option value="1">Lorem ipsum dolor sit amet</option>
                 <option value="2">Consectetur adipisicing elit</option>
@@ -892,12 +894,20 @@
   &lt;label&gt;Choose&lt;/label&gt;
   &lt;i class="vicon"&gt;&amp;#9662;&lt;/i&gt;
   &lt;select&gt;
-    &lt;option&gt;Lorem ipsum dolor sit amet&lt;/option&gt;
-    &lt;option&gt;Consectetur adipisicing elit&lt;/option&gt;
-    &lt;option&gt;Sed do eiusmod tempor incididunt ut labore&lt;/option&gt;
-    &lt;option&gt;Et dolore magna aliqua&lt;/option&gt;
-    &lt;option&gt;Ut enim ad minim veniam&lt;/option&gt;
+    &lt;option&gt;Lorem&lt;/option&gt;
+    &lt;option&gt;Ipsum&lt;/option&gt;
   &lt;/select&gt;
+&lt;/span&gt;</code></pre>
+
+    <p>The label and icon tags can be after the select tag:</p>
+
+    <pre><code class="language-markup">&lt;span class="custom-select"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Lorem&lt;/option&gt;
+    &lt;option&gt;Ipsum&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label&gt;Choose&lt;/label&gt;
+  &lt;i class="vicon"&gt;&amp;#9662;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
 
   </div>

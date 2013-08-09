@@ -5812,6 +5812,7 @@ a:focus .avatar img {
 }
 .custom-select label {
   position: absolute;
+  z-index: 1;
   left: 0;
   top: 0;
   right: 2em;
@@ -5824,6 +5825,7 @@ a:focus .avatar img {
 }
 .custom-select .vicon {
   position: absolute;
+  z-index: 2;
   right: 0;
   top: 0;
   bottom: -1px;
@@ -5836,6 +5838,7 @@ a:focus .avatar img {
 }
 .custom-select select {
   position: absolute;
+  z-index: 3;
   left: 0;
   top: 0;
   min-width: 100%;

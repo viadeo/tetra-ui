@@ -13,6 +13,7 @@
 
 	label {
 		position: absolute;
+		z-index: 1;
 		.left(@rtl, 0); top: 0;
 		.right(@rtl, 2em); bottom: 0;
 		padding: 4px;
@@ -24,6 +25,7 @@
 
 	.vicon {
 		position: absolute;
+		z-index: 2;
 		.right(@rtl, 0); top: 0; bottom: -1px;
 		padding: 4px;
 		border-left: 1px solid @inputBorder;
@@ -35,6 +37,7 @@
 
 	select {
 		position: absolute;
+		z-index: 3;
 		left: 0; top: 0;
 		min-width: 100%;
 		height: 100%;
