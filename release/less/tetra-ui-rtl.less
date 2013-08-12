@@ -121,6 +121,7 @@
 // Border Radius
 @borderRadiusXs: 2px;
 @borderRadiusS: 3px;
+@borderRadiusMS: 5px;
 @borderRadiusM: 6px;
 @borderRadiusL: 10px;
 
@@ -2506,6 +2507,7 @@ i.vicon {
 
 	img {
 	 display: block;
+   border-radius: @borderRadiusMS;
    opacity: 1;
    .transition(opacity 0.2s);
   }
@@ -2514,6 +2516,15 @@ i.vicon {
   &:focus {
     img {
       opacity: 0.8;
+    }
+  }
+
+  &.img-rounded {
+    padding: 0;
+
+    img {
+      border-radius: 50%;
+      border: 3px solid @blue2;
     }
   }
 }

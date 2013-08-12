@@ -2980,6 +2980,7 @@ i.vicon {
 }
 .avatar img {
   display: block;
+  border-radius: 5px;
   opacity: 1;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -2989,6 +2990,13 @@ i.vicon {
 .avatar:hover img,
 .avatar:focus img {
   opacity: 0.8;
+}
+.avatar.img-rounded {
+  padding: 0;
+}
+.avatar.img-rounded img {
+  border-radius: 50%;
+  border: 3px solid #007bc2;
 }
 a:hover .avatar img,
 a:focus .avatar img {
