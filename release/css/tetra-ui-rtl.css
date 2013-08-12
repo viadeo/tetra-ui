@@ -1889,8 +1889,8 @@ textarea {
 }
 @font-face {
   font-family: 'MuseoSlab';
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot');
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/museoslab/museoslab-500.woff') format('woff'), url('/css/core/fonts/museoslab/museoslab-500.ttf') format('truetype');
+  src: url('../fonts/museoslab/museoslab-500.eot');
+  src: url('../fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('../fonts/museoslab/museoslab-500.woff') format('woff'), url('../fonts/museoslab/museoslab-500.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -2960,8 +2960,8 @@ h1 .sub {
 }
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1375102151/viadeoicons.ttf') format('truetype');
+  src: url('../fonts/viadeoicons/1375102151/viadeoicons.eot');
+  src: url('../fonts/viadeoicons/1375102151/viadeoicons.eot?#iefix') format('embedded-opentype'), url('../fonts/viadeoicons/1375102151/viadeoicons.woff') format('woff'), url('../fonts/viadeoicons/1375102151/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
