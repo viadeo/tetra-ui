@@ -1,17 +1,27 @@
 {
   "name": "tetra-ui",
   "version": "1.2.2",
-  "main": "release/",
+  "main": "dist/",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "doc",
+    "spec",
+    "src",
+    "abu.json",
+    "Gruntfile.js",
+    "testem.json",
+    "index.html",
+    "*.sublime-project"
   ],
   "dependencies": {
     "json2": "git://github.com/douglascrockford/JSON-js.git",
-    "tetra-js": "https://raw.github.com/viadeo/tetra/1.0.23/release/tetra-jquery.min.js",
+    "tetra-js": "https://raw.github.com/viadeo/tetra/1.0.23/release/tetra-jquery.min.js"
+  },
+  "devDependencies": {
     "prism-js": "https://raw.github.com/LeaVerou/prism/gh-pages/prism.js",
     "prism-css": "https://raw.github.com/LeaVerou/prism/gh-pages/prism.css"
   }

@@ -3,6 +3,6 @@ tetra.extend({
         env: 'jQuery',
         enableBootnode: true,
         APPS_PATH: '/tetra-ui/src/js/coremvc/comps',
-        COMP_PATH: '/tetra-ui/release/js'
+        COMP_PATH: '/tetra-ui/dist/js'
     }
 }).start();
