@@ -1,5 +1,0 @@
-# Font Squirrel Font-face Generator Configuration File
-# Upload this file to the generator to recreate the settings
-# you used to create these fonts.
-
-{"mode":"expert","formats":["ttf","woff","eot"],"tt_instructor":"default","fallback":"none","fallback_custom":"100","options_subset":"none","subset_custom":"BCEFGHKLMNOPRTSTXZa\u00e3bcdefghijklmno\u00f4\u00f5prstuvwxyz*!?;:<>\u00ab\u00bb\u2039\u203a\u2227\u2228\u00d7+\u2194\u25be\/\u20ac\u2295\u2611\u2397\u2399\u237e\u29be\u29d6","subset_custom_range":"f021-f03f","css_stylesheet":"stylesheet.css","filename_suffix":"","emsquare":"2400","spacing_adjustment":"0","rememberme":"Y"}

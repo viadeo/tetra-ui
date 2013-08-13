@@ -1,7 +1,0 @@
-{
-	"appsPath":"src/js/coremvc/comps",
-	"specsPath":"test/specs",
-	"globalModelsPath":"src/js/coremvc",
-	"cyclomaticComplexityCeiling": 8,
-	"maintainabilityFloor": 100
-}
