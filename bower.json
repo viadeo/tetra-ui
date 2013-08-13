@@ -15,6 +15,7 @@
     "abu.json",
     "Gruntfile.js",
     "testem.json",
+    "package.json",
     "index.html",
     "*.sublime-project"
   ],
