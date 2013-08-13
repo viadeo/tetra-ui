@@ -1,0 +1,14 @@
+{
+  "name": "tetra-js",
+  "_cacheHeaders": {
+    "ETag": "\"295cd4bc5b3330b3efb4c8e48203e8b5\"",
+    "Content-Length": "150957",
+    "Content-Type": "text/plain; charset=utf-8",
+    "Content-Disposition": "inline"
+  },
+  "_release": "e-tag:295cd4bc5",
+  "main": "index.js",
+  "_source": "https://raw.github.com/viadeo/tetra/1.0.23/release/tetra-jquery.min.js",
+  "_target": "*",
+  "_direct": true
+}
