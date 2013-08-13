@@ -1,6 +1,6 @@
 {
   "name": "tetra-ui",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "release/",
   "ignore": [
     "**/.*",
@@ -10,7 +10,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "1.9.1",
     "json2": "git://github.com/douglascrockford/JSON-js.git",
     "tetra-js": "https://raw.github.com/viadeo/tetra/1.0.23/release/tetra-jquery.min.js",
     "prism-js": "https://raw.github.com/LeaVerou/prism/gh-pages/prism.js",

@@ -9,6 +9,5 @@
   "_release": "e-tag:0c6c44f4a",
   "main": "index.js",
   "_source": "https://raw.github.com/LeaVerou/prism/gh-pages/prism.js",
-  "_target": "*",
-  "_direct": true
+  "_target": "*"
 }

@@ -9,6 +9,5 @@
   "_release": "e-tag:295cd4bc5",
   "main": "index.js",
   "_source": "https://raw.github.com/viadeo/tetra/1.0.23/release/tetra-jquery.min.js",
-  "_target": "*",
-  "_direct": true
+  "_target": "*"
 }
