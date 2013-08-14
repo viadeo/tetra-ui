@@ -1889,8 +1889,8 @@ textarea {
 }
 @font-face {
   font-family: 'MuseoSlab';
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot');
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/museoslab/museoslab-500.woff') format('woff'), url('/css/core/fonts/museoslab/museoslab-500.ttf') format('truetype');
+  src: url('../fonts/museoslab/museoslab-500.eot');
+  src: url('../fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('../fonts/museoslab/museoslab-500.woff') format('woff'), url('../fonts/museoslab/museoslab-500.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -2949,7 +2949,7 @@ h1 .sub {
 }
 .global-icon,
 .ico {
-  background: url('/v_img/global/global-sprite2.png') no-repeat;
+  background: url('../img/viadeo/global-sprite2.png') no-repeat;
   color: transparent;
   font: 0/0 a;
   display: inline-block;
@@ -2960,8 +2960,8 @@ h1 .sub {
 }
 @font-face {
   font-family: 'Viadeoicons';
-  src: url('/css/core/fonts/viadeoicons/1376316071/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1376316071/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1376316071/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1376316071/viadeoicons.ttf') format('truetype');
+  src: url('../fonts/viadeoicons/1376316071/viadeoicons.eot');
+  src: url('../fonts/viadeoicons/1376316071/viadeoicons.eot?#iefix') format('embedded-opentype'), url('../fonts/viadeoicons/1376316071/viadeoicons.woff') format('woff'), url('../fonts/viadeoicons/1376316071/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -3523,7 +3523,7 @@ a:focus .avatar img {
 .eventsAction.btn-loading:active span,
 .core-form .btn-primary.btn-loading:active span,
 .core-form .btn-secondary.btn-loading:active span {
-  background: transparent url("/v_img/coreui/buttons/loaders/secondary.gif") no-repeat 50% 0.3em;
+  background: transparent url("../img/buttons/loaders/secondary.gif") no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
 .btn-primary.btn-inactive,
@@ -3864,7 +3864,7 @@ a:focus .avatar img {
   overflow: hidden;
   height: 0;
   padding: 1em 0 0 0;
-  background: transparent url("/v_img/coreui/buttons/loaders/default.gif") no-repeat 50% 0.3em;
+  background: transparent url("../img/buttons/loaders/default.gif") no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
 .btn-append {
@@ -4088,7 +4088,7 @@ a:focus .avatar img {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url('/v_img/profilev2/ajax-loader.gif') no-repeat 50% 35%;
+  background: url('../img/loaders/ajax-loader.gif') no-repeat 50% 35%;
 }
 .popin-container > .gr {
   width: 85%;
@@ -4838,7 +4838,7 @@ a:focus .avatar img {
 .placeholding textarea {
   position: relative;
   z-index: 2;
-  background: transparent url("/v_img/global/global-sprite2.png") no-repeat 0 110%;
+  background: transparent url("../img/viadeo/global-sprite2.png") no-repeat 0 110%;
 }
 .placeholding .placeholder {
   position: absolute;

@@ -9,7 +9,6 @@ module.exports = function(grunt) {
         },
         files: {
           'dist/css/tetra-ui.css': ['src/less/packages/default.less'],
-          'dist/css/tetra-ui-apna.css': ['src/less/packages/apna.less'],
           'dist/css/tetra-ui-rtl.css': ['src/less/packages/rtl.less'],
           'dist/css/tetra-ui-light.css': ['src/less/packages/light.less']
         }
@@ -22,10 +21,10 @@ module.exports = function(grunt) {
         },
         files: {
           'dist/css/tetra-ui.min.css': ['src/less/packages/default.less'],
-          'dist/css/tetra-ui-apna.min.css': ['src/less/packages/apna.less'],
           'dist/css/tetra-ui-doc.min.css': ['src/less/packages/doc.less'],
           'dist/css/tetra-ui-doc-rtl.min.css': ['src/less/packages/doc-rtl.less'],
-          'dist/css/tetra-ui-light.min.css': ['src/less/packages/light.less']
+          'dist/css/tetra-ui-light.min.css': ['src/less/packages/light.less'],
+          'dist/css/tetra-ui-rtl.min.css': ['src/less/packages/rtl.less']
         }
       }
     },
@@ -74,8 +73,9 @@ module.exports = function(grunt) {
       css: {
         files: {
           'dist/css/tetra-ui.min.css': ['<banner>', 'dist/css/tetra-ui.min.css'],
-          'dist/css/tetra-ui-apna.min.css': ['<banner>', 'dist/css/tetra-ui-apna.min.css'],
+          'dist/css/tetra-ui-rtl.min.css': ['<banner>', 'dist/css/tetra-ui-rtl.min.css'],
           'dist/css/tetra-ui-doc.min.css': ['<banner>', 'dist/css/tetra-ui-doc.min.css'],
+          'dist/css/tetra-ui-doc-rtl.min.css': ['<banner>', 'dist/css/tetra-ui-doc-rtl.min.css'],
           'dist/css/tetra-ui-light.min.css': ['<banner>', 'dist/css/tetra-ui-light.min.css']
         }
       },
