@@ -78,9 +78,9 @@
 <div class="bx">
 
 <div class="page-header">
-    <h1 class="h1">Forms
-      <span class="sub">Four types of forms, control states, and extending form controls</span>
-    </h1>
+  <h1 class="h1">Forms
+    <span class="sub">Four types of forms, control states, and extending form controls</span>
+  </h1>
 </div>
 
 <div class="mtxl">
@@ -855,6 +855,7 @@
 
           <span class="custom-select input-large">
             <select>
+              <option disabled="disabled" selected="selected">Choose…</option>
               <option value="1">Lorem ipsum dolor sit amet</option>
               <option value="2">Consectetur adipisicing elit</option>
               <option value="3">Sed do eiusmod tempor incididunt ut labore</option>
@@ -862,7 +863,7 @@
               <option value="5">Ut enim ad minim veniam</option>
             </select>
 
-            <label>Choose</label>
+            <label>Choose…</label>
             <i class="vicon">&#9662;</i>
           </span>
 
@@ -874,10 +875,11 @@
         <div class="controls">
           <div class="input-append">
             <input type="text" /><span class="custom-select input-medium">
-              <label>Choose</label>
+              <label>Choose…</label>
               <i class="vicon">&#9662;</i>
 
               <select>
+                <option disabled="disabled" selected="selected">Choose…</option>
                 <option value="1">Lorem ipsum dolor sit amet</option>
                 <option value="2">Consectetur adipisicing elit</option>
                 <option value="3">Sed do eiusmod tempor incididunt ut labore</option>
@@ -891,11 +893,16 @@
     </form>
 
     <pre><code class="language-markup">&lt;span class="custom-select"&gt;
-  &lt;label&gt;Choose&lt;/label&gt;
+  &lt;label&gt;Choose…&lt;/label&gt;
   &lt;i class="vicon"&gt;&amp;#9662;&lt;/i&gt;
+
   &lt;select&gt;
-    &lt;option&gt;Lorem&lt;/option&gt;
-    &lt;option&gt;Ipsum&lt;/option&gt;
+    &lt;!-- First item same text as label --&gt;
+    &lt;option disabled="disabled" selected="selected"&gt;Choose…&lt;/option&gt;
+
+    &lt;!-- Selectable items --&gt;
+    &lt;option value="1"&gt;Lorem&lt;/option&gt;
+    &lt;option value="2"&gt;Ipsum&lt;/option&gt;
   &lt;/select&gt;
 &lt;/span&gt;</code></pre>
 
@@ -903,10 +910,15 @@
 
     <pre><code class="language-markup">&lt;span class="custom-select"&gt;
   &lt;select&gt;
-    &lt;option&gt;Lorem&lt;/option&gt;
-    &lt;option&gt;Ipsum&lt;/option&gt;
+    &lt;!-- First item same text as label --&gt;
+    &lt;option disabled="disabled" selected="selected"&gt;Choose…&lt;/option&gt;
+
+    &lt;!-- Selectable items --&gt;
+    &lt;option value="1"&gt;Lorem&lt;/option&gt;
+    &lt;option value="2"&gt;Ipsum&lt;/option&gt;
   &lt;/select&gt;
-  &lt;label&gt;Choose&lt;/label&gt;
+
+  &lt;label&gt;Choose…&lt;/label&gt;
   &lt;i class="vicon"&gt;&amp;#9662;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
 
