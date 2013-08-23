@@ -6223,6 +6223,47 @@ width = 2400;
 unicode = 25BE;
 },
 {
+glyphname = blackuppointingsmalltriangle;
+lastChange = "2013-08-23 09:19:36 +0000";
+layers = (
+{
+layerId = "B666C820-39E7-4854-9B1A-8391CFDDE462";
+name = Regular;
+paths = (
+{
+closed = 1;
+nodes = (
+"1768 169 OFFCURVE",
+"1757 140 OFFCURVE",
+"1735 118 CURVE SMOOTH",
+"1691 75 OFFCURVE",
+"1619 75 OFFCURVE",
+"1575 118 CURVE SMOOTH",
+"1205 489 LINE",
+"835 118 LINE SMOOTH",
+"791 75 OFFCURVE",
+"719 75 OFFCURVE",
+"675 118 CURVE SMOOTH",
+"632 162 OFFCURVE",
+"632 234 OFFCURVE",
+"675 278 CURVE SMOOTH",
+"1125 728 LINE SMOOTH",
+"1169 771 OFFCURVE",
+"1241 771 OFFCURVE",
+"1285 728 CURVE SMOOTH",
+"1735 278 LINE SMOOTH",
+"1757 256 OFFCURVE",
+"1768 227 OFFCURVE",
+"1768 198 CURVE SMOOTH"
+);
+}
+);
+width = 2400;
+}
+);
+unicode = 25B4;
+},
+{
 glyphname = previouspage;
 lastChange = "2013-07-29 13:15:19 +0000";
 layers = (
