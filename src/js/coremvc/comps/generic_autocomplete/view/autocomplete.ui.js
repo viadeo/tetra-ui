@@ -184,13 +184,20 @@ tetra.view.register('autocomplete', {
 
         suggestions: {
           select: function(direction) {
-            var items = me._container.find('.autocomplete-menu li');
-            var index = items.filter('.active').removeClass('active').index();
+            var items = me._container.find('.autocomplete-menu li'),
+                index = items.filter('.active').removeClass('active').index(),
+                selected;
+            
             index += (direction === 'next') ? 1 : -1;
             if (index >= items.length) {
               index = 0;
             }
-            items.eq(index).addClass('active');
+            selected = items.eq(index);
+            selected.addClass('active');
+
+            if(selected.hasClass('no-highlight')){
+                me.methods.suggestions.select(direction);
+            }
           },
           boldify: function(suggestions) {
             var boldTermsLen = me._boldifyTerms.length, re = new RegExp('('+suggestions.query+')', 'gi'), item, term, i, j;
