@@ -2888,6 +2888,20 @@ h1 .sub {
 .ui-label a:focus .vicon {
   color: #d54243;
 }
+.ui-label-premium {
+  background: #3d3d3d;
+  border: none;
+  color: #ffffff;
+  font-family: MuseoSlab, Arial, sans-serif;
+  padding: 3px 13px;
+  border-radius: 14px;
+}
+.ui-label-premium a {
+  color: #ffffff;
+}
+.ui-label-premium:hover {
+  background: #3d3d3d;
+}
 .ui-badge {
   background-color: #f56600;
   background-repeat: repeat-x;
