@@ -3940,6 +3940,20 @@ a:focus .avatar img {
 .btn-icon.btn-disabled .vicon {
   color: #bfbfbf;
 }
+.btn-link {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #007de3;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-link:hover,
+.btn-link:focus {
+  box-shadow: none;
+  text-decoration: underline;
+  color: #0071cc;
+}
 .dd {
   position: relative;
   display: inline-block;
