@@ -52,6 +52,7 @@ tetra.view.register('highlight', {
 					'click': {
 						'[data-highlight]': function(e, elm) {
 							if(elm.attr('data-highlight')) {
+								me.esc = elm.attr('data-esc') === "false" ? false : true;
 								app.notify('highlight: display', elm.attr('data-highlight'));
 							}
 						}
@@ -59,14 +60,19 @@ tetra.view.register('highlight', {
 				},
 				window: {
 					'keyup': function(e) {
-						if(e.keyCode === 27) {
+						if(me.esc && e.keyCode === 27) {
 							app.notify('highlight: close');
 						}
 					}
 				},
 				controller: { 
-					'display highlight' : function(target) {
-						_(target).addClass('highlight-target');
+					'display highlight' : function(data) {
+						if (typeof data === "object" && Object.prototype.toString.call(data) !== "[object Array]") {
+							_(data.target).addClass('highlight-target');
+							me.esc = data.esc;
+						} else {
+							_(data).addClass('highlight-target');
+						}
 						me.methods.createOverlay();
 					},
 					'close highlight' : function() {
@@ -77,7 +83,7 @@ tetra.view.register('highlight', {
 
 			methods: {
 				init: function() {
-
+					me.esc = true
 				},
 				clear: function() {
 					_('.highlight-target').removeClass('highlight-target');
