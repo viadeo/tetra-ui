@@ -569,9 +569,23 @@ title: "Dialogs"
       </a>
     </div>
 
-    <pre><code class="language-markup">&lt;a data-comp="highlight"
+    <div class="bx mbm" id="highlight_demo_esc">
+      <h2 class="h-bx">Interesting box</h2>
+      <p>This box looks really interesting, you shoud highlight it. But beware, because you won't be able to close the highlight by pressing escape.</p>
+      <a data-comp="highlight"
+         data-event="click"
+         data-highlight="#highlight_demo_esc"
+         data-esc="false"
+         class="bootnode btn btn-primary">
+        Highlight me !
+      </a>
+    </div>
+
+    <pre><code class="language-markup">&lt;!-- data-escape is optional --&gt;
+&lt;a data-comp="highlight"
   data-event="click"
   data-highlight="[css selector of the target]"
+  data-escape="false"
   class="bootnode btn btn-primary"&gt;
   Highlight me !
 &lt;/a&gt;</code></pre>
@@ -603,6 +617,17 @@ title: "Dialogs"
           </td>
           <td>
             Highlight the element provided as an argument on the page.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <pre><code class="lang-javascript">page.notify('highlight: display', {
+  target: [css selector of the target],
+  esc: [Boolean]
+});</code></pre>
+          </td>
+          <td>
+            Highlight the element provided as an argument on the page and prevent removing the highlight by pressing escape.
           </td>
         </tr>
         <tr>
