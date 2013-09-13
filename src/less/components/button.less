@@ -347,3 +347,19 @@
     }
   }
 }
+
+.btn-link {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: @linkColor;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    text-decoration: underline;
+    color: @linkColorHover;
+  }
+}
