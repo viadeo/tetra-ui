@@ -5457,7 +5457,7 @@ a:focus .avatar img {
 }
 .rc-card-l .rc-card-header .name {
   margin-top: 10px;
-  padding-left: 120px;
+  padding-right: 120px;
 }
 .rc-card-l .rc-card-content .avatar {
   margin-top: -15%;
@@ -5470,7 +5470,7 @@ a:focus .avatar img {
   font-size: 12px;
 }
 .rc-card-m .rc-card-content {
-  padding-left: 84px;
+  padding-right: 84px;
 }
 .placeholding {
   position: relative;
