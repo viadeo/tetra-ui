@@ -5855,6 +5855,12 @@ a:focus .avatar img {
   vertical-align: middle;
   border-radius: 2px;
 }
+.custom-select.cs-focus {
+  border-color: #007bc2;
+  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  outline: 0;
+  outline: thin dotted \9;
+}
 .custom-select label {
   position: absolute;
   z-index: 1;
@@ -5896,6 +5902,12 @@ a:focus .avatar img {
 }
 .custom-select:hover {
   border-color: #949594;
+}
+.custom-select:hover.cs-focus {
+  border-color: #007bc2;
+  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  outline: 0;
+  outline: thin dotted \9;
 }
 .input-append .custom-select {
   margin-right: -1px;
