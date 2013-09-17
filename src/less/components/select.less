@@ -10,7 +10,12 @@
 	background: @white;
 	vertical-align: middle;
 	border-radius: @borderRadiusXs;
-
+	&.cs-focus {
+		border-color:@blue2;
+		box-shadow:0 0 5px rgba(0,123,194,0.2);
+		outline:0;
+		outline:thin dotted \9;
+	}
 	label {
 		position: absolute;
 		z-index: 1;
@@ -51,6 +56,12 @@
 
 	&:hover {
 		border-color: shade(@inputBorder, 25%);
+		&.cs-focus {
+			border-color:@blue2;
+			box-shadow:0 0 5px rgba(0,123,194,0.2);
+			outline:0;
+			outline:thin dotted \9;
+		}
 	}
 
 	.input-append & {
