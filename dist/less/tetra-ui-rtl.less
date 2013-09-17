@@ -5446,6 +5446,13 @@ a:hover, a:focus {
 	vertical-align: middle;
 	border-radius: @borderRadiusXs;
 
+	&.cs-focus {
+		border-color: @inputBorderFocus;
+    box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
+		outline: 0;
+		outline: thin dotted \9;
+	}
+
 	label {
 		position: absolute;
 		z-index: 1;
@@ -5486,6 +5493,13 @@ a:hover, a:focus {
 
 	&:hover {
 		border-color: shade(@inputBorder, 25%);
+
+		&.cs-focus {
+			border-color: @inputBorderFocus;
+    	box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
+			outline: 0;
+			outline: thin dotted \9;
+		}
 	}
 
 	.input-append & {

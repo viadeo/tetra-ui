@@ -13,7 +13,28 @@ tetra.view.register('select', {
               var selectedText = container.find('option:selected').html();
               container.find('label').html(selectedText);
             }
+          },
+
+          'focus': {
+            '.custom-select': function(e,elm) {
+              _(elm).addClass('cs-focus');
+            }
+          },
+
+          'blur': {
+            '.custom-select': function(e, elm) {
+              _(elm).removeClass('cs-focus');
+            }
+          },
+
+          'keyup':{
+            '.custom-select select': function(e, elm) {
+              if ((e.keyCode === 38) || (e.keyCode === 40)) {
+                _(elm).change();
+              }
+            }
           }
+
         },
 
         controller: {}
