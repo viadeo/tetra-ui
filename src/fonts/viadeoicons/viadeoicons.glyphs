@@ -7150,8 +7150,8 @@ width = 2400;
 unicode = 237E;
 },
 {
-glyphname = "blackdown-pointingtriangle";
-lastChange = "2013-07-23 15:29:50 +0100";
+glyphname = blackdownTriangle;
+lastChange = "2013-09-18 16:19:29 +0100";
 layers = (
 {
 layerId = "B666C820-39E7-4854-9B1A-8391CFDDE462";
