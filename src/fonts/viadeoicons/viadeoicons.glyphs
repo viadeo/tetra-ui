@@ -5504,6 +5504,68 @@ width = 2400;
 unicode = 002F;
 },
 {
+glyphname = dollar;
+lastChange = "2013-09-18 13:14:11 +0100";
+layers = (
+{
+layerId = "B666C820-39E7-4854-9B1A-8391CFDDE462";
+name = Regular;
+paths = (
+{
+closed = 1;
+nodes = (
+"2200 504 LINE",
+"946 -121 LINE",
+"200 185 LINE",
+"292 230 LINE",
+"946 -35 LINE",
+"2108 535 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"292 373 LINE",
+"200 328 LINE",
+"946 29 LINE",
+"2200 646 LINE",
+"2108 685 LINE",
+"946 113 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"946 177 LINE",
+"200 484 LINE",
+"1454 1101 LINE",
+"2200 803 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"1460 711 OFFCURVE",
+"1331 769 OFFCURVE",
+"1180 769 CURVE SMOOTH",
+"1024 769 OFFCURVE",
+"901 711 OFFCURVE",
+"901 646 CURVE SMOOTH",
+"901 582 OFFCURVE",
+"1024 529 OFFCURVE",
+"1180 529 CURVE SMOOTH",
+"1331 529 OFFCURVE",
+"1460 582 OFFCURVE",
+"1460 646 CURVE SMOOTH"
+);
+}
+);
+width = 2400;
+}
+);
+unicode = 0024;
+},
+{
 glyphname = euro;
 lastChange = "2013-07-29 10:48:09 +0100";
 layers = (
