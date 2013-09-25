@@ -1,0 +1,244 @@
+---
+title: "Maps"
+---
+
+<div class="bx">
+
+<div class="page-header">
+  <h1 class="h1">
+    Maps
+    <span class="sub">Display maps with markers, infoWindows.</span>
+  </h1>
+</div>
+
+<div class="gr grsl mtm">
+    <div class="gu gu-1of5">
+        <h2 class="h2">Maps API</h2>
+        <p>Asynchronous loading
+            <br />
+            *require
+        </p>
+    </div>
+    <div class="gu gu-last">
+    <pre><code class="language-javascript">page.notify("maps: load api", {
+    version : "3",
+    language : "en"
+});</code></pre>
+    </div>
+</div>
+
+<div class="gr grsl mtxl">
+    <div class="gu gu-1of5">
+        <h2 class="h2">Simple Map</h2>
+        <p>To display a map with at least one marker. Infowindow display "load"</p>
+    </div>
+    <div class="gu gu-last">
+        <div id="maps-marker">
+
+        </div>
+        <pre><code class="language-javascript">// After listened event "maps: api loaded"
+page
+    .notify("maps: set map", "maps-marker")
+    .notify("maps: set marker", {
+        mapId: "maps-marker",
+        title: "Paris, FR",
+        latLng: [48.856614,2.352222],
+        infoWindow : {
+            content: "Paris, FR",
+            event: "onload"
+        }
+    })
+    .notify("maps: set zoom", {
+        mapId: "maps-marker",
+        zoom: 15
+    }).notify("maps: set center", {
+        mapId: "maps-marker",
+        latLng: [48.856614,2.352222]
+    })
+;
+        </code></pre>
+    </div>
+</div>
+<div class="gr grsl mtxl">
+    <div class="gu gu-1of5">
+        <h2 class="h2">Advanced Map</h2>
+        <p>To display a map with multi markers. Infowindow display "click"</p>
+    </div>
+    <div class="gu gu-last">
+        <div id="maps-markers">
+        </div>
+        <pre><code class="language-javascript">//After listened event "maps: api loaded"
+page
+    .notify("maps: set map", "maps-markers")
+    .notify("maps: set marker", {
+        mapId: "maps-markers",
+        title: "San Francisco, CA",
+        latLng: [37.77493,-122.419416],
+        infoWindow : {
+            content: "San Francisco, CA"
+        }
+    })
+    .notify("maps: set marker", {
+        mapId: "maps-markers",
+        title: "Toronto",
+        latLng: [43.653226,-79.383184],
+        infoWindow : {
+            content: "Toronto"
+        }
+    })
+    .notify("maps: set marker", {
+        mapId: "maps-markers",
+        title: "Miami",
+        latLng: [25.788969,-80.226439],
+        infoWindow : {
+            content: "Miami"
+        }
+    })
+    .notify("maps: fit bounds", "maps-markers")
+;</code></pre>
+    </div>
+</div>
+
+<div class="gr grsl mtxl">
+    <div class="gu gu-1of5">
+        <h2 class="h2">Events</h2>
+        <p>Events triggered and listened by the component.</p>
+    </div>
+    <div class="gu gu-last">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Events triggered by the controller</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: api loaded");</code></pre>
+              </td>
+              <td>
+                This event is triggered when API has been fully loaded.
+                <br />
+                Wait this notification before starting your application.
+              </td>
+            </tr>
+            <tr>
+              <th>Events listened by the controller</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: load api", {
+  key: [String],
+  version: [String],
+  languages: [String],
+  libraries: [String]
+});</code></pre>
+              </td>
+              <td>
+                This event load API (Asynchronous);<br />
+                Page.notify("maps: api loaded") is triggered when the API is fully loaded; See above.
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: set map", {
+    mapId: [String]
+});</code></pre>
+              </td>
+              <td>
+                This event creates a new map inside a container (mapId);
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: set options", {
+    mapId: [String],
+    options: [Object]
+});</code></pre>
+              </td>
+              <td>
+                This event add or modify map parameters (controls,scrollWheel,streetView);
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre class=" language-javascript"><code class="lang-javascript">page.notify("maps: set marker", {
+    mapId: [String],
+    latLng: [Number,Number],
+    title: [String],
+    infoWindow: {
+        content: [String],
+        event: [String]
+    },
+    cbk : function (marker) {}
+});</code></pre>
+              </td>
+              <td>
+                This event creates a marker with the options specified;
+                <br />
+                Infowindow event : "click|onload";
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: unset markers", {
+    mapId: [String]
+});</code></pre>
+              </td>
+              <td>
+                This event hide all markers;
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: fit bounds", [String]);</code></pre>
+              </td>
+              <td>
+                This event sets the viewport to contain the given bounds. Previously added by markers;
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: set zoom", {
+        mapId: [String],
+        zoom: Number
+    }).notify("maps: set center", {
+        mapId: [String],
+        latLng: [Number,Number]
+    })
+});</code></pre>
+              </td>
+              <td>
+                This event fits the viewport by using zoom and center;
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: geocode", {
+    address: [String],
+    cbk : function (result) {
+        var
+            latLng: [
+                JSON.stringify(result.geometry.location.lat()),
+                JSON.stringify(result.geometry.location.lng())
+            ],
+            formatted_address: result.formatted_address
+        ;
+}
+});</code></pre>
+              </td>
+              <td>
+                This event trigger the geocode service for converting an address into a LatLng.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<!-- component -->
+<script src="{{path}}/dist/js/maps.js"></script>
+<!-- application -->
+<script src="{{path}}/src/js/coremvc/comps/fakeMap/controller/fakeMap.ctrl.js"></script>

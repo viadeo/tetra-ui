@@ -56,7 +56,8 @@ module.exports = function(grunt) {
           exports: true,
           tmpl: true,
           History: true,
-          lang: true
+          lang: true,
+          google: true
         }
       },
       files: [
@@ -232,6 +233,7 @@ module.exports = function(grunt) {
           'dist/js/popin.js': ['<banner>', 'src/js/coremvc/comps/popin/model/popin.class.js', 'src/js/coremvc/comps/popin/controller/popin.ctrl.js', 'src/js/coremvc/comps/popin/view/popin.ui.js'],
           'dist/js/file_upload.js': ['<banner>', 'src/js/coremvc/comps/file_upload/model/file_upload.class.js', 'src/js/coremvc/comps/file_upload/controller/file_upload.ctrl.js', 'src/js/coremvc/comps/file_upload/view/file_upload.ui.js'],
           'dist/js/highlight.js': ['<banner>', 'src/js/coremvc/comps/highlight/controller/highlight.ctrl.js', 'src/js/coremvc/comps/highlight/view/highlight.ui.js'],
+          'dist/js/maps.js': ['<banner>', 'src/js/coremvc/comps/maps/controller/api.ctrl.js', 'src/js/coremvc/comps/maps/controller/map.ctrl.js','src/js/coremvc/comps/maps/controller/geocode.ctrl.js','src/js/coremvc/comps/maps/controller/itinerary.ctrl.js','src/js/coremvc/comps/maps/controller/places.ctrl.js'],          
           'dist/js/toggle.js': ['<banner>', 'src/js/coremvc/comps/toggle/controller/toggle.ctrl.js', 'src/js/coremvc/comps/toggle/view/toggle.ui.js'],
           'dist/js/yesno.js': ['<banner>', 'src/js/coremvc/comps/yesno/model/yesno.class.js', 'src/js/coremvc/comps/yesno/controller/yesno.ctrl.js', 'src/js/coremvc/comps/yesno/view/yesno.ui.js'],
           'dist/js/placeholder.js': ['<banner>', 'src/js/coremvc/comps/placeholder/view/placeholder.ui.js'],
