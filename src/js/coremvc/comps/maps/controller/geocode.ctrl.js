@@ -7,9 +7,9 @@ tetra.controller.register('geocode', {
 					if(typeof(google) === "undefined") return;
 					var geocoder = new google.maps.Geocoder();
 					geocoder.geocode(params, function(results, status) {
-						if (status !== google.maps.GeocoderStatus.OK) return cbk(null);
-						if(params.hasOwnProperty('address')) return cbk(results[0]);
-						if(params.hasOwnProperty('latlng')) return cbk(results[1].formatted_address);
+						if (status !== google.maps.GeocoderStatus.OK) return params.cbk(null);
+						if(params.hasOwnProperty('address')) return params.cbk(results[0]);
+						if(params.hasOwnProperty('latlng')) return params.cbk(results[1].formatted_address);
 					});
 				}
 			}
