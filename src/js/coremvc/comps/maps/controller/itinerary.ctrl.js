@@ -28,11 +28,11 @@ tetra.controller.register('itinerary', {
 					};
 
 					me.directionsDisplay[mapId].setDirections({routes: []});
-					me.directionsService.route(request, function(response, status) {
+					me.directionsService.route(request, function(result, status) {
 						if (status === google.maps.DirectionsStatus.OK) {
-							me.directionsDisplay[mapId].setDirections(response);
+							me.directionsDisplay[mapId].setDirections(result);
 						}
-						cbk(status, response);
+						cbk(result, status);
 					});
 				},
 				'maps: unset itinerary' : function(id){
@@ -53,7 +53,7 @@ tetra.controller.register('itinerary', {
 						cbk: function (map) {
 							me.directionsDisplay[params.mapId]= new google.maps.DirectionsRenderer();
 							me.directionsDisplay[params.mapId].setMap(map);
-							me.directionsDisplay[params.mapId].setPanel(document.getElementById(params.panelId));
+							if(params.panelId) me.directionsDisplay[params.mapId].setPanel(document.getElementById(params.panelId));
 						}
 					}
 				)

@@ -217,18 +217,40 @@ page
 <pre><code class="lang-javascript">page.notify("maps: geocode", {
     address: [String],
     cbk : function (result) {
-        var
-            latLng: [
-                JSON.stringify(result.geometry.location.lat()),
-                JSON.stringify(result.geometry.location.lng())
-            ],
-            formatted_address: result.formatted_address
-        ;
-}
+      if(!result) return;
+      var
+        latLng = [
+          JSON.stringify(result.geometry.location.lat()),
+          JSON.stringify(result.geometry.location.lng())
+        ],
+        formatted_address = result.formatted_address
+      ;
+    }
+}).notify("maps: geocode", {
+    latlng: [Number,Number],
+    cbk : function (formatted_address) {
+      if(!formatted_address) return;
+    }
 });</code></pre>
               </td>
               <td>
-                This event trigger the geocode service for converting an address into a LatLng.
+                This event trigger the Geocode service for converting between address and LatLng.
+              </td>
+            </tr>
+            <tr>
+              <td>
+<pre><code class="lang-javascript">page.notify("maps: set itinerary", {
+    mapId: [String],
+    origin: [String],
+    destination: [String],
+    mode: [String],
+    cbk : function (result, status) {}
+});</code></pre>
+              </td>
+              <td>
+                This event trigger the Directions service to calculates directions between locations using an HTTP request.
+                <br />
+                You can search for directions for several <a href="https://developers.google.com/maps/documentation/directions/?hl=en#TravelModes">modes</a> of transportation, include "TRANSIT", "DRIVING", "WALKING" or "CYCLING".
               </td>
             </tr>
           </tbody>

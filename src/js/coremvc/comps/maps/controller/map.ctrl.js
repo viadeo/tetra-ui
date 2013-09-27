@@ -3,12 +3,13 @@ tetra.controller.register('map', {
 	constr : function(me, app, page, orm) { return {
 		events : {
 			controller : {
-				'maps: api loaded' : function(){
+				'maps: api loaded' : function(api){
 					me.maps= {};
 					me.markers= {};
 					me.infoWindow= {};
 					me.center= {};
-					me.bounds= {}
+					me.bounds= {};
+					me.markerPath= (api.marker) || '/v_img/global/marker.png';
 				},
 				'maps: set map' : function(params){
 					if(typeof(google) === "undefined") return;
@@ -38,7 +39,10 @@ tetra.controller.register('map', {
 					me.bounds[params.mapId]= new google.maps.LatLngBounds();
 					me.maps[params.mapId]= map;
 
-					me.infoWindow[params.mapId]= new google.maps.InfoWindow({maxWidth: 300});
+					me.infoWindow[params.mapId]= new google.maps.InfoWindow({
+						maxWidth: 300,
+						pixelOffset : new google.maps.Size(-10, 0)
+					});
 
 					// Enable the new design (exp:3.14)
 					google.maps.visualRefresh= true;
@@ -67,11 +71,8 @@ tetra.controller.register('map', {
 						})
 					;
 
-/*					marker.setIcon(me.methods.getMarkerIcon());
-					marker.setShape(me.methods.getMarkerShape());*/
-
-					me.bounds[params.mapId].extend(new google.maps.LatLng(params.latLng[0], params.latLng[1]));
-					me.markers[params.mapId].push(marker);
+					marker.setIcon(me.methods.getIcons().icon());
+					marker.setShape(me.methods.getIcons().shape());
 
 					if(params.infoWindow) {
 						me.methods.setInfoWindow({
@@ -81,6 +82,9 @@ tetra.controller.register('map', {
 							event: params.infoWindow.event
 						});
 					}
+
+					me.bounds[params.mapId].extend(new google.maps.LatLng(params.latLng[0], params.latLng[1]));
+					me.markers[params.mapId].push(marker);
 
 					if(params.cbk) params.cbk(marker);
 				},
@@ -151,18 +155,22 @@ tetra.controller.register('map', {
 					}
 				});
 			},
-			getMarkerIcon : function () {
-				return new google.maps.MarkerImage(
-					'/v_img/global/marker.png',
-					new google.maps.Size(50,45),
-					new google.maps.Point(0,0),
-					new google.maps.Point(18,45)
-				);
-			},
-			getMarkerShape : function () {
+			getIcons: function () {
 				return {
-					coord: [22,0,25,1,28,2,29,3,30,4,32,5,32,6,33,7,34,8,35,9,35,10,35,11,36,12,36,13,36,14,37,15,37,16,37,17,37,18,37,19,37,20,37,21,37,22,36,23,36,24,36,25,35,26,35,27,35,28,34,29,33,30,33,31,32,32,32,33,31,34,30,35,30,36,29,37,29,38,28,39,27,40,27,41,26,42,26,43,25,44,24,45,24,46,23,47,23,48,22,49,19,50,18,50,15,49,14,48,14,47,13,46,13,45,12,44,11,43,11,42,10,41,10,40,9,39,8,38,8,37,7,36,7,35,6,34,5,33,5,32,4,31,4,30,3,29,2,28,2,27,2,26,1,25,1,24,1,23,0,22,0,21,0,20,0,19,0,18,0,17,0,16,0,15,1,14,1,13,1,12,2,11,2,10,2,9,3,8,4,7,5,6,5,5,7,4,8,3,9,2,12,1,15,0,22,0],
-					type: 'poly'
+					icon: function ()  {
+						return new google.maps.MarkerImage(
+							me.markerPath,
+							new google.maps.Size(50,45),
+							new google.maps.Point(0,0),
+							new google.maps.Point(25,45)
+						)
+					},
+					shape: function () {
+						return {
+							coord: [22,0,25,1,28,2,29,3,30,4,32,5,32,6,33,7,34,8,35,9,35,10,35,11,36,12,36,13,36,14,37,15,37,16,37,17,37,18,37,19,37,20,37,21,37,22,36,23,36,24,36,25,35,26,35,27,35,28,34,29,33,30,33,31,32,32,32,33,31,34,30,35,30,36,29,37,29,38,28,39,27,40,27,41,26,42,26,43,25,44,24,45,24,46,23,47,23,48,22,49,19,50,18,50,15,49,14,48,14,47,13,46,13,45,12,44,11,43,11,42,10,41,10,40,9,39,8,38,8,37,7,36,7,35,6,34,5,33,5,32,4,31,4,30,3,29,2,28,2,27,2,26,1,25,1,24,1,23,0,22,0,21,0,20,0,19,0,18,0,17,0,16,0,15,1,14,1,13,1,12,2,11,2,10,2,9,3,8,4,7,5,6,5,5,7,4,8,3,9,2,12,1,15,0,22,0],
+							type: 'poly'
+						}
+					}
 				};
 			},
 			setStyle_314 : function (map, styleId) {

@@ -57,7 +57,8 @@ tetra.controller.register('fakeMap', {
                                 title: "Miami",
                                 latLng: [25.788969,-80.226439],
                                 infoWindow : {
-                                    content: "Miami"                                }
+                                    content: "Miami"
+                                }
                             })
                             .notify("maps: fit bounds", "maps-markers")
                         ;
@@ -68,8 +69,9 @@ tetra.controller.register('fakeMap', {
             methods:{
                 init:function () {
                     page.notify("maps: load api", {
-                        version : "3",
-                        language : "en"
+                        version: "3",
+                        language: "en",
+                        marker: "/tetra-ui/dist/img/viadeo/marker.png"
                     });
                 }
             }
