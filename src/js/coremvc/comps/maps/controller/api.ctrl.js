@@ -6,8 +6,8 @@ tetra.controller.register('api', {
 				'maps: load api' : function(api){
 					me.methods.loadscript(api);
 				},
-				'maps: api loaded' : function () {
-					page.notify("maps: api loaded");
+				'maps: api loaded' : function (api) {
+					page.notify("maps: api loaded", api);
 				}
 			},
 			controller : {
@@ -33,7 +33,7 @@ tetra.controller.register('api', {
 				document.body.appendChild(script);
 
 				window.mapsApiLoaded = function () {
-					tetra.controller.notify("maps: api loaded",{},"maps");
+					tetra.controller.notify("maps: api loaded",api,"maps");
 					try{
 						delete window.mapsApiLoaded;
 					}catch(e){}
