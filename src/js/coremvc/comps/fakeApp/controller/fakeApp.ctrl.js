@@ -25,6 +25,9 @@ tetra.controller.register('fakeApp', {
 
                         orm('fakeApp').fetch({ uriParams:{ url:data.url } });
 
+                    },
+                    'display growl' : function (params) {
+                        page.notify("growl: display", params);
                     }
                 },
 
