@@ -12,7 +12,7 @@ tetra.controller.register('file_upload', {
 					'file_upload': { }
 				},
 
-				view: {	
+				view: {
 					'perfomUpload' : function(data) {
 						orm('file_upload').create({'data' : data.data}).save({uriParams: { url: data.url }});
 					},
@@ -21,6 +21,11 @@ tetra.controller.register('file_upload', {
 					},
 					'broadcastSubmit' : function(data) {
 						page.notify('file_upload: submitted', data);
+					}
+				},
+				controller: {
+					'file_upload: submit' : function(selector) {
+						me.methods.submitAsyncForm(selector);
 					}
 				}
 			},
