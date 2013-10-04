@@ -16,9 +16,9 @@ tetra.view.register('file_upload', {
 						}
 					}
 				},
-				controller: { 
+				controller: {
 					'file_upload: submit' : function(selector) {
-						me.methods.submitAsyncForm(_(selector));
+						me.methods.submitAsyncForm(selector);
 					}
 				}
 			},
@@ -49,8 +49,17 @@ tetra.view.register('file_upload', {
 
 						app.notify('perfomUpload', {data : data, url : form.attr('action')});
 					} else {
-						var iframe = document.createElement("iframe");
-						_(iframe).attr('name', form.attr('id') + "_Frame").css('display', 'none');
+						var iframe;
+						try {
+							iframe = document.createElement('<iframe name="'+ form.attr('id') +'_Frame">');
+						} catch (ex) {
+							iframe = document.createElement('iframe');
+						}
+
+						iframe.id = form.attr('id') + "_Frame";
+						iframe.name = form.attr('id') + "_Frame";
+						
+						_(iframe).css('display', 'none');
 
 						form.attr('target', form.attr('id') + "_Frame")
 							.append(iframe)
