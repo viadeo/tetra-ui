@@ -4221,6 +4221,182 @@ a:hover, a:focus {
 	}
 }
 
+// growl notification
+
+#growl-container {
+	position:fixed;
+	z-index:9999;
+	top:10px;
+	left:0;
+	right:0;
+
+}
+
+.growl {
+	position: relative;
+	margin:-50px auto @spacingS auto;
+	border-radius: @borderRadiusS;
+	background: @blue2;
+	color: @white;
+	box-shadow: 1px 1px 4px fade(@black, 20%);
+	opacity:0;
+	width:100%;
+	.transition(~"opacity 0.5s ease-out,margin 0.5s ease-out");
+
+	.msie7 &,
+	.msie8 &,
+	.msie9 &  {
+		display:none;
+	}
+
+	&.growl-active {
+		margin-top:0;
+		opacity:0.9;
+		.msie7 &,
+		.msie8 &,
+		.msie9 & {
+			display:block;
+		}
+	}
+
+	.alignLeft (@rtl) when (@rtl = false) {
+		margin:-50px auto @spacingS @spacingS;
+	}
+	.alignRight (@rtl) when (@rtl = false) {
+		margin:-50px @spacingS @spacingS auto;
+	}
+	.alignLeft (@rtl) when (@rtl = true) {
+		margin:-50px @spacingS @spacingS auto;
+	}
+	.alignRight (@rtl) when (@rtl = true) {
+		margin:-50px auto @spacingS @spacingS;
+	}
+
+	&.growl-position-right {
+		.alignRight(@rtl);
+	}
+
+	&.growl-position-left {
+		.alignLeft(@rtl);
+	}
+
+	&.growl-active {
+		margin-top:0;
+		opacity:0.9;
+		.msie7 &,
+		.msie8 &,
+		.msie9 & {
+			display:block;
+		}
+	}
+
+	.growl-close {
+		opacity:1;
+		.position (@rtl) when (@rtl = false) { right: 0; }
+		.position (@rtl) when (@rtl = true) { left: 0; }
+
+		position: absolute;
+		top: 0;
+		.position(@rtl);
+
+		.vicon {
+			color: @black;
+			font-size: 0.8em;
+			opacity: 0.4;
+			height: 2em;
+			line-height: 2em;
+		}
+		&:hover,
+		&:focus {
+			.vicon {
+				opacity: 1;
+			}
+		}
+		&:focus {
+			outline: thin dotted;
+		}
+	}
+
+
+	.growl-content {
+		opacity:1;
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+		padding: @spacingS @spacingL;
+		font-size:1.4em;
+		line-height:1.2em;
+		*width: auto; // IE 7 needs hacks (lack of table-cell support)
+		*zoom: 1;
+	}
+
+	.growl-icon {
+		opacity:1;
+		display: table-cell;
+		padding: 0 @spacingM;
+		font-size: 0.9em;
+		color: @white;
+		vertical-align: middle;
+		background: shade(@blue2, 10%);
+		border-radius: @borderRadiusS 0 0 @borderRadiusS;
+		*float: left; // IE 7 needs hacks (lack of table-cell support)
+		*padding: @spacingM;
+		*background: none;
+		content:"v"
+	}
+}
+
+.growl-type-warning {
+	#gradient > .vertical(tint(@yellow, 80%), tint(@yellow, 70%));
+	color: @baseFontColor;
+
+	a {
+		color: @baseFontColor;
+	}
+
+	.growl-icon {
+		background: none;
+		color: @yellow;
+	}
+}
+
+.growl-type-error {
+	background: @orange2;
+
+	.growl-icon {
+		background: shade(@orange2, 10%);
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
+	}
+}
+
+.growl-type-success {
+	background: @green2;
+
+	.growl-icon {
+		background: shade(@green2, 10%);
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
+	}
+}
+
+.growl-type-notification {
+	background: @blue4;
+
+	.growl-icon {
+		background: shade(@blue4, 10%);
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
+	}
+}
+
+.growl-type-premium {
+	background: tint(@black, 24%);
+
+	.growl-icon {
+		background: shade(tint(@black, 24%), 10%);
+		color: @orange4;
+		*background: none; // IE 7 needs hacks (lack of table-cell support)
+	}
+}
+
 .placeholding {
   position: relative;
   display: inline-block;

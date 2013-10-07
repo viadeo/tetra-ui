@@ -253,6 +253,97 @@
 </div>
 
 <div class="gr grsxl">
+  <h2 class="h2" id="popins">Growl</h2>
+
+  <div class="gu gu-1of5 gu-m-1of1">
+    <p>
+      Growl notifications
+    </p>
+  </div>
+  <div class="gu gu-last">
+    <div class="gu gu-1of2">
+      <p>
+        <a class="growl-info btn btn-primary" data-fake-app="growl" data-type="info" data-message="default growl notification">
+          default
+        </a>
+        <a class="growl-success btn btn-default" data-fake-app="growl" data-type="success" data-message="success growl notification">
+          success
+        </a>
+        <a class="growl-error btn btn-default" data-fake-app="growl" data-type="error" data-message="error growl notification">
+          error
+        </a>
+        <a class="growl-notification btn btn-default" data-fake-app="growl" data-type="notification" data-message="notification growl notification">
+          notification
+        </a>
+        <a class="growl-premium btn btn-default" data-fake-app="growl" data-type="premium" data-message="premium growl notification">
+          premium
+        </a>
+      </p>
+    </div>
+    <div class="gu gu-last tar">
+      <p>
+        <a class="growl-left btn btn-default" data-fake-app="growl" data-type="info" data-position="left" data-message="default growl notification left">
+          left
+        </a>
+        <a class="growl-dismiss btn btn-default" data-fake-app="growl" data-type="info" data-dismiss="true" data-delay="0" data-message="default growl notification with dismiss">
+          dismiss
+        </a>
+        <a class="growl-right btn btn-default" data-fake-app="growl" data-type="info" data-position="right" data-message="default growl notification right">
+          right
+        </a>
+      </p>
+    </div>
+
+    <table class="table mtm">
+      <thead>
+        <tr>
+          <th>Events listened by the controller</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <pre><code class="lang-javascript">page.notify('growl: display', {
+  message: [String],
+  options: {
+    type: [String], // optional
+    width: [Integer||auto], // optional
+    position: [left||center||right], // optional
+    delay: [Integer||0], // optional
+    dismiss: Boolean, // optional
+    template: [String] // optional
+  }
+})</code></pre>
+          </td>
+          <td>
+            Display a growl notification.
+            By default, growls use 'info' type, are 350px wide, center aligned with a visible delay to 2.5s.
+            <dl>
+              <dt class="mtxs">Type:</dt>
+              <dd>'info', 'warning', 'error', 'success', 'notification', 'premium'</dd>
+              <dt class="mtxs">Dismiss:</dt>
+              <dd>Show a mark to close the growl</dd>
+              <dt class="mtxs">Template:</dt>
+              <dd>tmpl_template_name</dd>
+            </dl>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <pre><code class="lang-javascript">page.notify('growl: close')</code></pre>
+          </td>
+          <td>
+            Remove all growl notifications.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="gr grsxl">
   <h2 class="h2" id="popins">Popins</h2>
 
   <div class="gu gu-1of5 gu-m-1of1">
@@ -722,6 +813,31 @@
 
 </div>
 
+<script src="/tetra-ui/dist/js/growl.js"></script>
+<script src="/tetra-ui/src/js/coremvc/comps/fakeApp/view/fakeApp.ui.js"></script>
+<script id="tmpl_growl" type="text/html">
+  <div class="growl growl-type-{%=options.type%} growl-position-{%=options.position%} mbs">
+    {% if (options.dismiss) { %}
+      <button class="growl-close">
+        <i class="vicon">×</i>
+      </button>
+    {% } %}
+    <i class="vicon growl-icon">
+      {% if (options.type === 'success') { %}
+        v
+      {% } else if (options.type === 'premium') { %}
+        *
+      {% } else if (options.type === 'notification') { %}
+        M
+      {% }else { %}
+        :
+      {% } %}
+    </i>
+    <div class="growl-content">
+      {%=message%}
+    </div>
+  </div>
+</script>
     </div>
   </div>
 </div>

@@ -5392,6 +5392,149 @@ a:focus .avatar img {
 .bx-editable .bx-edit-btn .bx-edit-rm:hover {
   background: #000000;
 }
+#growl-container {
+  position: fixed;
+  z-index: 9999;
+  top: 10px;
+  left: 0;
+  right: 0;
+}
+.growl {
+  position: relative;
+  margin: -50px auto 10px auto;
+  border-radius: 3px;
+  background: #007bc2;
+  color: #ffffff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  width: 100%;
+  -webkit-transition: opacity 0.5s ease-out,margin 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out,margin 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out,margin 0.5s ease-out;
+  transition: opacity 0.5s ease-out,margin 0.5s ease-out;
+}
+.msie7 .growl,
+.msie8 .growl,
+.msie9 .growl {
+  display: none;
+}
+.growl.growl-active {
+  margin-top: 0;
+  opacity: 0.9;
+}
+.msie7 .growl.growl-active,
+.msie8 .growl.growl-active,
+.msie9 .growl.growl-active {
+  display: block;
+}
+.growl.growl-position-right {
+  margin: -50px auto 10px 10px;
+}
+.growl.growl-position-left {
+  margin: -50px 10px 10px auto;
+}
+.growl.growl-active {
+  margin-top: 0;
+  opacity: 0.9;
+}
+.msie7 .growl.growl-active,
+.msie8 .growl.growl-active,
+.msie9 .growl.growl-active {
+  display: block;
+}
+.growl .growl-close {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.growl .growl-close .vicon {
+  color: #000000;
+  font-size: 0.8em;
+  opacity: 0.4;
+  height: 2em;
+  line-height: 2em;
+}
+.growl .growl-close:hover .vicon,
+.growl .growl-close:focus .vicon {
+  opacity: 1;
+}
+.growl .growl-close:focus {
+  outline: thin dotted;
+}
+.growl .growl-content {
+  opacity: 1;
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  padding: 10px 20px;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  *width: auto;
+  *zoom: 1;
+}
+.growl .growl-icon {
+  opacity: 1;
+  display: table-cell;
+  padding: 0 15px;
+  font-size: 0.9em;
+  color: #ffffff;
+  vertical-align: middle;
+  background: #006faf;
+  border-radius: 3px 0 0 3px;
+  *float: left;
+  *padding: 15px;
+  *background: none;
+  content: "v";
+}
+.growl-type-warning {
+  background-color: #fff2bc;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff7d2), color-stop(100%, #fff2bc));
+  background-image: -webkit-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: -o-linear-gradient(top, #fff7d2, #fff2bc);
+  background-image: linear-gradient(to bottom, #fff7d2, #fff2bc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d2', endColorstr='#fff2bc', GradientType=0);
+  *filter: none;
+  color: #262626;
+}
+.growl-type-warning a {
+  color: #262626;
+}
+.growl-type-warning .growl-icon {
+  background: none;
+  color: #ffd520;
+}
+.growl-type-error {
+  background: #f1532e;
+}
+.growl-type-error .growl-icon {
+  background: #d94b29;
+  *background: none;
+}
+.growl-type-success {
+  background: #0c9f9b;
+}
+.growl-type-success .growl-icon {
+  background: #0b8f8c;
+  *background: none;
+}
+.growl-type-notification {
+  background: #1f668c;
+}
+.growl-type-notification .growl-icon {
+  background: #1c5c7e;
+  *background: none;
+}
+.growl-type-premium {
+  background: #3d3d3d;
+}
+.growl-type-premium .growl-icon {
+  background: #373737;
+  color: #feae35;
+  *background: none;
+}
 .rc-card {
   min-height: 145px;
   border: 2px solid #e6ecf1;

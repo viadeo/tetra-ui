@@ -387,6 +387,42 @@ rtl: true
 </div>
 
 <div class="gr grsxl mvxl">
+    <div class="gu gu-1of4">
+      <h2 class="h2" id="tooltips">Growl</h2>
+    </div>
+    <div class="gu gu-last">
+      <p>
+        <a class="growl-info btn btn-primary" data-fake-app="growl" data-type="info" data-message="default growl notification">
+        أنواع غير مهددة
+        </a>
+        <a class="growl-success btn btn-default" data-fake-app="growl" data-type="success" data-message="success growl notification">
+        أنواع غير مهددة
+        </a>
+        <a class="growl-error btn btn-default" data-fake-app="growl" data-type="error" data-message="error growl notification">
+        أنواع غير مهددة
+        </a>
+        <a class="growl-notification btn btn-default" data-fake-app="growl" data-type="notification" data-message="notification growl notification">
+        أنواع غير مهددة
+        </a>
+        <a class="growl-premium btn btn-default" data-fake-app="growl" data-type="premium" data-message="premium growl notification">
+        أنواع غير مهددة
+        </a>
+      </p>
+      <p>
+        <a class="growl-left btn btn-default" data-fake-app="growl" data-type="info" data-position="left" data-message="default growl notification left">
+        أنواع غير مهددة
+        </a>
+        <a class="growl-dismiss btn btn-default" data-fake-app="growl" data-type="info" data-dismiss="true" data-delay="0" data-message="default growl notification with dismiss">
+        أنواع غير مهددة
+        </a>
+        <a class="growl-right btn btn-default" data-fake-app="growl" data-type="info" data-position="right" data-message="default growl notification right">
+        أنواع غير مهددة
+        </a>
+      </p>
+    </div>
+</div>
+
+<div class="gr grsxl mvxl">
   <div class="gu gu-1of4">
     <h2 class="h2" id="dropdowns">Dropdowns</h2>
   </div>
@@ -620,3 +656,28 @@ rtl: true
 </div>
 
 <script src="{{path}}/dist/js/placeholder.js"></script>
+<script src="{{path}}/dist/js/growl.js"></script>
+<script src="{{path}}/src/js/coremvc/comps/fakeApp/view/fakeApp.ui.js"></script>
+<script id="tmpl_growl" type="text/html">
+  <div class="growl growl-type-{%=options.type%} growl-position-{%=options.position%} mbs">
+    {% if (options.dismiss) { %}
+      <button class="growl-close">
+        <i class="vicon">×</i>
+      </button>
+    {% } %}
+    <i class="vicon growl-icon">
+      {% if (options.type === 'success') { %}
+        v
+      {% } else if (options.type === 'premium') { %}
+        *
+      {% } else if (options.type === 'notification') { %}
+        M
+      {% }else { %}
+        :
+      {% } %}
+    </i>
+    <div class="growl-content">
+      {%=message%}
+    </div>
+  </div>
+</script>
