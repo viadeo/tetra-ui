@@ -3495,79 +3495,79 @@ a:hover, a:focus {
     -webkit-animation: popin-fadein 0.15s;
     animation: popin-fadein 0.15s;
 
-    .popin-header {
-      position: relative;
-      padding: 17px 28px;
-      .padding-right(@rtl, 60px);
-      min-height: 1.3em;
-      background: tint(@black, 20%);
-      color: @white;
-      border-radius: @borderRadiusM @borderRadiusM 0 0;
-      .clearfixHack();
-
-      h1, h2, h3, h4, h5, h6 {
-        color: @white;
-        margin: 0;
-        padding: 0;
-      }
-
-      .close {
-        position: absolute;
-        top: 0; bottom: 0;
-        .right(@rtl, 0);
-        padding: 0 12px;
-        line-height: 4.4em;
-        background: tint(@black, 15%);
-        color: tint(@black, 60%);
-        text-decoration: none;
-        .border-top-right-radius(@rtl, @borderRadiusM);
-
-        span {
-          display: inline-block;
-          width: 0;
-          max-width: 0;
-          overflow: hidden;
-          white-space: nowrap;
-          .transition(max-width 0.3s);
-        }
-
-        .vicon {
-          .margin-right(@rtl, -0.2em);
-          color: tint(@black, 60%);
-          vertical-align: top;
-        }
-
-        &:hover {
-          background: @black;
-
-          span {
-            width: auto;
-            max-width: 10em;
-          }
-        }
-      }
-    }
-
-    .popin-body {
-      padding: @spacingL 28px;
-      background: @pageBg;
-
-      &:last-child {
-        border-radius: 0 0 @borderRadiusM @borderRadiusM;
-      }
-    }
-
-    .popin-footer {
-      .clearfixHack();
-      padding: 18px 28px;
-      background: @white;
-      border-radius: 0 0 @borderRadiusM @borderRadiusM;
-    }
-
     &.popin-close-animation {
       -webkit-animation: popin-fadeout 0.3s;
       animation: popin-fadeout 0.3s;
     }
+  }
+
+  .popin-header {
+    position: relative;
+    padding: 17px 28px;
+    .padding-right(@rtl, 60px);
+    min-height: 1.3em;
+    background: tint(@black, 20%);
+    color: @white;
+    border-radius: @borderRadiusM @borderRadiusM 0 0;
+    .clearfixHack();
+
+    h1, h2, h3, h4, h5, h6 {
+      color: @white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .close {
+      position: absolute;
+      top: 0; bottom: 0;
+      .right(@rtl, 0);
+      padding: 0 12px;
+      line-height: 4.4em;
+      background: tint(@black, 15%);
+      color: tint(@black, 60%);
+      text-decoration: none;
+      .border-top-right-radius(@rtl, @borderRadiusM);
+
+      span {
+        display: inline-block;
+        width: 0;
+        max-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        .transition(max-width 0.3s);
+      }
+
+      .vicon {
+        .margin-right(@rtl, -0.2em);
+        color: tint(@black, 60%);
+        vertical-align: top;
+      }
+
+      &:hover {
+        background: @black;
+
+        span {
+          width: auto;
+          max-width: 10em;
+        }
+      }
+    }
+  }
+
+  .popin-body {
+    padding: @spacingL 28px;
+    background: @pageBg;
+
+    &:last-child {
+      border-radius: 0 0 @borderRadiusM @borderRadiusM;
+    }
+  }
+
+  .popin-footer {
+    .clearfixHack();
+    padding: 18px 28px;
+    background: @white;
+    border-radius: 0 0 @borderRadiusM @borderRadiusM;
   }
 
   .popin-edit {
