@@ -14,7 +14,6 @@ tetra.controller.register('growl', {
 						template: 'growl'
 					}
 					app.notify("display growl", {
-						id: "test",
 						message: params.message,
 						options: me.methods.extend(options, params.options)
 					});
