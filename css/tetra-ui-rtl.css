@@ -5468,7 +5468,7 @@ a:focus .avatar img {
   width: 100%;
   vertical-align: middle;
   padding: 10px 20px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.2em;
   *width: auto;
   *zoom: 1;
@@ -5476,7 +5476,7 @@ a:focus .avatar img {
 .growl .growl-icon {
   opacity: 1;
   display: table-cell;
-  padding: 0 15px;
+  padding: 0 6px;
   font-size: 0.9em;
   color: #ffffff;
   vertical-align: middle;
