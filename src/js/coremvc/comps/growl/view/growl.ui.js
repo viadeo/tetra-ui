@@ -39,7 +39,7 @@ tetra.view.register('growl', {
 			},
 
 			methods: {
-				init : function(elm, width) {
+				init : function() {
 					me.win = _(window);
 					me.growl = null;
 					me.idle = 500;

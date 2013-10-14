@@ -16,7 +16,6 @@ tetra.controller.register('growl', {
 						template: 'growl'
 					}
 					app.notify("display growl", {
-						id: "test",
 						message: params.message,
 						options: me.methods.extend(options, params.options)
 					});
@@ -82,7 +81,7 @@ tetra.view.register('growl', {
 			},
 
 			methods: {
-				init : function(elm, width) {
+				init : function() {
 					me.win = _(window);
 					me.growl = null;
 					me.idle = 500;
