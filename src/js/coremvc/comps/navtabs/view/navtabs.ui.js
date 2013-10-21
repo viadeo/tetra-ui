@@ -42,7 +42,7 @@ tetra.view.register('navtabs', {
 						me.methods.setActiveTab(elm);
 					},
 					'show error': function(error) {
-						VNS.ui.growl(lang['notification.modification.save.error']);
+						app.notify('show error');
 					}
 				}
 			},
