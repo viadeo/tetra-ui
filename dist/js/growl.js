@@ -56,12 +56,15 @@ tetra.controller.register('growl', {
 				};
 				me.growlStack = [];
 			},
-			extend : function (target, source) {
-				target = target || {};
-				for (var prop in source) {
-					target[prop] = source[prop];
+			extend : function (base, source) {
+				var extended = {};
+				for (var baseProperty in base){
+					extended[baseProperty] = base[baseProperty];
 				}
-				return target;
+				for (var sourceProperty in source) {
+					extended[sourceProperty] = source[sourceProperty];
+				}
+				return extended;
 			}
 		}
 	};}
