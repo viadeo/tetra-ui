@@ -35,6 +35,15 @@ tetra.controller.register('popin', {
 				},
 
 				view: {
+					'show error': function(){
+						page.notify(
+							'growl: display',
+							{
+								message: lang['notification.modification.save.error'],
+								options: {type: 'warning'}
+							}
+						);
+					},
 					'popin: set content': function(data) {
 
 						me.methods.setContent(data);

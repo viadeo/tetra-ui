@@ -26,7 +26,7 @@ tetra.view.register('yesno', {
 				controller: {
 					'switchback yesno after error': function(obj) {
 						me.methods.switchback(_("[data-param = " + obj.get('param') + "]"), obj.get('status'));
-						VNS.ui.growl(lang['notification.modification.save.error']);
+						app.notify('show error');
 					}
 				}
 			},

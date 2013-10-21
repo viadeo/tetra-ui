@@ -45,6 +45,15 @@ tetra.controller.register('navtabs', {
 				},
 
 				view: { // events received from view
+					'show error': function(){
+
+						page.notify(
+							'growl: display',
+							{
+								message: lang['notification.modification.save.error']
+							}
+						);
+					},
 					'show tab': function(data) {
 
 						me.tabRef.push(data.url);

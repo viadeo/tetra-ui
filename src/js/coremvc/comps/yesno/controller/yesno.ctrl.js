@@ -21,6 +21,14 @@ tetra.controller.register('yesno', {
 					}
 				},
 				view: {
+					"show error": function(){
+						page.notify(
+							'growl: display',
+							{
+								message: lang['notification.modification.save.error']
+							}
+						);
+					},
 					"save state": function(data) {
 						if(typeof data.oparam !== 'undefined') {
 							orm('yesno').create({}).setCustom(data.oparam).save({param: data.param, status: true, uriParams: {url: data.url}});

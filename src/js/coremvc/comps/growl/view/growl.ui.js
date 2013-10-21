@@ -35,6 +35,11 @@ tetra.view.register('growl', {
 							});
 						}
 					}
+				},
+				window:{
+					load:function(){
+						app.notify('display stacked messages');
+					}
 				}
 			},
 

@@ -57,6 +57,14 @@ tetra.controller.register('yesno', {
 					}
 				},
 				view: {
+					"show error": function(){
+						page.notify(
+							'growl: display',
+							{
+								message: lang['notification.modification.save.error']
+							}
+						);
+					},
 					"save state": function(data) {
 						if(typeof data.oparam !== 'undefined') {
 							orm('yesno').create({}).setCustom(data.oparam).save({param: data.param, status: true, uriParams: {url: data.url}});
@@ -109,7 +117,7 @@ tetra.view.register('yesno', {
 				controller: {
 					'switchback yesno after error': function(obj) {
 						me.methods.switchback(_("[data-param = " + obj.get('param') + "]"), obj.get('status'));
-						VNS.ui.growl(lang['notification.modification.save.error']);
+						app.notify('show error');
 					}
 				}
 			},
