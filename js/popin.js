@@ -74,6 +74,15 @@ tetra.controller.register('popin', {
 				},
 
 				view: {
+					'show error': function(){
+						page.notify(
+							'growl: display',
+							{
+								message: lang['notification.modification.save.error'],
+								options: {type: 'warning'}
+							}
+						);
+					},
 					'popin: set content': function(data) {
 
 						me.methods.setContent(data);
@@ -236,7 +245,7 @@ tetra.view.register('popin', {
 					'show error': function(error) {
 						me.methods.clear();
 						if (error.errorCode !== 401) {
-							VNS.ui.growl(lang['notification.modification.save.error'], {type: 'warn'});
+							app.notify('show error');
 						}
 					},
 					'clear': function(data) {

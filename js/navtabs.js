@@ -75,6 +75,15 @@ tetra.controller.register('navtabs', {
 				},
 
 				view: { // events received from view
+					'show error': function(){
+
+						page.notify(
+							'growl: display',
+							{
+								message: lang['notification.modification.save.error']
+							}
+						);
+					},
 					'show tab': function(data) {
 
 						me.tabRef.push(data.url);
@@ -144,7 +153,7 @@ tetra.view.register('navtabs', {
 						me.methods.setActiveTab(elm);
 					},
 					'show error': function(error) {
-						VNS.ui.growl(lang['notification.modification.save.error']);
+						app.notify('show error');
 					}
 				}
 			},
