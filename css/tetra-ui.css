@@ -1851,6 +1851,16 @@ textarea {
   .dispi-m {
     display: inline;
   }
+  .bac-m,
+  .bal-m {
+    float: none;
+    margin-right: auto !important;
+  }
+  .bac-m,
+  .bar-m {
+    float: none;
+    margin-left: auto !important;
+  }
 }
 @media screen and (max-width: 480px) {
   .hide-s {
@@ -1885,6 +1895,16 @@ textarea {
   }
   .dispi-s {
     display: inline;
+  }
+  .bac-s,
+  .bal-s {
+    float: none;
+    margin-right: auto !important;
+  }
+  .bac-s,
+  .bar-s {
+    float: none;
+    margin-left: auto !important;
   }
 }
 @font-face {
