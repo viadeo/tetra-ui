@@ -53,7 +53,7 @@ tetra.controller.register('file_upload', {
 				},
 				controller: {
 					'file_upload: submit' : function(selector) {
-						me.methods.submitAsyncForm(selector);
+						app.notify('file_upload: submit', selector);
 					}
 				}
 			},
