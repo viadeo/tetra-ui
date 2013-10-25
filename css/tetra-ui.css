@@ -631,18 +631,18 @@ textarea {
     *width: auto;
   }
   .gu-m-1of2,
-   > .gu-m-2of4,
-   > .gu-m-3of6 {
+  > .gu-m-2of4,
+  > .gu-m-3of6 {
     width: 50%;
     margin: 0;
   }
   .gu-m-1of3,
-   > .gu-m-2of6 {
+  > .gu-m-2of6 {
     width: 33.333333333333336%;
     margin: 0;
   }
   .gu-m-2of3,
-   > .gu-m-4of6 {
+  > .gu-m-4of6 {
     width: 66.66666666666667%;
     margin: 0;
   }
@@ -998,18 +998,18 @@ textarea {
     *width: auto;
   }
   .gu-s-1of2,
-   > .gu-s-2of4,
-   > .gu-s-3of6 {
+  > .gu-s-2of4,
+  > .gu-s-3of6 {
     width: 50%;
     margin: 0;
   }
   .gu-s-1of3,
-   > .gu-s-2of6 {
+  > .gu-s-2of6 {
     width: 33.333333333333336%;
     margin: 0;
   }
   .gu-s-2of3,
-   > .gu-s-4of6 {
+  > .gu-s-4of6 {
     width: 66.66666666666667%;
     margin: 0;
   }
@@ -2211,11 +2211,13 @@ pre {
   margin: 3px 0;
   *margin-top: 0;
   /* IE7 */
+
   line-height: normal;
   cursor: pointer;
   border-radius: 0;
   border: 0 \9;
   /* IE9 and down */
+
 }
 .core-form input[type="image"] {
   border: 0;
@@ -2615,6 +2617,7 @@ pre {
 .form-horizontal .controls {
   margin-left: 160px;
   /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
+
   *display: inline-block;
   *margin-left: 0;
   *padding-left: 20px;
@@ -2633,6 +2636,7 @@ table.table {
   border-collapse: separate;
   *border-collapse: collapse;
   /* IE7, collapse table to remove spacing */
+
   font-size: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -5347,17 +5351,31 @@ a:focus .avatar img {
   -webkit-transform: perspective(700px) rotateY(180deg);
   transform: perspective(700px) rotateY(180deg);
 }
+.bx-flip-vertical .bx-flip-back:not(#unsupported) {
+  -webkit-transform: perspective(700px) rotateX(180deg);
+  transform: perspective(700px) rotateX(180deg);
+}
+.msie9 .bx-flip-back:not(#unsupported) {
+  visibility: hidden;
+}
 .bx-flip-flipped .bx-flip-front {
   -webkit-transform: perspective(700px) rotateY(-180deg);
   transform: perspective(700px) rotateY(-180deg);
+}
+.bx-flip-flipped.bx-flip-vertical .bx-flip-front {
+  -webkit-transform: perspective(700px) rotateX(-180deg);
+  transform: perspective(700px) rotateX(-180deg);
 }
 .bx-flip-flipped .bx-flip-back {
   z-index: 2;
   visibility: visible;
 }
 .bx-flip-flipped .bx-flip-back:not(#unsupported) {
-  -webkit-transform: perspective(700px) rotateY(0);
-  transform: perspective(700px) rotateY(0);
+  -webkit-transform: perspective(700px) rotate(0);
+  transform: perspective(700px) rotate(0);
+}
+.msie9 .bx-flip-flipped .bx-flip-back:not(#unsupported) {
+  visibility: visible;
 }
 .bx-editable {
   position: relative;
