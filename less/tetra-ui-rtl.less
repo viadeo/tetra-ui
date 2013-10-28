@@ -4794,6 +4794,13 @@ a:hover, a:focus {
 	visibility: visible;
 	-webkit-transform: perspective(700px) rotateY(180deg);
 	transform: perspective(700px) rotateY(180deg);
+	.bx-flip-vertical & {
+		-webkit-transform: perspective(700px) rotateX(180deg);
+		transform: perspective(700px) rotateX(180deg);
+	}
+	.msie9 & {
+		visibility: hidden;
+	}
 }
 
 .bx-flip-flipped {
@@ -4802,14 +4809,24 @@ a:hover, a:focus {
 		transform: perspective(700px) rotateY(-180deg);
 	}
 
+	&.bx-flip-vertical {
+		.bx-flip-front {
+			-webkit-transform: perspective(700px) rotateX(-180deg);
+			transform: perspective(700px) rotateX(-180deg);
+		}
+	}
+
 	.bx-flip-back {
 		z-index: 2;
 		visibility: visible;
 	}
 
 	.bx-flip-back:not(#unsupported) {
-		-webkit-transform: perspective(700px) rotateY(0);
-		transform: perspective(700px) rotateY(0);
+		-webkit-transform: perspective(700px) rotate(0);
+		transform: perspective(700px) rotate(0);
+		.msie9 & {
+			visibility: visible;
+		}
 	}
 }
 
@@ -4877,7 +4894,6 @@ a:hover, a:focus {
 
 	}
 }
-
 // growl notification
 
 #growl-container {

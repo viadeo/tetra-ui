@@ -5349,17 +5349,31 @@ a:focus .avatar img {
   -webkit-transform: perspective(700px) rotateY(180deg);
   transform: perspective(700px) rotateY(180deg);
 }
+.bx-flip-vertical .bx-flip-back:not(#unsupported) {
+  -webkit-transform: perspective(700px) rotateX(180deg);
+  transform: perspective(700px) rotateX(180deg);
+}
+.msie9 .bx-flip-back:not(#unsupported) {
+  visibility: hidden;
+}
 .bx-flip-flipped .bx-flip-front {
   -webkit-transform: perspective(700px) rotateY(-180deg);
   transform: perspective(700px) rotateY(-180deg);
+}
+.bx-flip-flipped.bx-flip-vertical .bx-flip-front {
+  -webkit-transform: perspective(700px) rotateX(-180deg);
+  transform: perspective(700px) rotateX(-180deg);
 }
 .bx-flip-flipped .bx-flip-back {
   z-index: 2;
   visibility: visible;
 }
 .bx-flip-flipped .bx-flip-back:not(#unsupported) {
-  -webkit-transform: perspective(700px) rotateY(0);
-  transform: perspective(700px) rotateY(0);
+  -webkit-transform: perspective(700px) rotate(0);
+  transform: perspective(700px) rotate(0);
+}
+.msie9 .bx-flip-flipped .bx-flip-back:not(#unsupported) {
+  visibility: visible;
 }
 .bx-editable {
   position: relative;
