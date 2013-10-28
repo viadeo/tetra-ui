@@ -1,4 +1,4 @@
-/*! Tetra UI v1.3.1 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! Tetra UI v1.3.2 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 tetra.controller.register('dropdown', {
 	scope: 'dropdown',
