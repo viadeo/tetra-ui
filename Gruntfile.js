@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       minified: {
         options: {
           paths: ['src/less'],
-          yuicompress: true
+          compress: true
         },
         files: {
           'dist/css/tetra-ui.min.css': ['src/less/packages/default.less'],
