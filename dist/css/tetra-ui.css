@@ -1763,6 +1763,9 @@ textarea {
 .hidden {
   display: none;
 }
+.decorative {
+  font-family: "MuseoSlab", Arial, sans-serif;
+}
 .elsewhere {
   position: absolute;
   height: 1px;
