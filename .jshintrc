@@ -1,0 +1,30 @@
+{
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "eqnull": true,
+  "browser": true,
+  "jquery": true,
+  "prototypejs": true,
+  "devel": true,
+  "smarttabs": true,
+  "asi": true,
+  "lastsemic": true,
+  "evil": true,
+  "globals": {
+    "tetra": true,
+    "Sizzle": true,
+    "requirejs": true,
+    "VNS": true,
+    "module": true,
+    "exports": true,
+    "tmpl": true,
+    "History": true,
+    "lang": true,
+    "google": true
+  }
+}
