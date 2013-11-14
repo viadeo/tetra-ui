@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> |'+
+    banner: '/*! <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy") %> |'+
             ' (MIT Licence) (c) Viadeo/APVO Corp -'+
             ' inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */\n\n',
 
@@ -43,6 +43,63 @@ module.exports = function(grunt) {
           '<%= path.less.dist %>/<%= pkg.name %>-rtl.min.css': ['<%= path.less.src %>/rtl.less'],
           '<%= path.less.dist %>/<%= pkg.name %>-light.min.css': ['<%= path.less.src %>/light.less']
         }
+      }
+    },  
+
+    'string-replace': {
+      less2sass: {
+        options: {
+          replacements: [{
+              pattern: /@/g,
+              replacement: '$'
+            },
+            {
+              pattern: /\.([\w\-]*)\s*\((.*)\)\s*\{/gi,
+              replacement: '@mixin $1($2)\n{'
+            },
+            {
+              pattern: /\.([\w\-]*\(.*\)\s*)/gi,
+              replacement: '@include $1'
+            },
+            {
+              pattern: /~"(.*)"/gi,
+              replacement: '#{$1}'
+            },
+            {
+              pattern: /spin/gi,
+              replacement: 'adjust-hue'
+            },
+            {
+              pattern: /shade/gi,
+              replacement: 'darken'
+            },
+            {
+              pattern: /tint/gi,
+              replacement: 'lighten'
+            }
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: 'src/less/foundation',
+            src: ['*.less', '!mixins.less'],
+            dest: 'src/sass/foundation',
+            ext: '.scss'
+          }
+        ]
+      }
+    },
+
+    sass: {
+      compile : {
+        files: [{
+            expand: true,
+            cwd: 'src/sass/foundation/',
+            src: '*.scss',
+            dest: '_tmp/css',
+            ext: '.css'
+          }
+        ]
       }
     },
 
@@ -162,7 +219,9 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      doc: ['doc/*.html', 'index.html']
+      doc: ['doc/*.html', 'index.html'],
+      sass: ['src/sass'],
+      tmp : ['_tmp']
     }
 
   });
@@ -173,10 +232,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-string-replace');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('assemble');
 
   grunt.registerTask('test', ['jshint']);
+
+  grunt.registerTask('less2sass', ['clean:sass','string-replace', 'sass', 'clean:tmp']);
 
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist-css', ['recess']);
