@@ -9,7 +9,14 @@ module.exports = function(grunt) {
 
     path : {
       less : {
-        src: 'src/less/packages',
+        src: 'src/less',
+        dist:'dist/less'
+      },
+      sass : {
+        src: 'src/sass',
+        dist:'dist/sass'
+      },
+      css : {
         dist:'dist/css'
       },
       js : {
@@ -23,28 +30,34 @@ module.exports = function(grunt) {
       options: {
         compile: true,
         banner: '<%= banner %>',
-        includePath: 'src/less'
+        includePath: '<%= path.less.src %>'
       },
       bootstrap: {
-        files: { 
-          '<%= path.less.dist %>/<%= pkg.name %>.css': ['<%= path.less.src %>/default.less'],
-          '<%= path.less.dist %>/<%= pkg.name %>-rtl.css': ['<%= path.less.src %>/rtl.less'],
-          '<%= path.less.dist %>/<%= pkg.name %>-light.css': ['<%= path.less.src %>/light.less']
+        files: {
+          '<%= path.css.dist %>/<%= pkg.name %>.css': ['<%= path.less.src %>/packages/default.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-rtl.css': ['<%= path.less.src %>/packages/rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-light.css': ['<%= path.less.src %>/packages/light.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct.css': ['<%= path.less.src %>/packages/viaduct.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-rtl.css': ['<%= path.less.src %>/packages/viaduct-rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-light.css': ['<%= path.less.src %>/packages/viaduct-light.less']
         }
       },
       bootstrap_min: {
         options: {
           compress: true
         },
-        files: { 
-          '<%= path.less.dist %>/<%= pkg.name %>.min.css': ['<%= path.less.src %>/default.less'],
-          '<%= path.less.dist %>/<%= pkg.name %>-doc.min.css': ['<%= path.less.src %>/doc.less'],
-          '<%= path.less.dist %>/<%= pkg.name %>-doc-rtl.min.css': ['<%= path.less.src %>/doc-rtl.less'],
-          '<%= path.less.dist %>/<%= pkg.name %>-rtl.min.css': ['<%= path.less.src %>/rtl.less'],
-          '<%= path.less.dist %>/<%= pkg.name %>-light.min.css': ['<%= path.less.src %>/light.less']
+        files: {
+          '<%= path.css.dist %>/<%= pkg.name %>.min.css': ['<%= path.less.src %>/packages/default.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-doc.min.css': ['<%= path.less.src %>/packages/doc.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-doc-rtl.min.css': ['<%= path.less.src %>/packages/doc-rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-rtl.min.css': ['<%= path.less.src %>/packages/rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-light.min.css': ['<%= path.less.src %>/packages/light.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct.min.css': ['<%= path.less.src %>/packages/viaduct.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-rtl.min.css': ['<%= path.less.src %>/packages/viaduct-rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-light.min.css': ['<%= path.less.src %>/packages/viaduct-light.less']
         }
       }
-    },  
+    },
 
     'string-replace': {
       less2sass: {
@@ -81,10 +94,44 @@ module.exports = function(grunt) {
         },
         files: [{
             expand: true,
-            cwd: 'src/less/foundation',
+            cwd: '<%= path.less.src %>/foundation',
             src: ['*.less', '!mixins.less'],
-            dest: 'src/sass/foundation',
+            dest: '<%= path.sass.src %>/foundation',
             ext: '.scss'
+          }
+        ]
+      },
+      sass_dist: {
+        options: {
+          replacements: [{
+              pattern: /filter: alpha\(opacity=([0-9]{1,3})\)/gi,
+              replacement: 'filter: #{"alpha(opacity=$1)"}'
+            }
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: '<%= path.sass.dist %>',
+            src: ['*.scss'],
+            dest: '<%= path.sass.dist %>',
+            ext: '.scss'
+          }
+        ]
+      },
+      less_dist: {
+        options: {
+          replacements: [{
+              pattern: /filter: alpha\(opacity=([0-9]{1,3})\)/gi,
+              replacement: 'filter: ~"alpha(opacity=$1)"'
+            }
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: '<%= path.less.dist %>',
+            src: ['*.less'],
+            dest: '<%= path.less.dist %>',
+            ext: '.less'
           }
         ]
       }
@@ -94,7 +141,17 @@ module.exports = function(grunt) {
       compile : {
         files: [{
             expand: true,
-            cwd: 'src/sass/foundation/',
+            cwd: '<%= path.sass.src %>/foundation/',
+            src: '*.scss',
+            dest: '_tmp/css',
+            ext: '.css'
+          }
+        ]
+      },
+      compile_dist : {
+        files: [{
+            expand: true,
+            cwd: '<%= path.sass.dist %>',
             src: '*.scss',
             dest: '_tmp/css',
             ext: '.css'
@@ -119,8 +176,8 @@ module.exports = function(grunt) {
         files: {
           '<%= path.js.dist %>/conf/tetra-js.js': 'src/js/conf/tetra-js.js',
           '<%= path.js.dist %>/autocomplete.js': '<%= path.js.src %>/autocomplete/**/*.js',
-          '<%= path.js.dist %>/dropdown.js': '<%= path.js.src %>/dropdown/**/*.js',
-          '<%= path.js.dist %>/dropdown_click_enabled.js': '<%= path.js.src %>/dropdown/**/*.js',
+          '<%= path.js.dist %>/dropdown.js': ['<%= path.js.src %>/dropdown/**/*.js','!<%= path.js.src %>/dropdown/view/click_enabled.ui.js'],
+          '<%= path.js.dist %>/dropdown_click_enabled.js': '<%= path.js.src %>/dropdown/view/click_enabled.ui.js',
           '<%= path.js.dist %>/flipswitch.js': '<%= path.js.src %>/flipswitch/**/*.js',
           '<%= path.js.dist %>/generic_autocomplete.js': '<%= path.js.src %>/generic_autocomplete/**/*.js',
           '<%= path.js.dist %>/growl.js': '<%= path.js.src %>/growl/**/*.js',
@@ -131,12 +188,58 @@ module.exports = function(grunt) {
           '<%= path.js.dist %>/highlight.js': '<%= path.js.src %>/highlight/**/*.js',
           '<%= path.js.dist %>/maps.js': '<%= path.js.src %>/maps/**/*.js',
           '<%= path.js.dist %>/toggle.js': '<%= path.js.src %>/toggle/**/*.js',
-          '<%= path.js.dist %>/yesno.js': '<%= path.js.src %>/yesno/**/*.js', 
+          '<%= path.js.dist %>/yesno.js': '<%= path.js.src %>/yesno/**/*.js',
           '<%= path.js.dist %>/placeholder.js': '<%= path.js.src %>/placeholder/**/*.js',
           '<%= path.js.dist %>/iePlaceholder.js': '<%= path.js.src %>/ie/**/*.js',
           '<%= path.js.dist %>/alert.js': '<%= path.js.src %>/alert/**/*.js',
           '<%= path.js.dist %>/flipbox.js': '<%= path.js.src %>/flipbox/**/*.js',
           '<%= path.js.dist %>/select.js': '<%= path.js.src %>/select/**/*.js'
+        }
+      },
+      less: {
+        options: {
+          banner: "<%= banner %>"
+        },
+        files: {
+          '<%= path.less.dist %>/<%= pkg.name %>.less': [
+            '<%= path.less.src %>/foundation/variables.less',
+            '<%= path.less.src %>/foundation/mixins.less',
+            '<%= path.css.dist %>/<%= pkg.name %>.css'
+          ],
+          '<%= path.less.dist %>/<%= pkg.name %>-light.less': [
+            '<%= path.less.src %>/foundation/variables.less',
+            '<%= path.less.src %>/foundation/mixins.less',
+            '<%= path.css.dist %>/<%= pkg.name %>-light.css'
+          ],
+          '<%= path.less.dist %>/<%= pkg.name %>-rtl.less': [
+            '<%= path.less.src %>/foundation/variables.less',
+            '<%= path.less.src %>/foundation/variables_rtl.less',
+            '<%= path.less.src %>/foundation/mixins.less',
+            '<%= path.css.dist %>/<%= pkg.name %>-rtl.css'
+          ],
+        }
+      },
+      sass: {
+        options: {
+          banner: "<%= banner %>"
+        },
+        files: {
+          '<%= path.sass.dist %>/<%= pkg.name %>-viaduct.scss': [
+            '<%= path.sass.src %>/foundation/variables.scss',
+            '<%= path.sass.src %>/foundation/variables_viaduct.scss',
+            '<%= path.css.dist %>/<%= pkg.name %>-viaduct.css'
+          ],
+          '<%= path.sass.dist %>/<%= pkg.name %>-viaduct-light.scss': [
+            '<%= path.sass.src %>/foundation/variables.scss',
+            '<%= path.sass.src %>/foundation/variables_viaduct.scss',
+            '<%= path.css.dist %>/<%= pkg.name %>-viaduct-light.css'
+          ],
+          '<%= path.sass.dist %>/<%= pkg.name %>-viaduct-rtl.scss': [
+            '<%= path.sass.src %>/foundation/variables.scss',
+            '<%= path.sass.src %>/foundation/variables_viaduct.scss',
+            '<%= path.sass.src %>/foundation/variables_rtl.scss',
+            '<%= path.css.dist %>/<%= pkg.name %>-viaduct-rtl.css'
+          ],
         }
       }
     },
@@ -188,8 +291,8 @@ module.exports = function(grunt) {
 
     watch: {
       less: {
-        files: ['src/less/**/*.less'],
-        tasks: ['recess']
+        files: ['<%= path.less.src %>/**/*.less'],
+        tasks: ['recess', 'concat:less', 'concat:sass', 'less2sass']
       },
       js: {
         files: ['Gruntfile.js','<%= path.js.src %>/**/*.js'],
@@ -220,8 +323,8 @@ module.exports = function(grunt) {
 
     clean: {
       doc: ['doc/*.html', 'index.html'],
-      sass: ['src/sass'],
-      tmp : ['_tmp']
+      sass: ['<%= path.sass.src %>'],
+      tmp: ['_tmp/css']
     }
 
   });
@@ -238,11 +341,25 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble');
 
   grunt.registerTask('test', ['jshint']);
+  grunt.registerTask('test-sass', ['sass:compile','sass:compile_dist']);
 
-  grunt.registerTask('less2sass', ['clean:sass','string-replace', 'sass', 'clean:tmp']);
+  grunt.registerTask('less2sass', [
+    'clean:sass',
+    'string-replace:less2sass',
+    'string-replace:sass_dist',
+    'string-replace:less_dist',
+    'test-sass'
+  ]);
 
-  grunt.registerTask('dist-js', ['concat', 'uglify']);
-  grunt.registerTask('dist-css', ['recess']);
+  grunt.registerTask('dist-js', ['concat:js', 'uglify']);
+
+  grunt.registerTask('dist-css', [
+    'clean:tmp',
+    'recess',
+    'concat:less',
+    'concat:sass',
+    'less2sass'
+  ]);
 
   // Full distribution task.
   grunt.registerTask('dist', ['dist-css', 'dist-js']);
