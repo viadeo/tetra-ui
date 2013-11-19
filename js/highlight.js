@@ -67,7 +67,7 @@ tetra.controller.register("highlight", {
                     _(".highlight-target").removeClass("highlight-target"), _(".highlight-overlay").remove();
                 },
                 createOverlay: function() {
-                    _(".highlight-overlay").length || _("body").append('<div class="highlight-overlay"></div>');
+                    _(".highlight-overlay").length || _("body div").hasClass("msie7") || _("body").append('<div class="highlight-overlay"></div>');
                 }
             }
         };

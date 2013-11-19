@@ -129,7 +129,7 @@ tetra.controller.register("file_upload", {
                             json: !1
                         });
                     }
-                    form.addClass("form-async-upload"), iframe.remove();
+                    form.addClass("form-async-upload"), iframe.parentNode.removeChild(iframe);
                 }
             }
         };
