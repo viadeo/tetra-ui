@@ -86,7 +86,7 @@ tetra.view.register('file_upload', {
 						app.notify('broadcastResponse', {id : form.attr('id'), resp : response, json : false});
 					}
 					form.addClass('form-async-upload');
-					iframe.remove();
+					iframe.parentNode.removeChild(iframe);
 				}
 			}
 		};
