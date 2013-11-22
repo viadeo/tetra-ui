@@ -1,5 +1,189 @@
 /*! tetra-ui v1.4.3 - 2013 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
+// Global variables
+
+// Static files paths
+$img-sprite-dir: "/v_img/global";
+$img-buttons-dir: "/v_img/coreui/buttons";
+$img-loaders-dir: "/v_img/profilev2";
+
+// Fonts
+$fonts-dir: "/css/core/fonts";
+$fonts-version: "1382536154";
+$font-stack: "Arial", sans-serif;
+
+// Right To Left mode (arabic)
+$rtl: false;
+
+// Layout
+$siteWidth:         980px;
+
+// Responsive
+$pageWidth: 85%;
+$pageWidthM: 90%; // when reaching the tablet breakpoint
+$pageWidthS: 97%; // when reaching the smartphone breakpoint
+
+$pageWidthMax: 1020px;
+
+$breakpointM: 768px; // breakpoint for tablets
+$breakpointS: 480px; // breakpoint for smartphones
+
+// Spacing
+$spacingXs:         5px;
+$spacingS:          10px;
+$spacingM:          15px;
+$spacingL:          20px;
+$spacingXl:         30px;
+
+// Grayscale
+$black:             #000000;
+$blackLight:        lighten($black, 18%);
+$grayDark:          lighten($black, 25%);
+$gray:              lighten($black, 50%);
+$grayLight:         lighten($black, 75%);
+$grayLighter:       lighten($black, 90%);
+$white:             #FFFFFF;
+
+// Extended palette
+
+$orange1: #f56600;
+$orange2: #f1532e;
+$orange3: #f78d2d;
+$orange4: #feae35;
+
+$green1: #019875;
+$green2: #0c9f9b;
+$green3: #53c1af;
+$green4: #c6e6d7;
+
+$blue1: #006aa8;
+$blue2: #007bc2;
+$blue3: #42a2d6;
+$blue4: #1f668c;
+$blue5: #7dcde3;
+
+$purple1: #471d63;
+$purple2: #685985;
+$purple3: #685985;
+$purple4: #685985;
+
+$pageBg: #e8e9eb;
+
+// Colors
+$green:             #829b13;
+$yellow:            #ffd520;
+$orange:            $orange1;
+
+$blue:              #007de3;
+$blueSoft:          #83a0b9;
+$blueDarker:        darken($blue, 20%);
+$blueDark:          darken($blue, 10%);
+$blueLight:         lighten(desaturate($blue, 35%), 20%);
+$blueLighter:       lighten(desaturate($blue, 35%), 40%);
+$blueBright:				#0065AE;
+$borderColor:       lighten($blueSoft, 63%);
+$panelBackground:   lighten($blueSoft, 92%);
+$panelBorder:       lighten($blueSoft, 78%);
+$panelBorderDarker: lighten($blueSoft, 42%);
+$overlayBorder:     darken($blueSoft, 70%);
+
+$premiumColor: #ffbb12;
+
+// Button Colors
+$buttonPrimaryBgColor:     #ffd724;
+$buttonPrimaryEndColor:    #ffc906;
+$buttonPrimaryHoverColor:  #ffc906;
+$buttonPrimaryBorderColor: #ffbb02;
+$buttonPrimaryTextColor:   $blackLight;
+
+$buttonDefaultBgColor:     #fafafa;
+$buttonDefaultEndColor:    #ebebeb;
+$buttonDefaultHoverColor:  #e8e8e8;
+$buttonDefaultBorderColor: #d5d5d5;
+$buttonDefaultTextColor:   $blackLight;
+
+$buttonTerBgColor:         lighten($green2, 4%);
+$buttonTerHoverColor:      darken($green2, 3%);
+$buttonTerBorderColor:     $green2;
+$buttonTerTextColor:       $white;
+
+$highlightColor:    #F4F2CA;
+
+// Link colors
+$linkColor:         $blue;
+$linkColorHover:    darken($linkColor, 10%);
+
+// Typography
+$baseFontSize:      12px;
+$smallFontSize:     $baseFontSize - 1;
+$baseFontColor:     lighten($black, 15%);
+$baseFontFamily:    Arial, sans-serif;
+$baseLineHeight:    1.4em;
+
+// Border Radius
+$borderRadiusXs: 2px;
+$borderRadiusS: 3px;
+$borderRadiusMS: 5px;
+$borderRadiusM: 6px;
+$borderRadiusL: 10px;
+
+// Forms
+$inputBackground:	$white;
+$inputBorder: #c5c7c5;
+$inputBorderFocus: $blue2;
+$inputDisabledBackground: $grayLighter;
+$inputSelectedControl: #344957;
+
+// Dropdowns
+$dropdownBackground: 			$white;
+$dropdownBorder: 				rgba(0,0,0,.2);
+$dropdownLinkColor: 			$grayDark;
+$dropdownLinkColorHover: 		$white;
+$dropdownLinkBackgroundHover: 	$linkColor;
+
+// Form states and alerts
+// -------------------------
+$warningText: 		#c09853;
+$warningBackground: #fcf8e3;
+$warningBorder: 	darken(adjust-hue($warningBackground, -10), 3%);
+
+$errorText:         #d54243;
+$errorBackground:   lighten($errorText, 58%);
+$errorBorder:       $errorText;
+
+$successText: $green2;
+$successBackground: $green2;
+$successBorder: $green2;
+
+$infoText: 			#3a87ad;
+$infoBackground: 	#d9edf7;
+$infoBorder: 		darken(adjust-hue($infoBackground, -10), 7%);
+
+// Forms requirements from bootstrap
+$gridColumns:		12;
+$gridColumnWidth:	60px;
+$gridGutterWidth:	20px;
+// Overriding variables for viaduc
+
+$fonts-dir: '/fonts';
+$img-sprite-dir: '/images/sprites';
+$img-buttons-dir: '/images/buttons';
+$img-loaders-dir: '/images/loaders';
+
+// Overriding the variables declared in variables.less
+// for Right To Left languages
+
+$rtl: true;
+
+// Arabic fonts are smaller
+
+$baseFontSize: 15px;
+$smallFontSize: $baseFontSize - 1;
+$baseLineHeight: 1.2em;
+$font-stack: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
+
+/*! tetra-ui v1.4.3 - 2013 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+
 html,
 body {
   background: #FFFFFF;
@@ -2148,8 +2332,8 @@ textarea {
   font-family: 'MuseoSlab';
   font-style: normal;
   font-weight: normal;
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot');
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/museoslab/museoslab-500.woff') format('woff'), url('/css/core/fonts/museoslab/museoslab-500.ttf') format('truetype');
+  src: url('/fonts/museoslab/museoslab-500.eot');
+  src: url('/fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('/fonts/museoslab/museoslab-500.woff') format('woff'), url('/fonts/museoslab/museoslab-500.ttf') format('truetype');
 }
 
 body {
@@ -3088,7 +3272,7 @@ table.table .header:hover:after {
 table.table .headerSortDown:after,
 table.table .headerSortDown:hover:after {
   opacity: 0.6;
-  filter: alpha(opacity=60);
+  filter: #{"alpha(opacity=60)"};
   visibility: visible;
 }
 
@@ -3098,7 +3282,7 @@ table.table .headerSortUp:after {
   border-bottom: none;
   border-left: 4px solid transparent;
   opacity: 0.6;
-  filter: alpha(opacity=60);
+  filter: #{"alpha(opacity=60)"};
   visibility: visible;
 }
 
@@ -3424,15 +3608,15 @@ h1 .sub {
   font: 0/0 a;
   color: transparent;
   vertical-align: text-top;
-  background: url('/v_img/global/global-sprite2.png') no-repeat;
+  background: url('/images/sprites/global-sprite2.png') no-repeat;
 }
 
 @font-face {
   font-family: 'Viadeoicons';
   font-style: normal;
   font-weight: normal;
-  src: url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.ttf') format('truetype');
+  src: url('/fonts/viadeoicons/1382536154/viadeoicons.eot');
+  src: url('/fonts/viadeoicons/1382536154/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/fonts/viadeoicons/1382536154/viadeoicons.woff') format('woff'), url('/fonts/viadeoicons/1382536154/viadeoicons.ttf') format('truetype');
 }
 
 i.vicon {
@@ -4052,7 +4236,7 @@ a:focus .avatar img {
 .eventsAction.btn-loading:active span,
 .core-form .btn-primary.btn-loading:active span,
 .core-form .btn-secondary.btn-loading:active span {
-  background: transparent url("/v_img/coreui/buttons/loaders/secondary.gif") no-repeat 50% 0.3em;
+  background: transparent url("/images/buttons/loaders/secondary.gif") no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
 
@@ -4422,7 +4606,7 @@ a:focus .avatar img {
   height: 0;
   padding: 1em 0 0 0;
   overflow: hidden;
-  background: transparent url("/v_img/coreui/buttons/loaders/default.gif") no-repeat 50% 0.3em;
+  background: transparent url("/images/buttons/loaders/default.gif") no-repeat 50% 0.3em;
   *background-position-y: 0;
 }
 
@@ -4677,7 +4861,7 @@ a:focus .avatar img {
   background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   opacity: 0.6;
-  filter: alpha(opacity=60);
+  filter: #{"alpha(opacity=60)"};
   -webkit-animation: popin-overlay-fadein 0.5s;
           animation: popin-overlay-fadein 0.5s;
 }
@@ -4698,7 +4882,7 @@ a:focus .avatar img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/v_img/profilev2/ajax-loader.gif') no-repeat 50% 35%;
+  background: url('/images/loaders/ajax-loader.gif') no-repeat 50% 35%;
 }
 
 .popin-container > .gr {
@@ -4922,7 +5106,7 @@ a:focus .avatar img {
   background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   opacity: 0.6;
-  filter: alpha(opacity=60);
+  filter: #{"alpha(opacity=60)"};
   -webkit-animation: highlight-overlay-fadein 0.5s;
      -moz-animation: highlight-overlay-fadein 0.5s;
           animation: highlight-overlay-fadein 0.5s;
@@ -6485,7 +6669,7 @@ a:focus .avatar img {
 .placeholding textarea {
   position: relative;
   z-index: 2;
-  background: transparent url("/v_img/global/global-sprite2.png") no-repeat 0 110%;
+  background: transparent url("/images/sprites/global-sprite2.png") no-repeat 0 110%;
 }
 
 .placeholding .placeholder {
@@ -6966,7 +7150,7 @@ a:focus .avatar img {
   padding: 0;
   cursor: pointer;
   opacity: 0;
-  filter: alpha(opacity=0);
+  filter: #{"alpha(opacity=0)"};
 }
 
 .custom-select:hover {
