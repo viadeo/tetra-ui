@@ -101,8 +101,13 @@ Now you should have a `node_modules` folder inside `tetra-ui` with all the requi
 ```bash
 grunt watch-server
 ```
+### Convert variables from less to sass
 
-And then go to this URL in a browser: <http://localhost:8080/> or <http://127.0.0.1:8080/>.
+```bash
+grunt --verbose less2sass
+```
+
+And then go to this URL in a browser: <http://localhost:8080/tetra-ui/> or <http://127.0.0.1:8080/tetra-ui/>.
 
 With this `watch-server` task, every time a Less file is changed, Grunt rebuilds the CSS files.
 

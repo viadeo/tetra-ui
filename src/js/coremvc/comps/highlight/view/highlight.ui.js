@@ -50,7 +50,7 @@ tetra.view.register('highlight', {
 					_('.highlight-overlay').remove();
 				},
 				createOverlay: function() {
-					if(!_('.highlight-overlay').length) {
+					if(!_('.highlight-overlay').length && !_('body div').hasClass('msie7')) {
 						_('body').append('<div class="highlight-overlay"></div>');
 					}
 				}

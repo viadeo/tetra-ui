@@ -1,0 +1,163 @@
+// Global variables
+
+// Static files paths
+$img-sprite-dir: "/v_img/global";
+$img-buttons-dir: "/v_img/coreui/buttons";
+$img-loaders-dir: "/v_img/profilev2";
+
+// Fonts
+$fonts-dir: "/css/core/fonts";
+$fonts-version: "1382536154";
+$font-stack: "Arial", sans-serif;
+
+// Right To Left mode (arabic)
+$rtl: false;
+
+// Layout
+$siteWidth:         980px;
+
+// Responsive
+$pageWidth: 85%;
+$pageWidthM: 90%; // when reaching the tablet breakpoint
+$pageWidthS: 97%; // when reaching the smartphone breakpoint
+
+$pageWidthMax: 1020px;
+
+$breakpointM: 768px; // breakpoint for tablets
+$breakpointS: 480px; // breakpoint for smartphones
+
+// Spacing
+$spacingXs:         5px;
+$spacingS:          10px;
+$spacingM:          15px;
+$spacingL:          20px;
+$spacingXl:         30px;
+
+// Grayscale
+$black:             #000000;
+$blackLight:        lighten($black, 18%);
+$grayDark:          lighten($black, 25%);
+$gray:              lighten($black, 50%);
+$grayLight:         lighten($black, 75%);
+$grayLighter:       lighten($black, 90%);
+$white:             #FFFFFF;
+
+// Extended palette
+
+$orange1: #f56600;
+$orange2: #f1532e;
+$orange3: #f78d2d;
+$orange4: #feae35;
+
+$green1: #019875;
+$green2: #0c9f9b;
+$green3: #53c1af;
+$green4: #c6e6d7;
+
+$blue1: #006aa8;
+$blue2: #007bc2;
+$blue3: #42a2d6;
+$blue4: #1f668c;
+$blue5: #7dcde3;
+
+$purple1: #471d63;
+$purple2: #685985;
+$purple3: #685985;
+$purple4: #685985;
+
+$pageBg: #e8e9eb;
+
+// Colors
+$green:             #829b13;
+$yellow:            #ffd520;
+$orange:            $orange1;
+
+$blue:              #007de3;
+$blueSoft:          #83a0b9;
+$blueDarker:        darken($blue, 20%);
+$blueDark:          darken($blue, 10%);
+$blueLight:         lighten(desaturate($blue, 35%), 20%);
+$blueLighter:       lighten(desaturate($blue, 35%), 40%);
+$blueBright:				#0065AE;
+$borderColor:       lighten($blueSoft, 63%);
+$panelBackground:   lighten($blueSoft, 92%);
+$panelBorder:       lighten($blueSoft, 78%);
+$panelBorderDarker: lighten($blueSoft, 42%);
+$overlayBorder:     darken($blueSoft, 70%);
+
+$premiumColor: #ffbb12;
+
+// Button Colors
+$buttonPrimaryBgColor:     #ffd724;
+$buttonPrimaryEndColor:    #ffc906;
+$buttonPrimaryHoverColor:  #ffc906;
+$buttonPrimaryBorderColor: #ffbb02;
+$buttonPrimaryTextColor:   $blackLight;
+
+$buttonDefaultBgColor:     #fafafa;
+$buttonDefaultEndColor:    #ebebeb;
+$buttonDefaultHoverColor:  #e8e8e8;
+$buttonDefaultBorderColor: #d5d5d5;
+$buttonDefaultTextColor:   $blackLight;
+
+$buttonTerBgColor:         lighten($green2, 4%);
+$buttonTerHoverColor:      darken($green2, 3%);
+$buttonTerBorderColor:     $green2;
+$buttonTerTextColor:       $white;
+
+$highlightColor:    #F4F2CA;
+
+// Link colors
+$linkColor:         $blue;
+$linkColorHover:    darken($linkColor, 10%);
+
+// Typography
+$baseFontSize:      12px;
+$smallFontSize:     $baseFontSize - 1;
+$baseFontColor:     lighten($black, 15%);
+$baseFontFamily:    Arial, sans-serif;
+$baseLineHeight:    1.4em;
+
+// Border Radius
+$borderRadiusXs: 2px;
+$borderRadiusS: 3px;
+$borderRadiusMS: 5px;
+$borderRadiusM: 6px;
+$borderRadiusL: 10px;
+
+// Forms
+$inputBackground:	$white;
+$inputBorder: #c5c7c5;
+$inputBorderFocus: $blue2;
+$inputDisabledBackground: $grayLighter;
+$inputSelectedControl: #344957;
+
+// Dropdowns
+$dropdownBackground: 			$white;
+$dropdownBorder: 				rgba(0,0,0,.2);
+$dropdownLinkColor: 			$grayDark;
+$dropdownLinkColorHover: 		$white;
+$dropdownLinkBackgroundHover: 	$linkColor;
+
+// Form states and alerts
+// -------------------------
+$warningText: 		#c09853;
+$warningBackground: #fcf8e3;
+$warningBorder: 	darken(adjust-hue($warningBackground, -10), 3%);
+
+$errorText:         #d54243;
+$errorBackground:   lighten($errorText, 58%);
+$errorBorder:       $errorText;
+
+$successText: $green2;
+$successBackground: $green2;
+$successBorder: $green2;
+
+$infoText: 			#3a87ad;
+$infoBackground: 	#d9edf7;
+$infoBorder: 		darken(adjust-hue($infoBackground, -10), 7%);
+
+// Forms requirements from bootstrap
+$gridColumns:		12;
+$gridColumnWidth:	60px;
+$gridGutterWidth:	20px;

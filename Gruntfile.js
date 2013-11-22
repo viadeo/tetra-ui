@@ -1,268 +1,278 @@
 module.exports = function(grunt) {
+  "use strict";
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
 
-    less: {
-      uncompressed: {
-        options: {
-          paths: ['src/less']
-        },
+    pkg: grunt.file.readJSON('package.json'),
+    banner: '/*! <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy") %> |'+
+            ' (MIT Licence) (c) Viadeo/APVO Corp -'+
+            ' inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */\n\n',
+
+    path : {
+      less : {
+        src: 'src/less',
+        dist:'dist/less'
+      },
+      sass : {
+        src: 'src/sass',
+        dist:'dist/sass'
+      },
+      css : {
+        dist:'dist/css'
+      },
+      js : {
+        src: 'src/js/coremvc/comps',
+        dist:'dist/js'
+      },
+      doc : 'doc/templates'
+    },
+
+    recess: {
+      options: {
+        compile: true,
+        banner: '<%= banner %>',
+        includePath: '<%= path.less.src %>'
+      },
+      bootstrap: {
         files: {
-          'dist/css/tetra-ui.css': ['src/less/packages/default.less'],
-          'dist/css/tetra-ui-rtl.css': ['src/less/packages/rtl.less'],
-          'dist/css/tetra-ui-light.css': ['src/less/packages/light.less']
+          '<%= path.css.dist %>/<%= pkg.name %>.css': ['<%= path.less.src %>/packages/default.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-rtl.css': ['<%= path.less.src %>/packages/rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-light.css': ['<%= path.less.src %>/packages/light.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct.css': ['<%= path.less.src %>/packages/viaduct.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-rtl.css': ['<%= path.less.src %>/packages/viaduct-rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-light.css': ['<%= path.less.src %>/packages/viaduct-light.less']
         }
       },
-
-      minified: {
+      bootstrap_min: {
         options: {
-          paths: ['src/less'],
-          yuicompress: true
+          compress: true
         },
         files: {
-          'dist/css/tetra-ui.min.css': ['src/less/packages/default.less'],
-          'dist/css/tetra-ui-doc.min.css': ['src/less/packages/doc.less'],
-          'dist/css/tetra-ui-doc-rtl.min.css': ['src/less/packages/doc-rtl.less'],
-          'dist/css/tetra-ui-light.min.css': ['src/less/packages/light.less'],
-          'dist/css/tetra-ui-rtl.min.css': ['src/less/packages/rtl.less']
+          '<%= path.css.dist %>/<%= pkg.name %>.min.css': ['<%= path.less.src %>/packages/default.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-doc.min.css': ['<%= path.less.src %>/packages/doc.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-doc-rtl.min.css': ['<%= path.less.src %>/packages/doc-rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-rtl.min.css': ['<%= path.less.src %>/packages/rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-light.min.css': ['<%= path.less.src %>/packages/light.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct.min.css': ['<%= path.less.src %>/packages/viaduct.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-rtl.min.css': ['<%= path.less.src %>/packages/viaduct-rtl.less'],
+          '<%= path.css.dist %>/<%= pkg.name %>-viaduct-light.min.css': ['<%= path.less.src %>/packages/viaduct-light.less']
         }
+      }
+    },
+
+    'string-replace': {
+      less2sass: {
+        options: {
+          replacements: [{
+              pattern: /@/g,
+              replacement: '$'
+            },
+            {
+              pattern: /\.([\w\-]*)\s*\((.*)\)\s*\{/gi,
+              replacement: '@mixin $1($2)\n{'
+            },
+            {
+              pattern: /\.([\w\-]*\(.*\)\s*)/gi,
+              replacement: '@include $1'
+            },
+            {
+              pattern: /~"(.*)"/gi,
+              replacement: '#{$1}'
+            },
+            {
+              pattern: /spin/gi,
+              replacement: 'adjust-hue'
+            },
+            {
+              pattern: /shade/gi,
+              replacement: 'darken'
+            },
+            {
+              pattern: /tint/gi,
+              replacement: 'lighten'
+            }
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: '<%= path.less.src %>/foundation',
+            src: ['*.less', '!mixins.less'],
+            dest: '<%= path.sass.src %>/foundation',
+            ext: '.scss'
+          }
+        ]
+      },
+      sass_dist: {
+        options: {
+          replacements: [{
+              pattern: /filter: alpha\(opacity=([0-9]{1,3})\)/gi,
+              replacement: 'filter: #{"alpha(opacity=$1)"}'
+            }
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: '<%= path.sass.dist %>',
+            src: ['*.scss'],
+            dest: '<%= path.sass.dist %>',
+            ext: '.scss'
+          }
+        ]
+      },
+      less_dist: {
+        options: {
+          replacements: [{
+              pattern: /filter: alpha\(opacity=([0-9]{1,3})\)/gi,
+              replacement: 'filter: ~"alpha(opacity=$1)"'
+            }
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: '<%= path.less.dist %>',
+            src: ['*.less'],
+            dest: '<%= path.less.dist %>',
+            ext: '.less'
+          }
+        ]
+      }
+    },
+
+    sass: {
+      compile : {
+        files: [{
+            expand: true,
+            cwd: '<%= path.sass.src %>/foundation/',
+            src: '*.scss',
+            dest: '_tmp/css',
+            ext: '.css'
+          }
+        ]
+      },
+      compile_dist : {
+        files: [{
+            expand: true,
+            cwd: '<%= path.sass.dist %>',
+            src: '*.scss',
+            dest: '_tmp/css',
+            ext: '.css'
+          }
+        ]
       }
     },
 
     jshint: {
       options: {
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        eqnull: true,
-        browser: true,
-        jquery: true,
-        prototypejs: true,
-        devel: true,
-        smarttabs: true,
-        asi: true,
-        lastsemic: true,
-        evil: true,
-        globals: {
-          tetra: true,
-          Sizzle: true,
-          requirejs: true,
-          VNS: true,
-          module: true,
-          exports: true,
-          tmpl: true,
-          History: true,
-          lang: true,
-          google: true
-        }
+        jshintrc: '.jshintrc'
       },
       files: [
-        "src/js/coremvc/comps/**/*.class.js",
-        "src/js/coremvc/comps/**/*.ctrl.js",
-        "src/js/coremvc/comps/**/*.ui.js"]
+        "Gruntfile.js",
+        "<%= path.js.src %>/**/*.class.js",
+        "<%= path.js.src %>/**/*.ctrl.js",
+        "<%= path.js.src %>/**/*.ui.js"]
     },
 
     concat: {
-      options: {
-        banner: "/*! Tetra UI v<%= pkg.version %> | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */\n\n"
-      },
-
-      css: {
-        files: {
-          'dist/css/tetra-ui.min.css': ['<banner>', 'dist/css/tetra-ui.min.css'],
-          'dist/css/tetra-ui-rtl.min.css': ['<banner>', 'dist/css/tetra-ui-rtl.min.css'],
-          'dist/css/tetra-ui-doc.min.css': ['<banner>', 'dist/css/tetra-ui-doc.min.css'],
-          'dist/css/tetra-ui-doc-rtl.min.css': ['<banner>', 'dist/css/tetra-ui-doc-rtl.min.css'],
-          'dist/css/tetra-ui-light.min.css': ['<banner>', 'dist/css/tetra-ui-light.min.css']
-        }
-      },
-
-      less: {
-        files: {
-          'dist/less/tetra-ui.less': ['<banner>',
-            'src/less/foundation/variables.less',
-            'src/less/foundation/mixins.less',
-            'src/less/reset.less',
-            'src/less/grid.less',
-            'src/less/helpers.less',
-            'src/less/type.less',
-            'src/less/forms.less',
-            'src/less/tables.less',
-            'src/less/patterns.less',
-            'src/less/icons.less',
-            'src/less/components/avatars.less',
-            'src/less/components/popover.less',
-            'src/less/components/tooltip.less',
-            'src/less/components/button.less',
-            'src/less/components/dropdown.less',
-            'src/less/components/popin.less',
-            'src/less/components/highlight.less',
-            'src/less/components/tabs.less',
-            'src/less/components/yesno.less',
-            'src/less/components/autocomplete.less',
-            'src/less/components/pagination.less',
-            'src/less/components/radio.less',
-            'src/less/components/checkbox.less',
-            'src/less/components/toggle.less',
-            'src/less/components/flipswitch.less',
-            'src/less/components/box.less',
-            'src/less/components/growl.less',
-            'src/less/components/card.less',
-            'src/less/components/placeholder.less',
-            'src/less/components/field-helper.less',
-            'src/less/components/steps.less',
-            'src/less/components/progressbar.less',
-            'src/less/components/share.less',
-            'src/less/components/select.less'
-          ],
-
-          'dist/less/tetra-ui-apna.less': ['<banner>',
-            'src/less/foundation/variables.less',
-            'src/less/foundation/variables_apna.less',
-            'src/less/foundation/mixins.less',
-            'src/less/reset.less',
-            'src/less/grid.less',
-            'src/less/helpers.less',
-            'src/less/type.less',
-            'src/less/forms.less',
-            'src/less/tables.less',
-            'src/less/patterns.less',
-            'src/less/icons.less',
-            'src/less/components/avatars.less',
-            'src/less/components/popover.less',
-            'src/less/components/tooltip.less',
-            'src/less/components/button.less',
-            'src/less/components/dropdown.less',
-            'src/less/components/popin.less',
-            'src/less/components/highlight.less',
-            'src/less/components/tabs.less',
-            'src/less/components/yesno.less',
-            'src/less/components/autocomplete.less',
-            'src/less/components/pagination.less',
-            'src/less/components/radio.less',
-            'src/less/components/checkbox.less',
-            'src/less/components/toggle.less',
-            'src/less/components/flipswitch.less',
-            'src/less/components/box.less',
-            'src/less/components/growl.less',
-            'src/less/components/card.less',
-            'src/less/components/placeholder.less',
-            'src/less/components/field-helper.less',
-            'src/less/components/steps.less',
-            'src/less/components/progressbar.less',
-            'src/less/components/share.less',
-            'src/less/components/select.less'
-          ],
-
-          'dist/less/tetra-ui-rtl.less': ['<banner>',
-            'src/less/foundation/variables.less',
-            'src/less/foundation/variables_rtl.less',
-            'src/less/foundation/mixins.less',
-            'src/less/reset.less',
-            'src/less/grid.less',
-            'src/less/helpers.less',
-            'src/less/type.less',
-            'src/less/forms.less',
-            'src/less/tables.less',
-            'src/less/patterns.less',
-            'src/less/icons.less',
-            'src/less/components/avatars.less',
-            'src/less/components/popover.less',
-            'src/less/components/tooltip.less',
-            'src/less/components/button.less',
-            'src/less/components/dropdown.less',
-            'src/less/components/popin.less',
-            'src/less/components/highlight.less',
-            'src/less/components/tabs.less',
-            'src/less/components/yesno.less',
-            'src/less/components/autocomplete.less',
-            'src/less/components/pagination.less',
-            'src/less/components/radio.less',
-            'src/less/components/checkbox.less',
-            'src/less/components/toggle.less',
-            'src/less/components/flipswitch.less',
-            'src/less/components/box.less',
-            'src/less/components/growl.less',
-            'src/less/components/card.less',
-            'src/less/components/placeholder.less',
-            'src/less/components/field-helper.less',
-            'src/less/components/steps.less',
-            'src/less/components/progressbar.less',
-            'src/less/components/share.less',
-            'src/less/components/select.less'
-          ],
-
-          'dist/less/tetra-ui-light.less': ['<banner>',
-            'src/less/foundation/variables.less',
-            'src/less/foundation/mixins.less',
-            'src/less/reset.less',
-            'src/less/grid.less',
-            'src/less/helpers.less',
-            'src/less/type.less',
-            'src/less/forms.less',
-            'src/less/patterns.less',
-            'src/less/icons.less',
-            'src/less/components/avatars.less',
-            'src/less/components/popover.less',
-            'src/less/components/tooltip.less',
-            'src/less/components/button.less',
-            'src/less/components/dropdown.less',
-            'src/less/components/popin.less',
-            'src/less/components/highlight.less',
-            'src/less/components/tabs.less',
-            'src/less/components/autocomplete.less',
-            'src/less/components/radio.less',
-            'src/less/components/box.less',
-            'src/less/components/growl.less',
-            'src/less/components/placeholder.less',
-            'src/less/components/field-helper.less'
-          ],
-        }
-      },
-
       js: {
         files: {
-          'dist/js/conf/tetra-js.js': ['<banner>', 'src/js/conf/tetra-js.js'],
-          'dist/js/autocomplete.js': ['<banner>', 'src/js/coremvc/comps/autocomplete/model/autocomplete.class.js', 'src/js/coremvc/comps/autocomplete/controller/autocomplete.ctrl.js', 'src/js/coremvc/comps/autocomplete/view/autocomplete.ui.js'],
-          'dist/js/dropdown.js': ['<banner>', 'src/js/coremvc/comps/dropdown/controller/dropdown.ctrl.js', 'src/js/coremvc/comps/dropdown/view/view.ui.js'],
-          'dist/js/dropdown_click_enabled.js': ['<banner>', 'src/js/coremvc/comps/dropdown/controller/dropdown.ctrl.js', 'src/js/coremvc/comps/dropdown/view/click_enabled.ui.js'],
-          'dist/js/flipswitch.js': ['<banner>', 'src/js/coremvc/comps/flipswitch/controller/flipswitch.ctrl.js', 'src/js/coremvc/comps/flipswitch/view/flipswitch.ui.js'],
-          'dist/js/generic_autocomplete.js': ['<banner>', 'src/js/coremvc/comps/generic_autocomplete/model/autocomplete.class.js', 'src/js/coremvc/comps/generic_autocomplete/controller/autocomplete.ctrl.js', 'src/js/coremvc/comps/generic_autocomplete/view/autocomplete.ui.js'],
-          'dist/js/growl.js': ['<banner>', 'src/js/coremvc/comps/growl/controller/growl.ctrl.js', 'src/js/coremvc/comps/growl/view/growl.ui.js'],
-          'dist/js/navtabs.js': ['<banner>', 'src/js/coremvc/comps/navtabs/model/navtabs.class.js', 'src/js/coremvc/comps/navtabs/controller/navtabs.ctrl.js', 'src/js/coremvc/comps/navtabs/view/navtabs.ui.js'],
-          'dist/js/paginator.js': ['<banner>', 'src/js/coremvc/comps/paginator/view/paginator.ui.js'],
-          'dist/js/popin.js': ['<banner>', 'src/js/coremvc/comps/popin/model/popin.class.js', 'src/js/coremvc/comps/popin/controller/popin.ctrl.js', 'src/js/coremvc/comps/popin/view/popin.ui.js'],
-          'dist/js/file_upload.js': ['<banner>', 'src/js/coremvc/comps/file_upload/model/file_upload.class.js', 'src/js/coremvc/comps/file_upload/controller/file_upload.ctrl.js', 'src/js/coremvc/comps/file_upload/view/file_upload.ui.js'],
-          'dist/js/highlight.js': ['<banner>', 'src/js/coremvc/comps/highlight/controller/highlight.ctrl.js', 'src/js/coremvc/comps/highlight/view/highlight.ui.js'],
-          'dist/js/maps.js': ['<banner>', 'src/js/coremvc/comps/maps/controller/api.ctrl.js', 'src/js/coremvc/comps/maps/controller/map.ctrl.js','src/js/coremvc/comps/maps/controller/geocode.ctrl.js','src/js/coremvc/comps/maps/controller/itinerary.ctrl.js','src/js/coremvc/comps/maps/controller/places.ctrl.js'],          
-          'dist/js/toggle.js': ['<banner>', 'src/js/coremvc/comps/toggle/controller/toggle.ctrl.js', 'src/js/coremvc/comps/toggle/view/toggle.ui.js'],
-          'dist/js/yesno.js': ['<banner>', 'src/js/coremvc/comps/yesno/model/yesno.class.js', 'src/js/coremvc/comps/yesno/controller/yesno.ctrl.js', 'src/js/coremvc/comps/yesno/view/yesno.ui.js'],
-          'dist/js/placeholder.js': ['<banner>', 'src/js/coremvc/comps/placeholder/view/placeholder.ui.js'],
-          'dist/js/iePlaceholder.js': ['<banner>', 'src/js/coremvc/comps/ie/view/iePlaceholder.ui.js'],
-          'dist/js/alert.js': ['<banner>', 'src/js/coremvc/comps/alert/view/alert.ui.js'],
-          'dist/js/flipbox.js': ['<banner>', 'src/js/coremvc/comps/flipbox/view/flipbox.ui.js'],
-          'dist/js/select.js': ['<banner>', 'src/js/coremvc/comps/select/view/select.ui.js']
+          '<%= path.js.dist %>/conf/tetra-js.js': 'src/js/conf/tetra-js.js',
+          '<%= path.js.dist %>/autocomplete.js': '<%= path.js.src %>/autocomplete/**/*.js',
+          '<%= path.js.dist %>/dropdown.js': ['<%= path.js.src %>/dropdown/**/*.js','!<%= path.js.src %>/dropdown/view/click_enabled.ui.js'],
+          '<%= path.js.dist %>/dropdown_click_enabled.js': '<%= path.js.src %>/dropdown/view/click_enabled.ui.js',
+          '<%= path.js.dist %>/flipswitch.js': '<%= path.js.src %>/flipswitch/**/*.js',
+          '<%= path.js.dist %>/generic_autocomplete.js': '<%= path.js.src %>/generic_autocomplete/**/*.js',
+          '<%= path.js.dist %>/growl.js': '<%= path.js.src %>/growl/**/*.js',
+          '<%= path.js.dist %>/navtabs.js': '<%= path.js.src %>/navtabs/**/*.js',
+          '<%= path.js.dist %>/paginator.js': '<%= path.js.src %>/paginator/**/*.js',
+          '<%= path.js.dist %>/popin.js': '<%= path.js.src %>/popin/**/*.js',
+          '<%= path.js.dist %>/file_upload.js': '<%= path.js.src %>/file_upload/**/*.js',
+          '<%= path.js.dist %>/highlight.js': '<%= path.js.src %>/highlight/**/*.js',
+          '<%= path.js.dist %>/maps.js': '<%= path.js.src %>/maps/**/*.js',
+          '<%= path.js.dist %>/toggle.js': '<%= path.js.src %>/toggle/**/*.js',
+          '<%= path.js.dist %>/yesno.js': '<%= path.js.src %>/yesno/**/*.js',
+          '<%= path.js.dist %>/placeholder.js': '<%= path.js.src %>/placeholder/**/*.js',
+          '<%= path.js.dist %>/iePlaceholder.js': '<%= path.js.src %>/ie/**/*.js',
+          '<%= path.js.dist %>/alert.js': '<%= path.js.src %>/alert/**/*.js',
+          '<%= path.js.dist %>/flipbox.js': '<%= path.js.src %>/flipbox/**/*.js',
+          '<%= path.js.dist %>/select.js': '<%= path.js.src %>/select/**/*.js'
+        }
+      },
+      less: {
+        options: {
+          banner: "<%= banner %>"
+        },
+        files: {
+          '<%= path.less.dist %>/<%= pkg.name %>.less': [
+            '<%= path.less.src %>/foundation/variables.less',
+            '<%= path.less.src %>/foundation/mixins.less',
+            '<%= path.css.dist %>/<%= pkg.name %>.css'
+          ],
+          '<%= path.less.dist %>/<%= pkg.name %>-light.less': [
+            '<%= path.less.src %>/foundation/variables.less',
+            '<%= path.less.src %>/foundation/mixins.less',
+            '<%= path.css.dist %>/<%= pkg.name %>-light.css'
+          ],
+          '<%= path.less.dist %>/<%= pkg.name %>-rtl.less': [
+            '<%= path.less.src %>/foundation/variables.less',
+            '<%= path.less.src %>/foundation/variables_rtl.less',
+            '<%= path.less.src %>/foundation/mixins.less',
+            '<%= path.css.dist %>/<%= pkg.name %>-rtl.css'
+          ],
+        }
+      },
+      sass: {
+        options: {
+          banner: "<%= banner %>"
+        },
+        files: {
+          '<%= path.sass.dist %>/<%= pkg.name %>-viaduct.scss': [
+            '<%= path.sass.src %>/foundation/variables.scss',
+            '<%= path.sass.src %>/foundation/variables_viaduct.scss',
+            '<%= path.css.dist %>/<%= pkg.name %>-viaduct.css'
+          ],
+          '<%= path.sass.dist %>/<%= pkg.name %>-viaduct-light.scss': [
+            '<%= path.sass.src %>/foundation/variables.scss',
+            '<%= path.sass.src %>/foundation/variables_viaduct.scss',
+            '<%= path.css.dist %>/<%= pkg.name %>-viaduct-light.css'
+          ],
+          '<%= path.sass.dist %>/<%= pkg.name %>-viaduct-rtl.scss': [
+            '<%= path.sass.src %>/foundation/variables.scss',
+            '<%= path.sass.src %>/foundation/variables_viaduct.scss',
+            '<%= path.sass.src %>/foundation/variables_rtl.scss',
+            '<%= path.css.dist %>/<%= pkg.name %>-viaduct-rtl.css'
+          ],
         }
       }
     },
 
     uglify: {
-      comps: {
+      options: {
+        banner: "<%= banner %>"
+      },
+      beautify : {
         options: {
-          banner: "/*! Tetra UI v<%= pkg.version %> | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */\n\n",
-          report: 'min',
-          preserveComments: false
+          mangle: false,
+          beautify: true,
+          preserveComments: 'some'
         },
         files: [
           {
             expand: true,
-            cwd: 'dist/js/',
-            src: ['*.js'],
-            dest: 'dist/js/min/',
+            cwd: '<%= path.js.dist %>',
+            src: '*.js',
+            dest: '<%= path.js.dist %>'
+          }
+        ]
+      },
+      dist: {
+        options: {
+          report: 'min'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= path.js.dist %>',
+            src: '*.js',
+            dest: '<%= path.js.dist %>/min',
             ext: '.min.js'
           }
         ]
@@ -281,38 +291,40 @@ module.exports = function(grunt) {
 
     watch: {
       less: {
-        files: ['src/less/**/*.less'],
-        tasks: ['less', 'concat:css', 'concat:less']
+        files: ['<%= path.less.src %>/**/*.less'],
+        tasks: ['recess', 'concat:less', 'concat:sass', 'less2sass']
       },
       js: {
-        files: ['src/js/coremvc/comps/**/*.js'],
-        tasks: ['jshint', 'concat:js', 'uglify']
+        files: ['Gruntfile.js','<%= path.js.src %>/**/*.js'],
+        tasks: ['jshint', 'concat', 'uglify']
       },
       doc: {
-        files: ['doc/templates/**/*'],
+        files: ['<%= path.doc %>/**/*'],
         tasks: ['clean:doc', 'assemble']
       }
     },
 
     assemble: {
       options: {
-        path: '/tetra-ui',
-        partials: ['doc/templates/partials/**/*.hbs']
+        path: '/<%= pkg.name %>',
+        partials: ['<%= path.doc %>/partials/**/*.hbs']
       },
       pages: {
         options: {
           flatten: true,
-          layout: 'doc/templates/layouts/default.hbs'
+          layout: '<%= path.doc %>/layouts/default.hbs'
         },
         files: [
-          { expand: true, cwd: 'doc/templates/pages', src: ['*.hbs', '!index.hbs'], dest: 'doc/' },
-          { expand: true, cwd: 'doc/templates/pages', src: ['index.hbs'], dest: './' }
+          { expand: true, cwd: '<%= path.doc %>/pages', src: ['*.hbs', '!index.hbs'], dest: 'doc/' },
+          { expand: true, cwd: '<%= path.doc %>/pages', src: ['index.hbs'], dest: './' }
         ]
       }
     },
 
     clean: {
-      doc: ['doc/*.html', 'index.html']
+      doc: ['doc/*.html', 'index.html'],
+      sass: ['<%= path.sass.src %>'],
+      tmp: ['_tmp/css']
     }
 
   });
@@ -320,18 +332,45 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-string-replace');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('assemble');
 
-  // Default task
-  grunt.registerTask('default', ['jshint', 'less', 'concat', 'uglify']);
+  grunt.registerTask('test', ['jshint']);
+  grunt.registerTask('test-sass', ['sass:compile','sass:compile_dist']);
 
-  // Watch and local server
+  grunt.registerTask('less2sass', [
+    'clean:sass',
+    'string-replace:less2sass',
+    'string-replace:sass_dist',
+    'string-replace:less_dist',
+    'test-sass'
+  ]);
+
+  grunt.registerTask('dist-js', ['concat:js', 'uglify']);
+
+  grunt.registerTask('dist-css', [
+    'clean:tmp',
+    'recess',
+    'concat:less',
+    'concat:sass',
+    'less2sass'
+  ]);
+
+  // Full distribution task.
+  grunt.registerTask('dist', ['dist-css', 'dist-js']);
+
+  // Default task
+  grunt.registerTask('default', ['test', 'dist']);
+
+  // Generate doc
+  grunt.registerTask('doc', ['clean:doc', 'assemble']);
+
+  // Watch and launch server
   grunt.registerTask('watch-server', ['connect', 'watch']);
 
-  // Documentation generation with DocPad
-  grunt.registerTask('doc', ['clean:doc', 'assemble']);
 };

@@ -35,11 +35,16 @@ tetra.view.register('growl', {
 							});
 						}
 					}
+				},
+				window:{
+					load:function(){
+						app.notify('display stacked messages');
+					}
 				}
 			},
 
 			methods: {
-				init : function(elm, width) {
+				init : function() {
 					me.win = _(window);
 					me.growl = null;
 					me.idle = 500;

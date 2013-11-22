@@ -118,8 +118,8 @@
 
 // Opacity
 .opacity(@opacity: 100) {
-    filter: e(%("alpha(opacity=%d)", @opacity));
     opacity: @opacity / 100;
+    filter: ~"alpha(opacity=@{opacity})";
 }
 
 
