@@ -363,3 +363,42 @@
     color: @linkColorHover;
   }
 }
+
+.btn-pagination {
+  padding: @spacingXs 13px @spacingXs;
+  font-size: (@baseFontSize + 3);
+  color: @grayDark;
+  background: transparent;
+
+  .vicon {
+    color: @grayDark;
+
+    &.btn-icon-after,
+    &.btn-icon-before {
+      position: relative;
+      top: -1px;
+    }
+
+    &.btn-icon-after {
+      margin: 0 -@spacingS 0 @spacingXs;
+    }
+    &.btn-icon-before {
+      margin: 0 @spacingXs 0 -@spacingS;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: tint(@linkColor, 20%);
+    color: @white;
+    box-shadow: none;
+
+    .vicon {
+      color: @white;
+    }
+  }
+
+  &:active {
+    background: @linkColor;
+  }
+}
