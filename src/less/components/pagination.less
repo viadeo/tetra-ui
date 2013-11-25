@@ -17,6 +17,7 @@
       font-size: (@baseFontSize + 3);
       border-radius: @borderRadiusS;
       background: transparent;
+      vertical-align: top;
 
       &:hover,
       &:focus {
@@ -30,24 +31,31 @@
       &:active {
         background: @linkColor;
       }
+
+      &.btn-pagination {
+        padding: (@spacingXs + 1) 13px (@spacingXs + 1);
+      }
     }
 
     &.arrow {
-
       .vicon {
         font-size: 9px;
         position: relative;
         top: -1px;
       }
+    }
 
-      &.disabled {
-        a {
-          background: transparent;
-          cursor: default;
+    &.disabled {
+      a {
+        background: transparent;
+        cursor: default;
 
-          .vicon {
-            color: @grayLight;
-          }
+        .vicon {
+          color: @grayLight;
+        }
+
+        &.btn-pagination {
+          color: @grayLight;
         }
       }
     }
