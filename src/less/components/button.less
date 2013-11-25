@@ -365,7 +365,7 @@
 }
 
 .btn-pagination {
-  padding: (@spacingXs + 1) 13px (@spacingXs + 1);
+  .padding (@rtl, (@spacingXs + 1), 13px, (@spacingXs + 1), 13px);
   font-size: (@baseFontSize + 3);
   color: @grayDark;
   background: transparent;
@@ -380,10 +380,10 @@
     }
 
     &.btn-icon-after {
-      margin: 0 -@spacingS 0 @spacingXs;
+      .margin (@rtl, 0, -@spacingS, 0, @spacingXs);
     }
     &.btn-icon-before {
-      margin: 0 @spacingXs 0 -@spacingS;
+      .margin (@rtl, 0, @spacingXs, 0, -@spacingS);
     }
   }
 
