@@ -4508,6 +4508,47 @@ a:focus .avatar img {
   box-shadow: none;
 }
 
+.btn-pagination {
+  padding: 6px 13px 6px 13px;
+  font-size: 15px;
+  color: #404040;
+  background: transparent;
+}
+
+.btn-pagination .vicon {
+  color: #404040;
+}
+
+.btn-pagination .vicon.btn-icon-after,
+.btn-pagination .vicon.btn-icon-before {
+  position: relative;
+  top: -1px;
+}
+
+.btn-pagination .vicon.btn-icon-after {
+  margin: 0 -10px 0 5px;
+}
+
+.btn-pagination .vicon.btn-icon-before {
+  margin: 0 5px 0 -10px;
+}
+
+.btn-pagination:hover,
+.btn-pagination:focus {
+  color: #ffffff;
+  background: #3397e9;
+  box-shadow: none;
+}
+
+.btn-pagination:hover .vicon,
+.btn-pagination:focus .vicon {
+  color: #ffffff;
+}
+
+.btn-pagination:active {
+  background: #007de3;
+}
+
 .dd {
   position: relative;
   display: inline-block;
