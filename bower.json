@@ -1,6 +1,5 @@
 {
   "name": "tetra-ui",
-  "version": "1.4.3",
   "main": "dist/",
   "ignore": [
     "**/.*",
