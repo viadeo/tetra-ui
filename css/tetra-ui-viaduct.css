@@ -4508,6 +4508,47 @@ a:focus .avatar img {
   box-shadow: none;
 }
 
+.btn-pagination {
+  padding: 6px 13px 6px 13px;
+  font-size: 15px;
+  color: #404040;
+  background: transparent;
+}
+
+.btn-pagination .vicon {
+  color: #404040;
+}
+
+.btn-pagination .vicon.btn-icon-after,
+.btn-pagination .vicon.btn-icon-before {
+  position: relative;
+  top: -1px;
+}
+
+.btn-pagination .vicon.btn-icon-after {
+  margin: 0 -10px 0 5px;
+}
+
+.btn-pagination .vicon.btn-icon-before {
+  margin: 0 5px 0 -10px;
+}
+
+.btn-pagination:hover,
+.btn-pagination:focus {
+  color: #ffffff;
+  background: #3397e9;
+  box-shadow: none;
+}
+
+.btn-pagination:hover .vicon,
+.btn-pagination:focus .vicon {
+  color: #ffffff;
+}
+
+.btn-pagination:active {
+  background: #007de3;
+}
+
 .dd {
   position: relative;
   display: inline-block;
@@ -5380,117 +5421,63 @@ a:focus .avatar img {
 
 .paginator li a {
   display: inline-block;
-  min-width: 26px;
-  padding: 5px 0;
-  font-size: 11px;
-  font-weight: bold;
+  min-width: 29px;
+  padding: 6px 0;
+  font-size: 15px;
   color: #404040;
   text-align: center;
   text-decoration: none;
-  background: #ffffff;
-  border: 1px solid #e1e8ee;
+  vertical-align: top;
+  background: transparent;
   border-radius: 3px;
 }
 
-.paginator li.arrow a {
-  background-color: #ebebeb;
-  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ebebeb));
-  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
-  *filter: none;
+.paginator li a:hover,
+.paginator li a:focus {
+  color: #ffffff;
+  background: #3397e9;
 }
 
-.paginator li.arrow a:hover,
-.paginator li.arrow a:focus {
-  background-color: #d5d5d5;
-  background-image: -moz-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e8e8), color-stop(100%, #d5d5d5));
-  background-image: -webkit-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: -o-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: linear-gradient(to bottom, #e8e8e8, #d5d5d5);
-  background-repeat: repeat-x;
-  border-color: #d5d5d5;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#d5d5d5', GradientType=0);
-  *filter: none;
+.paginator li a:hover .vicon,
+.paginator li a:focus .vicon {
+  color: #ffffff;
 }
 
-.paginator li.arrow a:hover .vicon,
-.paginator li.arrow a:focus .vicon {
-  color: #000000;
+.paginator li a:active {
+  background: #007de3;
+}
+
+.paginator li a.btn-pagination {
+  padding: 6px 13px 6px 13px;
 }
 
 .paginator li.arrow .vicon {
-  margin-right: 0;
-  font-size: 7px;
-  color: #808080;
+  position: relative;
+  top: -1px;
+  font-size: 9px;
 }
 
-.paginator li.arrow.disabled a {
+.paginator li.disabled a {
   cursor: default;
-  background-color: #ebebeb;
-  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ebebeb));
-  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
-  background-repeat: repeat-x;
-  border-color: #e1e8ee;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
-  *filter: none;
+  background: transparent;
 }
 
-.paginator li.arrow.disabled a .vicon {
+.paginator li.disabled a .vicon {
+  color: #bfbfbf;
+}
+
+.paginator li.disabled a.btn-pagination {
   color: #bfbfbf;
 }
 
 .paginator li.ellipsis span {
   margin: 0 5px;
-  color: #bfbfbf;
 }
 
 .paginator li.active a {
-  background-color: #e1e8ee;
-  background-image: -moz-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f5f8), color-stop(100%, #e1e8ee));
-  background-image: -webkit-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: -o-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: linear-gradient(to bottom, #f2f5f8, #e1e8ee);
-  background-repeat: repeat-x;
-  border-color: #d1dce5;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f8', endColorstr='#e1e8ee', GradientType=0);
-  *filter: none;
-}
-
-.paginator li.active .vicon {
-  color: #000000;
-}
-
-.paginator li.active a {
+  color: inherit;
   cursor: default;
-}
-
-.paginator li a:hover,
-.paginator li a:focus {
-  background-color: #e1e8ee;
-  background-image: -moz-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f5f8), color-stop(100%, #e1e8ee));
-  background-image: -webkit-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: -o-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: linear-gradient(to bottom, #f2f5f8, #e1e8ee);
-  background-repeat: repeat-x;
-  border-color: #d1dce5;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f8', endColorstr='#e1e8ee', GradientType=0);
-  *filter: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.paginator li a:hover .vicon,
-.paginator li a:focus .vicon {
-  color: #000000;
+  background: #bfbfbf;
 }
 
 .paginator-multi li {
@@ -5538,22 +5525,12 @@ a:focus .avatar img {
 .paginator-multi .multi .paginator-btn {
   padding-right: 5px;
   padding-left: 10px;
-  background-color: #ebebeb;
-  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ebebeb));
-  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
-  *filter: none;
 }
 
 .paginator-multi .multi .paginator-btn .vicon {
   margin-right: 0;
   margin-left: -2px;
   font-size: 7px;
-  color: #808080;
 }
 
 .paginator-multi .multi ul {
@@ -5584,15 +5561,7 @@ a:focus .avatar img {
 .paginator-multi .multi ul li a.active,
 .paginator-multi .multi ul li a:hover,
 .paginator-multi .multi ul li a:focus {
-  background-color: #e1e8ee;
-  background-image: -moz-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f5f8), color-stop(100%, #e1e8ee));
-  background-image: -webkit-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: -o-linear-gradient(top, #f2f5f8, #e1e8ee);
-  background-image: linear-gradient(to bottom, #f2f5f8, #e1e8ee);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f8', endColorstr='#e1e8ee', GradientType=0);
-  *filter: none;
+  background: #3397e9;
 }
 
 .paginator-multi .multi ul li a.active {
