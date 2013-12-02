@@ -25,6 +25,8 @@
     "tmpl": true,
     "History": true,
     "lang": true,
-    "google": true
+    "google": true,
+    "require": true,
+    "__dirname": true
   }
 }
