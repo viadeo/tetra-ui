@@ -25,7 +25,7 @@
     box-shadow: 1px 1px 5px fade(@black, 30%);
     opacity: 0;
 
-    .transition(margin .3s, opacity .3s);
+    .transition(~"margin .3s, opacity .3s");
 
     &:after {
       .arrow (@rtl) when (@rtl = false) {
