@@ -1,0 +1,183 @@
+.tooltip {
+	position: relative;
+
+	&:hover,
+  &:focus {
+    .tooltip-content {
+  		visibility: visible;
+  		margin-bottom: 7px;
+  		opacity: 1;
+
+  		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
+  	}
+  }
+}
+
+.tooltip-content {
+  position: absolute;
+  visibility: hidden;
+  @include left($rtl, 0);
+  bottom: 100%;
+  z-index: 998;
+
+  min-width: 44px;
+  margin: 0 0 -7px 0;
+  padding: 2px 5px;
+
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+
+	@include gradient-vertical(lighten($black, 25%), lighten($black, 10%));
+
+	opacity: 0;
+
+	color: $white !important; // Avoid some context inherit problems
+	font: 11px 'Arial', sans-serif;
+  line-height: 1.6em;
+
+	text-align: center;
+	text-decoration: none;
+  text-shadow: none;
+	white-space: nowrap;
+
+	pointer-events: none;
+
+  -webkit-transition: opacity .3s, margin .3s;
+	-moz-transition: opacity .3s, margin .3s;
+  transition: opacity .3s, margin .3s;
+
+	&:after {
+	  content: '';
+	  position: absolute;
+    @include left($rtl, 10px);
+    bottom: -6px;
+	  width: 0;
+	  height: 0;
+		border-color: lighten($black, 10%) transparent transparent;
+		border-style: solid;
+		border-width: 7px 7px 0;
+	}
+}
+
+// On right
+
+.tooltip.tooltip-top-right {
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      @include margin-left($rtl, 7px);
+      *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+    }
+  }
+}
+
+.tooltip-top-right .tooltip-content {
+  @include left($rtl, auto);
+  @include right($rtl, 0);
+
+  &:after {
+    @include left($rtl, auto);
+    @include right($rtl, 5px);
+  }
+}
+
+// On right
+
+.tooltip.tooltip-right {
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      @include margin-left($rtl, 7px);
+      *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
+    }
+  }
+}
+
+.tooltip-right .tooltip-content {
+  top: 3px;
+  bottom: auto;
+  @include left($rtl, 100%);
+  margin: -7px 0 0 0;
+  @include margin-left($rtl, -7px);
+
+  &:after {
+    @if $rtl == false {
+      @mixin border($rtl){
+      border-color: transparent lighten($black, 17%) transparent transparent;
+      border-width: 5px 5px 5px 0;
+    }}
+    @if $rtl == true {
+      @mixin border($rtl){
+      border-color: transparent transparent transparent lighten($black, 17%);
+      border-width: 5px 0 5px 5px;
+    }}
+    @include border($rtl);
+    @include left($rtl, -5px);
+    bottom: auto;
+    top: 6px;
+  }
+}
+
+// On left
+
+.tooltip.tooltip-left {
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      @include margin-right($rtl, 7px);
+      *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
+    }
+  }
+}
+
+.tooltip-left .tooltip-content {
+  top: 3px;
+  bottom: auto;
+  @include right($rtl, 100%);
+  @include left($rtl, auto);
+  margin: -7px 0 0 0;
+  @include margin-right($rtl, -7px);
+
+  &:after {
+    @if $rtl == false {
+      @mixin border($rtl){
+      border-color: transparent transparent transparent lighten($black, 17%);
+      border-width: 5px 0 5px 5px;
+    }}
+    @if $rtl == true {
+      @mixin border($rtl){
+      border-color: transparent lighten($black, 17%) transparent transparent;
+      border-width: 5px 5px 5px 0;
+    }}
+    @include border($rtl);
+    @include right($rtl, -5px);
+    @include left($rtl, auto);
+    bottom: auto;
+    top: 6px;
+  }
+}
+
+// On bottom
+
+.tooltip.tooltip-bottom {
+  &:hover,
+  &:focus {
+    .tooltip-content {
+      margin-top: 7px;
+      *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
+    }
+  }
+}
+
+.tooltip-bottom .tooltip-content {
+  top: 100%;
+  bottom: auto;
+  margin: -7px 0 0 0;
+
+  &:after {
+    border-color: transparent transparent lighten($black, 25%);
+    border-width: 0 7px 7px;
+    top: -7px;
+    bottom: auto;
+  }
+}

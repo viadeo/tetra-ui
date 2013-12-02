@@ -1,0 +1,192 @@
+.popin-overlay {
+  position: fixed;
+  z-index: 4000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  @include opacity(60);
+
+  background: $black;
+  background: -webkit-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:    -moz-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:      -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  background:         radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+
+  -webkit-animation: popin-overlay-fadein 0.5s;
+  animation: popin-overlay-fadein 0.5s;
+}
+
+.popin-container {
+  position: fixed;
+  z-index: 4001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  .popin-loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("#{$img-loaders-dir}/ajax-loader.gif") no-repeat 50% 35%;
+  }
+
+  > .gr {
+    width: $pageWidth;
+    max-width: $pageWidthMax;
+    margin: 0 auto;
+  }
+
+  .popin {
+    margin: 125px auto 0;
+    border-radius: $borderRadiusM;
+    box-shadow: 0 0 12px rgba($black, (25/100));
+
+    -webkit-animation: popin-fadein 0.15s;
+    animation: popin-fadein 0.15s;
+
+    .popin-header {
+      position: relative;
+      padding: 17px 28px;
+      @include padding-right($rtl, 60px);
+      min-height: 1.3em;
+      background: lighten($black, 20%);
+      color: $white;
+      border-radius: $borderRadiusM $borderRadiusM 0 0;
+      @include clearfixHack();
+
+      h1, h2, h3, h4, h5, h6 {
+        color: $white;
+        margin: 0;
+        padding: 0;
+      }
+
+      .close {
+        position: absolute;
+        top: 0; bottom: 0;
+        @include right($rtl, 0);
+        padding: 0 12px;
+        line-height: 4.4em;
+        background: lighten($black, 15%);
+        color: lighten($black, 60%);
+        text-decoration: none;
+        @include border-top-right-radius($rtl, $borderRadiusM);
+
+        span {
+          display: inline-block;
+          width: 0;
+          max-width: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          @include transition(max-width 0.3s);
+        }
+
+        .vicon {
+          @include margin-right($rtl, -0.2em);
+          color: lighten($black, 60%);
+          vertical-align: top;
+        }
+
+        &:hover {
+          background: $black;
+
+          span {
+            width: auto;
+            max-width: 10em;
+          }
+        }
+      }
+    }
+
+    .popin-body {
+      padding: $spacingL 28px;
+      background: $pageBg;
+
+      &:last-child {
+        border-radius: 0 0 $borderRadiusM $borderRadiusM;
+      }
+    }
+
+    .popin-footer {
+      @include clearfixHack();
+      padding: 18px 28px;
+      background: $white;
+      border-radius: 0 0 $borderRadiusM $borderRadiusM;
+    }
+
+    &.popin-close-animation {
+      -webkit-animation: popin-fadeout 0.3s;
+      animation: popin-fadeout 0.3s;
+    }
+  }
+
+  .popin-edit {
+    .popin-header {
+      background: $blue2;
+
+      .close {
+        background: darken($blue2, 10%);
+        color: lighten($blue2, 80%);
+
+        .vicon {
+          color: lighten($blue2, 80%);
+        }
+
+        &:hover {
+          background: darken($blue2, 20%);
+        }
+      }
+    }
+  }
+}
+
+// Animations
+
+@mixin popin-overlay-fadein(){
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@-webkit-keyframes popin-overlay-fadein { @extend .popin-overlay-fadein; }
+@keyframes popin-overlay-fadein { @extend .popin-overlay-fadein; }
+
+@mixin popin-fadein(){
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes popin-fadein { @extend .popin-fadein; }
+@keyframes popin-fadein { @extend .popin-fadein; }
+
+@mixin popin-fadeout(){
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+}
+
+@-webkit-keyframes popin-fadeout { @extend .popin-fadeout; }
+@keyframes popin-fadeout { @extend .popin-fadeout; }

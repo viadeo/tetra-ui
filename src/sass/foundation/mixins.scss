@@ -1,0 +1,453 @@
+// Mixins
+// Snippets of reusable CSS to develop faster and keep code readable
+
+// Clearfix for clearing floats like a boss h5bp.com/q -> No presentational code needed :)
+@mixin clearfixHack(){
+    zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        zoom: 1;
+        *display: inline;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Fonts
+#font {
+    @mixin sansSerif($weight: normal, $size: $baseFontSize, $color: $baseFontColor, $lineHeight: $baseLineHeight){
+       font-family: Arial, sans-serif;
+       font-size: $size;
+       font-weight: $weight;
+       line-height: $lineHeight;
+    }
+    @mixin code($weight: normal, $size: $baseFontSize, $color: $baseFontColor, $lineHeight: $baseLineHeight){
+        font-family: Monaco, Andale Mono, Courier New, monospace;
+        font-size: $size;
+        font-weight: $weight;
+        line-height: $lineHeight;
+    }
+    @mixin helveticaBold(){
+        font-family: "Helvetica", "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+        font-weight: bold;
+    }
+}
+// For sass convertion
+@mixin font-sansSerif($weight: normal, $size: $baseFontSize, $color: $baseFontColor, $lineHeight: $baseLineHeight){
+   font-family: Arial, sans-serif;
+   font-size: $size;
+   font-weight: $weight;
+   line-height: $lineHeight;
+}
+@mixin font-code($weight: normal, $size: $baseFontSize, $color: $baseFontColor, $lineHeight: $baseLineHeight){
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+@mixin font-helveticaBold(){
+    font-family: "Helvetica", "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+
+// Border Radius
+@mixin border-radius($values){
+	border-radius: $values;
+}
+@mixin border-radius-topleft($size){
+    border-top-left-radius: $size;
+}
+@mixin border-radius-topright($size){
+    border-top-right-radius: $size;
+}
+@mixin border-radius-bottomright($size){
+    border-bottom-right-radius: $size;
+}
+@mixin border-radius-bottomleft($size){
+    border-bottom-left-radius: $size;
+}
+@mixin border-radius-top($size){
+    @include border-radius-topleft($size);
+    @include border-radius-topright($size);
+}
+@mixin border-radius-right($size){
+    @include border-radius-topright($size);
+    @include border-radius-bottomright($size);
+}
+@if $rtl == false {
+    @mixin border-radius-right($rtl, $size){
+    @include border-radius-topright($size);
+    @include border-radius-bottomright($size);
+}}
+@if $rtl == true {
+    @mixin border-radius-right($rtl, $size){
+    @include border-radius-topleft($size);
+    @include border-radius-bottomleft($size);
+}}
+@mixin border-radius-bottom($size){
+    @include border-radius-bottomright($size);
+    @include border-radius-bottomleft($size);
+}
+@mixin border-radius-left($size){
+    @include border-radius-topleft($size);
+    @include border-radius-bottomleft($size);
+}
+@if $rtl == false {
+    @mixin border-radius-left($rtl, $size){
+    @include border-radius-topleft($size);
+    @include border-radius-bottomleft($size);
+}}
+@if $rtl == true {
+    @mixin border-radius-left($rtl, $size){
+    @include border-radius-topright($size);
+    @include border-radius-bottomright($size);
+}}
+
+// Disable text selection
+@mixin user-select($value){
+    -webkit-user-select: $value;
+    -khtml-user-select: $value;
+    -moz-user-select: $value;
+    -o-user-select: $value;
+    user-select: $value;
+}
+
+// Transitions
+@mixin transition($transition){
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+    // IE 10 supports the unprefixed form
+}
+
+// Box shadows
+@mixin box-shadow($values: 0 0 2px $gray){
+    -webkit-box-shadow: $values;
+    box-shadow: $values;
+}
+
+// Opacity
+@mixin opacity($opacity: 100){
+    opacity: $opacity / 100;
+    filter: unquote("alpha(opacity=#{$opacity})");
+}
+
+
+// Gradient Bar Colors for buttons and allerts
+@mixin gradientBar($primaryColor, $secondaryColor){
+  @include gradient-vertical($primaryColor, $secondaryColor);
+}
+
+// Gradients
+#gradient {
+  @mixin horizontal($startColor: #555, $endColor: #333){
+    background-color: $endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+    background-image: linear-gradient(to right, $startColor, $endColor); // // IE 10 supports the unprefixed form
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=1); // IE9 and down
+    *filter: none;
+  }
+  @mixin vertical($startColor: #555, $endColor: #333){
+    background-color: $endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+    background-image: linear-gradient(to bottom, $startColor, $endColor); // IE 10 supports the unprefixed form
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+    *filter: none;
+  }
+  @mixin directional($startColor: #555, $endColor: #333, $deg: 45deg){
+    background-color: $endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
+    background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
+    background-image: linear-gradient($deg, $startColor, $endColor); // IE 10 supports the unprefixed form
+  }
+  @mixin vertical-three-colors($startColor: #00b3ee, $midColor: #7a43b6, $colorStop: 50%, $endColor: #c3325f){
+    background-color: $endColor;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), color-stop($colorStop, $midColor), to($endColor));
+    background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+    background-image: -moz-linear-gradient(top, $startColor, $midColor $colorStop, $endColor);
+    background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
+    background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+    *filter: none;
+  }
+}
+// For sass convertion
+@mixin gradient-horizontal($startColor: #555, $endColor: #333){
+  background-color: $endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to right, $startColor, $endColor); // // IE 10 supports the unprefixed form
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=1); // IE9 and down
+  *filter: none;
+}
+@mixin gradient-vertical($startColor: #555, $endColor: #333){
+  background-color: $endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // IE 10 supports the unprefixed form
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+  *filter: none;
+}
+@mixin gradient-directional($startColor: #555, $endColor: #333, $deg: 45deg){
+  background-color: $endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient($deg, $startColor, $endColor); // IE 10 supports the unprefixed form
+}
+@mixin gradient-vertical-three-colors($startColor: #00b3ee, $midColor: #7a43b6, $colorStop: 50%, $endColor: #c3325f){
+  background-color: $endColor;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), color-stop($colorStop, $midColor), to($endColor));
+  background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -moz-linear-gradient(top, $startColor, $midColor $colorStop, $endColor);
+  background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+  *filter: none;
+}
+
+// Background clipping
+@mixin background-clip($clip){
+    -webkit-background-clip: $clip;
+       -moz-background-clip: $clip;
+            background-clip: $clip;
+}
+
+// Fix text inherit
+@mixin text-inherit(){
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+	line-height: inherit;
+}
+
+// Hyphenation
+@mixin hyphens(){
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+
+// Arrows
+@mixin arrow($position: top, $size : 10px, $color :  black,  $borderWidth: 0, $borderColor : transparent){
+  position: relative;
+
+  @if $position == top { @mixin border($position, $color){ border-bottom-color: $color }}
+  @if $position == right { @mixin border($position, $color){ border-left-color: $color }}
+  @if $position == bottom { @mixin border($position, $color){ border-top-color: $color }}
+  @if $position == left { @mixin border($position, $color){ border-right-color: $color; }}
+
+  @if $position == top { @mixin position($position, $size){ bottom: 100%; margin-left: $size; left: 50%;  }}
+  @if $position == right { @mixin position($position, $size){ left: 100%; margin-top: $size; top: 50%; }}
+  @if $position == bottom { @mixin position($position, $size){ left: 50%; margin-left: $size; top: 100%; }}
+  @if $position == left { @mixin position($position, $size){ margin-top: $size; right: 100%; top: 50%;  }}
+
+  &:after, &:before {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    @include border($position, $color);
+    border-width: $size;
+    @include position($position, $size * -1);
+  }
+
+  &:before {
+    $outerSize: round($borderWidth * 1.41421356);
+    @include border($position, $borderColor);
+    border-width: $size + $outerSize;
+    @include position($position, (-1 * ($size + $outerSize)));
+  }
+}
+
+@mixin inner-arrow($position: top, $size: 10px, $color:  black,  $borderWidth: 0, $borderColor: transparent){
+  position: relative;
+
+  @if $position == top { @mixin border($position, $color){ border-top-color: $color }}
+  @if $position == right { @mixin border($position, $color){ border-right-color: $color }}
+  @if $position == bottom { @mixin border($position, $color){ border-bottom-color: $color }}
+  @if $position == left { @mixin border($position, $color){ border-left-color: $color }}
+
+  @if $position == top { @mixin position($position, $size){ top: 0; margin-left: $size; left: 50%; }}
+  @if $position == right { @mixin position($position, $size){ right: 0; margin-top: $size; top: 50%; }}
+  @if $position == bottom { @mixin position($position, $size){ left: 50%; margin-left: $size; bottom: 0; }}
+  @if $position == left { @mixin position($position, $size){ left: 0; margin-top: $size; top: 50%; }}
+
+  &:after, &:before {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    margin: ($borderWidth * -1);
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+
+  &:after {
+    @include border($position, $color);
+    border-width: $size;
+    @include position($position, ($size * -1));
+  }
+
+  &:before {
+    $outerSize: round($borderWidth * 1.41421356);
+    @include border($position, $borderColor);
+    border-width: ($size + $outerSize);
+    @include position($position, (-1 * ($size + $outerSize)));
+  }
+}
+
+// Deprecated !
+#arrow {
+  @mixin down($size, $color){
+     display: block;
+     width: 0;
+     height: 0;
+     position: absolute;
+     border-width: $size $size 0 $size;
+     border-color: $color transparent transparent transparent;
+     border-style: solid;
+  }
+}
+// For sass convertion
+@mixin arrow-down($size, $color){
+   display: block;
+   width: 0;
+   height: 0;
+   position: absolute;
+   border-width: $size $size 0 $size;
+   border-color: $color transparent transparent transparent;
+   border-style: solid;
+}
+
+// IE7 inline-block
+@mixin ie7-inline-block(){
+  *display: inline; // IE7 inline-block hack
+  *zoom: 1;
+}
+
+// FORMS
+
+// Misc. use by forms
+#font {
+  @mixin shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight){
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+  }
+}
+// For sass convertion
+@mixin font-shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight){
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+
+// Box sizing
+@mixin box-sizing($boxmodel){
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+      -ms-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+// Webkit-style focus
+@mixin tab-focus(){
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Placeholder text
+@mixin placeholder($color: $placeholderText){
+  :-moz-placeholder {
+    color: $color;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+// Right To Left mixins
+
+@if $rtl == false { @mixin float-left($rtl){ float: left; }}
+@if $rtl == true { @mixin float-left($rtl){ float: right; }}
+
+@if $rtl == false { @mixin float-right($rtl){ float: right; }}
+@if $rtl == true { @mixin float-right($rtl){ float: left; }}
+
+@if $rtl == false { @mixin margin($rtl, $top, $right, $bottom, $left){ margin: $top $right $bottom $left; }}
+@if $rtl == true { @mixin margin($rtl, $top, $right, $bottom, $left){ margin: $top $left $bottom $right; }}
+
+@if $rtl == false { @mixin padding($rtl, $top, $right, $bottom, $left){ padding: $top $right $bottom $left; }}
+@if $rtl == true { @mixin padding($rtl, $top, $right, $bottom, $left){ padding: $top $left $bottom $right; }}
+
+@if $rtl == false { @mixin margin-left($rtl, $value){ margin-left: $value }}
+@if $rtl == true { @mixin margin-left($rtl, $value){ margin-right: $value }}
+
+@if $rtl == false { @mixin margin-right($rtl, $value){ margin-right: $value }}
+@if $rtl == true { @mixin margin-right($rtl, $value){ margin-left: $value }}
+
+@if $rtl == false { @mixin padding-left($rtl, $value){ padding-left: $value }}
+@if $rtl == true { @mixin padding-left($rtl, $value){ padding-right: $value }}
+
+@if $rtl == false { @mixin padding-right($rtl, $value){ padding-right: $value }}
+@if $rtl == true { @mixin padding-right($rtl, $value){ padding-left: $value }}
+
+@if $rtl == false { @mixin text-align-left($rtl){ text-align: left; }}
+@if $rtl == true { @mixin text-align-left($rtl){ text-align: right; }}
+
+@if $rtl == false { @mixin text-align-right($rtl){ text-align: right; }}
+@if $rtl == true { @mixin text-align-right($rtl){ text-align: left; }}
+
+@if $rtl == false { @mixin border-left($rtl, $value){ border-left: $value; }}
+@if $rtl == true { @mixin border-left($rtl, $value){ border-right: $value; }}
+
+@if $rtl == false { @mixin border-right($rtl, $value){ border-right: $value; }}
+@if $rtl == true { @mixin border-right($rtl, $value){ border-left: $value; }}
+
+@if $rtl == false { @mixin left($rtl, $value){ left: $value; }}
+@if $rtl == true { @mixin left($rtl, $value){ right: $value; }}
+
+@if $rtl == false { @mixin right($rtl, $value){ right: $value; }}
+@if $rtl == true { @mixin right($rtl, $value){ left: $value; }}
+
+@if $rtl == false { @mixin border-top-right-radius($rtl, $value){ border-top-right-radius: $value; }}
+@if $rtl == true { @mixin border-top-right-radius($rtl, $value){ border-top-left-radius: $value; }}
+
+@if $rtl == false { @mixin border-top-left-radius($rtl, $value){ border-top-left-radius: $value; }}
+@if $rtl == true { @mixin border-top-left-radius($rtl, $value){ border-top-right-radius: $value; }}

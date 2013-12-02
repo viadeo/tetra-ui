@@ -1,0 +1,153 @@
+.field-helper {
+  position: relative;
+  display: inline-block;
+
+  .error-inline {
+    @if $rtl == false {
+      @mixin position($rtl){
+      right: 100%;
+    }}
+    @if $rtl == true {
+      @mixin position($rtl){
+      left: 100%;
+    }}
+
+    visibility: hidden;
+    position: absolute;
+    top: ($spacingXs/-2);
+    @include position($rtl);
+    padding: ($spacingXs/2) $spacingM;
+    margin: 0;
+    z-index: 2;
+    line-height: 2.3em;
+    white-space: nowrap;
+    background: $errorText;
+    color: $white;
+    border-radius: $borderRadiusS;
+    box-shadow: 1px 1px 5px rgba($black, (30/100));
+    opacity: 0;
+
+    @include transition(unquote("margin .3s, opacity .3s"));
+
+    &:after {
+      @if $rtl == false {
+        @mixin arrow($rtl){
+        right: 0;
+        border-left: 8px solid $errorText;
+      }}
+      @if $rtl == true {
+        @mixin arrow($rtl){
+        left: 0;
+        border-right: 8px solid $errorText;
+      }}
+
+      content: "";
+      position: absolute;
+      top: 50%;
+      @include arrow($rtl);
+      margin-top: -6px;
+      @include margin-right($rtl, -8px);
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
+
+    .error & {
+      visibility: visible;
+      opacity: 1;
+      @include margin-right($rtl, $spacingM);
+    }
+  }
+}
+
+.field-helper-right {
+  .error-inline {
+    @if $rtl == false {
+      @mixin position($rtl){
+      left: 100%; right: auto;
+    }}
+    @if $rtl == true {
+      @mixin position($rtl){
+      right: 100%; left: auto;
+    }}
+
+    @include position($rtl);
+
+    &:after {
+      @if $rtl == false {
+        @mixin arrow($rtl){
+        left: 0; right: auto;
+        border-right: 8px solid $errorText;
+        border-left: 0;
+      }}
+      @if $rtl == true {
+        @mixin arrow($rtl){
+        right: 0; left: auto;
+        border-left: 8px solid $errorText;
+        border-right: 0;
+      }}
+
+      @include arrow($rtl);
+      @include margin-left($rtl, -8px);
+    }
+
+    .error & {
+      @include margin-left($rtl, $spacingM);
+    }
+  }
+}
+
+.field-helper-bottom, .field-helper-flow {
+  .error-inline {
+    &:after {
+      @if $rtl == false {
+        @mixin position($rtl){
+        left: 0; right: auto;
+      }}
+      @if $rtl == true {
+        @mixin position($rtl){
+        right: 0; left: auto;
+      }}
+
+      top: 0;
+      margin-top: -14px;
+      @include margin-left($rtl, $spacingM);
+      @include position($rtl);
+      border-bottom: 8px solid $errorText;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+
+    .error & {
+      margin: 0;
+    }
+  }
+}
+
+.field-helper-bottom {
+  .error-inline {
+    @if $rtl == false {
+      @mixin position($rtl){
+      left: 0; right: auto;
+    }}
+    @if $rtl == true {
+      @mixin position($rtl){
+      left: auto; right: 0;
+    }}
+
+    top: 100%;
+    @include position($rtl);
+  }
+}
+
+.field-helper-flow {
+  .error-inline {
+    position: relative;
+    left: 0; right: auto; top: 0;
+    display: none;
+
+    .error & {
+      display: block;
+      margin-right: 0;
+    }
+  }
+}

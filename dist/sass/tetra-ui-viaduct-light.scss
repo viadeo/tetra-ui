@@ -3260,7 +3260,7 @@ table.table .header:hover:after {
 table.table .headerSortDown:after,
 table.table .headerSortDown:hover:after {
   opacity: 0.6;
-  filter: #{"alpha(opacity=60)"};
+  filter: unquote('alpha(opacity=60)');
   visibility: visible;
 }
 
@@ -3270,7 +3270,7 @@ table.table .headerSortUp:after {
   border-bottom: none;
   border-left: 4px solid transparent;
   opacity: 0.6;
-  filter: #{"alpha(opacity=60)"};
+  filter: unquote('alpha(opacity=60)');
   visibility: visible;
 }
 
@@ -4890,7 +4890,7 @@ a:focus .avatar img {
   background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   opacity: 0.6;
-  filter: #{"alpha(opacity=60)"};
+  filter: unquote('alpha(opacity=60)');
   -webkit-animation: popin-overlay-fadein 0.5s;
           animation: popin-overlay-fadein 0.5s;
 }
@@ -5819,7 +5819,7 @@ a:focus .avatar img {
 .placeholding textarea {
   position: relative;
   z-index: 2;
-  background: transparent url("/images/sprites/global-sprite2.png") no-repeat 0 110%;
+  background: transparent;
 }
 
 .placeholding .placeholder {

@@ -1,0 +1,96 @@
+// Card Rich Container
+
+.rc-card {
+	min-height: 145px;
+	border: 2px solid lighten($blueSoft, 80%);
+	border-radius: $borderRadiusM;
+	background: $white;
+	box-shadow: 0 2px 5px rgba($black, (30/100));
+	@include transition(border-color 0.2s);
+
+	&:hover {
+		border-color: lighten($blueSoft, 50%);
+	}
+
+	.rc-card-header {
+		padding: $spacingS;
+
+		.name {
+			margin: 0 0 $spacingXs 0;
+			font-family: "Arial", sans-serif;
+			font-weight: bold;
+
+			.vicon {
+				color: $buttonPrimaryEndColor;
+			}
+		}
+	}
+
+	.rc-card-content {
+		padding: $spacingS;
+		border-top: 1px dotted lighten($blueSoft, 60%);
+		background: lighten($blueSoft, 93%);
+		background-clip: padding-box;
+	}
+
+	.rc-card-footer {
+		padding: $spacingS;
+		border-top: 1px dotted lighten($blueSoft, 60%);
+		@include clearfixHack();
+	}
+
+	.job {
+		margin: 0 0 $spacingXs 0;
+		font-family: "Arial", sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+	}
+
+	.where {
+		font-family: "Arial", sans-serif;
+		margin: 0 0 $spacingXs 0;
+		font-size: $baseFontSize;
+		font-weight: normal;
+		color: $gray;
+	}
+
+	.previously {
+		dt {
+			clear: left;
+			float: left;
+			color: $grayDark;
+			margin-right: 0.5em;
+		}
+	}
+}
+
+.rc-card-l {
+	.rc-card-header {
+		.name {
+			margin-top: $spacingS;
+			@include padding-left($rtl, 120px);
+		}
+	}
+
+	.rc-card-content {
+		.avatar {
+			margin-top: -15%;
+			margin-bottom: ((-1 * $spacingS) - 1);
+		}
+	}
+}
+
+.rc-card-m {
+	.rc-card-header {
+		.name {
+			font-size: 14px;
+		}
+		.job {
+			font-size: 12px;
+		}
+	}
+
+	.rc-card-content {
+		@include padding-left($rtl, 84px);
+	}
+}
