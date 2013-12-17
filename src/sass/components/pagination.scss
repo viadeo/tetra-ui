@@ -17,7 +17,6 @@
       font-size: ($baseFontSize + 3);
       border-radius: $borderRadiusS;
       background: transparent;
-      vertical-align: top;
 
       &:hover,
       &:focus {
@@ -33,6 +32,7 @@
       }
 
       &.btn-pagination {
+        vertical-align: baseline;
         @include padding($rtl, ($spacingXs + 1), 13px, ($spacingXs + 1), 13px);
       }
     }
@@ -63,6 +63,7 @@
     &.ellipsis {
       span {
         margin: 0 $spacingXs;
+        display: inline-block;
       }
     }
 

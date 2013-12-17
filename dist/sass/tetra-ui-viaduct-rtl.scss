@@ -5448,7 +5448,6 @@ a:focus .avatar img {
   color: #404040;
   text-align: center;
   text-decoration: none;
-  vertical-align: top;
   background: transparent;
   border-radius: 3px;
 }
@@ -5470,6 +5469,7 @@ a:focus .avatar img {
 
 .paginator li a.btn-pagination {
   padding: 6px 13px 6px 13px;
+  vertical-align: baseline;
 }
 
 .paginator li.arrow .vicon {
@@ -5492,6 +5492,7 @@ a:focus .avatar img {
 }
 
 .paginator li.ellipsis span {
+  display: inline-block;
   margin: 0 5px;
 }
 
