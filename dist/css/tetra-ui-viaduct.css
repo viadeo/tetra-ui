@@ -6209,6 +6209,159 @@ a:focus .avatar img {
   margin-right: 0;
 }
 
+.nav-steps {
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-steps dt .vicon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  padding-right: 1em;
+  margin-right: 1em;
+  font-size: 16px;
+  line-height: 2em;
+  color: #7690a7;
+  vertical-align: middle;
+  border-right: 1px solid #f2f2f2;
+}
+
+.nav-steps .nav-steps-title {
+  display: inline-block;
+  *display: inline;
+  width: 70%;
+  margin: 0;
+  font-size: 15px;
+  vertical-align: middle;
+  *zoom: 1;
+}
+
+.nav-steps .nav-steps-title small {
+  display: block;
+  margin: 0 0 1px 0;
+  font-family: "Arial", sans-serif;
+  font-size: 13px;
+  color: #999999;
+}
+
+.nav-steps dt,
+.nav-steps li {
+  position: relative;
+  padding: 15px 0 15px;
+  padding-right: 0;
+  padding-left: 15px;
+}
+
+.nav-steps dt:before,
+.nav-steps li:before,
+.nav-steps dt:after,
+.nav-steps li:after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 0;
+  height: 0;
+  margin: -50px 0 0 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  content: "";
+}
+
+.nav-steps dt:before,
+.nav-steps li:before {
+  z-index: 9;
+  margin-left: 2px;
+  border-left: 23px solid #e6e6e6;
+  -webkit-filter: blur(2px);
+}
+
+.nav-steps dt:after,
+.nav-steps li:after {
+  z-index: 10;
+  border-left: 20px solid #ffffff;
+}
+
+.nav-steps dd.gu-1of1 li:first-child {
+  padding-left: 0;
+}
+
+.nav-steps .nav-steps-item {
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: 4%;
+  margin-left: 8%;
+  font-family: "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 1.6em;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  background: #f56600;
+  border-radius: 50%;
+  box-shadow: 0 0.75em 1em rgba(255, 255, 255, 0.4) inset, 0 0 0 3px #ecf1f5;
+}
+
+.nav-steps .nav-steps-item .vicon {
+  position: relative;
+  top: -3px;
+  margin: 0;
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.nav-steps li {
+  font-family: "MuseoSlab", "Arial", sans-serif;
+  font-size: 15px;
+  color: #4d4d4d;
+}
+
+.nav-steps li.nav-steps-todo {
+  color: #cccccc;
+  background: #f2f2f2;
+}
+
+.nav-steps li.nav-steps-todo:after {
+  border-left: 20px solid #f2f2f2;
+}
+
+.nav-steps li.nav-steps-todo .nav-steps-item {
+  color: #d9d9d9;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  background: #fafafa;
+  box-shadow: 0 0.75em 1em rgba(255, 255, 255, 0.7) inset, 0 0 0 3px #e6e6e6;
+}
+
+.nav-steps li.nav-steps-done .nav-steps-item {
+  background: #83a0b9;
+}
+
+.nav-steps li.gu-last:before,
+.nav-steps li.gu-last:after {
+  display: none;
+}
+
+.nav-steps li a {
+  display: block;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+.nav-steps li a:hover .nav-steps-text,
+.nav-steps li a:focus .nav-steps-text {
+  text-decoration: underline;
+}
+
+.nav-steps li .nav-steps-text {
+  display: inline-block;
+  width: 65%;
+  vertical-align: middle;
+}
+
 .share-links dt,
 .share-links dd,
 .share-links ul {
