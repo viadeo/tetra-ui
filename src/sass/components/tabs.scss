@@ -183,17 +183,21 @@
 }
 
 .nav-menu {
+	$_black:#333;
 	border-radius: $borderRadiusS;
 	background: $white;
-	box-shadow: 1px 1px 4px rgba($black, (20/100));
+	box-shadow: 1px 1px 2px rgba($black, (20/100));
 
 	li {
 		a {
 			position: relative;
-
+			padding: $spacingM $spacingXl;
+			color: $_black;
+			font-size: 13px;
 			&:hover,
 			&:focus {
-				background: lighten($blueSoft, 85%);
+				background: #f7f7f7;
+				color: $linkColorHover;
 			}
 		}
 
@@ -205,34 +209,8 @@
 
 		&.active {
 			a {
-				color: $black;
-
-				&:before, &:after {
-					content: "";
-					position: absolute;
-					z-index: 5;
-					left: 50%; top: 100%;
-					width: 0; height: 0;
-					border-style: solid;
-				}
-
-				&:before {
-					margin-top: 2px;
-					margin-left: -10px;
-					border-color: lighten($black, 87%) transparent transparent transparent;
-					border-width: 10px 10px 0 10px;
-				}
-
-				&:after {
-					margin-left: -10px;
-					border-color: $white transparent transparent transparent;
-					border-width: 10px 10px 0 10px;
-				}
-
-				&:hover,
-				&:focus {
-					background: none;
-				}
+				background: $_black;
+				color: $white;
 			}
 		}
 	}
