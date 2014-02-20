@@ -1,4 +1,4 @@
-/*! tetra-ui v1.4.7 - 2013 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v1.4.7 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -4978,6 +4978,7 @@ a:focus .avatar img {
 .nav li a {
   display: block;
   padding: 10px 30px;
+  font-size: 13px;
   text-decoration: none;
   -webkit-transition: background-color 0.15s;
      -moz-transition: background-color 0.15s;
@@ -5141,16 +5142,19 @@ a:focus .avatar img {
 .nav-menu {
   background: #ffffff;
   border-radius: 3px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu li a {
   position: relative;
+  padding: 15px 30px;
+  color: #333333;
 }
 
 .nav-menu li a:hover,
 .nav-menu li a:focus {
-  background: #ecf1f5;
+  color: #0071cc;
+  background: #f7f7f7;
 }
 
 .nav-menu li:first-child a {
@@ -5158,37 +5162,8 @@ a:focus .avatar img {
 }
 
 .nav-menu li.active a {
-  color: #000000;
-}
-
-.nav-menu li.active a:before,
-.nav-menu li.active a:after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  z-index: 5;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  content: "";
-}
-
-.nav-menu li.active a:before {
-  margin-top: 2px;
-  margin-left: -10px;
-  border-color: #dedede transparent transparent transparent;
-  border-width: 10px 10px 0 10px;
-}
-
-.nav-menu li.active a:after {
-  margin-left: -10px;
-  border-color: #ffffff transparent transparent transparent;
-  border-width: 10px 10px 0 10px;
-}
-
-.nav-menu li.active a:hover,
-.nav-menu li.active a:focus {
-  background: none;
+  color: #ffffff;
+  background: #333333;
 }
 
 .nav-tabs-section .section {
