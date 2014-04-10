@@ -149,8 +149,7 @@ tetra.controller.register("autocomplete", {
                             havingSuggestion = !0;
                             break;
                         }
-                        if (!havingSuggestion) return me._container.removeClass("active"), _(me._menu).empty(), 
-                        void 0;
+                        if (!havingSuggestion) return me._container.removeClass("active"), void _(me._menu).empty();
                         var suggestions = {};
                         suggestions.data = suggestionsPack.data.completion, suggestions.query = me._input.val(), 
                         me._boldifyTerms && (suggestions = me.methods.suggestions.boldify(suggestions)), 

@@ -46,13 +46,13 @@ tetra.controller.register("api", {
                             if ("undefined" != typeof params.address) geocoder.geocode({
                                 address: params.address
                             }, function(results, status) {
-                                return status !== google.maps.GeocoderStatus.OK ? params.cbk(null) : params.cbk(results[0]);
+                                return params.cbk(status !== google.maps.GeocoderStatus.OK ? null : results[0]);
                             }); else if ("undefined" != typeof params.latLng) {
                                 var latlng = new google.maps.LatLng(params.latLng[0], params.latLng[1]);
                                 geocoder.geocode({
                                     location: latlng
                                 }, function(results, status) {
-                                    return status !== google.maps.GeocoderStatus.OK ? params.cbk(null) : params.cbk(results[1].formatted_address);
+                                    return params.cbk(status !== google.maps.GeocoderStatus.OK ? null : results[1].formatted_address);
                                 });
                             }
                         }
