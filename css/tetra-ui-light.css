@@ -1,4 +1,4 @@
-/*! tetra-ui v1.4.7 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v1.4.8 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -4978,7 +4978,6 @@ a:focus .avatar img {
 .nav li a {
   display: block;
   padding: 10px 30px;
-  font-size: 13px;
   text-decoration: none;
   -webkit-transition: background-color 0.15s;
      -moz-transition: background-color 0.15s;
@@ -5148,6 +5147,7 @@ a:focus .avatar img {
 .nav-menu li a {
   position: relative;
   padding: 15px 30px;
+  font-size: 13px;
   color: #333333;
 }
 

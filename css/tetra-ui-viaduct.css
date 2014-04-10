@@ -1,4 +1,4 @@
-/*! tetra-ui v1.4.7 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v1.4.8 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -4966,7 +4966,6 @@ a:focus .avatar img {
 .nav li a {
   display: block;
   padding: 10px 30px;
-  font-size: 13px;
   text-decoration: none;
   -webkit-transition: background-color 0.15s;
      -moz-transition: background-color 0.15s;
@@ -5136,6 +5135,7 @@ a:focus .avatar img {
 .nav-menu li a {
   position: relative;
   padding: 15px 30px;
+  font-size: 13px;
   color: #333333;
 }
 
@@ -5533,6 +5533,120 @@ a:focus .avatar img {
 
 .core-form label.btn-toggle input {
   display: none;
+}
+
+.flipswitch label {
+  display: inline;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.flipswitch label input {
+  display: none;
+}
+
+.flipswitch .flipswitch-lbl-yes {
+  color: #000000;
+}
+
+.flipswitch .flipswitch-lbl-no {
+  color: #b3b3b3;
+}
+
+.flipswitch .flipswitch-lbl-no:hover {
+  color: #000000;
+}
+
+.flipswitch .flipswitch-sliders {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 24px;
+  margin: 0 5px;
+  vertical-align: middle;
+  cursor: default;
+  border-radius: 12px;
+}
+
+.flipswitch .flipswitch-outer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.flipswitch .flipswitch-inner {
+  display: block;
+  width: 200%;
+  height: 100%;
+  margin-left: -100%;
+  -webkit-transition: margin-left 0.2s ease-in;
+     -moz-transition: margin-left 0.2s ease-in;
+       -o-transition: margin-left 0.2s ease-in;
+          transition: margin-left 0.2s ease-in;
+}
+
+.flipswitch .flipswitch-btn-no,
+.flipswitch .flipswitch-btn-yes {
+  float: left;
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) inset;
+}
+
+.flipswitch .flipswitch-btn-no {
+  background: #d54243;
+}
+
+.flipswitch .flipswitch-btn-yes {
+  float: right;
+  background: #0c9f9b;
+}
+
+.flipswitch .flipswitch-slider {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+  font-size: 8px;
+  line-height: 20px;
+  color: #d9d9d9;
+  text-align: center;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 12px;
+  -webkit-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+     -moz-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+       -o-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+          transition: left 0.2s ease-in, margin-left 0.2s ease-in;
+}
+
+.flipswitch .flipswitch-slider:hover {
+  background: #f2f2f2;
+}
+
+.flipswitch.flipswitch-no .flipswitch-lbl-yes {
+  color: #b3b3b3;
+}
+
+.flipswitch.flipswitch-no .flipswitch-lbl-yes:hover {
+  color: #000000;
+}
+
+.flipswitch.flipswitch-no .flipswitch-lbl-no {
+  color: #000000;
+}
+
+.flipswitch.flipswitch-no .flipswitch-inner {
+  margin-left: 0;
+}
+
+.flipswitch.flipswitch-no .flipswitch-slider {
+  left: 100%;
+  margin-left: -22px;
 }
 
 .bx {
