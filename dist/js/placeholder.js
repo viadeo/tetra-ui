@@ -9,7 +9,7 @@ tetra.view.register("placeholder", {
                 user: {
                     click: {
                         ".placeholding": function(e, elm) {
-                            _(elm).addClass("active");
+                            _(elm).addClass("active"), (_(".msie7").length || _(".msie8").length) && _(elm).find("input").focus();
                         }
                     },
                     clickout: {
