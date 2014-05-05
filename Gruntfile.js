@@ -44,8 +44,14 @@ module.exports = function(grunt) {
   // Force load assemble
   grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('test', ['jshint']);
-  grunt.registerTask('test-sass', ['sass:compile','sass:compile_dist']);
+  grunt.registerTask('test', [
+    'jshint'
+  ]);
+
+  grunt.registerTask('test-sass', [
+    'sass:compile',
+    'sass:compile_dist'
+  ]);
 
   grunt.registerTask('less2sass', [
     'clean:sass',
@@ -55,7 +61,10 @@ module.exports = function(grunt) {
     'test-sass'
   ]);
 
-  grunt.registerTask('dist-js', ['concat:js', 'uglify']);
+  grunt.registerTask('dist-js', [
+    'concat:js',
+    'uglify'
+  ]);
 
   grunt.registerTask('dist-css', [
     'clean:tmp',
@@ -69,7 +78,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', ['dist-css', 'dist-js']);
 
   // Default task
-  grunt.registerTask('default', ['test', 'dist']);
+  grunt.registerTask('default', ['test', 'dist', 'watch-server']);
 
   // Generate doc
   grunt.registerTask('doc', ['clean:doc', 'assemble']);
