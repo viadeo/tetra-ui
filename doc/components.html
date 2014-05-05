@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tetra UI | Components</title>
+  <meta name="description" content="Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!" />
   <link rel="icon" href="/tetra-ui/dist/img/tetra-ui/favicon.png" />
   
-    <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.min.css" />
+    <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.css" />
   
-  <link rel="stylesheet" href="/tetra-ui/bower_components/prism-css/index.css" />
-  <!--[if lt IE 8]><script src="/tetra-ui/bower_components/json2/json2.js"></script><![endif]-->
-  <script src="/tetra-ui/bower_components/tetra-js/index.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/tetra-js.js"></script>
   <script src="/tetra-ui/dist/js/conf/tetra-js.js"></script>
+  <!--[if lt IE 8]><script src="/tetra-ui/dist/js/vendor/json2.js"></script><![endif]-->
 </head>
 
 <body>
@@ -37,40 +37,16 @@
   <div class="content fluid-container">
     <ul class="nav nav-menu">
   <li>
-    <a href="/tetra-ui/index.html">Grid</a>
+    <a href="/index.html">Elements</a>
   </li>
   <li>
-    <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
+    <a href="/doc/rich-containers.html">Grid & response design</a>
   </li>
   <li>
-    <a href="/tetra-ui/doc/typography.html">Typography</a>
+    <a href="/doc/typography.html">Right to left</a>
   </li>
   <li>
-    <a href="/tetra-ui/doc/forms.html">Forms</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/helpers.html">Helpers</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/variables.html">Variables</a>
-  </li>
-  <li class="active">
-    <a href="/tetra-ui/doc/components.html">Components</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/icons.html">Icons</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/maps.html">Maps</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/responsive.html">Responsive</a>
+    <a href="/doc/forms.html">Helpers</a>
   </li>
 </ul>
 
@@ -641,9 +617,9 @@
     </div>
     <div class="gu gu-last">
         <ul class="nav nav-tabs bootnode" data-event="click" data-comp="navtabs" data-target-id="tab-sample-container-2">
-            <li><a data-href="/tetra-ui/doc/xhr/tab-sample-1.html">Sample 1</a></li>
-            <li><a data-href="/tetra-ui/doc/xhr/tab-sample-2.html">Sample 2</a></li>
-            <li><a data-href="/tetra-ui/doc/xhr/tab-sample-3.html">Sample 3</a></li>
+            <li><a data-href="/doc/xhr/tab-sample-1.html">Sample 1</a></li>
+            <li><a data-href="/doc/xhr/tab-sample-2.html">Sample 2</a></li>
+            <li><a data-href="/doc/xhr/tab-sample-3.html">Sample 3</a></li>
         </ul>
         <div class="nav-tabs-section" id="tab-sample-container-2">
             <div class="section">
@@ -652,7 +628,7 @@
             </div>
 
             <div class="loader">
-                <img src="/tetra-ui/dist/img/loaders/ajax-loader.gif" />
+                <img src="/dist/img/loaders/ajax-loader.gif" />
                 <p>loading...</p>
             </div>
         </div>
@@ -662,9 +638,9 @@
   data-comp="navtabs"
   data-target-id="tab-sample-container"&gt;&lt;!-- The id of the element where tab contents will be loaded --&gt;
 
-  &lt;li class="active"&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-1.html"&gt;Sample 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-2.html"&gt;Sample 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a data-href="/tetra-ui/doc/tab-sample-3.html"&gt;Sample 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a data-href="/doc/tab-sample-1.html"&gt;Sample 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-href="/doc/tab-sample-2.html"&gt;Sample 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-href="/doc/tab-sample-3.html"&gt;Sample 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class="nav-tabs-section" id="tab-sample-container"&gt;
@@ -678,7 +654,7 @@
   &lt;div class="loader"&gt;
 
     &lt;!-- Here, put whatever you want --&gt;
-    &lt;img src="/tetra-ui/src/img/loaders/ajax-loader.gif" /&gt;
+    &lt;img src="/src/img/loaders/ajax-loader.gif" /&gt;
     &lt;p&gt;loading...&lt;/p&gt;
 
   &lt;/div&gt;
@@ -1146,11 +1122,11 @@
       <h2 class="h2" id="autocomplete">Autocomplete</h2>
       <p>A generic autocomplete component with Ajax calls and templating.</p>
       <p>The first autocomplete component sample calls this JSON response:<br />
-        <a href="/tetra-ui/doc/xhr/autocomplete-sample-1.json" target="_blank">autocomplete-sample-1.json</a>
+        <a href="/doc/xhr/autocomplete-sample-1.json" target="_blank">autocomplete-sample-1.json</a>
       </p>
       <p></p>
       <p>And the second sample:<br />
-        <a href="/tetra-ui/doc/xhr/autocomplete-sample-2.json" target="_blank">autocomplete-sample-2.json</a>
+        <a href="/doc/xhr/autocomplete-sample-2.json" target="_blank">autocomplete-sample-2.json</a>
       </p>
       <p>The <code class="language-markup">data-typing-delay=""</code>
         attribute (not required) sets the delay in milliseconds before sending the server-side request.
@@ -1169,7 +1145,7 @@
         data-event="click"
         data-min-length="1"
         data-template-id="autocomplete_sample_1"
-        data-url="/tetra-ui/doc/xhr/autocomplete-sample-1.json">
+        data-url="/doc/xhr/autocomplete-sample-1.json">
 
         <input type="text" class="input-large" />
 
@@ -1195,7 +1171,7 @@
         data-no-default="true"
         data-min-length="1"
         data-template-id="autocomplete_sample_2"
-        data-url="/tetra-ui/doc/xhr/autocomplete-sample-2.json">
+        data-url="/doc/xhr/autocomplete-sample-2.json">
 
         <input type="text" class="input-large" />
 
@@ -1219,7 +1195,7 @@
   data-min-length="1"
   data-typing-delay="500"
   data-template-id="autocomplete_sample_1"
-  data-url="/tetra-ui/doc/xhr/autocomplete-sample-1.json"&gt;
+  data-url="/doc/xhr/autocomplete-sample-1.json"&gt;
 
   &lt;input type="text" class="input-large" /&gt;
 
@@ -1392,11 +1368,9 @@
 
 <div class="footer">
   <div class="copy fluid-container">
-    <p>&copy;2013 APVO CORP.</p>
+    <p>©2013 APVO CORP.</p>
   </div>
 </div>
-
-<script src="/tetra-ui/bower_components/prism-js/index.js"></script>
 
 </body>
 </html>

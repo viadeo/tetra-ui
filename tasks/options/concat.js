@@ -1,6 +1,8 @@
+var files = require('../build/profile');
+
 module.exports = {
   js: {
-    files: {
+    files: [{
       '<%= path.js.dist %>/conf/tetra-js.js': 'src/js/conf/tetra-js.js',
       '<%= path.js.dist %>/autocomplete.js': '<%= path.js.src %>/autocomplete/**/*.js',
       '<%= path.js.dist %>/dropdown.js': ['<%= path.js.src %>/dropdown/**/*.js','!<%= path.js.src %>/dropdown/view/click_enabled.ui.js'],
@@ -21,7 +23,9 @@ module.exports = {
       '<%= path.js.dist %>/alert.js': '<%= path.js.src %>/alert/**/*.js',
       '<%= path.js.dist %>/flipbox.js': '<%= path.js.src %>/flipbox/**/*.js',
       '<%= path.js.dist %>/select.js': '<%= path.js.src %>/select/**/*.js'
-    }
+    },
+    files
+    ]
   },
   less: {
     options: {

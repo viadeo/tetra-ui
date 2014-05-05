@@ -69,6 +69,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-css', [
     'clean:tmp',
     'recess',
+    'cssmin',
     'concat:less',
     'concat:sass',
     'less2sass'
@@ -77,13 +78,13 @@ module.exports = function(grunt) {
   // Full distribution task.
   grunt.registerTask('dist', ['dist-css', 'dist-js']);
 
-  // Default task
-  grunt.registerTask('default', ['test', 'dist', 'watch-server']);
-
   // Generate doc
   grunt.registerTask('doc', ['clean:doc', 'assemble']);
 
   // Watch and launch server
   grunt.registerTask('watch-server', ['connect', 'watch']);
+
+    // Default task
+  grunt.registerTask('default', ['test', 'dist', 'doc', 'watch-server']);
 
 };
