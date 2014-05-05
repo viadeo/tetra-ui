@@ -1,14 +1,20 @@
 module.exports = {
   options: {
-    path: '/<%= pkg.name %>',
-    partials: ['<%= path.doc %>/partials/**/*.hbs'],
     flatten: true,
-    layout: '<%= path.doc %>/layouts/default.hbs'
+    partials: ['<%= path.doc %>/partials/**/*.hbs'],
+    layout: ['<%= path.doc %>/layouts/default.hbs'],
+    data: ['<%= path.doc %>/data/*.{json,yml}'],
+    plugins: ['anchors'],
+    anchors: {
+      template: '<%= path.doc %>/plugins/anchor.js'
+    }
   },
   pages: {
-    files: [
-      { expand: true, cwd: '<%= path.doc %>/pages', src: ['*.hbs', '!index.hbs'], dest: 'doc/' },
-      { expand: true, cwd: '<%= path.doc %>/pages', src: ['index.hbs'], dest: './' }
-    ]
+    src: ['<%= path.doc %>/pages/*.hbs', '!index.hbs'],
+    dest: './doc/'
+  },
+  index: {
+    src: ['<%= path.doc %>/pages/index.hbs'],
+    dest: './'
   }
 }

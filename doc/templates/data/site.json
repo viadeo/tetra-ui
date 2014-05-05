@@ -1,0 +1,9 @@
+{
+  "name": "Tetra Ui",
+  "path": "/tetra-ui",
+  "assets": "/tetra-ui/dist",
+  "assets_bower": "/tetra-ui/bower_components",
+  "brand": "©2013 APVO CORP.",
+  "description": "Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!",
+  "repo": "https://github.com/viadeo/tetra-ui"
+}

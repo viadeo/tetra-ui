@@ -5,7 +5,7 @@ module.exports = {
   },
   js: {
     files: ['Gruntfile.js','<%= path.js.src %>/**/*.js'],
-    tasks: ['jshint', 'concat:js', 'uglify']
+    tasks: ['jshint', 'concat:js']
   },
   doc: {
     files: ['<%= path.doc %>/**/*'],
