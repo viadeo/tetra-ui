@@ -13,7 +13,7 @@ module.exports = {
       ext: '.css',
       dest: '<%= path.css.dist %>',
       rename: function(dest, matchedSrcPath, options) {
-         var packageName = matchedSrcPath === 'default.css' ? '<%= pkg.name %>' : '<%= pkg.name %>-' + matchedSrcPath;
+         var packageName = matchedSrcPath === 'default.css' ? '<%= pkg.name %>.css' : '<%= pkg.name %>-' + matchedSrcPath;
         return path.join(dest, packageName);
       }
     }]
