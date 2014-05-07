@@ -3,6 +3,7 @@ tag: "nav-doc"
 title: "Elements"
 tab: "index"
 section: "elements"
+test: "sidebar-doc-nav"
 nav:
   -
     slug: "typography"
@@ -141,12 +142,22 @@ nav:
         slug: "pagination"
         title: "Pagination"
   -
+    slug: "icons"
+    title: "Icons"
+    nav:
+      -
+        slug: "icons-overview"
+        title: "Overview"
+      -
+        slug: "icons-example"
+        title: "How to use"
+      -
+        slug: "icons-download"
+        title: "Download"
+  -
     slug: "components"
     title: "Components"
     nav:
-      -
-        slug: "icons"
-        title: "Icons"
       -
         slug: "badges"
         title: "Badges"
@@ -177,6 +188,26 @@ nav:
 
 ---
 
+{{> test nav}}
+
+  {{#markdown}}
+  # Icons
+  {{/markdown}}
+
+  {{#each pages}}
+    {{#is data.tab 'elements'}}
+    {{#is data.category 'icons'}}
+      <div class="category mbxl">
+      {{#markdown}}
+        {{{page}}}
+      {{/markdown}}
+      </div>
+    {{/is}}
+    {{/is}}
+  {{/each}}
+
+  <div class="divider-before ptl">
+
   {{#markdown}}
   # Components
   {{/markdown}}
@@ -184,10 +215,13 @@ nav:
   {{#each pages}}
     {{#is data.tab 'elements'}}
     {{#is data.category 'components'}}
+      <div class="mbxl">
       {{#markdown}}
         {{{page}}}
       {{/markdown}}
+      </div>
     {{/is}}
     {{/is}}
   {{/each}}
 
+  </div>
