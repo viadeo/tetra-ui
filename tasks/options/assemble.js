@@ -4,17 +4,18 @@ module.exports = {
     partials: ['<%= path.doc %>/partials/**/*.hbs'],
     layout: ['<%= path.doc %>/layouts/default.hbs'],
     data: ['<%= path.doc %>/data/*.{json,yml}'],
-    plugins: ['anchors'],
-    anchors: {
-      template: '<%= path.doc %>/plugins/anchor.js'
+    marked: {
+      highlight: function (code, lang, callback) {
+        return require('highlight.js').highlight(lang, code).value;
+      }
     }
   },
-  pages: {
-    src: ['<%= path.doc %>/pages/*.hbs', '!index.hbs'],
-    dest: './doc/'
-  },
   index: {
-    src: ['<%= path.doc %>/pages/index.hbs'],
+    src: ['<%= path.doc %>/docs/index.hbs'],
     dest: './'
+  },
+  docs: {
+    src: ['<%= path.doc %>/docs/*.hbs', '!index.hbs'],
+    dest: './doc/'
   }
-}
+};
