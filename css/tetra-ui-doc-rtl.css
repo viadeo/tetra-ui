@@ -6936,151 +6936,79 @@ a:focus .avatar img {
 
 html {
   height: 100%;
-  background: #e8e9eb;
+  background: #253a4c;
 }
 
 body {
   height: 100%;
-  background: #e8e9eb;
 }
 
 p {
   line-height: 20px;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
-  white-space: pre-wrap;
+.main {
+  min-height: 100%;
+  background: #e8e9eb;
+}
+
+.main h1,
+.main h2 {
+  font-weight: normal;
+}
+
+.main h1 {
+  margin: 0 0 25px 0;
+  font-size: 32px;
+}
+
+.main h2 {
+  font-size: 24px;
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  padding: 10px 0;
-  background: #292929;
-  border-bottom: 2px solid #f56600;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
 }
 
-.header h1 {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 9px;
-  color: #999999;
+.nav-doc {
+  text-transform: uppercase;
 }
 
-.header h1 .vicon {
-  margin-left: -0.5em;
-  font-size: 6px;
-  color: #999999;
+.nav-doc li a {
+  color: #8c8c8c;
+  text-decoration: none;
 }
 
-.header .logo {
-  display: block;
-  width: 134px;
-  height: 0;
-  padding: 29px 0 0 0;
-  overflow: hidden;
-  background: url("/tetra-ui/dist/img/tetra-ui/tetra-ui.png") no-repeat;
-  background: rgba(0, 0, 0, 0) url("/tetra-ui/dist/img/tetra-ui/tetra-ui.svg") no-repeat;
+.nav-doc li.active a,
+.nav-doc li:hover a {
+  color: #000000;
 }
 
-.header .github {
-  color: #cccccc;
-  background-color: #333333;
-  background-image: -moz-linear-gradient(top, #4d4d4d, #333333);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
-  background-image: -webkit-linear-gradient(top, #4d4d4d, #333333);
-  background-image: -o-linear-gradient(top, #4d4d4d, #333333);
-  background-image: linear-gradient(to bottom, #4d4d4d, #333333);
-  background-repeat: repeat-x;
-  border: none;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4d4d', endColorstr='#333333', GradientType=0);
-  *filter: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.header .github:hover {
-  background-color: #4d4d4d;
-  background-image: -moz-linear-gradient(top, #595959, #4d4d4d);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #595959), color-stop(100%, #4d4d4d));
-  background-image: -webkit-linear-gradient(top, #595959, #4d4d4d);
-  background-image: -o-linear-gradient(top, #595959, #4d4d4d);
-  background-image: linear-gradient(to bottom, #595959, #4d4d4d);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#595959', endColorstr='#4d4d4d', GradientType=0);
-  *filter: none;
-}
-
-.header .github:after {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin: 0 0 .2em .6em;
-  vertical-align: middle;
-  background: rgba(0, 0, 0, 0) url("/tetra-ui/dist/img/tetra-ui/github.svg") no-repeat;
-  content: "";
-}
-
-.wrap {
+.sidebar {
   min-height: 100%;
+  background: #253a4c;
 }
 
-.footer {
-  height: 40px;
-  margin-top: -40px;
-  background: #1a1a1a;
+.sidebar h1 {
+  height: 60px;
+  line-height: 58px;
 }
 
-.footer p {
-  margin: 10px 0 0 0;
-  color: #808080;
-  text-align: center;
+.sidebar-nav {
+  background: #0c2438;
 }
 
-.headline {
-  position: relative;
-  z-index: 99;
-  padding: 85px 0 0 0;
+.sidebar-nav a {
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.headline h1 {
-  line-height: 28px;
-  text-align: center;
-}
-
-.headline h1 .sub {
-  font-size: 20px;
-  font-weight: normal;
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
   color: #f56600;
-}
-
-.content {
-  padding: 0 0 80px;
-}
-
-.content > .nav li a {
-  padding: 15px;
-}
-
-.section-container-loading .section {
-  visibility: hidden;
-}
-
-.section-container-loading .loading {
-  position: absolute;
-  top: 30px;
-  display: block !important;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section-container-loading .loading p {
-  font-size: 12px;
-  color: #808080;
 }
 
 .var {
@@ -7640,77 +7568,142 @@ code.color-transform {
   color: #404040;
 }
 
-.icon-sample-settings-btn .vicon {
-  margin-left: -5px;
-  font-size: 8px;
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+pre {
+  padding: 15px;
+  margin: 0 0 15px 0;
+  overflow: auto;
+  background: #f5f2f0;
 }
 
-.btn-primary.icon-sample-add-btn .vicon {
-  font-size: 10px;
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+code[class*="language-"],
+pre[class*="language-"] {
+  white-space: pre-wrap;
 }
 
-.btn-default.icon-sample-add-btn .vicon {
-  font-size: 8px;
-  color: #666;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+https://github.com/isagalaev/highlight.js/tree/master/src/styles
+
+*/
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
 }
 
-.icon-sample-header .vicon {
-  color: #ADC6D9;
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  font-style: italic;
+  color: #998;
 }
 
-.icon-sample-profile .vicon {
-  color: #FA6900;
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+  color: #333;
 }
 
-.icon-sample-premium .vicon {
-  color: #ffbb12;
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
 }
 
-.btn-twitter {
-  padding: 1px 0;
-  background-color: #48caf5;
-  background-image: -moz-linear-gradient(top, #80dfff, #48caf5);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #80dfff), color-stop(100%, #48caf5));
-  background-image: -webkit-linear-gradient(top, #80dfff, #48caf5);
-  background-image: -o-linear-gradient(top, #80dfff, #48caf5);
-  background-image: linear-gradient(to bottom, #80dfff, #48caf5);
-  background-repeat: repeat-x;
-  border: 1px solid #42C8F4;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80dfff', endColorstr='#48caf5', GradientType=0);
-  *filter: none;
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14;
 }
 
-.btn-twitter .vicon {
-  font-size: 7px;
-  color: white;
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  font-weight: bold;
+  color: #900;
 }
 
-.btn-twitter:hover,
-.btn-twitter:focus {
-  background-color: #18bcf2;
-  background-image: -moz-linear-gradient(top, #4dd2ff, #18bcf2);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4dd2ff), color-stop(100%, #18bcf2));
-  background-image: -webkit-linear-gradient(top, #4dd2ff, #18bcf2);
-  background-image: -o-linear-gradient(top, #4dd2ff, #18bcf2);
-  background-image: linear-gradient(to bottom, #4dd2ff, #18bcf2);
-  background-repeat: repeat-x;
-  border-color: #12baf1;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dd2ff', endColorstr='#18bcf2', GradientType=0);
-  *filter: none;
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal;
 }
 
-#maps-marker,
-#maps-markers,
-#maps-itinerary {
-  height: 300px;
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  font-weight: bold;
+  color: #458;
 }
 
-#maps-itinerary-panel {
-  max-height: 500px;
-  overflow-x: auto;
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  font-weight: normal;
+  color: #000080;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  font-weight: bold;
+  color: #999;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
 }
