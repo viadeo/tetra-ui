@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tetra UI{{#if title}} | {{ title }}{{else}}{{/if}}</title>
+  <title>{{site.name}}{{#if title}} | {{ title }}{{else}}{{/if}}</title>
   <meta name="description" content="{{site.description}}" />
   <link rel="icon" href="{{site.assets}}/img/tetra-ui/favicon.png" />
   {{#if rtl}}
@@ -18,38 +18,35 @@
 
 <body{{#if rtl}} dir="rtl" class="rtl"{{/if}}>
 
-<div class="wrap">
-  <div class="header">
-    <div class="fluid-container">
-      <h1 class="fl">Powered by <i class="vicon">o</i>
-        <a href="{{site.path}}/" class="logo">Tetra UI</a>
-      </h1>
-      <a href="{{site.repo}}" class="fr mts btn btn-default btn-large github">Tetra UI on GitHub</a>
+  <div class="gr">
+
+    <section class="sidebar gu gu-1of5 gu-m-1of3">
+      {{> sidebar-doc }}
+    </section>
+
+    <div class="gu-last">
+
+      <header class="header plxl prxl">
+        <div class="gr">
+          <div class="gu gu-2of3">
+            {{> nav-doc }}
+          </div>
+          <div class="gu-last tar">
+            {{> toggle-mode-doc }}
+          </div>
+        </div>
+      </header>
+
+      <main class="main paxl">
+        {{> body }}
+        <footer class="footer">
+            <p class="gray tac mbn">{{site.brand}}</p>
+        </footer>
+      </main>
+
     </div>
-  </div>
 
-  <div class="headline">
-    <div class="fluid-container">
-      <h1 class="h1">A smart, easy-to-use toolkit
-        <span class="sub">for creating rich interfaces in lightning speed!</span>
-      </h1>
-    </div>
   </div>
-
-  <div class="content fluid-container">
-    {{> nav-doc }}
-
-    <div class="nav-tabs-section">
-      {{> body }}
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <div class="copy fluid-container">
-    <p>{{site.brand}}</p>
-  </div>
-</div>
 
 </body>
 </html>

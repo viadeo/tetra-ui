@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tetra Ui | Helpers</title>
+  <title>Tetra Ui | Alerts</title>
   <meta name="description" content="Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!" />
   <link rel="icon" href="/tetra-ui/dist/img/tetra-ui/favicon.png" />
   
@@ -27,95 +27,6 @@
 
   <nav class='sidebar-nav paxl'>
     
-  <ul>
-  
-    <li class="mbxs">
-      <a href="#overview">
-        Overview
-      </a>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#miscellaneous">
-        Miscellaneous
-      </a>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#rich-containers">
-        Rich Containers
-      </a>
-      
-        <ul class="plm">
-        
-          <li class="mbn">
-            <a href="#rc-introduction">
-              Introduction
-            </a>
-          </li>
-        
-          <li class="mbn">
-            <a href="#rc-spacing-and-alignment">
-              Spacing &amp; Alignment
-            </a>
-          </li>
-        
-          <li class="mbn">
-            <a href="#rc-examples">
-              Examples
-            </a>
-          </li>
-        
-        </ul>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#spacing">
-        Spacing
-      </a>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#Border-radius">
-        Border radius
-      </a>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#text-alignment">
-        Text alignment
-      </a>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#block-layout">
-        Block layout
-      </a>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#block-alignment">
-        Block alignment
-      </a>
-      
-    </li >
-  
-    <li class="mbxs">
-      <a href="#vertical-alignment">
-        Vertical alignment
-      </a>
-      
-    </li >
-  
-  </ul>
-
 
   </nav>
 
@@ -143,7 +54,7 @@
       
     
       
-        <li class="dispi prm mrm active">
+        <li class="dispi prm mrm ">
           <a href="/tetra-ui/doc/helpers.html">
             Helpers
           </a>
@@ -205,6 +116,126 @@
         
 
 
+<div class="gr">
+  <div class="gu gu-3of4 gu-m-1of1">
+
+<h2 id="alerts">
+  Alerts
+</h2>
+
+<p>Alerts have an optional **close button** and **icon**.<br />
+Several kinds of alert:</p>
+
+<ul class="list-disc mbm">
+  <li>**info**</li>
+  <li>**success**</li>
+  <li>**error**</li>
+  <li>**form error**</li>
+  <li>**notification**</li>
+  <li>**premium**</li>
+</ul>
+
+<div class="bx-alert mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">:</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Information Message...</p>
+  </div>
+</div>
+
+<div class="bx-alert bx-alert-ok mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">v</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Success Message...</p>
+  </div>
+</div>
+
+<div class="bx-alert bx-alert-error mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">;</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Error message...</p>
+  </div>
+</div>
+
+<div class="bx-alert bx-alert-error-form mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">;</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Error form message...</p>
+  </div>
+</div>
+
+<div class="bx-alert bx-alert-notification mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">M</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Notification message...</p>
+  </div>
+</div>
+
+<div class="bx-alert bx-alert-premium mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">*</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Premium message...</p>
+  </div>
+</div>
+
+
+<div class="toggle-code mtxl mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+```html
+<div class="bx-alert bx-alert-ok mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close bootnode">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">:</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Success message...</p>
+  </div>
+</div>
+```
+
+  </div>
+  <div class="gu-last hide-m">
+    <!-- anotation -->
+  </div>
+</div>
 
         <footer class="footer">
             <p class="gray tac mbn">©2014 APVO CORP.</p>

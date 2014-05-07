@@ -1,0 +1,22 @@
+{{#if this}}
+  <ul>
+  {{#each this}}
+    <li class="mbxs">
+      <a href="#{{slug}}">
+        {{title}}
+      </a>
+      {{#if nav}}
+        <ul class="plm">
+        {{#each nav}}
+          <li class="mbn">
+            <a href="#{{slug}}">
+              {{title}}
+            </a>
+          </li>
+        {{/each}}
+        </ul>
+      {{/if}}
+    </li >
+  {{/each}}
+  </ul>
+{{/if}}
