@@ -142,6 +142,7 @@ nav:
       -
         slug: "icons-overview"
         title: "Overview"
+        data: <%= icons %>
       -
         slug: "icons-example"
         title: "How to use"

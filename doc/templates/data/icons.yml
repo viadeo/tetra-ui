@@ -1,0 +1,286 @@
+  -
+    code: "m"
+    title: "Message"
+  -
+    code: "e"
+    title: "Visit"
+  -
+    code: "z"
+    title: "Search"
+  -
+    code: "c"
+    title: "Settings"
+  -
+    code: "o"
+    title: "Viadeo"
+  -
+    code: "j"
+    title: "Tianji"
+  -
+    code: "t"
+    title: "Twitter"
+  -
+    code: "b"
+    title: "Bubbles"
+  -
+    code: "a"
+    title: "Add"
+  -
+    code: "p"
+    title: "Plus"
+  -
+    code: "×"
+    title: "Remove"
+    token: "&times;"
+  -
+    code: "+"
+    title: "Plus"
+  -
+    code: "*"
+    title: "Star"
+  -
+    code: "r"
+    title: "Reload"
+  -
+    code: "s"
+    title: "Speech"
+  -
+    code: "f"
+    title: "Facebook"
+  -
+    code: "d"
+    title: "Date"
+  -
+    code: "g"
+    title: "Google+"
+  -
+    code: "h"
+    title: "Phone"
+  -
+    code: "v"
+    title: "Check mark"
+  -
+    code: "w"
+    title: "Download"
+  -
+    code: "x"
+    title: "Network"
+  -
+    code: "y"
+    title: "Edit"
+  -
+    code: "l"
+    title: "Like"
+  -
+    code: "<"
+    title: "Left"
+    token: "&lt;"
+  -
+    code: ">"
+    title: "Right"
+    token: "&gt;"
+  -
+    code: "‹"
+    title: "Prev"
+    token: "&lsaquo;"
+  -
+    code: "›"
+    title: "Next"
+    token: "&rsaquo;"
+  -
+    code: "«"
+    title: "First"
+    token: "&laquo;"
+  -
+    code: "»"
+    title: "Last"
+    token: "&raquo;"
+  -
+    code: "▾"
+    title: "Down"
+    token: "&#9662;"
+  -
+    code: "▴"
+    title: "Up"
+    token: "&#9652;"
+  -
+    code: "∧"
+    title: "Up"
+    token: "&and;"
+  -
+    code: "∨"
+    title: "Down"
+    token: "&or;"
+  -
+    code: "L"
+    title: "Location"
+  -
+    code: "↔"
+    title: "Select"
+    token: "&harr;"
+  -
+    code: "B"
+    title: "Bubble"
+  -
+    code: "E"
+    title: "Export"
+  -
+    code: "M"
+    title: "Degree"
+  -
+    code: "N"
+    title: "Degree"
+  -
+    code: "P"
+    title: "Photo"
+  -
+    code: "T"
+    title: "Tag"
+  -
+    code: "X"
+    title: "Experience"
+  -
+    code: "k"
+    title: "Recommand"
+  -
+    code: "O"
+    title: "Article"
+  -
+    code: "S"
+    title: "Profile"
+  -
+    code: "C"
+    title: "Company"
+  -
+    code: "F"
+    title: "Offer"
+  -
+    code: "G"
+    title: "Group"
+  -
+    code: "H"
+    title: "School"
+  -
+    code: "K"
+    title: "Book"
+  -
+    code: "?"
+    title: "Question"
+  -
+    code: "!"
+    title: "Blog"
+  -
+    code: "i"
+    title: "Request accepted"
+  -
+    code: "R"
+    title: "Share"
+  -
+    code: "Z"
+    title: "Archive"
+  -
+    code: ":"
+    title: "Information"
+  -
+    code: ";"
+    title: "Warning"
+  -
+    code: "u"
+    title: "Upload"
+  -
+    code: "n"
+    title: "Graph"
+  -
+    code: "•"
+    title: "Bulb"
+    token: "&bull;"
+  -
+    code: "/"
+    title: "Add search"
+  -
+    code: "€"
+    title: "Euro"
+    token: "&euro;"
+  -
+    code: "⊕"
+    title: "Save"
+    token: "&oplus;"
+  -
+    code: "↕"
+    title: "Tie"
+    token: "&#8597;"
+  -
+    code: "☑"
+    title: "Saved"
+    token: "&#9745;"
+  -
+    code: "⍾"
+    title: "Bell"
+    token: "&#9086;"
+  -
+    code: "⎗"
+    title: "Contract"
+    token: "&#9111;"
+  -
+    code: "⎙"
+    title: "Print"
+    token: "&#9113;"
+  -
+    code: "⌚"
+    title: "Time"
+    token: "&#8986;"
+  -
+    code: "⊜"
+    title: "Catalog"
+    token: "&#8860;"
+  -
+    code: "⤱"
+    title: "Tools"
+    token: "&#10545;"
+  -
+    code: "⊙"
+    title: "Target"
+    token: "&#8857;"
+  -
+    code: "⧝"
+    title: "Visibility"
+    token: "&#10717;"
+  -
+    code: "⇴"
+    title: "Stream"
+    token: "&#8692;"
+  -
+    code: "◷"
+    title: "Data"
+    token: "&#9719;"
+  -
+    code: "✪"
+    title: "Notification"
+    token: "&#10026;"
+  -
+    code: "⟁"
+    title: "Notification (alt)"
+    token: "&#10177;"
+  -
+    code: "▷"
+    title: "Media"
+    token: "&#9655;"
+  -
+    code: "⧓"
+    title: "Trust"
+    token: "&#10707;"
+  -
+    code: "⚿"
+    title: "Key"
+    token: "&#9919;"
+  -
+    code: "$"
+    title: "Money"
+  -
+    code: ""
+    title: "Day 1"
+    token: "&#61473;"
+  -
+    code: ""
+    title: "Day 2"
+    token: "&#61474;"
