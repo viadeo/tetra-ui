@@ -29,10 +29,10 @@ Now you should have a `node_modules` folder inside `tetra-ui` with all the requi
 
 ## Launching Tetra UI
 
-`grunt watch-server`
+`grunt`
 
 And then go to this URL in a browser: <http://localhost:8080/tetra-ui/> or <http://127.0.0.1:8080/tetra-ui/>.<br />
-With this `watch-server` task, every time a Less file is changed, Grunt rebuilds the CSS files.
+With this `grunt default` task, every time a Less file is changed, Grunt rebuilds the CSS files.
 
 ## Extras
 
