@@ -4,30 +4,30 @@ nav:
     title: "Grid System"
     nav:
       -
-        slug: "introduction"
+        slug: "grid-introduction"
         title: "Introduction"
       -
-        slug: "simple"
+        slug: "grid-simple"
         title: "Ex: Simple"
       -
-        slug: "nested"
+        slug: "grid-nested"
         title: "Ex: Nested"
       -
-        slug: "spaced"
+        slug: "grid-spaced"
         title: "Ex: Spaced"
       -
-        slug: "center"
+        slug: "grid-center"
         title: "Ex: Center"
   -
     slug: "responsive-design "
     title: "Responsive Design"
     nav:
       -
-        slug: "introduction"
+        slug: "responsive-introduction"
         title: "Introduction"
       -
-        slug: "helpers"
+        slug: "responsive-helpers"
         title: "Helpers"
       -
-        slug: "desktop-mobile"
+        slug: "responsive-desktop-mobile"
         title: "Ex: desktop & mobile"

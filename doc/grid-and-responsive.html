@@ -19,7 +19,7 @@
 
   <div class="gr">
 
-    <section class="sidebar gu gu-1of5 gu-m-1of3">
+    <section class="sidebar gu gu-1of5 gu-m-1of4">
       <div class="sidebar">
 
   <h1 class="logo tac plxl prxl mbn">
@@ -39,31 +39,31 @@
         <ul class="plm">
         
           <li class="mbn">
-            <a href="#introduction">
+            <a href="#grid-introduction">
               Introduction
             </a>
           </li>
         
           <li class="mbn">
-            <a href="#simple">
+            <a href="#grid-simple">
               Ex: Simple
             </a>
           </li>
         
           <li class="mbn">
-            <a href="#nested">
+            <a href="#grid-nested">
               Ex: Nested
             </a>
           </li>
         
           <li class="mbn">
-            <a href="#spaced">
+            <a href="#grid-spaced">
               Ex: Spaced
             </a>
           </li>
         
           <li class="mbn">
-            <a href="#center">
+            <a href="#grid-center">
               Ex: Center
             </a>
           </li>
@@ -80,19 +80,19 @@
         <ul class="plm">
         
           <li class="mbn">
-            <a href="#introduction">
+            <a href="#responsive-introduction">
               Introduction
             </a>
           </li>
         
           <li class="mbn">
-            <a href="#helpers">
+            <a href="#responsive-helpers">
               Helpers
             </a>
           </li>
         
           <li class="mbn">
-            <a href="#desktop-mobile">
+            <a href="#responsive-desktop-mobile">
               Ex: desktop &amp; mobile
             </a>
           </li>
@@ -196,29 +196,247 @@
     partial 'grid-system' does not exists
     
       
-        <h2 id="introduction">Introduction</h2>
+        <h2 id="grid-introduction">Introduction</h2>
           <div class="category mbxl">
-          partial 'introduction' does not exists
+          <p>The Tetra UI grid is a percentage-based, nestable grid system. Each grid row (<strong>.gr</strong>) takes up 100% of the parent containers&#39; width and can contain up to 5 grid units (<strong>.gu</strong>). These grid units can then contain nested grid rows, maximizing flexibility and laying the foundations for a responsive layout.</p>
+<p>When creating layouts, it is often useful to have a guide. To do this just add the <strong>.gr-zebra</strong> class to your grid row (<strong>.gr</strong>)</p>
+
+
           </div>
       
-        <h2 id="simple">Ex: Simple</h2>
+        <h2 id="grid-simple">Ex: Simple</h2>
           <div class="category mbxl">
-          partial 'simple' does not exists
+          <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <strong>.gu-last</strong> class. <br />
+This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
+
+
+<div class="bx">
+  <div class="gr gr-zebra">
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of1"><span class="hide-s">.gu</span> .gu-1of1</div>
+  </div>
+</div>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
           </div>
       
-        <h2 id="nested">Ex: Nested</h2>
+        <h2 id="grid-nested">Ex: Nested</h2>
           <div class="category mbxl">
-          partial 'nested' does not exists
+          <div class="bx">
+  <div class="gr gr-zebra">
+    <div class="gu gu-2of3 pan pts">
+      <span class="hide-s">.gu</span> .gu-2of3
+      <div class="gr zebra mts">
+        <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+        <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+      </div>
+    </div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+</div>
+
+<h3 id="nesting-with-siblings">Nesting with siblings</h3>
+<p>The example above shows a grid row (<strong>.gr</strong>) nested within a grid unit (<strong>.gu</strong>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
+
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-2of3"</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of2"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<h3 id="direct-nesting">Direct nesting</h3>
+<p>The other option is to nest your grid units directly in another grid unit. Just add the <strong>.gr</strong> class to an element with the <strong>.gu</strong> class!</p>
+
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-2of3 gr"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of2"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
           </div>
       
-        <h2 id="spaced">Ex: Spaced</h2>
+        <h2 id="grid-spaced">Ex: Spaced</h2>
           <div class="category mbxl">
-          partial 'spaced' does not exists
+          <p>You can assign spacing to the Tetra UI grid, using the fixed spacing sizes declared in <a href="/tetra-ui/doc/helpers.html">variables.less</a>. The percentage widths of each grid unit will change to accomodate for the extra spacing and to ensure all units are equal widths.</p>
+<blockquote>
+<p>Tetra UI uses the <strong>@siteWidth</strong> variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the <strong>@siteWidth variable</strong>.</p>
+</blockquote>
+
+
+<div class="bx">
+  <div class="gr grss gr-zebra">
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+  <div class="gr grsl gr-zebra mts">
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+</div>
+
+<table class="table table-text table-hover">
+  <thead>
+    <tr>
+      <th>Class Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class=" language-css"><strong>.grsxs</strong></code></td>
+      <td>Extra small spacing, defined in variables.less as <code class=" language-css">@spacingXs</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grss</strong></code></td>
+      <td>Small spacing, defined in variables.less as <code class=" language-css">@spacingS</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsm</strong></code></td>
+      <td>Medium spacing, defined in variables.less as <code class=" language-css">@spacingM</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsl</strong></code></td>
+      <td>Large spacing, defined in variables.less as <code class=" language-css">@spacingL</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsxl</strong></code></td>
+      <td>Extra large spacing, defined in variables.less as <code class=" language-css">@spacingXl</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bx"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr grss"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr grsl mts"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">di</span></span></code></pre>
+
+
           </div>
       
-        <h2 id="center">Ex: Center</h2>
+        <h2 id="grid-center">Ex: Center</h2>
           <div class="category mbxl">
-          partial 'center' does not exists
+          <p>Using the <strong>.bac</strong> (Block Align Center) class as described on the <a href="/tetra-ui/doc/helpers.html">helpers</a> page.</p>
+
+
+<div class="bx">
+  <div class="gr gr-zebra">
+    <div class="gu gu-1of5 bac"><span class="hide-s">.gu</span> .gu-1of5 .bac</div>
+    <div class="gu gu-1of4 bac"><span class="hide-s">.gu</span> .gu-1of4 .bac</div>
+    <div class="gu gu-1of3 bac"><span class="hide-s">.gu</span> .gu-1of3 .bac</div>
+    <div class="gu gu-1of2 bac"><span class="hide-s">.gu</span> .gu-1of2 .bac</div>
+  </div>
+</div>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr gr-zebra"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of4 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of2 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
           </div>
       
     
@@ -229,19 +447,19 @@
     partial 'responsive-design ' does not exists
     
       
-        <h2 id="introduction">Introduction</h2>
+        <h2 id="responsive-introduction">Introduction</h2>
           <div class="category mbxl">
-          partial 'introduction' does not exists
+          partial 'responsive-introduction' does not exists
           </div>
       
-        <h2 id="helpers">Helpers</h2>
+        <h2 id="responsive-helpers">Helpers</h2>
           <div class="category mbxl">
-          partial 'helpers' does not exists
+          partial 'responsive-helpers' does not exists
           </div>
       
-        <h2 id="desktop-mobile">Ex: desktop &amp; mobile</h2>
+        <h2 id="responsive-desktop-mobile">Ex: desktop &amp; mobile</h2>
           <div class="category mbxl">
-          partial 'desktop-mobile' does not exists
+          partial 'responsive-desktop-mobile' does not exists
           </div>
       
     
