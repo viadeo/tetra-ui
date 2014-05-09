@@ -1,0 +1,45 @@
+{{#markdown}}
+The responsive grid has a desktop first approach. It comes with two breakpoints:
+
+* a medium breakpoint (m) for middle sized devices, tablets for example
+* a small breakpoint (s) for small devices like mobiles
+
+The responsive grid is used inside a fluid page container which has the following properties:
+
+* horizontally centered
+* three different percentage widths for desktop, tablet, mobile applied with media queries
+* a maximum width when in desktop mode to prevent the page from being to large.
+
+### Fluid container
+{{/markdown}}
+
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="fluid-container"> ... </div>
+```
+{{/markdown}}
+
+<h3>Grid markup</h3>
+
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="gr">
+  <div class="gu gu-1of5 gu-m-1of1">
+    This column is a 1/5 width column in desktop mode,
+    then a full width column after the medium breakpoint.
+  </div>
+  <div class="gu gu-3of5 gu-m-3of5 gu-s-1of1">
+    This column is a 3/5 width column in desktop mode,
+    then a 3/5 width column after the medium breakpoint,
+    then a full width column after the small breakpoint.
+  </div>
+  <div class="gu gu-last">
+    This column remains the last one
+    and fills the remaining free space.
+  </div>
+</div>
+```
+{{/markdown}}
+

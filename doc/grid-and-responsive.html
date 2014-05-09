@@ -92,7 +92,7 @@
           </li>
         
           <li class="mbn">
-            <a href="#responsive-desktop-mobile">
+            <a href="#responsive-examples">
               Ex: desktop &amp; mobile
             </a>
           </li>
@@ -449,17 +449,380 @@ This element consumes the remaining width of the grid unit and is useful for fix
       
         <h2 id="responsive-introduction">Introduction</h2>
           <div class="category mbxl">
-          partial 'responsive-introduction' does not exists
+          <p>The responsive grid has a desktop first approach. It comes with two breakpoints:</p>
+<ul>
+<li>a medium breakpoint (m) for middle sized devices, tablets for example</li>
+<li>a small breakpoint (s) for small devices like mobiles</li>
+</ul>
+<p>The responsive grid is used inside a fluid page container which has the following properties:</p>
+<ul>
+<li>horizontally centered</li>
+<li>three different percentage widths for desktop, tablet, mobile applied with media queries</li>
+<li>a maximum width when in desktop mode to prevent the page from being to large.</li>
+</ul>
+<h3 id="fluid-container">Fluid container</h3>
+
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fluid-container"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<h3>Grid markup</h3>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5 gu-m-1of1"</span>&gt;</span>
+    This column is a 1/5 width column in desktop mode,
+    then a full width column after the medium breakpoint.
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-3of5 gu-m-3of5 gu-s-1of1"</span>&gt;</span>
+    This column is a 3/5 width column in desktop mode,
+    then a 3/5 width column after the medium breakpoint,
+    then a full width column after the small breakpoint.
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span>
+    This column remains the last one
+    and fills the remaining free space.
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+
           </div>
       
         <h2 id="responsive-helpers">Helpers</h2>
           <div class="category mbxl">
-          partial 'responsive-helpers' does not exists
+          <h3 id="visibility">Visibility</h3>
+<blockquote>
+<p>Resizing your browser window will show the effect of the different show and hide classes.</p>
+</blockquote>
+
+
+<table class="table table-text table-hover bx">
+    <thead><tr>
+      <th></th>
+      <th>Large devices</th>
+      <th>Medium devices</th>
+      <th>Small devices</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>Hide</th>
+      <td>
+        <span class="hide-l fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-l</code>
+        <p class="mbn">Hide on large devices and down</p>
+      </td>
+      <td>
+        <span class="hide-m fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-m</code>
+        <p class="mbn">Hide on medium devices and down</p>
+      </td>
+      <td>
+        <span class="hide-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-s</code>
+        <p class="mbn">Hide on small devices only</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Show</th>
+      <td>
+        <span class="show-l fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.show-l</code>
+        <p class="mbn">Show on large devices and down</p>
+      </td>
+      <td>
+        <span class="show-m fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.show-m</code>
+        <p class="mbn">Show on medium devices and down</p>
+      </td>
+      <td>
+        <span class="show-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.show-s</code>
+        <p class="mbn">Show on small devices</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Samples</th>
+      <td>
+        <span class="hide-m fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-m</code>
+        <p class="mbn">Show only on large devices</p>
+      </td>
+      <td>
+        <span class="hide-l show-m hide-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-l .show-m .hide-s</code>
+        <p class="mbn">Show only on medium devices</p>
+      </td>
+      <td>
+        <span class="hide-l show-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-l .show-s</code>
+        <p class="mbn">Show only on small devices</p>
+      </td>
+    </tr>
+  </tbody></table>
+
+<h3 id="responsive">Responsive</h3>
+<blockquote>
+<p>Resizing your browser window will show the effect of the different show and hide classes.</p>
+</blockquote>
+
+
+      <table class="table table-text table-hover bx">
+        <thead><tr>
+          <th></th>
+          <th>Large devices</th>
+          <th>Medium devices</th>
+          <th>Small devices</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Float</th>
+          <td>
+            <code class=" language-css">.fl</code>
+            <code class=" language-css">.fr</code>
+            <code class=" language-css">.fno</code>
+            <p class="mbn">Floats left, right or unfloats on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.fl-m</code>
+            <code class=" language-css">.fr-m</code>
+            <code class=" language-css">.fno-m</code>
+            <p class="mbn">Floats left, right or unfloats on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.fl-s</code>
+            <code class=" language-css">.fr-s</code>
+            <code class=" language-css">.fno-s</code>
+            <p class="mbn">Floats left, right or unfloats on small devices only</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Text Align</th>
+          <td>
+            <code class=" language-css">.tal</code>
+            <code class=" language-css">.tar</code>
+            <code class=" language-css">.tac</code>
+            <p class="mbn">Text aligns left, right or center on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.tal-m</code>
+            <code class=" language-css">.tar-m</code>
+            <code class=" language-css">.tac-m</code>
+            <p class="mbn">Text aligns left, right or center on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.tal-s</code>
+            <code class=" language-css">.tar-s</code>
+            <code class=" language-css">.tac-s</code>
+            <p class="mbn">Text aligns left, right or center on small devices only</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Block Align</th>
+          <td>
+            <code class=" language-css">.bac</code>
+            <code class=" language-css">.bar</code>
+            <code class=" language-css">.bal</code>
+            <p class="mbn">Block aligns left, right or center on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.bac-m</code>
+            <code class=" language-css">.bar-m</code>
+            <code class=" language-css">.bal-m</code>
+            <p class="mbn">Block aligns left, right or center on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.bac-s</code>
+            <code class=" language-css">.tar-s</code>
+            <code class=" language-css">.bal-s</code>
+            <p class="mbn">Block aligns left, right or center on small devices only</p>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table class="table table-text table-hover bx">
+        <thead><tr>
+          <th></th>
+          <th>Large devices</th>
+          <th>Medium devices</th>
+          <th>Small devices</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Block</th>
+          <td>
+            <code class=" language-css">.dispb</code>
+            <p class="mbn">Block layout on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispb-m</code>
+            <p class="mbn">Block layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispb-s</code>
+            <p class="mbn">Block layout on small devices and down</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Inline block</th>
+          <td>
+            <code class=" language-css">.dispib</code>
+            <p class="mbn">Inline block layout on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispib-m</code>
+            <p class="mbn">Inline block layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispib-s</code>
+            <p class="mbn">Inline block layout on small devices and down</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Inline</th>
+          <td>
+            <code class=" language-css">.dispi</code>
+            <p class="mbn">Inline layout on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispi-m</code>
+            <p class="mbn">Inline layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispi-s</code>
+            <p class="mbn">Inline layout on small devices and down</p>
+          </td>
+        </tr>
+      </tbody></table>
+
+
+<h3 id="variables">Variables</h3>
+
+
+      <table class="table table-text table-hover bx">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidthMax</span></code></pre>
+
+            </th>
+            <td class="vam">1020px</td>
+            <td>Maximum width of the page or fluid container</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@breakpointM</span></code></pre>
+
+            </th>
+            <td>768px</td>
+            <td>Breakpoint for medium devices (tablet)</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@breakpointS</span></code></pre>
+
+            </th>
+            <td>480px</td>
+            <td>Breakpoint for small devices (mobile)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-text table-hover bx">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidth</span></code></pre>
+
+            </th>
+            <td>85%</td>
+            <td>Width of the fluid container in desktop mode</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidthM</span></code></pre>
+
+            </th>
+            <td>90%</td>
+            <td>Width of the fluid container on medium devices</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidthS</span></code></pre>
+
+            <td>97%</td>
+            <td>Width of the fluid container on small devices</td>
+          </tr>
+        </tbody>
+      </table>
+
           </div>
       
-        <h2 id="responsive-desktop-mobile">Ex: desktop &amp; mobile</h2>
+        <h2 id="responsive-examples">Ex: desktop &amp; mobile</h2>
           <div class="category mbxl">
-          partial 'responsive-desktop-mobile' does not exists
+          <div class="gr grsl">
+
+  <div class="gu gu-3of5 gu-m-1of2 gu-s-1of1">
+
+    <div class="bx">
+      <h2 class="h-bx h-bx-main">Main content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+
+  </div>
+
+  <div class="gu gu-last">
+
+    <div class="bx">
+      <h2 class="h-bx">Aside</h2>
+      <ul>
+        <li>Lorem ipsum</li>
+        <li>Consectetur</li>
+        <li>Sed do eiusmod</li>
+        <li>Et dolore magna aliqua</li>
+      </ul>
+    </div>
+
+    <div class="bx">
+      <h2 class="h-bx">Picture</h2>
+      <img src="http://placehold.it/400x400" alt="" class="fluid-media">
+    </div>
+
+  </div>
+
+</div>
+
           </div>
       
     
