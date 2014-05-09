@@ -164,6 +164,14 @@ nav:
       -
         slug: "alerts"
         title: "Alerts"
+        data:
+          - default
+          - ok
+          - warning
+          - error
+          - error-form
+          - notification
+          - premium
       -
         slug: "cards"
         title: "Cards"

@@ -1,93 +1,46 @@
----
-category: "components"
-alerts:
-- success
-- warning
-- error
-- error-form
-- notification
-- premium
----
-
 {{#markdown}}
 Alerts have an optional **close button** and **icon**.<br />
 Several kinds of alert: **info**, **success**, **error**, **form-error**, **notification**, **premium**
 </ul>
 {{/markdown}}
 
+{{category}}
 
-<div class="bx-alert mbs">
+{{#each data}}
+<div class="bx-alert bx-alert-{{this}} mbs">
   <button data-event="click" data-comp="alert" class="bx-alert-close">
     <i class="vicon">×</i>
   </button>
 
-  <i class="vicon bx-alert-icon">:</i>
+  <i class="vicon bx-alert-icon">
+  {{#is this 'default'}}
+  :
+  {{/is}}
+  {{#is this 'warning'}}
+  :
+  {{/is}}
+  {{#is this 'error'}}
+  :
+  {{/is}}
+  {{#is this 'error-form'}}
+  :
+  {{/is}}
+  {{#is this 'ok'}}
+  v
+  {{/is}}
+  {{#is this 'notification'}}
+  M
+  {{/is}}
+  {{#is this 'premium'}}
+  *
+  {{/is}}
+  </i>
 
   <div class="bx-alert-content">
-    <p class="mbn">Information Message...</p>
+    <p class="mbn">{{uppercase this}} Message...</p>
   </div>
 </div>
-
-<div class="bx-alert bx-alert-ok mbs">
-  <button data-event="click" data-comp="alert" class="bx-alert-close">
-    <i class="vicon">×</i>
-  </button>
-
-  <i class="vicon bx-alert-icon">v</i>
-
-  <div class="bx-alert-content">
-    <p class="mbn">Success Message...</p>
-  </div>
-</div>
-
-<div class="bx-alert bx-alert-error mbs">
-  <button data-event="click" data-comp="alert" class="bx-alert-close">
-    <i class="vicon">×</i>
-  </button>
-
-  <i class="vicon bx-alert-icon">;</i>
-
-  <div class="bx-alert-content">
-    <p class="mbn">Error message...</p>
-  </div>
-</div>
-
-<div class="bx-alert bx-alert-error-form mbs">
-  <button data-event="click" data-comp="alert" class="bx-alert-close">
-    <i class="vicon">×</i>
-  </button>
-
-  <i class="vicon bx-alert-icon">;</i>
-
-  <div class="bx-alert-content">
-    <p class="mbn">Error form message...</p>
-  </div>
-</div>
-
-<div class="bx-alert bx-alert-notification mbs">
-  <button data-event="click" data-comp="alert" class="bx-alert-close">
-    <i class="vicon">×</i>
-  </button>
-
-  <i class="vicon bx-alert-icon">M</i>
-
-  <div class="bx-alert-content">
-    <p class="mbn">Notification message...</p>
-  </div>
-</div>
-
-<div class="bx-alert bx-alert-premium mbs">
-  <button data-event="click" data-comp="alert" class="bx-alert-close">
-    <i class="vicon">×</i>
-  </button>
-
-  <i class="vicon bx-alert-icon">*</i>
-
-  <div class="bx-alert-content">
-    <p class="mbn">Premium message...</p>
-  </div>
-</div>
-
+{{/each}}
 
 {{> toggle-code}}
 {{#markdown}}
