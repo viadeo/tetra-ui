@@ -1,0 +1,220 @@
+// Common
+
+$sidebar:#253a4c;
+$sidebar-nav: #0c2438;
+
+html {
+  height: 100%;
+  background: $sidebar;
+}
+
+body {
+  height: 100%;
+}
+
+p {
+  line-height: 20px;
+}
+
+.main {
+  min-height: 100%;
+  background: $pageBg;
+
+  h1, h2 {
+    font-weight: normal;
+  }
+  h1 {
+    font-size:32px;
+    margin:0 0 25px 0;
+  }
+
+  h2 {
+    font-size:24px;
+  }
+}
+
+.header {
+  background: $white;
+  height:60px;
+  line-height:60px;
+}
+
+.nav-doc {
+  text-transform: uppercase;
+  li {
+    a {
+      color:lighten($gray,5%);
+      text-decoration: none;
+    }
+    &.active,&:hover {
+      a {
+        color:$black;
+      }
+    }
+  }
+}
+
+.sidebar {
+  min-height: 100%;
+  background: $sidebar;
+  h1 {
+    height:60px;
+    line-height:58px;
+  }
+}
+
+.sidebar-nav {
+  background: $sidebar-nav;
+  a {
+    color: $white;
+    text-decoration: none;
+    line-height:18px;
+    &.active,&:hover {
+      color:$orange1;
+    }
+  }
+}
+
+.var {
+  display: block;
+  width: 36px;
+  height: 14px;
+  @include border-radius($borderRadiusS);
+  border: 2px solid $white;
+  @include box-shadow(0 0 3px $gray);
+}
+
+code.color-transform { font-size: 11px; margin: $spacingXs 0 0 0; background: $white; color: $gray; }
+
+// Grayscale
+
+.var-black { background: $black; .tooltip-content:before { content: "#{$black}"; } }
+.var-gray-dark { background: $grayDark; .tooltip-content:before { content: "#{$grayDark}"; } }
+.var-gray { background: $gray; .tooltip-content:before { content: "#{$gray}"; } }
+.var-gray-light { background: $grayLight; .tooltip-content:before { content: "#{$grayLight}"; } }
+.var-gray-lighter { background: $grayLighter; .tooltip-content:before { content: "#{$grayLighter}"; } }
+.var-white { background: $white; .tooltip-content:before { content: "#{$white}"; } }
+.var-page-bg { background: $pageBg; .tooltip-content:before { content: "#{$pageBg}"; } }
+
+// Colors
+
+.var-green { background: $green; .tooltip-content:before { content: "#{$green}"; } }
+.var-yellow { background: $yellow; .tooltip-content:before { content: "#{$yellow}"; } }
+.var-orange { background: $orange; .tooltip-content:before { content: "#{$orange}"; } }
+.var-blue-soft { background: $blueSoft; .tooltip-content:before { content: "#{$blueSoft}"; } }
+.var-blue-bright { background: $blueBright; .tooltip-content:before { content: "#{$blueBright}"; } }
+.var-highlight { background: $highlightColor; .tooltip-content:before { content: "#{$highlightColor}"; } }
+.var-link { background: $linkColor; .tooltip-content:before { content: "#{$linkColor}"; } }
+.var-link-hover { background: $linkColorHover; .tooltip-content:before { content: "#{$linkColorHover}"; } }
+.var-border-color { background: $borderColor; .tooltip-content:before { content: "#{$borderColor}"; } }
+.var-panel-background { background: $panelBackground; .tooltip-content:before { content: "#{$panelBackground}"; } }
+.var-panel-border { background: $panelBorder; .tooltip-content:before { content: "#{$panelBorder}"; } }
+.var-panel-border-darker { background: $panelBorderDarker; .tooltip-content:before { content: "#{$panelBorderDarker}"; } }
+.var-overlay-border { background: $overlayBorder; .tooltip-content:before { content: "#{$overlayBorder}"; } }
+.var-error-text { background: $errorText; .tooltip-content:before { content: "#{$errorText}"; } }
+.var-premium-color { background: $premiumColor; .tooltip-content:before { content: "#{$premiumColor}"; } }
+
+// lighten and darken
+
+.var-blue-soft-lighten-0 { $v: lighten($blue2, 0%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-10 { $v: lighten($blue2, 10%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-20 { $v: lighten($blue2, 20%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-30 { $v: lighten($blue2, 30%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-40 { $v: lighten($blue2, 40%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-50 { $v: lighten($blue2, 50%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-60 { $v: lighten($blue2, 60%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-70 { $v: lighten($blue2, 70%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-80 { $v: lighten($blue2, 80%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-90 { $v: lighten($blue2, 90%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-lighten-100 { $v: lighten($blue2, 100%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+
+.var-blue-soft-darken-0 { $v: darken($blue2, 0%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-10 { $v: darken($blue2, 10%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-20 { $v: darken($blue2, 20%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-30 { $v: darken($blue2, 30%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-40 { $v: darken($blue2, 40%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-50 { $v: darken($blue2, 50%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-60 { $v: darken($blue2, 60%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-70 { $v: darken($blue2, 70%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-80 { $v: darken($blue2, 80%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-90 { $v: darken($blue2, 90%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+.var-blue-soft-darken-100 { $v: darken($blue2, 100%); background: $v; .tooltip-content:before { content: "#{$v}"; } }
+
+.palette {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    margin: 0 (-1 * $spacingXs);
+    white-space: nowrap;
+    line-height: 70px;
+    color: $white;
+    border-radius: 50%;
+
+    &:first-child {
+      display: block;
+      width: 190px;
+      height: 190px;
+      margin: 0 auto $spacingS;
+      line-height: 200px;
+    }
+
+    &:before {
+      display: block;
+    }
+  }
+
+  .orange-1 { background: $orange1; &:before { content: "$orange1"; } }
+  .orange-2 { background: $orange2; &:before { content: "$orange2"; } }
+  .orange-3 { background: $orange3; &:before { content: "$orange3"; } }
+  .orange-4 { background: $orange4; &:before { content: "$orange4"; } }
+
+  .green-1 { background: $green1; &:before { content: "$green1"; } }
+  .green-2 { background: $green2; &:before { content: "$green2"; } }
+  .green-3 { background: $green3; &:before { content: "$green3"; } }
+  .green-4 { background: $green4; &:before { content: "$green4"; } }
+
+  .blue-1 { background: $blue1; &:before { content: "$blue1"; } }
+  .blue-2 { background: $blue2; &:before { content: "$blue2"; } }
+  .blue-3 { background: $blue3; &:before { content: "$blue3"; } }
+  .blue-4 { background: $blue4; &:before { content: "$blue4"; } }
+  .blue-5 { background: $blue5; &:before { content: "$blue5"; } }
+
+  .purple-1 { background: $purple1; &:before { content: "$purple1"; } }
+  .purple-2 { background: $purple2; &:before { content: "$purple2"; } }
+}
+
+// Typo
+
+.var-base-font-color    { background-color: $baseFontColor; .tooltip-content:before { content: "#{$baseFontColor}"; } }
+
+.var-tooltip {
+  position: absolute;
+  background-color: $grayDark;
+  margin-top: -26px;
+  color: $grayLighter;
+  padding: 2px 3px;
+  @include font-code();
+
+  .arrow {
+     @include arrow-down(5px, $grayDark);
+     bottom: -5px;
+     left: 5px;
+  }
+}
+
+#button-dropdowns,
+#split-button-dropdowns {
+  .btn-group {
+     margin-right: $spacingXs;
+  }
+}
+
+.vicon {
+  color: lighten($black, 25%);
+}
+
+
+
