@@ -1,0 +1,14 @@
+{{#each this}}
+  <div class="section {{#unless @first}}divider-before ptl{{/unless}}">
+  <h1 id="{{slug}}">{{title}}</h1>
+    {{{render slug this}}}
+    {{#if nav}}
+      {{#each nav}}
+        <h2 id="{{slug}}">{{title}}</h2>
+          <div class="category mbxl">
+          {{{render slug this}}}
+          </div>
+      {{/each}}
+    {{/if}}
+  </div>
+{{/each}}

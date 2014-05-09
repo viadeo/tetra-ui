@@ -1,0 +1,38 @@
+nav:
+  -
+    slug: "overview"
+    title: "Overview"
+  -
+    slug: "miscellaneous"
+    title: "Miscellaneous"
+  -
+    slug: "rich-containers"
+    title: "Rich Containers"
+    nav:
+      -
+        slug: "rc-introduction"
+        title: "Introduction"
+      -
+        slug: "rc-spacing-and-alignment"
+        title: "Spacing & Alignment"
+      -
+        slug: "rc-examples"
+        title: "Examples"
+  -
+    slug: "spacing"
+    title: "Spacing"
+  -
+    slug: "Border-radius"
+    title: "Border radius"
+  -
+    slug: "text-alignment"
+    title: "Text alignment"
+  -
+    slug: "block-layout"
+    title: "Block layout"
+  -
+    slug: "block-alignment"
+    title: "Block alignment"
+  -
+    slug: "vertical-alignment"
+    title: "Vertical alignment"

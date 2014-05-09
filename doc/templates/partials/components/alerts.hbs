@@ -1,7 +1,4 @@
 ---
-tag: "sidebar-doc"
-title: "Alerts"
-tab: "elements"
 category: "components"
 alerts:
 - success
@@ -12,21 +9,12 @@ alerts:
 - premium
 ---
 
-<h2 id="alerts">
-  Alerts
-</h2>
-
-<p>Alerts have an optional **close button** and **icon**.<br />
-Several kinds of alert:</p>
-
-<ul class="list-disc mbm">
-  <li>**info**</li>
-  <li>**success**</li>
-  <li>**error**</li>
-  <li>**form-error**</li>
-  <li>**notification**</li>
-  <li>**premium**</li>
+{{#markdown}}
+Alerts have an optional **close button** and **icon**.<br />
+Several kinds of alert: **info**, **success**, **error**, **form-error**, **notification**, **premium**
 </ul>
+{{/markdown}}
+
 
 <div class="bx-alert mbs">
   <button data-event="click" data-comp="alert" class="bx-alert-close">
@@ -101,15 +89,8 @@ Several kinds of alert:</p>
 </div>
 
 
-<div class="toggle-code mtxl mbxs">
-  <a class='show'>
-    show code
-  </a>
-  <a class='hide'>
-    hide code
-  </a>
-</div>
-
+{{> toggle-code}}
+{{#markdown}}
 ```html
 <div class="bx-alert bx-alert-ok mbs">
   <button data-event="click" data-comp="alert" class="bx-alert-close bootnode">
@@ -123,3 +104,5 @@ Several kinds of alert:</p>
   </div>
 </div>
 ```
+{{/markdown}}
+
