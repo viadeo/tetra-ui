@@ -31,6 +31,16 @@ p {
   h2 {
     font-size:24px;
   }
+  blockquote {
+    padding:0 0 0 15px;
+    border-left:5px solid @borderColor;
+  }
+  .gr-zebra .gu:nth-child(even) {
+    background-color: @green4;
+  }
+  .gr-zebra .gu:nth-child(odd) {
+    background-color: tint(@green3, 25%);
+  }
 }
 
 .header {
@@ -114,7 +124,7 @@ p {
   /* Widen the fixed sidebar again */
   .affix-bottom,
   .affix {
-    width: 33.3%;
+    width: 25%;
   }
 }
 
