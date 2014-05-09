@@ -6944,7 +6944,7 @@ body {
 }
 
 p {
-  line-height: 20px;
+  line-height: 18px;
 }
 
 .main {
@@ -7008,6 +7008,19 @@ p {
 
 .sidebar-nav a.active,
 .sidebar-nav a:hover {
+  color: #f56600;
+}
+
+.icons-overview i {
+  font-size: 14px;
+  color: #404040;
+}
+
+.icons-overview pre {
+  padding: 0;
+}
+
+.icons-overview code:first-letter {
   color: #f56600;
 }
 
