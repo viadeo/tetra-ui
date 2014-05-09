@@ -9,12 +9,13 @@
   
     <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.css" />
   
-  <script src="/tetra-ui/dist/js/vendor/tetra-js.js"></script>
-  <script src="/tetra-ui/dist/js/conf/tetra-js.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/affix.js"></script>
   <!--[if lt IE 8]><script src="/tetra-ui/dist/js/vendor/json2.js"></script><![endif]-->
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".sidebar-doc" data-offset="50">
 
   <div class="gr">
 
@@ -25,8 +26,9 @@
     <img src="/tetra-ui/dist/img/tetra-ui/tetra-ui-doc-hd.png" alt="Tetra Ui" class="fluid-media vam"/>
   </h1>
 
-  <nav class='sidebar-nav paxl'>
-    
+  <nav class='sidebar-nav' data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+    <div class="sidebar-doc paxl">
+
   <ul>
   
     <li class="mbxs">
@@ -419,6 +421,7 @@
   
   </ul>
 
+</div>
 
   </nav>
 
@@ -1876,7 +1879,7 @@
           <p>This is the simple tag to display an icon, where c is the character (icon) you want to display. Then you can use your own styles on top of this.</p>
 
 
-<div class="toggle-code mtxl mbxs">
+<div class="toggle-code mtm mbxs">
   <a class='show'>
     show code
   </a>
@@ -1897,9 +1900,10 @@
           <div class="category mbxl">
           <p>
   For desktop use you can download and install the OpenType font file:
+</p>
+<p>
   <a href="/tetra-ui/src/fonts/viadeoicons/viadeoicons.otf" class="btn btn-tertiary">Download Viadeoicons</a>
 </p>
-
 
           </div>
       
@@ -1913,12 +1917,87 @@
       
         <h2 id="badges">Badges</h2>
           <div class="category mbxl">
-          
+          <p>Badges are used as notification indicators (new messages, new requests).</p>
+
+
+<span class="ui-badge">Primary badge</span>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-badge"</span>&gt;</span>123<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre>
+
+
+<span class="ui-badge ui-badge-alt">Secondary badge</span>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-badge ui-badge-alt"</span>&gt;</span>123<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>/span&gt;</code></pre>
+
+
           </div>
       
         <h2 id="labels">Labels</h2>
           <div class="category mbxl">
-          partial 'labels' does not exists
+          <p>Labels are essentially used for clickable keywords.</p>
+
+<span class="ui-label">
+  <a href="">Lorem</a>
+</span>
+<span class="ui-label">
+  <a href="">Ipsum</a>
+  <a href=""><i class="vicon">&times;</i></a>
+</span>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-label"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Lorem<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-label"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre>
+
+
+<span class="ui-label ui-label-premium">
+  <a href="">lorem ipsum</a>
+</span>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-label ui-label-premium"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre>
+
+
           </div>
       
         <h2 id="tags">Tags</h2>
@@ -1930,7 +2009,7 @@
 <span class="ui-tag">Consectetur <a class="remove" href=""><i class="vicon">×</i></a></span>
 <span class="ui-tag">Sed do <a class="remove" href=""><i class="vicon">×</i></a></span>
 
-<div class="toggle-code mtxl mbxs">
+<div class="toggle-code mtm mbxs">
   <a class='show'>
     show code
   </a>
@@ -2114,7 +2193,7 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
 </div>
 
 
-<div class="toggle-code mtxl mbxs">
+<div class="toggle-code mtm mbxs">
   <a class='show'>
     show code
   </a>
@@ -2141,17 +2220,357 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
       
         <h2 id="cards">Cards</h2>
           <div class="category mbxl">
-          partial 'cards' does not exists
+          <p>This is not really a component but rather a style guide to make your own card components using the right typography, colors, alignments. Feel free to use it as a skeleton!</p>
+
+<div class="gr grsxl">
+  <div class="gu gu-1of2 gu-m-1of1">
+    <div class="rc-card rc-card-l">
+      <div class="rc-card-header">
+      <h2 class="name">
+        <a href="">Firstname Lastname</a>
+        <i class="vicon">*</i>
+      </h2>
+      </div>
+      <div class="rc-card-content rc rcss">
+      <a href="" class="avatar img-left">
+        <img src="/tetra-ui/dist/img/avatars/avatar-m-107x145.png">
+      </a>
+      <div class="bd">
+        <h3 class="job">Job, Company</h3>
+        <h4 class="where">City, Country |
+        Industry
+        </h4>
+        <dl class="previously">
+        <dt>Since 2011:</dt>
+        <dd>Job, Company</dd>
+        <dt>From 2008 to 2011:</dt>
+        <dd>Job, Company</dd>
+        </dl>
+      </div>
+      </div>
+      <div class="rc-card-footer">
+      <span class="fl mtxs">Other information</span>
+      <a class="btn btn-primary fr">Button</a>
+      </div>
+    </div>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc-card rc-card-l"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc-card-header"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Firstname Lastname<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc-card-content rc rcss"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"avatar img-left"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"…/avatar-m-107x145.png"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bd"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"job"</span>&gt;</span>Job, Company<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"where"</span>&gt;</span>City, Country |
+    Industry
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dl</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"previously"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>Since 2011:<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>Job, Company<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>From 2008 to 2011:<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>Job, Company<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">dl</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc-card-footer"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fl mtxs"</span>&gt;</span>Other information<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-primary fr"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+  </div>
+
+  <div class="gu gu-last">
+    <div class="rc-card rc-card-m mbm">
+      <div class="rc-card-header rc rcss">
+      <a href="" class="avatar img-left">
+        <img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png">
+      </a>
+      <div class="bd">
+        <h2 class="name"><a href="">Firstname Lastname</a></h2>
+        <h3 class="job">Job, Company</h3>
+      </div>
+      </div>
+      <div class="rc-card-content">
+      <h4 class="where">City, Country | Industry</h4>
+      <dl class="previously">
+        <dt>Since 2011:</dt>
+        <dd>Job, Company</dd>
+        <dt>From 2008 to 2011:</dt>
+        <dd>Job, Company</dd>
+      </dl>
+      </div>
+    </div>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc-card rc-card-m"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc-card-header rc rcss"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"avatar img-left"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"…/avatar-m-60x60.png"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bd"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Firstname Lastname<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"job"</span>&gt;</span>Job, Company<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc-card-content"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"where"</span>&gt;</span>City, Country |
+    Industry
+  <span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dl</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"previously"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>Since 2011:<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>Job, Company<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>From 2008 to 2011:<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>Job, Company<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">dl</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+  </div>
+
+</div>
+
+
           </div>
       
         <h2 id="growl">Growl</h2>
           <div class="category mbxl">
-          partial 'growl' does not exists
+          <p>Growl is a live notification, usualy fixed on top of the page.<br />
+Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong>error</strong>, <strong>notification</strong>, <strong>premium</strong></p>
+
+
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-info growl-position-center mbs growl-active">
+    <button class="growl-close">
+      <i class="vicon">×</i>
+    </button>
+    <i class="vicon growl-icon">:</i>
+    <div class="growl-content">
+    info growl with dismiss
+    </div>
+  </div>
+</div>
+
+
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-info growl-position-center mbs growl-active">
+    <i class="vicon growl-icon">
+    
+    :
+    
+    
+    
+    
+    
+    
+    </i>
+    <div class="growl-content">
+    info growl
+    </div>
+  </div>
+</div>
+
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-success growl-position-center mbs growl-active">
+    <i class="vicon growl-icon">
+    
+    
+    
+    
+    v
+    
+    
+    
+    </i>
+    <div class="growl-content">
+    success growl
+    </div>
+  </div>
+</div>
+
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-error growl-position-center mbs growl-active">
+    <i class="vicon growl-icon">
+    
+    
+    
+    :
+    
+    
+    
+    
+    </i>
+    <div class="growl-content">
+    error growl
+    </div>
+  </div>
+</div>
+
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-notification growl-position-center mbs growl-active">
+    <i class="vicon growl-icon">
+    
+    
+    
+    
+    
+    M
+    
+    
+    </i>
+    <div class="growl-content">
+    notification growl
+    </div>
+  </div>
+</div>
+
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-premium growl-position-center mbs growl-active">
+    <i class="vicon growl-icon">
+    
+    
+    
+    
+    
+    
+    *
+    
+    </i>
+    <div class="growl-content">
+    premium growl
+    </div>
+  </div>
+</div>
+
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"growl growl-type-info growl-position-center mbs growl-active"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"growl-close"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon growl-icon"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"growl-content"</span>&gt;</span>
+  info growl with dismiss
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+
           </div>
       
         <h2 id="share">Share</h2>
           <div class="category mbxl">
-          partial 'share' does not exists
+          <dl class="share-links">
+  <dt>Share this page</dt>
+  <dd>
+    <ul>
+      <li>
+        <a class="facebook tooltip">
+          <i class="vicon">f</i><!-- Icon for Facebook -->
+          <span class="tooltip-content">Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a class="google tooltip">
+          <i class="vicon">g</i><!-- Icon for Google+ -->
+          <span class="tooltip-content">Google+</span>
+        </a>
+      </li>
+      <li>
+        <a class="twitter tooltip" title="Twitter">
+          <i class="vicon">t</i><!-- Icon for Twitter -->
+          <span class="tooltip-content">Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a class="viadeo tooltip" title="Viadeo">
+          <i class="vicon">ô</i><!-- Icon for the letter o -->
+          <i class="vicon">õ</i><!-- Icon for the leaf -->
+          <span class="tooltip-content">Viadeo</span>
+        </a>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">dl</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"share-links"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>Share this page<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"facebook tooltip"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>f<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-comment">&lt;!-- Icon for Facebook --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-content"</span>&gt;</span>Facebook<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"google tooltip"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>g<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-comment">&lt;!-- Icon for Google+ --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-content"</span>&gt;</span>Google+<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"twitter tooltip"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Twitter"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>t<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-comment">&lt;!-- Icon for Twitter --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-content"</span>&gt;</span>Twitter<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"viadeo tooltip"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Viadeo"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>ô<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-comment">&lt;!-- Icon for the letter o --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>õ<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-comment">&lt;!-- Icon for the leaf --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip-content"</span>&gt;</span>Viadeo<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">dl</span>&gt;</span></code></pre>
+
+
           </div>
       
         <h2 id="highlights">Highlights</h2>
@@ -2161,7 +2580,54 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
       
         <h2 id="progress-bar">Progress Bar</h2>
           <div class="category mbxl">
-          partial 'progress-bar' does not exists
+          <p>To change how much the progress bar is filled, you need to modify the width of the element with the classname <strong>.pb-fill</strong></p>
+
+
+<div class="progressbar">
+  <div class="pb-mask">
+    <div class="pb-fill" style="width:33%"></div>
+  </div>
+</div>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progressbar"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pb-mask"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pb-fill"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:33%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="progressbar pb-large">
+  <div class="pb-mask">
+    <div class="pb-fill" style="width:33%"></div>
+  </div>
+</div>
+
+<div class="toggle-code mtm mbxs">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progressbar pb-large"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pb-mask"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pb-fill"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:33%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+
           </div>
       
     

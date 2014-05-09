@@ -69,21 +69,79 @@ p {
     color: @white;
     text-decoration: none;
     line-height:18px;
-    &.active,&:hover {
+    &:hover {
       color:@orange1;
+    }
+  }
+  li {
+    > ul {
+      display: none;
+    }
+  }
+  li.active {
+    > a {
+    color:@orange1;
+    }
+    ul {
+      display: block;
     }
   }
 }
 
+.affix-top {
+  position: static;
+}
+
+.affix {
+  position: fixed; /* Undo the static from mobile first approach */
+  top: 0;
+}
+
+.affix-bottom,
+.affix {
+  width: 20%;
+}
+
+@media (max-width: @pageWidthMax) {
+  /* Widen the fixed sidebar again */
+  .affix-bottom,
+  .affix {
+    width: 20%;
+  }
+}
+
+@media (max-width: @breakpointM) {
+  /* Widen the fixed sidebar again */
+  .affix-bottom,
+  .affix {
+    width: 33.3%;
+  }
+}
+
+@media (max-width: @breakpointS) {
+  /* Widen the fixed sidebar again */
+  .affix-bottom,
+  .affix {
+    position: static;
+    with:auto;
+  }
+}
+
+
 .icons-overview {
+  .icon {
+    min-height:55px;
+    margin:0 0 10px 0;
+  }
   i {
     color:@grayDark;
     font-size:14px;
   }
   pre {
     padding:0;
+    margin:0;
   }
-  code:first-letter {
+  .code-markup code {
     color:@orange1;
   }
 }

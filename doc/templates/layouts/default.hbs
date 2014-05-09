@@ -11,12 +11,13 @@
   {{else}}
     <link rel="stylesheet" href="{{site.assets}}/css/tetra-ui-doc.css" />
   {{/if}}
-  <script src="{{site.assets}}/js/vendor/tetra-js.js"></script>
-  <script src="{{site.assets}}/js/conf/tetra-js.js"></script>
+  <script src="{{site.assets}}/js/vendor/jquery.js"></script>
+  <script src="{{site.assets}}/js/vendor/scrollspy.js"></script>
+  <script src="{{site.assets}}/js/vendor/affix.js"></script>
   <!--[if lt IE 8]><script src="{{site.assets}}/js/vendor/json2.js"></script><![endif]-->
 </head>
 
-<body{{#if rtl}} dir="rtl" class="rtl"{{/if}}>
+<body{{#if rtl}} dir="rtl" class="rtl"{{/if}} data-spy="scroll" data-target=".sidebar-doc" data-offset="50">
 
   <div class="gr">
 

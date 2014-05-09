@@ -741,18 +741,18 @@ textarea {
     *zoom: 1;
   }
   .gu-m-1of2,
-  > .gu-m-2of4,
-  > .gu-m-3of6 {
+  .gu-m-2of4,
+  .gu-m-3of6 {
     width: 50%;
     margin: 0;
   }
   .gu-m-1of3,
-  > .gu-m-2of6 {
+  .gu-m-2of6 {
     width: 33.333333333333336%;
     margin: 0;
   }
   .gu-m-2of3,
-  > .gu-m-4of6 {
+  .gu-m-4of6 {
     width: 66.66666666666667%;
     margin: 0;
   }
@@ -7006,9 +7006,75 @@ p {
   text-decoration: none;
 }
 
-.sidebar-nav a.active,
 .sidebar-nav a:hover {
   color: #f56600;
+}
+
+.sidebar-nav li > ul {
+  display: none;
+}
+
+.sidebar-nav li.active > a {
+  color: #f56600;
+}
+
+.sidebar-nav li.active ul {
+  display: block;
+}
+
+.affix-top {
+  position: static;
+}
+
+.affix {
+  position: fixed;
+  /* Undo the static from mobile first approach */
+
+  top: 0;
+}
+
+.affix-bottom,
+.affix {
+  width: 20%;
+}
+
+@media (max-width: 1020px) {
+  {
+    /* Widen the fixed sidebar again */
+  
+  }
+  .affix-bottom,
+  .affix {
+    width: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  {
+    /* Widen the fixed sidebar again */
+  
+  }
+  .affix-bottom,
+  .affix {
+    width: 33.3%;
+  }
+}
+
+@media (max-width: 480px) {
+  {
+    /* Widen the fixed sidebar again */
+  
+  }
+  .affix-bottom,
+  .affix {
+    position: static;
+    with: auto;
+  }
+}
+
+.icons-overview .icon {
+  min-height: 55px;
+  margin: 0 0 10px 0;
 }
 
 .icons-overview i {
@@ -7018,9 +7084,10 @@ p {
 
 .icons-overview pre {
   padding: 0;
+  margin: 0;
 }
 
-.icons-overview code:first-letter {
+.icons-overview .code-markup code {
   color: #f56600;
 }
 
@@ -7583,7 +7650,7 @@ code.color-transform {
 
 pre {
   padding: 15px;
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   overflow: auto;
   background: #f5f2f0;
 }

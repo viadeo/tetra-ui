@@ -1,6 +1,10 @@
-<p>Growl is a live notification, usualy fixed on top of the page.</p>
+{{#markdown}}
+Growl is a live notification, usualy fixed on top of the page.<br />
+Several kinds of growl: **info**, **success**, **error**, **notification**, **premium**
+{{/markdown}}
 
-  <div class="growl growl-type-info growl-position-center mbs growl-active" style="width: 350px;">
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-info growl-position-center mbs growl-active">
     <button class="growl-close">
       <i class="vicon">×</i>
     </button>
@@ -9,9 +13,11 @@
     info growl with dismiss
     </div>
   </div>
+</div>
 
 {{#each data}}
-  <div class="growl growl-type-{{this}} growl-position-center mbs growl-active" style="width: 350px;">
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-{{this}} growl-position-center mbs growl-active">
     <i class="vicon growl-icon">
     {{#is this 'info'}}
     :
@@ -36,18 +42,21 @@
     {{this}} growl
     </div>
   </div>
+</div>
 {{/each}}
 
-  <div class="growl growl-type-info growl-position-left mbs growl-active" style="width: 350px;">
-    <i class="vicon growl-icon">:</i>
-    <div class="growl-content">
-    left info growl
-    </div>
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="growl growl-type-info growl-position-center mbs growl-active">
+  <button class="growl-close">
+    <i class="vicon">×</i>
+  </button>
+  <i class="vicon growl-icon">:</i>
+  <div class="growl-content">
+  info growl with dismiss
   </div>
+</div>
+```
+{{/markdown}}
 
-  <div class="growl growl-type-info growl-position-right mbs growl-active" style="width: 350px;">
-    <i class="vicon growl-icon">:</i>
-    <div class="growl-content">
-    right info growl
-    </div>
-  </div>

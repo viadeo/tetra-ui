@@ -179,6 +179,12 @@ nav:
       -
         slug: "growl"
         title: "Growl"
+        data:
+          - info
+          - success
+          - error
+          - notification
+          - premium
       -
         slug: "share"
         title: "Share"

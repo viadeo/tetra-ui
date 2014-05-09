@@ -9,12 +9,13 @@
   
     <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc-rtl.css" />
   
-  <script src="/tetra-ui/dist/js/vendor/tetra-js.js"></script>
-  <script src="/tetra-ui/dist/js/conf/tetra-js.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/affix.js"></script>
   <!--[if lt IE 8]><script src="/tetra-ui/dist/js/vendor/json2.js"></script><![endif]-->
 </head>
 
-<body dir="rtl" class="rtl">
+<body dir="rtl" class="rtl" data-spy="scroll" data-target=".sidebar-doc" data-offset="50">
 
   <div class="gr">
 
@@ -25,8 +26,9 @@
     <img src="/tetra-ui/dist/img/tetra-ui/tetra-ui-doc-hd.png" alt="Tetra Ui" class="fluid-media vam"/>
   </h1>
 
-  <nav class='sidebar-nav paxl'>
-    
+  <nav class='sidebar-nav' data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+    <div class="sidebar-doc paxl">
+
   <ul>
   
     <li class="mbxs">
@@ -38,6 +40,7 @@
   
   </ul>
 
+</div>
 
   </nav>
 

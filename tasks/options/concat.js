@@ -3,7 +3,7 @@ var files = require('../build/profile');
 module.exports = {
   js: {
     files: [{
-      '<%= path.js.dist %>/conf/tetra-js.js': 'src/js/conf/tetra-js.js'
+      '<%= path.js.dist %>/vendor/jquery.js': 'bower_components/jquery/dist/jquery.js'
     }]
   },
   less: {
