@@ -1,0 +1,70 @@
+{{#markdown}}
+You can assign spacing to the Tetra UI grid, using the fixed spacing sizes declared in [variables.less](/tetra-ui/doc/helpers.html). The percentage widths of each grid unit will change to accomodate for the extra spacing and to ensure all units are equal widths.
+
+> Tetra UI uses the **@siteWidth** variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the **@siteWidth variable**.
+{{/markdown}}
+
+<div class="bx">
+  <div class="gr grss gr-zebra">
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+  <div class="gr grsl gr-zebra mts">
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+</div>
+
+<table class="table table-text table-hover">
+  <thead>
+    <tr>
+      <th>Class Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class=" language-css"><strong>.grsxs</strong></code></td>
+      <td>Extra small spacing, defined in variables.less as <code class=" language-css">@spacingXs</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grss</strong></code></td>
+      <td>Small spacing, defined in variables.less as <code class=" language-css">@spacingS</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsm</strong></code></td>
+      <td>Medium spacing, defined in variables.less as <code class=" language-css">@spacingM</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsl</strong></code></td>
+      <td>Large spacing, defined in variables.less as <code class=" language-css">@spacingL</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsxl</strong></code></td>
+      <td>Extra large spacing, defined in variables.less as <code class=" language-css">@spacingXl</code></td>
+    </tr>
+  </tbody>
+</table>
+
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="bx">
+  <div class="gr grss">
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-last"> ... </div>
+  </div>
+  <div class="gr grsl mts">
+    <div class="gu gu-1of3"> ... </div>
+    <div class="gu gu-1of3"> ... </div>
+    <div class="gu gu-last"> ... </div>
+  </di
+```
+{{/markdown}}

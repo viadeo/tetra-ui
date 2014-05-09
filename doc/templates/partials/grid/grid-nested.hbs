@@ -1,0 +1,51 @@
+<div class="bx">
+  <div class="gr gr-zebra">
+    <div class="gu gu-2of3 pan pts">
+      <span class="hide-s">.gu</span> .gu-2of3
+      <div class="gr zebra mts">
+        <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+        <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+      </div>
+    </div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+</div>
+
+{{#markdown}}
+### Nesting with siblings
+The example above shows a grid row (**.gr**) nested within a grid unit (**.gu**), thus enabling it to be accompanied by sibling elements. The markup looks like this:
+{{/markdown}}
+
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="gr">
+  <div class="gu gu-2of3">
+    ...
+    <div class="gr">
+      <div class="gu gu-1of2"> ... </div>
+      <div class="gu gu-last"> ... </div>
+    </div>
+  </div>
+  <div class="gu gu-last"> ... </div>
+</div>
+```
+{{/markdown}}
+
+{{#markdown}}
+### Direct nesting
+The other option is to nest your grid units directly in another grid unit. Just add the **.gr** class to an element with the **.gu** class!
+{{/markdown}}
+
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="gr">
+  <div class="gu gu-2of3 gr">
+    <div class="gu gu-1of2"> ... </div>
+    <div class="gu gu-last"> ... </div>
+  </div>
+  <div class="gu gu-last"> ... </div>
+</div>
+```
+{{/markdown}}

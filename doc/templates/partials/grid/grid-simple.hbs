@@ -1,0 +1,49 @@
+{{#markdown}}
+The markup below creates a 5 unit grid row. You will notice that the last child element has the **.gu-last** class. <br />
+This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).
+{{/markdown}}
+
+<div class="bx">
+  <div class="gr gr-zebra">
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-1of5"> ... </div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+  </div>
+
+  <div class="gr gr-zebra mts">
+    <div class="gu gu-1of1"><span class="hide-s">.gu</span> .gu-1of1</div>
+  </div>
+</div>
+
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="gr">
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-last"> ... </div>
+</div>
+```
+{{/markdown}}
