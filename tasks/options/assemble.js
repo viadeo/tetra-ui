@@ -2,6 +2,7 @@ module.exports = {
   options: {
     flatten: true,
     partials: ['<%= path.doc %>/partials/**/*.hbs'],
+    helpers: ['<%= path.doc %>/helpers/*.js'],
     layout: ['<%= path.doc %>/layouts/default.hbs'],
     data: ['<%= path.doc %>/data/*.{json,yml}'],
     marked: {
