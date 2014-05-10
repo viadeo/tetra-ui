@@ -6966,6 +6966,28 @@ p {
   font-size: 24px;
 }
 
+.main blockquote {
+  padding: 0 0 0 15px;
+  border-left: 5px solid #d1dce5;
+}
+
+.main ul {
+  margin: 0 0 15px 0;
+}
+
+.main ul li {
+  margin-right: 15px;
+  list-style: disc;
+}
+
+.main .gr-zebra .gu:nth-child(even) {
+  background-color: #c6e6d7;
+}
+
+.main .gr-zebra .gu:nth-child(odd) {
+  background-color: #7ed1c3;
+}
+
 .header {
   height: 60px;
   line-height: 60px;
@@ -7010,8 +7032,16 @@ p {
   color: #f56600;
 }
 
+.sidebar-nav li {
+  font-size: 14px;
+}
+
 .sidebar-nav li > ul {
   display: none;
+}
+
+.sidebar-nav li > ul > li {
+  font-size: 12px;
 }
 
 .sidebar-nav li.active > a {
@@ -7056,7 +7086,7 @@ p {
   }
   .affix-bottom,
   .affix {
-    width: 33.3%;
+    width: 25%;
   }
 }
 
