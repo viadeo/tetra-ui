@@ -35,6 +35,13 @@ p {
     padding:0 0 0 15px;
     border-left:5px solid @borderColor;
   }
+  ul {
+    margin:0 0 15px 0;
+    li {
+      list-style: disc;
+      .margin-left(@rtl, @spacingM);
+    }
+  }
   .gr-zebra .gu:nth-child(even) {
     background-color: @green4;
   }
@@ -84,8 +91,12 @@ p {
     }
   }
   li {
+    font-size:14px;
     > ul {
       display: none;
+      > li {
+        font-size:12px;
+      }
     }
   }
   li.active {
