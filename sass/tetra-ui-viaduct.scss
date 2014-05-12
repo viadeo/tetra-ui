@@ -914,18 +914,18 @@ textarea {
     *zoom: 1;
   }
   .gu-m-1of2,
-  > .gu-m-2of4,
-  > .gu-m-3of6 {
+  .gu-m-2of4,
+  .gu-m-3of6 {
     width: 50%;
     margin: 0;
   }
   .gu-m-1of3,
-  > .gu-m-2of6 {
+  .gu-m-2of6 {
     width: 33.333333333333336%;
     margin: 0;
   }
   .gu-m-2of3,
-  > .gu-m-4of6 {
+  .gu-m-4of6 {
     width: 66.66666666666667%;
     margin: 0;
   }
