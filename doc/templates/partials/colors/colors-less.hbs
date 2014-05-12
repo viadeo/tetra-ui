@@ -1,0 +1,74 @@
+<h3>Tints & Shades</h3>
+<div class="bx pan context">
+  <div class="gr">
+    {{#with data.tint}}
+      {{#each values}}
+        <div class="gu gu-1of{{../count}} gu-s-1of1">
+          <div class="bg bg-tint-{{this}}">
+          </div>
+          {{#markdown}}
+  ```scss
+  tint(@blue2, {{this}}%)
+  ```
+          {{/markdown}}
+          {{this.count}}
+        </div>
+      {{/each}}
+    {{/with}}
+    {{#with data.shade}}
+      {{#each values}}
+        <div class="gu gu-1of{{../count}} gu-s-1of1">
+          <div class="bg bg-shade-{{this}}">
+          </div>
+          {{#markdown}}
+  ```scss
+  shade(@blue2, {{this}}%)
+  ```
+          {{/markdown}}
+          {{this.count}}
+        </div>
+      {{/each}}
+    {{/with}}
+  </div>
+</div>
+
+<h3>Grayscale</h3>
+{{#with data.grayscale}}
+<div class="bx pan context">
+  <div class="gr">
+    {{#each values}}
+      <div class="gu gu-1of{{../count}} gu-s-1of1">
+        <div class="bg bg-{{@key}}">
+        </div>
+        {{#markdown}}
+```scss
+@{{@key}}: {{this}}
+```
+        {{/markdown}}
+        {{this.count}}
+      </div>
+    {{/each}}
+  </div>
+</div>
+{{/with}}
+
+<h3>Semantic</h3>
+{{#each data.semantic}}
+<h4>{{type}}</h4>
+<div class="bx pan context">
+  <div class="gr">
+    {{#each values}}
+      <div class="gu gu-1of{{../count}} gu-s-1of1">
+        <div class="bg bg-{{@key}}">
+        </div>
+        {{#markdown}}
+```scss
+@{{@key}}: {{this}}
+```
+        {{/markdown}}
+        {{this.count}}
+      </div>
+    {{/each}}
+  </div>
+</div>
+{{/each}}

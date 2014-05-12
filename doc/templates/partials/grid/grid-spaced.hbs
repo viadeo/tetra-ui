@@ -4,20 +4,19 @@ You can assign spacing to the Tetra UI grid, using the fixed spacing sizes decla
 > Tetra UI uses the **@siteWidth** variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the **@siteWidth variable**.
 {{/markdown}}
 
-<div class="bx">
-  <div class="gr grss gr-zebra">
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
-  <div class="gr grsl gr-zebra mts">
-    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
-    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
+<div class="gr grss gr-zebra">
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
 </div>
+<div class="gr grsl gr-zebra mts">
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
 
 <table class="table table-text table-hover">
   <thead>
@@ -50,10 +49,10 @@ You can assign spacing to the Tetra UI grid, using the fixed spacing sizes decla
   </tbody>
 </table>
 
+<div class="code-content">
 {{> toggle-code}}
 {{#markdown}}
 ```html
-<div class="bx">
   <div class="gr grss">
     <div class="gu gu-1of5"> ... </div>
     <div class="gu gu-1of5"> ... </div>
@@ -65,7 +64,8 @@ You can assign spacing to the Tetra UI grid, using the fixed spacing sizes decla
     <div class="gu gu-1of3"> ... </div>
     <div class="gu gu-1of3"> ... </div>
     <div class="gu gu-last"> ... </div>
-  </di
+  </div>
 ```
 {{/markdown}}
 {{> copy-code}}
+</div>
