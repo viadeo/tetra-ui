@@ -3,7 +3,8 @@ var files = require('../build/profile');
 module.exports = {
   js: {
     files: [{
-      '<%= path.js.dist %>/vendor/jquery.js': 'bower_components/jquery/dist/jquery.js'
+      '<%= path.js.dist %>/vendor/jquery.js': 'bower_components/jquery/dist/jquery.js',
+      '<%= path.js.dist %>/doc/main.js': 'src/js/doc/main.js'
     }]
   },
   less: {

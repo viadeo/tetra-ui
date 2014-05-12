@@ -9,6 +9,7 @@
   
     <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.css" />
   
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
   <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
   <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
   <script src="/tetra-ui/dist/js/vendor/affix.js"></script>
@@ -73,7 +74,7 @@
     </li >
   
     <li class="mbxs">
-      <a href="#responsive-design ">
+      <a href="#responsive-design">
         Responsive Design
       </a>
       
@@ -159,9 +160,9 @@
           <div class="gu-last tar">
             <span class="toggle-mode">
 
-  <span class="mrs">Development</span>
+  <span class="mrs">Code</span>
 
-  <span id="mode" class="flipswitch flipswitch-yes bootnode">
+  <span id="mode" class="flipswitch flipswitch-no bootnode">
     <label class="flipswitch-lbl-yes">
       <input type="radio" checked="checked" name="mode"> On
     </label>
@@ -191,13 +192,13 @@
         
 
 
-  <div class="section ">
+  <div class="grid-system-content section ">
   <h1 id="grid-system">Grid System</h1>
-    partial 'grid-system' does not exists
+    
     
       
         <h2 id="grid-introduction">Introduction</h2>
-          <div class="category mbxl">
+          <div class="grid-introduction-content category mbxl">
           <p>The Tetra UI grid is a percentage-based, nestable grid system. Each grid row (<strong>.gr</strong>) takes up 100% of the parent containers&#39; width and can contain up to 5 grid units (<strong>.gu</strong>). These grid units can then contain nested grid rows, maximizing flexibility and laying the foundations for a responsive layout.</p>
 <p>When creating layouts, it is often useful to have a guide. To do this just add the <strong>.gr-zebra</strong> class to your grid row (<strong>.gr</strong>)</p>
 
@@ -205,44 +206,43 @@
           </div>
       
         <h2 id="grid-simple">Ex: Simple</h2>
-          <div class="category mbxl">
+          <div class="grid-simple-content category mbxl">
           <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <strong>.gu-last</strong> class. <br />
 This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
 
 
-<div class="bx">
-  <div class="gr gr-zebra">
-    <div class="gu gu-1of5"> ... </div>
-    <div class="gu gu-1of5"> ... </div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
-
-  <div class="gr gr-zebra mts">
-    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
-    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
-    <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
-
-  <div class="gr gr-zebra mts">
-    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
-    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
-
-  <div class="gr gr-zebra mts">
-    <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
-
-  <div class="gr gr-zebra mts">
-    <div class="gu gu-1of1"><span class="hide-s">.gu</span> .gu-1of1</div>
-  </div>
+<div class="gr gr-zebra">
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
 </div>
 
-<div class="toggle-code mtm mbxs">
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+  <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+  <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of1"><span class="hide-s">.gu</span> .gu-1of1</div>
+</div>
+
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -259,29 +259,36 @@ This element consumes the remaining width of the grid unit and is useful for fix
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
         <h2 id="grid-nested">Ex: Nested</h2>
-          <div class="category mbxl">
-          <div class="bx">
-  <div class="gr gr-zebra">
-    <div class="gu gu-2of3 pan pts">
-      <span class="hide-s">.gu</span> .gu-2of3
-      <div class="gr zebra mts">
-        <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
-        <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-      </div>
+          <div class="grid-nested-content category mbxl">
+          <div class="gr gr-zebra">
+  <div class="gu gu-2of3 pan pts">
+    <span class="hide-s">.gu</span> .gu-2of3
+    <div class="gr zebra mts">
+      <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+      <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
     </div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
   </div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
 </div>
+
 
 <h3 id="nesting-with-siblings">Nesting with siblings</h3>
 <p>The example above shows a grid row (<strong>.gr</strong>) nested within a grid unit (<strong>.gu</strong>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
 
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -301,12 +308,20 @@ This element consumes the remaining width of the grid unit and is useful for fix
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 <h3 id="direct-nesting">Direct nesting</h3>
 <p>The other option is to nest your grid units directly in another grid unit. Just add the <strong>.gr</strong> class to an element with the <strong>.gu</strong> class!</p>
 
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -323,31 +338,37 @@ This element consumes the remaining width of the grid unit and is useful for fix
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
         <h2 id="grid-spaced">Ex: Spaced</h2>
-          <div class="category mbxl">
+          <div class="grid-spaced-content category mbxl">
           <p>You can assign spacing to the Tetra UI grid, using the fixed spacing sizes declared in <a href="/tetra-ui/doc/helpers.html">variables.less</a>. The percentage widths of each grid unit will change to accomodate for the extra spacing and to ensure all units are equal widths.</p>
 <blockquote>
 <p>Tetra UI uses the <strong>@siteWidth</strong> variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the <strong>@siteWidth variable</strong>.</p>
 </blockquote>
 
 
-<div class="bx">
-  <div class="gr grss gr-zebra">
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
-  <div class="gr grsl gr-zebra mts">
-    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
-    <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
-    <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
-  </div>
+<div class="gr grss gr-zebra">
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
 </div>
+<div class="gr grsl gr-zebra mts">
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
 
 <table class="table table-text table-hover">
   <thead>
@@ -380,7 +401,8 @@ This element consumes the remaining width of the grid unit and is useful for fix
   </tbody>
 </table>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -389,8 +411,7 @@ This element consumes the remaining width of the grid unit and is useful for fix
   </a>
 </div>
 
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bx"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr grss"</span>&gt;</span>
+<pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr grss"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -401,26 +422,32 @@ This element consumes the remaining width of the grid unit and is useful for fix
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">di</span></span></code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
         <h2 id="grid-center">Ex: Center</h2>
-          <div class="category mbxl">
+          <div class="grid-center-content category mbxl">
           <p>Using the <strong>.bac</strong> (Block Align Center) class as described on the <a href="/tetra-ui/doc/helpers.html">helpers</a> page.</p>
 
 
-<div class="bx">
-  <div class="gr gr-zebra">
-    <div class="gu gu-1of5 bac"><span class="hide-s">.gu</span> .gu-1of5 .bac</div>
-    <div class="gu gu-1of4 bac"><span class="hide-s">.gu</span> .gu-1of4 .bac</div>
-    <div class="gu gu-1of3 bac"><span class="hide-s">.gu</span> .gu-1of3 .bac</div>
-    <div class="gu gu-1of2 bac"><span class="hide-s">.gu</span> .gu-1of2 .bac</div>
-  </div>
+<div class="gr gr-zebra">
+  <div class="gu gu-1of5 bac"><span class="hide-s">.gu</span> .gu-1of5 .bac</div>
+  <div class="gu gu-1of4 bac"><span class="hide-s">.gu</span> .gu-1of4 .bac</div>
+  <div class="gu gu-1of3 bac"><span class="hide-s">.gu</span> .gu-1of3 .bac</div>
+  <div class="gu gu-1of2 bac"><span class="hide-s">.gu</span> .gu-1of2 .bac</div>
 </div>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -436,19 +463,26 @@ This element consumes the remaining width of the grid unit and is useful for fix
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of2 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
-  <h1 id="responsive-design ">Responsive Design</h1>
-    partial 'responsive-design ' does not exists
+  <div class="responsive-design-content section divider-before ptl">
+  <h1 id="responsive-design">Responsive Design</h1>
+    
     
       
         <h2 id="responsive-introduction">Introduction</h2>
-          <div class="category mbxl">
+          <div class="responsive-introduction-content category mbxl">
           <p>The responsive grid has a desktop first approach. It comes with two breakpoints:</p>
 <ul>
 <li>a medium breakpoint (m) for middle sized devices, tablets for example</li>
@@ -463,7 +497,8 @@ This element consumes the remaining width of the grid unit and is useful for fix
 <h3 id="fluid-container">Fluid container</h3>
 
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -474,10 +509,18 @@ This element consumes the remaining width of the grid unit and is useful for fix
 
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fluid-container"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 <h3>Grid markup</h3>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -502,12 +545,19 @@ This element consumes the remaining width of the grid unit and is useful for fix
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 
           </div>
       
         <h2 id="responsive-helpers">Helpers</h2>
-          <div class="category mbxl">
+          <div class="responsive-helpers-content category mbxl">
           <h3 id="visibility">Visibility</h3>
 <blockquote>
 <p>Resizing your browser window will show the effect of the different show and hide classes.</p>
@@ -787,7 +837,7 @@ This element consumes the remaining width of the grid unit and is useful for fix
           </div>
       
         <h2 id="responsive-examples">Ex: desktop &amp; mobile</h2>
-          <div class="category mbxl">
+          <div class="responsive-examples-content category mbxl">
           <div class="gr grsl">
 
   <div class="gu gu-3of5 gu-m-1of2 gu-s-1of1">
@@ -818,7 +868,8 @@ This element consumes the remaining width of the grid unit and is useful for fix
 
 </div>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -857,6 +908,13 @@ This element consumes the remaining width of the grid unit and is useful for fix
 
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
@@ -873,6 +931,8 @@ This element consumes the remaining width of the grid unit and is useful for fix
     </div>
 
   </div>
+
+  <script src="/tetra-ui/dist/js/doc/main.js"></script>
 
 </body>
 </html>

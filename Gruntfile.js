@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         dist:'dist/css'
       },
       js : {
-        src: 'src/js/coremvc/comps',
+        src: 'src/js/',
         dist:'dist/js'
       },
       doc : 'doc/templates'

@@ -21,6 +21,19 @@ nav:
   -
     slug: "colors"
     title: "Colors"
+    nav:
+      -
+        slug: "colors-palette"
+        title: "Palette"
+        data: <%= colors.palette %>
+      -
+        slug: "colors-less"
+        title: "Using Less"
+        data:
+          tint: <%= colors.tint %>
+          shade: <%= colors.shade %>
+          grayscale: <%= colors.grayscale %>
+          semantic: <%= colors.semantic %>
   -
     slug: "tables"
     title: "Tables"

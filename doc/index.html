@@ -9,6 +9,7 @@
   
     <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.css" />
   
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
   <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
   <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
   <script src="/tetra-ui/dist/js/vendor/affix.js"></script>
@@ -76,6 +77,22 @@
       <a href="#colors">
         Colors
       </a>
+      
+        <ul class="plm">
+        
+          <li class="mbn">
+            <a href="#colors-palette">
+              Palette
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#colors-less">
+              Using Less
+            </a>
+          </li>
+        
+        </ul>
       
     </li >
   
@@ -477,9 +494,9 @@
           <div class="gu-last tar">
             <span class="toggle-mode">
 
-  <span class="mrs">Development</span>
+  <span class="mrs">Code</span>
 
-  <span id="mode" class="flipswitch flipswitch-yes bootnode">
+  <span id="mode" class="flipswitch flipswitch-no bootnode">
     <label class="flipswitch-lbl-yes">
       <input type="radio" checked="checked" name="mode"> On
     </label>
@@ -509,254 +526,682 @@
         
 
 
-  <div class="section ">
+  <div class="typography-content section ">
   <h1 id="typography">Typography</h1>
-    partial 'typography' does not exists
+    
     
       
         <h2 id="headings">Headings</h2>
-          <div class="category mbxl">
-          partial 'headings' does not exists
+          <div class="headings-content category mbxl">
+          
           </div>
       
         <h2 id="links">Links</h2>
-          <div class="category mbxl">
-          partial 'links' does not exists
+          <div class="links-content category mbxl">
+          
           </div>
       
         <h2 id="paragraphs">Paragraphs</h2>
-          <div class="category mbxl">
-          partial 'paragraphs' does not exists
+          <div class="paragraphs-content category mbxl">
+          
           </div>
       
         <h2 id="Lists">lists</h2>
-          <div class="category mbxl">
-          partial 'Lists' does not exists
+          <div class="Lists-content category mbxl">
+          
           </div>
       
         <h2 id="Panels">panels</h2>
-          <div class="category mbxl">
-          partial 'Panels' does not exists
+          <div class="Panels-content category mbxl">
+          
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="colors-content section divider-before ptl">
   <h1 id="colors">Colors</h1>
-    partial 'colors' does not exists
+    
+    
+      
+        <h2 id="colors-palette">Palette</h2>
+          <div class="colors-palette-content category mbxl">
+          <p>Visual identity & branding colors</p>
+
+
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-orange1">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@orange1: <span class="hljs-hexcolor">#f56600</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-orange2">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@orange2: <span class="hljs-hexcolor">#f1532e</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-orange3">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@orange3: <span class="hljs-hexcolor">#f78d2d</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-orange4">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@orange4: <span class="hljs-hexcolor">#feae35</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-green1">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@green1: <span class="hljs-hexcolor">#019875</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-green2">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@green2: <span class="hljs-hexcolor">#0c9f9b</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-green3">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@green3: <span class="hljs-hexcolor">#53c1af</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-green4">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@green4: <span class="hljs-hexcolor">#c6e6d7</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-blue1">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@blue1: <span class="hljs-hexcolor">#006aa8</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-blue2">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@blue2: <span class="hljs-hexcolor">#007bc2</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-blue3">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@blue3: <span class="hljs-hexcolor">#42a2d6</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-blue4">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@blue4: <span class="hljs-hexcolor">#1f668c</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-blue5">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@blue5: <span class="hljs-hexcolor">#7dcde3</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of2 gu-s-1of1">
+        <div class="bg bg-purple1">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@purple1: <span class="hljs-hexcolor">#471d63</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of2 gu-s-1of1">
+        <div class="bg bg-purple2">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@purple2: <span class="hljs-hexcolor">#685985</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+
+
+          </div>
+      
+        <h2 id="colors-less">Using Less</h2>
+          <div class="colors-less-content category mbxl">
+          <h3>Tints & Shades</h3>
+<div class="bx pan context">
+  <div class="gr">
+    
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-tint-50">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">tint(@blue2, <span class="hljs-number">50</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-tint-40">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">tint(@blue2, <span class="hljs-number">40</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-tint-30">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">tint(@blue2, <span class="hljs-number">30</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-tint-20">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">tint(@blue2, <span class="hljs-number">20</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-tint-10">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">tint(@blue2, <span class="hljs-number">10</span>%)</span></code></pre>
+
+          
+        </div>
+      
+    
+    
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-shade-10">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">shade(@blue2, <span class="hljs-number">10</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-shade-20">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">shade(@blue2, <span class="hljs-number">20</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-shade-30">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">shade(@blue2, <span class="hljs-number">30</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-shade-40">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">shade(@blue2, <span class="hljs-number">40</span>%)</span></code></pre>
+
+          
+        </div>
+      
+        <div class="gu gu-1of5 gu-s-1of1">
+          <div class="bg bg-shade-50">
+          </div>
+          <pre><code class="language-scss">  <span class="hljs-function">shade(@blue2, <span class="hljs-number">50</span>%)</span></code></pre>
+
+          
+        </div>
+      
+    
+  </div>
+</div>
+
+<h3>Grayscale</h3>
+
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of6 gu-s-1of1">
+        <div class="bg bg-black">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@black: <span class="hljs-hexcolor">#000000</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of6 gu-s-1of1">
+        <div class="bg bg-grayDark">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@grayDark: <span class="hljs-hexcolor">#404040</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of6 gu-s-1of1">
+        <div class="bg bg-gray">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@gray: <span class="hljs-hexcolor">#808080</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of6 gu-s-1of1">
+        <div class="bg bg-grayLight">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@grayLight: <span class="hljs-hexcolor">#bfbfbf</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of6 gu-s-1of1">
+        <div class="bg bg-grayLighter">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@grayLighter: <span class="hljs-hexcolor">#e6e6e6</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of6 gu-s-1of1">
+        <div class="bg bg-white">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@white: <span class="hljs-hexcolor">#ffffff</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+
+<h3>Semantic</h3>
+
+<h4>Base</h4>
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-baseFontColor">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@baseFontColor: <span class="hljs-hexcolor">#262626</span></span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-pageBg">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@pageBg: <span class="hljs-hexcolor">#e8e9eb</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-linkColor">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@linkColor: <span class="hljs-hexcolor">#007de3</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-linkColorHover">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@linkColorHover: <span class="hljs-hexcolor">#0071cc</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of5 gu-s-1of1">
+        <div class="bg bg-overlayBorder">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@overlayBorder: <span class="hljs-hexcolor">#273038</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+<h4>Panel</h4>
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-panelBackground">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@panelBackground: <span class="hljs-hexcolor">#f5f7f9</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-panelBorder">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@panelBorder: <span class="hljs-hexcolor">#e4eaf0</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-panelBorderDarker">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@panelBorderDarker: <span class="hljs-hexcolor">#b7c8d6</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of4 gu-s-1of1">
+        <div class="bg bg-borderColor">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@borderColor: <span class="hljs-hexcolor">#d1dce5</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+<h4>Context</h4>
+<div class="bx pan context">
+  <div class="gr">
+    
+      <div class="gu gu-1of3 gu-s-1of1">
+        <div class="bg bg-highlightColor">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@highlightColor: <span class="hljs-hexcolor">#f4f2ca</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of3 gu-s-1of1">
+        <div class="bg bg-errorText">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@errorText: <span class="hljs-hexcolor">#d54243</span>;</span></code></pre>
+
+        
+      </div>
+    
+      <div class="gu gu-1of3 gu-s-1of1">
+        <div class="bg bg-premiumColor">
+        </div>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@premiumColor: <span class="hljs-hexcolor">#ffbb12</span>;</span></code></pre>
+
+        
+      </div>
+    
+  </div>
+</div>
+
+
+          </div>
+      
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="tables-content section divider-before ptl">
   <h1 id="tables">Tables</h1>
-    partial 'tables' does not exists
+    
     
       
         <h2 id="tables-basic-example">Basic examples</h2>
-          <div class="category mbxl">
-          partial 'tables-basic-example' does not exists
+          <div class="tables-basic-example-content category mbxl">
+          
           </div>
       
         <h2 id="tables-text-rows">Text rows</h2>
-          <div class="category mbxl">
-          partial 'tables-text-rows' does not exists
+          <div class="tables-text-rows-content category mbxl">
+          
           </div>
       
         <h2 id="tables-zebra-rows">Zebra rows</h2>
-          <div class="category mbxl">
-          partial 'tables-zebra-rows' does not exists
+          <div class="tables-zebra-rows-content category mbxl">
+          
           </div>
       
         <h2 id="tables-hover-rows">hover rows</h2>
-          <div class="category mbxl">
-          partial 'tables-hover-rows' does not exists
+          <div class="tables-hover-rows-content category mbxl">
+          
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="boxes-content section divider-before ptl">
   <h1 id="boxes">Boxes</h1>
-    partial 'boxes' does not exists
+    
     
       
         <h2 id="boxes-basic-example">Basic examples</h2>
-          <div class="category mbxl">
-          partial 'boxes-basic-example' does not exists
+          <div class="boxes-basic-example-content category mbxl">
+          
           </div>
       
         <h2 id="boxes-aside">Aside boxes</h2>
-          <div class="category mbxl">
-          partial 'boxes-aside' does not exists
+          <div class="boxes-aside-content category mbxl">
+          
           </div>
       
         <h2 id="boxes-editable">Editable boxes</h2>
-          <div class="category mbxl">
-          partial 'boxes-editable' does not exists
+          <div class="boxes-editable-content category mbxl">
+          
           </div>
       
         <h2 id="boxes-flippable">Flippable boxes</h2>
-          <div class="category mbxl">
-          partial 'boxes-flippable' does not exists
+          <div class="boxes-flippable-content category mbxl">
+          
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="forms-content section divider-before ptl">
   <h1 id="forms">Forms</h1>
-    partial 'forms' does not exists
+    
     
       
         <h2 id="forms-basic-example">Basic examples</h2>
-          <div class="category mbxl">
-          partial 'forms-basic-example' does not exists
+          <div class="forms-basic-example-content category mbxl">
+          
           </div>
       
         <h2 id="forms-inline">Inline form</h2>
-          <div class="category mbxl">
-          partial 'forms-inline' does not exists
+          <div class="forms-inline-content category mbxl">
+          
           </div>
       
         <h2 id="forms-horizontal">Horizontal form</h2>
-          <div class="category mbxl">
-          partial 'forms-horizontal' does not exists
+          <div class="forms-horizontal-content category mbxl">
+          
           </div>
       
         <h2 id="forms-states">States form</h2>
-          <div class="category mbxl">
-          partial 'forms-states' does not exists
+          <div class="forms-states-content category mbxl">
+          
           </div>
       
         <h2 id="form-placeholder">Placeholders</h2>
-          <div class="category mbxl">
-          partial 'form-placeholder' does not exists
+          <div class="form-placeholder-content category mbxl">
+          
           </div>
       
         <h2 id="form-extending">Extending form</h2>
-          <div class="category mbxl">
-          partial 'form-extending' does not exists
+          <div class="form-extending-content category mbxl">
+          
           </div>
       
         <h2 id="form-custom-buttons">Custom radio &amp; checkbox</h2>
-          <div class="category mbxl">
-          partial 'form-custom-buttons' does not exists
+          <div class="form-custom-buttons-content category mbxl">
+          
           </div>
       
         <h2 id="form-custom-select">Custom select</h2>
-          <div class="category mbxl">
-          partial 'form-custom-select' does not exists
+          <div class="form-custom-select-content category mbxl">
+          
           </div>
       
         <h2 id="switch-buttons">Switch buttons</h2>
-          <div class="category mbxl">
-          partial 'switch-buttons' does not exists
+          <div class="switch-buttons-content category mbxl">
+          
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="buttons-content section divider-before ptl">
   <h1 id="buttons">Buttons</h1>
-    partial 'buttons' does not exists
+    
     
       
         <h2 id="buttons-basic-example">Basic examples</h2>
-          <div class="category mbxl">
-          partial 'buttons-basic-example' does not exists
+          <div class="buttons-basic-example-content category mbxl">
+          
           </div>
       
         <h2 id="dropdowns-examples">Dropdown examples</h2>
-          <div class="category mbxl">
-          partial 'dropdowns-examples' does not exists
+          <div class="dropdowns-examples-content category mbxl">
+          
           </div>
       
         <h2 id="flipswitch-buttons">Flipswitch Buttons</h2>
-          <div class="category mbxl">
-          partial 'flipswitch-buttons' does not exists
+          <div class="flipswitch-buttons-content category mbxl">
+          
           </div>
       
         <h2 id="toggle-buttons">Toggle Buttons</h2>
-          <div class="category mbxl">
-          partial 'toggle-buttons' does not exists
+          <div class="toggle-buttons-content category mbxl">
+          
           </div>
       
         <h2 id="switch-buttons">Switch buttons</h2>
-          <div class="category mbxl">
-          partial 'switch-buttons' does not exists
+          <div class="switch-buttons-content category mbxl">
+          
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="navigation-content section divider-before ptl">
   <h1 id="navigation">Navigation</h1>
-    partial 'navigation' does not exists
+    
     
       
         <h2 id="navigation-nav">Nav menu</h2>
-          <div class="category mbxl">
-          partial 'navigation-nav' does not exists
+          <div class="navigation-nav-content category mbxl">
+          
           </div>
       
         <h2 id="navigation-tabs">Tabs</h2>
-          <div class="category mbxl">
-          partial 'navigation-tabs' does not exists
+          <div class="navigation-tabs-content category mbxl">
+          
           </div>
       
         <h2 id="navigation-step">Step Navigation</h2>
-          <div class="category mbxl">
-          partial 'navigation-step' does not exists
+          <div class="navigation-step-content category mbxl">
+          
           </div>
       
         <h2 id="navigation-pagination">Pagination</h2>
-          <div class="category mbxl">
-          partial 'navigation-pagination' does not exists
+          <div class="navigation-pagination-content category mbxl">
+          
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="dialogs-content section divider-before ptl">
   <h1 id="dialogs">Dialogs</h1>
-    partial 'dialogs' does not exists
+    
     
       
         <h2 id="tooltips">Tooltips</h2>
-          <div class="category mbxl">
-          partial 'tooltips' does not exists
+          <div class="tooltips-content category mbxl">
+          
           </div>
       
         <h2 id="popovers">Popovers</h2>
-          <div class="category mbxl">
-          partial 'popovers' does not exists
+          <div class="popovers-content category mbxl">
+          
           </div>
       
         <h2 id="popins">Popins</h2>
-          <div class="category mbxl">
-          partial 'popins' does not exists
+          <div class="popins-content category mbxl">
+          
           </div>
       
         <h2 id="pagination">Pagination</h2>
-          <div class="category mbxl">
-          partial 'pagination' does not exists
+          <div class="pagination-content category mbxl">
+          
           </div>
       
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="icons-content section divider-before ptl">
   <h1 id="icons">Icons</h1>
-    partial 'icons' does not exists
+    
     
       
         <h2 id="icons-overview">Overview</h2>
-          <div class="category mbxl">
+          <div class="icons-overview-content category mbxl">
           <p>The base font acts as a parallel solution to the global image sprite. The icon font really shines on mobile and HiDPI devices where it reveals all of its vector awesomeness</p>
 
 
-<div class="bx icons-overview">
+<div class="bx">
   <div class="gr mbm">
     
         <div class="gu gu-1of5 gu-m-1of1 icon">
@@ -1875,11 +2320,12 @@
           </div>
       
         <h2 id="icons-example">How to use</h2>
-          <div class="category mbxl">
+          <div class="icons-example-content category mbxl">
           <p>This is the simple tag to display an icon, where c is the character (icon) you want to display. Then you can use your own styles on top of this.</p>
 
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -1892,12 +2338,19 @@
   c
 <span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 
           </div>
       
         <h2 id="icons-download">Download</h2>
-          <div class="category mbxl">
+          <div class="icons-download-content category mbxl">
           <p>
   For desktop use you can download and install the OpenType font file:
 </p>
@@ -1910,19 +2363,20 @@
     
   </div>
 
-  <div class="section divider-before ptl">
+  <div class="components-content section divider-before ptl">
   <h1 id="components">Components</h1>
-    partial 'components' does not exists
+    
     
       
         <h2 id="badges">Badges</h2>
-          <div class="category mbxl">
+          <div class="badges-content category mbxl">
           <p>Badges are used as notification indicators (new messages, new requests).</p>
 
 
 <span class="ui-badge">Primary badge</span>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -1933,10 +2387,18 @@
 
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-badge"</span>&gt;</span>123<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 <span class="ui-badge ui-badge-alt">Secondary badge</span>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -1947,11 +2409,18 @@
 
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-badge ui-badge-alt"</span>&gt;</span>123<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>/span&gt;</code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
         <h2 id="labels">Labels</h2>
-          <div class="category mbxl">
+          <div class="labels-content category mbxl">
           <p>Labels are essentially used for clickable keywords.</p>
 
 <span class="ui-label">
@@ -1962,7 +2431,8 @@
   <a href=""><i class="vicon">&times;</i></a>
 </span>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -1971,20 +2441,28 @@
   </a>
 </div>
 
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-label"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-label mbn"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Lorem<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-label"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui-label mbn"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
 
-<span class="ui-label ui-label-premium">
+</div>
+
+<span class="ui-label ui-label-premium mbn">
   <a href="">lorem ipsum</a>
 </span>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -1997,11 +2475,18 @@
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
         <h2 id="tags">Tags</h2>
-          <div class="category mbxl">
+          <div class="tags-content category mbxl">
           
 
 <p>Tags are not clickable, they only have a remove button.</p>
@@ -2009,7 +2494,8 @@
 <span class="ui-tag">Consectetur <a class="remove" href=""><i class="vicon">×</i></a></span>
 <span class="ui-tag">Sed do <a class="remove" href=""><i class="vicon">×</i></a></span>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2025,11 +2511,18 @@
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
         <h2 id="alerts">Alerts</h2>
-          <div class="category mbxl">
+          <div class="alerts-content category mbxl">
           <p>Alerts have an optional <strong>close button</strong> and <strong>icon</strong>.<br />
 Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong>error</strong>, <strong>form-error</strong>, <strong>notification</strong>, <strong>premium</strong>
 </ul></p>
@@ -2193,7 +2686,8 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
 </div>
 
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2214,12 +2708,19 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 
           </div>
       
         <h2 id="cards">Cards</h2>
-          <div class="category mbxl">
+          <div class="cards-content category mbxl">
           <p>This is not really a component but rather a style guide to make your own card components using the right typography, colors, alignments. Feel free to use it as a skeleton!</p>
 
 <div class="gr grsxl">
@@ -2254,7 +2755,8 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
       </div>
     </div>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2293,6 +2795,13 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
   </div>
 
@@ -2318,7 +2827,8 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
       </div>
     </div>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2352,6 +2862,13 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
   </div>
 
@@ -2361,7 +2878,7 @@ Several kinds of alert: <strong>info</strong>, <strong>success</strong>, <strong
           </div>
       
         <h2 id="growl">Growl</h2>
-          <div class="category mbxl">
+          <div class="growl-content category mbxl">
           <p>Growl is a live notification, usualy fixed on top of the page.<br />
 Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong>error</strong>, <strong>notification</strong>, <strong>premium</strong></p>
 
@@ -2470,7 +2987,8 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
 </div>
 
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2489,12 +3007,19 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 
           </div>
       
         <h2 id="share">Share</h2>
-          <div class="category mbxl">
+          <div class="share-content category mbxl">
           <dl class="share-links">
   <dt>Share this page</dt>
   <dd>
@@ -2528,7 +3053,8 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
   </dd>
 </dl>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2570,16 +3096,23 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
   <span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">dl</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
           </div>
       
         <h2 id="highlights">Highlights</h2>
-          <div class="category mbxl">
-          partial 'highlights' does not exists
+          <div class="highlights-content category mbxl">
+          
           </div>
       
         <h2 id="progress-bar">Progress Bar</h2>
-          <div class="category mbxl">
+          <div class="progress-bar-content category mbxl">
           <p>To change how much the progress bar is filled, you need to modify the width of the element with the classname <strong>.pb-fill</strong></p>
 
 
@@ -2589,7 +3122,8 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
   </div>
 </div>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2604,6 +3138,13 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 <div class="progressbar pb-large">
   <div class="pb-mask">
@@ -2611,7 +3152,8 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
   </div>
 </div>
 
-<div class="toggle-code mtm mbxs">
+<div class="code-content">
+<div class="toggle-code">
   <a class='show'>
     show code
   </a>
@@ -2626,6 +3168,13 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
 
 
           </div>
@@ -2643,6 +3192,8 @@ Several kinds of growl: <strong>info</strong>, <strong>success</strong>, <strong
     </div>
 
   </div>
+
+  <script src="/tetra-ui/dist/js/doc/main.js"></script>
 
 </body>
 </html>
