@@ -11,7 +11,6 @@ html {
 
 body {
   height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size:14px;
 }
 
@@ -23,24 +22,24 @@ p {
   min-height: 100%;
   background: @pageBg;
 
-  h1, h2, h3 {
-    font-weight: normal;
-    padding-top:10px;
-    font-family: 'Source Sans Pro', sans-serif;
-  }
-  h1 {
-    font-size:32px;
-    margin:0 0 15px 0;
-    font-weight: 600;
-  }
+  // h1[id*="language-"], h2, h3 {
+  //   font-weight: normal;
+  //   padding-top:10px;
+  //   font-family: 'Source Sans Pro', sans-serif;
+  // }
+  // h1 {
+  //   font-size:32px;
+  //   margin:0 0 15px 0;
+  //   font-weight: 600;
+  // }
 
-  h2 {
-    font-size:24px;
-  }
+  // h2 {
+  //   font-size:24px;
+  // }
 
-  h3 {
-    font-size:18px;
-  }
+  // h3 {
+  //   font-size:18px;
+  // }
 
   blockquote {
     padding:0 0 0 15px;
@@ -179,6 +178,15 @@ p {
   position: fixed; /* Undo the static from mobile first approach */
   top: 0;
   z-index: 1000;
+}
+
+.headings-content {
+  .main-headings {
+    pre {
+      padding:0;
+      background:none;
+    }
+  }
 }
 
 .affix-sidebar {
