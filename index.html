@@ -12,7 +12,6 @@
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
   <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
   <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
-  <script src="/tetra-ui/dist/js/vendor/affix.js"></script>
   <!--[if lt IE 8]><script src="/tetra-ui/dist/js/vendor/json2.js"></script><![endif]-->
 </head>
 
@@ -508,7 +507,197 @@
       
         <h2 id="headings">Headings</h2>
           <div class="headings-content category mbxl">
-          
+          <p>All HTML headings from <strong>h1</strong> to <strong>h6</strong> are available, and there is a special case for the page header with an optional subheading.<br />
+A set of alternate headings with borders is also available.</p>
+<p>Using the <strong>.h1</strong>, <strong>.h2</strong>, <strong>.h3</strong>, <strong>.h4</strong>, <strong>.h5</strong>, <strong>.h6</strong> classes activates an alternative typography.</p>
+
+
+<div class="main-headings">
+
+  <h3>Default</h3>
+
+    <div class="gr mbs">
+      <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span></code></pre>
+
+      </div>
+      <div class="gu-last">
+          <h1>A smart</h1>
+      </div>
+    </div>
+    <div class="gr mbs">
+      <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span></code></pre>
+
+      </div>
+      <div class="gu-last">
+          <h2>easy-to-use</h2>
+      </div>
+    </div>
+    <div class="gr mbs">
+      <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span></code></pre>
+
+      </div>
+      <div class="gu-last">
+          <h3>toolkit</h3>
+      </div>
+    </div>
+    <div class="gr mbs">
+      <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span></code></pre>
+
+      </div>
+      <div class="gu-last">
+          <h4>for creating</h4>
+      </div>
+    </div>
+    <div class="gr mbs">
+      <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span></code></pre>
+
+      </div>
+      <div class="gu-last">
+          <h5>rich interfaces</h5>
+      </div>
+    </div>
+    <div class="gr">
+      <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span></code></pre>
+
+      </div>
+      <div class="gu-last">
+          <h6>in lightning speed!</h6>
+      </div>
+    </div>
+
+
+  <h3>Alternative</h3>
+
+<div class="gr mbs">
+  <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h-lead"</span>&gt;</span></code></pre>
+
+  </div>
+  <div class="gu-last">
+      <h1 class="h-lead">A smart</h1>
+  </div>
+</div>
+
+
+<div class="gr mbs">
+  <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h1"</span>&gt;</span></code></pre>
+
+  </div>
+  <div class="gu-last">
+      <h1 class="h1">A smart</h1>
+  </div>
+</div>
+
+<div class="gr mbs">
+  <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h2"</span>&gt;</span></code></pre>
+
+  </div>
+  <div class="gu-last">
+      <h2 class="h2">easy-to-use</h2>
+  </div>
+</div>
+<div class="gr mbs">
+  <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h3"</span>&gt;</span></code></pre>
+
+  </div>
+  <div class="gu-last">
+      <h3 class="h3">toolkit</h3>
+  </div>
+</div>
+<div class="gr mbs">
+  <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h4"</span>&gt;</span></code></pre>
+
+  </div>
+  <div class="gu-last">
+      <h4 class="h4">for creating</h4>
+  </div>
+</div>
+<div class="gr mbs">
+  <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h5"</span>&gt;</span></code></pre>
+
+  </div>
+  <div class="gu-last">
+      <h5 class="h5">rich interfaces</h5>
+  </div>
+</div>
+<div class="gr">
+  <div class="gu gu-1of3 gu-m-1of2">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h6</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h6"</span>&gt;</span></code></pre>
+
+  </div>
+  <div class="gu-last">
+      <h6 class="h6">in lightning speed!</h6>
+  </div>
+</div>
+
+</div>
+
+
+
+<h3>Page Heading</h3>
+<div class="bx mbn">
+  <div class="page-header mbn">
+    <h1>Lorem ipsum <span class="sub">dolor sit amet</span></h1>
+  </div>
+</div>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Lorem ipsum <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub"</span>&gt;</span>dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></code></pre>
+
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
+
+
+<h3>Subheading Divider</h3>
+<div class="bx mbn">
+  <h3 class="subh-divider mbn">Sodales at enim</h3>
+</div>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"subh-divider mbl"</span>&gt;</span>Sodales at enim<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span></code></pre>
+
+<div class="copy-code">
+  <button type="button" class="btn btn-default btn-large">
+    copy code
+  </button>
+</div>
+
+</div>
+
           </div>
       
         <h2 id="links">Links</h2>
