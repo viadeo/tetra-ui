@@ -65,7 +65,7 @@ p {
 
 .header {
   background: @white;
-  height: @headerHeight;
+  min-height: @headerHeight;
   line-height: @headerHeight;
 }
 
@@ -182,15 +182,21 @@ p {
 }
 
 .affix-sidebar {
-  width: 20%;
 }
 .affix-nav {
-  width: 80%;
   left:20%;
+  .rtl & {
+    left:auto;
+    right:20%;
+  }
 }
 .main {
-  margin-top:@headerHeight;
+  margin-top: @headerHeight;
   margin-left:20%;
+  .rtl & {
+    margin-left:auto;
+    margin-right:20%;
+  }
   .fluid-container {
     max-width: 95%;
     width:auto;
@@ -200,14 +206,23 @@ p {
 @media (max-width: @breakpointM) {
   /* Widen the fixed sidebar again */
   .affix-sidebar {
-    width: 25%;
   }
   .affix-nav {
-    width: 75%;
     left:25%;
+    .rtl & {
+      left:auto;
+      right:25%;
+    }
   }
   .main {
     margin-left:25%;
+    .rtl & {
+      margin-left:auto;
+      margin-right:25%;
+    }
+  }
+  .sidebar-doc {
+    padding: 15px !important;
   }
 }
 
@@ -217,11 +232,18 @@ p {
     position: static;
     with:auto;
   }
-  .affix-sidebar, .affix-nav  {
-    width: 100%;
-  }
   .main {
-    margin-left:0;
+    margin:0;
+    .rtl & {
+      margin:0;
+    }
+  }
+  .header {
+    min-height:0;
+    line-height:@headerHeight/2;
+  }
+  .sidebar {
+    min-height: 0;
   }
 }
 
