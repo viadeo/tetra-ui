@@ -2,6 +2,7 @@
 
 @sidebar:#253a4c;
 @sidebar-nav: #0c2438;
+@headerHeight: 60px;
 
 html {
   height: 100%;
@@ -64,8 +65,8 @@ p {
 
 .header {
   background: @white;
-  height:60px;
-  line-height:60px;
+  height: @headerHeight;
+  line-height: @headerHeight;
 }
 
 .nav-doc {
@@ -87,8 +88,8 @@ p {
   min-height: 100%;
   background: @sidebar;
   h1 {
-    height:60px;
-    line-height:58px;
+    height:@headerHeight;
+    line-height:@headerHeight - 2;
   }
   img {
     max-width: 200px;
@@ -177,35 +178,50 @@ p {
 .affix {
   position: fixed; /* Undo the static from mobile first approach */
   top: 0;
+  z-index: 1000;
 }
 
-.affix-bottom,
-.affix {
+.affix-sidebar {
   width: 20%;
 }
-
-@media (max-width: @pageWidthMax) {
-  /* Widen the fixed sidebar again */
-  .affix-bottom,
-  .affix {
-    width: 20%;
+.affix-nav {
+  width: 80%;
+  left:20%;
+}
+.main {
+  margin-top:@headerHeight;
+  margin-left:20%;
+  .fluid-container {
+    max-width: 95%;
+    width:auto;
   }
 }
 
 @media (max-width: @breakpointM) {
   /* Widen the fixed sidebar again */
-  .affix-bottom,
-  .affix {
+  .affix-sidebar {
     width: 25%;
+  }
+  .affix-nav {
+    width: 75%;
+    left:25%;
+  }
+  .main {
+    margin-left:25%;
   }
 }
 
 @media (max-width: @breakpointS) {
   /* Widen the fixed sidebar again */
-  .affix-bottom,
   .affix {
     position: static;
     with:auto;
+  }
+  .affix-sidebar, .affix-nav  {
+    width: 100%;
+  }
+  .main {
+    margin-left:0;
   }
 }
 
@@ -238,61 +254,31 @@ p {
   }
   .colors-less-content {
     pre {
-      padding:10px;
+      padding:5px;
     }
     .bg {
       height:40px;
     }
   }
 
-  .bg-orange1 {
-    background: @orange1
-  }
-  .bg-orange2 {
-    background: @orange2
-  }
-  .bg-orange3 {
-    background: @orange3
-  }
-  .bg-orange4 {
-    background: @orange4
-  }
+  .bg-orange1 {background: @orange1}
+  .bg-orange2 {background: @orange2}
+  .bg-orange3 {background: @orange3}
+  .bg-orange4 {background: @orange4}
 
-  .bg-green1 {
-    background: @green1
-  }
-  .bg-green2 {
-    background: @green2
-  }
-  .bg-green3 {
-    background: @green3
-  }
-  .bg-green4 {
-    background: @green4
-  }
+  .bg-green1 {background: @green1}
+  .bg-green2 {background: @green2}
+  .bg-green3 {background: @green3}
+  .bg-green4 {background: @green4}
 
-  .bg-blue1 {
-    background: @blue1
-  }
-  .bg-blue2 {
-    background: @blue2
-  }
-  .bg-blue3 {
-    background: @blue3
-  }
-  .bg-blue4 {
-    background: @blue4
-  }
-  .bg-blue5 {
-    background: @blue5
-  }
+  .bg-blue1 {background: @blue1}
+  .bg-blue2 {background: @blue2}
+  .bg-blue3 {background: @blue3}
+  .bg-blue4 {background: @blue4}
+  .bg-blue5 {background: @blue5}
 
-  .bg-purple1 {
-    background: @purple1
-  }
-  .bg-purple2 {
-    background: @purple2
-  }
+  .bg-purple1 {background: @purple1}
+  .bg-purple2 {background: @purple2}
 
   .bg-tint-0 { @v: tint(@blue2, 0%); background: @v;}
   .bg-tint-10 { @v: tint(@blue2, 10%); background: @v;}
