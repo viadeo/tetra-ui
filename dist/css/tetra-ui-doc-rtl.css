@@ -7001,7 +7001,7 @@ p {
 }
 
 .header {
-  height: 60px;
+  min-height: 60px;
   line-height: 60px;
   background: #ffffff;
 }
@@ -7122,18 +7122,23 @@ p {
   z-index: 1000;
 }
 
-.affix-sidebar {
-  width: 20%;
-}
-
 .affix-nav {
   left: 20%;
-  width: 80%;
+}
+
+.rtl .affix-nav {
+  right: 20%;
+  left: auto;
 }
 
 .main {
   margin-top: 60px;
   margin-left: 20%;
+}
+
+.rtl .main {
+  margin-right: 20%;
+  margin-left: auto;
 }
 
 .main .fluid-container {
@@ -7146,15 +7151,22 @@ p {
     /* Widen the fixed sidebar again */
   
   }
-  .affix-sidebar {
-    width: 25%;
-  }
   .affix-nav {
     left: 25%;
-    width: 75%;
+  }
+  .rtl .affix-nav {
+    right: 25%;
+    left: auto;
   }
   .main {
     margin-left: 25%;
+  }
+  .rtl .main {
+    margin-right: 25%;
+    margin-left: auto;
+  }
+  .sidebar-doc {
+    padding: 15px !important;
   }
 }
 
@@ -7167,12 +7179,18 @@ p {
     position: static;
     with: auto;
   }
-  .affix-sidebar,
-  .affix-nav {
-    width: 100%;
-  }
   .main {
-    margin-left: 0;
+    margin: 0;
+  }
+  .rtl .main {
+    margin: 0;
+  }
+  .header {
+    min-height: 0;
+    line-height: 30px;
+  }
+  .sidebar {
+    min-height: 0;
   }
 }
 
