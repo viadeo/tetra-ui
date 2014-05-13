@@ -7119,22 +7119,26 @@ p {
   /* Undo the static from mobile first approach */
 
   top: 0;
+  z-index: 1000;
 }
 
-.affix-bottom,
-.affix {
+.affix-sidebar {
   width: 20%;
 }
 
-@media (max-width: 1020px) {
-  {
-    /* Widen the fixed sidebar again */
-  
-  }
-  .affix-bottom,
-  .affix {
-    width: 20%;
-  }
+.affix-nav {
+  left: 20%;
+  width: 80%;
+}
+
+.main {
+  margin-top: 60px;
+  margin-left: 20%;
+}
+
+.main .fluid-container {
+  width: auto;
+  max-width: 95%;
 }
 
 @media (max-width: 768px) {
@@ -7142,9 +7146,15 @@ p {
     /* Widen the fixed sidebar again */
   
   }
-  .affix-bottom,
-  .affix {
+  .affix-sidebar {
     width: 25%;
+  }
+  .affix-nav {
+    left: 25%;
+    width: 75%;
+  }
+  .main {
+    margin-left: 25%;
   }
 }
 
@@ -7153,10 +7163,16 @@ p {
     /* Widen the fixed sidebar again */
   
   }
-  .affix-bottom,
   .affix {
     position: static;
     with: auto;
+  }
+  .affix-sidebar,
+  .affix-nav {
+    width: 100%;
+  }
+  .main {
+    margin-left: 0;
   }
 }
 
@@ -7189,7 +7205,7 @@ p {
 }
 
 .colors-content .colors-less-content pre {
-  padding: 10px;
+  padding: 5px;
 }
 
 .colors-content .colors-less-content .bg {
