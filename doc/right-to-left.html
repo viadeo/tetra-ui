@@ -9,25 +9,23 @@
   
     <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc-rtl.css" />
   
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
   <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
   <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
   <script src="/tetra-ui/dist/js/vendor/affix.js"></script>
   <!--[if lt IE 8]><script src="/tetra-ui/dist/js/vendor/json2.js"></script><![endif]-->
 </head>
 
-<body dir="rtl" class="rtl" data-spy="scroll" data-target=".sidebar-doc" data-offset="50">
+<body dir="rtl" class="rtl" data-spy="scroll" data-target=".sidebar-doc" data-offset="80">
 
-  <div class="gr">
-
-    <section class="sidebar gu gu-1of5 gu-m-1of4">
-      <div class="sidebar">
+  <section class="sidebar affix affix-sidebar">
+    <div class="sidebar">
 
   <h1 class="logo tac plxl prxl mbn">
     <img src="/tetra-ui/dist/img/tetra-ui/tetra-ui-doc-hd.png" alt="Tetra Ui" class="fluid-media vam"/>
   </h1>
 
-  <nav class='sidebar-nav' data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+  <nav class='sidebar-nav'>
     <div class="sidebar-doc paxl">
 
   <ul>
@@ -48,14 +46,13 @@
 </div>
 
 
-    </section>
+  </section>
 
-    <div class="gu-last">
-
-      <header class="header plxl prxl">
-        <div class="gr">
-          <div class="gu gu-2of3">
-            <nav class="nav-doc">
+  <header class="header affix affix-nav">
+    <div class="plxl prxl">
+      <div class="gr">
+        <div class="gu gu-2of3">
+          <nav class="nav-doc">
   <ul>
     
       
@@ -93,9 +90,9 @@
   </ul>
 </nav>
 
-          </div>
-          <div class="gu-last tar">
-            <span class="toggle-mode">
+        </div>
+        <div class="gu-last tar">
+          <span class="toggle-mode">
 
   <span class="mrs">Code</span>
 
@@ -121,12 +118,14 @@
 
 </span>
 
-          </div>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
 
-      <main class="main paxl">
-        
+  <main class="main">
+    <div class="fluid-container ptl pbl">
+    
 
 
   <div class="overview-content section ">
@@ -137,14 +136,11 @@
 
 
 
-        <footer class="footer">
-            <p class="gray tac mbn">©2014 APVO CORP.</p>
-        </footer>
-      </main>
-
+    <footer class="footer">
+        <p class="gray tac mbn">©2014 APVO CORP.</p>
+    </footer>
     </div>
-
-  </div>
+  </main>
 
   <script src="/tetra-ui/dist/js/doc/main.js"></script>
 
