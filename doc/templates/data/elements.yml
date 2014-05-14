@@ -13,11 +13,11 @@ nav:
         slug: "paragraphs"
         title: "Paragraphs"
       -
-        slug: "Lists"
-        title: "lists"
+        slug: "lists"
+        title: "Lists"
       -
-        slug: "Panels"
-        title: "panels"
+        slug: "panels"
+        title: "Panels"
   -
     slug: "colors"
     title: "Colors"
@@ -105,7 +105,7 @@ nav:
         slug: "buttons-basic-example"
         title: "Basic examples"
       -
-        slug: "dropdowns-examples"
+        slug: "dropdown-examples"
         title: "Dropdown examples"
       -
         slug: "flipswitch-buttons"
@@ -132,6 +132,9 @@ nav:
       -
         slug: "navigation-pagination"
         title: "Pagination"
+      -
+        slug: "navigation-buttons"
+        title: "Buttons"
   -
     slug: "dialogs"
     title: "Dialogs"
