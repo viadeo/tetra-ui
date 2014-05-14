@@ -1,0 +1,74 @@
+{{#markdown}}
+The toggle button maps a Tetra.js component to a native hidden checkbox.
+
+**When active**, the container has a **btn-toggle-checked** class and the hidden checkbox is checked.<br />
+**When inactive**, the **btn-toggle-checked** class is removed and the hidden checkbox is unchecked.
+{{/markdown}}
+
+<p>
+<label id="btn-toggle-sample-1" class="btn-toggle mrs">
+  <input type="checkbox">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Toggle button (default off)
+</label>
+
+<label id="btn-toggle-sample-2" class="btn-toggle btn-toggle-checked mrs">
+  <input type="checkbox" checked="checked">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Toggle button (default on)
+</label>
+</p>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<label id="btn-toggle-sample-1" class="btn-toggle mrs">
+  <input type="checkbox">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Toggle button (default off)
+</label>
+
+<label id="btn-toggle-sample-2" class="btn-toggle btn-toggle-checked mrs">
+  <input type="checkbox" checked="checked">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Toggle button (default on)
+</label>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
+
+<p class="mbn">
+<label id="btn-toggle-sample-3" class="btn-toggle btn-toggle-alt mrs">
+  <input type="checkbox">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Alternative style
+</label>
+
+<label id="btn-toggle-sample-4" class="btn-toggle btn-toggle-checked btn-toggle-alt">
+  <input type="checkbox" checked="checked">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Alternative style
+</label>
+</p>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<label id="btn-toggle-sample-3" class="btn-toggle btn-toggle-alt mrs">
+  <input type="checkbox">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Alternative style
+</label>
+
+<label id="btn-toggle-sample-4" class="btn-toggle btn-toggle-checked btn-toggle-alt">
+  <input type="checkbox" checked="checked">
+  <span class="btn-toggle-check"><i class="vicon">v</i></span>
+  Alternative style
+</label>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>

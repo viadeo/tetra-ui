@@ -1,0 +1,42 @@
+{{#markdown}}
+This component implements Yes No switch buttons.<br />
+The first sample is implemented with simple links and has a default value set to yes, the second with hidden radio buttons and with a default value set to no.
+{{/markdown}}
+
+<div class="cf">
+  <div class="btncontainer">
+    <div class="btn-yn btn-yes mrs">
+      <a title="Yes" class="lnk-yes">Yes</a>
+      <a title="No" class="lnk-no">No</a>
+    </div>
+  </div>
+
+  <div class="btncontainer">
+    <div class="btn-yn btn-no">
+      <a title="Yes" class="lnk-yes">Yes</a>
+      <a title="No" class="lnk-no">No</a>
+    </div>
+  </div>
+</div>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="btncontainer">
+  <div class="btn-yn btn-yes mrs">
+    <a title="Yes" class="lnk-yes">Yes</a>
+    <a title="No" class="lnk-no">No</a>
+  </div>
+</div>
+
+<div class="btncontainer">
+  <div class="btn-yn btn-no">
+    <a title="Yes" class="lnk-yes">Yes</a>
+    <a title="No" class="lnk-no">No</a>
+  </div>
+</div>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
