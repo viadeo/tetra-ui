@@ -83,20 +83,17 @@ nav:
         slug: "forms-states"
         title: "States form"
       -
-        slug: "form-placeholder"
+        slug: "forms-placeholder"
         title: "Placeholders"
       -
-        slug: "form-extending"
+        slug: "forms-extending"
         title: "Extending form"
       -
-        slug: "form-custom-buttons"
+        slug: "forms-custom-buttons"
         title: "Custom radio & checkbox"
       -
-        slug: "form-custom-select"
+        slug: "forms-custom-select"
         title: "Custom select"
-      -
-        slug: "switch-buttons"
-        title: "Switch buttons"
   -
     slug: "buttons"
     title: "Buttons"
@@ -113,9 +110,6 @@ nav:
       -
         slug: "toggle-buttons"
         title: "Toggle Buttons"
-      -
-        slug: "switch-buttons"
-        title: "Switch buttons"
   -
     slug: "navigation"
     title: "Navigation"
@@ -148,9 +142,6 @@ nav:
       -
         slug: "popins"
         title: "Popins"
-      -
-        slug: "pagination"
-        title: "Pagination"
   -
     slug: "icons"
     title: "Icons"
