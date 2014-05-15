@@ -240,4 +240,12 @@ p {
   }
 }
 
+.popins-content {
+  .popin-container {
+    position: static;
+    .popin {
+      margin:0;
+    }
+  }
+}
 

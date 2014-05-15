@@ -52,6 +52,10 @@ p {
     background-color: tint(@blue4, 30%);
     color:#fff;
   }
+
+  .category {
+    border-bottom:1px dotted lighten(tint(@sidebar, 30%),20%);
+  }
 }
 
 .header {
@@ -240,4 +244,12 @@ p {
   }
 }
 
+.popins-content {
+  .popin-container {
+    position: static;
+    .popin {
+      margin:0;
+    }
+  }
+}
 
