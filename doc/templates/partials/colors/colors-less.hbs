@@ -1,4 +1,4 @@
-<h3>Tints & Shades</h3>
+<h3 class="h3">Tints & Shades</h3>
 <div class="bx pan context">
   <div class="gr">
     {{#with data.tint}}
@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<h3>Grayscale</h3>
+<h3 class="h3">Grayscale</h3>
 {{#with data.grayscale}}
 <div class="bx pan context">
   <div class="gr">
@@ -52,9 +52,8 @@
 </div>
 {{/with}}
 
-<h3>Semantic</h3>
 {{#each data.semantic}}
-<h4>{{type}}</h4>
+<h3 class="h3">{{type}}</h4>
 <div class="bx pan context">
   <div class="gr">
     {{#each values}}

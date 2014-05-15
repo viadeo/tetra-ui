@@ -1,0 +1,99 @@
+{{#markdown}}
+Displaying a custom select element while keeping the native drop down menu.
+{{/markdown}}
+
+<form class="core-form form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Custom select</label>
+    <div class="controls">
+
+      <span class="custom-select input-large">
+        <select>
+          <option selected="selected" disabled="disabled">Choose…</option>
+          <option value="1">Lorem ipsum dolor sit amet</option>
+          <option value="2">Consectetur adipisicing elit</option>
+          <option value="3">Sed do eiusmod tempor incididunt ut labore</option>
+          <option value="4">Et dolore magna aliqua</option>
+          <option value="5">Ut enim ad minim veniam</option>
+        </select>
+
+        <label>Choose…</label>
+        <i class="vicon">▾</i>
+      </span>
+
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Custom select appended</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="text"><span class="custom-select input-medium">
+          <label>Choose…</label>
+          <i class="vicon">▾</i>
+
+          <select>
+            <option selected="selected" disabled="disabled">Choose…</option>
+            <option value="1">Lorem ipsum dolor sit amet</option>
+            <option value="2">Consectetur adipisicing elit</option>
+            <option value="3">Sed do eiusmod tempor incididunt ut labore</option>
+            <option value="4">Et dolore magna aliqua</option>
+            <option value="5">Ut enim ad minim veniam</option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<form class="core-form form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Custom select</label>
+    <div class="controls">
+
+      <span class="custom-select input-large">
+        <select>
+          <option selected="selected" disabled="disabled">Choose…</option>
+          <option value="1">Lorem ipsum dolor sit amet</option>
+          <option value="2">Consectetur adipisicing elit</option>
+          <option value="3">Sed do eiusmod tempor incididunt ut labore</option>
+          <option value="4">Et dolore magna aliqua</option>
+          <option value="5">Ut enim ad minim veniam</option>
+        </select>
+
+        <label>Choose…</label>
+        <i class="vicon">▾</i>
+      </span>
+
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Custom select appended</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="text"><span class="custom-select input-medium">
+          <label>Choose…</label>
+          <i class="vicon">▾</i>
+
+          <select>
+            <option selected="selected" disabled="disabled">Choose…</option>
+            <option value="1">Lorem ipsum dolor sit amet</option>
+            <option value="2">Consectetur adipisicing elit</option>
+            <option value="3">Sed do eiusmod tempor incididunt ut labore</option>
+            <option value="4">Et dolore magna aliqua</option>
+            <option value="5">Ut enim ad minim veniam</option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </div>
+</form>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>

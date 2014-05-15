@@ -1,3 +1,8 @@
+{{#markdown}}
+<h3 class="h3"> Nesting with siblings</h3>
+The example above shows a grid row (**.gr**) nested within a grid unit (**.gu**), thus enabling it to be accompanied by sibling elements. The markup looks like this:
+{{/markdown}}
+
 <div class="gr gr-zebra">
   <div class="gu gu-2of3 pan pts">
     <span class="hide-s">.gu</span> .gu-2of3
@@ -9,11 +14,6 @@
   <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
 </div>
 
-
-{{#markdown}}
-### Nesting with siblings
-The example above shows a grid row (**.gr**) nested within a grid unit (**.gu**), thus enabling it to be accompanied by sibling elements. The markup looks like this:
-{{/markdown}}
 
 <div class="code-content">
 {{> toggle-code}}
@@ -35,7 +35,7 @@ The example above shows a grid row (**.gr**) nested within a grid unit (**.gu**)
 </div>
 
 {{#markdown}}
-### Direct nesting
+<h3 class="h3"> Direct nesting</h3>
 The other option is to nest your grid units directly in another grid unit. Just add the **.gr** class to an element with the **.gu** class!
 {{/markdown}}
 

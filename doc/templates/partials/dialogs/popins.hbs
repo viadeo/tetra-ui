@@ -1,0 +1,91 @@
+{{#markdown}}
+Popins, or modal dialogs, or pop-up windows now are a common user experience design pattern. Here are some samples and the code to launch a popin.
+
+Add the **.popin-edit** class to the **.popin** container to activate the edit mode.
+{{/markdown}}
+
+
+<div class="popin-container mbl">
+  <div class="gr">
+
+  <div class="popin gu-2of3 gu-m-1of1">
+
+    <div class="popin-header">
+      <a class="bootnode close" data-popin="close" data-event="click" data-comp="popin">
+        <i class="vicon">×</i>
+        <span>Close</span>
+      </a>
+      <h2 class="h2">Popin with default style</h2>
+    </div>
+    <div class="popin-body">
+      <p class="mbn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="popin-footer tac-m">
+      <a class="bootnode btn btn-primary btn-large" data-target="/tetra-ui/doc/xhr/popin-edit.html" data-fake-app="fake" data-event="click" data-view="fakeApp/fakeApp">
+        Submit
+      </a>
+      <a class="fr fno-m mts" href="">Alternate link</a>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<div class="popin-container">
+  <div class="gr">
+
+    <div data-noesc="true" class="popin popin-edit gu-2of3 gu-m-1of1">
+      <div class="popin-header">
+        <button class="bootnode close" data-popin="close" data-event="click" data-comp="popin">
+          <i class="vicon">×</i>
+          <span>Close</span>
+        </button>
+        <h2 class="h2">Popin with edit style</h2>
+      </div>
+      <div class="popin-body">
+        <p class="mbn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="popin-footer">
+        <a class="fr mts" href="">Alternate link</a>
+        <a class="bootnode btn btn-primary btn-large" data-target-url="/tetra-ui/doc/xhr/popin-sample.html" data-popin="show" data-event="click" data-comp="popin" href="#">
+          Submit
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="popin-container mbl"><div class="gr">
+  <div class="popin gu-2of3 gu-m-1of1">
+
+    <div class="popin-header">
+      <a class="bootnode close" data-popin="close" data-event="click" data-comp="popin">
+        <i class="vicon">×</i>
+        <span>Close</span>
+      </a>
+      <h2 class="h2">Popin with default style</h2>
+    </div>
+    <div class="popin-body">
+      <p class="mbn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="popin-footer tac-m">
+      <a class="bootnode btn btn-primary btn-large" data-target="/tetra-ui/doc/xhr/popin-edit.html" data-fake-app="fake" data-event="click" data-view="fakeApp/fakeApp">
+        Submit
+      </a>
+      <a class="fr fno-m mts" href="">Alternate link</a>
+    </div>
+  </div>
+
+  </div>
+</div>
+```
+{{/markdown}}
+
+{{> copy-code}}
+</div>

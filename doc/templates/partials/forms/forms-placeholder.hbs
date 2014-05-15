@@ -1,0 +1,99 @@
+{{#markdown}}
+Using the class **error** on the **control-group mbl** makes the field helper visible, otherwise it is hidden by default.
+{{/markdown}}
+
+<form class="core-form mbxl">
+  <div class="bx-alert bx-alert-error-form mbl">
+    <button data-event="click" data-comp="alert" class="bx-alert-close bootnode" type="button">
+      <i class="vicon">×</i>
+    </button>
+    <i class="vicon bx-alert-icon">;</i>
+    <div class="bx-alert-content">
+      <p class="mvn">The following fields are marked as errors</p>
+    </div>
+  </div>
+
+  <div class="control-group mbl error">
+    <div class="controls">
+      <span class="placeholding field-helper field-helper-right">
+        <input type="text" class="input-large mbn">
+        <label class="placeholder">Error on text input (default left)</label>
+        <span class="error-inline">Please type a valid email address</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="control-group mbl error">
+    <div class="controls">
+      <span class="placeholding field-helper field-helper-right">
+        <input type="password" class="input-large mbn">
+        <label class="placeholder">Error on password input (default left)</label>
+        <span class="error-inline">Please type a valid password</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="control-group mbl error">
+    <div class="controls">
+      <span class="placeholding field-helper field-helper-flow">
+        <input type="text" class="input-large mbn">
+        <label class="placeholder">Text input</label>
+        <span class="error-inline">Error in flow</span>
+      </span>
+    </div>
+  </div>
+
+</form>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+
+<form class="core-form mbxl">
+  <div class="bx-alert bx-alert-error-form mbl">
+    <button data-event="click" data-comp="alert" class="bx-alert-close bootnode" type="button">
+      <i class="vicon">×</i>
+    </button>
+    <i class="vicon bx-alert-icon">;</i>
+    <div class="bx-alert-content">
+      <p class="mvn">The following fields are marked as errors</p>
+    </div>
+  </div>
+
+  <div class="control-group mbl error">
+    <div class="controls">
+      <span class="placeholding field-helper field-helper-right">
+        <input type="text" class="input-large mbn">
+        <label class="placeholder">Error on text input (default left)</label>
+        <span class="error-inline">Please type a valid email address</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="control-group mbl error">
+    <div class="controls">
+      <span class="placeholding field-helper field-helper-right">
+        <input type="password" class="input-large mbn">
+        <label class="placeholder">Error on password input (default left)</label>
+        <span class="error-inline">Please type a valid password</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="control-group mbl error">
+    <div class="controls">
+      <span class="placeholding field-helper field-helper-flow">
+        <input type="text" class="input-large mbn">
+        <label class="placeholder">Text input</label>
+        <span class="error-inline">Error in flow</span>
+      </span>
+    </div>
+  </div>
+
+</form>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
+

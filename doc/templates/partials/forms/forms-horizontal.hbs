@@ -1,0 +1,60 @@
+{{#markdown}}
+Tot set the form horizontal, add the **.form-horizontal** class to the **.core-form** element.<br />
+Inputs are **inline-block** with .form-horizontal.
+{{/markdown}}
+
+<form class="core-form form-horizontal">
+  <fieldset>
+    <div class="control-group">
+      <label for="input01" class="control-label">Text input</label>
+      <div class="controls">
+        <input type="text" id="input01" class="input-xlarge">
+        <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="optionsCheckbox" class="control-label">Checkbox</label>
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox" value="option1" id="optionsCheckbox">
+          Option one
+        </label>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="select01" class="control-label">Select list</label>
+      <div class="controls">
+        <select id="select01">
+          <option>something</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="textarea" class="control-label">Textarea</label>
+      <div class="controls">
+        <textarea rows="3" id="textarea" class="input-xlarge"></textarea>
+      </div>
+    </div>
+    <div class="form-actions ptm">
+      <button class="btn btn-secondary" type="submit">Save changes</button>
+      <button class="btn btn-default">Cancel</button>
+    </div>
+  </fieldset>
+</form>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+
+<form class="core-form form-horizontal">
+  ...
+</form>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>

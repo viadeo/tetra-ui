@@ -1,0 +1,30 @@
+{{#markdown}}
+To set the form inline, add the **.form-inline** class to the **.core-form** element.<br />
+Inputs are **inline-block** with .form-inline.
+{{/markdown}}
+
+<form class="core-form form-inline">
+  <input type="text" placeholder="Email" class="input-small">
+  <input type="password" placeholder="Password" class="input-small">
+  <label class="checkbox">
+    <input type="checkbox"> Remember me
+  </label>
+  <button class="btn btn-default" type="submit">Sign in</button>
+</form>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<form class="core-form well form-inline">
+  <input type="text" placeholder="Email" class="input-small">
+  <input type="password" placeholder="Password" class="input-small">
+  <label class="checkbox">
+    <input type="checkbox"> Remember me
+  </label>
+  <button class="btn btn-default" type="submit">Sign in</button>
+</form>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>

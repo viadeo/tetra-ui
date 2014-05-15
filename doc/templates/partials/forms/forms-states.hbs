@@ -1,0 +1,82 @@
+{{#markdown}}
+Special styles are applied on top of focused and disabled states, when the browser supports it.
+
+It also includes validation styles for errors, warnings, and success. To use, add the error class to the surrounding **.control-group**.
+{{/markdown}}
+
+<form class="core-form form-horizontal">
+    <fieldset>
+      <div class="control-group">
+        <label for="focusedInput" class="control-label">Focused input</label>
+        <div class="controls">
+          <input type="text" value="This is focused…" id="focusedInput" class="input-xlarge focused">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Uneditable input</label>
+        <div class="controls">
+          <span class="input-xlarge uneditable-input">Some value here</span>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="disabledInput" class="control-label">Disabled input</label>
+        <div class="controls">
+          <input type="text" disabled="disabled" placeholder="Disabled input here…" id="disabledInput" class="input-xlarge disabled">
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="optionsCheckbox2" class="control-label">Disabled checkbox</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input type="checkbox" disabled="disabled" value="option1" id="optionsCheckbox2">
+            This is a disabled checkbox
+          </label>
+        </div>
+      </div>
+      <div class="control-group disabled">
+        <label for="optionsCheckbox3" class="control-label">Completely disabled</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input type="checkbox" disabled="disabled" value="option1" id="optionsCheckbox3">
+            This is a disabled checkbox
+          </label>
+          <p class="help-block">Contextual help in disabled state</p>
+        </div>
+      </div>
+
+      <div class="control-group error">
+        <label for="inputError" class="control-label">Input with error</label>
+        <div class="controls">
+          <input type="text" id="inputError">
+          <span class="help-inline">Please correct the error</span>
+        </div>
+      </div>
+
+      <div class="control-group success">
+        <label for="inputSuccess" class="control-label">Input with success</label>
+        <div class="controls">
+          <input type="text" id="inputSuccess">
+          <span class="help-inline"><i class="vicon control-success">v</i></span>
+        </div>
+      </div>
+
+      <div class="control-group success">
+        <label for="selectError" class="control-label">Select with success</label>
+        <div class="controls">
+          <select id="selectError">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <span class="help-inline"><i class="vicon control-success">v</i></span>
+        </div>
+      </div>
+
+      <div class="form-actions ptm">
+        <button class="btn btn-secondary" type="submit">Save changes</button>
+        <button class="btn btn-default">Cancel</button>
+      </div>
+    </fieldset>
+  </form>
