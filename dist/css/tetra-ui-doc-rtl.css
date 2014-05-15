@@ -5606,6 +5606,7 @@ a:focus .avatar img {
   line-height: 16px;
   text-align: center;
   vertical-align: middle;
+  background: #fff;
   border: 1px solid #c5c7c5;
   border-radius: 2px;
 }
@@ -6967,6 +6968,10 @@ p {
   background-color: #6294af;
 }
 
+.main .category {
+  border-bottom: 1px dotted #9da8b1;
+}
+
 .header {
   min-height: 60px;
   line-height: 60px;
@@ -7152,6 +7157,14 @@ p {
 
 .colors-content .colors-less-content .bg {
   height: 40px;
+}
+
+.popins-content .popin-container {
+  position: static;
+}
+
+.popins-content .popin-container .popin {
+  margin: 0;
 }
 
 .bg-orange1 {
