@@ -32,10 +32,8 @@ Example: **.prl** (applies a large padding to the right side of the element).
         <tr>
           <td><code class=" language-css">[size]</code></td>
           <td>
-            <p>One of 6 spacing sizes, the pixel values of which are defined in the <a target="_blank" href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L29-L34">variables.less</a> file:
-            </p>
             <ul class="link-list">
-              <li><code class=" language-css">n</code> Null</li>
+              <li><code class=" language-css">n</code> None</li>
               <li><code class=" language-css">xs</code> eXtra Small</li>
               <li><code class=" language-css">s</code> Small</li>
               <li><code class=" language-css">m</code> Medium</li>
@@ -46,3 +44,18 @@ Example: **.prl** (applies a large padding to the right side of the element).
         </tr>
       </tbody>
     </table>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<!-- The id attribute describes the class value-->
+<div id="padding-all-small" class="pas"> ... </div>
+<div id="padding-all-none" class="pan"> ... </div>
+<div id="margin-top-extra-large" class="mtxl"> ... </div>
+<div id="margin-left-none" class="mln"> ... </div>
+```
+{{/markdown}}
+
+{{> copy-code}}
+</div>
