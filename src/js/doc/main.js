@@ -1,30 +1,29 @@
+function loadStyle(href) {
+  this.$stylesheet.attr('href', href);
+}
+
 var Mode = function (elem) {
-  this.state = this.getState();
+  this.rtl = false;
   this.$elem = elem;
-  if(typeof(localStorage) === 'undefined') {
-    $(this.elem).hide();
-  }
+  this.stylesheet_rtl = this.$elem.attr('data-dir-rtl');
+  this.stylesheet_ltr = this.$elem.attr('data-dir-ltr');
+  this.$stylesheet = $('link[title=ltr]');
   return this;
 };
 Mode.prototype._setState = function (state) {
-  if (state) {
+  if (state && !this.rtl) {
     $(this.$elem).removeClass('flipswitch-no').addClass('flipswitch-yes');
-    localStorage.setItem("mode", "on")
-  } else {
+    loadStyle.call(this, this.stylesheet_rtl);
+    $('body').addClass('rtl').attr('dir', 'rtl');
+  } else if (!state && this.rtl) {
     $(this.$elem).removeClass('flipswitch-yes').addClass('flipswitch-no');
-    localStorage.setItem("mode", "off")
+    loadStyle.call(this, this.stylesheet_ltr);
+    $('body').removeClass('rtl').attr('dir', 'ltr');
   }
-  this.state = state;
-  toggleCode(state);
+  this.rtl = state;
   return this;
 };
-Mode.prototype.getState = function () {
-  if(typeof(localStorage) === 'undefined') {
-    return false;
-  }
-  var state = localStorage.getItem('mode') === "on";
-  return state;
-};
+
 Mode.prototype.bind = function () {
   var self = this;
   this.$elem.on('click', function(e){
@@ -41,28 +40,11 @@ Mode.prototype.bind = function () {
   });
   return this;
 };
-Mode.prototype.init = function (state) {
-  this._setState(this.state);
-  return this;
-};
-
-var toggleCode = function (state) {
-  $('.code-content').each(function(i, item){
-    if(state){
-      $(this).addClass('visible');
-    }else {
-      $(this).removeClass('visible');
-    }
-  });
-};
-
 
 $(function(){
 
   var mode = new Mode($("#mode"));
-  mode.bind().init();
-
-  toggleCode(mode.getState());
+  mode.bind();
 
   $('.main').on('click', '.toggle-code', function(e){
     var container = $(this).parent();

@@ -52,6 +52,10 @@ p {
     background-color: lighten($blue4, 30%);
     color:#fff;
   }
+
+  .category {
+    border-bottom:1px dotted darken($borderColor, 10%);
+  }
 }
 
 .header {
