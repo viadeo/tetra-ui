@@ -3,171 +3,171 @@
 // Global variables
 
 // Static files paths
-$img-sprite-dir: "/v_img/global";
-$img-buttons-dir: "/v_img/coreui/buttons";
-$img-loaders-dir: "/v_img/profilev2";
+$img-sprite-dir: "/v_img/global" !default;
+$img-buttons-dir: "/v_img/coreui/buttons" !default;
+$img-loaders-dir: "/v_img/profilev2" !default;
 
 // Fonts
-$fonts-dir: "/css/core/fonts";
-$fonts-version: "1382536154";
-$font-stack: "Arial", sans-serif;
+$fonts-dir: "/css/core/fonts" !default;
+$fonts-version: "1382536154" !default;
+$font-stack: "Arial", sans-serif !default;
 
 // Right To Left mode (arabic)
-$rtl: false;
+$rtl: false !default;
 
 // Layout
-$siteWidth:         980px;
+$siteWidth:         980px !default;
 
 // Responsive
-$pageWidth: 85%;
-$pageWidthM: 90%; // when reaching the tablet breakpoint
-$pageWidthS: 97%; // when reaching the smartphone breakpoint
+$pageWidth: 85% !default;
+$pageWidthM: 90% !default; // when reaching the tablet breakpoint
+$pageWidthS: 97% !default; // when reaching the smartphone breakpoint
 
-$pageWidthMax: 1020px;
+$pageWidthMax: 1020px !default;
 
-$breakpointM: 768px; // breakpoint for tablets
-$breakpointS: 480px; // breakpoint for smartphones
+$breakpointM: 768px !default; // breakpoint for tablets
+$breakpointS: 480px !default; // breakpoint for smartphones
 
 // Spacing
-$spacingXs:         5px;
-$spacingS:          10px;
-$spacingM:          15px;
-$spacingL:          20px;
-$spacingXl:         30px;
+$spacingXs:         5px !default;
+$spacingS:          10px !default;
+$spacingM:          15px !default;
+$spacingL:          20px !default;
+$spacingXl:         30px !default;
 
 // Grayscale
-$black:             #000000;
-$blackLight:        lighten($black, 18%);
-$grayDark:          lighten($black, 25%);
-$gray:              lighten($black, 50%);
-$grayLight:         lighten($black, 75%);
-$grayLighter:       lighten($black, 90%);
-$white:             #FFFFFF;
+$black:             #000000 !default;
+$blackLight:        lighten($black, 18%) !default;
+$grayDark:          lighten($black, 25%) !default;
+$gray:              lighten($black, 50%) !default;
+$grayLight:         lighten($black, 75%) !default;
+$grayLighter:       lighten($black, 90%) !default;
+$white:             #FFFFFF !default;
 
 // Extended palette
 
-$orange1: #f56600;
-$orange2: #f1532e;
-$orange3: #f78d2d;
-$orange4: #feae35;
+$orange1: #f56600 !default;
+$orange2: #f1532e !default;
+$orange3: #f78d2d !default;
+$orange4: #feae35 !default;
 
-$green1: #019875;
-$green2: #0c9f9b;
-$green3: #53c1af;
-$green4: #c6e6d7;
+$green1: #019875 !default;
+$green2: #0c9f9b !default;
+$green3: #53c1af !default;
+$green4: #c6e6d7 !default;
 
-$blue1: #006aa8;
-$blue2: #007bc2;
-$blue3: #42a2d6;
-$blue4: #1f668c;
-$blue5: #7dcde3;
+$blue1: #006aa8 !default;
+$blue2: #007bc2 !default;
+$blue3: #42a2d6 !default;
+$blue4: #1f668c !default;
+$blue5: #7dcde3 !default;
 
-$purple1: #471d63;
-$purple2: #685985;
-$purple3: #685985;
-$purple4: #685985;
+$purple1: #471d63 !default;
+$purple2: #685985 !default;
+$purple3: #685985 !default;
+$purple4: #685985 !default;
 
-$pageBg: #e8e9eb;
+$pageBg: #e8e9eb !default;
 
 // Colors
-$green:             #829b13;
-$yellow:            #ffd520;
-$orange:            $orange1;
+$green:             #829b13 !default;
+$yellow:            #ffd520 !default;
+$orange:            $orange1 !default;
 
-$blue:              #007de3;
-$blueSoft:          #83a0b9;
-$blueDarker:        darken($blue, 20%);
-$blueDark:          darken($blue, 10%);
-$blueLight:         lighten(desaturate($blue, 35%), 20%);
-$blueLighter:       lighten(desaturate($blue, 35%), 40%);
-$blueBright:				#0065AE;
-$borderColor:       lighten($blueSoft, 63%);
-$panelBackground:   lighten($blueSoft, 92%);
-$panelBorder:       lighten($blueSoft, 78%);
-$panelBorderDarker: lighten($blueSoft, 42%);
-$overlayBorder:     darken($blueSoft, 70%);
+$blue:              #007de3 !default;
+$blueSoft:          #83a0b9 !default;
+$blueDarker:        darken($blue, 20%) !default;
+$blueDark:          darken($blue, 10%) !default;
+$blueLight:         lighten(desaturate($blue, 35%), 20%) !default;
+$blueLighter:       lighten(desaturate($blue, 35%), 40%) !default;
+$blueBright:				#0065AE !default;
+$borderColor:       lighten($blueSoft, 63%) !default;
+$panelBackground:   lighten($blueSoft, 92%) !default;
+$panelBorder:       lighten($blueSoft, 78%) !default;
+$panelBorderDarker: lighten($blueSoft, 42%) !default;
+$overlayBorder:     darken($blueSoft, 70%) !default;
 
-$premiumColor: #ffbb12;
+$premiumColor: #ffbb12 !default;
 
 // Button Colors
-$buttonPrimaryBgColor:     #ffd724;
-$buttonPrimaryEndColor:    #ffc906;
-$buttonPrimaryHoverColor:  #ffc906;
-$buttonPrimaryBorderColor: #ffbb02;
-$buttonPrimaryTextColor:   $blackLight;
+$buttonPrimaryBgColor:     #ffd724 !default;
+$buttonPrimaryEndColor:    #ffc906 !default;
+$buttonPrimaryHoverColor:  #ffc906 !default;
+$buttonPrimaryBorderColor: #ffbb02 !default;
+$buttonPrimaryTextColor:   $blackLight !default;
 
-$buttonDefaultBgColor:     #fafafa;
-$buttonDefaultEndColor:    #ebebeb;
-$buttonDefaultHoverColor:  #e8e8e8;
-$buttonDefaultBorderColor: #d5d5d5;
-$buttonDefaultTextColor:   $blackLight;
+$buttonDefaultBgColor:     #fafafa !default;
+$buttonDefaultEndColor:    #ebebeb !default;
+$buttonDefaultHoverColor:  #e8e8e8 !default;
+$buttonDefaultBorderColor: #d5d5d5 !default;
+$buttonDefaultTextColor:   $blackLight !default;
 
-$buttonTerBgColor:         lighten($green2, 4%);
-$buttonTerHoverColor:      darken($green2, 3%);
-$buttonTerBorderColor:     $green2;
-$buttonTerTextColor:       $white;
+$buttonTerBgColor:         lighten($green2, 4%) !default;
+$buttonTerHoverColor:      darken($green2, 3%) !default;
+$buttonTerBorderColor:     $green2 !default;
+$buttonTerTextColor:       $white !default;
 
-$highlightColor:    #F4F2CA;
+$highlightColor:    #F4F2CA !default;
 
 // Link colors
-$linkColor:         $blue;
-$linkColorHover:    darken($linkColor, 10%);
+$linkColor:         $blue !default;
+$linkColorHover:    darken($linkColor, 10%) !default;
 
 // Typography
-$baseFontSize:      12px;
-$smallFontSize:     $baseFontSize - 1;
-$baseFontColor:     lighten($black, 15%);
-$baseFontFamily:    Arial, sans-serif;
-$baseLineHeight:    1.4em;
+$baseFontSize:      12px !default;
+$smallFontSize:     $baseFontSize - 1 !default;
+$baseFontColor:     lighten($black, 15%) !default;
+$baseFontFamily:    Arial, sans-serif !default;
+$baseLineHeight:    1.4em !default;
 
 // Border Radius
-$borderRadiusXs: 2px;
-$borderRadiusS: 3px;
-$borderRadiusMS: 5px;
-$borderRadiusM: 6px;
-$borderRadiusL: 10px;
+$borderRadiusXs: 2px !default;
+$borderRadiusS: 3px !default;
+$borderRadiusMS: 5px !default;
+$borderRadiusM: 6px !default;
+$borderRadiusL: 10px !default;
 
 // Forms
-$inputBackground:	$white;
-$inputBorder: #c5c7c5;
-$inputBorderFocus: $blue2;
-$inputDisabledBackground: $grayLighter;
-$inputSelectedControl: #344957;
+$inputBackground:	$white !default;
+$inputBorder: #c5c7c5 !default;
+$inputBorderFocus: $blue2 !default;
+$inputDisabledBackground: $grayLighter !default;
+$inputSelectedControl: #344957 !default;
 
 // Dropdowns
-$dropdownBackground: 			$white;
-$dropdownBorder: 				rgba(0,0,0,.2);
-$dropdownLinkColor: 			$grayDark;
-$dropdownLinkColorHover: 		$white;
-$dropdownLinkBackgroundHover: 	$linkColor;
+$dropdownBackground: 			$white !default;
+$dropdownBorder: 				rgba(0,0,0,.2) !default;
+$dropdownLinkColor: 			$grayDark !default;
+$dropdownLinkColorHover: 		$white !default;
+$dropdownLinkBackgroundHover: 	$linkColor !default;
 
 // Tables
 
-$tablesHeadBackground: lighten($pageBg, 5%);
-$tablesBodyBackground: #fff;
+$tablesHeadBackground: lighten($pageBg, 5%) !default;
+$tablesBodyBackground: #fff !default;
 
 // Form states and alerts
 // -------------------------
-$warningText: 		#c09853;
-$warningBackground: #fcf8e3;
-$warningBorder: 	darken(adjust-hue($warningBackground, -10), 3%);
+$warningText: 		#c09853 !default;
+$warningBackground: #fcf8e3 !default;
+$warningBorder: 	darken(adjust-hue($warningBackground, -10), 3%) !default;
 
-$errorText:         #d54243;
-$errorBackground:   lighten($errorText, 58%);
-$errorBorder:       $errorText;
+$errorText:         #d54243 !default;
+$errorBackground:   lighten($errorText, 58%) !default;
+$errorBorder:       $errorText !default;
 
-$successText: $green2;
-$successBackground: $green2;
-$successBorder: $green2;
+$successText: $green2 !default;
+$successBackground: $green2 !default;
+$successBorder: $green2 !default;
 
-$infoText: 			#3a87ad;
-$infoBackground: 	#d9edf7;
-$infoBorder: 		darken(adjust-hue($infoBackground, -10), 7%);
+$infoText: 			#3a87ad !default;
+$infoBackground: 	#d9edf7 !default;
+$infoBorder: 		darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 // Forms requirements from bootstrap
-$gridColumns:		12;
-$gridColumnWidth:	60px;
-$gridGutterWidth:	20px;
+$gridColumns:		12 !default;
+$gridColumnWidth:	60px !default;
+$gridGutterWidth:	20px !default;
 
 /*! tetra-ui v1.4.8 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
@@ -3262,7 +3262,7 @@ table.table .header:hover:after {
 table.table .headerSortDown:after,
 table.table .headerSortDown:hover:after {
   opacity: 0.6;
-  filter: unquote('alpha(opacity=60)');
+  filter: alpha(opacity=60);
   visibility: visible;
 }
 
@@ -3272,7 +3272,7 @@ table.table .headerSortUp:after {
   border-bottom: none;
   border-left: 4px solid transparent;
   opacity: 0.6;
-  filter: unquote('alpha(opacity=60)');
+  filter: alpha(opacity=60);
   visibility: visible;
 }
 
@@ -4892,7 +4892,7 @@ a:focus .avatar img {
   background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   opacity: 0.6;
-  filter: unquote('alpha(opacity=60)');
+  filter: alpha(opacity=60);
   -webkit-animation: popin-overlay-fadein 0.5s;
           animation: popin-overlay-fadein 0.5s;
 }
@@ -5137,7 +5137,7 @@ a:focus .avatar img {
   background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   opacity: 0.6;
-  filter: unquote('alpha(opacity=60)');
+  filter: alpha(opacity=60);
   -webkit-animation: highlight-overlay-fadein 0.5s;
      -moz-animation: highlight-overlay-fadein 0.5s;
           animation: highlight-overlay-fadein 0.5s;
@@ -7086,7 +7086,7 @@ a:focus .avatar img {
   padding: 0;
   cursor: pointer;
   opacity: 0;
-  filter: unquote('alpha(opacity=0)');
+  filter: alpha(opacity=0);
 }
 
 .custom-select:hover {

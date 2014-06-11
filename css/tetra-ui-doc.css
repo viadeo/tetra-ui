@@ -7008,6 +7008,20 @@ p {
   max-width: 200px;
 }
 
+.sidebar .follow-github {
+  line-height: 18px;
+  color: #595959;
+}
+
+.sidebar .follow-github svg {
+  position: relative;
+  top: 2px;
+}
+
+.sidebar .follow-github path {
+  fill: #595959;
+}
+
 .sidebar-nav {
   background: #0c2438;
 }
