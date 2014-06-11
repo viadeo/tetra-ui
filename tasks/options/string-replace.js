@@ -135,6 +135,21 @@ module.exports = {
       }
     ]
   },
+  less2sass_variables: {
+    options: {
+      replacements: [{
+          pattern: /(\$.*);/g,
+          replacement: '$1 !default;'
+        }
+      ]
+    },
+    files: [{
+      '<%= path.sass.src %>/foundation/variables.scss':'<%= path.sass.src %>/foundation/variables.scss',
+      },{
+      '<%= path.sass.src %>/foundation/variables_rtl.scss':'<%= path.sass.src %>/foundation/variables_rtl.scss'
+      }
+    ]
+  },
   sass_dist: {
     options: {
       replacements: [{

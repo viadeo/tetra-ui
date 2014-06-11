@@ -56,6 +56,7 @@ module.exports = function(grunt) {
   grunt.registerTask('less2sass', [
     'clean:sass',
     'string-replace:less2sass',
+    'string-replace:less2sass_variables',
     'string-replace:sass_dist',
     'string-replace:less_dist',
     'test-sass'
