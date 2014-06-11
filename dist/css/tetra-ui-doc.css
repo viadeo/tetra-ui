@@ -1,4 +1,4 @@
-/*! tetra-ui v1.4.8 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v2.0.0 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -6955,6 +6955,17 @@ p {
   background: #e8e9eb;
 }
 
+.main h1 .anchor-link,
+.main h2 .anchor-link {
+  color: #bfbfbf;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.main h1 .anchor-link:hover,
+.main h2 .anchor-link:hover {
+  color: #808080;
+}
+
 .main blockquote {
   padding: 0 0 0 15px;
   border-left: 5px solid #d1dce5;
@@ -7073,15 +7084,31 @@ p {
 }
 
 .code-content.visible .toggle-code .hide {
-  display: inline;
+  display: block;
+}
+
+.code-content i.last {
+  position: relative;
+  left: -14px;
+}
+
+.code-content .toggle-code {
+  background: #466e91;
 }
 
 .code-content .toggle-code + pre {
   margin: 0 !important;
 }
 
+.code-content .toggle-code .show,
+.code-content .toggle-code .hide {
+  display: block;
+  padding: 5px 0 5px 20px;
+  color: #fff;
+}
+
 .code-content .toggle-code .show {
-  display: inline;
+  display: block;
 }
 
 .code-content .toggle-code .hide {
