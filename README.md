@@ -1,4 +1,4 @@
-[Tetra UI](http://viadeo.github.io/tetra-ui/)
+[Tetra UI](http://viadeo.github.io/tetra-ui/doc)
 ========
 
 > A smart, easy-to-use toolkit for creating rich interfaces in lightning speed!
