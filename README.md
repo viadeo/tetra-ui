@@ -1,4 +1,4 @@
-[Tetra UI](http://viadeo.github.io/tetra-ui/doc)
+[Tetra UI](http://viadeo.github.io/tetra-ui/)
 ========
 
 > A smart, easy-to-use toolkit for creating rich interfaces in lightning speed!
@@ -29,9 +29,9 @@ Now you should have a `node_modules` folder inside `tetra-ui` with all the requi
 
 ## Launching Tetra UI
 
-`grunt`
+`grunt watch-server`
 
-And then go to this URL in a browser: <http://localhost:8080/tetra-ui/doc> or <http://127.0.0.1:8080/tetra-ui/doc>.<br />
+And then go to this URL in a browser: <http://localhost:8080/tetra-ui/> or <http://127.0.0.1:8080/tetra-ui/>.<br />
 With this `watch-server` task, every time a Less file is changed, Grunt rebuilds the CSS files.
 
 ## Extras
