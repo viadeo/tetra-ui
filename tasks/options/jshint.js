@@ -4,8 +4,6 @@ module.exports = {
   },
   files: [
     "Gruntfile.js",
-    "<%= path.js.src %>/**/*.class.js",
-    "<%= path.js.src %>/**/*.ctrl.js",
-    "<%= path.js.src %>/**/*.ui.js"
+    "src/js/**/*.js"
   ]
 }

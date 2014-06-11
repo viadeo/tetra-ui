@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tetra Ui | Grid &amp; responsive</title>
+  <meta name="description" content="Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!" />
+  <link rel="icon" href="/tetra-ui/dist/img/tetra-ui/favicon.png" />
+  <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.css" title="ltr"/>
+  <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
+  <!--[if lt IE 8]><script src="/tetra-ui/dist/js/vendor/json2.js"></script><![endif]-->
+</head>
+
+<body data-spy="scroll" data-target=".sidebar-doc" data-offset="80">
+
+
+
+  <aside class="sidebar affix affix-sidebar gu-1of5 gu-m-1of4 gu-s-1of1">
+    <div class="sidebar">
+
+  <h1 class="logo tac plm prm mbn">
+    <img src="/tetra-ui/dist/img/tetra-ui/tetra-ui-doc-hd.png" alt="Tetra Ui" class="fluid-media vam"/>
+  </h1>
+
+  <nav class='sidebar-nav'>
+    <div class="sidebar-doc paxl">
+
+  <ul>
+  
+    <li class="mbxs">
+      <a href="#grid-system">
+        Grid System
+      </a>
+      
+        <ul class="plm">
+        
+          <li class="mbn">
+            <a href="#grid-introduction">
+              Introduction
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#grid-simple">
+              Ex: Simple
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#grid-nested">
+              Ex: Nested
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#grid-spaced">
+              Ex: Spaced
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#grid-center">
+              Ex: Center
+            </a>
+          </li>
+        
+        </ul>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#responsive-design">
+        Responsive Design
+      </a>
+      
+        <ul class="plm">
+        
+          <li class="mbn">
+            <a href="#responsive-introduction">
+              Introduction
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#responsive-helpers">
+              Helpers
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#responsive-examples">
+              Ex: desktop &amp; mobile
+            </a>
+          </li>
+        
+        </ul>
+      
+    </li >
+  
+  </ul>
+
+</div>
+
+  </nav>
+
+  <div class="tac mvm">
+    <a href="https://github.com/viadeo/tetra-ui" class="btn btn-default follow-github">
+      Tetra Ui on Github
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill-rule="evenodd" clip-rule="evenodd" fill="#CBCBCB" d="M7 0c-3.86 0-7 3.14-7 7 0 3.859 3.14 7 7 7 3.859 0 7-3.141 7-7 0-3.86-3.141-7-7-7zm1.827 12.493l-.202-1.69c2.877-.344 3.09-2.49 2.477-4.529-.172-.573-.446-1.086-.452-1.725-.007-.833-.346-1.064-1.054-.655-.758.44-1.516.336-2.311.386l-.37.019-.356-.019c-.765-.05-1.494.054-2.224-.386-.68-.41-1.006-.178-1.013.655-.005.639-.269 1.152-.435 1.725-.589 2.039-.385 4.185 2.382 4.529l-.19 1.658c-2.251-.794-3.869-2.941-3.869-5.461 0-3.192 2.597-5.79 5.79-5.79 3.192 0 5.79 2.598 5.79 5.79 0 2.555-1.663 4.727-3.963 5.493z"/></svg>
+    </a>
+  </div>
+
+</div>
+
+
+  </aside>
+
+  <header class="header affix affix-nav gu-4of5 gu-m-3of4 gu-s-1of1">
+    <div class="plxl prxl">
+      <div class="gr">
+        <div class="gu gu-2of3 gu-m-1of1">
+          <nav class="nav-doc">
+  <ul>
+    
+      
+        <li class="dispi dispb-s prm mrm active">
+          <a href="/tetra-ui/doc/grid-and-responsive.html">
+            Grid &amp; responsive
+          </a>
+        </li >
+      
+    
+      
+        <li class="dispi dispb-s prm mrm ">
+          <a href="/tetra-ui/doc/helpers.html">
+            Helpers
+          </a>
+        </li >
+      
+    
+      
+        <li class="dispi dispb-s prm mrm ">
+          <a href="/tetra-ui/doc/index.html">
+            Elements
+          </a>
+        </li >
+      
+    
+  </ul>
+</nav>
+
+        </div>
+        <div class="gu-last tar tal-m">
+          <span class="toggle-mode" >
+
+  <span class="mrs">RTL</span>
+
+  <span id="mode" class="flipswitch flipswitch-no bootnode" data-dir-rtl="/tetra-ui/dist/css/tetra-ui-doc-rtl.css" data-dir-ltr="/tetra-ui/dist/css/tetra-ui-doc.css">
+    <label class="flipswitch-lbl-yes">
+      <input type="radio" checked="checked" name="mode"> On
+    </label>
+
+    <span class="flipswitch-sliders">
+      <span class="flipswitch-outer">
+        <span class="flipswitch-inner">
+          <span class="flipswitch-btn-no"></span>
+          <span class="flipswitch-btn-yes"></span>
+        </span>
+      </span>
+      <span class="flipswitch-slider"></span>
+    </span>
+
+    <label class="flipswitch-lbl-no">
+      <input type="radio" name="mode"> Off
+    </label>
+  </span>
+
+</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="fluid-container ptl pbl">
+    
+
+
+  <div class="grid-system-content section ">
+  <h1 id="grid-system" class="h-lead mbxl">Grid System</h1>
+    
+    
+      
+        <div class="grid-introduction-content category mbxl pbs">
+        <h2 id="grid-introduction" class="h1 mbl">Introduction</h2>
+        <p>The Tetra UI grid is a percentage-based, nestable grid system. Each grid row (<strong>.gr</strong>) takes up 100% of the parent containers&#39; width and can contain up to 5 grid units (<strong>.gu</strong>). These grid units can then contain nested grid rows, maximizing flexibility and laying the foundations for a responsive layout.</p>
+<p>When creating layouts, it is often useful to have a guide. To do this just add the <strong>.gr-zebra</strong> class to your grid row (<strong>.gr</strong>)</p>
+
+
+        </div>
+      
+        <div class="grid-simple-content category mbxl pbs">
+        <h2 id="grid-simple" class="h1 mbl">Ex: Simple</h2>
+        <p>The markup below creates a 5 unit grid row. You will notice that the last child element has the <strong>.gu-last</strong> class. <br />
+This element consumes the remaining width of the grid unit and is useful for fixing some issues in older browsers, so please follow this convention. It is also essential when using spaced grids (documented below).</p>
+
+
+<div class="gr gr-zebra">
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-1of5"> ... </div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+  <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+  <div class="gu gu-1of4"><span class="hide-s">.gu</span> .gu-1of4</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="gr gr-zebra mts">
+  <div class="gu gu-1of1"><span class="hide-s">.gu</span> .gu-1of1</div>
+</div>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+        </div>
+      
+        <div class="grid-nested-content category mbxl pbs">
+        <h2 id="grid-nested" class="h1 mbl">Ex: Nested</h2>
+        <p><h3 class="h3"> Nesting with siblings</h3>
+The example above shows a grid row (<strong>.gr</strong>) nested within a grid unit (<strong>.gu</strong>), thus enabling it to be accompanied by sibling elements. The markup looks like this:</p>
+
+
+<div class="gr gr-zebra">
+  <div class="gu gu-2of3 pan pts">
+    <span class="hide-s">.gu</span> .gu-2of3
+    <div class="gr zebra mts">
+      <div class="gu gu-1of2"><span class="hide-s">.gu</span> .gu-1of2</div>
+      <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+    </div>
+  </div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-2of3"</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of2"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+<p><h3 class="h3"> Direct nesting</h3>
+The other option is to nest your grid units directly in another grid unit. Just add the <strong>.gr</strong> class to an element with the <strong>.gu</strong> class!</p>
+
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-2of3 gr"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of2"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+        </div>
+      
+        <div class="grid-spaced-content category mbxl pbs">
+        <h2 id="grid-spaced" class="h1 mbl">Ex: Spaced</h2>
+        <p>You can assign spacing to the Tetra UI grid, using the fixed spacing sizes declared in <a href="/tetra-ui/doc/helpers.html">variables.less</a>. The percentage widths of each grid unit will change to accomodate for the extra spacing and to ensure all units are equal widths.</p>
+<blockquote>
+<p>Tetra UI uses the <strong>@siteWidth</strong> variable defined in variables.less to calculate percentage widths for grid spacing, so you can only use this feature on a top-level grid row and not a nested one, unless the nested row is the same rendered width as the value of the <strong>@siteWidth variable</strong>.</p>
+</blockquote>
+
+
+<table class="table table-text table-hover">
+  <thead>
+    <tr>
+      <th>Class Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class=" language-css"><strong>.grsxs</strong></code></td>
+      <td>Extra small spacing, defined in variables.less as <code class=" language-css">@spacingXs</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grss</strong></code></td>
+      <td>Small spacing, defined in variables.less as <code class=" language-css">@spacingS</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsm</strong></code></td>
+      <td>Medium spacing, defined in variables.less as <code class=" language-css">@spacingM</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsl</strong></code></td>
+      <td>Large spacing, defined in variables.less as <code class=" language-css">@spacingL</code></td>
+    </tr>
+    <tr>
+      <td><code class=" language-css"><strong>.grsxl</strong></code></td>
+      <td>Extra large spacing, defined in variables.less as <code class=" language-css">@spacingXl</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="gr grss gr-zebra">
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-1of5"><span class="hide-s">.gu</span> .gu-1of5</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+<div class="gr grsl gr-zebra mts">
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-1of3"><span class="hide-s">.gu</span> .gu-1of3</div>
+  <div class="gu gu-last"><span class="hide-s">.gu</span> .gu-last</div>
+</div>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr grss"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr grsl mts"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+        </div>
+      
+        <div class="grid-center-content category mbxl pbs">
+        <h2 id="grid-center" class="h1 mbl">Ex: Center</h2>
+        <p>Using the <strong>.bac</strong> (Block Align Center) class as described on the <a href="/tetra-ui/doc/helpers.html">helpers</a> page.</p>
+
+
+<div class="gr gr-zebra">
+  <div class="gu gu-1of5 bac"><span class="hide-s">.gu</span> .gu-1of5 .bac</div>
+  <div class="gu gu-1of4 bac"><span class="hide-s">.gu</span> .gu-1of4 .bac</div>
+  <div class="gu gu-1of3 bac"><span class="hide-s">.gu</span> .gu-1of3 .bac</div>
+  <div class="gu gu-1of2 bac"><span class="hide-s">.gu</span> .gu-1of2 .bac</div>
+</div>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr gr-zebra"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of4 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of3 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of2 bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+        </div>
+      
+    
+  </div>
+
+  <div class="responsive-design-content section ptl">
+  <h1 id="responsive-design" class="h-lead mbxl">Responsive Design</h1>
+    
+    
+      
+        <div class="responsive-introduction-content category mbxl pbs">
+        <h2 id="responsive-introduction" class="h1 mbl">Introduction</h2>
+        <p>The responsive grid has a desktop first approach. It comes with two breakpoints:</p>
+<ul class="list-disc mbm">
+<li> a medium breakpoint (m) for middle sized devices, tablets for example</li>
+<li> a small breakpoint (s) for small devices like mobiles</li>
+</ul>
+
+<p>The responsive grid is used inside a fluid page container which has the following properties:</p>
+<ul class="list-disc mbm">
+<li>horizontally centered</li>
+<li> three different percentage widths for desktop, tablet, mobile applied with media queries</li>
+<li> a maximum width when in desktop mode to prevent the page from being to large.</li>
+</ul>
+
+<h3 class="h3"> Fluid container</h3>
+
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fluid-container"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+<h3 class="h3">Grid markup</h3>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-1of5 gu-m-1of1"</span>&gt;</span>
+    This column is a 1/5 width column in desktop mode,
+    then a full width column after the medium breakpoint.
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-3of5 gu-m-3of5 gu-s-1of1"</span>&gt;</span>
+    This column is a 3/5 width column in desktop mode,
+    then a 3/5 width column after the medium breakpoint,
+    then a full width column after the small breakpoint.
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span>
+    This column remains the last one
+    and fills the remaining free space.
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+
+        </div>
+      
+        <div class="responsive-helpers-content category mbxl pbs">
+        <h2 id="responsive-helpers" class="h1 mbl">Helpers</h2>
+        <p><h3 class="h3"> Visibility</h3></p>
+<blockquote>
+<p>Resizing your browser window will show the effect of the different show and hide classes.</p>
+</blockquote>
+
+
+<table class="table table-text table-hover bx">
+    <thead><tr>
+      <th></th>
+      <th>Large devices</th>
+      <th>Medium devices</th>
+      <th>Small devices</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>Hide</th>
+      <td>
+        <span class="hide-l fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-l</code>
+        <p class="mbn">Hide on large devices and down</p>
+      </td>
+      <td>
+        <span class="hide-m fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-m</code>
+        <p class="mbn">Hide on medium devices and down</p>
+      </td>
+      <td>
+        <span class="hide-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-s</code>
+        <p class="mbn">Hide on small devices only</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Show</th>
+      <td>
+        <span class="show-l fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.show-l</code>
+        <p class="mbn">Show on large devices and down</p>
+      </td>
+      <td>
+        <span class="show-m fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.show-m</code>
+        <p class="mbn">Show on medium devices and down</p>
+      </td>
+      <td>
+        <span class="show-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.show-s</code>
+        <p class="mbn">Show on small devices</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Samples</th>
+      <td>
+        <span class="hide-m fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-m</code>
+        <p class="mbn">Show only on large devices</p>
+      </td>
+      <td>
+        <span class="hide-l show-m hide-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-l .show-m .hide-s</code>
+        <p class="mbn">Show only on medium devices</p>
+      </td>
+      <td>
+        <span class="hide-l show-s fr"><i class="vicon">v</i></span>
+        <code class=" language-css">.hide-l .show-s</code>
+        <p class="mbn">Show only on small devices</p>
+      </td>
+    </tr>
+  </tbody></table>
+
+<p><h3 class="h3"> Responsive</h3></p>
+<blockquote>
+<p>Resizing your browser window will show the effect of the different show and hide classes.</p>
+</blockquote>
+
+
+      <table class="table table-text table-hover bx">
+        <thead><tr>
+          <th></th>
+          <th>Large devices</th>
+          <th>Medium devices</th>
+          <th>Small devices</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Float</th>
+          <td>
+            <code class=" language-css">.fl</code>
+            <code class=" language-css">.fr</code>
+            <code class=" language-css">.fno</code>
+            <p class="mbn">Floats left, right or unfloats on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.fl-m</code>
+            <code class=" language-css">.fr-m</code>
+            <code class=" language-css">.fno-m</code>
+            <p class="mbn">Floats left, right or unfloats on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.fl-s</code>
+            <code class=" language-css">.fr-s</code>
+            <code class=" language-css">.fno-s</code>
+            <p class="mbn">Floats left, right or unfloats on small devices only</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Text Align</th>
+          <td>
+            <code class=" language-css">.tal</code>
+            <code class=" language-css">.tar</code>
+            <code class=" language-css">.tac</code>
+            <p class="mbn">Text aligns left, right or center on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.tal-m</code>
+            <code class=" language-css">.tar-m</code>
+            <code class=" language-css">.tac-m</code>
+            <p class="mbn">Text aligns left, right or center on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.tal-s</code>
+            <code class=" language-css">.tar-s</code>
+            <code class=" language-css">.tac-s</code>
+            <p class="mbn">Text aligns left, right or center on small devices only</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Block Align</th>
+          <td>
+            <code class=" language-css">.bac</code>
+            <code class=" language-css">.bar</code>
+            <code class=" language-css">.bal</code>
+            <p class="mbn">Block aligns left, right or center on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.bac-m</code>
+            <code class=" language-css">.bar-m</code>
+            <code class=" language-css">.bal-m</code>
+            <p class="mbn">Block aligns left, right or center on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.bac-s</code>
+            <code class=" language-css">.tar-s</code>
+            <code class=" language-css">.bal-s</code>
+            <p class="mbn">Block aligns left, right or center on small devices only</p>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table class="table table-text table-hover bx">
+        <thead><tr>
+          <th></th>
+          <th>Large devices</th>
+          <th>Medium devices</th>
+          <th>Small devices</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Block</th>
+          <td>
+            <code class=" language-css">.dispb</code>
+            <p class="mbn">Block layout on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispb-m</code>
+            <p class="mbn">Block layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispb-s</code>
+            <p class="mbn">Block layout on small devices and down</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Inline block</th>
+          <td>
+            <code class=" language-css">.dispib</code>
+            <p class="mbn">Inline block layout on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispib-m</code>
+            <p class="mbn">Inline block layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispib-s</code>
+            <p class="mbn">Inline block layout on small devices and down</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Inline</th>
+          <td>
+            <code class=" language-css">.dispi</code>
+            <p class="mbn">Inline layout on large devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispi-m</code>
+            <p class="mbn">Inline layout on medium devices and down</p>
+          </td>
+          <td>
+            <code class=" language-css">.dispi-s</code>
+            <p class="mbn">Inline layout on small devices and down</p>
+          </td>
+        </tr>
+      </tbody></table>
+
+
+<h3 class="h3"> Variables</h3>
+
+
+      <table class="table table-text table-hover bx">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidthMax</span></code></pre>
+
+            </th>
+            <td class="vam">1020px</td>
+            <td>Maximum width of the page or fluid container</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@breakpointM</span></code></pre>
+
+            </th>
+            <td>768px</td>
+            <td>Breakpoint for medium devices (tablet)</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@breakpointS</span></code></pre>
+
+            </th>
+            <td>480px</td>
+            <td>Breakpoint for small devices (mobile)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-text table-hover bx">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidth</span></code></pre>
+
+            </th>
+            <td>85%</td>
+            <td>Width of the fluid container in desktop mode</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidthM</span></code></pre>
+
+            </th>
+            <td>90%</td>
+            <td>Width of the fluid container on medium devices</td>
+          </tr>
+          <tr>
+            <th><pre><code class="language-scss"><span class="hljs-at_rule">@pageWidthS</span></code></pre>
+
+            <td>97%</td>
+            <td>Width of the fluid container on small devices</td>
+          </tr>
+        </tbody>
+      </table>
+
+        </div>
+      
+        <div class="responsive-examples-content category mbxl pbs">
+        <h2 id="responsive-examples" class="h1 mbl">Ex: desktop &amp; mobile</h2>
+        <div class="gr grsl">
+
+  <div class="gu gu-3of5 gu-m-1of2 gu-s-1of1">
+    <div class="bx">
+      <h2 class="h-bx h-bx-main">Main content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum laoreet dolor, vitae adipiscing quam commodo sed. Cras porta dictum sem quis aliquet. Aenean a neque sed dolor lacinia iaculis.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+  </div>
+
+  <div class="gu gu-last">
+    <div class="bx">
+      <h2 class="h-bx">Aside</h2>
+      <ul>
+        <li>Lorem ipsum</li>
+        <li>Consectetur</li>
+        <li>Sed do eiusmod</li>
+        <li>Et dolore magna aliqua</li>
+      </ul>
+    </div>
+    <div class="bx">
+      <h2 class="h-bx">Picture</h2>
+      <img src="http://placehold.it/400x400" alt="" class="fluid-media">
+    </div>
+  </div>
+
+</div>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gr grsl"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-3of5 gu-m-1of2 gu-s-1of1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bx"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h-bx h-bx-main"</span>&gt;</span>Main content<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gu gu-last"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bx"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h-bx"</span>&gt;</span>Aside<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bx"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h-bx"</span>&gt;</span>Picture<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://placehold.it/400x400"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fluid-media"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+        </div>
+      
+    
+  </div>
+
+
+
+    <footer class="footer">
+        <p class="gray tac mbn">©2014 APVO CORP.</p>
+    </footer>
+    </div>
+  </main>
+
+  <script src="/tetra-ui/dist/js/doc/main.js"></script>
+
+</body>
+</html>

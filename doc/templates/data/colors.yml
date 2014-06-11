@@ -1,0 +1,70 @@
+palette:
+  -
+    values:
+      orange1: "#f56600;"
+      orange2: "#f1532e;"
+      orange3: "#f78d2d;"
+      orange4: "#feae35;"
+    count: "4"
+  -
+    values:
+      green1: "#019875;"
+      green2: "#0c9f9b;"
+      green3: "#53c1af;"
+      green4: "#c6e6d7;"
+    count: "4"
+  -
+    values:
+      blue1: "#006aa8;"
+      blue2: "#007bc2;"
+      blue3: "#42a2d6;"
+      blue4: "#1f668c;"
+      blue5: "#7dcde3;"
+    count: "5"
+  -
+    values:
+      purple1: "#471d63;"
+      purple2: "#685985;"
+    count: "2"
+tint:
+  values: [50, 40, 30, 20 , 10]
+  count: "5"
+  type: "blue"
+shade:
+  values: [10, 20, 30, 40 , 50]
+  count: "5"
+  type: "blue"
+grayscale:
+  values:
+    black: "#000000;"
+    grayDark: "#404040;"
+    gray: "#808080;"
+    grayLight: "#bfbfbf;"
+    grayLighter: "#e6e6e6;"
+    white: "#ffffff;"
+  count: "6"
+semantic:
+  -
+    values:
+      baseFontColor: "#262626"
+      pageBg: "#e8e9eb;"
+      linkColor: "#007de3;"
+      linkColorHover: "#0071cc;"
+      overlayBorder: "#273038;"
+    count: "5"
+    type: "Base"
+  -
+    values:
+      panelBackground: "#f5f7f9;"
+      panelBorder: "#e4eaf0;"
+      panelBorderDarker: "#b7c8d6;"
+      borderColor: "#d1dce5;"
+    count: "4"
+    type: "Panel"
+  -
+    values:
+      highlightColor: "#f4f2ca;"
+      errorText: "#d54243;"
+      premiumColor: "#ffbb12;"
+    count: "3"
+    type: "Context"

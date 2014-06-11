@@ -3,265 +3,255 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tetra UI | Helpers</title>
+  <title>Tetra Ui | Helpers</title>
+  <meta name="description" content="Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!" />
   <link rel="icon" href="/tetra-ui/dist/img/tetra-ui/favicon.png" />
-  
-    <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.min.css" />
-  
-  <link rel="stylesheet" href="/tetra-ui/bower_components/prism-css/index.css" />
-  <!--[if lt IE 8]><script src="/tetra-ui/bower_components/json2/json2.js"></script><![endif]-->
-  <script src="/tetra-ui/bower_components/tetra-js/index.js"></script>
-  <script src="/tetra-ui/dist/js/conf/tetra-js.js"></script>
+  <link rel="stylesheet" href="/tetra-ui/dist/css/tetra-ui-doc.css" title="ltr"/>
+  <script src="/tetra-ui/dist/js/vendor/jquery.js"></script>
+  <script src="/tetra-ui/dist/js/vendor/scrollspy.js"></script>
+  <!--[if lt IE 8]><script src="/tetra-ui/dist/js/vendor/json2.js"></script><![endif]-->
 </head>
 
-<body>
-
-<div class="wrap">
-  <div class="header">
-    <div class="fluid-container">
-      <h1 class="fl">Powered by <i class="vicon">o</i>
-        <a href="/tetra-ui/" class="logo">Tetra UI</a>
-      </h1>
-      <a href="https://github.com/viadeo/tetra-ui" class="fr mts btn btn-default btn-large github">Tetra UI on GitHub</a>
-    </div>
-  </div>
-
-  <div class="headline">
-    <div class="fluid-container">
-      <h1 class="h1">A smart, easy-to-use toolkit
-        <span class="sub">for creating rich interfaces in lightning speed!</span>
-      </h1>
-    </div>
-  </div>
-
-  <div class="content fluid-container">
-    <ul class="nav nav-menu">
-  <li>
-    <a href="/tetra-ui/index.html">Grid</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/rich-containers.html">Rich containers</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/typography.html">Typography</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/forms.html">Forms</a>
-  </li>
-  <li class="active">
-    <a href="/tetra-ui/doc/helpers.html">Helpers</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/variables.html">Variables</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/components.html">Components</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/icons.html">Icons</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/dialogs.html">Dialogs</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/right-to-left.html">Right to left</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/maps.html">Maps</a>
-  </li>
-  <li>
-    <a href="/tetra-ui/doc/responsive.html">Responsive</a>
-  </li>
-</ul>
+<body data-spy="scroll" data-target=".sidebar-doc" data-offset="80">
 
 
-    <div class="nav-tabs-section">
+
+  <aside class="sidebar affix affix-sidebar gu-1of5 gu-m-1of4 gu-s-1of1">
+    <div class="sidebar">
+
+  <h1 class="logo tac plm prm mbn">
+    <img src="/tetra-ui/dist/img/tetra-ui/tetra-ui-doc-hd.png" alt="Tetra Ui" class="fluid-media vam"/>
+  </h1>
+
+  <nav class='sidebar-nav'>
+    <div class="sidebar-doc paxl">
+
+  <ul>
+  
+    <li class="mbxs">
+      <a href="#helpers-overview">
+        Overview
+      </a>
       
+    </li >
+  
+    <li class="mbxs">
+      <a href="#helpers-miscellaneous">
+        Miscellaneous
+      </a>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#spacing">
+        Spacing
+      </a>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#border-radius">
+        Border radius
+      </a>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#text-alignment">
+        Text alignment
+      </a>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#block-layout">
+        Block layout
+      </a>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#block-alignment">
+        Block alignment
+      </a>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#vertical-alignment">
+        Vertical alignment
+      </a>
+      
+    </li >
+  
+    <li class="mbxs">
+      <a href="#rich-containers">
+        Rich Containers
+      </a>
+      
+        <ul class="plm">
+        
+          <li class="mbn">
+            <a href="#rc-introduction">
+              Introduction
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#rc-spacing-and-alignment">
+              Spacing &amp; Alignment
+            </a>
+          </li>
+        
+          <li class="mbn">
+            <a href="#rc-examples">
+              Examples
+            </a>
+          </li>
+        
+        </ul>
+      
+    </li >
+  
+  </ul>
 
-<div class="bx">
-
-<div class="page-header">
-  <h1 class="h1">Helpers<span class="sub">Short CSS classes to help maintain consistency and save you time</span></h1>
 </div>
-<div class="gr grsm">
-  <div class="gu gu-1of3 gu-m-1of1">
-    <p>These short, structured class names are easy to remember and help you work faster. What’s more, the spacings and sizes are consistent with the values declared in variables.</a></p>
+
+  </nav>
+
+  <div class="tac mvm">
+    <a href="https://github.com/viadeo/tetra-ui" class="btn btn-default follow-github">
+      Tetra Ui on Github
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill-rule="evenodd" clip-rule="evenodd" fill="#CBCBCB" d="M7 0c-3.86 0-7 3.14-7 7 0 3.859 3.14 7 7 7 3.859 0 7-3.141 7-7 0-3.86-3.141-7-7-7zm1.827 12.493l-.202-1.69c2.877-.344 3.09-2.49 2.477-4.529-.172-.573-.446-1.086-.452-1.725-.007-.833-.346-1.064-1.054-.655-.758.44-1.516.336-2.311.386l-.37.019-.356-.019c-.765-.05-1.494.054-2.224-.386-.68-.41-1.006-.178-1.013.655-.005.639-.269 1.152-.435 1.725-.589 2.039-.385 4.185 2.382 4.529l-.19 1.658c-2.251-.794-3.869-2.941-3.869-5.461 0-3.192 2.597-5.79 5.79-5.79 3.192 0 5.79 2.598 5.79 5.79 0 2.555-1.663 4.727-3.963 5.493z"/></svg>
+    </a>
   </div>
-  <div class="gu gu-last">
 
-    <h3 class="h3" id="spacing">Spacing</h3>
-    <p>Usage: <code class="language-css">.[type][direction][size]</code>. Example: <code class="language-css">.prl</code> <span class="gray">(applies a large padding to the right side of the element)</span>.</p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Value</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code class="language-css">[type]</code></td>
-          <td>Margin (<code>m</code>) or padding (<code>p</code>).</td>
-        </tr>
-        <tr>
-          <td><code class="language-css">[direction]</code></td>
-          <td>
-            <p>The side or axis on which to apply the spacing:</p>
-            <ul class="link-list">
-              <li><code class="language-css">a</code> All</li>
-              <li><code class="language-css">t</code> Top</li>
-              <li><code class="language-css">r</code> Right</li>
-              <li><code class="language-css">b</code> Bottom</li>
-              <li><code class="language-css">l</code> Left</li>
-              <li><code class="language-css">h</code> Horizontal</li>
-              <li><code class="language-css">v</code> Vertical</li>
-            </ul>
-        </tr>
-        <tr>
-          <td><code class="language-css">[size]</code></td>
-          <td>
-            <p>One of 6 spacing sizes, the pixel values of which are defined in the <a href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L29-L34" target="_blank">variables.less</a> file:
-            </p>
-            <ul class="link-list">
-              <li><code class="language-css">n</code> Null</li>
-              <li><code class="language-css">xs</code> eXtra Small</li>
-              <li><code class="language-css">s</code> Small</li>
-              <li><code class="language-css">m</code> Medium</li>
-              <li><code class="language-css">l</code> Large</li>
-              <li><code class="language-css">xl</code> eXtra Large</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+</div>
 
 
-    <h3 class="h3" id="border-radius">Border radius</h3>
-    <p>Usage: <code class="language-css">.br[direction][size]</code>. Example: <code class="language-css">.brtlm</code> <span class="gray">(applies a medium-sized border radius to the top-left corner of the element).</span></p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Value</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code class="language-css">[direction]</code></td>
-          <td>The side or corner on which to apply the border radius. Values can be all (<code class="language-css">a</code>), top left (<code class="language-css">tl</code>), top right (<code class="language-css">tr</code>), bottom right (<code class="language-css">br</code>), bottom left (<code class="language-css">bl</code>), top (<code class="language-css">t</code>), left (<code class="language-css">l</code>), bottom (<code class="language-css">b</code>), or right (<code class="language-css">r</code>).</td>
-        </tr>
-        <tr>
-          <td><code class="language-css">[size]</code></td>
-          <td>One of 3 sizes, defined in the <a href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L121-L126" target="_blank">variables.less</a> file. Values can be small (<code class="language-css">s</code>), medium (<code class="language-css">m</code>), or large(<code class="language-css">l</code>).</td>
-        </tr>
-      </tbody>
-    </table>
+  </aside>
+
+  <header class="header affix affix-nav gu-4of5 gu-m-3of4 gu-s-1of1">
+    <div class="plxl prxl">
+      <div class="gr">
+        <div class="gu gu-2of3 gu-m-1of1">
+          <nav class="nav-doc">
+  <ul>
+    
+      
+        <li class="dispi dispb-s prm mrm ">
+          <a href="/tetra-ui/doc/grid-and-responsive.html">
+            Grid &amp; responsive
+          </a>
+        </li >
+      
+    
+      
+        <li class="dispi dispb-s prm mrm active">
+          <a href="/tetra-ui/doc/helpers.html">
+            Helpers
+          </a>
+        </li >
+      
+    
+      
+        <li class="dispi dispb-s prm mrm ">
+          <a href="/tetra-ui/doc/index.html">
+            Elements
+          </a>
+        </li >
+      
+    
+  </ul>
+</nav>
+
+        </div>
+        <div class="gu-last tar tal-m">
+          <span class="toggle-mode" >
+
+  <span class="mrs">RTL</span>
+
+  <span id="mode" class="flipswitch flipswitch-no bootnode" data-dir-rtl="/tetra-ui/dist/css/tetra-ui-doc-rtl.css" data-dir-ltr="/tetra-ui/dist/css/tetra-ui-doc.css">
+    <label class="flipswitch-lbl-yes">
+      <input type="radio" checked="checked" name="mode"> On
+    </label>
+
+    <span class="flipswitch-sliders">
+      <span class="flipswitch-outer">
+        <span class="flipswitch-inner">
+          <span class="flipswitch-btn-no"></span>
+          <span class="flipswitch-btn-yes"></span>
+        </span>
+      </span>
+      <span class="flipswitch-slider"></span>
+    </span>
+
+    <label class="flipswitch-lbl-no">
+      <input type="radio" name="mode"> Off
+    </label>
+  </span>
+
+</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="fluid-container ptl pbl">
+    
 
 
-    <h3 class="h3" id="text-alignment">Text alignment</h3>
-    <p>Usage: <code class="language-css">.ta[alignment]</code>. Example: <code class="language-css">.tac</code> <span class="gray">(centers text within the element).</span></p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Value</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code class="language-css">[alignment]</code></td>
-          <td>
-            <p>The alignment of the text. Values can be:</p>
-            <ul class="link-list">
-              <li><code class="language-css">l</code> Left</li>
-              <li><code class="language-css">r</code> Right</li>
-              <li><code class="language-css">c</code> Center</li>
-              <li><code class="language-css">j</code> Justify</li>
-              <li><code class="language-css">i</code> Inherit</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><code class="language-css">.hyph</code></td>
-          <td>This class activates hyphenation on paragraphs for example, or on a generic container. This is a progressive enhancement, it is now supported by Firefox, IE10, and Safari. The browser must know the language, for example with <code class="language-markup">&lt;html lang="en"&gt;</code> for a proper hyphenation.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3 class="h3" id="block-alignment">Block layout</h3>
-    <p>Usage: <code class="language-css">.disp[layout]</code>. Example: <code class="language-css">.dispi</code> <span class="gray">(makes an element inline)</span>.</p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Value</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code class="language-css">[layout]</code></td>
-          <td>
-            <p>The block layout. Values can be:</p>
-            <ul class="link-list">
-              <li><code class="language-css">b</code> Block</li>
-              <li><code class="language-css">ib</code> Inline block</li>
-              <li><code class="language-css">i</code> Inline</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3 class="h3" id="block-alignment">Block alignment</h3>
-    <p>Usage: <code class="language-css">.ba[alignment]</code>. Example: <code class="language-css">.bac</code> <span class="gray">(centers a block element within its container)</span>.</p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Value</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code class="language-css">[alignment]</code></td>
-          <td>
-            <p>The alignment of the block. Values can be:</p>
-            <ul class="link-list">
-              <li><code class="language-css">l</code> Left</li>
-              <li><code class="language-css">r</code> Right</li>
-              <li><code class="language-css">c</code> Center</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3 class="h3" id="block-alignment">Vertical alignment</h3>
-    <p>Usage: <code class="language-css">.va[alignment]</code>. Example: <code class="language-css">.vam</code> <span class="gray">(vertically alignment of an element to the middle).</span></p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Value</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code class="language-css">[alignment]</code></td>
-          <td>
-            <p>The vertical alignment. Values can be:</p>
-            <ul class="link-list">
-              <li><code class="language-css">m</code> Middle</li>
-              <li><code class="language-css">b</code> Bottom</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="helpers-overview-content section ">
+  <h1 id="helpers-overview" class="h-lead mbxl">Overview</h1>
+    <blockquote>
+<p>Short CSS classes to help maintain consistency and save you time</p>
+</blockquote>
+<p>These short, structured class names are easy to remember and help you work faster. What’s more, the spacings and sizes are consistent with the values declared in variables.</p>
 
 
-    <h3 class="h3" id="misc">Miscellaneous</h3>
-    <table class="table">
+<table class="table table-text table-hover">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code class=" language-css">@siteWidth</code></td>
+            <td>980px</td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">@spacingXs</code></td>
+            <td>5px</td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">@spacingS</code></td>
+            <td>10px</td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">@spacingM</code></td>
+            <td>15px</td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">@spacingL</code></td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">@spacingXl</code></td>
+            <td>30px</td>
+          </tr>
+        </tbody>
+      </table>
+
+    
+  </div>
+
+  <div class="helpers-miscellaneous-content section ptl">
+  <h1 id="helpers-miscellaneous" class="h-lead mbxl">Miscellaneous</h1>
+    <table class="table table-text table-hover">
       <thead>
         <tr>
           <th>Helper class name</th>
@@ -270,56 +260,606 @@
       </thead>
       <tbody>
         <tr>
-          <td><code class="language-css">.cf</code></td>
+          <td><code class=" language-css">.cf</code></td>
           <td>A badass clearfix hack to clear floating elements without using presentational markup. Just apply this to the parent container and you won't need to use <code><v:content><div class="clear"></div></v:content></code> anymore. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack</a> for more details :)</td>
         </tr>
         <tr>
-          <td><code class="language-css">.hidden</code></td>
+          <td><code class=" language-css">.hidden</code></td>
           <td>Hides an element. Use this as opposed to inline styles.</td>
         </tr>
         <tr>
-          <td><code class="language-css">.elsewhere</code></td>
+          <td><code class=" language-css">.elsewhere</code></td>
           <td>Moves an element off the page, hiding it from the user.</td>
         </tr>
         <tr>
-          <td><code class="language-css">.fl</code> <code class="language-css">.fr</code></td>
+          <td><code class=" language-css">.fl</code> <code class=" language-css">.fr</code></td>
           <td>Floats an element left or right, respectively.</td>
         </tr>
         <tr>
-          <td><code class="language-css">.fno</code></td>
+          <td><code class=" language-css">.fno</code></td>
           <td>Cancels the floating position of an element.</td>
         </tr>
         <tr>
-          <td><code class="language-css">.clr</code></td>
+          <td><code class=" language-css">.clr</code></td>
           <td>Clearing floated elements.</td>
         </tr>
         <tr>
-          <td><code class="language-css">.layered</code></td>
+          <td><code class=" language-css">.layered</code></td>
           <td>Absolutely positioning an element: removing it from the flow of the document.</td>
         </tr>
         <tr>
-          <td><code class="language-css">.decorative</code></td>
+          <td><code class=" language-css">.decorative</code></td>
           <td>Force MuseoSlab font</td>
         </tr>
       </tbody>
     </table>
 
+    
+  </div>
+
+  <div class="spacing-content section ptl">
+  <h1 id="spacing" class="h-lead mbxl">Spacing</h1>
+    <p>Usage: <strong>.[type][direction][size]</strong>.<br />
+Example: <strong>.prl</strong> (applies a large padding to the right side of the element).</p>
+
+
+<table class="table table-text table-hover">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class=" language-css">[type]</code></td>
+          <td>Margin (<code>m</code>) or padding (<code>p</code>).</td>
+        </tr>
+        <tr>
+          <td><code class=" language-css">[direction]</code></td>
+          <td>
+            <p>The side or axis on which to apply the spacing:</p>
+            <ul class="link-list">
+              <li><code class=" language-css">a</code> All</li>
+              <li><code class=" language-css">t</code> Top</li>
+              <li><code class=" language-css">r</code> Right</li>
+              <li><code class=" language-css">b</code> Bottom</li>
+              <li><code class=" language-css">l</code> Left</li>
+              <li><code class=" language-css">h</code> Horizontal</li>
+              <li><code class=" language-css">v</code> Vertical</li>
+            </ul>
+        </td></tr>
+        <tr>
+          <td><code class=" language-css">[size]</code></td>
+          <td>
+            <ul class="link-list">
+              <li><code class=" language-css">n</code> None</li>
+              <li><code class=" language-css">xs</code> eXtra Small</li>
+              <li><code class=" language-css">s</code> Small</li>
+              <li><code class=" language-css">m</code> Medium</li>
+              <li><code class=" language-css">l</code> Large</li>
+              <li><code class=" language-css">xl</code> eXtra Large</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- The id attribute describes the class value--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"padding-all-small"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pas"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"padding-all-none"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pan"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"margin-top-extra-large"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mtxl"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"margin-left-none"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mln"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
   </div>
 </div>
 
 </div>
 
+    
+  </div>
+
+  <div class="border-radius-content section ptl">
+  <h1 id="border-radius" class="h-lead mbxl">Border radius</h1>
+    <p>Usage: <strong>.br[direction][size]</strong>.<br />
+Example: <strong>.brtlm</strong> (applies a medium-sized border radius to the top-left corner of the element).</p>
+
+
+<table class="table table-text table-hover">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class=" language-css">[direction]</code></td>
+          <td>The side or corner on which to apply the border radius. Values can be all (<code class=" language-css">a</code>), top left (<code class=" language-css">tl</code>), top right (<code class=" language-css">tr</code>), bottom right (<code class=" language-css">br</code>), bottom left (<code class=" language-css">bl</code>), top (<code class=" language-css">t</code>), left (<code class=" language-css">l</code>), bottom (<code class=" language-css">b</code>), or right (<code class=" language-css">r</code>).</td>
+        </tr>
+        <tr>
+          <td><code class=" language-css">[size]</code></td>
+          <td>One of 3 sizes, defined in the <a target="_blank" href="https://github.com/viadeo/tetra-ui/blob/gh-pages/src/less/foundation/variables.less#L121-L126">variables.less</a> file. Values can be small (<code class=" language-css">s</code>), medium (<code class=" language-css">m</code>), or large(<code class=" language-css">l</code>).</td>
+        </tr>
+      </tbody>
+    </table>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- The id attribute describes the class value--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"border-radius-all-medium"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bram"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"border-radius-top-left-small"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"brtls"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"border-radius-bottom-medium"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"brbm"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+    
+  </div>
+
+  <div class="text-alignment-content section ptl">
+  <h1 id="text-alignment" class="h-lead mbxl">Text alignment</h1>
+    <p>Usage: <strong>.ta[alignment]</strong>. <br />
+Example: <strong>.tac</strong> (centers text within the element).</p>
+
+
+<table class="table table-text table-hover">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class=" language-css">[alignment]</code></td>
+          <td>
+            <p>The alignment of the text. Values can be:</p>
+            <ul class="link-list">
+              <li><code class=" language-css">l</code> Left</li>
+              <li><code class=" language-css">r</code> Right</li>
+              <li><code class=" language-css">c</code> Center</li>
+              <li><code class=" language-css">j</code> Justify</li>
+              <li><code class=" language-css">i</code> Inherit</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code class=" language-css">.hyph</code></td>
+          <td>This class activates hyphenation on paragraphs for example, or on a generic container. This is a progressive enhancement, it is now supported by Firefox, IE10, and Safari. The browser must know the language, for example with <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code> for a proper hyphenation.</td>
+        </tr>
+      </tbody>
+    </table>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- The id attribute describes the class value--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"text-align-center"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tac"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"text-align-left"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tal"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"text-align-justify"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"taj"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+    
+  </div>
+
+  <div class="block-layout-content section ptl">
+  <h1 id="block-layout" class="h-lead mbxl">Block layout</h1>
+    <p>Usage: <strong>.disp[layout]</strong>. <br />
+Example: <strong>.dispi</strong> (makes an element inline).</p>
+
+
+<table class="table table-text table-hover">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class=" language-css">[layout]</code></td>
+          <td>
+            <p>The block layout. Values can be:</p>
+            <ul class="link-list">
+              <li><code class=" language-css">b</code> Block</li>
+              <li><code class=" language-css">ib</code> Inline block</li>
+              <li><code class=" language-css">i</code> Inline</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- The id attribute describes the class value--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"display-block"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dispb"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"display-inline"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dispi"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"display-inline-block"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dispib"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+    
+  </div>
+
+  <div class="block-alignment-content section ptl">
+  <h1 id="block-alignment" class="h-lead mbxl">Block alignment</h1>
+    <p>Usage: <strong>.ba[alignment]</strong>. <br />
+Example: <strong>.bac</strong> (centers a block element within its container).</p>
+
+
+<table class="table table-text table-hover">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class=" language-css">[alignment]</code></td>
+          <td>
+            <p>The alignment of the block. Values can be:</p>
+            <ul class="link-list">
+              <li><code class=" language-css">l</code> Left</li>
+              <li><code class=" language-css">r</code> Right</li>
+              <li><code class=" language-css">c</code> Center</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- The id attribute describes the class value--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"block-align-center"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bac"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+    
+  </div>
+
+  <div class="vertical-alignment-content section ptl">
+  <h1 id="vertical-alignment" class="h-lead mbxl">Vertical alignment</h1>
+    <p>Usage: <strong>.va[alignment]</strong>.<br />
+Example: <strong>.vam</strong> (vertically alignment of an element to the middle).</p>
+
+
+<table class="table table-text table-hover">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class=" language-css">[alignment]</code></td>
+          <td>
+            <p>The vertical alignment. Values can be:</p>
+            <ul class="link-list">
+              <li><code class=" language-css">m</code> Middle</li>
+              <li><code class=" language-css">b</code> Bottom</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- The id attribute describes the class value--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"vertical-align-middle"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vam"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
+  </div>
+</div>
+
+</div>
+
+    
+  </div>
+
+  <div class="rich-containers-content section ptl">
+  <h1 id="rich-containers" class="h-lead mbxl">Rich Containers</h1>
+    
+    
+      
+        <div class="rc-introduction-content category mbxl pbs">
+        <h2 id="rc-introduction" class="h1 mbl">Introduction</h2>
+        <p>A rich container supports one of the most common layout patterns on Viadeo, in which there is an image (usually aligned left) and a block of text. This allows us to avoid using fixed widths on floated elements when implementing this pattern.</p>
+
+
+<table class="table table-text table-hover">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Alignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class=" language-css">.img-left</code></td>
+      <td>The image will be left aligned. Note that you can still use the old <code class=" language-css">.img</code> class but it will be deprecated in the future.</td>
+    </tr>
+    <tr>
+      <td><code class=" language-css">.img-right</code></td>
+      <td>The image will be right aligned. The previous <code class=" language-css">.imgRight</code> class name is still supported but will be deprecated in the future.</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-left"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"..."</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bd"</span>&gt;</span>
+  ...
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+        </div>
+      
+        <div class="rc-spacing-and-alignment-content category mbxl pbs">
+        <h2 id="rc-spacing-and-alignment" class="h1 mbl">Spacing &amp; Alignment</h2>
+        <p>The spacing between the image and text in rich containers can be specified by adding a class name to the <strong>.rc</strong> element, and the alignment by adding a class to the <strong>.img</strong> element.</p>
+
+
+<table class="table table-text table-hover">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Spacing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code class=" language-css">.rcsxs</code></td>
+            <td>Value defined as <code class=" language-css">@spacingXs</code></td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">.rcss</code></td>
+            <td>Value defined as <code class=" language-css">@spacingS</code></td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">.rcsm</code></td>
+            <td>Value defined as <code class=" language-css">@spacingM</code></td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">.rcsl</code></td>
+            <td>Value defined as <code class=" language-css">@spacingL</code></td>
+          </tr>
+          <tr>
+            <td><code class=" language-css">.rcsxl</code></td>
+            <td>Value defined as <code class=" language-css">@spacingXl</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+        </div>
+      
+        <div class="rc-examples-content category mbxl pbs">
+        <h2 id="rc-examples" class="h1 mbl">Examples</h2>
+        <div class="gr grsl">
+  <div class="gu gu-1of2 gu-m-1of1">
+    <div class="rc rcsxs">
+      <a class="img-left avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcss mtl">
+      <a class="img-left avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcsm mtl">
+      <a class="img-left avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcsl mtl">
+      <a class="img-left avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcsxl mtl">
+      <a class="img-left avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+  </div>
+  <div class="gu-last">
+    <div class="rc rcsxs tar">
+      <a class="img-right avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcss mtl tar">
+      <a class="img-right avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcsm mtl tar">
+      <a class="img-right avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcsl mtl tar">
+      <a class="img-right avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
+    </div>
+    <div class="rc rcsxl mtl tar">
+      <a class="img-right avatar" href="#"><img src="/tetra-ui/dist/img/avatars/avatar-m-60x60.png"></a>
+      <div class="bd">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="footer">
-  <div class="copy fluid-container">
-    <p>&copy;2013 APVO CORP.</p>
+
+<div class="code-content">
+<div class="toggle-code">
+  <a class='show'>
+    show code
+  </a>
+  <a class='hide'>
+    hide code
+  </a>
+</div>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- The media image is aligned to the left (img-left) with an extra-large (rcsxl) spacing--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc rcsxl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-left avatar"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/tetra-ui/dist/img/avatars/avatar-m-60x60.png"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bd"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- The media image is aligned to the right (img-right) with an extra-small (rcsxs) spacing--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rc rcsxs"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-right avatar"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/tetra-ui/dist/img/avatars/avatar-m-60x60.png"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bd"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+<div class="hidden">
+  <div class="copy-code">
+    <button type="button" class="btn btn-default btn-large">
+      copy code
+    </button>
   </div>
 </div>
 
-<script src="/tetra-ui/bower_components/prism-js/index.js"></script>
+</div>
+
+
+        </div>
+      
+    
+  </div>
+
+
+
+    <footer class="footer">
+        <p class="gray tac mbn">©2014 APVO CORP.</p>
+    </footer>
+    </div>
+  </main>
+
+  <script src="/tetra-ui/dist/js/doc/main.js"></script>
 
 </body>
 </html>

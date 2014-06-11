@@ -1,11 +1,11 @@
 module.exports = {
   less: {
     files: ['<%= path.less.src %>/**/*.less'],
-    tasks: ['recess:bootstrap', 'concat:less']
+    tasks: ['recess:bootstrap']
   },
   js: {
     files: ['Gruntfile.js','<%= path.js.src %>/**/*.js'],
-    tasks: ['jshint', 'concat:js', 'uglify']
+    tasks: ['jshint', 'concat:js']
   },
   doc: {
     files: ['<%= path.doc %>/**/*'],

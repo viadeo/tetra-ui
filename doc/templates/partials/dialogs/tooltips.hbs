@@ -1,0 +1,77 @@
+{{#markdown}}
+Roll over the links to show the tooltips.<br />
+Available classes are : **.tooltip-top**, **.tooltip-top-right**, **.tooltip-right**, **.tooltip-left**, **.tooltip-bottom**.
+{{/markdown}}
+
+<p>
+  <a class="tooltip tooltip-top btn btn-default btn-large">
+    Tooltip on top left (default)
+    <span class="tooltip-content">
+      Tooltip on top left
+    </span>
+  </a>
+  <a class="tooltip tooltip-top-right btn btn-default btn-large">
+    Tooltip on top right
+    <span class="tooltip-content">
+      Tooltip on top right
+    </span>
+  </a>
+  <a class="tooltip tooltip-right btn btn-default btn-large">
+    Tooltip on right
+    <span class="tooltip-content">
+      I'm on right
+    </span>
+  </a>
+  <a class="tooltip tooltip-left btn btn-default btn-large">
+    Tooltip on left
+    <span class="tooltip-content">
+      I'm on top right
+    </span>
+  </a>
+  <a class="tooltip tooltip-bottom btn btn-default btn-large">
+    Tooltip on bottom left
+    <span class="tooltip-content">
+      I'm on bottom left
+    </span>
+  </a>
+</p>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<a class="tooltip tooltip-top btn btn-default btn-large">
+  Tooltip on top left
+  <span class="tooltip-content">
+    Tooltip on top left
+  </span>
+</a>
+<a class="tooltip tooltip-top-right btn btn-default btn-large">
+  Tooltip on top right
+  <span class="tooltip-content">
+    Tooltip on top right
+  </span>
+</a>
+<a class="tooltip tooltip-right btn btn-default btn-large">
+  Tooltip on right
+  <span class="tooltip-content">
+    I'm on right
+  </span>
+</a>
+<a class="tooltip tooltip-left btn btn-default btn-large">
+  Tooltip on left
+  <span class="tooltip-content">
+    I'm on top right
+  </span>
+</a>
+<a class="tooltip tooltip-bottom btn btn-default btn-large">
+  Tooltip on bottom left
+  <span class="tooltip-content">
+    I'm on bottom left
+  </span>
+</a>
+```
+{{/markdown}}
+
+{{> copy-code}}
+</div>

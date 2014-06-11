@@ -1,0 +1,153 @@
+{{#markdown}}
+To add help text for your form inputs, include inline help text with `<span class="help-inline">` or a help text block with `<p class="help-block">` after the input element.
+{{/markdown}}
+
+<form class="core-form form-horizontal">
+    <fieldset>
+      <div class="control-group">
+        <label class="control-label">Alternate sizes</label>
+        <div class="controls docs-input-sizes">
+          <input type="text" placeholder=".input-mini" class="input-mini">
+          <input type="text" placeholder=".input-small" class="input-small">
+          <input type="text" placeholder=".input-medium" class="input-medium">
+          <p class="help-block">You may also use static classes that don't map to the grid, adapt to the responsive CSS styles, or account for varying types of controls (e.g., <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span><span class="token punctuation">&gt;</span></span></code> vs. <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span><span class="token punctuation">&gt;</span></span></code>).</p>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Alternate sizes</label>
+        <div class="controls docs-input-sizes">
+          <p>
+            <select class="input-small">
+              <option>.input-small</option>
+            </select>
+          </p>
+          <p>
+            <select class="input-medium">
+              <option>.input-medium</option>
+            </select>
+          </p>
+          <p>
+            <select class="input-large">
+              <option>.input-large</option>
+            </select>
+          </p>
+          <p>
+            <select class="input-xlarge">
+              <option>.input-xlarge</option>
+            </select>
+          </p>
+          <p>
+            <select class="input-xxlarge">
+              <option>.input-xxlarge</option>
+            </select>
+          </p>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Full width</label>
+        <div class="controls docs-input-sizes">
+          <input type="text" placeholder=".input-fullwidth" class="input-fullwidth">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="append-btn-default" class="control-label">Append with button</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" size="16" id="append-btn-default" class="span2"><button type="button" class="btn btn-default">Go!</button>
+          </div>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="append-btn-primary" class="control-label">Primary button</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" size="16" id="append-btn-primary" class="span2"><button type="button" class="btn btn-primary">Go!</button>
+          </div>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="append-btn-tertiary" class="control-label">Tertiary button</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" size="16" id="append-btn-tertiary" class="span2"><button type="button" class="btn btn-tertiary">Go!</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group error">
+        <label for="append-btn-default-error" class="control-label">Default button with error</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" size="16" id="append-btn-default-error" class="span2"><button type="button" class="btn btn-default">Go!</button>
+          </div>
+        </div>
+      </div>
+      <div class="control-group error">
+        <label for="append-btn-primary-error" class="control-label">Primary button with error</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" size="16" id="append-btn-primary-error" class="span2"><button type="button" class="btn btn-primary">Go!</button>
+          </div>
+        </div>
+      </div>
+      <div class="control-group error">
+        <label for="append-btn-tertiary-error" class="control-label">Tertiary button with error</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" size="16" id="append-btn-tertiary-error" class="span2"><button type="button" class="btn btn-tertiary">Go!</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="inlineCheckboxes" class="control-label">Inline checkboxes</label>
+        <div class="controls">
+          <label class="checkbox inline">
+            <input type="checkbox" value="option1" id="inlineCheckbox1"> 1
+          </label>
+          <label class="checkbox inline">
+            <input type="checkbox" value="option2" id="inlineCheckbox2"> 2
+          </label>
+          <label class="checkbox inline">
+            <input type="checkbox" value="option3" id="inlineCheckbox3"> 3
+          </label>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="optionsCheckboxList" class="control-label">Checkboxes</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input type="checkbox" value="option1" name="optionsCheckboxList1">
+            Option one is this and that - be sure to include why it's great
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="option2" name="optionsCheckboxList2">
+            Option two can also be checked and included in form results
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="option3" name="optionsCheckboxList3">
+            Option three can - yes, you guessed it - also be checked and included in form results
+          </label>
+          <p class="help-block"><strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.</p>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Radio buttons</label>
+        <div class="controls">
+          <label class="radio">
+            <input type="radio" checked="checked" value="option1" id="optionsRadios1" name="optionsRadios">
+            Option one is this and that - be sure to include why it's great
+          </label>
+          <label class="radio">
+            <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">
+            Option two can is something else and selecting it will deselect option one
+          </label>
+        </div>
+      </div>
+      <div class="form-actions ptm">
+        <button class="btn btn-secondary" type="submit">Save changes</button>
+        <button class="btn btn-default">Cancel</button>
+      </div>
+    </fieldset>
+  </form>

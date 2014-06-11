@@ -741,18 +741,18 @@ textarea {
     *zoom: 1;
   }
   .gu-m-1of2,
-  > .gu-m-2of4,
-  > .gu-m-3of6 {
+  .gu-m-2of4,
+  .gu-m-3of6 {
     width: 50%;
     margin: 0;
   }
   .gu-m-1of3,
-  > .gu-m-2of6 {
+  .gu-m-2of6 {
     width: 33.333333333333336%;
     margin: 0;
   }
   .gu-m-2of3,
-  > .gu-m-4of6 {
+  .gu-m-4of6 {
     width: 66.66666666666667%;
     margin: 0;
   }
@@ -3021,6 +3021,7 @@ table.table th {
   padding-top: 9px;
   font-weight: bold;
   vertical-align: middle;
+  background: #f6f6f7;
 }
 
 table.table thead th {
@@ -3029,6 +3030,7 @@ table.table thead th {
 
 table.table td {
   vertical-align: top;
+  background: #ffffff;
 }
 
 table.table th + th,
@@ -3042,20 +3044,20 @@ table.table tr + tr td {
   border-top: 1px solid #ddd;
 }
 
-table.table tbody tr:first-child td:first-child {
-  border-top-left-radius: 4px;
+table.table thead tr:first-child th:first-child {
+  border-top-left-radius: 3px;
 }
 
-table.table tbody tr:first-child td:last-child {
-  border-top-right-radius: 4px;
+table.table thead tr:first-child th:last-child {
+  border-top-right-radius: 3px;
 }
 
 table.table tbody tr:last-child td:first-child {
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 3px;
 }
 
 table.table tbody tr:last-child td:last-child {
-  border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 3px;
 }
 
 table.zebra tbody tr:nth-child(odd) td {
@@ -5606,6 +5608,7 @@ a:focus .avatar img {
   line-height: 16px;
   text-align: center;
   vertical-align: middle;
+  background: #fff;
   border: 1px solid #c5c7c5;
   border-radius: 2px;
 }

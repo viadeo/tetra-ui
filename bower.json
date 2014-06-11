@@ -19,11 +19,9 @@
     "*.sublime-project"
   ],
   "dependencies": {
-    "json2": "git://github.com/douglascrockford/JSON-js.git",
-    "tetra-js": "https://raw.github.com/viadeo/tetra/1.0.23/release/tetra-jquery.min.js"
+    "json2": "git://github.com/douglascrockford/JSON-js.git"
   },
   "devDependencies": {
-    "prism-js": "https://raw.github.com/LeaVerou/prism/gh-pages/prism.js",
-    "prism-css": "https://raw.github.com/LeaVerou/prism/gh-pages/prism.css"
+    "jquery": "~1.11.1"
   }
 }

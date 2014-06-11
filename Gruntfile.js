@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         dist:'dist/css'
       },
       js : {
-        src: 'src/js/coremvc/comps',
+        src: 'src/js/',
         dist:'dist/js'
       },
       doc : 'doc/templates'
@@ -56,6 +56,7 @@ module.exports = function(grunt) {
   grunt.registerTask('less2sass', [
     'clean:sass',
     'string-replace:less2sass',
+    'string-replace:less2sass_variables',
     'string-replace:sass_dist',
     'string-replace:less_dist',
     'test-sass'
@@ -70,20 +71,21 @@ module.exports = function(grunt) {
     'clean:tmp',
     'recess',
     'concat:less',
+    'less2sass',
     'concat:sass',
-    'less2sass'
+    'cssmin'
   ]);
 
   // Full distribution task.
   grunt.registerTask('dist', ['dist-css', 'dist-js']);
-
-  // Default task
-  grunt.registerTask('default', ['test', 'dist', 'watch-server']);
 
   // Generate doc
   grunt.registerTask('doc', ['clean:doc', 'assemble']);
 
   // Watch and launch server
   grunt.registerTask('watch-server', ['connect', 'watch']);
+
+    // Default task
+  grunt.registerTask('default', ['test', 'dist', 'doc', 'watch-server']);
 
 };

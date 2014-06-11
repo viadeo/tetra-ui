@@ -1,0 +1,65 @@
+{{#markdown}}
+Growl is a live notification, usualy fixed on top of the page.<br />
+Several kinds of growl: **info**, **success**, **error**, **notification**, **premium**
+{{/markdown}}
+
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-info growl-position-center mbs growl-active">
+    <button class="growl-close">
+      <i class="vicon">×</i>
+    </button>
+    <i class="vicon growl-icon">:</i>
+    <div class="growl-content">
+    info growl with dismiss
+    </div>
+  </div>
+</div>
+
+{{#each data}}
+<div class="gu-2of3 gu-m-1of1">
+  <div class="growl growl-type-{{this}} growl-position-center mbs growl-active">
+    <i class="vicon growl-icon">
+    {{#is this 'info'}}
+    :
+    {{/is}}
+    {{#is this 'warning'}}
+    :
+    {{/is}}
+    {{#is this 'error'}}
+    :
+    {{/is}}
+    {{#is this 'success'}}
+    v
+    {{/is}}
+    {{#is this 'notification'}}
+    M
+    {{/is}}
+    {{#is this 'premium'}}
+    *
+    {{/is}}
+    </i>
+    <div class="growl-content">
+    {{this}} growl
+    </div>
+  </div>
+</div>
+{{/each}}
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="growl growl-type-info growl-position-center mbs growl-active">
+  <button class="growl-close">
+    <i class="vicon">×</i>
+  </button>
+  <i class="vicon growl-icon">:</i>
+  <div class="growl-content">
+  info growl with dismiss
+  </div>
+</div>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
+

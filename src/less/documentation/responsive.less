@@ -1,0 +1,43 @@
+@media (max-width: @breakpointM) {
+  /* Widen the fixed sidebar again */
+  .affix-sidebar {
+  }
+  .affix-nav {
+    left:25%;
+    .rtl & {
+      left:auto;
+      right:25%;
+    }
+  }
+  .main {
+    margin-left:25%;
+    .rtl & {
+      margin-left:auto;
+      margin-right:25%;
+    }
+  }
+  .sidebar-doc {
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: @breakpointS) {
+  /* Widen the fixed sidebar again */
+  .affix {
+    position: static;
+    with:auto;
+  }
+  .main {
+    margin:0;
+    .rtl & {
+      margin:0;
+    }
+  }
+  .header {
+    min-height:0;
+    line-height:@headerHeight/2;
+  }
+  .sidebar {
+    min-height: 0;
+  }
+}

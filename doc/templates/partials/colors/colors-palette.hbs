@@ -1,0 +1,24 @@
+<p>Visual identity & branding colors</p>
+
+<div class="gr bx pan context">
+  {{#each data}}
+  <div class="gu gu-1of1 gu-m-1of1">
+    <div class="">
+      <div class="gr">
+        {{#each values}}
+          <div class="gu gu-1of{{../count}} gu-s-1of1">
+            <div class="bg bg-{{@key}}">
+            </div>
+            {{#markdown}}
+```scss
+@{{@key}}: {{this}}
+```
+            {{/markdown}}
+            {{this.count}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

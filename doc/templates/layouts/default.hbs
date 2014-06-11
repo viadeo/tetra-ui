@@ -3,55 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tetra UI{{#if title}} | {{ title }}{{else}}{{/if}}</title>
-  <link rel="icon" href="{{path}}/dist/img/tetra-ui/favicon.png" />
-  {{#if rtl}}
-    <link rel="stylesheet" href="{{path}}/dist/css/tetra-ui-doc-rtl.min.css" />
-  {{else}}
-    <link rel="stylesheet" href="{{path}}/dist/css/tetra-ui-doc.min.css" />
-  {{/if}}
-  <link rel="stylesheet" href="{{path}}/bower_components/prism-css/index.css" />
-  <!--[if lt IE 8]><script src="{{path}}/bower_components/json2/json2.js"></script><![endif]-->
-  <script src="{{path}}/bower_components/tetra-js/index.js"></script>
-  <script src="{{path}}/dist/js/conf/tetra-js.js"></script>
+  <title>{{site.name}}{{#if title}} | {{ title }}{{else}}{{/if}}</title>
+  <meta name="description" content="{{site.description}}" />
+  <link rel="icon" href="{{site.assets}}/img/tetra-ui/favicon.png" />
+  <link rel="stylesheet" href="{{site.assets}}/css/tetra-ui-doc.css" title="ltr"/>
+  <script src="{{site.assets}}/js/vendor/jquery.js"></script>
+  <script src="{{site.assets}}/js/vendor/scrollspy.js"></script>
+  <!--[if lt IE 8]><script src="{{site.assets}}/js/vendor/json2.js"></script><![endif]-->
 </head>
 
-<body{{#if rtl}} dir="rtl" class="rtl"{{/if}}>
+<body{{#if rtl}} dir="rtl" class="rtl"{{/if}} data-spy="scroll" data-target=".sidebar-doc" data-offset="80">
 
-<div class="wrap">
-  <div class="header">
-    <div class="fluid-container">
-      <h1 class="fl">Powered by <i class="vicon">o</i>
-        <a href="{{path}}/" class="logo">Tetra UI</a>
-      </h1>
-      <a href="https://github.com/viadeo/tetra-ui" class="fr mts btn btn-default btn-large github">Tetra UI on GitHub</a>
+
+
+  <aside class="sidebar affix affix-sidebar gu-1of5 gu-m-1of4 gu-s-1of1">
+    {{> sidebar-doc }}
+  </aside>
+
+  <header class="header affix affix-nav gu-4of5 gu-m-3of4 gu-s-1of1">
+    <div class="plxl prxl">
+      <div class="gr">
+        <div class="gu gu-2of3 gu-m-1of1">
+          {{> nav-doc }}
+        </div>
+        <div class="gu-last tar tal-m">
+          {{> toggle-mode-doc }}
+        </div>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="headline">
-    <div class="fluid-container">
-      <h1 class="h1">A smart, easy-to-use toolkit
-        <span class="sub">for creating rich interfaces in lightning speed!</span>
-      </h1>
+  <main class="main">
+    <div class="fluid-container ptl pbl">
+    {{> body }}
+    <footer class="footer">
+        <p class="gray tac mbn">{{site.brand}}</p>
+    </footer>
     </div>
-  </div>
+  </main>
 
-  <div class="content fluid-container">
-    {{> nav-doc }}
-
-    <div class="nav-tabs-section">
-      {{> body }}
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <div class="copy fluid-container">
-    <p>&copy;2013 APVO CORP.</p>
-  </div>
-</div>
-
-<script src="{{path}}/bower_components/prism-js/index.js"></script>
+  <script src="{{site.assets}}/js/doc/main.js"></script>
 
 </body>
 </html>

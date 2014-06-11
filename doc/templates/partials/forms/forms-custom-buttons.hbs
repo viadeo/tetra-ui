@@ -1,0 +1,145 @@
+{{#markdown}}
+> Only works in modern browsers, falls back to standard radio buttons in legacy browsers.
+> These custom radio buttons are pure CSS3, no JavaScript required.
+{{/markdown}}
+
+<form class="core-form form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Horizontal radio buttons</label>
+    <div class="controls">
+      <label class="radio inline custom-radio mrl">
+        <input type="radio" checked="checked" name="customRadioButtons1">
+        <span class="custom-radio-element"></span>
+        Option one
+      </label>
+      <label class="radio inline custom-radio mrl">
+        <input type="radio" name="customRadioButtons1">
+        <span class="custom-radio-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Vertical radio buttons</label>
+    <div class="controls">
+      <label class="radio custom-radio">
+        <input type="radio" checked="checked" name="customRadioButtons2">
+        <span class="custom-radio-element"></span>
+        Option one
+      </label>
+      <label class="radio custom-radio">
+        <input type="radio" name="customRadioButtons2">
+        <span class="custom-radio-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Horizontal checkboxes</label>
+    <div class="controls">
+      <label class="checkbox inline custom-checkbox mrl">
+        <input type="checkbox" checked="checked">
+        <span class="custom-checkbox-element"></span>
+        Option one
+      </label>
+      <label class="checkbox inline custom-checkbox mrl">
+        <input type="checkbox">
+        <span class="custom-checkbox-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Vertical checkboxes</label>
+    <div class="controls">
+      <label class="checkbox custom-checkbox">
+        <input type="checkbox" checked="checked">
+        <span class="custom-checkbox-element"></span>
+        Option one
+      </label>
+      <label class="checkbox custom-checkbox">
+        <input type="checkbox">
+        <span class="custom-checkbox-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+</form>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<form class="core-form form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Horizontal radio buttons</label>
+    <div class="controls">
+      <label class="radio inline custom-radio mrl">
+        <input type="radio" checked="checked" name="customRadioButtons1">
+        <span class="custom-radio-element"></span>
+        Option one
+      </label>
+      <label class="radio inline custom-radio mrl">
+        <input type="radio" name="customRadioButtons1">
+        <span class="custom-radio-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Vertical radio buttons</label>
+    <div class="controls">
+      <label class="radio custom-radio">
+        <input type="radio" checked="checked" name="customRadioButtons2">
+        <span class="custom-radio-element"></span>
+        Option one
+      </label>
+      <label class="radio custom-radio">
+        <input type="radio" name="customRadioButtons2">
+        <span class="custom-radio-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Horizontal checkboxes</label>
+    <div class="controls">
+      <label class="checkbox inline custom-checkbox mrl">
+        <input type="checkbox" checked="checked">
+        <span class="custom-checkbox-element"></span>
+        Option one
+      </label>
+      <label class="checkbox inline custom-checkbox mrl">
+        <input type="checkbox">
+        <span class="custom-checkbox-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Vertical checkboxes</label>
+    <div class="controls">
+      <label class="checkbox custom-checkbox">
+        <input type="checkbox" checked="checked">
+        <span class="custom-checkbox-element"></span>
+        Option one
+      </label>
+      <label class="checkbox custom-checkbox">
+        <input type="checkbox">
+        <span class="custom-checkbox-element"></span>
+        Option two
+      </label>
+    </div>
+  </div>
+</form>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
+

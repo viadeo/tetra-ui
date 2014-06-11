@@ -1,0 +1,64 @@
+{{#markdown}}
+Alerts have an optional **close button** and **icon**.<br />
+Several kinds of alert: **info**, **success**, **error**, **form-error**, **notification**, **premium**
+</ul>
+{{/markdown}}
+
+{{category}}
+
+{{#each data}}
+<div class="bx-alert bx-alert-{{this}} mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">
+  {{#is this 'default'}}
+  :
+  {{/is}}
+  {{#is this 'warning'}}
+  :
+  {{/is}}
+  {{#is this 'error'}}
+  :
+  {{/is}}
+  {{#is this 'error-form'}}
+  :
+  {{/is}}
+  {{#is this 'ok'}}
+  v
+  {{/is}}
+  {{#is this 'notification'}}
+  M
+  {{/is}}
+  {{#is this 'premium'}}
+  *
+  {{/is}}
+  </i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">{{uppercase this}} Message...</p>
+  </div>
+</div>
+{{/each}}
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<div class="bx-alert bx-alert-ok mbs">
+  <button data-event="click" data-comp="alert" class="bx-alert-close bootnode">
+    <i class="vicon">×</i>
+  </button>
+
+  <i class="vicon bx-alert-icon">:</i>
+
+  <div class="bx-alert-content">
+    <p class="mbn">Success message...</p>
+  </div>
+</div>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
+

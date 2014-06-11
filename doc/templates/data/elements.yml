@@ -1,0 +1,203 @@
+nav:
+  -
+    slug: "typography"
+    title: "Typography"
+    nav:
+      -
+        slug: "headings"
+        title: "Headings"
+      -
+        slug: "links"
+        title: "Links"
+      -
+        slug: "paragraphs"
+        title: "Paragraphs"
+      -
+        slug: "lists"
+        title: "Lists"
+      -
+        slug: "panels"
+        title: "Panels"
+  -
+    slug: "colors"
+    title: "Colors"
+    nav:
+      -
+        slug: "colors-palette"
+        title: "Palette"
+        data: <%= colors.palette %>
+      -
+        slug: "colors-less"
+        title: "Using Less"
+        data:
+          tint: <%= colors.tint %>
+          shade: <%= colors.shade %>
+          grayscale: <%= colors.grayscale %>
+          semantic: <%= colors.semantic %>
+  -
+    slug: "tables"
+    title: "Tables"
+    nav:
+      -
+        slug: "tables-basic-example"
+        title: "Basic examples"
+      -
+        slug: "tables-text-rows"
+        title: "Text rows"
+      -
+        slug: "tables-zebra-rows"
+        title: "Zebra rows"
+      -
+        slug: "tables-hover-rows"
+        title: "hover rows"
+  -
+    slug: "boxes"
+    title: "Boxes"
+    nav:
+      -
+        slug: "boxes-basic-example"
+        title: "Basic examples"
+      -
+        slug: "boxes-aside"
+        title: "Aside boxes"
+      -
+        slug: "boxes-editable"
+        title: "Editable boxes"
+      -
+        slug: "boxes-flippable"
+        title: "Flippable boxes"
+  -
+    slug: "forms"
+    title: "Forms"
+    nav:
+      -
+        slug: "forms-basic-example"
+        title: "Basic examples"
+      -
+        slug: "forms-inline"
+        title: "Inline form"
+      -
+        slug: "forms-horizontal"
+        title: "Horizontal form"
+      -
+        slug: "forms-states"
+        title: "States form"
+      -
+        slug: "forms-placeholder"
+        title: "Placeholders"
+      -
+        slug: "forms-extending"
+        title: "Extending form"
+      -
+        slug: "forms-custom-buttons"
+        title: "Custom radio & checkbox"
+      -
+        slug: "forms-custom-select"
+        title: "Custom select"
+  -
+    slug: "buttons"
+    title: "Buttons"
+    nav:
+      -
+        slug: "buttons-basic-example"
+        title: "Basic examples"
+      -
+        slug: "dropdown-examples"
+        title: "Dropdown examples"
+      -
+        slug: "flipswitch-buttons"
+        title: "Flipswitch Buttons"
+      -
+        slug: "toggle-buttons"
+        title: "Toggle Buttons"
+  -
+    slug: "navigation"
+    title: "Navigation"
+    nav:
+      -
+        slug: "navigation-nav"
+        title: "Nav menu"
+      -
+        slug: "navigation-tabs"
+        title: "Tabs"
+      -
+        slug: "navigation-step"
+        title: "Step Navigation"
+      -
+        slug: "navigation-pagination"
+        title: "Pagination"
+      -
+        slug: "navigation-buttons"
+        title: "Buttons"
+  -
+    slug: "dialogs"
+    title: "Dialogs"
+    nav:
+      -
+        slug: "tooltips"
+        title: "Tooltips"
+      -
+        slug: "popovers"
+        title: "Popovers"
+      -
+        slug: "popins"
+        title: "Popins"
+  -
+    slug: "icons"
+    title: "Icons"
+    nav:
+      -
+        slug: "icons-overview"
+        title: "Overview"
+        data: <%= icons %>
+      -
+        slug: "icons-example"
+        title: "How to use"
+      -
+        slug: "icons-download"
+        title: "Download"
+  -
+    slug: "components"
+    title: "Components"
+    nav:
+      -
+        slug: "badges"
+        title: "Badges"
+      -
+        slug: "labels"
+        title: "Labels"
+      -
+        slug: "tags"
+        title: "Tags"
+      -
+        slug: "alerts"
+        title: "Alerts"
+        data:
+          - default
+          - ok
+          - warning
+          - error
+          - error-form
+          - notification
+          - premium
+      -
+        slug: "cards"
+        title: "Cards"
+      -
+        slug: "growl"
+        title: "Growl"
+        data:
+          - info
+          - success
+          - error
+          - notification
+          - premium
+      -
+        slug: "share"
+        title: "Share"
+      -
+        slug: "highlights"
+        title: "Highlights"
+      -
+        slug: "progress-bar"
+        title: "Progress Bar"
