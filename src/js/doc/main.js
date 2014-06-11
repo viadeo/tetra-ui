@@ -36,7 +36,7 @@ Mode.prototype.bind = function () {
         self._setState(false);
       } else if (target.parents('.flipswitch-sliders:first').length) {
         self._setState(!state);
-      };
+      }
   });
   return this;
 };
