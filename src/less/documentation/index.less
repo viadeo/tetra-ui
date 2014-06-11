@@ -21,24 +21,15 @@ p {
   min-height: 100%;
   background: @pageBg;
 
-  // h1[id*="language-"], h2, h3 {
-  //   font-weight: normal;
-  //   padding-top:10px;
-  //   font-family: 'Source Sans Pro', sans-serif;
-  // }
-  // h1 {
-  //   font-size:32px;
-  //   margin:0 0 15px 0;
-  //   font-weight: 600;
-  // }
-
-  // h2 {
-  //   font-size:24px;
-  // }
-
-  // h3 {
-  //   font-size:18px;
-  // }
+  h1, h2 {
+    .anchor-link {
+      color: @grayLight;
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+      &:hover {
+        color: @gray;
+      }
+    }
+  }
 
   blockquote {
     padding:0 0 0 15px;
@@ -52,7 +43,6 @@ p {
     background-color: tint(@blue4, 30%);
     color:#fff;
   }
-
   .category {
     border-bottom:1px dotted shade(@borderColor, 10%);
   }
@@ -149,17 +139,28 @@ p {
         display:none;
       }
       .hide {
-        display:inline;
+        display:block;
       }
     }
   }
 
+  i.last {
+    position:relative;
+    left:-14px;
+  }
+
   .toggle-code {
+    background: lighten(@sidebar, 20%);
     & + pre {
       margin:0 !important;
     }
+    .show, .hide {
+      display: block;
+      color:#fff;
+      padding:5px 0 5px 20px;
+    }
     .show {
-      display:inline;
+      display:block;
     }
     .hide {
       display:none;
