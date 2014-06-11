@@ -69,10 +69,10 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-css', [
     'clean:tmp',
     'recess',
-    'cssmin',
     'concat:less',
+    'less2sass',
     'concat:sass',
-    'less2sass'
+    'cssmin'
   ]);
 
   // Full distribution task.

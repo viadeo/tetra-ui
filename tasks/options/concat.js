@@ -17,11 +17,6 @@ module.exports = {
         '<%= path.less.src %>/foundation/mixins.less',
         '<%= path.css.dist %>/<%= pkg.name %>.css'
       ],
-      '<%= path.less.dist %>/<%= pkg.name %>-light.less': [
-        '<%= path.less.src %>/foundation/variables.less',
-        '<%= path.less.src %>/foundation/mixins.less',
-        '<%= path.css.dist %>/<%= pkg.name %>-light.css'
-      ],
       '<%= path.less.dist %>/<%= pkg.name %>-rtl.less': [
         '<%= path.less.src %>/foundation/variables.less',
         '<%= path.less.src %>/foundation/variables_rtl.less',
@@ -35,21 +30,14 @@ module.exports = {
       banner: "<%= banner %>"
     },
     files: {
-      '<%= path.sass.dist %>/<%= pkg.name %>-viaduct.scss': [
+      '<%= path.sass.dist %>/<%= pkg.name %>.scss': [
         '<%= path.sass.src %>/foundation/variables.scss',
-        '<%= path.sass.src %>/foundation/variables_viaduct.scss',
-        '<%= path.css.dist %>/<%= pkg.name %>-viaduct.css'
+        '<%= path.css.dist %>/<%= pkg.name %>.css'
       ],
-      '<%= path.sass.dist %>/<%= pkg.name %>-viaduct-light.scss': [
+      '<%= path.sass.dist %>/<%= pkg.name %>-rtl.scss': [
         '<%= path.sass.src %>/foundation/variables.scss',
-        '<%= path.sass.src %>/foundation/variables_viaduct.scss',
-        '<%= path.css.dist %>/<%= pkg.name %>-viaduct-light.css'
-      ],
-      '<%= path.sass.dist %>/<%= pkg.name %>-viaduct-rtl.scss': [
-        '<%= path.sass.src %>/foundation/variables.scss',
-        '<%= path.sass.src %>/foundation/variables_viaduct.scss',
         '<%= path.sass.src %>/foundation/variables_rtl.scss',
-        '<%= path.css.dist %>/<%= pkg.name %>-viaduct-rtl.css'
+        '<%= path.css.dist %>/<%= pkg.name %>-rtl.css'
       ],
     }
   }
