@@ -49,12 +49,9 @@
       a {
         background: transparent;
         cursor: default;
+        color: $grayLight;
 
         .vicon {
-          color: $grayLight;
-        }
-
-        &.btn-pagination {
           color: $grayLight;
         }
       }

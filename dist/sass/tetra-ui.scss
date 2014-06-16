@@ -5607,15 +5607,12 @@ a:focus .avatar img {
 }
 
 .paginator li.disabled a {
+  color: #bfbfbf;
   cursor: default;
   background: transparent;
 }
 
 .paginator li.disabled a .vicon {
-  color: #bfbfbf;
-}
-
-.paginator li.disabled a.btn-pagination {
   color: #bfbfbf;
 }
 
