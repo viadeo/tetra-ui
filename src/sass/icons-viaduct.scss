@@ -2,10 +2,10 @@
 
 @font-face {
   font-family: 'Viadeoicons';
-  src: url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot");
-  src: url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot?#iefix') format('embedded-opentype"),
-    url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.woff') format('woff"),
-    url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.ttf') format('truetype");
+  src: url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot');
+  src: url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.woff') format('woff'),
+    url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

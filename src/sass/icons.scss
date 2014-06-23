@@ -1,7 +1,7 @@
 // Global Icons
 
 .global-icon, .ico {
-	background: url("#{$img-sprite-dir}/global-sprite2.png") no-repeat;
+	background: url('#{$img-sprite-dir}/global-sprite2.png') no-repeat;
 	color: transparent;
 	font: 0/0 a;
 	display: inline-block;
@@ -15,10 +15,10 @@
 
 @font-face {
   font-family: 'Viadeoicons';
-  src: url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot");
-  src: url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot?#iefix') format('embedded-opentype"),
-    url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.woff') format('woff"),
-    url("#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.ttf') format('truetype");
+  src: url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot');
+  src: url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.woff') format('woff'),
+    url('#{$fonts-dir}/viadeoicons/#{$fonts-version}/viadeoicons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

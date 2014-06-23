@@ -4,10 +4,10 @@
 
 @font-face {
   font-family: 'MuseoSlab';
-  src: url("#{$fonts-dir}/museoslab/museoslab-500.eot");
-  src: url("#{$fonts-dir}/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype"),
-    url("#{$fonts-dir}/museoslab/museoslab-500.woff') format('woff"),
-    url("#{$fonts-dir}/museoslab/museoslab-500.ttf') format('truetype");
+  src: url('#{$fonts-dir}/museoslab/museoslab-500.eot');
+  src: url('#{$fonts-dir}/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts-dir}/museoslab/museoslab-500.woff') format('woff'),
+    url('#{$fonts-dir}/museoslab/museoslab-500.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

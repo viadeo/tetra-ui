@@ -97,12 +97,12 @@ module.exports = {
         */
         // DO IT TWICE to handle multi cases
       {
-        pattern: /['|"]{1}(.*)\$\{(.*)\}(.*)['|"]{1}/gi,
-        replacement: '"$1#{$$$2}$3"'
+        pattern: /\$\{(.+)\}/gi,
+        replacement: '#{$$$1}'
       },
       {
-        pattern: /['|"]{1}(.*)\$\{(.*)\}(.*)['|"]{1}/gi,
-        replacement: '"$1#{$$$2}$3"'
+        pattern: /\$\{(.+)\}/gi,
+        replacement: '#{$$$1}'
       },
       {
         pattern: /spin/gi,
