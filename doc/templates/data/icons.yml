@@ -1,286 +1,364 @@
   -
     code: "m"
-    title: "Message"
+    title: "message"
+    unicode: \006D
   -
     code: "e"
-    title: "Visit"
+    title: "visit"
+    unicode: \0065
   -
     code: "z"
-    title: "Search"
+    title: "search"
+    unicode: \007A
   -
     code: "c"
-    title: "Settings"
+    title: "settings"
+    unicode: \0063
   -
     code: "o"
-    title: "Viadeo"
+    title: "viadeo"
+    unicode: \006F
   -
     code: "j"
-    title: "Tianji"
+    title: "tianji"
+    unicode: \006A
   -
     code: "t"
-    title: "Twitter"
+    title: "twitter"
+    unicode: \0074
   -
     code: "b"
-    title: "Bubbles"
+    title: "bubbles"
+    unicode: \0062
   -
     code: "a"
-    title: "Add"
+    title: "add"
+    unicode: \0061
   -
     code: "p"
-    title: "Plus"
+    title: "plus"
+    unicode: \0070
   -
     code: "×"
-    title: "Remove"
-    token: "&times;"
+    title: "remove"
+    unicode: \00D7
   -
     code: "+"
-    title: "Plus"
+    title: "plus"
+    unicode: \0070
   -
     code: "*"
-    title: "Star"
+    title: "star"
+    unicode: \002A
   -
     code: "r"
-    title: "Reload"
+    title: "reload"
+    unicode: \0072
   -
     code: "s"
-    title: "Speech"
+    title: "speech"
+    unicode: \0073
   -
     code: "f"
-    title: "Facebook"
+    title: "facebook"
+    unicode: \0066
   -
     code: "d"
-    title: "Date"
+    title: "date"
+    unicode: \0064
   -
     code: "g"
-    title: "Google+"
+    title: "googleplus"
+    unicode: \0067
   -
     code: "h"
-    title: "Phone"
+    title: "phone"
+    unicode: \0068
   -
     code: "v"
-    title: "Check mark"
+    title: "checkmark"
+    unicode: \0076
   -
     code: "w"
-    title: "Download"
+    title: "download"
+    unicode: \0077
   -
     code: "x"
-    title: "Network"
+    title: "network"
+    unicode: \0078
   -
     code: "y"
-    title: "Edit"
+    title: "edit"
+    unicode: \0079
   -
     code: "l"
-    title: "Like"
+    title: "like"
+    unicode: \006C
   -
     code: "<"
-    title: "Left"
-    token: "&lt;"
+    title: "left-alt"
+    unicode: \003C
   -
     code: ">"
-    title: "Right"
-    token: "&gt;"
+    title: "right-alt"
+    unicode: \003E
   -
     code: "‹"
-    title: "Prev"
-    token: "&lsaquo;"
+    title: "prev"
+    unicode: \2039
   -
     code: "›"
-    title: "Next"
-    token: "&rsaquo;"
+    title: "next"
+    unicode: \203A
   -
     code: "«"
-    title: "First"
-    token: "&laquo;"
+    title: "first"
+    unicode: \00AB
   -
     code: "»"
-    title: "Last"
-    token: "&raquo;"
+    title: "last"
+    unicode: \00BB
   -
     code: "▾"
-    title: "Down"
-    token: "&#9662;"
+    title: "down"
+    unicode: \25BE
   -
     code: "▴"
-    title: "Up"
-    token: "&#9652;"
+    title: "up"
+    unicode: \25B4
   -
     code: "∧"
-    title: "Up"
-    token: "&and;"
+    title: "up-alt"
+    unicode: \2227
   -
     code: "∨"
-    title: "Down"
-    token: "&or;"
+    title: "down-alt"
+    unicode: \2228
   -
     code: "L"
-    title: "Location"
+    title: "location"
+    unicode: \004C
   -
     code: "↔"
-    title: "Select"
-    token: "&harr;"
+    title: "select"
+    unicode: \2194
   -
     code: "B"
-    title: "Bubble"
+    title: "bubble"
+    unicode: \0042
   -
     code: "E"
-    title: "Export"
+    title: "export"
+    unicode: \0045
   -
     code: "M"
-    title: "Degree"
+    title: "degree"
+    unicode: \004D
   -
     code: "N"
-    title: "Degree"
+    title: "degree-ok"
+    unicode: \004E
   -
     code: "P"
-    title: "Photo"
+    title: "photo"
+    unicode: \0050
   -
     code: "T"
-    title: "Tag"
+    title: "tag"
+    unicode: \0054
   -
     code: "X"
-    title: "Experience"
+    title: "experience"
+    unicode: \0058
   -
     code: "k"
-    title: "Recommand"
+    title: "recommand"
+    unicode: \006B
   -
     code: "O"
     title: "Article"
+    unicode: \004F
   -
     code: "S"
     title: "Profile"
+    unicode: \0053
   -
     code: "C"
-    title: "Company"
+    title: "company"
+    unicode: \0043
   -
     code: "F"
-    title: "Offer"
+    title: "offer"
+    unicode: \0046
   -
     code: "G"
-    title: "Group"
+    title: "group"
+    unicode: \0047
   -
     code: "H"
-    title: "School"
+    title: "school"
+    unicode: \0048
   -
     code: "K"
-    title: "Book"
+    title: "book"
+    unicode: \004B
   -
     code: "?"
-    title: "Question"
+    title: "question"
+    unicode: \003F
   -
     code: "!"
-    title: "Blog"
+    title: "blog"
+    unicode: \0021
   -
     code: "i"
-    title: "Request accepted"
+    title: "request-ok"
+    unicode: \0069
   -
     code: "R"
-    title: "Share"
+    title: "share"
+    unicode: \0052
   -
     code: "Z"
-    title: "Archive"
+    title: "archive"
+    unicode: \005A
   -
     code: ":"
-    title: "Information"
+    title: "information"
+    unicode: \003A
   -
     code: ";"
-    title: "Warning"
+    title: "warning"
+    unicode: \003B
   -
     code: "u"
-    title: "Upload"
+    title: "upload"
+    unicode: \0075
   -
     code: "n"
     title: "Graph"
+    unicode: \006E
   -
     code: "•"
-    title: "Bulb"
-    token: "&bull;"
+    title: "bulb"
+    unicode: \2022
   -
     code: "/"
-    title: "Add search"
+    title: "search-plus"
+    unicode: \002F
   -
     code: "€"
-    title: "Euro"
-    token: "&euro;"
+    title: "euro"
+    unicode: \20AC
   -
     code: "⊕"
-    title: "Save"
-    token: "&oplus;"
+    title: "save"
+    unicode: \2295
   -
     code: "↕"
-    title: "Tie"
-    token: "&#8597;"
+    title: "tie"
+    unicode: \2195
   -
     code: "☑"
-    title: "Saved"
-    token: "&#9745;"
+    title: "saved"
+    unicode: \2611
   -
     code: "⍾"
-    title: "Bell"
-    token: "&#9086;"
+    title: "bell"
+    unicode: \237E
   -
     code: "⎗"
-    title: "Contract"
-    token: "&#9111;"
+    title: "contract"
+    unicode: \2397
   -
     code: "⎙"
-    title: "Print"
-    token: "&#9113;"
+    title: "print"
+    unicode: \2399
   -
     code: "⌚"
-    title: "Time"
-    token: "&#8986;"
+    title: "time"
+    unicode: \231A
   -
     code: "⊜"
-    title: "Catalog"
-    token: "&#8860;"
+    title: "catalog"
+    unicode: \229C
   -
     code: "⤱"
-    title: "Tools"
-    token: "&#10545;"
+    title: "tools"
+    unicode: \2931
   -
     code: "⊙"
-    title: "Target"
-    token: "&#8857;"
+    title: "target"
+    unicode: \2299
   -
     code: "⧝"
-    title: "Visibility"
-    token: "&#10717;"
+    title: "visibility"
+    unicode: \29DD
   -
     code: "⇴"
-    title: "Stream"
-    token: "&#8692;"
+    title: "stream"
+    unicode: \21F4
   -
     code: "◷"
-    title: "Data"
-    token: "&#9719;"
+    title: "data"
+    unicode: \25F7
   -
     code: "✪"
-    title: "Notification"
-    token: "&#10026;"
+    title: "notification"
+    unicode: \272A
   -
     code: "⟁"
-    title: "Notification (alt)"
-    token: "&#10177;"
+    title: "notification-alt"
+    unicode: \27C1
   -
     code: "▷"
-    title: "Media"
-    token: "&#9655;"
+    title: "media"
+    unicode: \25B7
   -
     code: "⧓"
-    title: "Trust"
-    token: "&#10707;"
+    title: "trust"
+    unicode: \29D3
   -
     code: "⚿"
-    title: "Key"
-    token: "&#9919;"
+    title: "key"
+    unicode: \26BF
   -
     code: "$"
-    title: "Money"
+    title: "money"
+    unicode: \0024
   -
     code: ""
-    title: "Day 1"
-    token: "&#61473;"
+    title: "day-1"
+    unicode: \F021
   -
     code: ""
-    title: "Day 2"
-    token: "&#61474;"
+    title: "day-2"
+    unicode: \F022
+  -
+    code: ""
+    title: "day-3"
+    unicode: \F023
+  -
+    code: ""
+    title: "day-4"
+    unicode: \F024
+  -
+    code: ""
+    title: "day-5"
+    unicode: \F025
+  -
+    code: ""
+    title: "day-6"
+    unicode: \F026
+  -
+    code: ""
+    title: "day-7"
+    unicode: \F027
+  -
+    code: ""
+    title: "day-8"
+    unicode: \F028
+  -
+    code: ""
+    title: "day-9"
+    unicode: \F029

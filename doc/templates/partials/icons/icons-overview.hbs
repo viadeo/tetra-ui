@@ -3,27 +3,13 @@ The base font acts as a parallel solution to the global image sprite. The icon f
 {{/markdown}}
 
 <div class="">
-  <div class="gr mbm">
+  <div class="gr grss mbm">
     {{#each data}}
         <div class="gu gu-1of5 gu-m-1of1 icon">
-          <i class="vicon notranslate fl mbxl mrs pls pts" aria-hidden="true">{{#if code}}{{code}}{{else}}{{token}}{{/if}}</i>
-          <span class="gray">{{title}}</span>
-          <span class="code-markup">
-            {{#if code}}
-              {{#markdown}}
-```html
-{{code}}
-```
-              {{/markdown}}
-            {{/if}}
-          </span>
-          {{#if token}}
-            {{#markdown}}
-```css
-{{{token}}}
-```
-            {{/markdown}}
-          {{/if}}
+          <div class="bx tac">
+            <span class="vicon vicon-{{title}} mbm"></span><br />
+            <span class="gray">.vicon<br /> .vicon-{{title}}</span>
+          </div>
         </div>
     {{/each}}
   </div>
