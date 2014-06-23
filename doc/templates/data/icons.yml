@@ -176,11 +176,11 @@
     unicode: \006B
   -
     code: "O"
-    title: "Article"
+    title: "article"
     unicode: \004F
   -
     code: "S"
-    title: "Profile"
+    title: "profile"
     unicode: \0053
   -
     code: "C"
@@ -236,7 +236,7 @@
     unicode: \0075
   -
     code: "n"
-    title: "Graph"
+    title: "graph"
     unicode: \006E
   -
     code: "•"
