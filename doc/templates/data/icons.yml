@@ -37,15 +37,15 @@
   -
     code: "p"
     title: "plus"
+    unicode: \002B
+  -
+    code: "p"
+    title: "plus-alt"
     unicode: \0070
   -
     code: "×"
     title: "remove"
     unicode: \00D7
-  -
-    code: "+"
-    title: "plus"
-    unicode: \0070
   -
     code: "*"
     title: "star"
