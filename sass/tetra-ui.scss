@@ -1,4 +1,4 @@
-/*! tetra-ui v2.1.12 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v2.1.13 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -169,7 +169,7 @@ $gridColumns:		12 !default;
 $gridColumnWidth:	60px !default;
 $gridGutterWidth:	20px !default;
 
-/*! tetra-ui v2.1.12 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v2.1.13 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -3662,15 +3662,15 @@ h1 .sub {
 }
 
 .vicon-plus:before {
+  content: "\002B";
+}
+
+.vicon-plus-alt:before {
   content: "\0070";
 }
 
 .vicon-remove:before {
   content: "\00D7";
-}
-
-.vicon-plus:before {
-  content: "\0070";
 }
 
 .vicon-star:before {
