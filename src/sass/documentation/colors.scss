@@ -17,29 +17,29 @@
 .bg-purple1 {background: $purple1}
 .bg-purple2 {background: $purple2}
 
-.bg-lighten-0 { $v: lighten($blue2, 0%); background: $v;}
-.bg-lighten-10 { $v: lighten($blue2, 10%); background: $v;}
-.bg-lighten-20 { $v: lighten($blue2, 20%); background: $v;}
-.bg-lighten-30 { $v: lighten($blue2, 30%); background: $v;}
-.bg-lighten-40 { $v: lighten($blue2, 40%); background: $v;}
-.bg-lighten-50 { $v: lighten($blue2, 50%); background: $v;}
-.bg-lighten-60 { $v: lighten($blue2, 60%); background: $v;}
-.bg-lighten-70 { $v: lighten($blue2, 70%); background: $v;}
-.bg-lighten-80 { $v: lighten($blue2, 80%); background: $v;}
-.bg-lighten-90 { $v: lighten($blue2, 90%); background: $v;}
-.bg-lighten-100 { $v: lighten($blue2, 100%); background: $v;}
+.bg-tint-0 { $v: mix(#ffffff, $blue2, 0%); background: $v;}
+.bg-tint-10 { $v: mix(#ffffff, $blue2, 10%); background: $v;}
+.bg-tint-20 { $v: mix(#ffffff, $blue2, 20%); background: $v;}
+.bg-tint-30 { $v: mix(#ffffff, $blue2, 30%); background: $v;}
+.bg-tint-40 { $v: mix(#ffffff, $blue2, 40%); background: $v;}
+.bg-tint-50 { $v: mix(#ffffff, $blue2, 50%); background: $v;}
+.bg-tint-60 { $v: mix(#ffffff, $blue2, 60%); background: $v;}
+.bg-tint-70 { $v: mix(#ffffff, $blue2, 70%); background: $v;}
+.bg-tint-80 { $v: mix(#ffffff, $blue2, 80%); background: $v;}
+.bg-tint-90 { $v: mix(#ffffff, $blue2, 90%); background: $v;}
+.bg-tint-100 { $v: mix(#ffffff, $blue2, 100%); background: $v;}
 
-.bg-darken-0 { $v: darken($blue2, 0%); background: $v;}
-.bg-darken-10 { $v: darken($blue2, 10%); background: $v;}
-.bg-darken-20 { $v: darken($blue2, 20%); background: $v;}
-.bg-darken-30 { $v: darken($blue2, 30%); background: $v;}
-.bg-darken-40 { $v: darken($blue2, 40%); background: $v;}
-.bg-darken-50 { $v: darken($blue2, 50%); background: $v;}
-.bg-darken-60 { $v: darken($blue2, 60%); background: $v;}
-.bg-darken-70 { $v: darken($blue2, 70%); background: $v;}
-.bg-darken-80 { $v: darken($blue2, 80%); background: $v;}
-.bg-darken-90 { $v: darken($blue2, 90%); background: $v;}
-.bg-darken-100 { $v: darken($blue2, 100%); background: $v;}
+.bg-shade-0 { $v: mix(#000000, $blue2, 0%); background: $v;}
+.bg-shade-10 { $v: mix(#000000, $blue2, 10%); background: $v;}
+.bg-shade-20 { $v: mix(#000000, $blue2, 20%); background: $v;}
+.bg-shade-30 { $v: mix(#000000, $blue2, 30%); background: $v;}
+.bg-shade-40 { $v: mix(#000000, $blue2, 40%); background: $v;}
+.bg-shade-50 { $v: mix(#000000, $blue2, 50%); background: $v;}
+.bg-shade-60 { $v: mix(#000000, $blue2, 60%); background: $v;}
+.bg-shade-70 { $v: mix(#000000, $blue2, 70%); background: $v;}
+.bg-shade-80 { $v: mix(#000000, $blue2, 80%); background: $v;}
+.bg-shade-90 { $v: mix(#000000, $blue2, 90%); background: $v;}
+.bg-shade-100 { $v: mix(#000000, $blue2, 100%); background: $v;}
 
 .bg-baseFontColor { background-color: $baseFontColor; .tooltip-content:before { content: "#{$baseFontColor}"; } }
 .bg-pageBg { background: $pageBg; .tooltip-content:before { content: "#{$pageBg}"; } }

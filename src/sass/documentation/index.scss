@@ -37,15 +37,15 @@ p {
     border-left:5px solid $borderColor;
   }
   .gr-zebra .gu:nth-child(even) {
-    background-color: lighten($blue4, 10%);
+    background-color: mix(#ffffff, $blue4, 10%);
     color:#fff;
   }
   .gr-zebra .gu:nth-child(odd) {
-    background-color: lighten($blue4, 30%);
+    background-color: mix(#ffffff, $blue4, 30%);
     color:#fff;
   }
   .category {
-    border-bottom:1px dotted darken($borderColor, 10%);
+    border-bottom:1px dotted mix(#000000, $borderColor, 10%);
   }
 }
 

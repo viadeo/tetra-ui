@@ -30,14 +30,14 @@
 			content: "v";
 			font-family: 'Viadeoicons';
 		  font-size: 6px;
-		  color: lighten($black, 20%);
+		  color: mix(#ffffff, $black, 20%);
 		  visibility: hidden;
 		}
 	}
 
 	&:hover {
 		.custom-checkbox-element {
-			border-color: darken($inputBorder, 25%);
+			border-color: mix(#000000, $inputBorder, 25%);
 		}
 	}
 

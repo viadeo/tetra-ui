@@ -21,7 +21,7 @@
       &:hover,
       &:focus {
         color: $white;
-        background: lighten($linkColor, 20%);
+        background: mix(#ffffff, $linkColor, 20%);
 
         .vicon {
           color: $white;
@@ -149,7 +149,7 @@
           filter: none;
 
           &.active, &:hover, &:focus {
-            background: lighten($linkColor, 20%);
+            background: mix(#ffffff, $linkColor, 20%);
           }
 
           &.active {

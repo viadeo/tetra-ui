@@ -29,11 +29,11 @@
 
 	&:hover {
 		.custom-radio-element {
-			box-shadow: 0 0 0 1px darken($inputBorder, 25%);
+			box-shadow: 0 0 0 1px mix(#000000, $inputBorder, 25%);
 		}
 	}
 
 	input:checked + .custom-radio-element {
-		background-color: lighten($black, 20%);
+		background-color: mix(#ffffff, $black, 20%);
 	}
 }

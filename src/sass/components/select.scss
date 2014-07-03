@@ -39,7 +39,7 @@
 		border-left: 1px solid $inputBorder;
 		background: $white;
 		font-size: 8px;
-		color: darken($inputBorder, 50%);
+		color: mix(#000000, $inputBorder, 50%);
 		line-height: 2.3em;
 	}
 
@@ -59,7 +59,7 @@
 	}
 
 	&:hover {
-		border-color: darken($inputBorder, 25%);
+		border-color: mix(#000000, $inputBorder, 25%);
 
 		&.cs-focus {
 			border-color: $inputBorderFocus;

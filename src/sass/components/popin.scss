@@ -55,7 +55,7 @@
       padding: 17px 28px;
       @include padding-right($rtl, 60px);
       min-height: 1.3em;
-      background: lighten($black, 20%);
+      background: mix(#ffffff, $black, 20%);
       color: $white;
       border-radius: $borderRadiusM $borderRadiusM 0 0;
       @include clearfixHack();
@@ -72,8 +72,8 @@
         @include right($rtl, 0);
         padding: 0 12px;
         line-height: 4.4em;
-        background: lighten($black, 15%);
-        color: lighten($black, 60%);
+        background: mix(#ffffff, $black, 15%);
+        color: mix(#ffffff, $black, 60%);
         text-decoration: none;
         @include border-top-right-radius($rtl, $borderRadiusM);
 
@@ -88,7 +88,7 @@
 
         .vicon {
           @include margin-right($rtl, -0.2em);
-          color: lighten($black, 60%);
+          color: mix(#ffffff, $black, 60%);
           vertical-align: top;
         }
 
@@ -130,15 +130,15 @@
       background: $blue2;
 
       .close {
-        background: darken($blue2, 10%);
-        color: lighten($blue2, 80%);
+        background: mix(#000000, $blue2, 10%);
+        color: mix(#ffffff, $blue2, 80%);
 
         .vicon {
-          color: lighten($blue2, 80%);
+          color: mix(#ffffff, $blue2, 80%);
         }
 
         &:hover {
-          background: darken($blue2, 20%);
+          background: mix(#000000, $blue2, 20%);
         }
       }
     }

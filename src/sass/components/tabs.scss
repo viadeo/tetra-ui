@@ -54,15 +54,15 @@
 
 .nav-tabs {
 	padding-left: $spacingS;
-	border-top: 1px solid lighten($blueSoft, 63%);
-	border-bottom: 1px solid lighten($blueSoft, 63%);
-	background: lighten($blueSoft, 92%);
+	border-top: 1px solid mix(#ffffff, $blueSoft, 63%);
+	border-bottom: 1px solid mix(#ffffff, $blueSoft, 63%);
+	background: mix(#ffffff, $blueSoft, 92%);
 
 	li {
 		a {
 			&:hover,
 			&:focus {
-				background: lighten($blueSoft, 75%);
+				background: mix(#ffffff, $blueSoft, 75%);
 			}
 		}
 
@@ -71,7 +71,7 @@
 				padding-top: ($spacingS + 2);
 				padding-bottom: ($spacingS + 1);
 				margin: -3px -1px;
-				border: 1px solid lighten($blueSoft, 63%);
+				border: 1px solid mix(#ffffff, $blueSoft, 63%);
 				border-bottom: none;
 				color: $black;
 				background: $white;
@@ -82,7 +82,7 @@
 }
 
 .nav-tabs-secondary {
-	border-bottom: 1px solid lighten($blueSoft, 70%);
+	border-bottom: 1px solid mix(#ffffff, $blueSoft, 70%);
 	font-family: "MuseoSlab", "Arial", sans-serif;
 	font-size: ($baseFontSize * 1.1);
 
@@ -102,7 +102,7 @@
 
 			&:hover,
 			&:focus {
-				background: lighten($blueSoft, 85%);
+				background: mix(#ffffff, $blueSoft, 85%);
 			}
 		}
 
@@ -121,7 +121,7 @@
 
 				&:before {
 					margin-left: -10px;
-					border-color: transparent transparent lighten($blueSoft, 70%);
+					border-color: transparent transparent mix(#ffffff, $blueSoft, 70%);
 					border-width: 0 10px 10px;
 				}
 
@@ -146,9 +146,9 @@
 }
 
 .nav-pills {
-	border-top: 1px solid lighten($blueSoft, 63%);
-	border-bottom: 1px solid lighten($blueSoft, 63%);
-	background: lighten($blueSoft, 92%);
+	border-top: 1px solid mix(#ffffff, $blueSoft, 63%);
+	border-bottom: 1px solid mix(#ffffff, $blueSoft, 63%);
+	background: mix(#ffffff, $blueSoft, 92%);
 	margin: 0;
 
 	li {

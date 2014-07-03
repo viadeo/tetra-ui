@@ -389,7 +389,7 @@
 
   &:hover,
   &:focus {
-    background: lighten($linkColor, 20%);
+    background: mix(#ffffff, $linkColor, 20%);
     color: $white;
     box-shadow: none;
 

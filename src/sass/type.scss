@@ -39,7 +39,7 @@ a {
   }
 
   &.lnk-title {
-    color: lighten($black, 40%);
+    color: mix(#ffffff, $black, 40%);
 
     &:hover {
       color: $black;
@@ -104,7 +104,7 @@ h6, .h6 { font-size: 13px; padding-bottom: ($baseLineHeight / 3); }
     @include float-right($rtl);
 
     .vicon {
-      color: lighten($blue3, 50%);
+      color: mix(#ffffff, $blue3, 50%);
       font-size: 8px;
       margin: 0 -1px 0 0;
     }
@@ -122,7 +122,7 @@ h6, .h6 { font-size: 13px; padding-bottom: ($baseLineHeight / 3); }
 
     .h-bx-link {
       .vicon {
-        color: lighten($orange, 50%);
+        color: mix(#ffffff, $orange, 50%);
       }
     }
   }
@@ -170,7 +170,7 @@ ul.list-disc li {
   list-style: none;
 
   li {
-    border-top: 1px solid lighten($blueSoft, 70%);
+    border-top: 1px solid mix(#ffffff, $blueSoft, 70%);
     padding: ($spacingXs * 1.5) 0;
 
     &:first-child {

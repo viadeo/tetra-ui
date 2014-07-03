@@ -109,12 +109,12 @@ module.exports = {
         replacement: 'adjust-hue'
       },
       {
-        pattern: /shade/gi,
-        replacement: 'darken'
+        pattern: /shade\(([@|$][\w\d]+),\s?([\d]+%)\)/gmi,
+        replacement: 'mix(#000000, $1, $2)'
       },
       {
-        pattern: /tint/gi,
-        replacement: 'lighten'
+        pattern: /tint\(([@|$][\w\d]+),\s?([\d]+%)\)/gmi,
+        replacement: 'mix(#ffffff, $1, $2)'
       },
         /* README : http://sass-lang.com/documentation/Sass/Script/Functions.html#rgba-instance_method
             box-shadow: 0 0 5px fade(@inputBorderFocus, 40%);

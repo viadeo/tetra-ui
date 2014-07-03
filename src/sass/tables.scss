@@ -58,7 +58,7 @@ table.table {
 table.zebra {
   tbody {
     tr:nth-child(odd) td {
-      background-color: lighten($blueSoft, 95%);
+      background-color: mix(#ffffff, $blueSoft, 95%);
     }
   }
 }

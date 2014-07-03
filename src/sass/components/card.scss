@@ -2,14 +2,14 @@
 
 .rc-card {
 	min-height: 145px;
-	border: 2px solid lighten($blueSoft, 80%);
+	border: 2px solid mix(#ffffff, $blueSoft, 80%);
 	border-radius: $borderRadiusM;
 	background: $white;
 	box-shadow: 0 2px 5px rgba($black, (30/100));
 	@include transition(border-color 0.2s);
 
 	&:hover {
-		border-color: lighten($blueSoft, 50%);
+		border-color: mix(#ffffff, $blueSoft, 50%);
 	}
 
 	.rc-card-header {
@@ -28,14 +28,14 @@
 
 	.rc-card-content {
 		padding: $spacingS;
-		border-top: 1px dotted lighten($blueSoft, 60%);
-		background: lighten($blueSoft, 93%);
+		border-top: 1px dotted mix(#ffffff, $blueSoft, 60%);
+		background: mix(#ffffff, $blueSoft, 93%);
 		background-clip: padding-box;
 	}
 
 	.rc-card-footer {
 		padding: $spacingS;
-		border-top: 1px dotted lighten($blueSoft, 60%);
+		border-top: 1px dotted mix(#ffffff, $blueSoft, 60%);
 		@include clearfixHack();
 	}
 

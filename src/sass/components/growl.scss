@@ -118,7 +118,7 @@
 		font-size: 0.9em;
 		color: $white;
 		vertical-align: middle;
-		background: darken($blue2, 10%);
+		background: mix(#000000, $blue2, 10%);
 		border-radius: $borderRadiusS 0 0 $borderRadiusS;
 		*float: left; // IE 7 needs hacks (lack of table-cell support)
 		*padding: $spacingM;
@@ -128,7 +128,7 @@
 }
 
 .growl-type-warning {
-	@include gradient-vertical(lighten($yellow, 80%), lighten($yellow, 70%));
+	@include gradient-vertical(mix(#ffffff, $yellow, 80%), mix(#ffffff, $yellow, 70%));
 	color: $baseFontColor;
 
 	a {
@@ -145,7 +145,7 @@
 	background: $orange2;
 
 	.growl-icon {
-		background: darken($orange2, 10%);
+		background: mix(#000000, $orange2, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -154,7 +154,7 @@
 	background: $green2;
 
 	.growl-icon {
-		background: darken($green2, 10%);
+		background: mix(#000000, $green2, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -163,16 +163,16 @@
 	background: $blue4;
 
 	.growl-icon {
-		background: darken($blue4, 10%);
+		background: mix(#000000, $blue4, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
 .growl-type-premium {
-	background: lighten($black, 24%);
+	background: mix(#ffffff, $black, 24%);
 
 	.growl-icon {
-		background: darken(lighten($black, 24%), 10%);
+		background: shade(mix(#ffffff, $black, 24%), 10%);
 		color: $orange4;
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}

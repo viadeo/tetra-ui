@@ -75,7 +75,7 @@
 		text-align: center;
 		line-height: 20px;
 		font-size: 8px;
-		color: darken($white, 15%);
+		color: mix(#000000, $white, 15%);
 		cursor: pointer;
 
 		-webkit-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
@@ -84,7 +84,7 @@
     transition: left 0.2s ease-in, margin-left 0.2s ease-in;
 
     &:hover {
-    	background: darken($white, 5%);
+    	background: mix(#000000, $white, 5%);
     }
 	}
 

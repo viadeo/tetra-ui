@@ -14,7 +14,7 @@
 		top: (-1 * $spacingL);
 
 		.vicon {
-			color: lighten($blueSoft, 40%);
+			color: mix(#ffffff, $blueSoft, 40%);
 			font-size: 8px;
 		}
 
@@ -117,7 +117,7 @@
 		font-size: 12px;
 		color: $white;
 		vertical-align: middle;
-		background: darken($blue2, 10%);
+		background: mix(#000000, $blue2, 10%);
 		border-radius: $borderRadiusS 0 0 $borderRadiusS;
 		*float: left; // IE 7 needs hacks (lack of table-cell support)
 		*padding: $spacingM;
@@ -140,7 +140,7 @@
 }
 
 .bx-alert-warning {
-	@include gradient-vertical(lighten($yellow, 80%), lighten($yellow, 70%));
+	@include gradient-vertical(mix(#ffffff, $yellow, 80%), mix(#ffffff, $yellow, 70%));
 	color: $baseFontColor;
 
 	a {
@@ -157,7 +157,7 @@
 	background: $orange2;
 
 	.bx-alert-icon {
-		background: darken($orange2, 10%);
+		background: mix(#000000, $orange2, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -166,7 +166,7 @@
 	background: $errorText;
 
 	.bx-alert-icon {
-		background: darken($errorText, 10%);
+		background: mix(#000000, $errorText, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -175,7 +175,7 @@
 	background: $green2;
 
 	.bx-alert-icon {
-		background: darken($green2, 10%);
+		background: mix(#000000, $green2, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
@@ -184,16 +184,16 @@
 	background: $blue4;
 
 	.bx-alert-icon {
-		background: darken($blue4, 10%);
+		background: mix(#000000, $blue4, 10%);
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
 .bx-alert-premium {
-	background: lighten($black, 24%);
+	background: mix(#ffffff, $black, 24%);
 
 	.bx-alert-icon {
-		background: darken(lighten($black, 24%), 10%);
+		background: shade(mix(#ffffff, $black, 24%), 10%);
 		color: $orange4;
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
@@ -325,7 +325,7 @@
       }
 
       &:hover {
-        background: darken($blue2, 20%);
+        background: mix(#000000, $blue2, 20%);
 
         span {
         	width: auto;
@@ -335,7 +335,7 @@
 		}
 
     .bx-edit-rm {
-      background: lighten($black, 20%);
+      background: mix(#ffffff, $black, 20%);
 
       &:hover {
         background: $black;

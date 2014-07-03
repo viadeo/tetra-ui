@@ -114,7 +114,7 @@ h1 .sub {
 }
 
 .ui-label-premium {
-  background: lighten($black, 24%);
+  background: mix(#ffffff, $black, 24%);
   border: none;
   color: $white;
   font-family: MuseoSlab, Arial, sans-serif;
@@ -128,7 +128,7 @@ h1 .sub {
   }
 
   &:hover {
-    background: lighten($black, 24%);
+    background: mix(#ffffff, $black, 24%);
   }
 }
 
@@ -163,7 +163,7 @@ h1 .sub {
     top: 0;
     @include right($rtl, 0);
     height: 100%;
-    background: darken($green2, 10%);
+    background: mix(#000000, $green2, 10%);
     @include border-radius-right($rtl, $borderRadiusS);
     padding: 0 ($spacingXs / 2);
     line-height: 2.1em;
@@ -175,7 +175,7 @@ h1 .sub {
 
     &:hover,
     &:focus {
-      background: darken($green2, 25%);
+      background: mix(#000000, $green2, 25%);
     }
   }
 }
