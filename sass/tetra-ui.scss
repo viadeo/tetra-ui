@@ -1,4 +1,4 @@
-/*! tetra-ui v2.1.14 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v2.1.15 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -81,11 +81,11 @@ $blueDark:          darken($blue, 10%) !default;
 $blueLight:         lighten(desaturate($blue, 35%), 20%) !default;
 $blueLighter:       lighten(desaturate($blue, 35%), 40%) !default;
 $blueBright:				#0065AE !default;
-$borderColor:       lighten($blueSoft, 63%) !default;
-$panelBackground:   lighten($blueSoft, 92%) !default;
-$panelBorder:       lighten($blueSoft, 78%) !default;
-$panelBorderDarker: lighten($blueSoft, 42%) !default;
-$overlayBorder:     darken($blueSoft, 70%) !default;
+$borderColor:       mix(#ffffff, $blueSoft, 63%) !default;
+$panelBackground:   mix(#ffffff, $blueSoft, 92%) !default;
+$panelBorder:       mix(#ffffff, $blueSoft, 78%) !default;
+$panelBorderDarker: mix(#ffffff, $blueSoft, 42%) !default;
+$overlayBorder:     mix(#000000, $blueSoft, 70%) !default;
 
 $premiumColor: #ffbb12 !default;
 
@@ -111,12 +111,12 @@ $highlightColor:    #F4F2CA !default;
 
 // Link colors
 $linkColor:         $blue !default;
-$linkColorHover:    darken($linkColor, 10%) !default;
+$linkColorHover:    mix(#000000, $linkColor, 10%) !default;
 
 // Typography
 $baseFontSize:      12px !default;
 $smallFontSize:     $baseFontSize - 1 !default;
-$baseFontColor:     lighten($black, 15%) !default;
+$baseFontColor:     mix(#ffffff, $black, 15%) !default;
 $baseFontFamily:    Arial, sans-serif !default;
 $baseLineHeight:    1.4em !default;
 
@@ -169,7 +169,7 @@ $gridColumns:		12 !default;
 $gridColumnWidth:	60px !default;
 $gridGutterWidth:	20px !default;
 
-/*! tetra-ui v2.1.14 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v2.1.15 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
