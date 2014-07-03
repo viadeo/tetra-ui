@@ -109,11 +109,11 @@ module.exports = {
         replacement: 'adjust-hue'
       },
       {
-        pattern: /shade\(([@|$][\w\d]+),\s?([\d]+%)\)/gmi,
+        pattern: /shade\(([@|$][-_\w\d]+),\s?([\d]+%)\)/gmi,
         replacement: 'mix(#000000, $1, $2)'
       },
       {
-        pattern: /tint\(([@|$][\w\d]+),\s?([\d]+%)\)/gmi,
+        pattern: /tint\(([@|$][-_\w\d]+),\s?([\d]+%)\)/gmi,
         replacement: 'mix(#ffffff, $1, $2)'
       },
         /* README : http://sass-lang.com/documentation/Sass/Script/Functions.html#rgba-instance_method
