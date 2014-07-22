@@ -172,14 +172,14 @@ $gridGutterWidth:	20px !default;
 // Overriding the variables declared in variables.less
 // for Right To Left languages
 
-$rtl: true !default;
+$rtl: true;
 
 // Arabic fonts are smaller
 
-$baseFontSize: 15px !default;
-$smallFontSize: $baseFontSize - 1 !default;
-$baseLineHeight: 1.2em !default;
-$font-stack: "Simplified Arabic", "Baghdad", "Arial", sans-serif !default;
+$baseFontSize: 15px;
+$smallFontSize: $baseFontSize - 1;
+$baseLineHeight: 1.2em;
+$font-stack: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
 
 /*! tetra-ui v2.1.15 - 2014 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 

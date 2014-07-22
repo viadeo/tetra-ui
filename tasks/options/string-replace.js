@@ -135,6 +135,7 @@ module.exports = {
       }
     ]
   },
+  // Copy variables as default (no override if the variable already exists)
   less2sass_variables: {
     options: {
       replacements: [{
@@ -144,8 +145,20 @@ module.exports = {
       ]
     },
     files: [{
-      '<%= path.sass.src %>/foundation/variables.scss':'<%= path.sass.src %>/foundation/variables.scss',
-      },{
+      '<%= path.sass.src %>/foundation/variables.scss':'<%= path.sass.src %>/foundation/variables.scss'
+      }
+    ]
+  },
+  // Copy variables by overriding the value if exists
+  less2sass_variables_override: {
+    options: {
+      replacements: [{
+          pattern: /(\$.*);/g,
+          replacement: '$1;'
+        }
+      ]
+    },
+    files: [{
       '<%= path.sass.src %>/foundation/variables_rtl.scss':'<%= path.sass.src %>/foundation/variables_rtl.scss'
       }
     ]

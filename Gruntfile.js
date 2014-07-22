@@ -57,6 +57,7 @@ module.exports = function(grunt) {
     'clean:sass',
     'string-replace:less2sass',
     'string-replace:less2sass_variables',
+    'string-replace:less2sass_variables_override',
     'string-replace:sass_dist',
     'string-replace:less_dist',
     'test-sass'
