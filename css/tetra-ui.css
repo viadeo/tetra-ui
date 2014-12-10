@@ -3434,8 +3434,8 @@ h1 .sub {
   font-family: 'Viadeoicons';
   font-style: normal;
   font-weight: normal;
-  src: url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1382536154/viadeoicons.ttf') format('truetype');
+  src: url('/css/core/fonts/viadeoicons/1418225492/viadeoicons.eot');
+  src: url('/css/core/fonts/viadeoicons/1418225492/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1418225492/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1418225492/viadeoicons.ttf') format('truetype');
 }
 
 .vicon,
@@ -3780,6 +3780,10 @@ h1 .sub {
 
 .vicon-money:before {
   content: "\0024";
+}
+
+.vicon-infinity:before {
+  content: "\221E";
 }
 
 .vicon-day-1:before {
