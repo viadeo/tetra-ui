@@ -327,6 +327,10 @@
     title: "money"
     unicode: \0024
   -
+    code: "∞"
+    title: "infinity"
+    unicode: \u221
+  -
     code: ""
     title: "day-1"
     unicode: \F021
