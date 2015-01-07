@@ -36,10 +36,10 @@
 // Grayscale
 @black:             #000000;
 @blackLight:        lighten(@black, 18%);
-@grayDark:          lighten(@black, 25%);
-@gray:              lighten(@black, 50%);
-@grayLight:         lighten(@black, 75%);
-@grayLighter:       lighten(@black, 90%);
+@grayDark:          #4a494d;
+@gray:              #87868c;
+@grayLight:         #c5c3c7;
+@grayLighter:       #d9d8dd;
 @white:             #FFFFFF;
 
 // Extended palette
@@ -72,7 +72,7 @@
 @yellow:            #ffd520;
 @orange:            @orange1;
 
-@blue:              #007de3;
+@blue:              #42a2d6;
 @blueSoft:          #83a0b9;
 @blueDarker:        darken(@blue, 20%);
 @blueDark:          darken(@blue, 10%);
@@ -85,7 +85,12 @@
 @panelBorderDarker: tint(@blueSoft, 42%);
 @overlayBorder:     shade(@blueSoft, 70%);
 
-@premiumColor: #ffbb12;
+@premiumColor: #feae35;
+@highlightColor:    #F4F2CA;
+
+// Link colors
+@linkColor:         @blue;
+@linkColorHover:    darken(@linkColor, 10%);
 
 // Button Colors
 @buttonPrimaryBgColor:     #ffd724;
@@ -105,16 +110,33 @@
 @buttonTerBorderColor:     @green2;
 @buttonTerTextColor:       @white;
 
-@highlightColor:    #F4F2CA;
+// Button Colors : revamp
+@buttonColor_revamp: @white;
 
-// Link colors
-@linkColor:         @blue;
-@linkColorHover:    shade(@linkColor, 10%);
+@buttonPrimaryBgColor_revamp:     @blue;
+@buttonPrimaryEndColor_revamp:    @blue;
+@buttonPrimaryHoverColor_revamp:  darken(@blue, 10%);
+@buttonPrimaryBorderColor_revamp: @blue;
+@buttonPrimaryTextColor_revamp:   @buttonColor_revamp;
+@buttonPrimaryDisabledTextColor_revamp:   darken(@blue, 20%);
+
+@buttonDefaultBgColor_revamp:     @gray;
+@buttonDefaultEndColor_revamp:    @gray;
+@buttonDefaultHoverColor_revamp:  darken(@gray, 10%);
+@buttonDefaultBorderColor_revamp: @gray;
+@buttonDefaultTextColor_revamp:   @buttonColor_revamp;
+@buttonDefaultDisabledTextColor_revamp:   darken(@gray, 20%);
+
+@buttonTerBgColor_revamp:         @green3;
+@buttonTerHoverColor_revamp:      darken(@green3, 10%);
+@buttonTerBorderColor_revamp:     @green3;
+@buttonTerTextColor_revamp:       @buttonColor_revamp;
+@buttonTerDisabledTextColor_revamp:   darken(@green3, 20%);
 
 // Typography
 @baseFontSize:      12px;
 @smallFontSize:     @baseFontSize - 1;
-@baseFontColor:     tint(@black, 15%);
+@baseFontColor:     #2a2a2a;
 @baseFontFamily:    Arial, sans-serif;
 @baseLineHeight:    1.4em;
 

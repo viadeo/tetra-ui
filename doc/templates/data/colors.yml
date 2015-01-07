@@ -37,19 +37,19 @@ shade:
 grayscale:
   values:
     black: "#000000;"
-    grayDark: "#404040;"
-    gray: "#808080;"
-    grayLight: "#bfbfbf;"
-    grayLighter: "#e6e6e6;"
+    grayDark: "#4a494d;"
+    gray: "#87868c;"
+    grayLight: "#c5c3c7;"
+    grayLighter: "#d9d8dd;"
     white: "#ffffff;"
   count: "6"
 semantic:
   -
     values:
-      baseFontColor: "#262626"
+      baseFontColor: "#2a2a2a"
       pageBg: "#e8e9eb;"
-      linkColor: "#007de3;"
-      linkColorHover: "#0071cc;"
+      linkColor: "#42a2d6;"
+      linkColorHover: "#2479a7;"
       overlayBorder: "#273038;"
     count: "5"
     type: "Base"
@@ -65,6 +65,6 @@ semantic:
     values:
       highlightColor: "#f4f2ca;"
       errorText: "#d54243;"
-      premiumColor: "#ffbb12;"
+      premiumColor: "#feae35;"
     count: "3"
     type: "Context"

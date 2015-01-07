@@ -36,10 +36,10 @@ $spacingXl:         30px !default;
 // Grayscale
 $black:             #000000 !default;
 $blackLight:        lighten($black, 18%) !default;
-$grayDark:          lighten($black, 25%) !default;
-$gray:              lighten($black, 50%) !default;
-$grayLight:         lighten($black, 75%) !default;
-$grayLighter:       lighten($black, 90%) !default;
+$grayDark:          #4a494d !default;
+$gray:              #87868c !default;
+$grayLight:         #c5c3c7 !default;
+$grayLighter:       #d9d8dd !default;
 $white:             #FFFFFF !default;
 
 // Extended palette
@@ -85,7 +85,7 @@ $panelBorder:       mix(#ffffff, $blueSoft, 78%) !default;
 $panelBorderDarker: mix(#ffffff, $blueSoft, 42%) !default;
 $overlayBorder:     mix(#000000, $blueSoft, 70%) !default;
 
-$premiumColor: #ffbb12 !default;
+$premiumColor: #feae35 !default;
 
 // Button Colors
 $buttonPrimaryBgColor:     #ffd724 !default;
@@ -108,13 +108,13 @@ $buttonTerTextColor:       $white !default;
 $highlightColor:    #F4F2CA !default;
 
 // Link colors
-$linkColor:         $blue !default;
-$linkColorHover:    mix(#000000, $linkColor, 10%) !default;
+$linkColor:         #42a2d6 !default;
+$linkColorHover:    #2479a7 !default;
 
 // Typography
 $baseFontSize:      12px !default;
 $smallFontSize:     $baseFontSize - 1 !default;
-$baseFontColor:     mix(#ffffff, $black, 15%) !default;
+$baseFontColor:     #2a2a2a !default;
 $baseFontFamily:    Arial, sans-serif !default;
 $baseLineHeight:    1.4em !default;
 
