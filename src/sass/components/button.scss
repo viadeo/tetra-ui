@@ -1,7 +1,93 @@
+@mixin tetra-2015-button($button){
+  $bgColor: unquote("");
+  $hoverColor: unquote("");
+  $borderColor: unquote("");
+  $textColor: unquote("");
+  $diabledTextColor: unquote("");
+  @if $button == default {
+    @mixin set-color($button){
+    $bgColor : $buttonDefaultBgColor_revamp;
+    $hoverColor: $buttonDefaultHoverColor_revamp;
+    $borderColor: $buttonDefaultBorderColor_revamp;
+    $textColor:   $buttonDefaultTextColor_revamp;
+    $diabledTextColor: $buttonDefaultDisabledTextColor_revamp;
+  }}
+  @if $button == primary {
+    @mixin set-color($button){
+    $bgColor : $buttonPrimaryBgColor_revamp;
+    $hoverColor: $buttonPrimaryHoverColor_revamp;
+    $borderColor: $buttonPrimaryBorderColor_revamp;
+    $textColor:   $buttonPrimaryTextColor_revamp;
+    $diabledTextColor: $buttonPrimaryDisabledTextColor_revamp;
+  }}
+  @if $button == tertiary {
+    @mixin set-color($button){
+    $bgColor : $buttonTerBgColor_revamp;
+    $hoverColor: $buttonTerHoverColor_revamp;
+    $borderColor: $buttonTerBorderColor_revamp;
+    $textColor:   $buttonTerTextColor_revamp;
+    $diabledTextColor: $buttonTerDisabledTextColor_revamp;
+  }}
+  .tetra-2015 & {
+    @include set-color($button);
+    color: $textColor;
+    > span, > input, > button { color: $textColor; }
+    border: 1px solid $borderColor;
+    background: $bgColor;
+    .vicon {
+      color: $textColor;
+    }
+    &:hover, &:focus {
+      background: $hoverColor;
+      color: $textColor;
+      border-color: $hoverColor;
+      .vicon {
+        color: $textColor;
+      }
+    }
+    &:active {
+      background: $bgColor;
+    }
+    &.btn-disabled,
+    &.btn-loading {
+      background: $bgColor;
+      border-color: $bgColor;
+      color: $diabledTextColor;
+      &:link,
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active,
+      span {
+        background-image: none;
+        background-color: $bgColor;
+        border-color: $bgColor;
+        color: $diabledTextColor;
+      }
+      .vicon {
+        color: $textColor;
+      }
+    }
+    &.btn-loading,
+    &.btn-loading:hover,
+    &.btn-loading:focus,
+    &.btn-loading:active {
+      span {
+        background-image: url("#{$img-buttons-dir}/loaders/default.gif");
+      }
+    }
+  }
+}
+
 .btn, .core-form .btn {
   // General Properties
   $_padding:           3px 10px;
+  $_padding_revamp:           4px 15px;
   $_borderRadius:        $borderRadiusS;
+
+  .tetra-2015 & {
+    padding: $_padding_revamp;
+  }
 
   // Rules
   display: inline-block;
@@ -50,10 +136,20 @@
   .vicon.btn-icon-before {
     margin: 0 -2px 0 -7px;
     font-size: 8px;
+    .tetra-2015 & {
+      font-size: 7px;
+      margin-left: -9px;
+      margin-right: 0px;
+    }
   }
   .vicon.btn-icon-after {
     margin: 0 -7px 0 -2px;
     font-size: 8px;
+    .tetra-2015 & {
+      font-size: 7px;
+      margin-left: 0;
+      margin-right: -9px;
+    }
   }
 }
 .btn-primary, .btn-secondary, .socialAction, .eventsAction,
@@ -65,8 +161,10 @@
   $_primaryBorderColor:      $buttonPrimaryBorderColor;
   $_primaryTextColor:      $buttonPrimaryTextColor;
 
+  @include tetra-2015-button(primary);
+
   color: $_primaryTextColor;
-  span, input, button { color: $_primaryTextColor; }
+  > span, > input, > button { color: $_primaryTextColor; }
   border: 1px solid $_primaryBorderColor;
   @include gradient-vertical($_primaryStartColor, $_primaryEndColor);
 
@@ -122,10 +220,12 @@
   $_defaultBorderColor:      $buttonDefaultBorderColor;
   $_defaultTextColor:      $buttonDefaultTextColor;
 
+  @include tetra-2015-button(default);
+
   border: 1px solid $_defaultBorderColor;
   @include gradient-vertical($_defaultStartColor, $_defaultEndColor);
   color: $_defaultTextColor;
-  span, input, button { color: $_defaultTextColor; }
+  > span, > input, > button { color: $_defaultTextColor; }
 
   .vicon {
     color: $gray;
@@ -179,8 +279,10 @@
   $_tertiaryBorderColor:      $buttonTerBorderColor;
   $_tertiaryTextColor:      $buttonTerTextColor;
 
+  @include tetra-2015-button(tertiary);
+
   color: $_tertiaryTextColor;
-  span, input, button { color: $_tertiaryTextColor; }
+  > span, > input, > button { color: $_tertiaryTextColor; }
   border: 1px solid $_tertiaryBorderColor;
   @include gradient-vertical($_tertiaryStartColor, $_tertiaryEndColor);
 
@@ -228,7 +330,12 @@
 
 .btn-small, .core-form .btn-small {
   $_padding:     1px 10px;
+  $_padding_revamp:     1px 10px;
   $_borderRadius:  $borderRadiusS;
+
+  .tetra-2015 & {
+    padding: $_padding_revamp;
+  }
 
   padding: $_padding;
   @include border-radius($_borderRadius);
@@ -242,7 +349,12 @@
 
 .btn-large, .core-form .btn-large {
   $_padding:     7px $spacingM;
+  $_padding_revamp: 7px $spacingM;
   $_borderRadius:  $borderRadiusS;
+
+  .tetra-2015 & {
+    padding: $_padding_revamp;
+  }
 
   padding: $_padding;
   @include border-radius($_borderRadius);
@@ -256,6 +368,11 @@
   font-size: ($baseFontSize * 1.25);
   margin: 6px;
 
+  .tetra-2015 & {
+    padding: $spacingM;
+    font-size: 16px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -263,6 +380,13 @@
     top: -6px; right: -6px; bottom: -6px; left: -6px;
     border-radius: 6px;
     box-shadow: 0 1px 9px rgba($black, (10/100)) inset;
+  }
+
+  .tetra-2015 & {
+    margin: 0;
+    &:before {
+      display: none;
+    }
   }
 }
 
@@ -317,6 +441,10 @@
   border: 1px solid lighten($buttonDefaultBorderColor, 3%);
   @include gradient-vertical($buttonDefaultBgColor, lighten($buttonDefaultEndColor, 3%));
 
+  .tetra-2015 & {
+    padding: 10px 4px 6px;
+  }
+
   &:hover,
   &:focus {
     border-color: $buttonPrimaryBorderColor;
@@ -325,6 +453,14 @@
     .vicon {
       color: lighten($black, 25%);
     }
+  }
+
+  @include tetra-2015-button(default);
+  &.btn-primary {
+    @include tetra-2015-button(primary);
+  }
+  &.btn-tertiary {
+    @include tetra-2015-button(tertiary);
   }
 
   .vicon {

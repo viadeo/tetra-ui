@@ -1,16 +1,27 @@
 // Typography
 
 // Web fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic,latin);
 
-@font-face {
-  font-family: 'MuseoSlab';
-  src: url('#{$fonts-dir}/museoslab/museoslab-500.eot');
-  src: url('#{$fonts-dir}/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'),
-    url('#{$fonts-dir}/museoslab/museoslab-500.woff') format('woff'),
-    url('#{$fonts-dir}/museoslab/museoslab-500.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'OpenSans';
+//   src: url('#{$fonts-dir}/opensans/OpenSans-Regular-webfont.eot');
+//   src: url('#{$fonts-dir}/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+//     url('#{$fonts-dir}/opensans/OpenSans-Regular-webfont.woff') format('woff'),
+//     url('#{$fonts-dir}/opensans/OpenSans-Regular-webfont.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'OpenSansBold';
+//   src: url('#{$fonts-dir}/opensansbold/OpenSans-Bold-webfont.eot');
+//   src: url('#{$fonts-dir}/opensansbold/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+//     url('#{$fonts-dir}/opensansbold/OpenSans-Bold-webfont.woff') format('woff'),
+//     url('#{$fonts-dir}/opensansbold/OpenSans-Bold-webfont.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 // Body Text
 
@@ -20,6 +31,10 @@ body {
   line-height: $baseLineHeight;
   font-family: $font-stack;
   color: $baseFontColor;
+}
+
+.tetra-2015 {
+  font-family: $font-stack_revamp;
 }
 
 p {
@@ -58,7 +73,6 @@ a {
 // Headings
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: Arial, sans-serif;
   font-weight: bold;
   margin-bottom: ($baseLineHeight / 2.5);
   color: lighten($baseFontColor, 10%);
@@ -66,6 +80,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .h1, .h2, .h3, .h4, .h5, .h6, .h-lead {
   font-family: "MuseoSlab", Arial, sans-serif;
   font-weight: normal;
+  .tetra-2015 & {
+    font-family: $font-stack_revamp;
+  }
 }
 h1, .h1 { font-size: 20px; }
 h2, .h2 { font-size: 18px; }
@@ -88,6 +105,49 @@ h6, .h6 { font-size: 13px; padding-bottom: ($baseLineHeight / 3); }
   padding-bottom: $spacingXs;
   border-bottom: 1px solid $panelBorder;
   font-size: 14px;
+}
+
+.h-bx {
+  .tetra-2015 & {
+    text-transform: uppercase;
+    border-bottom: 1px solid $grayLighter;
+    color: $grayDark;
+    margin-bottom: $spacingM;
+    padding: 0 0 $spacingS 0;
+    font: 700 13px $font-stack_revamp;
+    small {
+      font-size: 13px;
+      font-weight: 300;
+      display: block;
+      text-transform: none;
+      color: $gray;
+    }
+    .vicon {
+      text-transform: lowercase;
+    }
+    .h-bx-link {
+      position: relative;
+      @include left($rtl, 7px);
+      top: (-1 * $spacingS);
+      .vicon {
+        color:  $grayLight;
+      }
+      &:hover,
+      &:focus {
+        .vicon {
+          color: $gray;
+        }
+      }
+    }
+    &.h-bx-main {
+      &:hover,
+      &:focus {
+        .vicon {
+          color: mix(#000000, $orange, 5%);
+        }
+      }
+    }
+  }
 }
 
 .h-bx {

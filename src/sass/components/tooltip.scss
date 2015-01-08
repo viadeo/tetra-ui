@@ -14,6 +14,7 @@
 }
 
 .tooltip-content {
+  font-size: 11px;
   position: absolute;
   visibility: hidden;
   @include left($rtl, 0);
@@ -22,12 +23,12 @@
 
   min-width: 44px;
   margin: 0 0 -7px 0;
-  padding: 2px 5px;
+  padding: 4px 10px;
 
 	border-radius: 3px;
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 
-	@include gradient-vertical(lighten($black, 25%), lighten($black, 10%));
+	background: $grayDark;
 
 	opacity: 0;
 
@@ -53,7 +54,7 @@
     bottom: -6px;
 	  width: 0;
 	  height: 0;
-		border-color: lighten($black, 10%) transparent transparent;
+		border-color: $grayDark transparent transparent;
 		border-style: solid;
 		border-width: 7px 7px 0;
 	}
@@ -103,12 +104,12 @@
   &:after {
     @if $rtl == false {
       @mixin border($rtl){
-      border-color: transparent lighten($black, 17%) transparent transparent;
+      border-color: transparent $grayDark transparent transparent;
       border-width: 5px 5px 5px 0;
     }}
     @if $rtl == true {
       @mixin border($rtl){
-      border-color: transparent transparent transparent lighten($black, 17%);
+      border-color: transparent transparent transparent $grayDark;
       border-width: 5px 0 5px 5px;
     }}
     @include border($rtl);
@@ -141,12 +142,12 @@
   &:after {
     @if $rtl == false {
       @mixin border($rtl){
-      border-color: transparent transparent transparent lighten($black, 17%);
+      border-color: transparent transparent transparent $grayDark;
       border-width: 5px 0 5px 5px;
     }}
     @if $rtl == true {
       @mixin border($rtl){
-      border-color: transparent lighten($black, 17%) transparent transparent;
+      border-color: transparent $grayDark transparent transparent;
       border-width: 5px 5px 5px 0;
     }}
     @include border($rtl);
@@ -175,7 +176,7 @@
   margin: -7px 0 0 0;
 
   &:after {
-    border-color: transparent transparent lighten($black, 25%);
+    border-color: transparent transparent $grayDark;
     border-width: 0 7px 7px;
     top: -7px;
     bottom: auto;

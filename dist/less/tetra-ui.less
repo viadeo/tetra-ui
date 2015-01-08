@@ -1,4 +1,4 @@
-/*! tetra-ui v2.2 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v2.3 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -11,6 +11,7 @@
 @fonts-dir: "/css/core/fonts";
 @fonts-version: "1418225492";
 @font-stack: "Arial", sans-serif;
+@font-stack_revamp: "Open Sans", "Arial", sans-serif;
 
 // Right To Left mode (arabic)
 @rtl: false;
@@ -38,10 +39,10 @@
 // Grayscale
 @black:             #000000;
 @blackLight:        lighten(@black, 18%);
-@grayDark:          lighten(@black, 25%);
-@gray:              lighten(@black, 50%);
-@grayLight:         lighten(@black, 75%);
-@grayLighter:       lighten(@black, 90%);
+@grayDark:          #4a494d;
+@gray:              #87868c;
+@grayLight:         #c5c3c7;
+@grayLighter:       #d9d8dd;
 @white:             #FFFFFF;
 
 // Extended palette
@@ -74,7 +75,7 @@
 @yellow:            #ffd520;
 @orange:            @orange1;
 
-@blue:              #007de3;
+@blue:              #42a2d6;
 @blueSoft:          #83a0b9;
 @blueDarker:        darken(@blue, 20%);
 @blueDark:          darken(@blue, 10%);
@@ -87,7 +88,12 @@
 @panelBorderDarker: tint(@blueSoft, 42%);
 @overlayBorder:     shade(@blueSoft, 70%);
 
-@premiumColor: #ffbb12;
+@premiumColor: #feae35;
+@highlightColor:    #F4F2CA;
+
+// Link colors
+@linkColor:         @blue;
+@linkColorHover:    darken(@linkColor, 10%);
 
 // Button Colors
 @buttonPrimaryBgColor:     #ffd724;
@@ -107,16 +113,33 @@
 @buttonTerBorderColor:     @green2;
 @buttonTerTextColor:       @white;
 
-@highlightColor:    #F4F2CA;
+// Button Colors : revamp
+@buttonColor_revamp: @white;
 
-// Link colors
-@linkColor:         @blue;
-@linkColorHover:    shade(@linkColor, 10%);
+@buttonPrimaryBgColor_revamp:     @blue;
+@buttonPrimaryEndColor_revamp:    @blue;
+@buttonPrimaryHoverColor_revamp:  darken(@blue, 10%);
+@buttonPrimaryBorderColor_revamp: @blue;
+@buttonPrimaryTextColor_revamp:   @buttonColor_revamp;
+@buttonPrimaryDisabledTextColor_revamp:   darken(@blue, 20%);
+
+@buttonDefaultBgColor_revamp:     @gray;
+@buttonDefaultEndColor_revamp:    @gray;
+@buttonDefaultHoverColor_revamp:  darken(@gray, 10%);
+@buttonDefaultBorderColor_revamp: @gray;
+@buttonDefaultTextColor_revamp:   @buttonColor_revamp;
+@buttonDefaultDisabledTextColor_revamp:   darken(@gray, 20%);
+
+@buttonTerBgColor_revamp:         @green3;
+@buttonTerHoverColor_revamp:      darken(@green3, 10%);
+@buttonTerBorderColor_revamp:     @green3;
+@buttonTerTextColor_revamp:       @buttonColor_revamp;
+@buttonTerDisabledTextColor_revamp:   darken(@green3, 20%);
 
 // Typography
 @baseFontSize:      12px;
 @smallFontSize:     @baseFontSize - 1;
-@baseFontColor:     tint(@black, 15%);
+@baseFontColor:     #2a2a2a;
 @baseFontFamily:    Arial, sans-serif;
 @baseLineHeight:    1.4em;
 
@@ -126,6 +149,9 @@
 @borderRadiusMS: 5px;
 @borderRadiusM: 6px;
 @borderRadiusL: 10px;
+
+// Box
+@BorderBoxColor: #dddee0;
 
 // Forms
 @inputBackground:	@white;
@@ -619,7 +645,9 @@
 .border-top-left-radius (@rtl, @value) when (@rtl = false) { border-top-left-radius: @value; }
 .border-top-left-radius (@rtl, @value) when (@rtl = true) { border-top-right-radius: @value; }
 
-/*! tetra-ui v2.2 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v2.3 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic,latin);
 
 html,
 body {
@@ -716,7 +744,7 @@ th {
 abbr,
 acronym {
   cursor: help;
-  border-bottom: 1px dotted #808080;
+  border-bottom: 1px dotted #87868c;
   font-variant: normal;
 }
 
@@ -2547,19 +2575,19 @@ textarea {
 }
 
 .dark-gray {
-  color: #404040;
+  color: #4a494d;
 }
 
 .gray {
-  color: #808080;
+  color: #87868c;
 }
 
 .light-gray {
-  color: #bfbfbf;
+  color: #c5c3c7;
 }
 
 .lighter-gray {
-  color: #e6e6e6;
+  color: #d9d8dd;
 }
 
 .white {
@@ -2629,7 +2657,7 @@ textarea {
 }
 
 .outline {
-  outline: #bfbfbf dashed thin;
+  outline: #c5c3c7 dashed thin;
 }
 
 .outline-red {
@@ -3222,20 +3250,16 @@ textarea {
   }
 }
 
-@font-face {
-  font-family: 'MuseoSlab';
-  font-style: normal;
-  font-weight: normal;
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot');
-  src: url('/css/core/fonts/museoslab/museoslab-500.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/museoslab/museoslab-500.woff') format('woff'), url('/css/core/fonts/museoslab/museoslab-500.ttf') format('truetype');
-}
-
 body {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4em;
-  color: #262626;
+  color: #2a2a2a;
+}
+
+.tetra-2015 {
+  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 p {
@@ -3243,14 +3267,14 @@ p {
 }
 
 a {
-  color: #007de3;
+  color: #42a2d6;
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover,
 a:focus {
-  color: #0071cc;
+  color: #2988bc;
   text-decoration: underline;
 }
 
@@ -3263,7 +3287,7 @@ a.lnk-title:hover {
 }
 
 a.lnk-text {
-  color: #262626;
+  color: #2a2a2a;
 }
 
 a.lnk-text:hover {
@@ -3283,9 +3307,8 @@ h5,
 h6,
 .h6 {
   margin-bottom: 0.5599999999999999em;
-  font-family: Arial, sans-serif;
   font-weight: bold;
-  color: #404040;
+  color: #444444;
 }
 
 .h1,
@@ -3297,6 +3320,16 @@ h6,
 .h-lead {
   font-family: "MuseoSlab", Arial, sans-serif;
   font-weight: normal;
+}
+
+.tetra-2015 .h1,
+.tetra-2015 .h2,
+.tetra-2015 .h3,
+.tetra-2015 .h4,
+.tetra-2015 .h5,
+.tetra-2015 .h6,
+.tetra-2015 .h-lead {
+  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 h1,
@@ -3354,6 +3387,47 @@ h6,
   border-bottom: 1px solid #e4eaf0;
 }
 
+.tetra-2015 .h-bx {
+  padding: 0 0 10px 0;
+  margin-bottom: 15px;
+  font: 700 13px "Open Sans", "Arial", sans-serif;
+  color: #4a494d;
+  text-transform: uppercase;
+  border-bottom: 1px solid #d9d8dd;
+}
+
+.tetra-2015 .h-bx small {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+  color: #87868c;
+  text-transform: none;
+}
+
+.tetra-2015 .h-bx .vicon {
+  text-transform: lowercase;
+}
+
+.tetra-2015 .h-bx .h-bx-link {
+  position: relative;
+  top: -10px;
+  left: 7px;
+}
+
+.tetra-2015 .h-bx .h-bx-link .vicon {
+  color: #c5c3c7;
+}
+
+.tetra-2015 .h-bx .h-bx-link:hover .vicon,
+.tetra-2015 .h-bx .h-bx-link:focus .vicon {
+  color: #87868c;
+}
+
+.tetra-2015 .h-bx.h-bx-main:hover .vicon,
+.tetra-2015 .h-bx.h-bx-main:focus .vicon {
+  color: #e96100;
+}
+
 .h-bx {
   padding: 0 0 7px 0;
   font: normal 16px "MuseoSlab", "Arial", sans-serif;
@@ -3407,7 +3481,7 @@ ul.link-list li:before {
   left: 0;
   width: 3px;
   height: 3px;
-  background: #007de3;
+  background: #42a2d6;
   content: '';
 }
 
@@ -3462,7 +3536,7 @@ em {
 }
 
 .muted {
-  color: #808080;
+  color: #87868c;
 }
 
 code,
@@ -3512,14 +3586,14 @@ pre {
   margin-bottom: 2.0999999999999996em;
   font-size: 18px;
   line-height: 2.8em;
-  color: #404040;
+  color: #4a494d;
   border: 0;
   border-bottom: 1px solid #eee;
 }
 
 .core-form legend small {
   font-size: 1.0499999999999998em;
-  color: #bfbfbf;
+  color: #c5c3c7;
 }
 
 .core-form label,
@@ -3542,7 +3616,7 @@ pre {
 .core-form label {
   display: block;
   margin-bottom: 5px;
-  color: #404040;
+  color: #4a494d;
 }
 
 .core-form input,
@@ -3556,7 +3630,7 @@ pre {
   margin-bottom: 9px;
   font-size: 12px;
   line-height: 1.4em;
-  color: #404040;
+  color: #4a494d;
   vertical-align: middle;
   border: 1px solid #c5c7c5;
   border-radius: 2px;
@@ -3779,7 +3853,7 @@ pre {
 .core-form select[readonly],
 .core-form textarea[readonly] {
   cursor: not-allowed;
-  background-color: #e6e6e6;
+  background-color: #d9d8dd;
   border-color: #ddd;
 }
 
@@ -3827,13 +3901,13 @@ pre {
 }
 
 .core-form .control-group.disabled label {
-  color: #999999;
+  color: #a1a0a5;
   cursor: not-allowed;
 }
 
 .core-form .control-group.disabled .help-block,
 .core-form .control-group.disabled .help-inline {
-  color: #bfbfbf;
+  color: #c8c7ca;
 }
 
 .core-form .form-actions {
@@ -3865,16 +3939,16 @@ pre {
 }
 
 .core-form :-moz-placeholder {
-  color: #bfbfbf;
+  color: #c5c3c7;
 }
 
 .core-form ::-webkit-input-placeholder {
-  color: #bfbfbf;
+  color: #c5c3c7;
 }
 
 .core-form .help-block,
 .core-form .help-inline {
-  color: #808080;
+  color: #87868c;
 }
 
 .core-form .help-block {
@@ -4211,7 +4285,7 @@ table.table-hover tbody tr:hover > th {
 .page-header {
   padding-bottom: 5px;
   margin-bottom: 2.0999999999999996em;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #d9d8dd;
   zoom: 1;
 }
 
@@ -4245,7 +4319,7 @@ h1 .sub {
   display: block;
   font-size: 15px;
   font-weight: normal;
-  color: #595959;
+  color: #5d5d5d;
 }
 
 .rc,
@@ -5044,7 +5118,7 @@ a:focus .avatar img {
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
-  color: #000000;
+  color: #2a2a2a !important;
   text-align: left;
   text-decoration: none;
   text-shadow: none;
@@ -5188,9 +5262,10 @@ a:focus .avatar img {
   left: 0;
   z-index: 998;
   min-width: 44px;
-  padding: 2px 5px;
+  padding: 4px 10px;
   margin: 0 0 -7px 0;
   font: 11px 'Arial', sans-serif;
+  font-size: 11px;
   line-height: 1.6em;
   color: #ffffff !important;
   text-align: center;
@@ -5198,17 +5273,9 @@ a:focus .avatar img {
   text-shadow: none;
   white-space: nowrap;
   pointer-events: none;
-  background-color: #1a1a1a;
-  background-image: -moz-linear-gradient(top, #404040, #1a1a1a);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #404040), color-stop(100%, #1a1a1a));
-  background-image: -webkit-linear-gradient(top, #404040, #1a1a1a);
-  background-image: -o-linear-gradient(top, #404040, #1a1a1a);
-  background-image: linear-gradient(to bottom, #404040, #1a1a1a);
-  background-repeat: repeat-x;
+  background: #4a494d;
   border-radius: 3px;
   opacity: 0;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#404040', endColorstr='#1a1a1a', GradientType=0);
-  *filter: none;
   visibility: hidden;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   -webkit-transition: opacity .3s, margin .3s;
@@ -5222,7 +5289,7 @@ a:focus .avatar img {
   left: 10px;
   width: 0;
   height: 0;
-  border-color: #1a1a1a transparent transparent;
+  border-color: #4a494d transparent transparent;
   border-style: solid;
   border-width: 7px 7px 0;
   content: '';
@@ -5262,7 +5329,7 @@ a:focus .avatar img {
   top: 6px;
   bottom: auto;
   left: -5px;
-  border-color: transparent #2b2b2b transparent transparent;
+  border-color: transparent #4a494d transparent transparent;
   border-width: 5px 5px 5px 0;
 }
 
@@ -5286,7 +5353,7 @@ a:focus .avatar img {
   right: -5px;
   bottom: auto;
   left: auto;
-  border-color: transparent transparent transparent #2b2b2b;
+  border-color: transparent transparent transparent #4a494d;
   border-width: 5px 0 5px 5px;
 }
 
@@ -5305,7 +5372,7 @@ a:focus .avatar img {
 .tooltip-bottom .tooltip-content:after {
   top: -7px;
   bottom: auto;
-  border-color: transparent transparent #404040;
+  border-color: transparent transparent #4a494d;
   border-width: 0 7px 7px;
 }
 
@@ -5329,6 +5396,11 @@ a:focus .avatar img {
      -moz-user-select: none;
        -o-user-select: none;
           user-select: none;
+}
+
+.tetra-2015 .btn,
+.tetra-2015 .core-form .btn {
+  padding: 4px 15px;
 }
 
 .btn:hover,
@@ -5375,10 +5447,24 @@ a:focus .avatar img {
   font-size: 8px;
 }
 
+.tetra-2015 .btn .vicon.btn-icon-before,
+.tetra-2015 .core-form .btn .vicon.btn-icon-before {
+  margin-right: 0;
+  margin-left: -9px;
+  font-size: 7px;
+}
+
 .btn .vicon.btn-icon-after,
 .core-form .btn .vicon.btn-icon-after {
   margin: 0 -7px 0 -2px;
   font-size: 8px;
+}
+
+.tetra-2015 .btn .vicon.btn-icon-after,
+.tetra-2015 .core-form .btn .vicon.btn-icon-after {
+  margin-right: -9px;
+  margin-left: 0;
+  font-size: 7px;
 }
 
 .btn-primary,
@@ -5400,24 +5486,243 @@ a:focus .avatar img {
   *filter: none;
 }
 
-.btn-primary span,
-.btn-secondary span,
-.socialAction span,
-.eventsAction span,
-.core-form .btn-primary span,
-.core-form .btn-secondary span,
-.btn-primary input,
-.btn-secondary input,
-.socialAction input,
-.eventsAction input,
-.core-form .btn-primary input,
-.core-form .btn-secondary input,
-.btn-primary button,
-.btn-secondary button,
-.socialAction button,
-.eventsAction button,
-.core-form .btn-primary button,
-.core-form .btn-secondary button {
+.tetra-2015 .btn-primary,
+.tetra-2015 .btn-secondary,
+.tetra-2015 .socialAction,
+.tetra-2015 .eventsAction,
+.tetra-2015 .core-form .btn-primary,
+.tetra-2015 .core-form .btn-secondary {
+  color: #ffffff;
+  background: #42a2d6;
+  border: 1px solid #42a2d6;
+}
+
+.tetra-2015 .btn-primary > span,
+.tetra-2015 .btn-secondary > span,
+.tetra-2015 .socialAction > span,
+.tetra-2015 .eventsAction > span,
+.tetra-2015 .core-form .btn-primary > span,
+.tetra-2015 .core-form .btn-secondary > span,
+.tetra-2015 .btn-primary > input,
+.tetra-2015 .btn-secondary > input,
+.tetra-2015 .socialAction > input,
+.tetra-2015 .eventsAction > input,
+.tetra-2015 .core-form .btn-primary > input,
+.tetra-2015 .core-form .btn-secondary > input,
+.tetra-2015 .btn-primary > button,
+.tetra-2015 .btn-secondary > button,
+.tetra-2015 .socialAction > button,
+.tetra-2015 .eventsAction > button,
+.tetra-2015 .core-form .btn-primary > button,
+.tetra-2015 .core-form .btn-secondary > button {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-primary .vicon,
+.tetra-2015 .btn-secondary .vicon,
+.tetra-2015 .socialAction .vicon,
+.tetra-2015 .eventsAction .vicon,
+.tetra-2015 .core-form .btn-primary .vicon,
+.tetra-2015 .core-form .btn-secondary .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-primary:hover,
+.tetra-2015 .btn-secondary:hover,
+.tetra-2015 .socialAction:hover,
+.tetra-2015 .eventsAction:hover,
+.tetra-2015 .core-form .btn-primary:hover,
+.tetra-2015 .core-form .btn-secondary:hover,
+.tetra-2015 .btn-primary:focus,
+.tetra-2015 .btn-secondary:focus,
+.tetra-2015 .socialAction:focus,
+.tetra-2015 .eventsAction:focus,
+.tetra-2015 .core-form .btn-primary:focus,
+.tetra-2015 .core-form .btn-secondary:focus {
+  color: #ffffff;
+  background: #2988bc;
+  border-color: #2988bc;
+}
+
+.tetra-2015 .btn-primary:hover .vicon,
+.tetra-2015 .btn-secondary:hover .vicon,
+.tetra-2015 .socialAction:hover .vicon,
+.tetra-2015 .eventsAction:hover .vicon,
+.tetra-2015 .core-form .btn-primary:hover .vicon,
+.tetra-2015 .core-form .btn-secondary:hover .vicon,
+.tetra-2015 .btn-primary:focus .vicon,
+.tetra-2015 .btn-secondary:focus .vicon,
+.tetra-2015 .socialAction:focus .vicon,
+.tetra-2015 .eventsAction:focus .vicon,
+.tetra-2015 .core-form .btn-primary:focus .vicon,
+.tetra-2015 .core-form .btn-secondary:focus .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-primary:active,
+.tetra-2015 .btn-secondary:active,
+.tetra-2015 .socialAction:active,
+.tetra-2015 .eventsAction:active,
+.tetra-2015 .core-form .btn-primary:active,
+.tetra-2015 .core-form .btn-secondary:active {
+  background: #42a2d6;
+}
+
+.tetra-2015 .btn-primary.btn-disabled,
+.tetra-2015 .btn-secondary.btn-disabled,
+.tetra-2015 .socialAction.btn-disabled,
+.tetra-2015 .eventsAction.btn-disabled,
+.tetra-2015 .core-form .btn-primary.btn-disabled,
+.tetra-2015 .core-form .btn-secondary.btn-disabled,
+.tetra-2015 .btn-primary.btn-loading,
+.tetra-2015 .btn-secondary.btn-loading,
+.tetra-2015 .socialAction.btn-loading,
+.tetra-2015 .eventsAction.btn-loading,
+.tetra-2015 .core-form .btn-primary.btn-loading,
+.tetra-2015 .core-form .btn-secondary.btn-loading {
+  color: #206a92;
+  background: #42a2d6;
+  border-color: #42a2d6;
+}
+
+.tetra-2015 .btn-primary.btn-disabled:link,
+.tetra-2015 .btn-secondary.btn-disabled:link,
+.tetra-2015 .socialAction.btn-disabled:link,
+.tetra-2015 .eventsAction.btn-disabled:link,
+.tetra-2015 .core-form .btn-primary.btn-disabled:link,
+.tetra-2015 .core-form .btn-secondary.btn-disabled:link,
+.tetra-2015 .btn-primary.btn-loading:link,
+.tetra-2015 .btn-secondary.btn-loading:link,
+.tetra-2015 .socialAction.btn-loading:link,
+.tetra-2015 .eventsAction.btn-loading:link,
+.tetra-2015 .core-form .btn-primary.btn-loading:link,
+.tetra-2015 .core-form .btn-secondary.btn-loading:link,
+.tetra-2015 .btn-primary.btn-disabled:visited,
+.tetra-2015 .btn-secondary.btn-disabled:visited,
+.tetra-2015 .socialAction.btn-disabled:visited,
+.tetra-2015 .eventsAction.btn-disabled:visited,
+.tetra-2015 .core-form .btn-primary.btn-disabled:visited,
+.tetra-2015 .core-form .btn-secondary.btn-disabled:visited,
+.tetra-2015 .btn-primary.btn-loading:visited,
+.tetra-2015 .btn-secondary.btn-loading:visited,
+.tetra-2015 .socialAction.btn-loading:visited,
+.tetra-2015 .eventsAction.btn-loading:visited,
+.tetra-2015 .core-form .btn-primary.btn-loading:visited,
+.tetra-2015 .core-form .btn-secondary.btn-loading:visited,
+.tetra-2015 .btn-primary.btn-disabled:hover,
+.tetra-2015 .btn-secondary.btn-disabled:hover,
+.tetra-2015 .socialAction.btn-disabled:hover,
+.tetra-2015 .eventsAction.btn-disabled:hover,
+.tetra-2015 .core-form .btn-primary.btn-disabled:hover,
+.tetra-2015 .core-form .btn-secondary.btn-disabled:hover,
+.tetra-2015 .btn-primary.btn-loading:hover,
+.tetra-2015 .btn-secondary.btn-loading:hover,
+.tetra-2015 .socialAction.btn-loading:hover,
+.tetra-2015 .eventsAction.btn-loading:hover,
+.tetra-2015 .core-form .btn-primary.btn-loading:hover,
+.tetra-2015 .core-form .btn-secondary.btn-loading:hover,
+.tetra-2015 .btn-primary.btn-disabled:focus,
+.tetra-2015 .btn-secondary.btn-disabled:focus,
+.tetra-2015 .socialAction.btn-disabled:focus,
+.tetra-2015 .eventsAction.btn-disabled:focus,
+.tetra-2015 .core-form .btn-primary.btn-disabled:focus,
+.tetra-2015 .core-form .btn-secondary.btn-disabled:focus,
+.tetra-2015 .btn-primary.btn-loading:focus,
+.tetra-2015 .btn-secondary.btn-loading:focus,
+.tetra-2015 .socialAction.btn-loading:focus,
+.tetra-2015 .eventsAction.btn-loading:focus,
+.tetra-2015 .core-form .btn-primary.btn-loading:focus,
+.tetra-2015 .core-form .btn-secondary.btn-loading:focus,
+.tetra-2015 .btn-primary.btn-disabled:active,
+.tetra-2015 .btn-secondary.btn-disabled:active,
+.tetra-2015 .socialAction.btn-disabled:active,
+.tetra-2015 .eventsAction.btn-disabled:active,
+.tetra-2015 .core-form .btn-primary.btn-disabled:active,
+.tetra-2015 .core-form .btn-secondary.btn-disabled:active,
+.tetra-2015 .btn-primary.btn-loading:active,
+.tetra-2015 .btn-secondary.btn-loading:active,
+.tetra-2015 .socialAction.btn-loading:active,
+.tetra-2015 .eventsAction.btn-loading:active,
+.tetra-2015 .core-form .btn-primary.btn-loading:active,
+.tetra-2015 .core-form .btn-secondary.btn-loading:active,
+.tetra-2015 .btn-primary.btn-disabled span,
+.tetra-2015 .btn-secondary.btn-disabled span,
+.tetra-2015 .socialAction.btn-disabled span,
+.tetra-2015 .eventsAction.btn-disabled span,
+.tetra-2015 .core-form .btn-primary.btn-disabled span,
+.tetra-2015 .core-form .btn-secondary.btn-disabled span,
+.tetra-2015 .btn-primary.btn-loading span,
+.tetra-2015 .btn-secondary.btn-loading span,
+.tetra-2015 .socialAction.btn-loading span,
+.tetra-2015 .eventsAction.btn-loading span,
+.tetra-2015 .core-form .btn-primary.btn-loading span,
+.tetra-2015 .core-form .btn-secondary.btn-loading span {
+  color: #206a92;
+  background-color: #42a2d6;
+  background-image: none;
+  border-color: #42a2d6;
+}
+
+.tetra-2015 .btn-primary.btn-disabled .vicon,
+.tetra-2015 .btn-secondary.btn-disabled .vicon,
+.tetra-2015 .socialAction.btn-disabled .vicon,
+.tetra-2015 .eventsAction.btn-disabled .vicon,
+.tetra-2015 .core-form .btn-primary.btn-disabled .vicon,
+.tetra-2015 .core-form .btn-secondary.btn-disabled .vicon,
+.tetra-2015 .btn-primary.btn-loading .vicon,
+.tetra-2015 .btn-secondary.btn-loading .vicon,
+.tetra-2015 .socialAction.btn-loading .vicon,
+.tetra-2015 .eventsAction.btn-loading .vicon,
+.tetra-2015 .core-form .btn-primary.btn-loading .vicon,
+.tetra-2015 .core-form .btn-secondary.btn-loading .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-primary.btn-loading span,
+.tetra-2015 .btn-secondary.btn-loading span,
+.tetra-2015 .socialAction.btn-loading span,
+.tetra-2015 .eventsAction.btn-loading span,
+.tetra-2015 .core-form .btn-primary.btn-loading span,
+.tetra-2015 .core-form .btn-secondary.btn-loading span,
+.tetra-2015 .btn-primary.btn-loading:hover span,
+.tetra-2015 .btn-secondary.btn-loading:hover span,
+.tetra-2015 .socialAction.btn-loading:hover span,
+.tetra-2015 .eventsAction.btn-loading:hover span,
+.tetra-2015 .core-form .btn-primary.btn-loading:hover span,
+.tetra-2015 .core-form .btn-secondary.btn-loading:hover span,
+.tetra-2015 .btn-primary.btn-loading:focus span,
+.tetra-2015 .btn-secondary.btn-loading:focus span,
+.tetra-2015 .socialAction.btn-loading:focus span,
+.tetra-2015 .eventsAction.btn-loading:focus span,
+.tetra-2015 .core-form .btn-primary.btn-loading:focus span,
+.tetra-2015 .core-form .btn-secondary.btn-loading:focus span,
+.tetra-2015 .btn-primary.btn-loading:active span,
+.tetra-2015 .btn-secondary.btn-loading:active span,
+.tetra-2015 .socialAction.btn-loading:active span,
+.tetra-2015 .eventsAction.btn-loading:active span,
+.tetra-2015 .core-form .btn-primary.btn-loading:active span,
+.tetra-2015 .core-form .btn-secondary.btn-loading:active span {
+  background-image: url("/v_img/coreui/buttons/loaders/default.gif");
+}
+
+.btn-primary > span,
+.btn-secondary > span,
+.socialAction > span,
+.eventsAction > span,
+.core-form .btn-primary > span,
+.core-form .btn-secondary > span,
+.btn-primary > input,
+.btn-secondary > input,
+.socialAction > input,
+.eventsAction > input,
+.core-form .btn-primary > input,
+.core-form .btn-secondary > input,
+.btn-primary > button,
+.btn-secondary > button,
+.socialAction > button,
+.eventsAction > button,
+.core-form .btn-primary > button,
+.core-form .btn-secondary > button {
   color: #2e2e2e;
 }
 
@@ -5648,22 +5953,151 @@ a:focus .avatar img {
   *filter: none;
 }
 
-.btn-default span,
-.secEventsAction span,
-.core-form .btn-default span,
-.btn-default input,
-.secEventsAction input,
-.core-form .btn-default input,
-.btn-default button,
-.secEventsAction button,
-.core-form .btn-default button {
+.tetra-2015 .btn-default,
+.tetra-2015 .secEventsAction,
+.tetra-2015 .core-form .btn-default {
+  color: #ffffff;
+  background: #87868c;
+  border: 1px solid #87868c;
+}
+
+.tetra-2015 .btn-default > span,
+.tetra-2015 .secEventsAction > span,
+.tetra-2015 .core-form .btn-default > span,
+.tetra-2015 .btn-default > input,
+.tetra-2015 .secEventsAction > input,
+.tetra-2015 .core-form .btn-default > input,
+.tetra-2015 .btn-default > button,
+.tetra-2015 .secEventsAction > button,
+.tetra-2015 .core-form .btn-default > button {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-default .vicon,
+.tetra-2015 .secEventsAction .vicon,
+.tetra-2015 .core-form .btn-default .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-default:hover,
+.tetra-2015 .secEventsAction:hover,
+.tetra-2015 .core-form .btn-default:hover,
+.tetra-2015 .btn-default:focus,
+.tetra-2015 .secEventsAction:focus,
+.tetra-2015 .core-form .btn-default:focus {
+  color: #ffffff;
+  background: #6e6d72;
+  border-color: #6e6d72;
+}
+
+.tetra-2015 .btn-default:hover .vicon,
+.tetra-2015 .secEventsAction:hover .vicon,
+.tetra-2015 .core-form .btn-default:hover .vicon,
+.tetra-2015 .btn-default:focus .vicon,
+.tetra-2015 .secEventsAction:focus .vicon,
+.tetra-2015 .core-form .btn-default:focus .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-default:active,
+.tetra-2015 .secEventsAction:active,
+.tetra-2015 .core-form .btn-default:active {
+  background: #87868c;
+}
+
+.tetra-2015 .btn-default.btn-disabled,
+.tetra-2015 .secEventsAction.btn-disabled,
+.tetra-2015 .core-form .btn-default.btn-disabled,
+.tetra-2015 .btn-default.btn-loading,
+.tetra-2015 .secEventsAction.btn-loading,
+.tetra-2015 .core-form .btn-default.btn-loading {
+  color: #555458;
+  background: #87868c;
+  border-color: #87868c;
+}
+
+.tetra-2015 .btn-default.btn-disabled:link,
+.tetra-2015 .secEventsAction.btn-disabled:link,
+.tetra-2015 .core-form .btn-default.btn-disabled:link,
+.tetra-2015 .btn-default.btn-loading:link,
+.tetra-2015 .secEventsAction.btn-loading:link,
+.tetra-2015 .core-form .btn-default.btn-loading:link,
+.tetra-2015 .btn-default.btn-disabled:visited,
+.tetra-2015 .secEventsAction.btn-disabled:visited,
+.tetra-2015 .core-form .btn-default.btn-disabled:visited,
+.tetra-2015 .btn-default.btn-loading:visited,
+.tetra-2015 .secEventsAction.btn-loading:visited,
+.tetra-2015 .core-form .btn-default.btn-loading:visited,
+.tetra-2015 .btn-default.btn-disabled:hover,
+.tetra-2015 .secEventsAction.btn-disabled:hover,
+.tetra-2015 .core-form .btn-default.btn-disabled:hover,
+.tetra-2015 .btn-default.btn-loading:hover,
+.tetra-2015 .secEventsAction.btn-loading:hover,
+.tetra-2015 .core-form .btn-default.btn-loading:hover,
+.tetra-2015 .btn-default.btn-disabled:focus,
+.tetra-2015 .secEventsAction.btn-disabled:focus,
+.tetra-2015 .core-form .btn-default.btn-disabled:focus,
+.tetra-2015 .btn-default.btn-loading:focus,
+.tetra-2015 .secEventsAction.btn-loading:focus,
+.tetra-2015 .core-form .btn-default.btn-loading:focus,
+.tetra-2015 .btn-default.btn-disabled:active,
+.tetra-2015 .secEventsAction.btn-disabled:active,
+.tetra-2015 .core-form .btn-default.btn-disabled:active,
+.tetra-2015 .btn-default.btn-loading:active,
+.tetra-2015 .secEventsAction.btn-loading:active,
+.tetra-2015 .core-form .btn-default.btn-loading:active,
+.tetra-2015 .btn-default.btn-disabled span,
+.tetra-2015 .secEventsAction.btn-disabled span,
+.tetra-2015 .core-form .btn-default.btn-disabled span,
+.tetra-2015 .btn-default.btn-loading span,
+.tetra-2015 .secEventsAction.btn-loading span,
+.tetra-2015 .core-form .btn-default.btn-loading span {
+  color: #555458;
+  background-color: #87868c;
+  background-image: none;
+  border-color: #87868c;
+}
+
+.tetra-2015 .btn-default.btn-disabled .vicon,
+.tetra-2015 .secEventsAction.btn-disabled .vicon,
+.tetra-2015 .core-form .btn-default.btn-disabled .vicon,
+.tetra-2015 .btn-default.btn-loading .vicon,
+.tetra-2015 .secEventsAction.btn-loading .vicon,
+.tetra-2015 .core-form .btn-default.btn-loading .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-default.btn-loading span,
+.tetra-2015 .secEventsAction.btn-loading span,
+.tetra-2015 .core-form .btn-default.btn-loading span,
+.tetra-2015 .btn-default.btn-loading:hover span,
+.tetra-2015 .secEventsAction.btn-loading:hover span,
+.tetra-2015 .core-form .btn-default.btn-loading:hover span,
+.tetra-2015 .btn-default.btn-loading:focus span,
+.tetra-2015 .secEventsAction.btn-loading:focus span,
+.tetra-2015 .core-form .btn-default.btn-loading:focus span,
+.tetra-2015 .btn-default.btn-loading:active span,
+.tetra-2015 .secEventsAction.btn-loading:active span,
+.tetra-2015 .core-form .btn-default.btn-loading:active span {
+  background-image: url("/v_img/coreui/buttons/loaders/default.gif");
+}
+
+.btn-default > span,
+.secEventsAction > span,
+.core-form .btn-default > span,
+.btn-default > input,
+.secEventsAction > input,
+.core-form .btn-default > input,
+.btn-default > button,
+.secEventsAction > button,
+.core-form .btn-default > button {
   color: #2e2e2e;
 }
 
 .btn-default .vicon,
 .secEventsAction .vicon,
 .core-form .btn-default .vicon {
-  color: #808080;
+  color: #87868c;
 }
 
 .btn-default:hover,
@@ -5806,9 +6240,78 @@ a:focus .avatar img {
   *filter: none;
 }
 
-.btn-tertiary span,
-.btn-tertiary input,
-.btn-tertiary button {
+.tetra-2015 .btn-tertiary {
+  color: #ffffff;
+  background: #53c1af;
+  border: 1px solid #53c1af;
+}
+
+.tetra-2015 .btn-tertiary > span,
+.tetra-2015 .btn-tertiary > input,
+.tetra-2015 .btn-tertiary > button {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-tertiary .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-tertiary:hover,
+.tetra-2015 .btn-tertiary:focus {
+  color: #ffffff;
+  background: #3ca594;
+  border-color: #3ca594;
+}
+
+.tetra-2015 .btn-tertiary:hover .vicon,
+.tetra-2015 .btn-tertiary:focus .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-tertiary:active {
+  background: #53c1af;
+}
+
+.tetra-2015 .btn-tertiary.btn-disabled,
+.tetra-2015 .btn-tertiary.btn-loading {
+  color: #2e8073;
+  background: #53c1af;
+  border-color: #53c1af;
+}
+
+.tetra-2015 .btn-tertiary.btn-disabled:link,
+.tetra-2015 .btn-tertiary.btn-loading:link,
+.tetra-2015 .btn-tertiary.btn-disabled:visited,
+.tetra-2015 .btn-tertiary.btn-loading:visited,
+.tetra-2015 .btn-tertiary.btn-disabled:hover,
+.tetra-2015 .btn-tertiary.btn-loading:hover,
+.tetra-2015 .btn-tertiary.btn-disabled:focus,
+.tetra-2015 .btn-tertiary.btn-loading:focus,
+.tetra-2015 .btn-tertiary.btn-disabled:active,
+.tetra-2015 .btn-tertiary.btn-loading:active,
+.tetra-2015 .btn-tertiary.btn-disabled span,
+.tetra-2015 .btn-tertiary.btn-loading span {
+  color: #2e8073;
+  background-color: #53c1af;
+  background-image: none;
+  border-color: #53c1af;
+}
+
+.tetra-2015 .btn-tertiary.btn-disabled .vicon,
+.tetra-2015 .btn-tertiary.btn-loading .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-tertiary.btn-loading span,
+.tetra-2015 .btn-tertiary.btn-loading:hover span,
+.tetra-2015 .btn-tertiary.btn-loading:focus span,
+.tetra-2015 .btn-tertiary.btn-loading:active span {
+  background-image: url("/v_img/coreui/buttons/loaders/default.gif");
+}
+
+.btn-tertiary > span,
+.btn-tertiary > input,
+.btn-tertiary > button {
   color: #ffffff;
 }
 
@@ -5897,6 +6400,11 @@ a:focus .avatar img {
   border-radius: 3px;
 }
 
+.tetra-2015 .btn-small,
+.tetra-2015 .core-form .btn-small {
+  padding: 1px 10px;
+}
+
 .btn-small .global-icon,
 .core-form .btn-small .global-icon {
   margin: -1px 0;
@@ -5909,6 +6417,11 @@ a:focus .avatar img {
   border-radius: 3px;
 }
 
+.tetra-2015 .btn-large,
+.tetra-2015 .core-form .btn-large {
+  padding: 7px 15px;
+}
+
 .btn-lead,
 .core-form .btn-lead {
   position: relative;
@@ -5916,6 +6429,12 @@ a:focus .avatar img {
   padding: 15px 60px;
   margin: 6px;
   font-size: 15px;
+}
+
+.tetra-2015 .btn-lead,
+.tetra-2015 .core-form .btn-lead {
+  padding: 15px;
+  font-size: 16px;
 }
 
 .btn-lead:before,
@@ -5931,6 +6450,16 @@ a:focus .avatar img {
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.1) inset;
 }
 
+.tetra-2015 .btn-lead,
+.tetra-2015 .core-form .btn-lead {
+  margin: 0;
+}
+
+.tetra-2015 .btn-lead:before,
+.tetra-2015 .core-form .btn-lead:before {
+  display: none;
+}
+
 .btn-desc {
   display: inline-block;
   *display: inline;
@@ -5939,7 +6468,7 @@ a:focus .avatar img {
 
 .btn-desc dt {
   font-size: 10.8px;
-  color: #808080;
+  color: #87868c;
   text-align: center;
 }
 
@@ -5990,6 +6519,10 @@ a:focus .avatar img {
   *filter: none;
 }
 
+.tetra-2015 .btn-icon {
+  padding: 10px 4px 6px;
+}
+
 .btn-icon:hover,
 .btn-icon:focus {
   background-color: #ffc906;
@@ -6007,6 +6540,213 @@ a:focus .avatar img {
 .btn-icon:hover .vicon,
 .btn-icon:focus .vicon {
   color: #404040;
+}
+
+.tetra-2015 .btn-icon {
+  color: #ffffff;
+  background: #87868c;
+  border: 1px solid #87868c;
+}
+
+.tetra-2015 .btn-icon > span,
+.tetra-2015 .btn-icon > input,
+.tetra-2015 .btn-icon > button {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon:hover,
+.tetra-2015 .btn-icon:focus {
+  color: #ffffff;
+  background: #6e6d72;
+  border-color: #6e6d72;
+}
+
+.tetra-2015 .btn-icon:hover .vicon,
+.tetra-2015 .btn-icon:focus .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon:active {
+  background: #87868c;
+}
+
+.tetra-2015 .btn-icon.btn-disabled,
+.tetra-2015 .btn-icon.btn-loading {
+  color: #555458;
+  background: #87868c;
+  border-color: #87868c;
+}
+
+.tetra-2015 .btn-icon.btn-disabled:link,
+.tetra-2015 .btn-icon.btn-loading:link,
+.tetra-2015 .btn-icon.btn-disabled:visited,
+.tetra-2015 .btn-icon.btn-loading:visited,
+.tetra-2015 .btn-icon.btn-disabled:hover,
+.tetra-2015 .btn-icon.btn-loading:hover,
+.tetra-2015 .btn-icon.btn-disabled:focus,
+.tetra-2015 .btn-icon.btn-loading:focus,
+.tetra-2015 .btn-icon.btn-disabled:active,
+.tetra-2015 .btn-icon.btn-loading:active,
+.tetra-2015 .btn-icon.btn-disabled span,
+.tetra-2015 .btn-icon.btn-loading span {
+  color: #555458;
+  background-color: #87868c;
+  background-image: none;
+  border-color: #87868c;
+}
+
+.tetra-2015 .btn-icon.btn-disabled .vicon,
+.tetra-2015 .btn-icon.btn-loading .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-loading span,
+.tetra-2015 .btn-icon.btn-loading:hover span,
+.tetra-2015 .btn-icon.btn-loading:focus span,
+.tetra-2015 .btn-icon.btn-loading:active span {
+  background-image: url("/v_img/coreui/buttons/loaders/default.gif");
+}
+
+.tetra-2015 .btn-icon.btn-primary {
+  color: #ffffff;
+  background: #42a2d6;
+  border: 1px solid #42a2d6;
+}
+
+.tetra-2015 .btn-icon.btn-primary > span,
+.tetra-2015 .btn-icon.btn-primary > input,
+.tetra-2015 .btn-icon.btn-primary > button {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-primary .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-primary:hover,
+.tetra-2015 .btn-icon.btn-primary:focus {
+  color: #ffffff;
+  background: #2988bc;
+  border-color: #2988bc;
+}
+
+.tetra-2015 .btn-icon.btn-primary:hover .vicon,
+.tetra-2015 .btn-icon.btn-primary:focus .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-primary:active {
+  background: #42a2d6;
+}
+
+.tetra-2015 .btn-icon.btn-primary.btn-disabled,
+.tetra-2015 .btn-icon.btn-primary.btn-loading {
+  color: #206a92;
+  background: #42a2d6;
+  border-color: #42a2d6;
+}
+
+.tetra-2015 .btn-icon.btn-primary.btn-disabled:link,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:link,
+.tetra-2015 .btn-icon.btn-primary.btn-disabled:visited,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:visited,
+.tetra-2015 .btn-icon.btn-primary.btn-disabled:hover,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:hover,
+.tetra-2015 .btn-icon.btn-primary.btn-disabled:focus,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:focus,
+.tetra-2015 .btn-icon.btn-primary.btn-disabled:active,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:active,
+.tetra-2015 .btn-icon.btn-primary.btn-disabled span,
+.tetra-2015 .btn-icon.btn-primary.btn-loading span {
+  color: #206a92;
+  background-color: #42a2d6;
+  background-image: none;
+  border-color: #42a2d6;
+}
+
+.tetra-2015 .btn-icon.btn-primary.btn-disabled .vicon,
+.tetra-2015 .btn-icon.btn-primary.btn-loading .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-primary.btn-loading span,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:hover span,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:focus span,
+.tetra-2015 .btn-icon.btn-primary.btn-loading:active span {
+  background-image: url("/v_img/coreui/buttons/loaders/default.gif");
+}
+
+.tetra-2015 .btn-icon.btn-tertiary {
+  color: #ffffff;
+  background: #53c1af;
+  border: 1px solid #53c1af;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary > span,
+.tetra-2015 .btn-icon.btn-tertiary > input,
+.tetra-2015 .btn-icon.btn-tertiary > button {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary:hover,
+.tetra-2015 .btn-icon.btn-tertiary:focus {
+  color: #ffffff;
+  background: #3ca594;
+  border-color: #3ca594;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary:hover .vicon,
+.tetra-2015 .btn-icon.btn-tertiary:focus .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary:active {
+  background: #53c1af;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading {
+  color: #2e8073;
+  background: #53c1af;
+  border-color: #53c1af;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:link,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:link,
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:visited,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:visited,
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:hover,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:hover,
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:focus,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:focus,
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:active,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:active,
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled span,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading span {
+  color: #2e8073;
+  background-color: #53c1af;
+  background-image: none;
+  border-color: #53c1af;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary.btn-disabled .vicon,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading .vicon {
+  color: #ffffff;
+}
+
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading span,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:hover span,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:focus span,
+.tetra-2015 .btn-icon.btn-tertiary.btn-loading:active span {
+  background-image: url("/v_img/coreui/buttons/loaders/default.gif");
 }
 
 .btn-icon .vicon {
@@ -6036,7 +6776,7 @@ a:focus .avatar img {
 }
 
 .btn-link {
-  color: #007de3;
+  color: #42a2d6;
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
@@ -6046,7 +6786,7 @@ a:focus .avatar img {
 
 .btn-link:hover,
 .btn-link:focus {
-  color: #0071cc;
+  color: #2988bc;
   text-decoration: underline;
   box-shadow: none;
 }
@@ -6054,12 +6794,12 @@ a:focus .avatar img {
 .btn-pagination {
   padding: 6px 13px 6px 13px;
   font-size: 15px;
-  color: #404040;
+  color: #4a494d;
   background: transparent;
 }
 
 .btn-pagination .vicon {
-  color: #404040;
+  color: #4a494d;
 }
 
 .btn-pagination .vicon.btn-icon-after,
@@ -6079,7 +6819,7 @@ a:focus .avatar img {
 .btn-pagination:hover,
 .btn-pagination:focus {
   color: #ffffff;
-  background: #3397e9;
+  background: #68b5de;
   box-shadow: none;
 }
 
@@ -6089,7 +6829,7 @@ a:focus .avatar img {
 }
 
 .btn-pagination:active {
-  background: #007de3;
+  background: #42a2d6;
 }
 
 .dd {
@@ -6168,7 +6908,7 @@ a:focus .avatar img {
 .dd .dd-menu .dd-item .label {
   padding: 3px 8px;
   margin: 2px -4px;
-  color: #404040;
+  color: #4a494d;
   white-space: nowrap;
 }
 
@@ -6305,7 +7045,7 @@ a:focus .avatar img {
   padding: 17px 28px;
   padding-right: 60px;
   color: #ffffff;
-  background: #333333;
+  background: #4a494d;
   border-radius: 6px 6px 0 0;
   zoom: 1;
 }
@@ -6339,10 +7079,10 @@ a:focus .avatar img {
   right: 0;
   bottom: 0;
   padding: 0 12px;
-  line-height: 4.4em;
+  line-height: 4.2em;
   color: #999999;
   text-decoration: none;
-  background: #262626;
+  background: #313033;
   border-top-right-radius: 6px;
 }
 
@@ -6365,7 +7105,7 @@ a:focus .avatar img {
 }
 
 .popin-container .popin .popin-header .close:hover {
-  background: #000000;
+  background: #242426;
 }
 
 .popin-container .popin .popin-header .close:hover span {
@@ -6590,7 +7330,7 @@ a:focus .avatar img {
   padding-right: 10px;
   padding-bottom: 0;
   padding-left: 0;
-  color: #808080;
+  color: #87868c;
 }
 
 .nav li.side-links a .vicon {
@@ -6601,7 +7341,7 @@ a:focus .avatar img {
 
 .nav li.side-links a:hover,
 .nav li.side-links a:focus {
-  color: #0071cc;
+  color: #2988bc;
   text-decoration: underline;
   background: none;
 }
@@ -6746,7 +7486,7 @@ a:focus .avatar img {
 
 .nav-menu li a:hover,
 .nav-menu li a:focus {
-  color: #0071cc;
+  color: #2988bc;
   background: #f7f7f7;
 }
 
@@ -6791,7 +7531,7 @@ a:focus .avatar img {
   float: left;
   padding: 0 10px;
   line-height: 22px;
-  color: #bfbfbf;
+  color: #c5c3c7;
   text-decoration: none;
   cursor: pointer;
   background-color: #d9d9d9;
@@ -6857,7 +7597,7 @@ a:focus .avatar img {
 .btncontainer .btn-no .lnk-yes:hover,
 .btncontainer .btn-yes .lnk-no:focus,
 .btncontainer .btn-no .lnk-yes:focus {
-  color: #404040;
+  color: #4a494d;
   background-color: #d9d9d9;
   background-image: -moz-linear-gradient(top, #f2f2f2, #d9d9d9);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d9d9d9));
@@ -6876,7 +7616,7 @@ a:focus .avatar img {
 }
 
 .btncontainer .lbl .lbl-no {
-  color: #808080;
+  color: #87868c;
 }
 
 .autocomplete {
@@ -6942,7 +7682,7 @@ a:focus .avatar img {
   min-width: 29px;
   padding: 6px 0;
   font-size: 15px;
-  color: #404040;
+  color: #4a494d;
   text-align: center;
   text-decoration: none;
   background: transparent;
@@ -6952,7 +7692,7 @@ a:focus .avatar img {
 .paginator li a:hover,
 .paginator li a:focus {
   color: #ffffff;
-  background: #3397e9;
+  background: #68b5de;
 }
 
 .paginator li a:hover .vicon,
@@ -6961,7 +7701,7 @@ a:focus .avatar img {
 }
 
 .paginator li a:active {
-  background: #007de3;
+  background: #42a2d6;
 }
 
 .paginator li a.btn-pagination {
@@ -6976,13 +7716,13 @@ a:focus .avatar img {
 }
 
 .paginator li.disabled a {
-  color: #bfbfbf;
+  color: #c5c3c7;
   cursor: default;
   background: transparent;
 }
 
 .paginator li.disabled a .vicon {
-  color: #bfbfbf;
+  color: #c5c3c7;
 }
 
 .paginator li.ellipsis span {
@@ -6993,7 +7733,7 @@ a:focus .avatar img {
 .paginator li.active a {
   color: inherit;
   cursor: default;
-  background: #bfbfbf;
+  background: #c5c3c7;
 }
 
 .paginator-multi li {
@@ -7077,7 +7817,7 @@ a:focus .avatar img {
 .paginator-multi .multi ul li a.active,
 .paginator-multi .multi ul li a:hover,
 .paginator-multi .multi ul li a:focus {
-  background: #3397e9;
+  background: #68b5de;
 }
 
 .paginator-multi .multi ul li a.active {
@@ -7352,6 +8092,35 @@ a:focus .avatar img {
   margin-left: -22px;
 }
 
+.tetra-2015 .bx {
+  border: 1px solid #dddee0;
+  border-width: 1px 1px 2px 1px;
+  box-shadow: none;
+}
+
+.tetra-2015 .bx.bx-default {
+  border: 1px solid #dddee0;
+  border-width: 1px 1px 2px 1px;
+}
+
+.tetra-2015 .bx .bx-close {
+  top: -15px;
+  left: 15px;
+}
+
+.tetra-2015 .bx .bx-close .vicon {
+  color: #c5c3c7;
+}
+
+.tetra-2015 .bx .bx-close:hover .vicon,
+.tetra-2015 .bx .bx-close:focus .vicon {
+  color: #87868c;
+}
+
+.tetra-2015 .bx .bx-aside .h-bx {
+  border-bottom-color: #dddee0;
+}
+
 .bx {
   padding: 20px;
   margin-bottom: 20px;
@@ -7432,7 +8201,7 @@ a:focus .avatar img {
 }
 
 .bx-alert a.btn {
-  color: #262626;
+  color: #2a2a2a;
   text-decoration: none;
 }
 
@@ -7487,7 +8256,7 @@ a:focus .avatar img {
 }
 
 .bx-alert-warning {
-  color: #262626;
+  color: #2a2a2a;
   background-color: #fff2bc;
   background-image: -moz-linear-gradient(top, #fff7d2, #fff2bc);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff7d2), color-stop(100%, #fff2bc));
@@ -7500,7 +8269,7 @@ a:focus .avatar img {
 }
 
 .bx-alert-warning a {
-  color: #262626;
+  color: #2a2a2a;
 }
 
 .bx-alert-warning .bx-alert-icon {
@@ -7805,7 +8574,7 @@ a:focus .avatar img {
 }
 
 .growl-type-warning {
-  color: #262626;
+  color: #2a2a2a;
   background-color: #fff2bc;
   background-image: -moz-linear-gradient(top, #fff7d2, #fff2bc);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff7d2), color-stop(100%, #fff2bc));
@@ -7818,7 +8587,7 @@ a:focus .avatar img {
 }
 
 .growl-type-warning a {
-  color: #262626;
+  color: #2a2a2a;
 }
 
 .growl-type-warning .growl-icon {
@@ -7930,14 +8699,14 @@ a:focus .avatar img {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   font-weight: normal;
-  color: #808080;
+  color: #87868c;
 }
 
 .rc-card .previously dt {
   float: left;
   margin-right: 0.5em;
   clear: left;
-  color: #404040;
+  color: #4a494d;
 }
 
 .rc-card-l .rc-card-header .name {

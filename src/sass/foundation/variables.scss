@@ -9,6 +9,7 @@ $img-loaders-dir: "/v_img/profilev2" !default;
 $fonts-dir: "/css/core/fonts" !default;
 $fonts-version: "1418225492" !default;
 $font-stack: "Arial", sans-serif !default;
+$font-stack_revamp: "Open Sans", "Arial", sans-serif !default;
 
 // Right To Left mode (arabic)
 $rtl: false !default;
@@ -72,7 +73,7 @@ $green:             #829b13 !default;
 $yellow:            #ffd520 !default;
 $orange:            $orange1 !default;
 
-$blue:              #007de3 !default;
+$blue:              #42a2d6 !default;
 $blueSoft:          #83a0b9 !default;
 $blueDarker:        darken($blue, 20%) !default;
 $blueDark:          darken($blue, 10%) !default;
@@ -86,6 +87,11 @@ $panelBorderDarker: mix(#ffffff, $blueSoft, 42%) !default;
 $overlayBorder:     mix(#000000, $blueSoft, 70%) !default;
 
 $premiumColor: #feae35 !default;
+$highlightColor:    #F4F2CA !default;
+
+// Link colors
+$linkColor:         $blue !default;
+$linkColorHover:    darken($linkColor, 10%) !default;
 
 // Button Colors
 $buttonPrimaryBgColor:     #ffd724 !default;
@@ -105,11 +111,28 @@ $buttonTerHoverColor:      darken($green2, 3%) !default;
 $buttonTerBorderColor:     $green2 !default;
 $buttonTerTextColor:       $white !default;
 
-$highlightColor:    #F4F2CA !default;
+// Button Colors : revamp
+$buttonColor_revamp: $white !default;
 
-// Link colors
-$linkColor:         #42a2d6 !default;
-$linkColorHover:    #2479a7 !default;
+$buttonPrimaryBgColor_revamp:     $blue !default;
+$buttonPrimaryEndColor_revamp:    $blue !default;
+$buttonPrimaryHoverColor_revamp:  darken($blue, 10%) !default;
+$buttonPrimaryBorderColor_revamp: $blue !default;
+$buttonPrimaryTextColor_revamp:   $buttonColor_revamp !default;
+$buttonPrimaryDisabledTextColor_revamp:   darken($blue, 20%) !default;
+
+$buttonDefaultBgColor_revamp:     $gray !default;
+$buttonDefaultEndColor_revamp:    $gray !default;
+$buttonDefaultHoverColor_revamp:  darken($gray, 10%) !default;
+$buttonDefaultBorderColor_revamp: $gray !default;
+$buttonDefaultTextColor_revamp:   $buttonColor_revamp !default;
+$buttonDefaultDisabledTextColor_revamp:   darken($gray, 20%) !default;
+
+$buttonTerBgColor_revamp:         $green3 !default;
+$buttonTerHoverColor_revamp:      darken($green3, 10%) !default;
+$buttonTerBorderColor_revamp:     $green3 !default;
+$buttonTerTextColor_revamp:       $buttonColor_revamp !default;
+$buttonTerDisabledTextColor_revamp:   darken($green3, 20%) !default;
 
 // Typography
 $baseFontSize:      12px !default;
@@ -124,6 +147,9 @@ $borderRadiusS: 3px !default;
 $borderRadiusMS: 5px !default;
 $borderRadiusM: 6px !default;
 $borderRadiusL: 10px !default;
+
+// Box
+$BorderBoxColor: #dddee0 !default;
 
 // Forms
 $inputBackground:	$white !default;

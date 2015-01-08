@@ -1240,7 +1240,7 @@ Paragraphs</p>
       <div class="gu gu-1of6 gu-s-1of1">
         <div class="bg bg-grayDark">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@grayDark: <span class="hljs-hexcolor">#404040</span>;</span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@grayDark: <span class="hljs-hexcolor">#4a494d</span>;</span></code></pre>
 
         
       </div>
@@ -1248,7 +1248,7 @@ Paragraphs</p>
       <div class="gu gu-1of6 gu-s-1of1">
         <div class="bg bg-gray">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@gray: <span class="hljs-hexcolor">#808080</span>;</span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@gray: <span class="hljs-hexcolor">#87868c</span>;</span></code></pre>
 
         
       </div>
@@ -1256,7 +1256,7 @@ Paragraphs</p>
       <div class="gu gu-1of6 gu-s-1of1">
         <div class="bg bg-grayLight">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@grayLight: <span class="hljs-hexcolor">#bfbfbf</span>;</span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@grayLight: <span class="hljs-hexcolor">#c5c3c7</span>;</span></code></pre>
 
         
       </div>
@@ -1264,7 +1264,7 @@ Paragraphs</p>
       <div class="gu gu-1of6 gu-s-1of1">
         <div class="bg bg-grayLighter">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@grayLighter: <span class="hljs-hexcolor">#e6e6e6</span>;</span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@grayLighter: <span class="hljs-hexcolor">#d9d8dd</span>;</span></code></pre>
 
         
       </div>
@@ -1289,7 +1289,7 @@ Paragraphs</p>
       <div class="gu gu-1of5 gu-s-1of1">
         <div class="bg bg-baseFontColor">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@baseFontColor: <span class="hljs-hexcolor">#262626</span></span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@baseFontColor: <span class="hljs-hexcolor">#2a2a2a</span></span></code></pre>
 
         
       </div>
@@ -1305,7 +1305,7 @@ Paragraphs</p>
       <div class="gu gu-1of5 gu-s-1of1">
         <div class="bg bg-linkColor">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@linkColor: <span class="hljs-hexcolor">#007de3</span>;</span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@linkColor: <span class="hljs-hexcolor">#42a2d6</span>;</span></code></pre>
 
         
       </div>
@@ -1313,7 +1313,7 @@ Paragraphs</p>
       <div class="gu gu-1of5 gu-s-1of1">
         <div class="bg bg-linkColorHover">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@linkColorHover: <span class="hljs-hexcolor">#0071cc</span>;</span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@linkColorHover: <span class="hljs-hexcolor">#2479a7</span>;</span></code></pre>
 
         
       </div>
@@ -1391,7 +1391,7 @@ Paragraphs</p>
       <div class="gu gu-1of3 gu-s-1of1">
         <div class="bg bg-premiumColor">
         </div>
-        <pre><code class="language-scss"><span class="hljs-at_rule">@premiumColor: <span class="hljs-hexcolor">#ffbb12</span>;</span></code></pre>
+        <pre><code class="language-scss"><span class="hljs-at_rule">@premiumColor: <span class="hljs-hexcolor">#feae35</span>;</span></code></pre>
 
         
       </div>
@@ -1734,12 +1734,12 @@ Paragraphs</p>
   <div class="gu gu-1of3 gu-m-1of1">
 
     <div class="bx">
-      <h2 class="h-bx h-bx-normal">
+      <h2 class="h-bx">
       <a class="h-bx-link tooltip tooltip-left" href="">
         <i class="vicon">c</i>
         <span class="tooltip-content">Settings</span>
       </a>
-      Box title with default font
+      Box title <small>with subtitle</small>
       </h2>
       Box content
     </div>
@@ -3004,6 +3004,8 @@ These custom radio buttons are pure CSS3, no JavaScript required.</p>
   <div class="gu gu-1of1 gu-m-1of1">
     <a class="btn btn-default btn-small mbs mrl">Small</a>
     <a class="btn btn-default mbs mrl">Default</a>
+    <a class="btn btn-default mbs mrl"><span class="vicon vicon-plus btn-icon-before"></span>before</a>
+    <a class="btn btn-default mbs mrl">after<span class="vicon vicon-plus btn-icon-after"></span></a>
     <a class="btn btn-default btn-loading mbs mrl"><span>Loading</span></a>
     <a class="btn btn-default btn-disabled mbs mrl">Disable</a>
     <a class="btn btn-default btn-large mbs mrl">Large</a>
@@ -3027,6 +3029,16 @@ These custom radio buttons are pure CSS3, no JavaScript required.</p>
 <span class="hljs-comment">&lt;!-- The default btn. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-default mbs mrl"</span>&gt;</span>
   Default
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Add classname 'btn-icon-before' to prepend the icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-default mbs mrl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon vicon-plus btn-icon-before"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  preprend icon
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Add classname 'btn-icon-after' to append the icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-default mbs mrl"</span>&gt;</span>
+  append icon
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon vicon-plus btn-icon-after"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- Add &lt;span&gt; inside the btn-loading to preserve the width of the button --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-default btn-loading"</span>&gt;</span>
@@ -3061,6 +3073,8 @@ These custom radio buttons are pure CSS3, no JavaScript required.</p>
   <div class="gu gu-1of1 gu-m-1of1">
     <a class="btn btn-primary btn-small mbs mrl">Small</a>
     <a class="btn btn-primary mbs mrl">Default</a>
+    <a class="btn btn-primary mbs mrl"><span class="vicon vicon-plus btn-icon-before"></span>before</a>
+    <a class="btn btn-primary mbs mrl">after<span class="vicon vicon-plus btn-icon-after"></span></a>
     <a class="btn btn-primary btn-loading mbs mrl"><span>Loading</span></a>
     <a class="btn btn-primary btn-disabled mbs mrl">Disable</a>
     <a class="btn btn-primary btn-large mbs mrl">Large</a>
@@ -3084,6 +3098,16 @@ These custom radio buttons are pure CSS3, no JavaScript required.</p>
 <span class="hljs-comment">&lt;!-- The primary btn. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-primary mbs mrl"</span>&gt;</span>
   primary
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Add classname 'btn-icon-before' to prepend the icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-primary mbs mrl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon vicon-plus btn-icon-before"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  preprend icon
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Add classname 'btn-icon-after' to append the icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-primary mbs mrl"</span>&gt;</span>
+  append icon
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon vicon-plus btn-icon-after"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- Add &lt;span&gt; inside the btn-loading to preserve the width of the button --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-primary btn-loading"</span>&gt;</span>
@@ -3118,6 +3142,8 @@ These custom radio buttons are pure CSS3, no JavaScript required.</p>
   <div class="gu gu-last gu-m-1of1">
     <a class="btn btn-tertiary btn-small mbs mrl">Small</a>
     <a class="btn btn-tertiary mbs mrl">Default</a>
+    <a class="btn btn-tertiary mbs mrl"><span class="vicon vicon-plus btn-icon-before"></span>before</a>
+    <a class="btn btn-tertiary mbs mrl">after<span class="vicon vicon-plus btn-icon-after"></span></a>
     <a class="btn btn-tertiary btn-loading mbs mrl"><span>Loading</span></a>
     <a class="btn btn-tertiary btn-disabled mbs mrl">Disable</a>
     <a class="btn btn-tertiary btn-large mbs mrl">Large</a>
@@ -3141,6 +3167,16 @@ These custom radio buttons are pure CSS3, no JavaScript required.</p>
 <span class="hljs-comment">&lt;!-- The tertiary btn. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-tertiary"</span>&gt;</span>
   tertiary
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Add classname 'btn-icon-before' to prepend the icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-tertiary mbs mrl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon vicon-plus btn-icon-before"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  preprend icon
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Add classname 'btn-icon-after' to append the icon --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-tertiary mbs mrl"</span>&gt;</span>
+  append icon
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vicon vicon-plus btn-icon-after"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- Add &lt;span&gt; inside the btn-loading to preserve the width of the button --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-tertiary btn-loading"</span>&gt;</span>
