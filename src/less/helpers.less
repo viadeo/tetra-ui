@@ -155,7 +155,12 @@
 .cf, .clearfix { .clearfixHack(); }
 .clear, .clr { clear: both; }
 .hidden { display: none; }
-.decorative {font-family: "MuseoSlab",Arial,sans-serif;}
+.decorative {
+  font-family: "MuseoSlab",Arial,sans-serif;
+  .tetra-2015 & {
+    font-family: @font-stack_revamp;
+  }
+}
 
 // Hiding content for accessibility
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
