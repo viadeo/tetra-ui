@@ -1,26 +1,27 @@
 // Typography
 
 // Web fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic,latin);
 
-@font-face {
-  font-family: 'OpenSans';
-  src: url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.eot');
-  src: url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.woff') format('woff'),
-    url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'OpenSans';
+//   src: url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.eot');
+//   src: url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+//     url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.woff') format('woff'),
+//     url('@{fonts-dir}/opensans/OpenSans-Regular-webfont.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'OpenSansBold';
-  src: url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.eot');
-  src: url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.woff') format('woff'),
-    url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'OpenSansBold';
+//   src: url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.eot');
+//   src: url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+//     url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.woff') format('woff'),
+//     url('@{fonts-dir}/opensansbold/OpenSans-Bold-webfont.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 // Body Text
 
@@ -30,6 +31,10 @@ body {
   line-height: @baseLineHeight;
   font-family: @font-stack;
   color: @baseFontColor;
+}
+
+.tetra-2015 {
+  font-family: @font-stack_revamp;
 }
 
 p {
@@ -68,19 +73,15 @@ a {
 // Headings
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: Arial, sans-serif;
   font-weight: bold;
   margin-bottom: (@baseLineHeight / 2.5);
   color: lighten(@baseFontColor, 10%);
-  .tetra-2015 & {
-    font-family: "OpenSans", "Arial", sans-serif;
-  }
 }
 .h1, .h2, .h3, .h4, .h5, .h6, .h-lead {
   font-family: "MuseoSlab", Arial, sans-serif;
   font-weight: normal;
   .tetra-2015 & {
-    font-family: "OpenSansBold", "Arial", sans-serif;
+    font-family: @font-stack_revamp;
   }
 }
 h1, .h1 { font-size: 20px; }
@@ -113,12 +114,13 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
     color: @grayDark;
     margin-bottom: @spacingM;
     padding: 0 0 @spacingS 0;
-    font: normal 13px "OpenSansBold", "Arial", sans-serif;
+    font: 700 13px @font-stack_revamp;
     small {
-      color: lighten(@gray, 10%);
+      font-size: 13px;
+      font-weight: 300;
       display: block;
-      font-family: "OpenSans", "Arial", sans-serif;
       text-transform: none;
+      color: @gray;
     }
     .vicon {
       text-transform: lowercase;
