@@ -3,14 +3,14 @@
   $hoverColor: unquote("");
   $borderColor: unquote("");
   $textColor: unquote("");
-  $diabledTextColor: unquote("");
+  $disabledTextColor: unquote("");
   @if $button == default {
     @mixin set-color($button){
     $bgColor : $buttonDefaultBgColor_revamp;
     $hoverColor: $buttonDefaultHoverColor_revamp;
     $borderColor: $buttonDefaultBorderColor_revamp;
     $textColor:   $buttonDefaultTextColor_revamp;
-    $diabledTextColor: $buttonDefaultDisabledTextColor_revamp;
+    $disabledTextColor: $buttonDefaultDisabledTextColor_revamp;
   }}
   @if $button == primary {
     @mixin set-color($button){
@@ -18,7 +18,7 @@
     $hoverColor: $buttonPrimaryHoverColor_revamp;
     $borderColor: $buttonPrimaryBorderColor_revamp;
     $textColor:   $buttonPrimaryTextColor_revamp;
-    $diabledTextColor: $buttonPrimaryDisabledTextColor_revamp;
+    $disabledTextColor: $buttonPrimaryDisabledTextColor_revamp;
   }}
   @if $button == tertiary {
     @mixin set-color($button){
@@ -26,7 +26,7 @@
     $hoverColor: $buttonTerHoverColor_revamp;
     $borderColor: $buttonTerBorderColor_revamp;
     $textColor:   $buttonTerTextColor_revamp;
-    $diabledTextColor: $buttonTerDisabledTextColor_revamp;
+    $disabledTextColor: $buttonTerDisabledTextColor_revamp;
   }}
   .tetra-2015 & {
     @include set-color($button);
@@ -52,7 +52,7 @@
     &.btn-loading {
       background: $bgColor;
       border-color: $bgColor;
-      color: $diabledTextColor;
+      color: $disabledTextColor;
       &:link,
       &:visited,
       &:hover,
@@ -62,10 +62,10 @@
         background-image: none;
         background-color: $bgColor;
         border-color: $bgColor;
-        color: $diabledTextColor;
+        color: $disabledTextColor;
       }
       .vicon {
-        color: $textColor;
+        color: $disabledTextColor;
       }
     }
     &.btn-loading,
