@@ -3,27 +3,27 @@
   @hoverColor: ~"";
   @borderColor: ~"";
   @textColor: ~"";
-  @diabledTextColor: ~"";
+  @disabledTextColor: ~"";
   .set-color (@button) when (@button = default) {
     @bgColor : @buttonDefaultBgColor_revamp;
     @hoverColor: @buttonDefaultHoverColor_revamp;
     @borderColor: @buttonDefaultBorderColor_revamp;
     @textColor:   @buttonDefaultTextColor_revamp;
-    @diabledTextColor: @buttonDefaultDisabledTextColor_revamp;
+    @disabledTextColor: @buttonDefaultDisabledTextColor_revamp;
   }
   .set-color (@button) when (@button = primary) {
     @bgColor : @buttonPrimaryBgColor_revamp;
     @hoverColor: @buttonPrimaryHoverColor_revamp;
     @borderColor: @buttonPrimaryBorderColor_revamp;
     @textColor:   @buttonPrimaryTextColor_revamp;
-    @diabledTextColor: @buttonPrimaryDisabledTextColor_revamp;
+    @disabledTextColor: @buttonPrimaryDisabledTextColor_revamp;
   }
   .set-color (@button) when (@button = tertiary) {
     @bgColor : @buttonTerBgColor_revamp;
     @hoverColor: @buttonTerHoverColor_revamp;
     @borderColor: @buttonTerBorderColor_revamp;
     @textColor:   @buttonTerTextColor_revamp;
-    @diabledTextColor: @buttonTerDisabledTextColor_revamp;
+    @disabledTextColor: @buttonTerDisabledTextColor_revamp;
   }
   .tetra-2015 & {
     .set-color(@button);
@@ -49,7 +49,7 @@
     &.btn-loading {
       background: @bgColor;
       border-color: @bgColor;
-      color: @diabledTextColor;
+      color: @disabledTextColor;
       &:link,
       &:visited,
       &:hover,
@@ -59,10 +59,10 @@
         background-image: none;
         background-color: @bgColor;
         border-color: @bgColor;
-        color: @diabledTextColor;
+        color: @disabledTextColor;
       }
       .vicon {
-        color: @textColor;
+        color: @disabledTextColor;
       }
     }
     &.btn-loading,
