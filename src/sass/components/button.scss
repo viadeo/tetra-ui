@@ -138,8 +138,8 @@
     font-size: 8px;
     .tetra-2015 & {
       font-size: 7px;
-      margin-left: -9px;
-      margin-right: 0px;
+      @include margin-left($rtl, -9px);
+      @include margin-right($rtl, 0);
     }
   }
   .vicon.btn-icon-after {
@@ -147,8 +147,8 @@
     font-size: 8px;
     .tetra-2015 & {
       font-size: 7px;
-      margin-left: 0;
-      margin-right: -9px;
+      @include margin-left($rtl, 0);
+      @include margin-right($rtl, -9px);
     }
   }
 }
