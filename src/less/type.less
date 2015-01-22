@@ -10,10 +10,6 @@ body {
   color: @baseFontColor;
 }
 
-.tetra-2015 {
-  font-family: @font-stack_revamp;
-}
-
 p {
   margin-bottom: @baseLineHeight;
 }
@@ -55,11 +51,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: lighten(@baseFontColor, 10%);
 }
 .h1, .h2, .h3, .h4, .h5, .h6, .h-lead {
-  font-family: "MuseoSlab", Arial, sans-serif;
   font-weight: normal;
-  .tetra-2015 & {
-    font-family: @font-stack_revamp;
-  }
 }
 h1, .h1 { font-size: 20px; }
 h2, .h2 { font-size: 18px; }
@@ -91,7 +83,7 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
     color: @grayDark;
     margin-bottom: @spacingM;
     padding: 0 0 @spacingS 0;
-    font: 700 13px @font-stack_revamp;
+    font: 700 13px @font-stack;
     small {
       font-size: 13px;
       font-weight: 300;
@@ -131,7 +123,6 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
   border-bottom: 3px solid @blue3;
   font-size: 16px;
   padding: 0 0 7px 0;
-  font: normal 16px "MuseoSlab", "Arial", sans-serif;
 
   &.h-bx-normal {
     font-family: "Arial", sans-serif;
