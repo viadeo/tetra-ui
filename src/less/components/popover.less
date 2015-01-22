@@ -22,11 +22,8 @@
   width: 230px;
   margin: 0 0 -7px 0;
 
-	border-radius: @borderRadiusM;
-	box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
-
 	background: @white;
-	border: 2px solid #bcc8d1;
+	border: 1px solid @grayLighter;
 
 	opacity: 0;
 
@@ -52,13 +49,13 @@
 	&:before {
     content: '';
     position: absolute;
-    left: 10px;
-    bottom: -10px;
+    left: 12px;
+    bottom: -9px;
     width: 0;
     height: 0;
-    border-color: @panelBorderDarker transparent transparent;
+    border-color: @grayLighter transparent transparent;
     border-style: solid;
-    border-width: 10px 11px 0;
+    border-width: 9px 9px 0;
   }
 
 	&:after {
@@ -68,7 +65,7 @@
     bottom: -7px;
 	  width: 0;
 	  height: 0;
-		border-color: @panelBackground transparent transparent;
+		border-color: #f6f7f8 transparent transparent;
 		border-style: solid;
 		border-width: 7px 7px 0;
 	}
@@ -87,10 +84,8 @@
 	.popover-footer {
     display: block;
     padding: @spacingS;
-    background: @panelBackground;
-    border-top: 1px solid @panelBorder;
-    border-bottom-left-radius: @borderRadiusS;
-    border-bottom-right-radius: @borderRadiusS;
+    background: #f6f7f8;
+    border-top: 1px solid lighten(@grayLighter, 10%);
   }
 }
 
@@ -111,10 +106,10 @@
   margin: -7px 0 0 0;
 
   &:before {
-    top: -10px;
-    border-color: transparent transparent @panelBorderDarker;
+    top: -9px;
+    border-color: transparent transparent @grayLighter;
     border-style: solid;
-    border-width: 0 11px 10px;
+    border-width: 0 9px 9px;
   }
 
   &:after {
@@ -132,7 +127,7 @@
   left: auto;
 
   &:before {
-    right: 10px;
+    right: 12px;
     left: auto;
   }
 
