@@ -67,7 +67,7 @@ $purple2: #685985 !default;
 $purple3: #685985 !default;
 $purple4: #685985 !default;
 
-$pageBg: #e8e9eb !default;
+$pageBg: #E0E2E4 !default;
 
 // Colors
 $green:             #829b13 !default;
@@ -92,7 +92,7 @@ $highlightColor:    #F4F2CA !default;
 
 // Link colors
 $linkColor:         $blue !default;
-$linkColorHover:    darken($linkColor, 10%) !default;
+$linkColorHover:    darken($linkColor, 14%) !default;
 
 $buttonColor: $white !default;
 
@@ -2825,8 +2825,8 @@ a {
 
 a:hover,
 a:focus {
-  color: #2988bc;
-  text-decoration: underline;
+  color: #257cab;
+  text-decoration: none;
 }
 
 a.lnk-title {
@@ -3702,7 +3702,7 @@ table.table th {
   padding-top: 9px;
   font-weight: bold;
   vertical-align: middle;
-  background: #f6f6f7;
+  background: #eeeff0;
 }
 
 table.table thead th {
@@ -5401,7 +5401,7 @@ a:focus .avatar img {
 
 .btn-link:hover,
 .btn-link:focus {
-  color: #2988bc;
+  color: #257cab;
   text-decoration: underline;
 }
 
@@ -5729,7 +5729,7 @@ a:focus .avatar img {
 
 .popin-container .popin .popin-body {
   padding: 20px 28px;
-  background: #e8e9eb;
+  background: #e0e2e4;
 }
 
 .popin-container .popin .popin-body:last-child {
@@ -5955,7 +5955,7 @@ a:focus .avatar img {
 
 .nav li.side-links a:hover,
 .nav li.side-links a:focus {
-  color: #2988bc;
+  color: #257cab;
   text-decoration: underline;
   background: none;
 }
@@ -6043,7 +6043,7 @@ a:focus .avatar img {
 }
 
 .popin .nav-tabs-secondary li.active a:after {
-  border-bottom-color: #e8e9eb;
+  border-bottom-color: #e0e2e4;
 }
 
 .nav-tabs-secondary li.active a:hover,
@@ -6099,7 +6099,7 @@ a:focus .avatar img {
 
 .nav-menu li a:hover,
 .nav-menu li a:focus {
-  color: #2988bc;
+  color: #257cab;
   background: #f7f7f7;
 }
 
