@@ -10,10 +10,6 @@ body {
   color: $baseFontColor;
 }
 
-.tetra-2015 {
-  font-family: $font-stack_revamp;
-}
-
 p {
   margin-bottom: $baseLineHeight;
 }
@@ -55,11 +51,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: lighten($baseFontColor, 10%);
 }
 .h1, .h2, .h3, .h4, .h5, .h6, .h-lead {
-  font-family: "MuseoSlab", Arial, sans-serif;
   font-weight: normal;
-  .tetra-2015 & {
-    font-family: $font-stack_revamp;
-  }
 }
 h1, .h1 { font-size: 20px; }
 h2, .h2 { font-size: 18px; }
@@ -85,81 +77,68 @@ h6, .h6 { font-size: 13px; padding-bottom: ($baseLineHeight / 3); }
 }
 
 .h-bx {
-  .tetra-2015 & {
-    text-transform: uppercase;
-    border-bottom: 1px solid $grayLighter;
-    color: $grayDark;
-    margin-bottom: $spacingM;
-    padding: 0 0 $spacingS 0;
-    font: 700 13px $font-stack_revamp;
+  $_h-bx-font-size: 14px;
+  border-bottom: 1px solid $grayLighter;
+  color: $grayDark;
+  margin-bottom: $spacingM;
+  padding: 0 0 $spacingS 0;
+  font-size: $_h-bx-font-size;
+  font-weight: 700;
+
+  small {
+    font-size: $_h-bx-font-size;
+    font-weight: 300;
+    display: block;
+    text-transform: none;
+    color: $gray;
+  }
+
+  .h-bx-link {
+    position: relative;
+    @include float-right($rtl);
+    @include left($rtl, 7px);
+    top: (-1 * $spacingS);
+
+    &:hover,
+    &:focus {
+      .vicon {
+        color: $gray;
+      }
+    }
+
+    .vicon {
+      color: $grayLight;
+      font-size: 8px;
+      margin: 0 -1px 0 0;
+    }
+
+  }
+
+  &.uppercase {
+    font-size: 13px;
     small {
       font-size: 13px;
-      font-weight: 300;
-      display: block;
+    }
+    .vicon,.tooltip-content {
       text-transform: none;
-      color: $gray;
-    }
-    .vicon {
-      text-transform: lowercase;
-    }
-    .h-bx-link {
-      position: relative;
-      @include left($rtl, 7px);
-      top: (-1 * $spacingS);
-      .vicon {
-        color:  $grayLight;
-      }
-      &:hover,
-      &:focus {
-        .vicon {
-          color: $gray;
-        }
-      }
-    }
-    &.h-bx-main {
-      &:hover,
-      &:focus {
-        .vicon {
-          color: mix(#000000, $orange, 5%);
-        }
-      }
     }
   }
-}
-
-.h-bx {
-  border-bottom: 3px solid $blue3;
-  font-size: 16px;
-  padding: 0 0 7px 0;
-  font: normal 16px "MuseoSlab", "Arial", sans-serif;
 
   &.h-bx-normal {
     font-family: "Arial", sans-serif;
   }
 
-  .h-bx-link {
-    @include float-right($rtl);
-
-    .vicon {
-      color: mix(#ffffff, $blue3, 50%);
-      font-size: 8px;
-      margin: 0 -1px 0 0;
-    }
-
-    &:hover,
-    &:focus {
-      .vicon {
-        color: $blue3;
-      }
-    }
-  }
-
   &.h-bx-main {
-    border-bottom-color: $orange;
-
+    border-bottom-color: $orange1;
     .h-bx-link {
       .vicon {
-        color: mix(#ffffff, $orange, 50%);
+        color: $orange1;
+      }
+      &:hover,
+      &:focus {
+        .vicon {
+          color: darken($orange1, 10%);
+        }
       }
     }
   }

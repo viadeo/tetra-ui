@@ -156,10 +156,13 @@
 .clear, .clr { clear: both; }
 .hidden { display: none; }
 .decorative {
-  font-family: "MuseoSlab",Arial,sans-serif;
-  .tetra-2015 & {
-    font-family: $font-stack_revamp;
-  }
+  font-family: $font-stack;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 
 // Hiding content for accessibility

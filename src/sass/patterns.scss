@@ -95,7 +95,9 @@ h1 .sub {
 
   &:hover {
     background: $panelBorder;
-
+    a {
+      text-decoration: none;
+    }
     .vicon {
       color: darken($borderColor, 25%);
 
@@ -117,15 +119,10 @@ h1 .sub {
   background: mix(#ffffff, $black, 24%);
   border: none;
   color: $white;
-  font-family: MuseoSlab, Arial, sans-serif;
   padding: 3px 13px;
   border-radius: 14px;
   overflow: hidden;
   height: 17px;
-
-  .tetra-2015 & {
-    font-family: $font-stack_revamp;
-  }
 
   a {
     color: $white;
@@ -137,19 +134,16 @@ h1 .sub {
 }
 
 .ui-badge {
-  @include gradient-vertical(#FF7919, #F56600);
-  background-color: #FF7919;
-  border: 1px solid #F56600;
+  background: $orange2;
+  font-size: 11px;
   color: #FFFFFF;
   display: inline-block;
-  font-weight: bold;
-  padding: 1px 3px;
+  padding: 1px 5px;
   @extend .bras;
 }
 
 .ui-badge.ui-badge-alt {
-  @include gradient-vertical(lighten($blueBright, 10%), $blueBright);
-  border-color: $blueBright;
+  background: $blue2;
 }
 
 .ui-tag {

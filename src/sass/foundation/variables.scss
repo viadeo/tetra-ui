@@ -8,8 +8,7 @@ $img-loaders-dir: "/v_img/profilev2" !default;
 // Fonts
 $fonts-dir: "/css/core/fonts" !default;
 $fonts-version: "1418225492" !default;
-$font-stack: "Arial", sans-serif !default;
-$font-stack_revamp: "Open Sans", "Arial", sans-serif !default;
+$font-stack: "Open Sans", "Arial", sans-serif !default;
 
 // Right To Left mode (arabic)
 $rtl: false !default;
@@ -45,7 +44,7 @@ $white:             #FFFFFF !default;
 
 // Extended palette
 
-$orange1: #f56600 !default;
+$orange1: #f07355 !default;
 $orange2: #f1532e !default;
 $orange3: #f78d2d !default;
 $orange4: #feae35 !default;
@@ -93,46 +92,34 @@ $highlightColor:    #F4F2CA !default;
 $linkColor:         $blue !default;
 $linkColorHover:    darken($linkColor, 10%) !default;
 
-// Button Colors
-$buttonPrimaryBgColor:     #ffd724 !default;
-$buttonPrimaryEndColor:    #ffc906 !default;
-$buttonPrimaryHoverColor:  #ffc906 !default;
-$buttonPrimaryBorderColor: #ffbb02 !default;
-$buttonPrimaryTextColor:   $blackLight !default;
+$buttonColor: $white !default;
 
-$buttonDefaultBgColor:     #fafafa !default;
-$buttonDefaultEndColor:    #ebebeb !default;
-$buttonDefaultHoverColor:  #e8e8e8 !default;
-$buttonDefaultBorderColor: #d5d5d5 !default;
-$buttonDefaultTextColor:   $blackLight !default;
+$buttonDefaultBgColor:     $gray !default;
+$buttonDefaultEndColor:    $gray !default;
+$buttonDefaultHoverColor:  darken($gray, 10%) !default;
+$buttonDefaultBorderColor: $gray !default;
+$buttonDefaultTextColor:   $buttonColor !default;
+$buttonDefaultDisabledTextColor:   darken($gray, 20%) !default;
 
-$buttonTerBgColor:         lighten($green2, 4%) !default;
-$buttonTerHoverColor:      darken($green2, 3%) !default;
-$buttonTerBorderColor:     $green2 !default;
-$buttonTerTextColor:       $white !default;
+$buttonPrimaryBgColor:     $blue !default;
+$buttonPrimaryEndColor:    $blue !default;
+$buttonPrimaryHoverColor:  darken($blue, 10%) !default;
+$buttonPrimaryBorderColor: $blue !default;
+$buttonPrimaryTextColor:   $buttonColor !default;
+$buttonPrimaryDisabledTextColor:   darken($blue, 20%) !default;
 
-// Button Colors : revamp
-$buttonColor_revamp: $white !default;
+$buttonSecondaryBgColor:     $orange1 !default;
+$buttonSecondaryEndColor:    $orange1 !default;
+$buttonSecondaryHoverColor:  darken($orange1, 10%) !default;
+$buttonSecondaryBorderColor: $orange1 !default;
+$buttonSecondaryTextColor:   $buttonColor !default;
+$buttonSecondaryDisabledTextColor:   darken($orange1, 20%) !default;
 
-$buttonPrimaryBgColor_revamp:     $blue !default;
-$buttonPrimaryEndColor_revamp:    $blue !default;
-$buttonPrimaryHoverColor_revamp:  darken($blue, 10%) !default;
-$buttonPrimaryBorderColor_revamp: $blue !default;
-$buttonPrimaryTextColor_revamp:   $buttonColor_revamp !default;
-$buttonPrimaryDisabledTextColor_revamp:   darken($blue, 20%) !default;
-
-$buttonDefaultBgColor_revamp:     $gray !default;
-$buttonDefaultEndColor_revamp:    $gray !default;
-$buttonDefaultHoverColor_revamp:  darken($gray, 10%) !default;
-$buttonDefaultBorderColor_revamp: $gray !default;
-$buttonDefaultTextColor_revamp:   $buttonColor_revamp !default;
-$buttonDefaultDisabledTextColor_revamp:   darken($gray, 20%) !default;
-
-$buttonTerBgColor_revamp:         $green3 !default;
-$buttonTerHoverColor_revamp:      darken($green3, 10%) !default;
-$buttonTerBorderColor_revamp:     $green3 !default;
-$buttonTerTextColor_revamp:       $buttonColor_revamp !default;
-$buttonTerDisabledTextColor_revamp:   darken($green3, 20%) !default;
+$buttonTerBgColor:         $green3 !default;
+$buttonTerHoverColor:      darken($green3, 10%) !default;
+$buttonTerBorderColor:     $green3 !default;
+$buttonTerTextColor:       $buttonColor !default;
+$buttonTerDisabledTextColor:   darken($green3, 20%) !default;
 
 // Typography
 $baseFontSize:      12px !default;

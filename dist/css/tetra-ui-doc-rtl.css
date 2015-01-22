@@ -1,4 +1,4 @@
-/*! tetra-ui v2.4.2 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.0 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -1981,11 +1981,15 @@ textarea {
 }
 
 .decorative {
-  font-family: "MuseoSlab", Arial, sans-serif;
+  font-family: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
 }
 
-.tetra-2015 .decorative {
-  font-family: "Open Sans", "Arial", sans-serif;
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .elsewhere {
@@ -2613,10 +2617,6 @@ body {
   color: #2a2a2a;
 }
 
-.tetra-2015 {
-  font-family: "Open Sans", "Arial", sans-serif;
-}
-
 p {
   margin-bottom: 1.2em;
 }
@@ -2673,18 +2673,7 @@ h6,
 .h5,
 .h6,
 .h-lead {
-  font-family: "MuseoSlab", Arial, sans-serif;
   font-weight: normal;
-}
-
-.tetra-2015 .h1,
-.tetra-2015 .h2,
-.tetra-2015 .h3,
-.tetra-2015 .h4,
-.tetra-2015 .h5,
-.tetra-2015 .h6,
-.tetra-2015 .h-lead {
-  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 h1,
@@ -2742,79 +2731,69 @@ h6,
   border-bottom: 1px solid #e4eaf0;
 }
 
-.tetra-2015 .h-bx {
+.h-bx {
   padding: 0 0 10px 0;
   margin-bottom: 15px;
-  font: 700 13px "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   color: #4a494d;
-  text-transform: uppercase;
   border-bottom: 1px solid #d9d8dd;
 }
 
-.tetra-2015 .h-bx small {
+.h-bx small {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #87868c;
   text-transform: none;
 }
 
-.tetra-2015 .h-bx .vicon {
-  text-transform: lowercase;
-}
-
-.tetra-2015 .h-bx .h-bx-link {
+.h-bx .h-bx-link {
   position: relative;
   top: -10px;
   right: 7px;
+  float: left;
 }
 
-.tetra-2015 .h-bx .h-bx-link .vicon {
-  color: #c5c3c7;
-}
-
-.tetra-2015 .h-bx .h-bx-link:hover .vicon,
-.tetra-2015 .h-bx .h-bx-link:focus .vicon {
+.h-bx .h-bx-link:hover .vicon,
+.h-bx .h-bx-link:focus .vicon {
   color: #87868c;
 }
 
-.tetra-2015 .h-bx.h-bx-main:hover .vicon,
-.tetra-2015 .h-bx.h-bx-main:focus .vicon {
-  color: #e96100;
+.h-bx .h-bx-link .vicon {
+  margin: 0 -1px 0 0;
+  font-size: 8px;
+  color: #c5c3c7;
 }
 
-.h-bx {
-  padding: 0 0 7px 0;
-  font: normal 16px "MuseoSlab", "Arial", sans-serif;
-  font-size: 16px;
-  border-bottom: 3px solid #42a2d6;
+.h-bx.uppercase {
+  font-size: 13px;
+}
+
+.h-bx.uppercase small {
+  font-size: 13px;
+}
+
+.h-bx.uppercase .vicon,
+.h-bx.uppercase .tooltip-content {
+  text-transform: none;
 }
 
 .h-bx.h-bx-normal {
   font-family: "Arial", sans-serif;
 }
 
-.h-bx .h-bx-link {
-  float: left;
-}
-
-.h-bx .h-bx-link .vicon {
-  margin: 0 -1px 0 0;
-  font-size: 8px;
-  color: #a1d1eb;
-}
-
-.h-bx .h-bx-link:hover .vicon,
-.h-bx .h-bx-link:focus .vicon {
-  color: #42a2d6;
-}
-
 .h-bx.h-bx-main {
-  border-bottom-color: #f56600;
+  border-bottom-color: #f07355;
 }
 
 .h-bx.h-bx-main .h-bx-link .vicon {
-  color: #fab380;
+  color: #f07355;
+}
+
+.h-bx.h-bx-main .h-bx-link:hover .vicon,
+.h-bx.h-bx-main .h-bx-link:focus .vicon {
+  color: #ec4c26;
 }
 
 ul.link-list {
@@ -3827,6 +3806,10 @@ h1 .sub {
   background: #e4eaf0;
 }
 
+.ui-label:hover a {
+  text-decoration: none;
+}
+
 .ui-label:hover .vicon {
   color: #809db7;
 }
@@ -3844,15 +3827,10 @@ h1 .sub {
   height: 17px;
   padding: 3px 13px;
   overflow: hidden;
-  font-family: MuseoSlab, Arial, sans-serif;
   color: #ffffff;
   background: #3d3d3d;
   border: none;
   border-radius: 14px;
-}
-
-.tetra-2015 .ui-label-premium {
-  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 .ui-label-premium a {
@@ -3865,34 +3843,15 @@ h1 .sub {
 
 .ui-badge {
   display: inline-block;
-  padding: 1px 3px;
-  font-weight: bold;
+  padding: 1px 5px;
+  font-size: 11px;
   color: #FFFFFF;
-  background-color: #f56600;
-  background-color: #FF7919;
-  background-image: -moz-linear-gradient(top, #ff7919, #f56600);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff7919), color-stop(100%, #f56600));
-  background-image: -webkit-linear-gradient(top, #ff7919, #f56600);
-  background-image: -o-linear-gradient(top, #ff7919, #f56600);
-  background-image: linear-gradient(to bottom, #ff7919, #f56600);
-  background-repeat: repeat-x;
-  border: 1px solid #F56600;
+  background: #f1532e;
   border-radius: 3px !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7919', endColorstr='#f56600', GradientType=0);
-  *filter: none;
 }
 
 .ui-badge.ui-badge-alt {
-  background-color: #0065ae;
-  background-image: -moz-linear-gradient(top, #0083e1, #0065ae);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0083e1), color-stop(100%, #0065ae));
-  background-image: -webkit-linear-gradient(top, #0083e1, #0065ae);
-  background-image: -o-linear-gradient(top, #0083e1, #0065ae);
-  background-image: linear-gradient(to bottom, #0083e1, #0065ae);
-  background-repeat: repeat-x;
-  border-color: #0065ae;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0083e1', endColorstr='#0065ae', GradientType=0);
-  *filter: none;
+  background: #007bc2;
 }
 
 .ui-tag {
@@ -4520,11 +4479,9 @@ a:focus .avatar img {
   white-space: normal;
   pointer-events: none;
   background: #ffffff;
-  border: 2px solid #bcc8d1;
-  border-radius: 6px;
+  border: 1px solid #d9d8dd;
   opacity: 0;
   visibility: hidden;
-  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
   -webkit-transition: opacity .3s, margin .3s;
      -moz-transition: opacity .3s, margin .3s;
        -o-transition: opacity .3s, margin .3s;
@@ -4533,13 +4490,13 @@ a:focus .avatar img {
 
 .popover:before {
   position: absolute;
-  bottom: -10px;
-  left: 10px;
+  bottom: -9px;
+  left: 12px;
   width: 0;
   height: 0;
-  border-color: #b7c8d6 transparent transparent;
+  border-color: #d9d8dd transparent transparent;
   border-style: solid;
-  border-width: 10px 11px 0;
+  border-width: 9px 9px 0;
   content: '';
 }
 
@@ -4549,7 +4506,7 @@ a:focus .avatar img {
   left: 14px;
   width: 0;
   height: 0;
-  border-color: #f5f7f9 transparent transparent;
+  border-color: #f6f7f8 transparent transparent;
   border-style: solid;
   border-width: 7px 7px 0;
   content: '';
@@ -4569,10 +4526,8 @@ a:focus .avatar img {
 .popover .popover-footer {
   display: block;
   padding: 10px;
-  background: #f5f7f9;
-  border-top: 1px solid #e4eaf0;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  background: #f6f7f8;
+  border-top: 1px solid #f4f3f5;
 }
 
 /* On bottom */
@@ -4589,10 +4544,10 @@ a:focus .avatar img {
 }
 
 .popover-bottom .popover:before {
-  top: -10px;
-  border-color: transparent transparent #b7c8d6;
+  top: -9px;
+  border-color: transparent transparent #d9d8dd;
   border-style: solid;
-  border-width: 0 11px 10px;
+  border-width: 0 9px 9px;
 }
 
 .popover-bottom .popover:after {
@@ -4610,7 +4565,7 @@ a:focus .avatar img {
 }
 
 .popover-left .popover:before {
-  right: 10px;
+  right: 12px;
   left: auto;
 }
 
@@ -4773,7 +4728,7 @@ a:focus .avatar img {
 .core-form .btn {
   position: relative;
   display: inline-block;
-  padding: 3px 10px;
+  padding: 4px 15px;
   text-align: center;
   text-decoration: none;
   text-shadow: none;
@@ -4789,11 +4744,6 @@ a:focus .avatar img {
      -moz-user-select: none;
        -o-user-select: none;
           user-select: none;
-}
-
-.tetra-2015 .btn,
-.tetra-2015 .core-form .btn {
-  padding: 4px 15px;
 }
 
 .btn:hover,
@@ -4835,644 +4785,31 @@ a:focus .avatar img {
 }
 
 .btn .vicon.btn-icon-before,
-.core-form .btn .vicon.btn-icon-before {
-  margin: 0 -2px 0 -7px;
-  font-size: 8px;
+.core-form .btn .vicon.btn-icon-before,
+.btn .vicon.btn-icon-after,
+.core-form .btn .vicon.btn-icon-after {
+  margin-top: -1px;
+  font-size: 7px;
 }
 
-.tetra-2015 .btn .vicon.btn-icon-before,
-.tetra-2015 .core-form .btn .vicon.btn-icon-before {
+.btn .vicon.btn-icon-before,
+.core-form .btn .vicon.btn-icon-before {
   margin-right: -9px;
   margin-left: 0;
-  font-size: 7px;
 }
 
 .btn .vicon.btn-icon-after,
 .core-form .btn .vicon.btn-icon-after {
-  margin: 0 -7px 0 -2px;
-  font-size: 8px;
-}
-
-.tetra-2015 .btn .vicon.btn-icon-after,
-.tetra-2015 .core-form .btn .vicon.btn-icon-after {
   margin-right: 0;
   margin-left: -9px;
-  font-size: 7px;
-}
-
-.btn-primary,
-.btn-secondary,
-.socialAction,
-.eventsAction,
-.core-form .btn-primary,
-.core-form .btn-secondary {
-  color: #2e2e2e;
-  background-color: #ffc906;
-  background-image: -moz-linear-gradient(top, #ffd724, #ffc906);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffd724), color-stop(100%, #ffc906));
-  background-image: -webkit-linear-gradient(top, #ffd724, #ffc906);
-  background-image: -o-linear-gradient(top, #ffd724, #ffc906);
-  background-image: linear-gradient(to bottom, #ffd724, #ffc906);
-  background-repeat: repeat-x;
-  border: 1px solid #ffbb02;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd724', endColorstr='#ffc906', GradientType=0);
-  *filter: none;
-}
-
-.tetra-2015 .btn-primary,
-.tetra-2015 .btn-secondary,
-.tetra-2015 .socialAction,
-.tetra-2015 .eventsAction,
-.tetra-2015 .core-form .btn-primary,
-.tetra-2015 .core-form .btn-secondary {
-  color: #ffffff;
-  background: #42a2d6;
-  border: 1px solid #42a2d6;
-}
-
-.tetra-2015 .btn-primary > span,
-.tetra-2015 .btn-secondary > span,
-.tetra-2015 .socialAction > span,
-.tetra-2015 .eventsAction > span,
-.tetra-2015 .core-form .btn-primary > span,
-.tetra-2015 .core-form .btn-secondary > span,
-.tetra-2015 .btn-primary > input,
-.tetra-2015 .btn-secondary > input,
-.tetra-2015 .socialAction > input,
-.tetra-2015 .eventsAction > input,
-.tetra-2015 .core-form .btn-primary > input,
-.tetra-2015 .core-form .btn-secondary > input,
-.tetra-2015 .btn-primary > button,
-.tetra-2015 .btn-secondary > button,
-.tetra-2015 .socialAction > button,
-.tetra-2015 .eventsAction > button,
-.tetra-2015 .core-form .btn-primary > button,
-.tetra-2015 .core-form .btn-secondary > button {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-primary .vicon,
-.tetra-2015 .btn-secondary .vicon,
-.tetra-2015 .socialAction .vicon,
-.tetra-2015 .eventsAction .vicon,
-.tetra-2015 .core-form .btn-primary .vicon,
-.tetra-2015 .core-form .btn-secondary .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-primary:hover,
-.tetra-2015 .btn-secondary:hover,
-.tetra-2015 .socialAction:hover,
-.tetra-2015 .eventsAction:hover,
-.tetra-2015 .core-form .btn-primary:hover,
-.tetra-2015 .core-form .btn-secondary:hover,
-.tetra-2015 .btn-primary:focus,
-.tetra-2015 .btn-secondary:focus,
-.tetra-2015 .socialAction:focus,
-.tetra-2015 .eventsAction:focus,
-.tetra-2015 .core-form .btn-primary:focus,
-.tetra-2015 .core-form .btn-secondary:focus {
-  color: #ffffff;
-  background: #2988bc;
-  border-color: #2988bc;
-}
-
-.tetra-2015 .btn-primary:hover .vicon,
-.tetra-2015 .btn-secondary:hover .vicon,
-.tetra-2015 .socialAction:hover .vicon,
-.tetra-2015 .eventsAction:hover .vicon,
-.tetra-2015 .core-form .btn-primary:hover .vicon,
-.tetra-2015 .core-form .btn-secondary:hover .vicon,
-.tetra-2015 .btn-primary:focus .vicon,
-.tetra-2015 .btn-secondary:focus .vicon,
-.tetra-2015 .socialAction:focus .vicon,
-.tetra-2015 .eventsAction:focus .vicon,
-.tetra-2015 .core-form .btn-primary:focus .vicon,
-.tetra-2015 .core-form .btn-secondary:focus .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-primary:active,
-.tetra-2015 .btn-secondary:active,
-.tetra-2015 .socialAction:active,
-.tetra-2015 .eventsAction:active,
-.tetra-2015 .core-form .btn-primary:active,
-.tetra-2015 .core-form .btn-secondary:active {
-  background: #42a2d6;
-}
-
-.tetra-2015 .btn-primary.btn-disabled,
-.tetra-2015 .btn-secondary.btn-disabled,
-.tetra-2015 .socialAction.btn-disabled,
-.tetra-2015 .eventsAction.btn-disabled,
-.tetra-2015 .core-form .btn-primary.btn-disabled,
-.tetra-2015 .core-form .btn-secondary.btn-disabled,
-.tetra-2015 .btn-primary.btn-loading,
-.tetra-2015 .btn-secondary.btn-loading,
-.tetra-2015 .socialAction.btn-loading,
-.tetra-2015 .eventsAction.btn-loading,
-.tetra-2015 .core-form .btn-primary.btn-loading,
-.tetra-2015 .core-form .btn-secondary.btn-loading {
-  color: #206a92;
-  background: #42a2d6;
-  border-color: #42a2d6;
-}
-
-.tetra-2015 .btn-primary.btn-disabled:link,
-.tetra-2015 .btn-secondary.btn-disabled:link,
-.tetra-2015 .socialAction.btn-disabled:link,
-.tetra-2015 .eventsAction.btn-disabled:link,
-.tetra-2015 .core-form .btn-primary.btn-disabled:link,
-.tetra-2015 .core-form .btn-secondary.btn-disabled:link,
-.tetra-2015 .btn-primary.btn-loading:link,
-.tetra-2015 .btn-secondary.btn-loading:link,
-.tetra-2015 .socialAction.btn-loading:link,
-.tetra-2015 .eventsAction.btn-loading:link,
-.tetra-2015 .core-form .btn-primary.btn-loading:link,
-.tetra-2015 .core-form .btn-secondary.btn-loading:link,
-.tetra-2015 .btn-primary.btn-disabled:visited,
-.tetra-2015 .btn-secondary.btn-disabled:visited,
-.tetra-2015 .socialAction.btn-disabled:visited,
-.tetra-2015 .eventsAction.btn-disabled:visited,
-.tetra-2015 .core-form .btn-primary.btn-disabled:visited,
-.tetra-2015 .core-form .btn-secondary.btn-disabled:visited,
-.tetra-2015 .btn-primary.btn-loading:visited,
-.tetra-2015 .btn-secondary.btn-loading:visited,
-.tetra-2015 .socialAction.btn-loading:visited,
-.tetra-2015 .eventsAction.btn-loading:visited,
-.tetra-2015 .core-form .btn-primary.btn-loading:visited,
-.tetra-2015 .core-form .btn-secondary.btn-loading:visited,
-.tetra-2015 .btn-primary.btn-disabled:hover,
-.tetra-2015 .btn-secondary.btn-disabled:hover,
-.tetra-2015 .socialAction.btn-disabled:hover,
-.tetra-2015 .eventsAction.btn-disabled:hover,
-.tetra-2015 .core-form .btn-primary.btn-disabled:hover,
-.tetra-2015 .core-form .btn-secondary.btn-disabled:hover,
-.tetra-2015 .btn-primary.btn-loading:hover,
-.tetra-2015 .btn-secondary.btn-loading:hover,
-.tetra-2015 .socialAction.btn-loading:hover,
-.tetra-2015 .eventsAction.btn-loading:hover,
-.tetra-2015 .core-form .btn-primary.btn-loading:hover,
-.tetra-2015 .core-form .btn-secondary.btn-loading:hover,
-.tetra-2015 .btn-primary.btn-disabled:focus,
-.tetra-2015 .btn-secondary.btn-disabled:focus,
-.tetra-2015 .socialAction.btn-disabled:focus,
-.tetra-2015 .eventsAction.btn-disabled:focus,
-.tetra-2015 .core-form .btn-primary.btn-disabled:focus,
-.tetra-2015 .core-form .btn-secondary.btn-disabled:focus,
-.tetra-2015 .btn-primary.btn-loading:focus,
-.tetra-2015 .btn-secondary.btn-loading:focus,
-.tetra-2015 .socialAction.btn-loading:focus,
-.tetra-2015 .eventsAction.btn-loading:focus,
-.tetra-2015 .core-form .btn-primary.btn-loading:focus,
-.tetra-2015 .core-form .btn-secondary.btn-loading:focus,
-.tetra-2015 .btn-primary.btn-disabled:active,
-.tetra-2015 .btn-secondary.btn-disabled:active,
-.tetra-2015 .socialAction.btn-disabled:active,
-.tetra-2015 .eventsAction.btn-disabled:active,
-.tetra-2015 .core-form .btn-primary.btn-disabled:active,
-.tetra-2015 .core-form .btn-secondary.btn-disabled:active,
-.tetra-2015 .btn-primary.btn-loading:active,
-.tetra-2015 .btn-secondary.btn-loading:active,
-.tetra-2015 .socialAction.btn-loading:active,
-.tetra-2015 .eventsAction.btn-loading:active,
-.tetra-2015 .core-form .btn-primary.btn-loading:active,
-.tetra-2015 .core-form .btn-secondary.btn-loading:active,
-.tetra-2015 .btn-primary.btn-disabled span,
-.tetra-2015 .btn-secondary.btn-disabled span,
-.tetra-2015 .socialAction.btn-disabled span,
-.tetra-2015 .eventsAction.btn-disabled span,
-.tetra-2015 .core-form .btn-primary.btn-disabled span,
-.tetra-2015 .core-form .btn-secondary.btn-disabled span,
-.tetra-2015 .btn-primary.btn-loading span,
-.tetra-2015 .btn-secondary.btn-loading span,
-.tetra-2015 .socialAction.btn-loading span,
-.tetra-2015 .eventsAction.btn-loading span,
-.tetra-2015 .core-form .btn-primary.btn-loading span,
-.tetra-2015 .core-form .btn-secondary.btn-loading span {
-  color: #206a92;
-  background-color: #42a2d6;
-  background-image: none;
-  border-color: #42a2d6;
-}
-
-.tetra-2015 .btn-primary.btn-disabled .vicon,
-.tetra-2015 .btn-secondary.btn-disabled .vicon,
-.tetra-2015 .socialAction.btn-disabled .vicon,
-.tetra-2015 .eventsAction.btn-disabled .vicon,
-.tetra-2015 .core-form .btn-primary.btn-disabled .vicon,
-.tetra-2015 .core-form .btn-secondary.btn-disabled .vicon,
-.tetra-2015 .btn-primary.btn-loading .vicon,
-.tetra-2015 .btn-secondary.btn-loading .vicon,
-.tetra-2015 .socialAction.btn-loading .vicon,
-.tetra-2015 .eventsAction.btn-loading .vicon,
-.tetra-2015 .core-form .btn-primary.btn-loading .vicon,
-.tetra-2015 .core-form .btn-secondary.btn-loading .vicon {
-  color: #206a92;
-}
-
-.tetra-2015 .btn-primary.btn-loading span,
-.tetra-2015 .btn-secondary.btn-loading span,
-.tetra-2015 .socialAction.btn-loading span,
-.tetra-2015 .eventsAction.btn-loading span,
-.tetra-2015 .core-form .btn-primary.btn-loading span,
-.tetra-2015 .core-form .btn-secondary.btn-loading span,
-.tetra-2015 .btn-primary.btn-loading:hover span,
-.tetra-2015 .btn-secondary.btn-loading:hover span,
-.tetra-2015 .socialAction.btn-loading:hover span,
-.tetra-2015 .eventsAction.btn-loading:hover span,
-.tetra-2015 .core-form .btn-primary.btn-loading:hover span,
-.tetra-2015 .core-form .btn-secondary.btn-loading:hover span,
-.tetra-2015 .btn-primary.btn-loading:focus span,
-.tetra-2015 .btn-secondary.btn-loading:focus span,
-.tetra-2015 .socialAction.btn-loading:focus span,
-.tetra-2015 .eventsAction.btn-loading:focus span,
-.tetra-2015 .core-form .btn-primary.btn-loading:focus span,
-.tetra-2015 .core-form .btn-secondary.btn-loading:focus span,
-.tetra-2015 .btn-primary.btn-loading:active span,
-.tetra-2015 .btn-secondary.btn-loading:active span,
-.tetra-2015 .socialAction.btn-loading:active span,
-.tetra-2015 .eventsAction.btn-loading:active span,
-.tetra-2015 .core-form .btn-primary.btn-loading:active span,
-.tetra-2015 .core-form .btn-secondary.btn-loading:active span {
-  background-image: url("/tetra-ui/dist/img/buttons//loaders/default.gif");
-}
-
-.btn-primary > span,
-.btn-secondary > span,
-.socialAction > span,
-.eventsAction > span,
-.core-form .btn-primary > span,
-.core-form .btn-secondary > span,
-.btn-primary > input,
-.btn-secondary > input,
-.socialAction > input,
-.eventsAction > input,
-.core-form .btn-primary > input,
-.core-form .btn-secondary > input,
-.btn-primary > button,
-.btn-secondary > button,
-.socialAction > button,
-.eventsAction > button,
-.core-form .btn-primary > button,
-.core-form .btn-secondary > button {
-  color: #2e2e2e;
-}
-
-.btn-primary:hover,
-.btn-secondary:hover,
-.socialAction:hover,
-.eventsAction:hover,
-.core-form .btn-primary:hover,
-.core-form .btn-secondary:hover,
-.btn-primary:focus,
-.btn-secondary:focus,
-.socialAction:focus,
-.eventsAction:focus,
-.core-form .btn-primary:focus,
-.core-form .btn-secondary:focus {
-  color: #2e2e2e;
-  background-color: #ffbb02;
-  background-image: -moz-linear-gradient(top, #ffc906, #ffbb02);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc906), color-stop(100%, #ffbb02));
-  background-image: -webkit-linear-gradient(top, #ffc906, #ffbb02);
-  background-image: -o-linear-gradient(top, #ffc906, #ffbb02);
-  background-image: linear-gradient(to bottom, #ffc906, #ffbb02);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc906', endColorstr='#ffbb02', GradientType=0);
-  *filter: none;
-}
-
-.btn-primary:active,
-.btn-secondary:active,
-.socialAction:active,
-.eventsAction:active,
-.core-form .btn-primary:active,
-.core-form .btn-secondary:active {
-  background-color: #ffbb02;
-  background-image: -moz-linear-gradient(top, #ffc906, #ffbb02);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc906), color-stop(100%, #ffbb02));
-  background-image: -webkit-linear-gradient(top, #ffc906, #ffbb02);
-  background-image: -o-linear-gradient(top, #ffc906, #ffbb02);
-  background-image: linear-gradient(to bottom, #ffc906, #ffbb02);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc906', endColorstr='#ffbb02', GradientType=0);
-  *filter: none;
-}
-
-.btn-primary.btn-disabled,
-.btn-secondary.btn-disabled,
-.socialAction.btn-disabled,
-.eventsAction.btn-disabled,
-.core-form .btn-primary.btn-disabled,
-.core-form .btn-secondary.btn-disabled,
-.btn-primary.btn-loading,
-.btn-secondary.btn-loading,
-.socialAction.btn-loading,
-.eventsAction.btn-loading,
-.core-form .btn-primary.btn-loading,
-.core-form .btn-secondary.btn-loading {
-  color: #f2b100;
-  background-color: #ffe057;
-  border-color: #ffd04f;
-}
-
-.btn-primary.btn-disabled:link,
-.btn-secondary.btn-disabled:link,
-.socialAction.btn-disabled:link,
-.eventsAction.btn-disabled:link,
-.core-form .btn-primary.btn-disabled:link,
-.core-form .btn-secondary.btn-disabled:link,
-.btn-primary.btn-loading:link,
-.btn-secondary.btn-loading:link,
-.socialAction.btn-loading:link,
-.eventsAction.btn-loading:link,
-.core-form .btn-primary.btn-loading:link,
-.core-form .btn-secondary.btn-loading:link,
-.btn-primary.btn-disabled:visited,
-.btn-secondary.btn-disabled:visited,
-.socialAction.btn-disabled:visited,
-.eventsAction.btn-disabled:visited,
-.core-form .btn-primary.btn-disabled:visited,
-.core-form .btn-secondary.btn-disabled:visited,
-.btn-primary.btn-loading:visited,
-.btn-secondary.btn-loading:visited,
-.socialAction.btn-loading:visited,
-.eventsAction.btn-loading:visited,
-.core-form .btn-primary.btn-loading:visited,
-.core-form .btn-secondary.btn-loading:visited,
-.btn-primary.btn-disabled:hover,
-.btn-secondary.btn-disabled:hover,
-.socialAction.btn-disabled:hover,
-.eventsAction.btn-disabled:hover,
-.core-form .btn-primary.btn-disabled:hover,
-.core-form .btn-secondary.btn-disabled:hover,
-.btn-primary.btn-loading:hover,
-.btn-secondary.btn-loading:hover,
-.socialAction.btn-loading:hover,
-.eventsAction.btn-loading:hover,
-.core-form .btn-primary.btn-loading:hover,
-.core-form .btn-secondary.btn-loading:hover,
-.btn-primary.btn-disabled:focus,
-.btn-secondary.btn-disabled:focus,
-.socialAction.btn-disabled:focus,
-.eventsAction.btn-disabled:focus,
-.core-form .btn-primary.btn-disabled:focus,
-.core-form .btn-secondary.btn-disabled:focus,
-.btn-primary.btn-loading:focus,
-.btn-secondary.btn-loading:focus,
-.socialAction.btn-loading:focus,
-.eventsAction.btn-loading:focus,
-.core-form .btn-primary.btn-loading:focus,
-.core-form .btn-secondary.btn-loading:focus,
-.btn-primary.btn-disabled:active,
-.btn-secondary.btn-disabled:active,
-.socialAction.btn-disabled:active,
-.eventsAction.btn-disabled:active,
-.core-form .btn-primary.btn-disabled:active,
-.core-form .btn-secondary.btn-disabled:active,
-.btn-primary.btn-loading:active,
-.btn-secondary.btn-loading:active,
-.socialAction.btn-loading:active,
-.eventsAction.btn-loading:active,
-.core-form .btn-primary.btn-loading:active,
-.core-form .btn-secondary.btn-loading:active,
-.btn-primary.btn-disabled span,
-.btn-secondary.btn-disabled span,
-.socialAction.btn-disabled span,
-.eventsAction.btn-disabled span,
-.core-form .btn-primary.btn-disabled span,
-.core-form .btn-secondary.btn-disabled span,
-.btn-primary.btn-loading span,
-.btn-secondary.btn-loading span,
-.socialAction.btn-loading span,
-.eventsAction.btn-loading span,
-.core-form .btn-primary.btn-loading span,
-.core-form .btn-secondary.btn-loading span {
-  color: #f2b100;
-  background-color: #ffe057;
-  border-color: #ffd04f;
-}
-
-.btn-primary.btn-disabled .vicon,
-.btn-secondary.btn-disabled .vicon,
-.socialAction.btn-disabled .vicon,
-.eventsAction.btn-disabled .vicon,
-.core-form .btn-primary.btn-disabled .vicon,
-.core-form .btn-secondary.btn-disabled .vicon,
-.btn-primary.btn-loading .vicon,
-.btn-secondary.btn-loading .vicon,
-.socialAction.btn-loading .vicon,
-.eventsAction.btn-loading .vicon,
-.core-form .btn-primary.btn-loading .vicon,
-.core-form .btn-secondary.btn-loading .vicon {
-  color: #f2b100;
-}
-
-.btn-primary.btn-loading span,
-.btn-secondary.btn-loading span,
-.socialAction.btn-loading span,
-.eventsAction.btn-loading span,
-.core-form .btn-primary.btn-loading span,
-.core-form .btn-secondary.btn-loading span,
-.btn-primary.btn-loading:hover span,
-.btn-secondary.btn-loading:hover span,
-.socialAction.btn-loading:hover span,
-.eventsAction.btn-loading:hover span,
-.core-form .btn-primary.btn-loading:hover span,
-.core-form .btn-secondary.btn-loading:hover span,
-.btn-primary.btn-loading:focus span,
-.btn-secondary.btn-loading:focus span,
-.socialAction.btn-loading:focus span,
-.eventsAction.btn-loading:focus span,
-.core-form .btn-primary.btn-loading:focus span,
-.core-form .btn-secondary.btn-loading:focus span,
-.btn-primary.btn-loading:active span,
-.btn-secondary.btn-loading:active span,
-.socialAction.btn-loading:active span,
-.eventsAction.btn-loading:active span,
-.core-form .btn-primary.btn-loading:active span,
-.core-form .btn-secondary.btn-loading:active span {
-  background: transparent url("/tetra-ui/dist/img/buttons//loaders/secondary.gif") no-repeat 50% 0.3em;
-  *background-position-y: 0;
-}
-
-.btn-primary.btn-inactive,
-.btn-secondary.btn-inactive,
-.socialAction.btn-inactive,
-.eventsAction.btn-inactive,
-.core-form .btn-primary.btn-inactive,
-.core-form .btn-secondary.btn-inactive,
-.btn-primary.btn-inactive:hover,
-.btn-secondary.btn-inactive:hover,
-.socialAction.btn-inactive:hover,
-.eventsAction.btn-inactive:hover,
-.core-form .btn-primary.btn-inactive:hover,
-.core-form .btn-secondary.btn-inactive:hover,
-.btn-primary.btn-inactive:focus,
-.btn-secondary.btn-inactive:focus,
-.socialAction.btn-inactive:focus,
-.eventsAction.btn-inactive:focus,
-.core-form .btn-primary.btn-inactive:focus,
-.core-form .btn-secondary.btn-inactive:focus {
-  cursor: default;
-  background-color: #ffc906;
-  background-image: -moz-linear-gradient(top, #ffd724, #ffc906);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffd724), color-stop(100%, #ffc906));
-  background-image: -webkit-linear-gradient(top, #ffd724, #ffc906);
-  background-image: -o-linear-gradient(top, #ffd724, #ffc906);
-  background-image: linear-gradient(to bottom, #ffd724, #ffc906);
-  background-repeat: repeat-x;
-  border-color: #ffbb02;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd724', endColorstr='#ffc906', GradientType=0);
-  *filter: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .btn-default,
 .secEventsAction,
 .core-form .btn-default {
-  color: #2e2e2e;
-  background-color: #ebebeb;
-  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ebebeb));
-  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
-  background-repeat: repeat-x;
-  border: 1px solid #d5d5d5;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
-  *filter: none;
-}
-
-.tetra-2015 .btn-default,
-.tetra-2015 .secEventsAction,
-.tetra-2015 .core-form .btn-default {
   color: #ffffff;
   background: #87868c;
   border: 1px solid #87868c;
-}
-
-.tetra-2015 .btn-default > span,
-.tetra-2015 .secEventsAction > span,
-.tetra-2015 .core-form .btn-default > span,
-.tetra-2015 .btn-default > input,
-.tetra-2015 .secEventsAction > input,
-.tetra-2015 .core-form .btn-default > input,
-.tetra-2015 .btn-default > button,
-.tetra-2015 .secEventsAction > button,
-.tetra-2015 .core-form .btn-default > button {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-default .vicon,
-.tetra-2015 .secEventsAction .vicon,
-.tetra-2015 .core-form .btn-default .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-default:hover,
-.tetra-2015 .secEventsAction:hover,
-.tetra-2015 .core-form .btn-default:hover,
-.tetra-2015 .btn-default:focus,
-.tetra-2015 .secEventsAction:focus,
-.tetra-2015 .core-form .btn-default:focus {
-  color: #ffffff;
-  background: #6e6d72;
-  border-color: #6e6d72;
-}
-
-.tetra-2015 .btn-default:hover .vicon,
-.tetra-2015 .secEventsAction:hover .vicon,
-.tetra-2015 .core-form .btn-default:hover .vicon,
-.tetra-2015 .btn-default:focus .vicon,
-.tetra-2015 .secEventsAction:focus .vicon,
-.tetra-2015 .core-form .btn-default:focus .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-default:active,
-.tetra-2015 .secEventsAction:active,
-.tetra-2015 .core-form .btn-default:active {
-  background: #87868c;
-}
-
-.tetra-2015 .btn-default.btn-disabled,
-.tetra-2015 .secEventsAction.btn-disabled,
-.tetra-2015 .core-form .btn-default.btn-disabled,
-.tetra-2015 .btn-default.btn-loading,
-.tetra-2015 .secEventsAction.btn-loading,
-.tetra-2015 .core-form .btn-default.btn-loading {
-  color: #555458;
-  background: #87868c;
-  border-color: #87868c;
-}
-
-.tetra-2015 .btn-default.btn-disabled:link,
-.tetra-2015 .secEventsAction.btn-disabled:link,
-.tetra-2015 .core-form .btn-default.btn-disabled:link,
-.tetra-2015 .btn-default.btn-loading:link,
-.tetra-2015 .secEventsAction.btn-loading:link,
-.tetra-2015 .core-form .btn-default.btn-loading:link,
-.tetra-2015 .btn-default.btn-disabled:visited,
-.tetra-2015 .secEventsAction.btn-disabled:visited,
-.tetra-2015 .core-form .btn-default.btn-disabled:visited,
-.tetra-2015 .btn-default.btn-loading:visited,
-.tetra-2015 .secEventsAction.btn-loading:visited,
-.tetra-2015 .core-form .btn-default.btn-loading:visited,
-.tetra-2015 .btn-default.btn-disabled:hover,
-.tetra-2015 .secEventsAction.btn-disabled:hover,
-.tetra-2015 .core-form .btn-default.btn-disabled:hover,
-.tetra-2015 .btn-default.btn-loading:hover,
-.tetra-2015 .secEventsAction.btn-loading:hover,
-.tetra-2015 .core-form .btn-default.btn-loading:hover,
-.tetra-2015 .btn-default.btn-disabled:focus,
-.tetra-2015 .secEventsAction.btn-disabled:focus,
-.tetra-2015 .core-form .btn-default.btn-disabled:focus,
-.tetra-2015 .btn-default.btn-loading:focus,
-.tetra-2015 .secEventsAction.btn-loading:focus,
-.tetra-2015 .core-form .btn-default.btn-loading:focus,
-.tetra-2015 .btn-default.btn-disabled:active,
-.tetra-2015 .secEventsAction.btn-disabled:active,
-.tetra-2015 .core-form .btn-default.btn-disabled:active,
-.tetra-2015 .btn-default.btn-loading:active,
-.tetra-2015 .secEventsAction.btn-loading:active,
-.tetra-2015 .core-form .btn-default.btn-loading:active,
-.tetra-2015 .btn-default.btn-disabled span,
-.tetra-2015 .secEventsAction.btn-disabled span,
-.tetra-2015 .core-form .btn-default.btn-disabled span,
-.tetra-2015 .btn-default.btn-loading span,
-.tetra-2015 .secEventsAction.btn-loading span,
-.tetra-2015 .core-form .btn-default.btn-loading span {
-  color: #555458;
-  background-color: #87868c;
-  background-image: none;
-  border-color: #87868c;
-}
-
-.tetra-2015 .btn-default.btn-disabled .vicon,
-.tetra-2015 .secEventsAction.btn-disabled .vicon,
-.tetra-2015 .core-form .btn-default.btn-disabled .vicon,
-.tetra-2015 .btn-default.btn-loading .vicon,
-.tetra-2015 .secEventsAction.btn-loading .vicon,
-.tetra-2015 .core-form .btn-default.btn-loading .vicon {
-  color: #555458;
-}
-
-.tetra-2015 .btn-default.btn-loading span,
-.tetra-2015 .secEventsAction.btn-loading span,
-.tetra-2015 .core-form .btn-default.btn-loading span,
-.tetra-2015 .btn-default.btn-loading:hover span,
-.tetra-2015 .secEventsAction.btn-loading:hover span,
-.tetra-2015 .core-form .btn-default.btn-loading:hover span,
-.tetra-2015 .btn-default.btn-loading:focus span,
-.tetra-2015 .secEventsAction.btn-loading:focus span,
-.tetra-2015 .core-form .btn-default.btn-loading:focus span,
-.tetra-2015 .btn-default.btn-loading:active span,
-.tetra-2015 .secEventsAction.btn-loading:active span,
-.tetra-2015 .core-form .btn-default.btn-loading:active span {
-  background-image: url("/tetra-ui/dist/img/buttons//loaders/default.gif");
 }
 
 .btn-default > span,
@@ -5484,13 +4821,13 @@ a:focus .avatar img {
 .btn-default > button,
 .secEventsAction > button,
 .core-form .btn-default > button {
-  color: #2e2e2e;
+  color: #ffffff;
 }
 
 .btn-default .vicon,
 .secEventsAction .vicon,
 .core-form .btn-default .vicon {
-  color: #87868c;
+  color: #ffffff;
 }
 
 .btn-default:hover,
@@ -5499,16 +4836,9 @@ a:focus .avatar img {
 .btn-default:focus,
 .secEventsAction:focus,
 .core-form .btn-default:focus {
-  color: #2e2e2e;
-  background-color: #d5d5d5;
-  background-image: -moz-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e8e8), color-stop(100%, #d5d5d5));
-  background-image: -webkit-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: -o-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: linear-gradient(to bottom, #e8e8e8, #d5d5d5);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#d5d5d5', GradientType=0);
-  *filter: none;
+  color: #ffffff;
+  background: #6e6d72;
+  border-color: #6e6d72;
 }
 
 .btn-default:hover .vicon,
@@ -5517,21 +4847,13 @@ a:focus .avatar img {
 .btn-default:focus .vicon,
 .secEventsAction:focus .vicon,
 .core-form .btn-default:focus .vicon {
-  color: #2e2e2e;
+  color: #ffffff;
 }
 
 .btn-default:active,
 .secEventsAction:active,
 .core-form .btn-default:active {
-  background-color: #d5d5d5;
-  background-image: -moz-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e8e8), color-stop(100%, #d5d5d5));
-  background-image: -webkit-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: -o-linear-gradient(top, #e8e8e8, #d5d5d5);
-  background-image: linear-gradient(to bottom, #e8e8e8, #d5d5d5);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#d5d5d5', GradientType=0);
-  *filter: none;
+  background: #87868c;
 }
 
 .btn-default.btn-disabled,
@@ -5540,50 +4862,9 @@ a:focus .avatar img {
 .btn-default.btn-loading,
 .secEventsAction.btn-loading,
 .core-form .btn-default.btn-loading {
-  color: #c8c8c8;
-  background-color: #ebebeb;
-  border-color: #d5d5d5;
-}
-
-.btn-default.btn-disabled:link,
-.secEventsAction.btn-disabled:link,
-.core-form .btn-default.btn-disabled:link,
-.btn-default.btn-loading:link,
-.secEventsAction.btn-loading:link,
-.core-form .btn-default.btn-loading:link,
-.btn-default.btn-disabled:visited,
-.secEventsAction.btn-disabled:visited,
-.core-form .btn-default.btn-disabled:visited,
-.btn-default.btn-loading:visited,
-.secEventsAction.btn-loading:visited,
-.core-form .btn-default.btn-loading:visited,
-.btn-default.btn-disabled:hover,
-.secEventsAction.btn-disabled:hover,
-.core-form .btn-default.btn-disabled:hover,
-.btn-default.btn-loading:hover,
-.secEventsAction.btn-loading:hover,
-.core-form .btn-default.btn-loading:hover,
-.btn-default.btn-disabled:focus,
-.secEventsAction.btn-disabled:focus,
-.core-form .btn-default.btn-disabled:focus,
-.btn-default.btn-loading:focus,
-.secEventsAction.btn-loading:focus,
-.core-form .btn-default.btn-loading:focus,
-.btn-default.btn-disabled:active,
-.secEventsAction.btn-disabled:active,
-.core-form .btn-default.btn-disabled:active,
-.btn-default.btn-loading:active,
-.secEventsAction.btn-loading:active,
-.core-form .btn-default.btn-loading:active,
-.btn-default.btn-disabled span,
-.secEventsAction.btn-disabled span,
-.core-form .btn-default.btn-disabled span,
-.btn-default.btn-loading span,
-.secEventsAction.btn-loading span,
-.core-form .btn-default.btn-loading span {
-  color: #c8c8c8;
-  background-color: #ebebeb;
-  border-color: #d5d5d5;
+  color: #555458;
+  background: #87868c;
+  border-color: #87868c;
 }
 
 .btn-default.btn-disabled .vicon,
@@ -5592,7 +4873,7 @@ a:focus .avatar img {
 .btn-default.btn-loading .vicon,
 .secEventsAction.btn-loading .vicon,
 .core-form .btn-default.btn-loading .vicon {
-  color: #c8c8c8;
+  color: #555458;
 }
 
 .btn-default.btn-inactive,
@@ -5601,105 +4882,187 @@ a:focus .avatar img {
 .btn-default.btn-inactive:hover,
 .secEventsAction.btn-inactive:hover,
 .core-form .btn-default.btn-inactive:hover,
-.btn-default.btn-inactive:focus,
-.secEventsAction.btn-inactive:focus,
-.core-form .btn-default.btn-inactive:focus {
-  cursor: default;
-  background-color: #ebebeb;
-  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ebebeb));
-  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
-  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
-  background-repeat: repeat-x;
-  border-color: #d5d5d5;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#ebebeb', GradientType=0);
-  *filter: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.btn-default.btn-loading:focus,
+.secEventsAction.btn-loading:focus,
+.core-form .btn-default.btn-loading:focus {
+  background-color: #87868c;
+  border-color: #87868c;
+}
+
+.btn-primary,
+.socialAction,
+.eventsAction,
+.core-form .btn-primary {
+  color: #ffffff;
+  background: #42a2d6;
+  border: 1px solid #42a2d6;
+}
+
+.btn-primary > span,
+.socialAction > span,
+.eventsAction > span,
+.core-form .btn-primary > span,
+.btn-primary > input,
+.socialAction > input,
+.eventsAction > input,
+.core-form .btn-primary > input,
+.btn-primary > button,
+.socialAction > button,
+.eventsAction > button,
+.core-form .btn-primary > button {
+  color: #ffffff;
+}
+
+.btn-primary .vicon,
+.socialAction .vicon,
+.eventsAction .vicon,
+.core-form .btn-primary .vicon {
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.socialAction:hover,
+.eventsAction:hover,
+.core-form .btn-primary:hover,
+.btn-primary:focus,
+.socialAction:focus,
+.eventsAction:focus,
+.core-form .btn-primary:focus {
+  color: #ffffff;
+  background: #2988bc;
+  border-color: #2988bc;
+}
+
+.btn-primary:hover .vicon,
+.socialAction:hover .vicon,
+.eventsAction:hover .vicon,
+.core-form .btn-primary:hover .vicon,
+.btn-primary:focus .vicon,
+.socialAction:focus .vicon,
+.eventsAction:focus .vicon,
+.core-form .btn-primary:focus .vicon {
+  color: #ffffff;
+}
+
+.btn-primary:active,
+.socialAction:active,
+.eventsAction:active,
+.core-form .btn-primary:active {
+  background: #42a2d6;
+}
+
+.btn-primary.btn-disabled,
+.socialAction.btn-disabled,
+.eventsAction.btn-disabled,
+.core-form .btn-primary.btn-disabled,
+.btn-primary.btn-loading,
+.socialAction.btn-loading,
+.eventsAction.btn-loading,
+.core-form .btn-primary.btn-loading {
+  color: #206a92;
+  background: #42a2d6;
+  border-color: #42a2d6;
+}
+
+.btn-primary.btn-disabled .vicon,
+.socialAction.btn-disabled .vicon,
+.eventsAction.btn-disabled .vicon,
+.core-form .btn-primary.btn-disabled .vicon,
+.btn-primary.btn-loading .vicon,
+.socialAction.btn-loading .vicon,
+.eventsAction.btn-loading .vicon,
+.core-form .btn-primary.btn-loading .vicon {
+  color: #206a92;
+}
+
+.btn-primary.btn-inactive,
+.socialAction.btn-inactive,
+.eventsAction.btn-inactive,
+.core-form .btn-primary.btn-inactive,
+.btn-primary.btn-inactive:hover,
+.socialAction.btn-inactive:hover,
+.eventsAction.btn-inactive:hover,
+.core-form .btn-primary.btn-inactive:hover,
+.btn-primary.btn-loading:focus,
+.socialAction.btn-loading:focus,
+.eventsAction.btn-loading:focus,
+.core-form .btn-primary.btn-loading:focus {
+  background-color: #42a2d6;
+  border-color: #42a2d6;
+}
+
+.btn-secondary,
+.core-form .btn-secondary {
+  color: #ffffff;
+  background: #f07355;
+  border: 1px solid #f07355;
+}
+
+.btn-secondary > span,
+.core-form .btn-secondary > span,
+.btn-secondary > input,
+.core-form .btn-secondary > input,
+.btn-secondary > button,
+.core-form .btn-secondary > button {
+  color: #ffffff;
+}
+
+.btn-secondary .vicon,
+.core-form .btn-secondary .vicon {
+  color: #ffffff;
+}
+
+.btn-secondary:hover,
+.core-form .btn-secondary:hover,
+.btn-secondary:focus,
+.core-form .btn-secondary:focus {
+  color: #ffffff;
+  background: #ec4c26;
+  border-color: #ec4c26;
+}
+
+.btn-secondary:hover .vicon,
+.core-form .btn-secondary:hover .vicon,
+.btn-secondary:focus .vicon,
+.core-form .btn-secondary:focus .vicon {
+  color: #ffffff;
+}
+
+.btn-secondary:active,
+.core-form .btn-secondary:active {
+  background: #f07355;
+}
+
+.btn-secondary.btn-disabled,
+.core-form .btn-secondary.btn-disabled,
+.btn-secondary.btn-loading,
+.core-form .btn-secondary.btn-loading {
+  color: #cd3612;
+  background: #f07355;
+  border-color: #f07355;
+}
+
+.btn-secondary.btn-disabled .vicon,
+.core-form .btn-secondary.btn-disabled .vicon,
+.btn-secondary.btn-loading .vicon,
+.core-form .btn-secondary.btn-loading .vicon {
+  color: #cd3612;
+}
+
+.btn-secondary.btn-inactive,
+.core-form .btn-secondary.btn-inactive,
+.btn-secondary.btn-inactive:hover,
+.core-form .btn-secondary.btn-inactive:hover,
+.btn-secondary.btn-loading:focus,
+.core-form .btn-secondary.btn-loading:focus {
+  background-color: #f07355;
+  border-color: #f07355;
 }
 
 .btn-tertiary {
   color: #ffffff;
-  background-color: #0c9f9b;
-  background-image: -moz-linear-gradient(top, #0db2ad, #0c9f9b);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0db2ad), color-stop(100%, #0c9f9b));
-  background-image: -webkit-linear-gradient(top, #0db2ad, #0c9f9b);
-  background-image: -o-linear-gradient(top, #0db2ad, #0c9f9b);
-  background-image: linear-gradient(to bottom, #0db2ad, #0c9f9b);
-  background-repeat: repeat-x;
-  border: 1px solid #0c9f9b;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0db2ad', endColorstr='#0c9f9b', GradientType=0);
-  *filter: none;
-}
-
-.tetra-2015 .btn-tertiary {
-  color: #ffffff;
   background: #53c1af;
   border: 1px solid #53c1af;
-}
-
-.tetra-2015 .btn-tertiary > span,
-.tetra-2015 .btn-tertiary > input,
-.tetra-2015 .btn-tertiary > button {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-tertiary .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-tertiary:hover,
-.tetra-2015 .btn-tertiary:focus {
-  color: #ffffff;
-  background: #3ca594;
-  border-color: #3ca594;
-}
-
-.tetra-2015 .btn-tertiary:hover .vicon,
-.tetra-2015 .btn-tertiary:focus .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-tertiary:active {
-  background: #53c1af;
-}
-
-.tetra-2015 .btn-tertiary.btn-disabled,
-.tetra-2015 .btn-tertiary.btn-loading {
-  color: #2e8073;
-  background: #53c1af;
-  border-color: #53c1af;
-}
-
-.tetra-2015 .btn-tertiary.btn-disabled:link,
-.tetra-2015 .btn-tertiary.btn-loading:link,
-.tetra-2015 .btn-tertiary.btn-disabled:visited,
-.tetra-2015 .btn-tertiary.btn-loading:visited,
-.tetra-2015 .btn-tertiary.btn-disabled:hover,
-.tetra-2015 .btn-tertiary.btn-loading:hover,
-.tetra-2015 .btn-tertiary.btn-disabled:focus,
-.tetra-2015 .btn-tertiary.btn-loading:focus,
-.tetra-2015 .btn-tertiary.btn-disabled:active,
-.tetra-2015 .btn-tertiary.btn-loading:active,
-.tetra-2015 .btn-tertiary.btn-disabled span,
-.tetra-2015 .btn-tertiary.btn-loading span {
-  color: #2e8073;
-  background-color: #53c1af;
-  background-image: none;
-  border-color: #53c1af;
-}
-
-.tetra-2015 .btn-tertiary.btn-disabled .vicon,
-.tetra-2015 .btn-tertiary.btn-loading .vicon {
-  color: #2e8073;
-}
-
-.tetra-2015 .btn-tertiary.btn-loading span,
-.tetra-2015 .btn-tertiary.btn-loading:hover span,
-.tetra-2015 .btn-tertiary.btn-loading:focus span,
-.tetra-2015 .btn-tertiary.btn-loading:active span {
-  background-image: url("/tetra-ui/dist/img/buttons//loaders/default.gif");
 }
 
 .btn-tertiary > span,
@@ -5715,75 +5078,36 @@ a:focus .avatar img {
 .btn-tertiary:hover,
 .btn-tertiary:focus {
   color: #ffffff;
-  background-color: #0b918d;
-  background-image: -moz-linear-gradient(top, #0db2ad, #0b918d);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0db2ad), color-stop(100%, #0b918d));
-  background-image: -webkit-linear-gradient(top, #0db2ad, #0b918d);
-  background-image: -o-linear-gradient(top, #0db2ad, #0b918d);
-  background-image: linear-gradient(to bottom, #0db2ad, #0b918d);
-  background-repeat: repeat-x;
-  border-color: #0b918d;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0db2ad', endColorstr='#0b918d', GradientType=0);
-  *filter: none;
+  background: #3ca594;
+  border-color: #3ca594;
+}
+
+.btn-tertiary:hover .vicon,
+.btn-tertiary:focus .vicon {
+  color: #ffffff;
 }
 
 .btn-tertiary:active {
-  background-color: #0b918d;
-  background-image: -moz-linear-gradient(top, #0db2ad, #0b918d);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0db2ad), color-stop(100%, #0b918d));
-  background-image: -webkit-linear-gradient(top, #0db2ad, #0b918d);
-  background-image: -o-linear-gradient(top, #0db2ad, #0b918d);
-  background-image: linear-gradient(to bottom, #0db2ad, #0b918d);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0db2ad', endColorstr='#0b918d', GradientType=0);
-  *filter: none;
+  background: #53c1af;
 }
 
 .btn-tertiary.btn-disabled,
 .btn-tertiary.btn-loading {
-  color: #0a8784;
-  background-color: #0dada9;
-  border-color: #0c9f9b;
-}
-
-.btn-tertiary.btn-disabled:link,
-.btn-tertiary.btn-loading:link,
-.btn-tertiary.btn-disabled:visited,
-.btn-tertiary.btn-loading:visited,
-.btn-tertiary.btn-disabled:hover,
-.btn-tertiary.btn-loading:hover,
-.btn-tertiary.btn-disabled:focus,
-.btn-tertiary.btn-loading:focus,
-.btn-tertiary.btn-disabled:active,
-.btn-tertiary.btn-loading:active,
-.btn-tertiary.btn-disabled span,
-.btn-tertiary.btn-loading span {
-  color: #0a8784;
-  background-color: #0dada9;
-  border-color: #0c9f9b;
+  color: #2e8073;
+  background: #53c1af;
+  border-color: #53c1af;
 }
 
 .btn-tertiary.btn-disabled .vicon,
 .btn-tertiary.btn-loading .vicon {
-  color: #0a8784;
+  color: #2e8073;
 }
 
 .btn-tertiary.btn-inactive,
 .btn-tertiary.btn-inactive:hover,
 .btn-tertiary.btn-loading:focus {
-  cursor: default;
-  background-color: #0c9f9b;
-  background-image: -moz-linear-gradient(top, #0db2ad, #0c9f9b);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0db2ad), color-stop(100%, #0c9f9b));
-  background-image: -webkit-linear-gradient(top, #0db2ad, #0c9f9b);
-  background-image: -o-linear-gradient(top, #0db2ad, #0c9f9b);
-  background-image: linear-gradient(to bottom, #0db2ad, #0c9f9b);
-  background-repeat: repeat-x;
-  border-color: #0c9f9b;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0db2ad', endColorstr='#0c9f9b', GradientType=0);
-  *filter: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background-color: #53c1af;
+  border-color: #53c1af;
 }
 
 .btn-small,
@@ -5791,11 +5115,6 @@ a:focus .avatar img {
   padding: 1px 10px;
   font-size: 11px;
   border-radius: 3px;
-}
-
-.tetra-2015 .btn-small,
-.tetra-2015 .core-form .btn-small {
-  padding: 1px 10px;
 }
 
 .btn-small .global-icon,
@@ -5810,47 +5129,12 @@ a:focus .avatar img {
   border-radius: 3px;
 }
 
-.tetra-2015 .btn-large,
-.tetra-2015 .core-form .btn-large {
-  padding: 7px 15px;
-}
-
 .btn-lead,
 .core-form .btn-lead {
   position: relative;
   z-index: 2;
-  padding: 15px 60px;
-  margin: 6px;
-  font-size: 18.75px;
-}
-
-.tetra-2015 .btn-lead,
-.tetra-2015 .core-form .btn-lead {
   padding: 15px;
   font-size: 16px;
-}
-
-.btn-lead:before,
-.core-form .btn-lead:before {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  bottom: -6px;
-  left: -6px;
-  z-index: 1;
-  border-radius: 6px;
-  content: "";
-  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.1) inset;
-}
-
-.tetra-2015 .btn-lead,
-.tetra-2015 .core-form .btn-lead {
-  margin: 0;
-}
-
-.tetra-2015 .btn-lead:before,
-.tetra-2015 .core-form .btn-lead:before {
-  display: none;
 }
 
 .btn-desc {
@@ -5865,6 +5149,9 @@ a:focus .avatar img {
   text-align: center;
 }
 
+.btn-inactive,
+.btn-inactive:hover,
+.btn-loading:focus,
 .btn-disabled,
 .btn-disabled:hover,
 .btn-disabled:focus,
@@ -5874,9 +5161,6 @@ a:focus .avatar img {
 .btn-loading:focus,
 .btn-loading:active {
   cursor: default;
-  background-image: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .btn-loading span,
@@ -5892,254 +5176,17 @@ a:focus .avatar img {
 }
 
 .btn-append {
-  padding-right: 4px;
-  padding-left: 0;
-  margin-left: -3px;
-  border-radius: 0 3px 3px 0;
+  padding-right: 0;
+  padding-left: 4px;
+  margin-right: -6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .btn-icon {
   padding: 10px 4px 6px;
-  background-color: #f3f3f3;
-  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
-  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: -o-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: linear-gradient(to bottom, #fafafa, #f3f3f3);
-  background-repeat: repeat-x;
-  border: 1px solid #dddddd;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0);
-  *filter: none;
-}
-
-.tetra-2015 .btn-icon {
-  padding: 10px 4px 6px;
-}
-
-.btn-icon:hover,
-.btn-icon:focus {
-  background-color: #ffc906;
-  background-image: -moz-linear-gradient(top, #ffd724, #ffc906);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffd724), color-stop(100%, #ffc906));
-  background-image: -webkit-linear-gradient(top, #ffd724, #ffc906);
-  background-image: -o-linear-gradient(top, #ffd724, #ffc906);
-  background-image: linear-gradient(to bottom, #ffd724, #ffc906);
-  background-repeat: repeat-x;
-  border-color: #ffbb02;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd724', endColorstr='#ffc906', GradientType=0);
-  *filter: none;
-}
-
-.btn-icon:hover .vicon,
-.btn-icon:focus .vicon {
-  color: #404040;
-}
-
-.tetra-2015 .btn-icon {
-  color: #ffffff;
-  background: #87868c;
-  border: 1px solid #87868c;
-}
-
-.tetra-2015 .btn-icon > span,
-.tetra-2015 .btn-icon > input,
-.tetra-2015 .btn-icon > button {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon:hover,
-.tetra-2015 .btn-icon:focus {
-  color: #ffffff;
-  background: #6e6d72;
-  border-color: #6e6d72;
-}
-
-.tetra-2015 .btn-icon:hover .vicon,
-.tetra-2015 .btn-icon:focus .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon:active {
-  background: #87868c;
-}
-
-.tetra-2015 .btn-icon.btn-disabled,
-.tetra-2015 .btn-icon.btn-loading {
-  color: #555458;
-  background: #87868c;
-  border-color: #87868c;
-}
-
-.tetra-2015 .btn-icon.btn-disabled:link,
-.tetra-2015 .btn-icon.btn-loading:link,
-.tetra-2015 .btn-icon.btn-disabled:visited,
-.tetra-2015 .btn-icon.btn-loading:visited,
-.tetra-2015 .btn-icon.btn-disabled:hover,
-.tetra-2015 .btn-icon.btn-loading:hover,
-.tetra-2015 .btn-icon.btn-disabled:focus,
-.tetra-2015 .btn-icon.btn-loading:focus,
-.tetra-2015 .btn-icon.btn-disabled:active,
-.tetra-2015 .btn-icon.btn-loading:active,
-.tetra-2015 .btn-icon.btn-disabled span,
-.tetra-2015 .btn-icon.btn-loading span {
-  color: #555458;
-  background-color: #87868c;
-  background-image: none;
-  border-color: #87868c;
-}
-
-.tetra-2015 .btn-icon.btn-disabled .vicon,
-.tetra-2015 .btn-icon.btn-loading .vicon {
-  color: #555458;
-}
-
-.tetra-2015 .btn-icon.btn-loading span,
-.tetra-2015 .btn-icon.btn-loading:hover span,
-.tetra-2015 .btn-icon.btn-loading:focus span,
-.tetra-2015 .btn-icon.btn-loading:active span {
-  background-image: url("/tetra-ui/dist/img/buttons//loaders/default.gif");
-}
-
-.tetra-2015 .btn-icon.btn-primary {
-  color: #ffffff;
-  background: #42a2d6;
-  border: 1px solid #42a2d6;
-}
-
-.tetra-2015 .btn-icon.btn-primary > span,
-.tetra-2015 .btn-icon.btn-primary > input,
-.tetra-2015 .btn-icon.btn-primary > button {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon.btn-primary .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon.btn-primary:hover,
-.tetra-2015 .btn-icon.btn-primary:focus {
-  color: #ffffff;
-  background: #2988bc;
-  border-color: #2988bc;
-}
-
-.tetra-2015 .btn-icon.btn-primary:hover .vicon,
-.tetra-2015 .btn-icon.btn-primary:focus .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon.btn-primary:active {
-  background: #42a2d6;
-}
-
-.tetra-2015 .btn-icon.btn-primary.btn-disabled,
-.tetra-2015 .btn-icon.btn-primary.btn-loading {
-  color: #206a92;
-  background: #42a2d6;
-  border-color: #42a2d6;
-}
-
-.tetra-2015 .btn-icon.btn-primary.btn-disabled:link,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:link,
-.tetra-2015 .btn-icon.btn-primary.btn-disabled:visited,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:visited,
-.tetra-2015 .btn-icon.btn-primary.btn-disabled:hover,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:hover,
-.tetra-2015 .btn-icon.btn-primary.btn-disabled:focus,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:focus,
-.tetra-2015 .btn-icon.btn-primary.btn-disabled:active,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:active,
-.tetra-2015 .btn-icon.btn-primary.btn-disabled span,
-.tetra-2015 .btn-icon.btn-primary.btn-loading span {
-  color: #206a92;
-  background-color: #42a2d6;
-  background-image: none;
-  border-color: #42a2d6;
-}
-
-.tetra-2015 .btn-icon.btn-primary.btn-disabled .vicon,
-.tetra-2015 .btn-icon.btn-primary.btn-loading .vicon {
-  color: #206a92;
-}
-
-.tetra-2015 .btn-icon.btn-primary.btn-loading span,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:hover span,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:focus span,
-.tetra-2015 .btn-icon.btn-primary.btn-loading:active span {
-  background-image: url("/tetra-ui/dist/img/buttons//loaders/default.gif");
-}
-
-.tetra-2015 .btn-icon.btn-tertiary {
-  color: #ffffff;
-  background: #53c1af;
-  border: 1px solid #53c1af;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary > span,
-.tetra-2015 .btn-icon.btn-tertiary > input,
-.tetra-2015 .btn-icon.btn-tertiary > button {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary:hover,
-.tetra-2015 .btn-icon.btn-tertiary:focus {
-  color: #ffffff;
-  background: #3ca594;
-  border-color: #3ca594;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary:hover .vicon,
-.tetra-2015 .btn-icon.btn-tertiary:focus .vicon {
-  color: #ffffff;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary:active {
-  background: #53c1af;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading {
-  color: #2e8073;
-  background: #53c1af;
-  border-color: #53c1af;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:link,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:link,
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:visited,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:visited,
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:hover,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:hover,
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:focus,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:focus,
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled:active,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:active,
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled span,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading span {
-  color: #2e8073;
-  background-color: #53c1af;
-  background-image: none;
-  border-color: #53c1af;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary.btn-disabled .vicon,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading .vicon {
-  color: #2e8073;
-}
-
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading span,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:hover span,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:focus span,
-.tetra-2015 .btn-icon.btn-tertiary.btn-loading:active span {
-  background-image: url("/tetra-ui/dist/img/buttons//loaders/default.gif");
 }
 
 .btn-icon .vicon {
@@ -6147,41 +5194,19 @@ a:focus .avatar img {
   *margin: -0.5em 0 0;
   font-size: 12px;
   *line-height: 2.25em;
-  color: #737373;
-}
-
-.btn-icon.btn-disabled:hover,
-.btn-icon.btn-disabled:focus {
-  background-color: #f3f3f3;
-  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
-  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: -o-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: linear-gradient(to bottom, #fafafa, #f3f3f3);
-  background-repeat: repeat-x;
-  border-color: #dddddd;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0);
-  *filter: none;
-}
-
-.btn-icon.btn-disabled .vicon {
-  color: #bfbfbf;
 }
 
 .btn-link {
   color: #42a2d6;
   text-decoration: none;
   cursor: pointer;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
+  background: none;
 }
 
 .btn-link:hover,
 .btn-link:focus {
   color: #2988bc;
   text-decoration: underline;
-  box-shadow: none;
 }
 
 .btn-pagination {
@@ -6236,7 +5261,7 @@ a:focus .avatar img {
 .dd .dd-btn .vicon {
   margin: 0 -2px 0 -6px;
   *margin-top: -3px;
-  line-height: 12px;
+  line-height: 11px;
   *line-height: 20px;
 }
 
@@ -6378,7 +5403,7 @@ a:focus .avatar img {
 }
 
 .core-form .input-append .dd .active.btn-default {
-  border-color: #d5d5d5;
+  border-color: #87868c;
 }
 
 .popin-overlay {
@@ -6768,13 +5793,8 @@ a:focus .avatar img {
 }
 
 .nav-tabs-secondary {
-  font-family: "MuseoSlab", "Arial", sans-serif;
   font-size: 16.5px;
   border-bottom: 1px solid #dae3ea;
-}
-
-.tetra-2015 .nav-tabs-secondary {
-  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 .nav-tabs-secondary:after {
@@ -6977,16 +5997,16 @@ a:focus .avatar img {
 .btncontainer .btn-no .lnk-no {
   color: #ffffff;
   cursor: default;
-  background-color: #f56600;
-  background-image: -moz-linear-gradient(top, #c25100, #f56600);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c25100), color-stop(100%, #f56600));
-  background-image: -webkit-linear-gradient(top, #c25100, #f56600);
-  background-image: -o-linear-gradient(top, #c25100, #f56600);
-  background-image: linear-gradient(to bottom, #c25100, #f56600);
+  background-color: #f07355;
+  background-image: -moz-linear-gradient(top, #ec4c26, #f07355);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec4c26), color-stop(100%, #f07355));
+  background-image: -webkit-linear-gradient(top, #ec4c26, #f07355);
+  background-image: -o-linear-gradient(top, #ec4c26, #f07355);
+  background-image: linear-gradient(to bottom, #ec4c26, #f07355);
   background-repeat: repeat-x;
-  border-color: #a94600;
-  border-bottom-color: #d15700;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c25100', endColorstr='#f56600', GradientType=0);
+  border-color: #e43c14;
+  border-bottom-color: #ed5834;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ec4c26', endColorstr='#f07355', GradientType=0);
   *filter: none;
 }
 
@@ -7489,66 +6509,38 @@ a:focus .avatar img {
   margin-left: -22px;
 }
 
-.tetra-2015 .bx {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.tetra-2015 .bx.bx-default {
-  border: 0 none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.tetra-2015 .bx .bx-close {
-  top: -15px;
-  right: 15px;
-}
-
-.tetra-2015 .bx .bx-close .vicon {
-  color: #c5c3c7;
-}
-
-.tetra-2015 .bx .bx-close:hover .vicon,
-.tetra-2015 .bx .bx-close:focus .vicon {
-  color: #87868c;
-}
-
-.tetra-2015 .bx .bx-aside .h-bx {
-  border-bottom-color: #dddee0;
-}
-
 .bx {
   padding: 20px;
   margin-bottom: 20px;
   background: #ffffff;
-  border-radius: 3px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .bx .bx-close {
   position: relative;
-  top: -20px;
-  right: 20px;
+  top: -15px;
+  right: 15px;
   float: left;
 }
 
 .bx .bx-close .vicon {
   font-size: 8px;
-  color: #b5c6d5;
+  color: #c5c3c7;
 }
 
 .bx .bx-close:hover .vicon {
-  color: #83a0b9;
+  color: #87868c;
 }
 
 .bx.bx-default {
-  border: 1px solid #d1dce5;
-  box-shadow: none;
+  border: 0 none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .bx-empty {
   color: #666666;
   background: #f0f0f0;
-  border: 2px dashed #cccccc;
+  border: 1px dashed #cccccc;
   box-shadow: none;
 }
 
@@ -7568,7 +6560,7 @@ a:focus .avatar img {
 }
 
 .bx-aside .h-bx {
-  border-bottom-color: #42a2d6;
+  border-bottom-color: #dddee0;
 }
 
 .bx-alert {
@@ -8054,7 +7046,7 @@ a:focus .avatar img {
 }
 
 .rc-card .rc-card-header .name .vicon {
-  color: #ffc906;
+  color: #42a2d6;
 }
 
 .rc-card .rc-card-content {
@@ -8356,7 +7348,7 @@ a:focus .avatar img {
   color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  background: #f56600;
+  background: #f07355;
   border-radius: 50%;
   box-shadow: 0 0.75em 1em rgba(255, 255, 255, 0.4) inset, 0 0 0 3px #ecf1f5;
 }
@@ -8370,13 +7362,8 @@ a:focus .avatar img {
 }
 
 .nav-steps li {
-  font-family: "MuseoSlab", "Arial", sans-serif;
   font-size: 15px;
   color: #4d4d4d;
-}
-
-.tetra-2015 .nav-steps li {
-  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 .nav-steps li.nav-steps-todo {
@@ -8545,7 +7532,7 @@ a:focus .avatar img {
 }
 
 .share-links li a.viadeo .vicon {
-  color: #f56600;
+  color: #f07355;
 }
 
 .share-links li a.viadeo .vicon:first-child {
@@ -8725,18 +7712,14 @@ p {
   max-width: 200px;
 }
 
-.sidebar .follow-github {
-  line-height: 18px;
-  color: #636267;
-}
-
 .sidebar .follow-github svg {
   position: relative;
   top: 2px;
+  left: 3px;
 }
 
 .sidebar .follow-github path {
-  fill: #636267;
+  fill: #ffffff;
 }
 
 .sidebar-nav {
@@ -8750,7 +7733,7 @@ p {
 }
 
 .sidebar-nav a:hover {
-  color: #f56600;
+  color: #f07355;
 }
 
 .sidebar-nav li {
@@ -8768,8 +7751,8 @@ p {
 }
 
 .sidebar-nav li.active > a {
-  color: #f56600;
-  border-left: 2px solid #f56600;
+  color: #f07355;
+  border-left: 2px solid #f07355;
 }
 
 .sidebar-nav li.active ul {
@@ -8903,7 +7886,7 @@ p {
 }
 
 .bg-orange1 {
-  background: #f56600;
+  background: #f07355;
 }
 
 .bg-orange2 {
@@ -9155,11 +8138,11 @@ p {
 }
 
 .bg-orange {
-  background: #f56600;
+  background: #f07355;
 }
 
 .bg-orange .tooltip-content:before {
-  content: "#f56600";
+  content: "#f07355";
 }
 
 .bg-blue-soft {

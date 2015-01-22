@@ -1,66 +1,35 @@
-// Box
-.bx {
-  .tetra-2015 & {
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-    &.bx-default {
-      border: 0 none;
-      box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-    }
-    .bx-close {
-      @include left($rtl, $spacingM);
-      top: (-1 * $spacingM);
-      .vicon {
-        color: $grayLight;
-      }
-      &:hover,
-      &:focus {
-        .vicon {
-          color: $gray;
-        }
-      }
-    }
-    .bx-aside {
-      .h-bx {
-        border-bottom-color: $BorderBoxColor;
-      }
-    }
-  }
-}
-
-
 .bx {
 	padding: $spacingL;
-	border-radius: $borderRadiusS;
 	background: $white;
-	box-shadow: 1px 1px 4px rgba($black, (20/100));
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 	margin-bottom: $spacingL;
 
 	.bx-close {
 		@include float-right($rtl);
 		position: relative;
-    @include left($rtl, $spacingL);
-		top: (-1 * $spacingL);
+    @include left($rtl, $spacingM);
+		top: (-1 * $spacingM);
 
 		.vicon {
-			color: mix(#ffffff, $blueSoft, 40%);
+			color: $grayLight;
 			font-size: 8px;
 		}
 
 		&:hover {
 			.vicon {
-				color: $blueSoft;
+				color: $gray;
 			}
 		}
 	}
 
 	&.bx-default {
-		border: 1px solid $borderColor;
-		box-shadow: none;
+    border: 0 none;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 	}
 }
 
 .bx-empty {
-	border: 2px dashed lighten($black, 80%);
+	border: 1px dashed lighten($black, 80%);
 	background: lighten($black, 94%);
 	box-shadow: none;
 	color: lighten($black, 40%);
@@ -81,7 +50,7 @@
 	box-shadow: none;
 
 	.h-bx {
-		border-bottom-color: $blue3;
+		border-bottom-color: $BorderBoxColor;
 	}
 }
 
