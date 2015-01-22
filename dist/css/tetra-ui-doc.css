@@ -7022,9 +7022,7 @@ a:focus .avatar img {
 .rc-card {
   min-height: 145px;
   background: #ffffff;
-  border: 2px solid #e6ecf1;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #dddce0;
   -webkit-transition: border-color 0.2s;
      -moz-transition: border-color 0.2s;
        -o-transition: border-color 0.2s;
@@ -7041,12 +7039,11 @@ a:focus .avatar img {
 
 .rc-card .rc-card-header .name {
   margin: 0 0 5px 0;
-  font-family: "Arial", sans-serif;
   font-weight: bold;
 }
 
 .rc-card .rc-card-header .name .vicon {
-  color: #42a2d6;
+  color: #feae35;
 }
 
 .rc-card .rc-card-content {
