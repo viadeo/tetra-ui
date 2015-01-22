@@ -18,6 +18,13 @@
     @textColor:   @buttonPrimaryTextColor;
     @disabledTextColor: @buttonPrimaryDisabledTextColor;
   }
+  .set-color (@button) when (@button = secondary) {
+    @bgColor : @buttonSecondaryBgColor;
+    @hoverColor: @buttonSecondaryHoverColor;
+    @borderColor: @buttonSecondaryBorderColor;
+    @textColor:   @buttonSecondaryTextColor;
+    @disabledTextColor: @buttonSecondaryDisabledTextColor;
+  }
   .set-color (@button) when (@button = tertiary) {
     @bgColor : @buttonTerBgColor;
     @hoverColor: @buttonTerHoverColor;
@@ -123,13 +130,25 @@
     .margin-right(@rtl, -9px);
   }
 }
-.btn-primary, .btn-secondary, .socialAction, .eventsAction,
-.core-form .btn-primary, .core-form .btn-secondary {
-  .tetra-button(primary);
-}
-.btn-default, .secEventsAction, .core-form .btn-default {
+
+.btn-default,
+.secEventsAction,
+.core-form .btn-default {
   .tetra-button(default);
 }
+
+.btn-primary,
+.socialAction,
+.eventsAction,
+.core-form .btn-primary {
+  .tetra-button(primary);
+}
+
+.btn-secondary,
+.core-form .btn-secondary {
+  .tetra-button(secondary);
+}
+
 .btn-tertiary {
   .tetra-button(tertiary);
 }
