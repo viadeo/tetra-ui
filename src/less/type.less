@@ -77,28 +77,20 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
 }
 
 .h-bx {
-  text-transform: uppercase;
+  @_h-bx-font-size: 14px;
   border-bottom: 1px solid @grayLighter;
   color: @grayDark;
   margin-bottom: @spacingM;
   padding: 0 0 @spacingS 0;
-  font-size: 13px;
+  font-size: @_h-bx-font-size;
   font-weight: 700;
 
   small {
-    font-size: 13px;
+    font-size: @_h-bx-font-size;
     font-weight: 300;
     display: block;
     text-transform: none;
     color: @gray;
-  }
-
-  .vicon {
-    text-transform: lowercase;
-  }
-
-  &.h-bx-normal {
-    font-family: "Arial", sans-serif;
   }
 
   .h-bx-link {
@@ -120,6 +112,20 @@ h6, .h6 { font-size: 13px; padding-bottom: (@baseLineHeight / 3); }
       margin: 0 -1px 0 0;
     }
 
+  }
+
+  &.uppercase {
+    font-size: 13px;
+    small {
+      font-size: 13px;
+    }
+    .vicon,.tooltip-content {
+      text-transform: none;
+    }
+  }
+
+  &.h-bx-normal {
+    font-family: "Arial", sans-serif;
   }
 
   &.h-bx-main {
