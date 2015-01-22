@@ -1,90 +1,72 @@
-.tetra-2015-button (@button) {
+.tetra-button (@button) {
   @bgColor: ~"";
   @hoverColor: ~"";
   @borderColor: ~"";
   @textColor: ~"";
   @disabledTextColor: ~"";
   .set-color (@button) when (@button = default) {
-    @bgColor : @buttonDefaultBgColor_revamp;
-    @hoverColor: @buttonDefaultHoverColor_revamp;
-    @borderColor: @buttonDefaultBorderColor_revamp;
-    @textColor:   @buttonDefaultTextColor_revamp;
-    @disabledTextColor: @buttonDefaultDisabledTextColor_revamp;
+    @bgColor : @buttonDefaultBgColor;
+    @hoverColor: @buttonDefaultHoverColor;
+    @borderColor: @buttonDefaultBorderColor;
+    @textColor:   @buttonDefaultTextColor;
+    @disabledTextColor: @buttonDefaultDisabledTextColor;
   }
   .set-color (@button) when (@button = primary) {
-    @bgColor : @buttonPrimaryBgColor_revamp;
-    @hoverColor: @buttonPrimaryHoverColor_revamp;
-    @borderColor: @buttonPrimaryBorderColor_revamp;
-    @textColor:   @buttonPrimaryTextColor_revamp;
-    @disabledTextColor: @buttonPrimaryDisabledTextColor_revamp;
+    @bgColor : @buttonPrimaryBgColor;
+    @hoverColor: @buttonPrimaryHoverColor;
+    @borderColor: @buttonPrimaryBorderColor;
+    @textColor:   @buttonPrimaryTextColor;
+    @disabledTextColor: @buttonPrimaryDisabledTextColor;
   }
   .set-color (@button) when (@button = tertiary) {
-    @bgColor : @buttonTerBgColor_revamp;
-    @hoverColor: @buttonTerHoverColor_revamp;
-    @borderColor: @buttonTerBorderColor_revamp;
-    @textColor:   @buttonTerTextColor_revamp;
-    @disabledTextColor: @buttonTerDisabledTextColor_revamp;
+    @bgColor : @buttonTerBgColor;
+    @hoverColor: @buttonTerHoverColor;
+    @borderColor: @buttonTerBorderColor;
+    @textColor:   @buttonTerTextColor;
+    @disabledTextColor: @buttonTerDisabledTextColor;
   }
-  .tetra-2015 & {
-    .set-color(@button);
+  .set-color(@button);
+  color: @textColor;
+  > span, > input, > button { color: @textColor; }
+  border: 1px solid @borderColor;
+  background: @bgColor;
+  .vicon {
     color: @textColor;
-    > span, > input, > button { color: @textColor; }
-    border: 1px solid @borderColor;
-    background: @bgColor;
+  }
+  &:hover,
+  &:focus {
+    background: @hoverColor;
+    color: @textColor;
+    border-color: @hoverColor;
     .vicon {
       color: @textColor;
     }
-    &:hover, &:focus {
-      background: @hoverColor;
-      color: @textColor;
-      border-color: @hoverColor;
-      .vicon {
-        color: @textColor;
-      }
-    }
-    &:active {
-      background: @bgColor;
-    }
-    &.btn-disabled,
-    &.btn-loading {
-      background: @bgColor;
-      border-color: @bgColor;
+  }
+  &:active {
+    background: @bgColor;
+  }
+  &.btn-disabled,
+  &.btn-loading {
+    background: @bgColor;
+    border-color: @bgColor;
+    color: @disabledTextColor;
+    .vicon {
       color: @disabledTextColor;
-      &:link,
-      &:visited,
-      &:hover,
-      &:focus,
-      &:active,
-      span {
-        background-image: none;
-        background-color: @bgColor;
-        border-color: @bgColor;
-        color: @disabledTextColor;
-      }
-      .vicon {
-        color: @disabledTextColor;
-      }
     }
-    &.btn-loading,
-    &.btn-loading:hover,
-    &.btn-loading:focus,
-    &.btn-loading:active {
-      span {
-        background-image: url("@{img-buttons-dir}/loaders/default.gif");
-      }
-    }
+  }
+
+  &.btn-inactive,
+  &.btn-inactive:hover,
+  &.btn-loading:focus {
+    border-color: @borderColor;
+    background-color: @bgColor;
   }
 }
 
 .btn, .core-form .btn {
   // General Properties
-  @_padding:           3px 10px;
-  @_padding_revamp:           4px 15px;
+  @_padding:           4px 15px;
   @_borderRadius:        @borderRadiusS;
-
-  .tetra-2015 & {
-    padding: @_padding_revamp;
-  }
 
   // Rules
   display: inline-block;
@@ -131,208 +113,30 @@
 
   // Icon font
   .vicon.btn-icon-before {
-    margin: 0 -2px 0 -7px;
     font-size: 8px;
-    .tetra-2015 & {
-      font-size: 7px;
-      .margin-left(@rtl, -9px);
-      .margin-right(@rtl, 0);
-    }
+    .margin-left(@rtl, -9px);
+    .margin-right(@rtl, 0);
   }
   .vicon.btn-icon-after {
-    margin: 0 -7px 0 -2px;
     font-size: 8px;
-    .tetra-2015 & {
-      font-size: 7px;
-      .margin-left(@rtl, 0);
-      .margin-right(@rtl, -9px);
-    }
+    .margin-left(@rtl, 0);
+    .margin-right(@rtl, -9px);
   }
 }
 .btn-primary, .btn-secondary, .socialAction, .eventsAction,
 .core-form .btn-primary, .core-form .btn-secondary {
-  @_primaryBgColor:        @buttonPrimaryBgColor; // in browsers that don't support gradients this will be solid
-  @_primaryStartColor:       @buttonPrimaryBgColor; // the gradient start color (at the top of the button)
-  @_primaryEndColor:       @buttonPrimaryEndColor; // the gradient end color (at the bottom of the button)
-  @_primaryHoverColor:       @buttonPrimaryHoverColor;
-  @_primaryBorderColor:      @buttonPrimaryBorderColor;
-  @_primaryTextColor:      @buttonPrimaryTextColor;
-
-  .tetra-2015-button(primary);
-
-  color: @_primaryTextColor;
-  > span, > input, > button { color: @_primaryTextColor; }
-  border: 1px solid @_primaryBorderColor;
-  #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
-
-  &:hover, &:focus {
-    #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
-    color: @_primaryTextColor;
-  }
-  &:active {
-    #gradient > .vertical(@_primaryHoverColor, @_primaryBorderColor);
-  }
-  &.btn-disabled,
-  &.btn-loading {
-    background-color: lighten(@_primaryBgColor, 10%);
-    border-color: lighten(@_primaryBorderColor, 15%);
-    color: darken(@_primaryBorderColor,3%);
-    &:link,
-    &:visited,
-    &:hover,
-    &:focus,
-    &:active,
-    span {
-	    background-color: lighten(@_primaryBgColor, 10%);
-    	border-color: lighten(@_primaryBorderColor, 15%);
-	    color: darken(@_primaryBorderColor,3%);
-    }
-    .vicon {
-      color: darken(@_primaryBorderColor,3%);
-    }
-  }
-  &.btn-loading,
-  &.btn-loading:hover,
-  &.btn-loading:focus,
-  &.btn-loading:active {
-  		span {
-  			background: transparent url("@{img-buttons-dir}/loaders/secondary.gif") no-repeat 50% 0.3em;
-  			*background-position-y: 0;
-  		}
-  }
-  &.btn-inactive,
-  &.btn-inactive:hover,
-  &.btn-inactive:focus {
-    border-color: @_primaryBorderColor;
-    #gradient > .vertical(@_primaryStartColor, @_primaryEndColor);
-    .box-shadow(none);
-    cursor: default;
-  }
+  .tetra-button(primary);
 }
 .btn-default, .secEventsAction, .core-form .btn-default {
-  @_defaultBgColor:        @buttonDefaultBgColor; // in browsers that don't support gradients this will be solid
-  @_defaultStartColor:       @buttonDefaultBgColor; // the gradient start color (at the top of the button)
-  @_defaultEndColor:       @buttonDefaultEndColor; // the gradient end color (at the bottom of the button)
-  @_defaultHoverColor:       @buttonDefaultHoverColor;
-  @_defaultBorderColor:      @buttonDefaultBorderColor;
-  @_defaultTextColor:      @buttonDefaultTextColor;
-
-  .tetra-2015-button(default);
-
-  border: 1px solid @_defaultBorderColor;
-  #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
-  color: @_defaultTextColor;
-  > span, > input, > button { color: @_defaultTextColor; }
-
-  .vicon {
-    color: @gray;
-  }
-
-  &:hover,
-  &:focus {
-    #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);
-    color: @_defaultTextColor;
-
-    .vicon {
-      color: @_defaultTextColor;
-    }
-  }
-  &:active {
-    #gradient > .vertical(@_defaultHoverColor, @_defaultBorderColor);
-  }
-  &.btn-disabled,
-  &.btn-loading {
-    background-color: @_defaultEndColor;
-    border-color: @_defaultBorderColor;
-    color: darken(@_defaultBorderColor,5%);
-    &:link,
-    &:visited,
-    &:hover,
-    &:focus,
-    &:active,
-    span {
-	    background-color: @_defaultEndColor;
-	    border-color: @_defaultBorderColor;
-	    color: darken(@_defaultBorderColor,5%);
-    }
-    .vicon {
-      color: darken(@_defaultBorderColor,5%);
-    }
-  }
-  &.btn-inactive,
-  &.btn-inactive:hover,
-  &.btn-inactive:focus {
-    border-color: @_defaultBorderColor;
-    #gradient > .vertical(@_defaultStartColor, @_defaultEndColor);
-    .box-shadow(none);
-    cursor: default;
-  }
+  .tetra-button(default);
 }
 .btn-tertiary {
-  @_tertiaryBgColor:        @buttonTerBgColor; // in browsers that don't support gradients this will be solid
-  @_tertiaryStartColor:       @buttonTerBgColor; // the gradient start color (at the top of the button)
-  @_tertiaryEndColor:       @buttonTerBorderColor; // the gradient end color (at the bottom of the button)
-  @_tertiaryHoverColor:       @buttonTerHoverColor;
-  @_tertiaryBorderColor:      @buttonTerBorderColor;
-  @_tertiaryTextColor:      @buttonTerTextColor;
-
-  .tetra-2015-button(tertiary);
-
-  color: @_tertiaryTextColor;
-  > span, > input, > button { color: @_tertiaryTextColor; }
-  border: 1px solid @_tertiaryBorderColor;
-  #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
-
-  .vicon {
-    color: @_tertiaryTextColor;
-  }
-
-  &:hover,
-  &:focus {
-    #gradient > .vertical(@_tertiaryStartColor, @_tertiaryHoverColor);
-    border-color: @_tertiaryHoverColor;
-    color: @_tertiaryTextColor;
-  }
-  &:active {
-    #gradient > .vertical(@_tertiaryStartColor, @_tertiaryHoverColor);
-  }
-  &.btn-disabled,
-  &.btn-loading {
-    background-color: lighten(@_tertiaryEndColor,3%);
-    border-color: @_tertiaryBorderColor;
-    color: darken(@_tertiaryBorderColor,5%);
-    &:link,
-    &:visited,
-    &:hover,
-    &:focus,
-    &:active,
-    span {
-	    background-color: lighten(@_tertiaryEndColor,3%);
-    	border-color: @_tertiaryBorderColor;
-	    color: darken(@_tertiaryBorderColor,5%);
-    }
-    .vicon {
-      color: darken(@_tertiaryBorderColor,5%);
-    }
-  }
-  &.btn-inactive,
-  &.btn-inactive:hover,
-  &.btn-loading:focus {
-    border-color: @_tertiaryBorderColor;
-    #gradient > .vertical(@_tertiaryStartColor, @_tertiaryEndColor);
-    .box-shadow(none);
-    cursor: default;
-  }
+  .tetra-button(tertiary);
 }
 
 .btn-small, .core-form .btn-small {
   @_padding:     1px 10px;
-  @_padding_revamp:     1px 10px;
   @_borderRadius:  @borderRadiusS;
-
-  .tetra-2015 & {
-    padding: @_padding_revamp;
-  }
 
   padding: @_padding;
   .border-radius(@_borderRadius);
@@ -346,12 +150,7 @@
 
 .btn-large, .core-form .btn-large {
   @_padding:     7px @spacingM;
-  @_padding_revamp: 7px @spacingM;
   @_borderRadius:  @borderRadiusS;
-
-  .tetra-2015 & {
-    padding: @_padding_revamp;
-  }
 
   padding: @_padding;
   .border-radius(@_borderRadius);
@@ -361,30 +160,8 @@
 .btn-lead, .core-form .btn-lead {
   position: relative;
   z-index: 2;
-  padding: @spacingM (@spacingXl * 2);
-  font-size: (@baseFontSize * 1.25);
-  margin: 6px;
-
-  .tetra-2015 & {
-    padding: @spacingM;
-    font-size: 16px;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: -6px; right: -6px; bottom: -6px; left: -6px;
-    border-radius: 6px;
-    box-shadow: 0 1px 9px fade(@black, 10%) inset;
-  }
-
-  .tetra-2015 & {
-    margin: 0;
-    &:before {
-      display: none;
-    }
-  }
+  padding: @spacingM;
+  font-size: 16px;
 }
 
 .btn-desc {
@@ -398,6 +175,9 @@
   }
 }
 
+.btn-inactive,
+.btn-inactive:hover,
+.btn-loading:focus,
 .btn-disabled,
 .btn-disabled:hover,
 .btn-disabled:focus,
@@ -407,91 +187,48 @@
 .btn-loading:focus,
 .btn-loading:active {
   cursor: default;
-  .box-shadow(none);
-  background-image: none;
 }
+
 .btn-loading,
 .btn-loading:hover,
 .btn-loading:focus,
 .btn-loading:active {
-	span {
-	   display: inline-block;
-	   overflow: hidden;
-	   height: 0;
-	   padding: 1em 0 0 0;
-	   background: transparent url("@{img-buttons-dir}/loaders/default.gif") no-repeat 50% 0.3em;
-	   *background-position-y: 0;
-	}
+  span {
+   display: inline-block;
+   overflow: hidden;
+   height: 0;
+   padding: 1em 0 0 0;
+   background: transparent url("@{img-buttons-dir}/loaders/default.gif") no-repeat 50% 0.3em;
+   *background-position-y: 0;
+  }
 }
 
 .btn-append {
   @_borderRadius:  @borderRadiusS;
-
-  border-radius: 0 @_borderRadius @_borderRadius 0;
-  margin-left: -@_borderRadius;
-  padding-left: 0;
-  padding-right: 4px;
+  .border-radius-left(@rtl, 0);
+  .border-radius-right(@rtl, @_borderRadius);
+  .padding-right(@rtl, 4px);
+  .padding-left(@rtl, 0);
+  .margin-left(@rtl, -@_borderRadius*2);
 }
 
 .btn-icon {
   padding: 10px 4px 6px;
-  border: 1px solid lighten(@buttonDefaultBorderColor, 3%);
-  #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
-
-  .tetra-2015 & {
-    padding: 10px 4px 6px;
-  }
-
-  &:hover,
-  &:focus {
-    border-color: @buttonPrimaryBorderColor;
-    #gradient > .vertical(@buttonPrimaryBgColor, @buttonPrimaryEndColor);
-
-    .vicon {
-      color: lighten(@black, 25%);
-    }
-  }
-
-  .tetra-2015-button(default);
-  &.btn-primary {
-    .tetra-2015-button(primary);
-  }
-  &.btn-tertiary {
-    .tetra-2015-button(tertiary);
-  }
-
   .vicon {
     font-size: 12px;
-    color: lighten(@black, 45%);
     margin: 0;
     *margin: -0.5em 0 0;
     *line-height: 2.25em;
   }
-
-  &.btn-disabled {
-    &:hover,
-    &:focus {
-      border-color: lighten(@buttonDefaultBorderColor, 3%);
-      #gradient > .vertical(@buttonDefaultBgColor, lighten(@buttonDefaultEndColor, 3%));
-    }
-
-    .vicon {
-      color: lighten(@black, 75%);
-    }
-  }
 }
 
 .btn-link {
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
+  background: none;
   color: @linkColor;
   text-decoration: none;
   cursor: pointer;
-
   &:hover,
   &:focus {
-    box-shadow: none;
     text-decoration: underline;
     color: @linkColorHover;
   }

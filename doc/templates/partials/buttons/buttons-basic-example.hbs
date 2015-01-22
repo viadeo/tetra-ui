@@ -110,6 +110,62 @@
 </div>
   </div>
 
+
+  <p>Secondary buttons</p>
+
+  <div class="gu gu-1of1 gu-m-1of1">
+    <a class="btn btn-secondary btn-small mbs mrl">Small</a>
+    <a class="btn btn-secondary mbs mrl">Default</a>
+    <a class="btn btn-secondary mbs mrl"><span class="vicon vicon-plus btn-icon-before"></span>before</a>
+    <a class="btn btn-secondary mbs mrl">after<span class="vicon vicon-plus btn-icon-after"></span></a>
+    <a class="btn btn-secondary btn-loading mbs mrl"><span>Loading</span></a>
+    <a class="btn btn-secondary btn-disabled mbs mrl">Disable</a>
+    <a class="btn btn-secondary btn-large mbs mrl">Large</a>
+    <a class="btn btn-secondary btn-lead mbs mrl">Lead</a>
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<!-- Add btn-small to the btn class. -->
+<a class="btn btn-secondary btn-small">
+  Small
+</a>
+<!-- The secondary btn. -->
+<a class="btn btn-secondary mbs mrl">
+  secondary
+</a>
+<!-- Add classname 'btn-icon-before' to prepend the icon -->
+<a class="btn btn-secondary mbs mrl">
+  <span class="vicon vicon-plus btn-icon-before"></span>
+  preprend icon
+</a>
+<!-- Add classname 'btn-icon-after' to append the icon -->
+<a class="btn btn-secondary mbs mrl">
+  append icon
+  <span class="vicon vicon-plus btn-icon-after"></span>
+</a>
+<!-- Add <span> inside the btn-loading to preserve the width of the button -->
+<a class="btn btn-secondary btn-loading">
+  <span>Loading</span>
+</a>
+<!-- Add btn-disabled to the btn class. -->
+<a class="btn btn-secondary btn-disabled">
+  Disable
+</a>
+<!-- Add btn-large to the btn class. -->
+<a class="btn btn-secondary btn-large">
+  Large
+</a>
+<!-- Add btn-lead to the btn class. -->
+<a class="btn btn-secondary btn-lead">
+  Lead
+</a>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
+  </div>
+
   <p>Tertiary buttons</p>
 
   <div class="gu gu-last gu-m-1of1">
@@ -170,19 +226,35 @@
 
 <p>Icons buttons</p>
 
-<a class="btn btn-icon btn-primary mrs"><i class="vicon">a</i></a>
-<a class="btn btn-icon mrs"><i class="vicon">v</i></a>
-<a class="btn btn-icon mrs"><i class="vicon">c</i></a>
-<a class="btn btn-icon btn-disabled"><i class="vicon">a</i></a>
+<a class="btn btn-icon btn-primary mrs"><span class="vicon vicon-add"></span></a>
+<a class="btn btn-icon btn-default mrs"><span class="vicon vicon-plus"></span></a>
+<a class="btn btn-icon btn-default btn-disabled mrs"><span class="vicon vicon-plus"></span></a>
+<a class="btn btn-icon btn-secondary mrs"><span class="vicon vicon-remove"></span></a>
+<a class="btn btn-icon btn-tertiary mrs"><span class="vicon vicon-star"></span></a>
 
 <div class="code-content">
 {{> toggle-code}}
 {{#markdown}}
 ```html
-<a class="btn btn-icon btn-primary mrs"><i class="vicon">a</i></a>
-<a class="btn btn-icon mrs"><i class="vicon">v</i></a>
-<a class="btn btn-icon mrs"><i class="vicon">c</i></a>
-<a class="btn btn-icon btn-disabled"><i class="vicon">a</i></a>
+<a class="btn btn-icon btn-primary mrs"><span class="vicon vicon-add"></span></a>
+<a class="btn btn-icon btn-default mrs"><span class="vicon vicon-plus"></span></a>
+<a class="btn btn-icon btn-default btn-disabled mrs"><span class="vicon vicon-plus"></span></a>
+<a class="btn btn-icon btn-secondary mrs"><span class="vicon vicon-remove"></span></a>
+<a class="btn btn-icon btn-tertiary mrs"><span class="vicon vicon-star"></span></a>
+```
+{{/markdown}}
+{{> copy-code}}
+</div>
+
+<p>Link button</p>
+
+<button class="btn-link">link example</button>
+
+<div class="code-content">
+{{> toggle-code}}
+{{#markdown}}
+```html
+<button class="btn-link">link example</button>
 ```
 {{/markdown}}
 {{> copy-code}}
