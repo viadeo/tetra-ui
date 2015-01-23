@@ -1,4 +1,4 @@
-/*! tetra-ui v3.0.0 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.1 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -194,7 +194,7 @@ $smallFontSize: $baseFontSize - 1;
 $baseLineHeight: 1.2em;
 $font-stack: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
 
-/*! tetra-ui v3.0.0 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.1 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -7721,20 +7721,7 @@ a:focus .avatar img {
 }
 
 .share-links li a.viadeo {
-  background: #272727;
-}
-
-.share-links li a.viadeo .vicon {
-  color: #f07355;
-}
-
-.share-links li a.viadeo .vicon:first-child {
-  margin-right: -2.8em;
-  color: #ffffff;
-}
-
-.share-links li a.apnacircle {
-  background: #0065ae;
+  background: #4A494D;
 }
 
 .share-links .tooltip-content {
