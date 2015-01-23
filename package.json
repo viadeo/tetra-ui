@@ -1,12 +1,19 @@
 {
   "name": "tetra-ui",
   "description": "Tetra UI: a smart, easy-to-use toolkit for creating rich interfaces in lightning speed!",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": {
-    "name": "Frédéric Perrin",
-    "email": "fperrin@viadeoteam.com"
+    "name": "Viadeo"
   },
   "contributors": [
+    {
+      "name": "Duvillier Antoine",
+      "email": "aduvillier@viadeoteam.com"
+    },
+    {
+      "name": "Frédéric Perrin",
+      "email": "fperrin@viadeoteam.com"
+    },
     {
       "name": "Frédéric Perrin",
       "email": "fperrin@viadeoteam.com"
@@ -22,10 +29,6 @@
     {
       "name": "Cormac Flynn",
       "email": "cflynn@viadeoteam.com"
-    },
-    {
-      "name": "Duvillier Antoine",
-      "email": "aduvillier@viadeoteam.com"
     }
   ],
   "dependencies": {
