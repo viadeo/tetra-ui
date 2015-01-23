@@ -2,40 +2,88 @@
 To show dropdown items, add the additional **.open** class to the **.dd** dropdown class
 {{/markdown}}
 
-<div class="gr">
-  <div class="gu gu-1of2 gu-m-1of1">
+{{#each data}}
 
-    <div class="dd">
-       <a class="dd-btn btn btn-default">Default <i class="vicon">∨</i></a>
+<div class="mtxl pbxl uppercase">{{this}}</div>
+
+<div class="gr pbxl mbxl">
+
+    <div class="dd mrs open">
+       <a class="dd-btn btn btn-{{this}}">{{this}} <span class="vicon vicon-down-alt"></span></a>
        <ul class="dd-menu">
-           <li class="dd-item"><a href="">dd item</a></li>
-           <li class="dd-item"><a href="">dd item</a></li>
+           <li class="dd-item"><a href="">dd item list</a></li>
        </ul>
     </div>
 
-    <a class="btn btn-default">Primary action</a>
-    <div class="dd pull-right">
-      <a class="dd-btn btn btn-default btn-append"><i class="vicon">∨</i></a>
+    <div class="dispib mrs">
+      <a class="btn btn-{{this}}">{{this}}</a>
+      <div class="dd pull-right open">
+        <a class="dd-btn btn btn-{{this}} btn-append"><span class="vicon vicon-down-alt"></span></a>
+         <ul class="dd-menu">
+             <li class="dd-item"><a href="">dd item list</a></li>
+             <li class="dd-item"><a href="">dd item list</a></li>
+         </ul>
+      </div>
+    </div>
+
+    <div class="dd mrs open pull-top">
+       <a class="dd-btn btn btn-{{this}} btn-large">{{this}} large and top <span class="vicon vicon-up-alt"></span></a>
        <ul class="dd-menu">
-           <li class="dd-item"><a href="">dd item</a></li>
-           <li class="dd-item"><a href="">dd item</a></li>
+           <li class="dd-item"><a href="">dd item list</a></li>
        </ul>
     </div>
 
-  </div>
+    <div class="dispib">
+      <a class="btn btn-{{this}} btn-large">{{this}} large and top-right</a>
+      <div class="dd pull-right open pull-top">
+        <a class="dd-btn btn btn-{{this}} btn-large btn-append"><span class="vicon vicon-up-alt"></span></a>
+         <ul class="dd-menu">
+             <li class="dd-item"><a href="">dd item list</a></li>
+         </ul>
+      </div>
+    </div>
+
 </div>
+{{/each}}
 
 <div class="code-content">
 {{> toggle-code}}
 {{#markdown}}
 ```html
-<div class="dd">
-   <a class="dd-btn btn btn-default">Default <i class="vicon">∨</i></a>
-   <ul class="dd-menu">
-       <li class="dd-item"><a href="">dd item</a></li>
-       <li class="dd-item"><a href="">dd item</a></li>
-   </ul>
-</div>
+    <div class="dd mrs open">
+       <a class="dd-btn btn btn-default">default <span class="vicon vicon-down-alt"></span></a>
+       <ul class="dd-menu">
+           <li class="dd-item"><a href="">dd item list</a></li>
+       </ul>
+    </div>
+
+    <div class="dispib mrs">
+      <a class="btn btn-default">default</a>
+      <div class="dd pull-right open">
+        <a class="dd-btn btn btn-default btn-append"><span class="vicon vicon-down-alt"></span></a>
+         <ul class="dd-menu">
+             <li class="dd-item"><a href="">dd item list</a></li>
+             <li class="dd-item"><a href="">dd item list</a></li>
+         </ul>
+      </div>
+    </div>
+
+    <div class="dd mrs open pull-top">
+       <a class="dd-btn btn btn-default btn-large">default large and top <span class="vicon vicon-up-alt"></span></a>
+       <ul class="dd-menu">
+           <li class="dd-item"><a href="">dd item list</a></li>
+       </ul>
+    </div>
+
+    <div class="dispib">
+      <a class="btn btn-default btn-large">default large and top-right</a>
+      <div class="dd pull-right open pull-top">
+        <a class="dd-btn btn btn-default btn-large btn-append"><span class="vicon vicon-up-alt"></span></a>
+         <ul class="dd-menu">
+             <li class="dd-item"><a href="">dd item list</a></li>
+         </ul>
+      </div>
+    </div>
 ```
 {{/markdown}}
 {{> copy-code}}

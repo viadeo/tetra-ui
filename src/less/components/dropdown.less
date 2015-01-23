@@ -1,11 +1,9 @@
 // General Properties
 
-@_padding: 3px 8px;
-@_margin: 2px -4px;
+@_padding: 8px 10px;
 @_textColor: @grayDark;
-@_ActiveColor: #e1eaf0;
-@_menuBorderColor: #cdd9e2;
-@_listBorder: 1px dotted #cad7e0;
+@_ActiveColor: lighten(@grayLighter, 8%);
+@_listBorder: 1px solid lighten(@grayLighter, 8%);
 @_listBackground: @white;
 
 // Dropdown
@@ -20,59 +18,26 @@
   // Button
 
   .dd-btn {
-    .vicon {
-      .margin(@rtl, 0, -6px, 0, -2px);
+    .padding-right(@rtl, 5px);
+    > .vicon {
+      .margin(@rtl, 0, 0, 0, 3px);
       line-height: 11px;
       *line-height: 20px;
       *margin-top: -3px;
     }
 
-    .arrow {
-      background-position: -159px -48px;
-      .left(@rtl, 3px);
-      .margin(@rtl, 0, 6px, 0, -3px);
-      position: relative;
-      vertical-align: middle;
-      height: 15px;
+    &.btn-append {
+      border-left-color: rgba(255,255,255,.4);
     }
-
-    &.btn-append .arrow {
-      border: 0;
-      box-shadow: none;
-      left: auto;
-      margin: 0;
-      vertical-align: bottom;
-    }
-  }
-
-  .btn {
-  	.arrow {
-      .margin(@rtl, 0, -2px, 0, 0);
-  	}
-  }
-
-  .btn-tertiary {
-    .arrow {
-      background-position: -159px -64px;
-    }
-  }
-
-  .btn-small {
-  	.arrow {
-		  background-position: -159px -49px;
-		  height: 14px;
-		}
   }
 
   // Menu
 
   .dd-menu {
     background: @white;
-    border: 1px solid @_menuBorderColor;
-    .border-radius(3px);
-    .box-shadow(0 3px 4px 0 rgba(0, 0, 0, .2));
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+    .border-radius(0 0 @borderRadiusS @borderRadiusS);
     outline: medium none;
-    padding: 0 5px;
     .left(@rtl, 0);
     top: 100%;
     position: absolute;
@@ -80,6 +45,7 @@
     min-width: 100% !important;
     z-index: 10;
     display: none;
+
 
     // Menu item
 
@@ -96,7 +62,6 @@
       a, .label {
         white-space: nowrap;
         padding: @_padding;
-        margin: @_margin;
         color: @_textColor;
       }
 
@@ -127,6 +92,14 @@
     .dd-menu {
       display: block;
     }
+    .dd-btn {
+      .border-radius-bottom(0);
+    }
+    &.pull-top {
+      .dd-btn {
+        .border-radius-top(0);
+      }
+    }
   }
 
    // Position
@@ -142,22 +115,17 @@
     .dd-menu {
       top: auto;
       bottom: 100%;
-      margin-bottom: @spacingXs;
+      box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+      .border-radius(@borderRadiusS @borderRadiusS 0 0);
+    }
+    .dd-btn {
+      .border-radius(0 0 @borderRadiusS @borderRadiusS);
     }
   }
 
   // Sub menu
 
   .dd {
-
-    .dd-btn {
-      .arrow {
-        background-position: -16px -256px;
-        position: absolute;
-        right: 5px;
-        left: auto;
-      }
-    }
 
     .dd-menu {
       overflow:visible;
@@ -174,20 +142,24 @@
       .dd-menu {
         display:block;
       }
-      .dd-btn {
-        .arrow {
-          background-position: -16px -240px;
-        }
-      }
     }
   }
 
 }
 
-.msie .dd .dd-menu {border:@_listBorder;}
-.msie7 .dd .dd-menu .dd-item {overflow: visible;}
-.msie6 .open,
-.msie7 .dd.open {z-index:10}
+.msie7 .dd .dd-menu,
+.msie8 .dd .dd-menu,
+.lt-ie9 .dd .dd-menu {
+  border: 1px solid @grayLighter;
+}
+.msie7 .dd .dd-menu .dd-item,
+.lt-ie8 .dd .dd-menu .dd-item {
+  overflow: visible;
+}
+.msie7 .dd.open,
+.lt-ie8 .dd.open {
+  z-index:10
+}
 
 // When the dropdown is appended to an input field
 .core-form .input-append .dd .active.btn-default {

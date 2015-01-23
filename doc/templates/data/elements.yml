@@ -101,9 +101,19 @@ nav:
       -
         slug: "buttons-basic-example"
         title: "Basic examples"
+        data:
+          - default
+          - primary
+          - secondary
+          - tertiary
       -
         slug: "dropdown-examples"
         title: "Dropdown examples"
+        data:
+          - default
+          - primary
+          - secondary
+          - tertiary
       -
         slug: "flipswitch-buttons"
         title: "Flipswitch Buttons"
