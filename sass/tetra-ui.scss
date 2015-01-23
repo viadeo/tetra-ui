@@ -1,4 +1,4 @@
-/*! tetra-ui v3.0.1 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.2 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -182,7 +182,7 @@ $gridColumns:		12 !default;
 $gridColumnWidth:	60px !default;
 $gridGutterWidth:	20px !default;
 
-/*! tetra-ui v3.0.1 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.2 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -5442,41 +5442,19 @@ a:focus .avatar img {
   *zoom: 1;
 }
 
-.dd .dd-btn .vicon {
-  margin: 0 -6px 0 -2px;
+.dd .dd-btn {
+  padding-right: 5px;
+}
+
+.dd .dd-btn > .vicon {
+  margin: 0 0 0 3px;
   *margin-top: -3px;
   line-height: 11px;
   *line-height: 20px;
 }
 
-.dd .dd-btn .arrow {
-  position: relative;
-  left: 3px;
-  height: 15px;
-  margin: 0 6px 0 -3px;
-  vertical-align: middle;
-  background-position: -159px -48px;
-}
-
-.dd .dd-btn.btn-append .arrow {
-  left: auto;
-  margin: 0;
-  vertical-align: bottom;
-  border: 0;
-  box-shadow: none;
-}
-
-.dd .btn .arrow {
-  margin: 0 -2px 0 0;
-}
-
-.dd .btn-tertiary .arrow {
-  background-position: -159px -64px;
-}
-
-.dd .btn-small .arrow {
-  height: 14px;
-  background-position: -159px -49px;
+.dd .dd-btn.btn-append {
+  border-left-color: rgba(255, 255, 255, 0.4);
 }
 
 .dd .dd-menu {
@@ -5487,19 +5465,16 @@ a:focus .avatar img {
   display: none;
   width: auto;
   min-width: 100% !important;
-  padding: 0 5px;
   background: #ffffff;
-  border: 1px solid #cdd9e2;
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
   outline: medium none;
-  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .dd .dd-menu .dd-item {
   padding: 0;
   list-style: none;
-  border-top: 1px dotted #cad7e0;
+  border-top: 1px solid #eeeef0;
 }
 
 .dd .dd-menu .dd-item:first-child {
@@ -5508,8 +5483,7 @@ a:focus .avatar img {
 
 .dd .dd-menu .dd-item a,
 .dd .dd-menu .dd-item .label {
-  padding: 3px 8px;
-  margin: 2px -4px;
+  padding: 8px 10px;
   color: #4a494d;
   white-space: nowrap;
 }
@@ -5525,7 +5499,7 @@ a:focus .avatar img {
 
 .dd .dd-menu .dd-item.active a,
 .dd .dd-menu .dd-item a:hover {
-  background-color: #e1eaf0;
+  background-color: #eeeef0;
 }
 
 .dd .dd-menu .dd-item .label {
@@ -5537,6 +5511,16 @@ a:focus .avatar img {
   display: block;
 }
 
+.dd.open .dd-btn {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dd.open.pull-top .dd-btn {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
 .dd.pull-right .dd-menu {
   right: 0;
   left: auto;
@@ -5545,14 +5529,12 @@ a:focus .avatar img {
 .dd.pull-top .dd-menu {
   top: auto;
   bottom: 100%;
-  margin-bottom: 5px;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
 }
 
-.dd .dd .dd-btn .arrow {
-  position: absolute;
-  right: 5px;
-  left: auto;
-  background-position: -16px -256px;
+.dd.pull-top .dd-btn {
+  border-radius: 0 0 3px 3px;
 }
 
 .dd .dd .dd-menu {
@@ -5569,20 +5551,19 @@ a:focus .avatar img {
   display: block;
 }
 
-.dd .dd.open .dd-btn .arrow {
-  background-position: -16px -240px;
+.msie7 .dd .dd-menu,
+.msie8 .dd .dd-menu,
+.lt-ie9 .dd .dd-menu {
+  border: 1px solid #d9d8dd;
 }
 
-.msie .dd .dd-menu {
-  border: 1px dotted #cad7e0;
-}
-
-.msie7 .dd .dd-menu .dd-item {
+.msie7 .dd .dd-menu .dd-item,
+.lt-ie8 .dd .dd-menu .dd-item {
   overflow: visible;
 }
 
-.msie6 .open,
-.msie7 .dd.open {
+.msie7 .dd.open,
+.lt-ie8 .dd.open {
   z-index: 10;
 }
 
