@@ -4448,30 +4448,18 @@ a:focus .avatar img {
   opacity: 0.8;
 }
 
-.popover-display {
-  position: relative;
-  *z-index: 10;
-}
-
-.popover-display:hover .popover,
-.popover-display:focus .popover {
-  margin-bottom: 7px;
-  opacity: 1;
-  visibility: visible;
-}
-
 .popover {
   position: absolute;
   bottom: 100%;
   left: 0;
   z-index: 1000;
   width: 230px;
-  margin: 0 0 -7px 0;
+  margin: 0;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
-  color: #2a2a2a !important;
-  text-align: left;
+  color: #4a494d !important;
+  text-align: right;
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
@@ -4480,6 +4468,7 @@ a:focus .avatar img {
   pointer-events: none;
   background: #ffffff;
   border: 1px solid #d9d8dd;
+  border-radius: 3px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .3s, margin .3s;
@@ -4490,13 +4479,13 @@ a:focus .avatar img {
 
 .popover:before {
   position: absolute;
-  bottom: -9px;
-  left: 12px;
+  bottom: -8px;
+  left: 13px;
   width: 0;
   height: 0;
   border-color: #d9d8dd transparent transparent;
   border-style: solid;
-  border-width: 9px 9px 0;
+  border-width: 8px 8px 0;
   content: '';
 }
 
@@ -4515,7 +4504,7 @@ a:focus .avatar img {
 .popover .popover-header {
   display: block;
   padding: 10px 10px 5px;
-  border-bottom: 1px dotted #d1dce5;
+  border-bottom: 1px dotted #d9d8dd;
 }
 
 .popover .popover-content {
@@ -4528,26 +4517,23 @@ a:focus .avatar img {
   padding: 10px;
   background: #f6f7f8;
   border-top: 1px solid #f4f3f5;
+  border-radius: 0 0 3px 3px;
 }
 
 /* On bottom */
 
-.popover-display.popover-bottom:hover .popover,
-.popover-display.popover-bottom:focus .popover {
-  margin-top: 7px;
-}
-
 .popover-bottom .popover {
   top: 100%;
   bottom: auto;
-  margin: -7px 0 0 0;
+  margin: 0;
 }
 
 .popover-bottom .popover:before {
-  top: -9px;
+  top: -8px;
+  left: 13px;
   border-color: transparent transparent #d9d8dd;
   border-style: solid;
-  border-width: 0 9px 9px;
+  border-width: 0 8px 8px;
 }
 
 .popover-bottom .popover:after {
@@ -4555,6 +4541,23 @@ a:focus .avatar img {
   border-color: transparent transparent #ffffff;
   border-style: solid;
   border-width: 0 7px 7px;
+}
+
+.popover-display {
+  position: relative;
+  *z-index: 10;
+}
+
+.popover-display:hover .popover,
+.popover-display:focus .popover {
+  margin-bottom: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.popover-display.popover-bottom:hover .popover,
+.popover-display.popover-bottom:focus .popover {
+  margin-top: 10px;
 }
 
 /* On left */
@@ -4565,7 +4568,7 @@ a:focus .avatar img {
 }
 
 .popover-left .popover:before {
-  right: 12px;
+  right: 13px;
   left: auto;
 }
 
@@ -5263,14 +5266,15 @@ a:focus .avatar img {
 }
 
 .dd .dd-btn > .vicon {
-  margin: 0 3px 0 0;
+  margin: 0 5px 0 0;
   *margin-top: -3px;
   line-height: 11px;
   *line-height: 20px;
 }
 
 .dd .dd-btn.btn-append {
-  border-left-color: rgba(255, 255, 255, 0.4);
+  border-right-color: #ffffff;
+  border-right-color: rgba(255, 255, 255, 0.4);
 }
 
 .dd .dd-menu {
@@ -5295,6 +5299,10 @@ a:focus .avatar img {
 
 .dd .dd-menu .dd-item:first-child {
   border: 0;
+}
+
+.dd .dd-menu .dd-item:last-child a {
+  border-radius: 0 0 3px 3px;
 }
 
 .dd .dd-menu .dd-item a,
@@ -5353,6 +5361,14 @@ a:focus .avatar img {
   border-radius: 0 0 3px 3px;
 }
 
+.dd.pull-top .dd-item:last-child a {
+  border-radius: 0;
+}
+
+.dd.pull-top .dd-item:first-child a {
+  border-radius: 3px 3px 0 0;
+}
+
 .dd .dd .dd-menu {
   position: absolute;
   top: -1px;
@@ -5370,6 +5386,7 @@ a:focus .avatar img {
 .msie7 .dd .dd-menu,
 .msie8 .dd .dd-menu,
 .lt-ie9 .dd .dd-menu {
+  min-width: 98% !important;
   border: 1px solid #d9d8dd;
 }
 
@@ -7746,10 +7763,6 @@ p {
   left: -14px;
 }
 
-.code-content .toggle-code {
-  background: #466e91;
-}
-
 .code-content .toggle-code + pre {
   margin: 0 !important;
 }
@@ -7757,8 +7770,6 @@ p {
 .code-content .toggle-code .show,
 .code-content .toggle-code .hide {
   display: block;
-  padding: 5px 0 5px 20px;
-  color: #fff;
 }
 
 .code-content .toggle-code .show {
