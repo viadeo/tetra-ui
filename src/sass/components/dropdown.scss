@@ -20,13 +20,14 @@ $_listBackground: $white;
   .dd-btn {
     @include padding-right($rtl, 5px);
     > .vicon {
-      @include margin($rtl, 0, 0, 0, 3px);
+      @include margin($rtl, 0, 0, 0, 5px);
       line-height: 11px;
       *line-height: 20px;
       *margin-top: -3px;
     }
 
     &.btn-append {
+      @include border-left-color($rtl, rgb(255,255,255)); // force rgb for ie
       @include border-left-color($rtl, rgba(255,255,255,.4));
     }
   }
@@ -56,6 +57,10 @@ $_listBackground: $white;
 
       &:first-child {
         border: 0;
+      }
+
+      &:last-child a {
+        @include border-radius(0 0 $borderRadiusS $borderRadiusS);
       }
 
       // Menu link
@@ -121,6 +126,14 @@ $_listBackground: $white;
     .dd-btn {
       @include border-radius(0 0 $borderRadiusS $borderRadiusS);
     }
+    .dd-item {
+      &:last-child a {
+        @include border-radius(0);
+      }
+      &:first-child a {
+        @include border-radius($borderRadiusS $borderRadiusS 0 0);
+      }
+    }
   }
 
   // Sub menu
@@ -151,6 +164,7 @@ $_listBackground: $white;
 .msie8 .dd .dd-menu,
 .lt-ie9 .dd .dd-menu {
   border: 1px solid $grayLighter;
+  min-width: 98% !important;
 }
 .msie7 .dd .dd-menu .dd-item,
 .lt-ie8 .dd .dd-menu .dd-item {
