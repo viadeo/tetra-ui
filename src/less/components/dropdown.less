@@ -20,13 +20,14 @@
   .dd-btn {
     .padding-right(@rtl, 5px);
     > .vicon {
-      .margin(@rtl, 0, 0, 0, 3px);
+      .margin(@rtl, 0, 0, 0, 5px);
       line-height: 11px;
       *line-height: 20px;
       *margin-top: -3px;
     }
 
     &.btn-append {
+      .border-left-color(@rtl, rgb(255,255,255)); // force rgb for ie
       .border-left-color(@rtl, rgba(255,255,255,.4));
     }
   }
@@ -163,6 +164,7 @@
 .msie8 .dd .dd-menu,
 .lt-ie9 .dd .dd-menu {
   border: 1px solid @grayLighter;
+  min-width: 98% !important;
 }
 .msie7 .dd .dd-menu .dd-item,
 .lt-ie8 .dd .dd-menu .dd-item {
