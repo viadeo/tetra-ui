@@ -440,6 +440,12 @@
 @if $rtl == false { @mixin border-right($rtl, $value){ border-right: $value; }}
 @if $rtl == true { @mixin border-right($rtl, $value){ border-left: $value; }}
 
+@if $rtl == false { @mixin border-left-color($rtl, $value){ border-left-color: $value; }}
+@if $rtl == true { @mixin border-left-color($rtl, $value){ border-right-color: $value; }}
+
+@if $rtl == false { @mixin border-right-color($rtl, $value){ border-right-color: $value; }}
+@if $rtl == true { @mixin border-right-color($rtl, $value){ border-left-color: $value; }}
+
 @if $rtl == false { @mixin left($rtl, $value){ left: $value; }}
 @if $rtl == true { @mixin left($rtl, $value){ right: $value; }}
 

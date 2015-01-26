@@ -620,6 +620,12 @@
 .border-right (@rtl, @value) when (@rtl = false) { border-right: @value; }
 .border-right (@rtl, @value) when (@rtl = true) { border-left: @value; }
 
+.border-left-color (@rtl, @value) when (@rtl = false) { border-left-color: @value; }
+.border-left-color (@rtl, @value) when (@rtl = true) { border-right-color: @value; }
+
+.border-right-color (@rtl, @value) when (@rtl = false) { border-right-color: @value; }
+.border-right-color (@rtl, @value) when (@rtl = true) { border-left-color: @value; }
+
 .left (@rtl, @value) when (@rtl = false) { left: @value; }
 .left (@rtl, @value) when (@rtl = true) { right: @value; }
 

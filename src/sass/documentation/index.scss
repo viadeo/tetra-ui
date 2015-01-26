@@ -150,14 +150,11 @@ p {
   }
 
   .toggle-code {
-    background: lighten($sidebar, 20%);
     & + pre {
       margin:0 !important;
     }
     .show, .hide {
       display: block;
-      color:#fff;
-      padding:5px 0 5px 20px;
     }
     .show {
       display:block;
