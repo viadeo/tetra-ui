@@ -61,7 +61,7 @@
     background: $bgColor;
     border-color: $bgColor;
     color: $disabledTextColor;
-    .vicon {
+    > span, .vicon {
       color: $disabledTextColor;
     }
   }

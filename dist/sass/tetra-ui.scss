@@ -5054,6 +5054,12 @@ a:focus .avatar img {
   border-color: #87868c;
 }
 
+.btn-default.btn-disabled > span,
+.secEventsAction.btn-disabled > span,
+.core-form .btn-default.btn-disabled > span,
+.btn-default.btn-loading > span,
+.secEventsAction.btn-loading > span,
+.core-form .btn-default.btn-loading > span,
 .btn-default.btn-disabled .vicon,
 .secEventsAction.btn-disabled .vicon,
 .core-form .btn-default.btn-disabled .vicon,
@@ -5151,6 +5157,14 @@ a:focus .avatar img {
   border-color: #42a2d6;
 }
 
+.btn-primary.btn-disabled > span,
+.socialAction.btn-disabled > span,
+.eventsAction.btn-disabled > span,
+.core-form .btn-primary.btn-disabled > span,
+.btn-primary.btn-loading > span,
+.socialAction.btn-loading > span,
+.eventsAction.btn-loading > span,
+.core-form .btn-primary.btn-loading > span,
 .btn-primary.btn-disabled .vicon,
 .socialAction.btn-disabled .vicon,
 .eventsAction.btn-disabled .vicon,
@@ -5229,6 +5243,10 @@ a:focus .avatar img {
   border-color: #f07355;
 }
 
+.btn-secondary.btn-disabled > span,
+.core-form .btn-secondary.btn-disabled > span,
+.btn-secondary.btn-loading > span,
+.core-form .btn-secondary.btn-loading > span,
 .btn-secondary.btn-disabled .vicon,
 .core-form .btn-secondary.btn-disabled .vicon,
 .btn-secondary.btn-loading .vicon,
@@ -5285,6 +5303,8 @@ a:focus .avatar img {
   border-color: #53c1af;
 }
 
+.btn-tertiary.btn-disabled > span,
+.btn-tertiary.btn-loading > span,
 .btn-tertiary.btn-disabled .vicon,
 .btn-tertiary.btn-loading .vicon {
   color: #2e8073;
