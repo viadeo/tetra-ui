@@ -70,6 +70,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dist-css', [
     'clean:tmp',
+    'clean:css',
     'recess',
     'concat:less',
     'less2sass',
