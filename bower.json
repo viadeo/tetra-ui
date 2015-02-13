@@ -1,5 +1,6 @@
 {
   "name": "tetra-ui",
+  "version": "3.0.5",
   "main": "dist/",
   "ignore": [
     "**/.*",
@@ -23,6 +24,5 @@
   },
   "devDependencies": {
     "jquery": "~1.11.1"
-  },
-  "version": "3.0.0"
+  }
 }
