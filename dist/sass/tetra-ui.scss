@@ -6300,7 +6300,8 @@ a:focus .avatar img {
   *zoom: 1;
 }
 
-.paginator li a {
+.paginator li a,
+.paginator li .btn-link {
   display: inline-block;
   min-width: 29px;
   padding: 6px 0;
@@ -6313,21 +6314,27 @@ a:focus .avatar img {
 }
 
 .paginator li a:hover,
-.paginator li a:focus {
+.paginator li .btn-link:hover,
+.paginator li a:focus,
+.paginator li .btn-link:focus {
   color: #ffffff;
   background: #68b5de;
 }
 
 .paginator li a:hover .vicon,
-.paginator li a:focus .vicon {
+.paginator li .btn-link:hover .vicon,
+.paginator li a:focus .vicon,
+.paginator li .btn-link:focus .vicon {
   color: #ffffff;
 }
 
-.paginator li a:active {
+.paginator li a:active,
+.paginator li .btn-link:active {
   background: #42a2d6;
 }
 
-.paginator li a.btn-pagination {
+.paginator li a.btn-pagination,
+.paginator li .btn-link.btn-pagination {
   padding: 6px 13px 6px 13px;
   vertical-align: baseline;
 }
@@ -6338,13 +6345,15 @@ a:focus .avatar img {
   font-size: 9px;
 }
 
-.paginator li.disabled a {
+.paginator li.disabled a,
+.paginator li.disabled .btn-link {
   color: #c5c3c7;
   cursor: default;
   background: transparent;
 }
 
-.paginator li.disabled a .vicon {
+.paginator li.disabled a .vicon,
+.paginator li.disabled .btn-link .vicon {
   color: #c5c3c7;
 }
 
@@ -6353,7 +6362,8 @@ a:focus .avatar img {
   margin: 0 5px;
 }
 
-.paginator li.active a {
+.paginator li.active a,
+.paginator li.active .btn-link {
   color: inherit;
   cursor: default;
   background: #c5c3c7;
