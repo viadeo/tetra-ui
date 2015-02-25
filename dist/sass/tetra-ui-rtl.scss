@@ -112,7 +112,7 @@ $buttonPrimaryDisabledTextColor:   darken($blue, 20%) !default;
 
 $buttonSecondaryBgColor:     $orange1 !default;
 $buttonSecondaryEndColor:    $orange1 !default;
-$buttonSecondaryHoverColor:  darken($orange1, 10%) !default;
+$buttonSecondaryHoverColor:  desaturate(darken($orange1, 10%),16%) !default;
 $buttonSecondaryBorderColor: $orange1 !default;
 $buttonSecondaryTextColor:   $buttonColor !default;
 $buttonSecondaryDisabledTextColor:   darken($orange1, 20%) !default;
@@ -5234,8 +5234,8 @@ a:focus .avatar img {
 .btn-secondary:focus,
 .core-form .btn-secondary:focus {
   color: #ffffff;
-  background: #ec4c26;
-  border-color: #ec4c26;
+  background: #d95839;
+  border-color: #d95839;
 }
 
 .btn-secondary:hover .vicon,

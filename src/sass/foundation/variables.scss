@@ -110,7 +110,7 @@ $buttonPrimaryDisabledTextColor:   darken($blue, 20%) !default;
 
 $buttonSecondaryBgColor:     $orange1 !default;
 $buttonSecondaryEndColor:    $orange1 !default;
-$buttonSecondaryHoverColor:  darken($orange1, 10%) !default;
+$buttonSecondaryHoverColor:  desaturate(darken($orange1, 10%),16%) !default;
 $buttonSecondaryBorderColor: $orange1 !default;
 $buttonSecondaryTextColor:   $buttonColor !default;
 $buttonSecondaryDisabledTextColor:   darken($orange1, 20%) !default;
