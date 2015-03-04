@@ -1,4 +1,4 @@
-/*! tetra-ui v3.0.7 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.8 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -2964,14 +2964,14 @@ pre {
   display: inline-block;
   width: 210px;
   height: 1.2em;
-  padding: 4px;
+  padding: 4px 4px 4px 10px;
   margin-bottom: 9px;
   font-size: 15px;
   line-height: 1.2em;
   color: #4a494d;
   vertical-align: middle;
   border: 1px solid #c5c7c5;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .core-form .uneditable-textarea {
@@ -4619,7 +4619,7 @@ a:focus .avatar img {
   min-width: 44px;
   padding: 4px 10px;
   margin: 0 0 -7px 0;
-  font: 11px 'Arial', sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 11px;
   line-height: 1.6em;
   color: #ffffff !important;

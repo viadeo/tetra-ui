@@ -1,4 +1,4 @@
-/*! tetra-ui v3.0.7 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.8 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 // Global variables
 
@@ -40,6 +40,7 @@
 @blackLight:        lighten(@black, 18%);
 @grayDark:          #4a494d;
 @gray:              #87868c;
+@grayLightLight:    #9e9ea2;
 @grayLight:         #c5c3c7;
 @grayLighter:       #d9d8dd;
 @white:             #FFFFFF;
@@ -96,12 +97,12 @@
 
 @buttonColor: @white;
 
-@buttonDefaultBgColor:     @gray;
-@buttonDefaultEndColor:    @gray;
-@buttonDefaultHoverColor:  darken(@gray, 10%);
-@buttonDefaultBorderColor: @gray;
+@buttonDefaultBgColor:     @grayLightLight;
+@buttonDefaultEndColor:    @grayLightLight;
+@buttonDefaultHoverColor:  darken(@grayLightLight, 5%);
+@buttonDefaultBorderColor: @grayLightLight;
 @buttonDefaultTextColor:   @buttonColor;
-@buttonDefaultDisabledTextColor:   darken(@gray, 20%);
+@buttonDefaultDisabledTextColor:   darken(@grayLightLight, 5%);
 
 @buttonPrimaryBgColor:     @blue;
 @buttonPrimaryEndColor:    @blue;
@@ -638,7 +639,7 @@
 .border-top-left-radius (@rtl, @value) when (@rtl = false) { border-top-left-radius: @value; }
 .border-top-left-radius (@rtl, @value) when (@rtl = true) { border-top-right-radius: @value; }
 
-/*! tetra-ui v3.0.7 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.0.8 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 html,
 body {
@@ -3604,14 +3605,14 @@ pre {
   display: inline-block;
   width: 210px;
   height: 1.4em;
-  padding: 4px;
+  padding: 4px 4px 4px 10px;
   margin-bottom: 9px;
   font-size: 12px;
   line-height: 1.4em;
   color: #4a494d;
   vertical-align: middle;
   border: 1px solid #c5c7c5;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .core-form .uneditable-textarea {
@@ -5259,7 +5260,7 @@ a:focus .avatar img {
   min-width: 44px;
   padding: 4px 10px;
   margin: 0 0 -7px 0;
-  font: 11px 'Arial', sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 11px;
   line-height: 1.6em;
   color: #ffffff !important;
@@ -5455,8 +5456,8 @@ a:focus .avatar img {
 .secEventsAction,
 .core-form .btn-default {
   color: #ffffff;
-  background: #87868c;
-  border: 1px solid #87868c;
+  background: #9e9ea2;
+  border: 1px solid #9e9ea2;
 }
 
 .btn-default > span,
@@ -5484,8 +5485,8 @@ a:focus .avatar img {
 .secEventsAction:focus,
 .core-form .btn-default:focus {
   color: #ffffff;
-  background: #6e6d72;
-  border-color: #6e6d72;
+  background: #919196;
+  border-color: #919196;
 }
 
 .btn-default:hover .vicon,
@@ -5500,33 +5501,41 @@ a:focus .avatar img {
 .btn-default:active,
 .secEventsAction:active,
 .core-form .btn-default:active {
-  background: #87868c;
+  background: #9e9ea2;
+}
+
+.btn-default.btn-loading,
+.secEventsAction.btn-loading,
+.core-form .btn-default.btn-loading {
+  color: #919196;
+  background: #9e9ea2;
+  border-color: #9e9ea2;
+}
+
+.btn-default.btn-loading > span,
+.secEventsAction.btn-loading > span,
+.core-form .btn-default.btn-loading > span,
+.btn-default.btn-loading .vicon,
+.secEventsAction.btn-loading .vicon,
+.core-form .btn-default.btn-loading .vicon {
+  color: #919196;
 }
 
 .btn-default.btn-disabled,
 .secEventsAction.btn-disabled,
-.core-form .btn-default.btn-disabled,
-.btn-default.btn-loading,
-.secEventsAction.btn-loading,
-.core-form .btn-default.btn-loading {
-  color: #555458;
-  background: #87868c;
-  border-color: #87868c;
+.core-form .btn-default.btn-disabled {
+  color: #919196;
+  background: #c5c5c7;
+  border-color: #c5c5c7;
 }
 
 .btn-default.btn-disabled > span,
 .secEventsAction.btn-disabled > span,
 .core-form .btn-default.btn-disabled > span,
-.btn-default.btn-loading > span,
-.secEventsAction.btn-loading > span,
-.core-form .btn-default.btn-loading > span,
 .btn-default.btn-disabled .vicon,
 .secEventsAction.btn-disabled .vicon,
-.core-form .btn-default.btn-disabled .vicon,
-.btn-default.btn-loading .vicon,
-.secEventsAction.btn-loading .vicon,
-.core-form .btn-default.btn-loading .vicon {
-  color: #555458;
+.core-form .btn-default.btn-disabled .vicon {
+  color: #919196;
 }
 
 .btn-default.btn-inactive,
@@ -5538,8 +5547,8 @@ a:focus .avatar img {
 .btn-default.btn-loading:focus,
 .secEventsAction.btn-loading:focus,
 .core-form .btn-default.btn-loading:focus {
-  background-color: #87868c;
-  border-color: #87868c;
+  background-color: #9e9ea2;
+  border-color: #9e9ea2;
 }
 
 .btn-primary,
@@ -5604,10 +5613,6 @@ a:focus .avatar img {
   background: #42a2d6;
 }
 
-.btn-primary.btn-disabled,
-.socialAction.btn-disabled,
-.eventsAction.btn-disabled,
-.core-form .btn-primary.btn-disabled,
 .btn-primary.btn-loading,
 .socialAction.btn-loading,
 .eventsAction.btn-loading,
@@ -5617,22 +5622,34 @@ a:focus .avatar img {
   border-color: #42a2d6;
 }
 
-.btn-primary.btn-disabled > span,
-.socialAction.btn-disabled > span,
-.eventsAction.btn-disabled > span,
-.core-form .btn-primary.btn-disabled > span,
 .btn-primary.btn-loading > span,
 .socialAction.btn-loading > span,
 .eventsAction.btn-loading > span,
 .core-form .btn-primary.btn-loading > span,
-.btn-primary.btn-disabled .vicon,
-.socialAction.btn-disabled .vicon,
-.eventsAction.btn-disabled .vicon,
-.core-form .btn-primary.btn-disabled .vicon,
 .btn-primary.btn-loading .vicon,
 .socialAction.btn-loading .vicon,
 .eventsAction.btn-loading .vicon,
 .core-form .btn-primary.btn-loading .vicon {
+  color: #206a92;
+}
+
+.btn-primary.btn-disabled,
+.socialAction.btn-disabled,
+.eventsAction.btn-disabled,
+.core-form .btn-primary.btn-disabled {
+  color: #206a92;
+  background: #81c1e4;
+  border-color: #81c1e4;
+}
+
+.btn-primary.btn-disabled > span,
+.socialAction.btn-disabled > span,
+.eventsAction.btn-disabled > span,
+.core-form .btn-primary.btn-disabled > span,
+.btn-primary.btn-disabled .vicon,
+.socialAction.btn-disabled .vicon,
+.eventsAction.btn-disabled .vicon,
+.core-form .btn-primary.btn-disabled .vicon {
   color: #206a92;
 }
 
@@ -5694,8 +5711,6 @@ a:focus .avatar img {
   background: #f07355;
 }
 
-.btn-secondary.btn-disabled,
-.core-form .btn-secondary.btn-disabled,
 .btn-secondary.btn-loading,
 .core-form .btn-secondary.btn-loading {
   color: #cd3612;
@@ -5703,14 +5718,24 @@ a:focus .avatar img {
   border-color: #f07355;
 }
 
-.btn-secondary.btn-disabled > span,
-.core-form .btn-secondary.btn-disabled > span,
 .btn-secondary.btn-loading > span,
 .core-form .btn-secondary.btn-loading > span,
-.btn-secondary.btn-disabled .vicon,
-.core-form .btn-secondary.btn-disabled .vicon,
 .btn-secondary.btn-loading .vicon,
 .core-form .btn-secondary.btn-loading .vicon {
+  color: #cd3612;
+}
+
+.btn-secondary.btn-disabled,
+.core-form .btn-secondary.btn-disabled {
+  color: #cd3612;
+  background: #f6ad9b;
+  border-color: #f6ad9b;
+}
+
+.btn-secondary.btn-disabled > span,
+.core-form .btn-secondary.btn-disabled > span,
+.btn-secondary.btn-disabled .vicon,
+.core-form .btn-secondary.btn-disabled .vicon {
   color: #cd3612;
 }
 
@@ -5756,17 +5781,25 @@ a:focus .avatar img {
   background: #53c1af;
 }
 
-.btn-tertiary.btn-disabled,
 .btn-tertiary.btn-loading {
   color: #2e8073;
   background: #53c1af;
   border-color: #53c1af;
 }
 
-.btn-tertiary.btn-disabled > span,
 .btn-tertiary.btn-loading > span,
-.btn-tertiary.btn-disabled .vicon,
 .btn-tertiary.btn-loading .vicon {
+  color: #2e8073;
+}
+
+.btn-tertiary.btn-disabled {
+  color: #2e8073;
+  background: #8bd5c9;
+  border-color: #8bd5c9;
+}
+
+.btn-tertiary.btn-disabled > span,
+.btn-tertiary.btn-disabled .vicon {
   color: #2e8073;
 }
 
@@ -6065,7 +6098,7 @@ a:focus .avatar img {
 }
 
 .core-form .input-append .dd .active.btn-default {
-  border-color: #87868c;
+  border-color: #9e9ea2;
 }
 
 .popin-overlay {

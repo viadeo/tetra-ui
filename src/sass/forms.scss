@@ -71,14 +71,14 @@
     display: inline-block;
     width: 210px;
     height: $baseLineHeight;
-    padding: 4px;
+    padding: 4px 4px 4px 10px;
     margin-bottom: 9px;
     font-size: $baseFontSize;
     line-height: $baseLineHeight;
     color: $grayDark;
     vertical-align: middle;
     border: 1px solid $inputBorder;
-    border-radius: $borderRadiusXs;
+    border-radius: $borderRadiusMS;
   }
   .uneditable-textarea {
     width: auto;
