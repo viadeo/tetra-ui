@@ -154,7 +154,7 @@
 .context { overflow: hidden; zoom: 1; _overflow: visible; }
 .cf, .clearfix { @include clearfixHack(); }
 .clear, .clr { clear: both; }
-.hidden { display: none !important; }
+.hidden { display: none; }
 .decorative {
   font-family: $font-stack;
 }
