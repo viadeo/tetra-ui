@@ -56,10 +56,18 @@
   &:active {
     background: $bgColor;
   }
-  &.btn-disabled,
   &.btn-loading {
     background: $bgColor;
     border-color: $bgColor;
+    color: $disabledTextColor;
+    > span, .vicon {
+      color: $disabledTextColor;
+    }
+  }
+
+  &.btn-disabled {
+    background: lighten($bgColor, 15%);
+    border-color: lighten($bgColor, 15%);
     color: $disabledTextColor;
     > span, .vicon {
       color: $disabledTextColor;

@@ -38,6 +38,7 @@ $black:             #000000 !default;
 $blackLight:        lighten($black, 18%) !default;
 $grayDark:          #4a494d !default;
 $gray:              #87868c !default;
+$grayLightLight:    #9e9ea2 !default;
 $grayLight:         #c5c3c7 !default;
 $grayLighter:       #d9d8dd !default;
 $white:             #FFFFFF !default;
@@ -94,12 +95,12 @@ $linkColorHover:    darken($linkColor, 14%) !default;
 
 $buttonColor: $white !default;
 
-$buttonDefaultBgColor:     $gray !default;
-$buttonDefaultEndColor:    $gray !default;
-$buttonDefaultHoverColor:  darken($gray, 10%) !default;
-$buttonDefaultBorderColor: $gray !default;
+$buttonDefaultBgColor:     $grayLightLight !default;
+$buttonDefaultEndColor:    $grayLightLight !default;
+$buttonDefaultHoverColor:  darken($grayLightLight, 5%) !default;
+$buttonDefaultBorderColor: $grayLightLight !default;
 $buttonDefaultTextColor:   $buttonColor !default;
-$buttonDefaultDisabledTextColor:   darken($gray, 20%) !default;
+$buttonDefaultDisabledTextColor:   darken($grayLightLight, 5%) !default;
 
 $buttonPrimaryBgColor:     $blue !default;
 $buttonPrimaryEndColor:    $blue !default;
