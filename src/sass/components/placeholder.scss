@@ -12,14 +12,14 @@
 
   .placeholder {
     position: absolute;
-    left: 5px; top: 0;
+    left: 0; top: 0;
     width: 99%; height: 100%;
     z-index: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 2.3em;
-    text-indent: 5px;
+    text-indent: 10px;
     background: $white;
     border-radius: $borderRadiusS;
     color: lighten($black, 65%);

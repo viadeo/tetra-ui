@@ -70,8 +70,9 @@
   .uneditable-input {
     display: inline-block;
     width: 210px;
+    text-indent:5px;
     height: $baseLineHeight;
-    padding: 4px 4px 4px 10px;
+    padding: 4px;
     margin-bottom: 9px;
     font-size: $baseFontSize;
     line-height: $baseLineHeight;
