@@ -165,10 +165,11 @@
 }
 
 .growl-type-premium {
-	background: tint(@black, 24%);
+  @bg-growl-premium: tint(@black, 24%);
+  background: @bg-growl-premium;
 
-	.growl-icon {
-		background: shade(tint(@black, 24%), 10%);
+  .growl-icon {
+    background: shade(@bg-growl-premium, 10%);
 		color: @orange4;
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
