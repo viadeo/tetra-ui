@@ -186,10 +186,11 @@
 }
 
 .bx-alert-premium {
-	background: mix(#ffffff, $black, 24%);
+  $bg-alert-premium: mix(#ffffff, $black, 24%);
+  background: $bg-alert-premium;
 
-	.bx-alert-icon {
-		background: shade(mix(#ffffff, $black, 24%), 10%);
+  .bx-alert-icon {
+    background: mix(#000000, $bg-alert-premium, 10%);
 		color: $orange4;
 		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
