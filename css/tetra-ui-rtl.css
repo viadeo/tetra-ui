@@ -2964,11 +2964,12 @@ pre {
   display: inline-block;
   width: 210px;
   height: 1.2em;
-  padding: 4px 4px 4px 10px;
+  padding: 4px;
   margin-bottom: 9px;
   font-size: 15px;
   line-height: 1.2em;
   color: #4a494d;
+  text-indent: 5px;
   vertical-align: middle;
   border: 1px solid #c5c7c5;
   border-radius: 5px;
@@ -7194,14 +7195,14 @@ a:focus .avatar img {
 .placeholding .placeholder {
   position: absolute;
   top: 0;
-  left: 5px;
+  left: 0;
   z-index: 1;
   width: 99%;
   height: 100%;
   overflow: hidden;
   line-height: 2.3em;
   color: #a6a6a6;
-  text-indent: 5px;
+  text-indent: 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   background: #ffffff;
