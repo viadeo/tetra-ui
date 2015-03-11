@@ -21,7 +21,7 @@
     line-height: 2.3em;
     text-indent: 10px;
     background: $white;
-    border-radius: $borderRadiusS;
+    border-radius: $borderRadiusMS;
     color: lighten($black, 65%);
     @include transition(color 0.2s);
   }
