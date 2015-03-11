@@ -7385,6 +7385,7 @@ a:focus .avatar img {
   margin-left: 2px;
   border-left: 23px solid #e6e6e6;
   -webkit-filter: blur(2px);
+          filter: blur(1px);
 }
 
 .nav-steps dt:after,
