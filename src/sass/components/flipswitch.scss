@@ -45,8 +45,6 @@
 		margin-left: -100%;
 
 		-webkit-transition: margin-left 0.2s ease-in;
-    -moz-transition: margin-left 0.2s ease-in;
-    -o-transition: margin-left 0.2s ease-in;
     transition: margin-left 0.2s ease-in;
 	}
 
@@ -79,8 +77,6 @@
 		cursor: pointer;
 
 		-webkit-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
-    -moz-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
-    -o-transition: left 0.2s ease-in, margin-left 0.2s ease-in;
     transition: left 0.2s ease-in, margin-left 0.2s ease-in;
 
     &:hover {

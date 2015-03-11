@@ -125,8 +125,6 @@ input[type="submit"] {
 }
 input[type="search"] { // Appearance in Safari/Chrome
   -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-decoration {

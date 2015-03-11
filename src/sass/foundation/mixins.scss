@@ -119,7 +119,6 @@
 // Transitions
 @mixin transition($transition){
     -webkit-transition: $transition;
-       -moz-transition: $transition;
          -o-transition: $transition;
             transition: $transition;
     // IE 10 supports the unprefixed form
@@ -148,7 +147,6 @@
   @mixin horizontal($startColor: #555, $endColor: #333){
     background-color: $endColor;
     background-repeat: repeat-x;
-    background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
     background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
     background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
@@ -159,7 +157,6 @@
   @mixin vertical($startColor: #555, $endColor: #333){
     background-color: $endColor;
     background-repeat: repeat-x;
-    background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
     background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
     background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
@@ -170,7 +167,6 @@
   @mixin directional($startColor: #555, $endColor: #333, $deg: 45deg){
     background-color: $endColor;
     background-repeat: repeat-x;
-    background-image: -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
     background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
     background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
     background-image: linear-gradient($deg, $startColor, $endColor); // IE 10 supports the unprefixed form
@@ -180,7 +176,6 @@
     background-repeat: no-repeat;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), color-stop($colorStop, $midColor), to($endColor));
     background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
-    background-image: -moz-linear-gradient(top, $startColor, $midColor $colorStop, $endColor);
     background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
     background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
@@ -191,7 +186,6 @@
 @mixin gradient-horizontal($startColor: #555, $endColor: #333){
   background-color: $endColor;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
   background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
   background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
@@ -202,7 +196,6 @@
 @mixin gradient-vertical($startColor: #555, $endColor: #333){
   background-color: $endColor;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
   background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
   background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
@@ -213,7 +206,6 @@
 @mixin gradient-directional($startColor: #555, $endColor: #333, $deg: 45deg){
   background-color: $endColor;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
   background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
   background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
   background-image: linear-gradient($deg, $startColor, $endColor); // IE 10 supports the unprefixed form
@@ -223,7 +215,6 @@
   background-repeat: no-repeat;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), color-stop($colorStop, $midColor), to($endColor));
   background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
-  background-image: -moz-linear-gradient(top, $startColor, $midColor $colorStop, $endColor);
   background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
   background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
@@ -232,9 +223,7 @@
 
 // Background clipping
 @mixin background-clip($clip){
-    -webkit-background-clip: $clip;
-       -moz-background-clip: $clip;
-            background-clip: $clip;
+  background-clip: $clip;
 }
 
 // Fix text inherit
@@ -377,10 +366,7 @@
 
 // Box sizing
 @mixin box-sizing($boxmodel){
-  -webkit-box-sizing: $boxmodel;
-     -moz-box-sizing: $boxmodel;
-      -ms-box-sizing: $boxmodel;
-          box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
 }
 
 // Webkit-style focus
