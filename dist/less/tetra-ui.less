@@ -3591,7 +3591,6 @@ pre {
   font-size: 12px;
   line-height: 1.4em;
   color: #4a494d;
-  text-indent: 5px;
   vertical-align: middle;
   border: 1px solid #c5c7c5;
   border-radius: 5px;
@@ -3606,6 +3605,16 @@ pre {
 .core-form label textarea,
 .core-form label select {
   display: block;
+}
+
+.core-form input[type="text"],
+.core-form input[type="password"],
+.core-form input[type="email"],
+.core-form input[type="number"],
+.core-form input[type="url"],
+.core-form input[type="search"],
+.core-form input[type="tel"] {
+  text-indent: 5px;
 }
 
 .core-form input[type="image"],

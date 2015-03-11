@@ -70,7 +70,6 @@
   .uneditable-input {
     display: inline-block;
     width: 210px;
-    text-indent:5px;
     height: @baseLineHeight;
     padding: 4px;
     margin-bottom: 9px;
@@ -91,6 +90,16 @@
   label textarea,
   label select {
     display: block;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"]{
+    text-indent:5px;
   }
 
   // Mini reset for unique input types
