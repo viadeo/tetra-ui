@@ -3158,8 +3158,9 @@ pre {
 
 .core-form input[type="file"] {
   width: auto;
+  height: auto;
   padding: initial;
-  line-height: initial;
+  line-height: normal;
   background-color: #ffffff;
   background-color: initial;
   border: initial;
@@ -3173,18 +3174,10 @@ pre {
   height: auto;
 }
 
-.core-form select,
-.core-form input[type="file"] {
-  height: 28px;
-  line-height: 28px;
-}
-
-.core-form input[type="file"] {
-  line-height: 18px \9;
-}
-
 .core-form select {
   width: 220px;
+  height: 28px;
+  line-height: 28px;
   background-color: #ffffff;
 }
 
