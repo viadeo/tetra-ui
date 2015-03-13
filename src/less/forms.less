@@ -127,7 +127,7 @@
     border: initial;
     background-color: @inputBackground;
     background-color: initial;
-    .box-shadow(none);
+    box-shadow: none;
   }
 
   // Help out input buttons
@@ -164,7 +164,7 @@
 
   // Remove shadow from image inputs
   input[type="image"] {
-    .box-shadow(none);
+    box-shadow: none;
   }
 
   // Make textarea height behave
@@ -234,7 +234,7 @@
   input[type="radio"]:focus,
   input[type="checkbox"]:focus,
   select:focus {
-    .box-shadow(none); // override for file inputs
+    box-shadow: none; // override for file inputs
     .tab-focus();
   }
 
@@ -372,7 +372,7 @@
     display: block;
     background-color: @inputBackground;
     border-color: #eee;
-    .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.025);
     cursor: not-allowed;
   }
 

@@ -3163,8 +3163,7 @@ pre {
   background-color: #ffffff;
   background-color: initial;
   border: initial;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .core-form input[type="button"],
@@ -3195,8 +3194,7 @@ pre {
 }
 
 .core-form input[type="image"] {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .core-form textarea {
@@ -3245,7 +3243,6 @@ pre {
 .core-form textarea {
   box-shadow: none;
   -webkit-transition: border 0.2s, box-shadow 0.2s;
-       -o-transition: border 0.2s, box-shadow 0.2s;
           transition: border 0.2s, box-shadow 0.2s;
 }
 
@@ -3264,8 +3261,7 @@ pre {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .core-form .input-mini {
@@ -3417,8 +3413,7 @@ pre {
   cursor: not-allowed;
   background-color: #ffffff;
   border-color: #eee;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
 }
 
 .core-form :-moz-placeholder {
@@ -4558,7 +4553,6 @@ h1 .sub {
   border-radius: 5px;
   opacity: 1;
   -webkit-transition: opacity 0.2s;
-       -o-transition: opacity 0.2s;
           transition: opacity 0.2s;
 }
 
@@ -4605,7 +4599,6 @@ a:focus .avatar img {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .3s, margin .3s;
-       -o-transition: opacity .3s, margin .3s;
           transition: opacity .3s, margin .3s;
 }
 
@@ -4865,8 +4858,7 @@ a:focus .avatar img {
   cursor: pointer;
   border-radius: 3px;
   zoom: 1;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -webkit-user-select: none;
    -khtml-user-select: none;
      -moz-user-select: none;
@@ -4879,16 +4871,14 @@ a:focus .avatar img {
 .btn:focus,
 .core-form .btn:focus {
   text-decoration: none;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .btn:active,
 .core-form .btn:active,
 .btn.active,
 .core-form .btn.active {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .btn span input,
@@ -5581,7 +5571,6 @@ a:focus .avatar img {
   height: 100%;
   background: #000000;
   background: -webkit-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
-  background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   opacity: 0.6;
   filter: alpha(opacity=60);
@@ -5675,7 +5664,6 @@ a:focus .avatar img {
   overflow: hidden;
   white-space: nowrap;
   -webkit-transition: max-width 0.3s;
-       -o-transition: max-width 0.3s;
           transition: max-width 0.3s;
 }
 
@@ -5822,7 +5810,6 @@ a:focus .avatar img {
   height: 100%;
   background: #000000;
   background: -webkit-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
-  background: -o-radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   background: radial-gradient(50% 20%, ellipse farthest-corner, rgba(0, 0, 0, 0.6), #000000);
   opacity: 0.6;
   filter: alpha(opacity=60);
@@ -5836,15 +5823,6 @@ a:focus .avatar img {
 }
 
 @-webkit-keyframes highlight-overlay-fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-
-@-moz-keyframes highlight-overlay-fadein {
   from {
     opacity: 0;
   }
@@ -5890,7 +5868,6 @@ a:focus .avatar img {
   padding: 10px 30px;
   text-decoration: none;
   -webkit-transition: background-color 0.15s;
-       -o-transition: background-color 0.15s;
           transition: background-color 0.15s;
 }
 
@@ -6109,9 +6086,7 @@ a:focus .avatar img {
   text-decoration: none;
   cursor: pointer;
   background-color: #d9d9d9;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #d9d9d9));
   background-image: -webkit-linear-gradient(top, #ffffff, #d9d9d9);
-  background-image: -o-linear-gradient(top, #ffffff, #d9d9d9);
   background-image: linear-gradient(to bottom, #ffffff, #d9d9d9);
   background-repeat: repeat-x;
   border: 1px solid #d9d9d9;
@@ -6136,9 +6111,7 @@ a:focus .avatar img {
   color: #ffffff;
   cursor: default;
   background-color: #c4e52f;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #829b13), color-stop(100%, #c4e52f));
   background-image: -webkit-linear-gradient(top, #829b13, #c4e52f);
-  background-image: -o-linear-gradient(top, #829b13, #c4e52f);
   background-image: linear-gradient(to bottom, #829b13, #c4e52f);
   background-repeat: repeat-x;
   border-color: #829b13 #95b216 #b0d21a #a8c819;
@@ -6149,9 +6122,7 @@ a:focus .avatar img {
   color: #ffffff;
   cursor: default;
   background-color: #f07355;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec4c26), color-stop(100%, #f07355));
   background-image: -webkit-linear-gradient(top, #ec4c26, #f07355);
-  background-image: -o-linear-gradient(top, #ec4c26, #f07355);
   background-image: linear-gradient(to bottom, #ec4c26, #f07355);
   background-repeat: repeat-x;
   border-color: #e43c14;
@@ -6165,9 +6136,7 @@ a:focus .avatar img {
 .btncontainer .btn-no .lnk-yes:focus {
   color: #4a494d;
   background-color: #d9d9d9;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d9d9d9));
   background-image: -webkit-linear-gradient(top, #f2f2f2, #d9d9d9);
-  background-image: -o-linear-gradient(top, #f2f2f2, #d9d9d9);
   background-image: linear-gradient(to bottom, #f2f2f2, #d9d9d9);
   background-repeat: repeat-x;
   border-color: #bfbfbf;
@@ -6344,7 +6313,6 @@ a:focus .avatar img {
   visibility: hidden;
   box-shadow: inset 0 7px 21px -17px rgba(0, 0, 0, 0.7), inset 0 -7px 21px -17px rgba(0, 0, 0, 0.6);
   -webkit-transition: opacity 0.5s;
-       -o-transition: opacity 0.5s;
           transition: opacity 0.5s;
 }
 
@@ -6788,9 +6756,7 @@ a:focus .avatar img {
 .bx-alert-warning {
   color: #2a2a2a;
   background-color: #fff2bc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff7d2), color-stop(100%, #fff2bc));
   background-image: -webkit-linear-gradient(top, #fff7d2, #fff2bc);
-  background-image: -o-linear-gradient(top, #fff7d2, #fff2bc);
   background-image: linear-gradient(to bottom, #fff7d2, #fff2bc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d2', endColorstr='#fff2bc', GradientType=0);
@@ -6964,7 +6930,6 @@ a:focus .avatar img {
   max-width: 0;
   overflow: hidden;
   -webkit-transition: max-width 0.3s;
-       -o-transition: max-width 0.3s;
           transition: max-width 0.3s;
 }
 
@@ -7003,7 +6968,6 @@ a:focus .avatar img {
   opacity: 0;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 0.5s ease-out, margin 0.5s ease-out;
-       -o-transition: opacity 0.5s ease-out, margin 0.5s ease-out;
           transition: opacity 0.5s ease-out, margin 0.5s ease-out;
 }
 
@@ -7092,9 +7056,7 @@ a:focus .avatar img {
 .growl-type-warning {
   color: #2a2a2a;
   background-color: #fff2bc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff7d2), color-stop(100%, #fff2bc));
   background-image: -webkit-linear-gradient(top, #fff7d2, #fff2bc);
-  background-image: -o-linear-gradient(top, #fff7d2, #fff2bc);
   background-image: linear-gradient(to bottom, #fff7d2, #fff2bc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d2', endColorstr='#fff2bc', GradientType=0);
@@ -7147,7 +7109,6 @@ a:focus .avatar img {
   background: #ffffff;
   border: 2px solid #dddce0;
   -webkit-transition: border-color 0.2s;
-       -o-transition: border-color 0.2s;
           transition: border-color 0.2s;
 }
 
@@ -7264,7 +7225,6 @@ a:focus .avatar img {
   background: #ffffff;
   border-radius: 5px;
   -webkit-transition: color 0.2s;
-       -o-transition: color 0.2s;
           transition: color 0.2s;
 }
 
@@ -7297,7 +7257,6 @@ a:focus .avatar img {
   visibility: hidden;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   -webkit-transition: margin .3s, opacity .3s;
-       -o-transition: margin .3s, opacity .3s;
           transition: margin .3s, opacity .3s;
 }
 
@@ -7530,8 +7489,7 @@ a:focus .avatar img {
   margin: 15px 0;
   background: #F8F8F8;
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15);
 }
 
 .progressbar:before {
@@ -7542,8 +7500,7 @@ a:focus .avatar img {
   left: -5px;
   border-radius: 15px;
   content: "";
-  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .progressbar .pb-mask {
@@ -7557,14 +7514,11 @@ a:focus .avatar img {
   min-width: 3%;
   background: #fa6900;
   background-color: #ff973a;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fa6900), color-stop(100%, #ff973a));
   background-image: -webkit-linear-gradient(top, #fa6900, #ff973a);
-  background-image: -o-linear-gradient(top, #fa6900, #ff973a);
   background-image: linear-gradient(to bottom, #fa6900, #ff973a);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa6900', endColorstr='#ff973a', GradientType=0);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .progressbar.pb-large {
@@ -7613,7 +7567,6 @@ a:focus .avatar img {
   border-radius: 3px;
   -webkit-transform: translateZ(0);
   -webkit-transition: opacity 0.3s;
-       -o-transition: opacity 0.3s;
           transition: opacity 0.3s;
 }
 
