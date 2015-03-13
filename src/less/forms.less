@@ -110,7 +110,6 @@
     height: auto;
     padding: 0;
     margin: 3px 0;
-    *margin-top: 0; /* IE7 */
     line-height: normal;
     cursor: pointer;
     .border-radius(0);
@@ -143,7 +142,6 @@
   select,
   input[type="file"] {
     height: 28px; // In IE7, the height of the select element cannot be changed by height, only font-size
-    *margin-top: 4px; // For IE7, add top margin to align select with labels
     line-height: 28px;
   }
 
@@ -196,7 +194,6 @@
   .checkbox input[type="checkbox"] {
     .float-left(@rtl);
     .margin-left(@rtl, -18px);
-    *clear: left;
   }
 
   // Move the options list down to align with labels
@@ -263,7 +260,6 @@
         .box-sizing(border-box);
         width: 100%;
         height: auto;
-        *width: 90%; // IE 7 doesn't support box-sizing
   }
 
   select.input-small { width: (@size-small + 10px); }
@@ -397,7 +393,6 @@
 
   .help-inline {
     display: inline-block;
-    .ie7-inline-block();
     vertical-align: middle;
     .padding-left(@rtl, 5px);
   }
@@ -419,7 +414,6 @@
     select,
     .uneditable-input {
       .radius-right(@rtl);
-      *margin-left: 0;
     }
 
     .uneditable-input {
@@ -435,7 +429,6 @@
       padding-top: 4px;
       height: @baseLineHeight;
       .box-sizing(content-box);
-      *height: auto;
     }
 
     .active {
@@ -576,10 +569,6 @@
   // Move over all input controls and content
   .controls {
     .margin-left(@rtl, 160px);
-    /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
-    *display: inline-block;
-    *margin-left: 0;
-    *padding-left: 20px;
   }
   // Remove bottom margin on block level help text since that's accounted for on .control-group
   .help-block {

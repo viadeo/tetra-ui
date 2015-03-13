@@ -59,8 +59,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 // Prevents modern browsers from displaying 'audio' without controls
@@ -103,13 +101,11 @@ textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
-  *vertical-align: middle;
   font-family: inherit;
 }
 button,
 input {
   line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
-  *overflow: visible; // Inner spacing ie IE6/7
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner { // Inner padding and border oddities in FF3/4

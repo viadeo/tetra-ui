@@ -7,8 +7,6 @@
   		visibility: visible;
   		margin-bottom: 7px;
   		opacity: 1;
-
-  		*margin-bottom: 2px; // No arrow under IE7, the tooltip must be closer
   	}
   }
 }
@@ -66,7 +64,6 @@
   &:focus {
     .tooltip-content {
       .margin-left(@rtl, 7px);
-      *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
     }
   }
 }
@@ -88,7 +85,6 @@
   &:focus {
     .tooltip-content {
       .margin-left(@rtl, 7px);
-      *margin-left: 5px; // No arrow under IE7, the tooltip must be closer
     }
   }
 }
@@ -123,7 +119,6 @@
   &:focus {
     .tooltip-content {
       .margin-right(@rtl, 7px);
-      *margin-right: 5px; // No arrow under IE7, the tooltip must be closer
     }
   }
 }
@@ -160,7 +155,6 @@
   &:focus {
     .tooltip-content {
       margin-top: 7px;
-      *margin-top: 2px; // No arrow under IE7, the tooltip must be closer
     }
   }
 }

@@ -115,9 +115,6 @@
 		vertical-align: middle;
 		background: mix(#000000, $blue2, 10%);
 		border-radius: $borderRadiusS 0 0 $borderRadiusS;
-		*float: left; // IE 7 needs hacks (lack of table-cell support)
-		*padding: $spacingM;
-		*background: none;
 	}
 
 	.bx-alert-content {
@@ -125,8 +122,6 @@
 		width: 100%;
 		vertical-align: middle;
 		padding: $spacingM $spacingL;
-		*width: auto; // IE 7 needs hacks (lack of table-cell support)
-		*zoom: 1;
 	}
 
 	.bx-alert-title {
@@ -154,7 +149,6 @@
 
 	.bx-alert-icon {
 		background: mix(#000000, $orange2, 10%);
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
@@ -163,7 +157,6 @@
 
 	.bx-alert-icon {
 		background: mix(#000000, $errorText, 10%);
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
@@ -172,7 +165,6 @@
 
 	.bx-alert-icon {
 		background: mix(#000000, $green2, 10%);
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
@@ -181,7 +173,6 @@
 
 	.bx-alert-icon {
 		background: mix(#000000, $blue4, 10%);
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
@@ -192,7 +183,6 @@
   .bx-alert-icon {
     background: mix(#000000, $bg-alert-premium, 10%);
 		color: $orange4;
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 

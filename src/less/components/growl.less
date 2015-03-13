@@ -103,8 +103,6 @@
 		padding: @spacingS @spacingL;
 		font-size:1.2em;
 		line-height:1.2em;
-		*width: auto; // IE 7 needs hacks (lack of table-cell support)
-		*zoom: 1;
 	}
 
 	.growl-icon {
@@ -116,9 +114,6 @@
 		vertical-align: middle;
 		background: shade(@blue2, 10%);
 		border-radius: @borderRadiusS 0 0 @borderRadiusS;
-		*float: left; // IE 7 needs hacks (lack of table-cell support)
-		*padding: @spacingM;
-		*background: none;
 		content:"v"
 	}
 }
@@ -142,7 +137,6 @@
 
 	.growl-icon {
 		background: shade(@orange2, 10%);
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
@@ -151,7 +145,6 @@
 
 	.growl-icon {
 		background: shade(@green2, 10%);
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
@@ -160,7 +153,6 @@
 
 	.growl-icon {
 		background: shade(@blue4, 10%);
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }
 
@@ -171,6 +163,5 @@
   .growl-icon {
     background: shade(@bg-growl-premium, 10%);
 		color: @orange4;
-		*background: none; // IE 7 needs hacks (lack of table-cell support)
 	}
 }

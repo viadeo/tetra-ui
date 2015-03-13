@@ -12,7 +12,6 @@ $_listBackground: $white;
 
   position:relative;
   display:inline-block;
-  @include ie7-inline-block();
   text-shadow: none;
 
   // Button
@@ -22,8 +21,6 @@ $_listBackground: $white;
     > .vicon {
       @include margin($rtl, 0, 0, 0, 5px);
       line-height: 11px;
-      *line-height: 20px;
-      *margin-top: -3px;
     }
 
     &.btn-append {

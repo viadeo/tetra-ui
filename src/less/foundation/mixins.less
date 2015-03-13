@@ -9,7 +9,6 @@
         display: table;
         content: "";
         zoom: 1;
-        *display: inline;
     }
     &:after {
         clear: both;
@@ -148,7 +147,6 @@
     background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
     background-image: linear-gradient(to right, @startColor, @endColor); // // IE 10 supports the unprefixed form
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
-    *filter: none;
   }
   .vertical(@startColor: #555, @endColor: #333) {
     background-color: @endColor;
@@ -158,7 +156,6 @@
     background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
     background-image: linear-gradient(to bottom, @startColor, @endColor); // IE 10 supports the unprefixed form
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
-    *filter: none;
   }
   .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
     background-color: @endColor;
@@ -175,7 +172,6 @@
     background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
     background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
-    *filter: none;
   }
 }
 // For sass convertion
@@ -187,7 +183,6 @@
   background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
   background-image: linear-gradient(to right, @startColor, @endColor); // // IE 10 supports the unprefixed form
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
-  *filter: none;
 }
 .gradient-vertical(@startColor: #555, @endColor: #333) {
   background-color: @endColor;
@@ -197,7 +192,6 @@
   background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
   background-image: linear-gradient(to bottom, @startColor, @endColor); // IE 10 supports the unprefixed form
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
-  *filter: none;
 }
 .gradient-directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
   background-color: @endColor;
@@ -214,7 +208,6 @@
   background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
   background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
-  *filter: none;
 }
 
 // Background clipping
@@ -334,12 +327,6 @@
    border-width: @size @size 0 @size;
    border-color: @color transparent transparent transparent;
    border-style: solid;
-}
-
-// IE7 inline-block
-.ie7-inline-block() {
-  *display: inline; // IE7 inline-block hack
-  *zoom: 1;
 }
 
 // FORMS

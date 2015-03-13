@@ -4,7 +4,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 11px;
-    
+
     .lnk-yes, .lnk-no {
       float: left;
       padding: 0 @spacingS;
@@ -13,34 +13,32 @@
       color: @grayLight;
       border: 1px solid lighten(@black, 85%);
       #gradient > .vertical(@white, lighten(@black, 85%));
-      *background-color: lighten(@black, 90%);
       cursor: pointer;
-      
+
       input[type='radio'] {
         visibility: hidden;
         margin-right: -15px;
       }
     }
-    
+
     .lnk-yes {
       .border-radius(@borderRadiusS 0 0 @borderRadiusS);
     }
-    
+
     .lnk-no {
       .border-radius(0 @borderRadiusS @borderRadiusS 0);
     }
   }
-  
+
   .btn-yes {
     .lnk-yes {
       color: @white;
       border-color: @green lighten(@green, 5%) lighten(@green, 12%) lighten(@green, 10%);
       #gradient > .vertical(@green, lighten(@green, 20%));
-      *background-color: lighten(@green, 5%);
       cursor: default;
     }
   }
-  
+
   .btn-no {
     .lnk-no {
       color: @white;
@@ -50,7 +48,7 @@
       cursor: default;
     }
   }
-  
+
   .btn-yes .lnk-no, .btn-no .lnk-yes {
       &:hover, &:focus {
         color: @grayDark;
@@ -59,10 +57,10 @@
         outline: none;
       }
   }
-  
+
   .lbl {
     overflow: auto;
-    
+
     .lbl-no {
       color: @gray;
     }
