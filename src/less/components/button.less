@@ -161,7 +161,7 @@
 
   &.btn-disabled {
     background: lighten(@bgColor, 5%);
-    border-color: lighten(@borderColor, 5%);
+    border-color: lighten(@disabledTextColor, 5%);
     color: @disabledTextColor;
     > span, .vicon {
       color: @disabledTextColor;
@@ -179,17 +179,18 @@
 
 
 .btn, .core-form .btn {
-    .transition(background 0.3s,color 0.3s;);
+    .transition(background 0.3s);
+    .transition(color 0.3s);
   // General Properties
   @_padding:           4px 15px;
-  @_borderRadius:        @borderRadiusS;
+  @_borderRadius:        @borderRadiusM;
 
   // Rules
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
   padding: @_padding;
-  .border-radius(@_borderRadius);
+  .border-radius(@borderRadiusM);
   position: relative;
   text-decoration: none;
   text-shadow: none;
@@ -295,7 +296,7 @@
 
 .btn-large, .core-form .btn-large {
   @_padding:     7px @spacingM;
-  @_borderRadius:  @borderRadiusS;
+  @_borderRadius:  @borderRadiusM;
 
   padding: @_padding;
   .border-radius(@_borderRadius);
@@ -307,6 +308,13 @@
   z-index: 2;
   padding: @spacingM;
   font-size: 16px;
+  .border-radius(@borderRadiusL)
+}
+.btn-fat, .core-form .btn-fat{
+  position: relative;
+  z-index: 2;
+  padding: @spacingL;
+  font-size: 18px;
 }
 
 .btn-desc {

@@ -4652,11 +4652,13 @@ a:focus .avatar img {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 6px;
   zoom: 1;
   box-shadow: none;
-  -webkit-transition: background 0.3s, color 0.3s;
-          transition: background 0.3s, color 0.3s;
+  -webkit-transition: background 0.3s;
+  -webkit-transition: color 0.3s;
+          transition: background 0.3s;
+  transition: color 0.3s;
   -webkit-user-select: none;
    -khtml-user-select: none;
      -moz-user-select: none;
@@ -5131,7 +5133,7 @@ a:focus .avatar img {
 .btn.btn-default-alt.btn-disabled {
   color: #b8b8bb;
   background: rgba(13, 13, 13, 0);
-  border-color: #ababae;
+  border-color: #c5c5c7;
 }
 
 .btn.btn-default-alt.btn-disabled > span,
@@ -5200,7 +5202,7 @@ a:focus .avatar img {
 .btn.btn-primary-alt.btn-disabled {
   color: #6cb7df;
   background: rgba(13, 13, 13, 0);
-  border-color: #57acdb;
+  border-color: #81c1e4;
 }
 
 .btn.btn-primary-alt.btn-disabled > span,
@@ -5269,7 +5271,7 @@ a:focus .avatar img {
 .btn.btn-secondary-alt.btn-disabled {
   color: #f49a84;
   background: rgba(13, 13, 13, 0);
-  border-color: #f2866c;
+  border-color: #f6ad9b;
 }
 
 .btn.btn-secondary-alt.btn-disabled > span,
@@ -5338,7 +5340,7 @@ a:focus .avatar img {
 .btn.btn-tertiary-alt.btn-disabled {
   color: #78cfc0;
   background: rgba(13, 13, 13, 0);
-  border-color: #66c8b8;
+  border-color: #8bd5c9;
 }
 
 .btn.btn-tertiary-alt.btn-disabled > span,
@@ -5407,7 +5409,7 @@ a:focus .avatar img {
 .btn.btn-white.btn-disabled {
   color: #a1a0a5;
   background: rgba(13, 13, 13, 0);
-  border-color: #ffffff;
+  border-color: #aeadb1;
 }
 
 .btn.btn-white.btn-disabled > span,
@@ -5439,7 +5441,7 @@ a:focus .avatar img {
 .core-form .btn-large {
   padding: 7px 15px;
   font-size: 13px;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .btn-lead,
@@ -5448,6 +5450,15 @@ a:focus .avatar img {
   z-index: 2;
   padding: 15px;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.btn-fat,
+.core-form .btn-fat {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  font-size: 18px;
 }
 
 .btn-desc {
