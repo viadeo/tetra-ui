@@ -25,7 +25,7 @@
 	.flipswitch-sliders {
 		display: inline-block;
 		position: relative;
-		width: 56px; height: 24px;
+		width: 45px; height: 23px;
 		margin: 0 $spacingXs;
 		border-radius: 12px;
 		vertical-align: middle;
@@ -54,19 +54,41 @@
 		box-shadow: 0 1px 3px rgba($black, (30/100)) inset;
 	}
 
-	.flipswitch-btn-no {
-		background: $errorText;
+	.flipswitch-btn-yes {
+    float: right;
+		background: $grayLighter;
+
+    &:after {
+      content: "\00D7";
+      font-family: 'Viadeoicons';
+      font-size: 8px;
+      color: $gray;
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      z-index: 0;
+    }
 	}
 
-	.flipswitch-btn-yes {
-		float: right;
-		background: $green2;
+	.flipswitch-btn-no {
+		background: $green3;
+
+    &:after {
+      content: "v";
+      font-family: 'Viadeoicons';
+      font-size: 8px;
+      color: $white;
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      z-index: 0;
+    }
 	}
 
 	.flipswitch-slider {
 		position: absolute;
-		left: 0; top: 2px;
-		width: 20px; height: 20px;
+		left: 0; top: 1px;
+		width: 21px; height: 21px;
 		margin-left: 2px;
 		border-radius: 12px;
 		background: $white;

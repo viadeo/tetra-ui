@@ -181,7 +181,7 @@
 // Forms
 @inputBackground:	@white;
 @inputBorder: #c5c7c5;
-@inputBorderFocus: @blue2;
+@inputBorderFocus: @green3;
 @inputDisabledBackground: @grayLighter;
 @inputSelectedControl: #344957;
 
@@ -3540,7 +3540,7 @@ pre {
   display: inline-block;
   width: 210px;
   height: 1.4em;
-  padding: 4px;
+  padding: 5px;
   margin-bottom: 9px;
   font-size: 12px;
   line-height: 1.4em;
@@ -3610,7 +3610,12 @@ pre {
   width: 220px;
   height: 28px;
   line-height: 28px;
-  background-color: #ffffff;
+  color: #4a494d;
+  background-color: #e0e2e4;
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e2e4);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e2e4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e0e2e4', GradientType=0);
 }
 
 .core-form select[multiple],
@@ -3673,10 +3678,10 @@ pre {
 
 .core-form input:focus,
 .core-form textarea:focus {
-  border-color: #007bc2;
+  border-color: #53c1af;
   outline: 0;
   outline: thin dotted \9;
-  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  box-shadow: 0 0 5px rgba(83, 193, 175, 0.2);
 }
 
 .core-form input[type="file"]:focus,
@@ -3779,7 +3784,7 @@ pre {
 .core-form .control-group.error select:focus,
 .core-form .control-group.error textarea:focus {
   border-color: #007bc2;
-  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  box-shadow: 0 0 5px rgba(83, 193, 175, 0.2);
 }
 
 .core-form .control-group.error .input-append .btn {
@@ -3793,7 +3798,7 @@ pre {
   border-top-color: #007bc2;
   border-right-color: #007bc2;
   border-bottom-color: #007bc2;
-  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  box-shadow: 0 0 5px rgba(83, 193, 175, 0.2);
 }
 
 .core-form .control-group .control-success {
@@ -3917,7 +3922,7 @@ pre {
   border-top-color: #007bc2;
   border-right-color: #007bc2;
   border-bottom-color: #007bc2;
-  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  box-shadow: 0 0 5px rgba(83, 193, 175, 0.2);
 }
 
 .core-form .input-append .uneditable-input {
@@ -5281,7 +5286,7 @@ a:focus .avatar img {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 6px;
   zoom: 1;
   box-shadow: none;
   -webkit-transition: background 0.3s;
@@ -6070,7 +6075,7 @@ a:focus .avatar img {
 .core-form .btn-large {
   padding: 7px 15px;
   font-size: 13px;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .btn-lead,
@@ -6079,6 +6084,15 @@ a:focus .avatar img {
   z-index: 2;
   padding: 15px;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.btn-fat,
+.core-form .btn-fat {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  font-size: 18px;
 }
 
 .btn-desc {
@@ -7148,7 +7162,7 @@ a:focus .avatar img {
 
 .custom-radio:not(#unsupported) input:focus + .custom-radio-element {
   outline: thin dotted;
-  box-shadow: 0 0 0 1px #007bc2;
+  box-shadow: 0 0 0 1px #53c1af;
 }
 
 .custom-radio:not(#unsupported) .custom-radio-element {
@@ -7170,7 +7184,7 @@ a:focus .avatar img {
 }
 
 .custom-radio:not(#unsupported) input:checked + .custom-radio-element {
-  background-color: #333333;
+  background-color: #53c1af;
 }
 
 .custom-checkbox:not(#unsupported) {
@@ -7184,7 +7198,7 @@ a:focus .avatar img {
 
 .custom-checkbox:not(#unsupported) input:focus + .custom-checkbox-element {
   outline: thin dotted;
-  box-shadow: 0 0 0 1px #007bc2;
+  box-shadow: 0 0 0 1px #53c1af;
 }
 
 .custom-checkbox:not(#unsupported) .custom-checkbox-element {
@@ -7198,20 +7212,24 @@ a:focus .avatar img {
   text-align: center;
   vertical-align: middle;
   background: #fff;
-  border: 1px solid #c5c7c5;
   border-radius: 2px;
+  border-radius: 4px;
 }
 
 .custom-checkbox:not(#unsupported) .custom-checkbox-element:after {
   font-family: 'Viadeoicons';
   font-size: 6px;
-  color: #333333;
+  color: #ffffff;
   content: "v";
   visibility: hidden;
 }
 
 .custom-checkbox:not(#unsupported):hover .custom-checkbox-element {
   border-color: #949594;
+}
+
+.custom-checkbox:not(#unsupported) input:checked + .custom-checkbox-element {
+  background-color: #53c1af;
 }
 
 .custom-checkbox:not(#unsupported) input:checked + .custom-checkbox-element:after {
@@ -7315,8 +7333,8 @@ a:focus .avatar img {
 .flipswitch .flipswitch-sliders {
   position: relative;
   display: inline-block;
-  width: 56px;
-  height: 24px;
+  width: 45px;
+  height: 23px;
   margin: 0 5px;
   vertical-align: middle;
   cursor: default;
@@ -7348,21 +7366,43 @@ a:focus .avatar img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) inset;
 }
 
-.flipswitch .flipswitch-btn-no {
-  background: #d54243;
-}
-
 .flipswitch .flipswitch-btn-yes {
   float: right;
-  background: #0c9f9b;
+  background: #d9d8dd;
+}
+
+.flipswitch .flipswitch-btn-yes:after {
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  z-index: 0;
+  font-family: 'Viadeoicons';
+  font-size: 8px;
+  color: #87868c;
+  content: "\00D7";
+}
+
+.flipswitch .flipswitch-btn-no {
+  background: #53c1af;
+}
+
+.flipswitch .flipswitch-btn-no:after {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  z-index: 0;
+  font-family: 'Viadeoicons';
+  font-size: 8px;
+  color: #ffffff;
+  content: "v";
 }
 
 .flipswitch .flipswitch-slider {
   position: absolute;
-  top: 2px;
+  top: 1px;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   margin-left: 2px;
   font-size: 8px;
   line-height: 20px;
@@ -8387,10 +8427,10 @@ a:focus .avatar img {
 }
 
 .custom-select.cs-focus {
-  border-color: #007bc2;
+  border-color: #53c1af;
   outline: 0;
   outline: thin dotted \9;
-  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  box-shadow: 0 0 5px rgba(83, 193, 175, 0.2);
 }
 
 .custom-select label {
@@ -8439,10 +8479,10 @@ a:focus .avatar img {
 }
 
 .custom-select:hover.cs-focus {
-  border-color: #007bc2;
+  border-color: #53c1af;
   outline: 0;
   outline: thin dotted \9;
-  box-shadow: 0 0 5px rgba(0, 123, 194, 0.2);
+  box-shadow: 0 0 5px rgba(83, 193, 175, 0.2);
 }
 
 .input-append .custom-select {
