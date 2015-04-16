@@ -5687,7 +5687,7 @@ a:focus .avatar img {
 .core-form .btn-lead {
   position: relative;
   z-index: 2;
-  padding: 15px;
+  padding: 15px 20px;
   font-size: 16px;
   border-radius: 10px;
 }
@@ -5696,8 +5696,9 @@ a:focus .avatar img {
 .core-form .btn-fat {
   position: relative;
   z-index: 2;
-  padding: 20px;
+  padding: 20px 30px;
   font-size: 18px;
+  border-radius: 10px;
 }
 
 .btn-desc {
