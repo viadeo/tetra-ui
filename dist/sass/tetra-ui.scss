@@ -44,7 +44,7 @@ $grayLightLight:    #9e9ea2 !default;
 $grayLight:         #c5c3c7 !default;
 $grayLighter:       #d9d8dd !default;
 $white:             #FFFFFF !default;
-
+$transparent:       rgba(0,0,0,0) !default;
 // Extended palette
 
 $orange1: #f07355 !default;
@@ -96,7 +96,7 @@ $linkColor:         $blue !default;
 $linkColorHover:    darken($linkColor, 14%) !default;
 
 $buttonColor: $white !default;
-
+//Default Buttons
 $buttonDefaultBgColor:     $grayLightLight !default;
 $buttonDefaultEndColor:    $grayLightLight !default;
 $buttonDefaultHoverColor:  darken($grayLightLight, 5%) !default;
@@ -123,6 +123,43 @@ $buttonTerHoverColor:      darken($green3, 10%) !default;
 $buttonTerBorderColor:     $green3 !default;
 $buttonTerTextColor:       $buttonColor !default;
 $buttonTerDisabledTextColor:   darken($green3, 20%) !default;
+
+//Alternatives buttons
+$altButtonDefaultBgColor : $transparent !default;
+$altButtonDefaultBorder: $grayLightLight !default;
+$altButtonDefaultTextColor: $grayLightLight !default;
+$altButtonDefaultHoverColor : $grayLightLight !default;
+$altButtonDefaultHoverTextColor : $white !default;
+$altButtonDefaultDisabledTextColor : lighten($grayLightLight, 10%) !default;
+
+$altButtonPrimaryBgColor : $transparent !default;
+$altButtonPrimaryBorder: $blue !default;
+$altButtonPrimaryTextColor: $blue !default;
+$altButtonPrimaryHoverColor : $blue !default;
+$altButtonPrimaryHoverTextColor : $white !default;
+$altButtonPrimaryDisabledTextColor : lighten($blue, 10%) !default;
+
+$altButtonSecondaryBgColor : $transparent !default;
+$altButtonSecondaryBorder: $orange1 !default;
+$altButtonSecondaryTextColor: $orange1 !default;
+$altButtonSecondaryHoverColor : $orange1 !default;
+$altButtonSecondaryHoverTextColor : $white !default;
+$altButtonSecondaryDisabledTextColor : lighten($orange1, 10%) !default;
+
+$altButtonTerBgColor : $transparent !default;
+$altButtonTerBorder: $green3 !default;
+$altButtonTerTextColor: $green3 !default;
+$altButtonTerHoverColor : $green3 !default;
+$altButtonTerHoverTextColor : $white !default;
+$altButtonTerDisabledTextColor : lighten($green3, 10%) !default;
+
+$altButtonWhiteBgColor : $transparent !default;
+$altButtonWhiteBorder: $white !default;
+$altButtonWhiteTextColor: $white !default;
+$altButtonWhiteHoverColor : $white !default;
+$altButtonWhiteHoverTextColor : $gray !default;
+$altButtonWhiteDisabledTextColor : lighten($gray, 10%) !default;
+
 
 // Typography
 $baseFontSize:      12px !default;
@@ -4837,9 +4874,13 @@ a:focus .avatar img {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 6px;
   zoom: 1;
   box-shadow: none;
+  -webkit-transition: background 0.3s;
+  -webkit-transition: color 0.3s;
+          transition: background 0.3s;
+  transition: color 0.3s;
   -webkit-user-select: none;
    -khtml-user-select: none;
      -moz-user-select: none;
@@ -5261,6 +5302,351 @@ a:focus .avatar img {
   border-color: #53c1af;
 }
 
+.btn.btn-default-alt {
+  color: #9e9ea2;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #9e9ea2;
+}
+
+.btn.btn-default-alt > span,
+.btn.btn-default-alt > input,
+.btn.btn-default-alt > button {
+  color: #9e9ea2;
+}
+
+.btn.btn-default-alt .vicon {
+  color: #9e9ea2;
+}
+
+.btn.btn-default-alt:hover,
+.btn.btn-default-alt:focus {
+  color: #ffffff;
+  background: #9e9ea2;
+  border-color: #9e9ea2;
+}
+
+.btn.btn-default-alt:hover .vicon,
+.btn.btn-default-alt:focus .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-default-alt.btn-alt:active {
+  color: #ffffff;
+  background: #848489;
+  border-color: #848489;
+}
+
+.btn.btn-default-alt.btn-alt:active > span,
+.btn.btn-default-alt.btn-alt:active .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-default-alt.btn-loading {
+  color: #b8b8bb;
+  background: rgba(0, 0, 0, 0);
+  border-color: #9e9ea2;
+}
+
+.btn.btn-default-alt.btn-loading > span,
+.btn.btn-default-alt.btn-loading .vicon {
+  color: #b8b8bb;
+}
+
+.btn.btn-default-alt.btn-disabled {
+  color: #b8b8bb;
+  background: rgba(13, 13, 13, 0);
+  border-color: #c5c5c7;
+}
+
+.btn.btn-default-alt.btn-disabled > span,
+.btn.btn-default-alt.btn-disabled .vicon {
+  color: #b8b8bb;
+}
+
+.btn.btn-default-alt.btn-inactive,
+.btn.btn-default-alt.btn-inactive:hover,
+.btn.btn-default-alt.btn-loading:focus,
+.btn.btn-default-alt.btn-loading:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #9e9ea2;
+}
+
+.btn.btn-primary-alt {
+  color: #42a2d6;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #42a2d6;
+}
+
+.btn.btn-primary-alt > span,
+.btn.btn-primary-alt > input,
+.btn.btn-primary-alt > button {
+  color: #42a2d6;
+}
+
+.btn.btn-primary-alt .vicon {
+  color: #42a2d6;
+}
+
+.btn.btn-primary-alt:hover,
+.btn.btn-primary-alt:focus {
+  color: #ffffff;
+  background: #42a2d6;
+  border-color: #42a2d6;
+}
+
+.btn.btn-primary-alt:hover .vicon,
+.btn.btn-primary-alt:focus .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-primary-alt.btn-alt:active {
+  color: #ffffff;
+  background: #2988bc;
+  border-color: #2988bc;
+}
+
+.btn.btn-primary-alt.btn-alt:active > span,
+.btn.btn-primary-alt.btn-alt:active .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-primary-alt.btn-loading {
+  color: #6cb7df;
+  background: rgba(0, 0, 0, 0);
+  border-color: #42a2d6;
+}
+
+.btn.btn-primary-alt.btn-loading > span,
+.btn.btn-primary-alt.btn-loading .vicon {
+  color: #6cb7df;
+}
+
+.btn.btn-primary-alt.btn-disabled {
+  color: #6cb7df;
+  background: rgba(13, 13, 13, 0);
+  border-color: #81c1e4;
+}
+
+.btn.btn-primary-alt.btn-disabled > span,
+.btn.btn-primary-alt.btn-disabled .vicon {
+  color: #6cb7df;
+}
+
+.btn.btn-primary-alt.btn-inactive,
+.btn.btn-primary-alt.btn-inactive:hover,
+.btn.btn-primary-alt.btn-loading:focus,
+.btn.btn-primary-alt.btn-loading:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #42a2d6;
+}
+
+.btn.btn-secondary-alt {
+  color: #f07355;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #f07355;
+}
+
+.btn.btn-secondary-alt > span,
+.btn.btn-secondary-alt > input,
+.btn.btn-secondary-alt > button {
+  color: #f07355;
+}
+
+.btn.btn-secondary-alt .vicon {
+  color: #f07355;
+}
+
+.btn.btn-secondary-alt:hover,
+.btn.btn-secondary-alt:focus {
+  color: #ffffff;
+  background: #f07355;
+  border-color: #f07355;
+}
+
+.btn.btn-secondary-alt:hover .vicon,
+.btn.btn-secondary-alt:focus .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-secondary-alt.btn-alt:active {
+  color: #ffffff;
+  background: #ec4c26;
+  border-color: #ec4c26;
+}
+
+.btn.btn-secondary-alt.btn-alt:active > span,
+.btn.btn-secondary-alt.btn-alt:active .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-secondary-alt.btn-loading {
+  color: #f49a84;
+  background: rgba(0, 0, 0, 0);
+  border-color: #f07355;
+}
+
+.btn.btn-secondary-alt.btn-loading > span,
+.btn.btn-secondary-alt.btn-loading .vicon {
+  color: #f49a84;
+}
+
+.btn.btn-secondary-alt.btn-disabled {
+  color: #f49a84;
+  background: rgba(13, 13, 13, 0);
+  border-color: #f6ad9b;
+}
+
+.btn.btn-secondary-alt.btn-disabled > span,
+.btn.btn-secondary-alt.btn-disabled .vicon {
+  color: #f49a84;
+}
+
+.btn.btn-secondary-alt.btn-inactive,
+.btn.btn-secondary-alt.btn-inactive:hover,
+.btn.btn-secondary-alt.btn-loading:focus,
+.btn.btn-secondary-alt.btn-loading:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #f07355;
+}
+
+.btn.btn-tertiary-alt {
+  color: #53c1af;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #53c1af;
+}
+
+.btn.btn-tertiary-alt > span,
+.btn.btn-tertiary-alt > input,
+.btn.btn-tertiary-alt > button {
+  color: #53c1af;
+}
+
+.btn.btn-tertiary-alt .vicon {
+  color: #53c1af;
+}
+
+.btn.btn-tertiary-alt:hover,
+.btn.btn-tertiary-alt:focus {
+  color: #ffffff;
+  background: #53c1af;
+  border-color: #53c1af;
+}
+
+.btn.btn-tertiary-alt:hover .vicon,
+.btn.btn-tertiary-alt:focus .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-tertiary-alt.btn-alt:active {
+  color: #ffffff;
+  background: #3ca594;
+  border-color: #3ca594;
+}
+
+.btn.btn-tertiary-alt.btn-alt:active > span,
+.btn.btn-tertiary-alt.btn-alt:active .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-tertiary-alt.btn-loading {
+  color: #78cfc0;
+  background: rgba(0, 0, 0, 0);
+  border-color: #53c1af;
+}
+
+.btn.btn-tertiary-alt.btn-loading > span,
+.btn.btn-tertiary-alt.btn-loading .vicon {
+  color: #78cfc0;
+}
+
+.btn.btn-tertiary-alt.btn-disabled {
+  color: #78cfc0;
+  background: rgba(13, 13, 13, 0);
+  border-color: #8bd5c9;
+}
+
+.btn.btn-tertiary-alt.btn-disabled > span,
+.btn.btn-tertiary-alt.btn-disabled .vicon {
+  color: #78cfc0;
+}
+
+.btn.btn-tertiary-alt.btn-inactive,
+.btn.btn-tertiary-alt.btn-inactive:hover,
+.btn.btn-tertiary-alt.btn-loading:focus,
+.btn.btn-tertiary-alt.btn-loading:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #53c1af;
+}
+
+.btn.btn-white {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #ffffff;
+}
+
+.btn.btn-white > span,
+.btn.btn-white > input,
+.btn.btn-white > button {
+  color: #ffffff;
+}
+
+.btn.btn-white .vicon {
+  color: #ffffff;
+}
+
+.btn.btn-white:hover,
+.btn.btn-white:focus {
+  color: #87868c;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn.btn-white:hover .vicon,
+.btn.btn-white:focus .vicon {
+  color: #87868c;
+}
+
+.btn.btn-white.btn-alt:active {
+  color: #87868c;
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.btn.btn-white.btn-alt:active > span,
+.btn.btn-white.btn-alt:active .vicon {
+  color: #87868c;
+}
+
+.btn.btn-white.btn-loading {
+  color: #a1a0a5;
+  background: rgba(0, 0, 0, 0);
+  border-color: #ffffff;
+}
+
+.btn.btn-white.btn-loading > span,
+.btn.btn-white.btn-loading .vicon {
+  color: #a1a0a5;
+}
+
+.btn.btn-white.btn-disabled {
+  color: #a1a0a5;
+  background: rgba(13, 13, 13, 0);
+  border-color: #aeadb1;
+}
+
+.btn.btn-white.btn-disabled > span,
+.btn.btn-white.btn-disabled .vicon {
+  color: #a1a0a5;
+}
+
+.btn.btn-white.btn-inactive,
+.btn.btn-white.btn-inactive:hover,
+.btn.btn-white.btn-loading:focus,
+.btn.btn-white.btn-loading:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #ffffff;
+}
+
 .btn-small,
 .core-form .btn-small {
   padding: 1px 10px;
@@ -5277,15 +5663,25 @@ a:focus .avatar img {
 .core-form .btn-large {
   padding: 7px 15px;
   font-size: 13px;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .btn-lead,
 .core-form .btn-lead {
   position: relative;
   z-index: 2;
-  padding: 15px;
+  padding: 15px 20px;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.btn-fat,
+.core-form .btn-fat {
+  position: relative;
+  z-index: 2;
+  padding: 20px 30px;
+  font-size: 18px;
+  border-radius: 10px;
 }
 
 .btn-desc {
@@ -6507,22 +6903,22 @@ a:focus .avatar img {
   display: none;
 }
 
-.flipswitch .flipswitch-lbl-yes {
+.flipswitch .flipswitch-lbl-no {
   color: #000000;
 }
 
-.flipswitch .flipswitch-lbl-no {
+.flipswitch .flipswitch-lbl-yes {
   color: #b3b3b3;
 }
 
-.flipswitch .flipswitch-lbl-no:hover {
+.flipswitch .flipswitch-lbl-yes:hover {
   color: #000000;
 }
 
 .flipswitch .flipswitch-sliders {
   position: relative;
   display: inline-block;
-  width: 56px;
+  width: 45px;
   height: 24px;
   margin: 0 5px;
   vertical-align: middle;
@@ -6556,12 +6952,25 @@ a:focus .avatar img {
 }
 
 .flipswitch .flipswitch-btn-no {
-  background: #d54243;
+  float: right;
+  background: #d9d8dd;
+}
+
+.flipswitch .flipswitch-btn-no .flipswitch-icon {
+  margin-top: 2px;
+  margin-left: 17px;
+  font-size: 1em;
+  color: #87868c;
 }
 
 .flipswitch .flipswitch-btn-yes {
-  float: right;
-  background: #0c9f9b;
+  background: #53c1af;
+}
+
+.flipswitch .flipswitch-btn-yes .flipswitch-icon {
+  margin-top: 2px;
+  font-size: 0.8em;
+  color: white;
 }
 
 .flipswitch .flipswitch-slider {
@@ -6586,23 +6995,23 @@ a:focus .avatar img {
   background: #f2f2f2;
 }
 
-.flipswitch.flipswitch-no .flipswitch-lbl-yes {
+.flipswitch.flipswitch-yes .flipswitch-lbl-no {
   color: #b3b3b3;
 }
 
-.flipswitch.flipswitch-no .flipswitch-lbl-yes:hover {
+.flipswitch.flipswitch-yes .flipswitch-lbl-no:hover {
   color: #000000;
 }
 
-.flipswitch.flipswitch-no .flipswitch-lbl-no {
+.flipswitch.flipswitch-yes .flipswitch-lbl-yes {
   color: #000000;
 }
 
-.flipswitch.flipswitch-no .flipswitch-inner {
+.flipswitch.flipswitch-yes .flipswitch-inner {
   margin-left: 0;
 }
 
-.flipswitch.flipswitch-no .flipswitch-slider {
+.flipswitch.flipswitch-yes .flipswitch-slider {
   left: 100%;
   margin-left: -22px;
 }

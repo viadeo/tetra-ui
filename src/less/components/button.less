@@ -78,17 +78,119 @@
   }
 }
 
+.alt-tetra-button (@button) {
+  @bgColor: ~"";
+  @hoverColor: ~"";
+  @hoverTextColor: ~"";
+  @borderColor: ~"";
+  @textColor: ~"";
+  @disabledTextColor: ~"";
+  .set-color (@button) when (@button = default) {
+    @bgColor : @altButtonDefaultBgColor;
+    @hoverColor: @altButtonDefaultHoverColor;
+    @hoverTextColor : @altButtonDefaultHoverTextColor;
+    @borderColor: @altButtonDefaultBorder;
+    @textColor:   @altButtonDefaultTextColor;
+    @disabledTextColor: @altButtonDefaultDisabledTextColor;
+  }
+  .set-color (@button) when (@button = primary) {
+    @bgColor : @altButtonPrimaryBgColor;
+    @hoverColor: @altButtonPrimaryHoverColor;
+    @hoverTextColor : @altButtonPrimaryHoverTextColor;
+    @borderColor: @altButtonPrimaryBorder;
+    @textColor:   @altButtonPrimaryTextColor;
+    @disabledTextColor: @altButtonPrimaryDisabledTextColor;
+  }
+  .set-color (@button) when (@button = secondary) {
+    @bgColor : @altButtonSecondaryBgColor;
+    @hoverColor: @altButtonSecondaryHoverColor;
+    @hoverTextColor : @altButtonSecondaryHoverTextColor;
+    @borderColor: @altButtonSecondaryBorder;
+    @textColor:   @altButtonSecondaryTextColor;
+    @disabledTextColor: @altButtonSecondaryDisabledTextColor;
+  }
+  .set-color (@button) when (@button = tertiary) {
+    @bgColor : @altButtonTerBgColor;
+    @hoverColor: @altButtonTerHoverColor;
+    @hoverTextColor : @altButtonTerHoverTextColor;
+    @borderColor: @altButtonTerBorder;
+    @textColor:   @altButtonTerTextColor;
+    @disabledTextColor: @altButtonTerDisabledTextColor;
+  }
+  .set-color (@button) when (@button = wht) {
+    @bgColor : @altButtonWhiteBgColor;
+    @hoverColor: @altButtonWhiteHoverColor;
+    @hoverTextColor : @altButtonWhiteHoverTextColor;
+    @borderColor: @altButtonWhiteBorder;
+    @textColor:   @altButtonWhiteTextColor;
+    @disabledTextColor: @altButtonWhiteDisabledTextColor;
+  }
+  .set-color(@button);
+  color: @textColor;
+  > span, > input, > button { color: @textColor; }
+  border: 1px solid @borderColor;
+  background: @bgColor;
+  .vicon {
+    color: @textColor;
+  }
+  &:hover,
+  &:focus {
+    background: @hoverColor;
+    color: @hoverTextColor;
+    border-color : @borderColor;
+    .vicon {
+      color: @hoverTextColor;
+    }
+  }
+  &.btn-alt:active {
+    background: darken(@hoverColor, 10%);
+    border-color: darken(@hoverColor, 10%);
+    color:@hoverTextColor;
+    > span, .vicon{
+      color:@hoverTextColor;
+    }
+  }
+  &.btn-loading {
+    background: @bgColor;
+    border-color: @borderColor;
+    color: @disabledTextColor;
+    > span, .vicon {
+      color: @disabledTextColor;
+    }
+  }
+
+  &.btn-disabled {
+    background: lighten(@bgColor, 5%);
+    border-color: lighten(@disabledTextColor, 5%);
+    color: @disabledTextColor;
+    > span, .vicon {
+      color: @disabledTextColor;
+    }
+  }
+
+  &.btn-inactive,
+  &.btn-inactive:hover,
+  &.btn-loading:focus,
+  &.btn-loading:hover {
+    border-color: @borderColor;
+    background-color: @bgColor;
+  }
+}
+
+
 .btn, .core-form .btn {
+    .transition(background 0.3s);
+    .transition(color 0.3s);
   // General Properties
   @_padding:           4px 15px;
-  @_borderRadius:        @borderRadiusS;
+  @_borderRadius:        @borderRadiusM;
 
   // Rules
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
   padding: @_padding;
-  .border-radius(@_borderRadius);
+  .border-radius(@borderRadiusM);
   position: relative;
   text-decoration: none;
   text-shadow: none;
@@ -164,10 +266,24 @@
   .tetra-button(tertiary);
 }
 
+.btn.btn-default-alt {
+  .alt-tetra-button(default);
+}
+.btn.btn-primary-alt {
+  .alt-tetra-button(primary);
+}
+.btn.btn-secondary-alt {
+  .alt-tetra-button(secondary);
+}
+.btn.btn-tertiary-alt {
+  .alt-tetra-button(tertiary);
+}
+.btn.btn-white{
+  .alt-tetra-button(wht);
+}
 .btn-small, .core-form .btn-small {
   @_padding:     1px 10px;
   @_borderRadius:  @borderRadiusS;
-
   padding: @_padding;
   .border-radius(@_borderRadius);
   font-size: 11px;
@@ -180,18 +296,27 @@
 
 .btn-large, .core-form .btn-large {
   @_padding:     7px @spacingM;
-  @_borderRadius:  @borderRadiusS;
+  @_borderRadius:  @borderRadiusM;
 
   padding: @_padding;
   .border-radius(@_borderRadius);
   font-size: 13px;
 }
 
+
 .btn-lead, .core-form .btn-lead {
   position: relative;
   z-index: 2;
-  padding: @spacingM;
+  padding: @spacingM @spacingL;
   font-size: 16px;
+  .border-radius(@borderRadiusL);
+}
+.btn-fat, .core-form .btn-fat{
+  position: relative;
+  z-index: 2;
+  padding: @spacingL @spacingXl;
+  font-size: 18px;
+  .border-radius(@borderRadiusL);
 }
 
 .btn-desc {

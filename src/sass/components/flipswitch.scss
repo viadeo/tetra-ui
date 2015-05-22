@@ -11,11 +11,11 @@
 		}
 	}
 
-	.flipswitch-lbl-yes {
+	.flipswitch-lbl-no {
 		color: $black;
 	}
 
-	.flipswitch-lbl-no {
+	.flipswitch-lbl-yes {
 		color: lighten($black, 70%);
 		&:hover {
 			color: $black;
@@ -25,7 +25,7 @@
 	.flipswitch-sliders {
 		display: inline-block;
 		position: relative;
-		width: 56px; height: 24px;
+		width: 45px; height: 24px;
 		margin: 0 $spacingXs;
 		border-radius: 12px;
 		vertical-align: middle;
@@ -55,12 +55,24 @@
 	}
 
 	.flipswitch-btn-no {
-		background: $errorText;
+    float: right;
+		background: $grayLighter;
+
+    .flipswitch-icon{
+      margin-left: 17px;
+      color: $gray;
+      margin-top: 2px;
+      font-size: 1em;
+    }
 	}
 
 	.flipswitch-btn-yes {
-		float: right;
-		background: $green2;
+		background: $green3;
+    .flipswitch-icon{
+      margin-top: 2px;
+      color: white;
+      font-size: 0.8em;
+    }
 	}
 
 	.flipswitch-slider {
@@ -84,14 +96,14 @@
     }
 	}
 
-	&.flipswitch-no {
-		.flipswitch-lbl-yes {
+	&.flipswitch-yes {
+		.flipswitch-lbl-no {
 			color: lighten($black, 70%);
 			&:hover {
 				color: $black;
 			}
 		}
-		.flipswitch-lbl-no {
+		.flipswitch-lbl-yes {
 			color: $black;
 		}
 		.flipswitch-inner {

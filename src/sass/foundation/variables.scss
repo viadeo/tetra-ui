@@ -42,7 +42,7 @@ $grayLightLight:    #9e9ea2 !default;
 $grayLight:         #c5c3c7 !default;
 $grayLighter:       #d9d8dd !default;
 $white:             #FFFFFF !default;
-
+$transparent:       rgba(0,0,0,0) !default;
 // Extended palette
 
 $orange1: #f07355 !default;
@@ -94,7 +94,7 @@ $linkColor:         $blue !default;
 $linkColorHover:    darken($linkColor, 14%) !default;
 
 $buttonColor: $white !default;
-
+//Default Buttons
 $buttonDefaultBgColor:     $grayLightLight !default;
 $buttonDefaultEndColor:    $grayLightLight !default;
 $buttonDefaultHoverColor:  darken($grayLightLight, 5%) !default;
@@ -121,6 +121,43 @@ $buttonTerHoverColor:      darken($green3, 10%) !default;
 $buttonTerBorderColor:     $green3 !default;
 $buttonTerTextColor:       $buttonColor !default;
 $buttonTerDisabledTextColor:   darken($green3, 20%) !default;
+
+//Alternatives buttons
+$altButtonDefaultBgColor : $transparent !default;
+$altButtonDefaultBorder: $grayLightLight !default;
+$altButtonDefaultTextColor: $grayLightLight !default;
+$altButtonDefaultHoverColor : $grayLightLight !default;
+$altButtonDefaultHoverTextColor : $white !default;
+$altButtonDefaultDisabledTextColor : lighten($grayLightLight, 10%) !default;
+
+$altButtonPrimaryBgColor : $transparent !default;
+$altButtonPrimaryBorder: $blue !default;
+$altButtonPrimaryTextColor: $blue !default;
+$altButtonPrimaryHoverColor : $blue !default;
+$altButtonPrimaryHoverTextColor : $white !default;
+$altButtonPrimaryDisabledTextColor : lighten($blue, 10%) !default;
+
+$altButtonSecondaryBgColor : $transparent !default;
+$altButtonSecondaryBorder: $orange1 !default;
+$altButtonSecondaryTextColor: $orange1 !default;
+$altButtonSecondaryHoverColor : $orange1 !default;
+$altButtonSecondaryHoverTextColor : $white !default;
+$altButtonSecondaryDisabledTextColor : lighten($orange1, 10%) !default;
+
+$altButtonTerBgColor : $transparent !default;
+$altButtonTerBorder: $green3 !default;
+$altButtonTerTextColor: $green3 !default;
+$altButtonTerHoverColor : $green3 !default;
+$altButtonTerHoverTextColor : $white !default;
+$altButtonTerDisabledTextColor : lighten($green3, 10%) !default;
+
+$altButtonWhiteBgColor : $transparent !default;
+$altButtonWhiteBorder: $white !default;
+$altButtonWhiteTextColor: $white !default;
+$altButtonWhiteHoverColor : $white !default;
+$altButtonWhiteHoverTextColor : $gray !default;
+$altButtonWhiteDisabledTextColor : lighten($gray, 10%) !default;
+
 
 // Typography
 $baseFontSize:      12px !default;

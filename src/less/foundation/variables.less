@@ -42,7 +42,7 @@
 @grayLight:         #c5c3c7;
 @grayLighter:       #d9d8dd;
 @white:             #FFFFFF;
-
+@transparent:       rgba(0,0,0,0);
 // Extended palette
 
 @orange1: #f07355;
@@ -94,7 +94,7 @@
 @linkColorHover:    darken(@linkColor, 14%);
 
 @buttonColor: @white;
-
+//Default Buttons
 @buttonDefaultBgColor:     @grayLightLight;
 @buttonDefaultEndColor:    @grayLightLight;
 @buttonDefaultHoverColor:  darken(@grayLightLight, 5%);
@@ -121,6 +121,43 @@
 @buttonTerBorderColor:     @green3;
 @buttonTerTextColor:       @buttonColor;
 @buttonTerDisabledTextColor:   darken(@green3, 20%);
+
+//Alternatives buttons
+@altButtonDefaultBgColor : @transparent;
+@altButtonDefaultBorder: @grayLightLight;
+@altButtonDefaultTextColor: @grayLightLight;
+@altButtonDefaultHoverColor : @grayLightLight;
+@altButtonDefaultHoverTextColor : @white;
+@altButtonDefaultDisabledTextColor : lighten(@grayLightLight, 10%);
+
+@altButtonPrimaryBgColor : @transparent;
+@altButtonPrimaryBorder: @blue;
+@altButtonPrimaryTextColor: @blue;
+@altButtonPrimaryHoverColor : @blue;
+@altButtonPrimaryHoverTextColor : @white;
+@altButtonPrimaryDisabledTextColor : lighten(@blue, 10%);
+
+@altButtonSecondaryBgColor : @transparent;
+@altButtonSecondaryBorder: @orange1;
+@altButtonSecondaryTextColor: @orange1;
+@altButtonSecondaryHoverColor : @orange1;
+@altButtonSecondaryHoverTextColor : @white;
+@altButtonSecondaryDisabledTextColor : lighten(@orange1, 10%);
+
+@altButtonTerBgColor : @transparent;
+@altButtonTerBorder: @green3;
+@altButtonTerTextColor: @green3;
+@altButtonTerHoverColor : @green3;
+@altButtonTerHoverTextColor : @white;
+@altButtonTerDisabledTextColor : lighten(@green3, 10%);
+
+@altButtonWhiteBgColor : @transparent;
+@altButtonWhiteBorder: @white;
+@altButtonWhiteTextColor: @white;
+@altButtonWhiteHoverColor : @white;
+@altButtonWhiteHoverTextColor : @gray;
+@altButtonWhiteDisabledTextColor : lighten(@gray, 10%);
+
 
 // Typography
 @baseFontSize:      12px;
