@@ -190,7 +190,7 @@
   vertical-align: middle;
   zoom: 1;
   padding: @_padding;
-  .border-radius(@borderRadiusM);
+  .border-radius(@buttonDefaultBorderRadius);
   position: relative;
   text-decoration: none;
   text-shadow: none;
@@ -202,7 +202,6 @@
 
   &:hover, &:focus {
     text-decoration: none;
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
   }
   &:active, &.active {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
@@ -281,11 +280,10 @@
 .btn.btn-white{
   .alt-tetra-button(wht);
 }
+
 .btn-small, .core-form .btn-small {
-  @_padding:     1px 10px;
-  @_borderRadius:  @borderRadiusS;
-  padding: @_padding;
-  .border-radius(@_borderRadius);
+  padding: 2px @spacingS;
+  .border-radius(@buttonSmallBorderRadius);
   font-size: 11px;
 
   .global-icon {
@@ -295,11 +293,8 @@
 }
 
 .btn-large, .core-form .btn-large {
-  @_padding:     7px @spacingM;
-  @_borderRadius:  @borderRadiusM;
-
-  padding: @_padding;
-  .border-radius(@_borderRadius);
+  padding: 7px @spacingM;
+  .border-radius(@buttonLargeBorderRadius);
   font-size: 13px;
 }
 
@@ -309,14 +304,14 @@
   z-index: 2;
   padding: @spacingM @spacingL;
   font-size: 16px;
-  .border-radius(@borderRadiusL);
+  .border-radius(@buttonLeadBorderRadius);
 }
 .btn-fat, .core-form .btn-fat{
   position: relative;
   z-index: 2;
   padding: @spacingL @spacingXl;
   font-size: 18px;
-  .border-radius(@borderRadiusL);
+  .border-radius(@buttonFatBorderRadius);
 }
 
 .btn-desc {
@@ -362,7 +357,7 @@
   .border-radius-right(@rtl, @_borderRadius);
   .padding-right(@rtl, 4px);
   .padding-left(@rtl, 0);
-  .margin-left(@rtl, -@_borderRadius*2);
+  .margin-left(@rtl, -@_borderRadius*3);
 }
 
 .btn-icon {
