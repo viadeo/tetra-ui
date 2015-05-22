@@ -95,61 +95,68 @@
 
 @buttonColor: @white;
 //Default Buttons
-@buttonDefaultBgColor:     @grayLightLight;
-@buttonDefaultEndColor:    @grayLightLight;
-@buttonDefaultHoverColor:  darken(@grayLightLight, 5%);
-@buttonDefaultBorderColor: @grayLightLight;
+@defaultColor:             @grayLightLight;
+@buttonDefaultBgColor:     @defaultColor;
+@buttonDefaultEndColor:    @defaultColor;
+@buttonDefaultHoverColor:  darken(@defaultColor, 5%);
+@buttonDefaultBorderColor: @defaultColor;
 @buttonDefaultTextColor:   @buttonColor;
-@buttonDefaultDisabledTextColor:   darken(@grayLightLight, 5%);
+@buttonDefaultDisabledTextColor:   darken(@defaultColor, 5%);
 
-@buttonPrimaryBgColor:     @blue;
-@buttonPrimaryEndColor:    @blue;
-@buttonPrimaryHoverColor:  darken(@blue, 10%);
-@buttonPrimaryBorderColor: @blue;
+@primaryColor:             @blue;
+@buttonPrimaryBgColor:     @primaryColor;
+@buttonPrimaryEndColor:    @primaryColor;
+@buttonPrimaryHoverColor:  darken(@primaryColor, 10%);
+@buttonPrimaryBorderColor: @primaryColor;
 @buttonPrimaryTextColor:   @buttonColor;
-@buttonPrimaryDisabledTextColor:   darken(@blue, 20%);
+@buttonPrimaryDisabledTextColor:   darken(@primaryColor, 20%);
 
-@buttonSecondaryBgColor:     @orange1;
-@buttonSecondaryEndColor:    @orange1;
-@buttonSecondaryHoverColor:  desaturate(darken(@orange1, 10%),16%);
-@buttonSecondaryBorderColor: @orange1;
+@secondaryColor:             @orange1;
+@buttonSecondaryBgColor:     @secondaryColor;
+@buttonSecondaryEndColor:    @secondaryColor;
+@buttonSecondaryHoverColor:  desaturate(darken(@secondaryColor, 10%),16%);
+@buttonSecondaryBorderColor: @secondaryColor;
 @buttonSecondaryTextColor:   @buttonColor;
-@buttonSecondaryDisabledTextColor:   darken(@orange1, 20%);
+@buttonSecondaryDisabledTextColor:   darken(@secondaryColor, 20%);
 
-@buttonTerBgColor:         @green3;
-@buttonTerHoverColor:      darken(@green3, 10%);
-@buttonTerBorderColor:     @green3;
+@terColor:                 @green3;
+@buttonTerBgColor:         @terColor;
+@buttonTerHoverColor:      darken(@terColor, 10%);
+@buttonTerBorderColor:     @terColor;
 @buttonTerTextColor:       @buttonColor;
-@buttonTerDisabledTextColor:   darken(@green3, 20%);
+@buttonTerDisabledTextColor:   darken(@terColor, 20%);
+
+
 
 //Alternatives buttons
+@altButtonHoverColor: @white;
 @altButtonDefaultBgColor : @transparent;
-@altButtonDefaultBorder: @grayLightLight;
-@altButtonDefaultTextColor: @grayLightLight;
-@altButtonDefaultHoverColor : @grayLightLight;
-@altButtonDefaultHoverTextColor : @white;
-@altButtonDefaultDisabledTextColor : lighten(@grayLightLight, 10%);
+@altButtonDefaultBorder: @defaultColor;
+@altButtonDefaultTextColor: @defaultColor;
+@altButtonDefaultHoverColor : @defaultColor;
+@altButtonDefaultHoverTextColor : @altButtonHoverColor;
+@altButtonDefaultDisabledTextColor : lighten(@defaultColor, 10%);
 
 @altButtonPrimaryBgColor : @transparent;
-@altButtonPrimaryBorder: @blue;
-@altButtonPrimaryTextColor: @blue;
-@altButtonPrimaryHoverColor : @blue;
-@altButtonPrimaryHoverTextColor : @white;
-@altButtonPrimaryDisabledTextColor : lighten(@blue, 10%);
+@altButtonPrimaryBorder: @primaryColor;
+@altButtonPrimaryTextColor: @primaryColor;
+@altButtonPrimaryHoverColor : @primaryColor;
+@altButtonPrimaryHoverTextColor : @altButtonHoverColor;
+@altButtonPrimaryDisabledTextColor : lighten(@primaryColor, 10%);
 
 @altButtonSecondaryBgColor : @transparent;
-@altButtonSecondaryBorder: @orange1;
-@altButtonSecondaryTextColor: @orange1;
-@altButtonSecondaryHoverColor : @orange1;
-@altButtonSecondaryHoverTextColor : @white;
-@altButtonSecondaryDisabledTextColor : lighten(@orange1, 10%);
+@altButtonSecondaryBorder: @secondaryColor;
+@altButtonSecondaryTextColor: @secondaryColor;
+@altButtonSecondaryHoverColor : @secondaryColor;
+@altButtonSecondaryHoverTextColor : @altButtonHoverColor;
+@altButtonSecondaryDisabledTextColor : lighten(@secondaryColor, 10%);
 
 @altButtonTerBgColor : @transparent;
-@altButtonTerBorder: @green3;
-@altButtonTerTextColor: @green3;
-@altButtonTerHoverColor : @green3;
-@altButtonTerHoverTextColor : @white;
-@altButtonTerDisabledTextColor : lighten(@green3, 10%);
+@altButtonTerBorder: @terColor;
+@altButtonTerTextColor: @terColor;
+@altButtonTerHoverColor : @terColor;
+@altButtonTerHoverTextColor : @altButtonHoverColor;
+@altButtonTerDisabledTextColor : lighten(@terColor, 10%);
 
 @altButtonWhiteBgColor : @transparent;
 @altButtonWhiteBorder: @white;
