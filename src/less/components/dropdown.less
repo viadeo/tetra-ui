@@ -96,10 +96,43 @@
     }
     .dd-btn {
       .border-radius-bottom(0);
+      &.btn-append {
+        .border-radius-left(@rtl, 0);
+      }
     }
     &.pull-top {
       .dd-btn {
         .border-radius-top(0);
+        &.btn-append {
+          .border-radius(0 0 @buttonDefaultBorderRadius 0);
+          &.btn-small {
+            .border-radius(0 0 @buttonSmallBorderRadius 0);
+          }
+          &.btn-large {
+            .border-radius(0 0 @buttonLargeBorderRadius 0);
+          }
+          &.btn-lead {
+            .border-radius(0 0 @buttonLeadBorderRadius 0);
+          }
+          &.btn-fat {
+            .border-radius(0 0 @buttonFatBorderRadius 0);
+          }
+        }
+        &:not(.btn-append) {
+          .border-radius(0 0 @buttonDefaultBorderRadius @buttonDefaultBorderRadius);
+          &.btn-small {
+            .border-radius(0 0 @buttonSmallBorderRadius @buttonSmallBorderRadius);
+          }
+          &.btn-large {
+            .border-radius(0 0 @buttonLargeBorderRadius @buttonLargeBorderRadius);
+          }
+          &.btn-lead {
+            .border-radius(0 0 @buttonLeadBorderRadius @buttonLeadBorderRadius);
+          }
+          &.btn-fat {
+            .border-radius(0 0 @buttonFatBorderRadius @buttonFatBorderRadius);
+          }
+        }
       }
     }
   }
@@ -118,10 +151,7 @@
       top: auto;
       bottom: 100%;
       box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
-      .border-radius(@borderRadiusS @borderRadiusS 0 0);
-    }
-    .dd-btn {
-      .border-radius(0 0 @borderRadiusS @borderRadiusS);
+      .border-radius(@buttonDefaultBorderRadius @buttonDefaultBorderRadius 0 0);
     }
     .dd-item {
       &:last-child a {

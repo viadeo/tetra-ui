@@ -265,19 +265,19 @@
   .tetra-button(tertiary);
 }
 
-.btn.btn-default-alt {
+.btn-default-alt {
   .alt-tetra-button(default);
 }
-.btn.btn-primary-alt {
+.btn-primary-alt {
   .alt-tetra-button(primary);
 }
-.btn.btn-secondary-alt {
+.btn-secondary-alt {
   .alt-tetra-button(secondary);
 }
-.btn.btn-tertiary-alt {
+.btn-tertiary-alt {
   .alt-tetra-button(tertiary);
 }
-.btn.btn-white{
+.btn-white{
   .alt-tetra-button(wht);
 }
 
@@ -352,12 +352,27 @@
 }
 
 .btn-append {
-  @_borderRadius:  @borderRadiusS;
   .border-radius-left(@rtl, 0);
-  .border-radius-right(@rtl, @_borderRadius);
+  .border-radius-right(@rtl, @buttonDefaultBorderRadius);
   .padding-right(@rtl, 4px);
   .padding-left(@rtl, 0);
-  .margin-left(@rtl, -@_borderRadius*3);
+  .margin-left(@rtl, -@buttonDefaultBorderRadius*1.2);
+  &.btn-small {
+    .border-radius-right(@rtl, @buttonSmallBorderRadius);
+    .margin-left(@rtl, -@buttonSmallBorderRadius*1.2);
+  }
+  &.btn-large {
+    .border-radius-right(@rtl, @buttonLargeBorderRadius);
+    .margin-left(@rtl, -@buttonLargeBorderRadius*1.2);
+  }
+  &.btn-lead {
+    .border-radius-right(@rtl, @buttonLeadBorderRadius);
+    .margin-left(@rtl, -@buttonLeadBorderRadius*1.2);
+  }
+  &.btn-fat {
+    .border-radius-right(@rtl, @buttonFatBorderRadius);
+    .margin-left(@rtl, -@buttonFatBorderRadius*1.2);
+  }
 }
 
 .btn-icon {
