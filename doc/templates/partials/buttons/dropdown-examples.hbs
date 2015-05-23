@@ -8,15 +8,73 @@ To show dropdown items, add the additional **.open** class to the **.dd** dropdo
 
 <div class="gr pbxl mbxl">
 
-    <div class="dd mrs open">
-       <a class="dd-btn btn btn-{{this}}">{{this}} <span class="vicon vicon-down-alt"></span></a>
+    <div class="dd mrs">
+       <a class="dd-btn btn btn-{{this}}">button {{this}} <span class="vicon vicon-down-alt"></span></a>
        <ul class="dd-menu">
            <li class="dd-item"><a href="">dd item list</a></li>
        </ul>
     </div>
 
     <div class="dispib mrs">
-      <a class="btn btn-{{this}}">{{this}}</a>
+      <a class="btn btn-{{this}}">button {{this}}</a>
+      <div class="dd pull-right">
+        <a class="dd-btn btn btn-{{this}} btn-append"><span class="vicon vicon-down-alt"></span></a>
+         <ul class="dd-menu">
+             <li class="dd-item"><a href="">dd item list</a></li>
+             <li class="dd-item"><a href="">dd item list</a></li>
+         </ul>
+      </div>
+    </div>
+
+    <div class="dd mrs pull-top">
+       <a class="dd-btn btn btn-{{this}} btn-large">button large<span class="vicon vicon-up-alt"></span></a>
+       <ul class="dd-menu">
+           <li class="dd-item"><a href="">dd item list</a></li>
+       </ul>
+    </div>
+
+    <div class="dispib mrs">
+      <a class="btn btn-{{this}} btn-large">button large</a>
+      <div class="dd pull-right">
+        <a class="dd-btn btn btn-{{this}} btn-large btn-append"><span class="vicon vicon-down-alt"></span></a>
+         <ul class="dd-menu">
+             <li class="dd-item"><a href="">dd item list</a></li>
+             <li class="dd-item"><a href="">dd item list</a></li>
+         </ul>
+      </div>
+    </div>
+
+    <div class="dd mrs pull-top">
+       <a class="dd-btn btn btn-{{this}} btn-lead">button lead<span class="vicon vicon-up-alt"></span></a>
+       <ul class="dd-menu">
+           <li class="dd-item"><a href="">dd item list</a></li>
+       </ul>
+    </div>
+
+    <div class="dispib mrs">
+      <a class="btn btn-{{this}} btn-lead">button lead</a>
+      <div class="dd pull-right">
+        <a class="dd-btn btn btn-{{this}} btn-lead btn-append"><span class="vicon vicon-down-alt"></span></a>
+         <ul class="dd-menu">
+             <li class="dd-item"><a href="">dd item list</a></li>
+             <li class="dd-item"><a href="">dd item list</a></li>
+         </ul>
+      </div>
+    </div>
+
+</div>
+
+<div class="gr pbxl mbxl hide-m">
+
+    <div class="dd mrs open">
+       <a class="dd-btn btn btn-{{this}}">open <span class="vicon vicon-down-alt"></span></a>
+       <ul class="dd-menu">
+           <li class="dd-item"><a href="">dd item list</a></li>
+       </ul>
+    </div>
+
+    <div class="dispib mrs">
+      <a class="btn btn-{{this}}">pull-right</a>
       <div class="dd pull-right open">
         <a class="dd-btn btn btn-{{this}} btn-append"><span class="vicon vicon-down-alt"></span></a>
          <ul class="dd-menu">
@@ -27,16 +85,16 @@ To show dropdown items, add the additional **.open** class to the **.dd** dropdo
     </div>
 
     <div class="dd mrs open pull-top">
-       <a class="dd-btn btn btn-{{this}} btn-large">{{this}} large and top <span class="vicon vicon-up-alt"></span></a>
+       <a class="dd-btn btn btn-{{this}}">pull-top<span class="vicon vicon-up-alt"></span></a>
        <ul class="dd-menu">
            <li class="dd-item"><a href="">dd item list</a></li>
        </ul>
     </div>
 
-    <div class="dispib">
-      <a class="btn btn-{{this}} btn-large">{{this}} large and top-right</a>
+    <div class="dispib mrs">
+      <a class="btn btn-{{this}}">pull-right & pull-top</a>
       <div class="dd pull-right open pull-top">
-        <a class="dd-btn btn btn-{{this}} btn-large btn-append"><span class="vicon vicon-up-alt"></span></a>
+        <a class="dd-btn btn btn-{{this}} btn-append"><span class="vicon vicon-up-alt"></span></a>
          <ul class="dd-menu">
              <li class="dd-item"><a href="">dd item list</a></li>
          </ul>

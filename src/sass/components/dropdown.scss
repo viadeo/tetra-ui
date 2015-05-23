@@ -96,10 +96,43 @@ $_listBackground: $white;
     }
     .dd-btn {
       @include border-radius-bottom(0);
+      &.btn-append {
+        @include border-radius-left($rtl, 0);
+      }
     }
     &.pull-top {
       .dd-btn {
         @include border-radius-top(0);
+        &.btn-append {
+          @include border-radius(0 0 $buttonDefaultBorderRadius 0);
+          &.btn-small {
+            @include border-radius(0 0 $buttonSmallBorderRadius 0);
+          }
+          &.btn-large {
+            @include border-radius(0 0 $buttonLargeBorderRadius 0);
+          }
+          &.btn-lead {
+            @include border-radius(0 0 $buttonLeadBorderRadius 0);
+          }
+          &.btn-fat {
+            @include border-radius(0 0 $buttonFatBorderRadius 0);
+          }
+        }
+        &:not(.btn-append) {
+          @include border-radius(0 0 $buttonDefaultBorderRadius $buttonDefaultBorderRadius);
+          &.btn-small {
+            @include border-radius(0 0 $buttonSmallBorderRadius $buttonSmallBorderRadius);
+          }
+          &.btn-large {
+            @include border-radius(0 0 $buttonLargeBorderRadius $buttonLargeBorderRadius);
+          }
+          &.btn-lead {
+            @include border-radius(0 0 $buttonLeadBorderRadius $buttonLeadBorderRadius);
+          }
+          &.btn-fat {
+            @include border-radius(0 0 $buttonFatBorderRadius $buttonFatBorderRadius);
+          }
+        }
       }
     }
   }
@@ -118,10 +151,7 @@ $_listBackground: $white;
       top: auto;
       bottom: 100%;
       box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
-      @include border-radius($borderRadiusS $borderRadiusS 0 0);
-    }
-    .dd-btn {
-      @include border-radius(0 0 $borderRadiusS $borderRadiusS);
+      @include border-radius($buttonDefaultBorderRadius $buttonDefaultBorderRadius 0 0);
     }
     .dd-item {
       &:last-child a {

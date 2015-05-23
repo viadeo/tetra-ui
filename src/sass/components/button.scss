@@ -199,7 +199,7 @@
   vertical-align: middle;
   zoom: 1;
   padding: $_padding;
-  @include border-radius($borderRadiusM);
+  @include border-radius($buttonDefaultBorderRadius);
   position: relative;
   text-decoration: none;
   text-shadow: none;
@@ -211,7 +211,6 @@
 
   &:hover, &:focus {
     text-decoration: none;
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
   }
   &:active, &.active {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
@@ -275,26 +274,25 @@
   @include tetra-button(tertiary);
 }
 
-.btn.btn-default-alt {
+.btn-default-alt {
   @include alt-tetra-button(default);
 }
-.btn.btn-primary-alt {
+.btn-primary-alt {
   @include alt-tetra-button(primary);
 }
-.btn.btn-secondary-alt {
+.btn-secondary-alt {
   @include alt-tetra-button(secondary);
 }
-.btn.btn-tertiary-alt {
+.btn-tertiary-alt {
   @include alt-tetra-button(tertiary);
 }
-.btn.btn-white{
+.btn-white{
   @include alt-tetra-button(wht);
 }
+
 .btn-small, .core-form .btn-small {
-  $_padding:     1px 10px;
-  $_borderRadius:  $borderRadiusS;
-  padding: $_padding;
-  @include border-radius($_borderRadius);
+  padding: 2px $spacingS;
+  @include border-radius($buttonSmallBorderRadius);
   font-size: 11px;
 
   .global-icon {
@@ -304,11 +302,8 @@
 }
 
 .btn-large, .core-form .btn-large {
-  $_padding:     7px $spacingM;
-  $_borderRadius:  $borderRadiusM;
-
-  padding: $_padding;
-  @include border-radius($_borderRadius);
+  padding: 7px $spacingM;
+  @include border-radius($buttonLargeBorderRadius);
   font-size: 13px;
 }
 
@@ -318,14 +313,14 @@
   z-index: 2;
   padding: $spacingM $spacingL;
   font-size: 16px;
-  @include border-radius($borderRadiusL);
+  @include border-radius($buttonLeadBorderRadius);
 }
 .btn-fat, .core-form .btn-fat{
   position: relative;
   z-index: 2;
   padding: $spacingL $spacingXl;
   font-size: 18px;
-  @include border-radius($borderRadiusL);
+  @include border-radius($buttonFatBorderRadius);
 }
 
 .btn-desc {
@@ -366,12 +361,27 @@
 }
 
 .btn-append {
-  $_borderRadius:  $borderRadiusS;
   @include border-radius-left($rtl, 0);
-  @include border-radius-right($rtl, $_borderRadius);
+  @include border-radius-right($rtl, $buttonDefaultBorderRadius);
   @include padding-right($rtl, 4px);
   @include padding-left($rtl, 0);
-  @include margin-left($rtl, -$_borderRadius*2);
+  @include margin-left($rtl, -$buttonDefaultBorderRadius*1.2);
+  &.btn-small {
+    @include border-radius-right($rtl, $buttonSmallBorderRadius);
+    @include margin-left($rtl, -$buttonSmallBorderRadius*1.2);
+  }
+  &.btn-large {
+    @include border-radius-right($rtl, $buttonLargeBorderRadius);
+    @include margin-left($rtl, -$buttonLargeBorderRadius*1.2);
+  }
+  &.btn-lead {
+    @include border-radius-right($rtl, $buttonLeadBorderRadius);
+    @include margin-left($rtl, -$buttonLeadBorderRadius*1.2);
+  }
+  &.btn-fat {
+    @include border-radius-right($rtl, $buttonFatBorderRadius);
+    @include margin-left($rtl, -$buttonFatBorderRadius*1.2);
+  }
 }
 
 .btn-icon {
