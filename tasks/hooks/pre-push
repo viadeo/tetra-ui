@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#
+# Avoid forced push on master
+# ----------------------------
+#
+
+# history of branch 'master' shall not be re-written
+PROTECTED_BRANCH="master"
+
+current_branch=`git rev-parse --abbrev-ref HEAD`
+push_command=`ps -ocommand= -p $PPID`
+
+if [[ "$current_branch" == $PROTECTED_BRANCH && "$push_command" =~ force|delete|-f ]]; then
+  echo "Prevented force-push to $current_branch. This is a very dangerous command."
+  echo "If you really want to do this, use --no-verify to bypass this pre-push hook."
+  exit 1
+fi
