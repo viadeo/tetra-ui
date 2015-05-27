@@ -8,8 +8,8 @@
 # history of branch 'master' shall not be re-written
 PROTECTED_BRANCH="master"
 
-current_branch=`git rev-parse --abbrev-ref HEAD`
-push_command=`ps -ocommand= -p $PPID`
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+push_command=$(ps -ocommand= -p $PPID)
 
 if [[ "$current_branch" == $PROTECTED_BRANCH && "$push_command" =~ force|delete|-f ]]; then
   echo "Prevented force-push to $current_branch. This is a very dangerous command."
