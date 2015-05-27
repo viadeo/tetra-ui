@@ -3,6 +3,10 @@
 
 > A smart, easy-to-use toolkit for creating rich interfaces in lightning speed!
 
+`MASTER` is the main branch.
+The `postinstall` script setup a hook policy to automatically rebase master onto gh-pages at each commit.
+Sync gh-pages with just git `push --all`.
+
 ## Getting started
 
 Three quick start options are available:
