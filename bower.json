@@ -19,9 +19,6 @@
     "index.html",
     "*.sublime-project"
   ],
-  "dependencies": {
-    "json2": "git://github.com/douglascrockford/JSON-js.git"
-  },
   "devDependencies": {
     "jquery": "~1.11.1"
   }

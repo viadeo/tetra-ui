@@ -2,8 +2,7 @@
     "framework": "jasmine",
     "src_files": [
 	    "src/js/lib/jquery/1.9.1/jquery.min.js",
-	    "src/js/lib/JSON-js/json2.js",
-        "src/js/lib/tetra/release/tetra-core.js",
+      "src/js/lib/tetra/release/tetra-core.js",
 	    "test/lib/jasmine-jquery.js",
 	    "test/conf/jasmine/fixtures.js",
 	    "test/lib/utils.js",
