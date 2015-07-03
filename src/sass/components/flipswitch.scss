@@ -42,27 +42,27 @@
 	.flipswitch-inner {
 		display: block;
 		width: 200%; height: 100%;
-		margin-left: -100%;
+		@include margin-left($rtl, -100%);
 
 		-webkit-transition: margin-left 0.2s ease-in;
     transition: margin-left 0.2s ease-in;
 	}
 
 	.flipswitch-btn-no, .flipswitch-btn-yes {
-		float: left;
+		@include float-left($rtl);
 		width: 50%; height: 100%;
 		box-shadow: 0 1px 3px rgba($black, (30/100)) inset;
 	}
 
 	.flipswitch-btn-no {
-    float: right;
+    @include float-right($rtl);
 		background: $grayLighter;
 
     .flipswitch-icon{
-      margin-left: 17px;
+      @include margin-left($rtl, 17px);
       color: $gray;
       margin-top: 2px;
-      font-size: 1em;
+			font-size: 12px;
     }
 	}
 
@@ -71,15 +71,16 @@
     .flipswitch-icon{
       margin-top: 2px;
       color: white;
-      font-size: 0.8em;
+      font-size: 10px;
     }
 	}
 
 	.flipswitch-slider {
 		position: absolute;
-		left: 0; top: 2px;
+		@include left($rtl, 0);
+		top: 2px;
 		width: 20px; height: 20px;
-		margin-left: 2px;
+		@include margin-left($rtl, 2px);
 		border-radius: 12px;
 		background: $white;
 		text-align: center;
@@ -107,11 +108,11 @@
 			color: $black;
 		}
 		.flipswitch-inner {
-			margin-left: 0;
+			@include margin-left($rtl, 0);
 		}
 		.flipswitch-slider {
-			left: 100%;
-			margin-left: -22px;
+			@include left($rtl, 100%);
+			@include margin-left($rtl, -22px);
 		}
 	}
 }
