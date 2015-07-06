@@ -7,3 +7,4 @@ target/
 .idea
 npm-debug.log
 _tmp
+bower_components/

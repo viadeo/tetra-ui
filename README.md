@@ -15,7 +15,7 @@ Three quick start options are available:
 * Clone the repo: `git clone https://github.com/viadeo/tetra-ui.git`.
 * Install with [Bower](http://bower.io): `bower install tetra-ui`.
 
-The main folder you’ll use is of course `tetra-ui` where you’ll find the main files: CSS, web fonts, images, JavaScript, Less. The folders `tetra-js` and `json2` are required when using Tetra JS components.
+The main folder you’ll use is of course `tetra-ui` where you’ll find the main files: CSS, web fonts, images, Less, Sass.
 
 ## Building Tetra UI
 
