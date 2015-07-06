@@ -55,6 +55,10 @@ p {
   line-height: $headerHeight;
 }
 
+.toggle-mode {
+  line-height: 16px;
+}
+
 .nav-doc {
   text-transform: uppercase;
   li {
@@ -250,4 +254,3 @@ p {
     }
   }
 }
-

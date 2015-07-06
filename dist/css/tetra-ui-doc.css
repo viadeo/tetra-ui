@@ -7936,6 +7936,10 @@ p {
   background: #ffffff;
 }
 
+.toggle-mode {
+  line-height: 16px;
+}
+
 .nav-doc {
   text-transform: uppercase;
 }
