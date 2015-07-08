@@ -61,10 +61,14 @@
     }
   }
 
-  &.btn-disabled {
-    background: lighten(@bgColor, 15%);
-    border-color: lighten(@bgColor, 15%);
+  &.btn-disabled,
+  &.btn-disabled:hover,
+  &.btn-disabled:focus {
+    background: @bgColor;
+    border-color: @bgColor;
     color: @disabledTextColor;
+    opacity: 0.5;
+    color: white;
     > span, .vicon {
       color: @disabledTextColor;
     }
@@ -179,8 +183,9 @@
 
 
 .btn, .core-form .btn {
-    .transition(background 0.3s);
-    .transition(color 0.3s);
+  transition-property: border, background, color;
+  transition-duration: .3s;
+
   // General Properties
   @_padding:           4px 15px;
   @_borderRadius:        @borderRadiusM;
