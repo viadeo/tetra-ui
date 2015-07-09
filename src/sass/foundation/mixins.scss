@@ -121,10 +121,9 @@
     transition: $transition;
 }
 
-// Opacity
+// $deprecated
 @mixin opacity($opacity: 100){
     opacity: $opacity / 100;
-    filter: unquote("alpha(opacity=#{$opacity})");
 }
 
 

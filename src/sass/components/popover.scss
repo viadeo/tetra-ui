@@ -8,7 +8,6 @@ $_popover-arrow-offset-left: $_popover-arrow-size*2;
 $_popover-arrow-back-offset-left: $_popover-arrow-offset-left - ($_popover-arrow-back-size - $_popover-arrow-size);
 
 @mixin popover-reset(){
-  color: $grayDark !important;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -67,17 +66,20 @@ $_popover-arrow-back-offset-left: $_popover-arrow-offset-left - ($_popover-arrow
 	}
 
 	.popover-header {
+    color: $grayDark !important;
 	  display: block;
 	  padding: $spacingS $spacingS $spacingXs;
 	  border-bottom: 1px dotted $grayLighter;
 	}
 
 	.popover-content {
+    color: $grayDark !important;
     display: block;
     padding: $spacingS;
   }
 
 	.popover-footer {
+    color: $grayDark !important;
     display: block;
     padding: $spacingS;
     background: #f6f7f8;
