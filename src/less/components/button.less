@@ -34,7 +34,7 @@
   }
   .set-color(@button);
   color: @textColor;
-  > span, > input, > button { color: @textColor; }
+  > .vicon { color: @textColor; }
   border: 1px solid @borderColor;
   background: @bgColor;
   .vicon {
@@ -52,15 +52,9 @@
   &:active {
     background: @bgColor;
   }
-  &.btn-loading {
-    background: @bgColor;
-    border-color: @bgColor;
-    color: @disabledTextColor;
-    > span, .vicon {
-      color: @disabledTextColor;
-    }
-  }
-
+  &.btn-loading,
+  &.btn-loading:hover,
+  &.btn-loading:focus,
   &.btn-disabled,
   &.btn-disabled:hover,
   &.btn-disabled:focus {
@@ -131,51 +125,43 @@
   }
   .set-color(@button);
   color: @textColor;
-  > span, > input, > button { color: @textColor; }
+  .vicon { color: @textColor; }
   border: 1px solid @borderColor;
   background: @bgColor;
   .vicon {
     color: @textColor;
   }
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background: @hoverColor;
     color: @hoverTextColor;
     border-color : @borderColor;
-    .vicon, span {
+    .vicon {
       color: @hoverTextColor;
     }
   }
-  &.btn-alt:active {
-    background: darken(@hoverColor, 10%);
-    border-color: darken(@hoverColor, 10%);
-    color:@hoverTextColor;
-    > span, .vicon{
-      color:@hoverTextColor;
-    }
+  &:active {
+    border-color : darken(@borderColor, 10%);
   }
-  &.btn-loading {
+
+  &.btn-loading,
+  &.btn-loading:hover,
+  &.btn-loading:focus,
+  &.btn-disabled,
+  &.btn-disabled:hover,
+  &.btn-disabled:focus {
     background: @bgColor;
     border-color: @borderColor;
     color: @disabledTextColor;
-    > span, .vicon {
-      color: @disabledTextColor;
-    }
-  }
-
-  &.btn-disabled {
-    background: lighten(@bgColor, 5%);
-    border-color: lighten(@disabledTextColor, 5%);
-    color: @disabledTextColor;
+    opacity: 0.5;
     > span, .vicon {
       color: @disabledTextColor;
     }
   }
 
   &.btn-inactive,
-  &.btn-inactive:hover,
-  &.btn-loading:focus,
-  &.btn-loading:hover {
+  &.btn-inactive:hover {
     border-color: @borderColor;
     background-color: @bgColor;
   }
@@ -185,16 +171,17 @@
 .btn, .core-form .btn {
   transition-property: border, background, color;
   transition-duration: .3s;
-
-  // General Properties
-  @_padding:           4px 15px;
-  @_borderRadius:        @borderRadiusM;
+  .vicon {
+    transition-property: color;
+    transition-duration: .3s;
+  }
 
   // Rules
+  font-weight: 300;
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
-  padding: @_padding;
+  padding: 3.5px @buttonDefaultBorderRadius*1.2;
   .border-radius(@buttonDefaultBorderRadius);
   position: relative;
   text-decoration: none;
@@ -207,9 +194,6 @@
 
   &:hover, &:focus {
     text-decoration: none;
-  }
-  &:active, &.active {
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
   }
 
   // Support for old layout
@@ -287,10 +271,10 @@
 }
 
 .btn-small, .core-form .btn-small {
-  padding: 2px @spacingS;
+  padding: 2px @buttonSmallBorderRadius*1.2;
   .border-radius(@buttonSmallBorderRadius);
   font-size: 11px;
-
+  font-weight: 300;
   .global-icon {
     margin: -1px 0;
   }
@@ -298,24 +282,39 @@
 }
 
 .btn-large, .core-form .btn-large {
-  padding: 7px @spacingM;
+  padding: 7px @buttonLargeBorderRadius*1.2;
   .border-radius(@buttonLargeBorderRadius);
   font-size: 13px;
+  font-weight: 400;
 }
 
 
 .btn-lead, .core-form .btn-lead {
   position: relative;
   z-index: 2;
-  padding: @spacingM @spacingL;
+  padding: 10px @buttonLeadBorderRadius*1.2;
   font-size: 16px;
+  font-weight: 400;
   .border-radius(@buttonLeadBorderRadius);
 }
+
+.btn-lead-alt, .core-form .btn-lead-alt {
+  position: relative;
+  z-index: 2;
+  padding: 10px @buttonLeadBorderRadius*1.2;
+  font-size: 16px;
+  font-weight: 600;
+  border-width: 2px;
+  .border-radius(@buttonLeadBorderRadius);
+}
+
 .btn-fat, .core-form .btn-fat{
   position: relative;
   z-index: 2;
-  padding: @spacingL @spacingXl;
-  font-size: 18px;
+  padding: 15px @buttonFatBorderRadius*1.8;
+  font-size: 20px;
+  font-weight: 600;
+  border-width: 2px;
   .border-radius(@buttonFatBorderRadius);
 }
 
@@ -361,29 +360,30 @@
   .border-radius-right(@rtl, @buttonDefaultBorderRadius);
   .padding-right(@rtl, 4px);
   .padding-left(@rtl, 0);
-  .margin-left(@rtl, -@buttonDefaultBorderRadius*1.2);
+  .margin-left(@rtl, -@buttonDefaultBorderRadius);
   &.btn-small {
     .border-radius-right(@rtl, @buttonSmallBorderRadius);
     .margin-left(@rtl, -@buttonSmallBorderRadius*1.2);
   }
   &.btn-large {
     .border-radius-right(@rtl, @buttonLargeBorderRadius);
-    .margin-left(@rtl, -@buttonLargeBorderRadius*1.2);
+    .margin-left(@rtl, -@buttonLargeBorderRadius);
   }
   &.btn-lead {
     .border-radius-right(@rtl, @buttonLeadBorderRadius);
-    .margin-left(@rtl, -@buttonLeadBorderRadius*1.2);
+    .margin-left(@rtl, -@buttonLeadBorderRadius);
   }
   &.btn-fat {
     .border-radius-right(@rtl, @buttonFatBorderRadius);
-    .margin-left(@rtl, -@buttonFatBorderRadius*1.2);
+    .margin-left(@rtl, -@buttonFatBorderRadius);
   }
 }
 
 .btn-icon {
-  padding: 10px 4px 6px;
+  padding: 6px 5px;
+  border-radius: 100%;
   .vicon {
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
   }
 }
@@ -405,6 +405,7 @@
   font-size: (@baseFontSize + 3);
   color: @grayDark;
   background: transparent;
+  font-weight: 400;
 
   .vicon {
     color: @grayDark;
