@@ -107,7 +107,7 @@
 @defaultColor:             @grayLightLight;
 @buttonDefaultBgColor:     @defaultColor;
 @buttonDefaultEndColor:    @defaultColor;
-@buttonDefaultHoverColor:  darken(@defaultColor, 5%);
+@buttonDefaultHoverColor:  desaturate(darken(@defaultColor, 10%), 16%);
 @buttonDefaultBorderColor: @defaultColor;
 @buttonDefaultTextColor:   @buttonColor;
 @buttonDefaultDisabledTextColor: @buttonColor;
@@ -115,7 +115,7 @@
 @primaryColor:             @blue;
 @buttonPrimaryBgColor:     @primaryColor;
 @buttonPrimaryEndColor:    @primaryColor;
-@buttonPrimaryHoverColor:  darken(@primaryColor, 10%);
+@buttonPrimaryHoverColor:  desaturate(darken(@primaryColor, 10%), 16%);
 @buttonPrimaryBorderColor: @primaryColor;
 @buttonPrimaryTextColor:   @buttonColor;
 @buttonPrimaryDisabledTextColor: @buttonColor;
@@ -123,7 +123,7 @@
 @secondaryColor:             @orange1;
 @buttonSecondaryBgColor:     @secondaryColor;
 @buttonSecondaryEndColor:    @secondaryColor;
-@buttonSecondaryHoverColor:  desaturate(darken(@secondaryColor, 10%),16%);
+@buttonSecondaryHoverColor:  desaturate(darken(@secondaryColor, 10%), 16%);
 @buttonSecondaryBorderColor: @secondaryColor;
 @buttonSecondaryTextColor:   @buttonColor;
 @buttonSecondaryDisabledTextColor: @buttonColor;
