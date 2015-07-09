@@ -131,6 +131,11 @@
     opacity: $opacity / 100;
 }
 
+// $deprecated
+@mixin ie7-inline-block(){
+  display: inline-block;
+}
+
 
 // Gradient Bar Colors for buttons and allerts
 @mixin gradientBar($primaryColor, $secondaryColor){
