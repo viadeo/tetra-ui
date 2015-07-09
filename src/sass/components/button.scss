@@ -229,14 +229,15 @@
   .vicon.btn-icon-before,
   .vicon.btn-icon-after {
     font-size: 7px;
+    line-height: 1;
   }
   .vicon.btn-icon-before {
-    @include margin-left($rtl, -6px);
-    @include margin-right($rtl, 2px);
+    @include margin-left($rtl, -4px);
+    @include margin-right($rtl, 3px);
   }
   .vicon.btn-icon-after {
-    @include margin-left($rtl, 2px);
-    @include margin-right($rtl, -6px);
+    @include margin-left($rtl, 3px);
+    @include margin-right($rtl, -4px);
   }
 }
 
