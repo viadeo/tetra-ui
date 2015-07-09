@@ -96,44 +96,44 @@
 
 // buttons
 
-@buttonSmallBorderRadius: 3px;
-@buttonDefaultBorderRadius: 6px;
-@buttonLargeBorderRadius: 6px;
-@buttonLeadBorderRadius: 10px;
-@buttonFatBorderRadius: 10px;
+@buttonSmallBorderRadius: 12px;
+@buttonDefaultBorderRadius: 14px;
+@buttonLargeBorderRadius: 16px;
+@buttonLeadBorderRadius: 26px;
+@buttonFatBorderRadius: 30px;
 
 @buttonColor: @white;
 
 @defaultColor:             @grayLightLight;
 @buttonDefaultBgColor:     @defaultColor;
 @buttonDefaultEndColor:    @defaultColor;
-@buttonDefaultHoverColor:  darken(@defaultColor, 5%);
+@buttonDefaultHoverColor:  desaturate(darken(@defaultColor, 10%), 16%);
 @buttonDefaultBorderColor: @defaultColor;
 @buttonDefaultTextColor:   @buttonColor;
-@buttonDefaultDisabledTextColor:   darken(@defaultColor, 5%);
+@buttonDefaultDisabledTextColor: @buttonColor;
 
 @primaryColor:             @blue;
 @buttonPrimaryBgColor:     @primaryColor;
 @buttonPrimaryEndColor:    @primaryColor;
-@buttonPrimaryHoverColor:  darken(@primaryColor, 10%);
+@buttonPrimaryHoverColor:  desaturate(darken(@primaryColor, 10%), 16%);
 @buttonPrimaryBorderColor: @primaryColor;
 @buttonPrimaryTextColor:   @buttonColor;
-@buttonPrimaryDisabledTextColor:   darken(@primaryColor, 20%);
+@buttonPrimaryDisabledTextColor: @buttonColor;
 
 @secondaryColor:             @orange1;
 @buttonSecondaryBgColor:     @secondaryColor;
 @buttonSecondaryEndColor:    @secondaryColor;
-@buttonSecondaryHoverColor:  desaturate(darken(@secondaryColor, 10%),16%);
+@buttonSecondaryHoverColor:  desaturate(darken(@secondaryColor, 10%), 16%);
 @buttonSecondaryBorderColor: @secondaryColor;
 @buttonSecondaryTextColor:   @buttonColor;
-@buttonSecondaryDisabledTextColor:   darken(@secondaryColor, 20%);
+@buttonSecondaryDisabledTextColor: @buttonColor;
 
 @terColor:                 @green3;
 @buttonTerBgColor:         @terColor;
 @buttonTerHoverColor:      darken(@terColor, 10%);
 @buttonTerBorderColor:     @terColor;
 @buttonTerTextColor:       @buttonColor;
-@buttonTerDisabledTextColor:   darken(@terColor, 20%);
+@buttonTerDisabledTextColor: @buttonColor;
 
 
 

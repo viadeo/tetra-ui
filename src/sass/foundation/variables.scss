@@ -96,44 +96,44 @@ $linkColorHover:    darken($linkColor, 14%) !default;
 
 // buttons
 
-$buttonSmallBorderRadius: 3px !default;
-$buttonDefaultBorderRadius: 6px !default;
-$buttonLargeBorderRadius: 6px !default;
-$buttonLeadBorderRadius: 10px !default;
-$buttonFatBorderRadius: 10px !default;
+$buttonSmallBorderRadius: 12px !default;
+$buttonDefaultBorderRadius: 14px !default;
+$buttonLargeBorderRadius: 16px !default;
+$buttonLeadBorderRadius: 26px !default;
+$buttonFatBorderRadius: 30px !default;
 
 $buttonColor: $white !default;
 
 $defaultColor:             $grayLightLight !default;
 $buttonDefaultBgColor:     $defaultColor !default;
 $buttonDefaultEndColor:    $defaultColor !default;
-$buttonDefaultHoverColor:  darken($defaultColor, 5%) !default;
+$buttonDefaultHoverColor:  desaturate(darken($defaultColor, 10%), 16%) !default;
 $buttonDefaultBorderColor: $defaultColor !default;
 $buttonDefaultTextColor:   $buttonColor !default;
-$buttonDefaultDisabledTextColor:   darken($defaultColor, 5%) !default;
+$buttonDefaultDisabledTextColor: $buttonColor !default;
 
 $primaryColor:             $blue !default;
 $buttonPrimaryBgColor:     $primaryColor !default;
 $buttonPrimaryEndColor:    $primaryColor !default;
-$buttonPrimaryHoverColor:  darken($primaryColor, 10%) !default;
+$buttonPrimaryHoverColor:  desaturate(darken($primaryColor, 10%), 16%) !default;
 $buttonPrimaryBorderColor: $primaryColor !default;
 $buttonPrimaryTextColor:   $buttonColor !default;
-$buttonPrimaryDisabledTextColor:   darken($primaryColor, 20%) !default;
+$buttonPrimaryDisabledTextColor: $buttonColor !default;
 
 $secondaryColor:             $orange1 !default;
 $buttonSecondaryBgColor:     $secondaryColor !default;
 $buttonSecondaryEndColor:    $secondaryColor !default;
-$buttonSecondaryHoverColor:  desaturate(darken($secondaryColor, 10%),16%) !default;
+$buttonSecondaryHoverColor:  desaturate(darken($secondaryColor, 10%), 16%) !default;
 $buttonSecondaryBorderColor: $secondaryColor !default;
 $buttonSecondaryTextColor:   $buttonColor !default;
-$buttonSecondaryDisabledTextColor:   darken($secondaryColor, 20%) !default;
+$buttonSecondaryDisabledTextColor: $buttonColor !default;
 
 $terColor:                 $green3 !default;
 $buttonTerBgColor:         $terColor !default;
 $buttonTerHoverColor:      darken($terColor, 10%) !default;
 $buttonTerBorderColor:     $terColor !default;
 $buttonTerTextColor:       $buttonColor !default;
-$buttonTerDisabledTextColor:   darken($terColor, 20%) !default;
+$buttonTerDisabledTextColor: $buttonColor !default;
 
 
 

@@ -38,7 +38,7 @@
   }}
   @include set-color($button);
   color: $textColor;
-  > span, > input, > button { color: $textColor; }
+  > .vicon { color: $textColor; }
   border: 1px solid $borderColor;
   background: $bgColor;
   .vicon {
@@ -56,19 +56,17 @@
   &:active {
     background: $bgColor;
   }
-  &.btn-loading {
+  &.btn-loading,
+  &.btn-loading:hover,
+  &.btn-loading:focus,
+  &.btn-disabled,
+  &.btn-disabled:hover,
+  &.btn-disabled:focus {
     background: $bgColor;
     border-color: $bgColor;
     color: $disabledTextColor;
-    > span, .vicon {
-      color: $disabledTextColor;
-    }
-  }
-
-  &.btn-disabled {
-    background: lighten($bgColor, 15%);
-    border-color: lighten($bgColor, 15%);
-    color: $disabledTextColor;
+    opacity: 0.5;
+    color: white;
     > span, .vicon {
       color: $disabledTextColor;
     }
@@ -136,51 +134,43 @@
   }}
   @include set-color($button);
   color: $textColor;
-  > span, > input, > button { color: $textColor; }
+  .vicon { color: $textColor; }
   border: 1px solid $borderColor;
   background: $bgColor;
   .vicon {
     color: $textColor;
   }
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background: $hoverColor;
     color: $hoverTextColor;
     border-color : $borderColor;
-    .vicon, span {
+    .vicon {
       color: $hoverTextColor;
     }
   }
-  &.btn-alt:active {
-    background: darken($hoverColor, 10%);
-    border-color: darken($hoverColor, 10%);
-    color:$hoverTextColor;
-    > span, .vicon{
-      color:$hoverTextColor;
-    }
+  &:active {
+    border-color : darken($borderColor, 10%);
   }
-  &.btn-loading {
+
+  &.btn-loading,
+  &.btn-loading:hover,
+  &.btn-loading:focus,
+  &.btn-disabled,
+  &.btn-disabled:hover,
+  &.btn-disabled:focus {
     background: $bgColor;
     border-color: $borderColor;
     color: $disabledTextColor;
-    > span, .vicon {
-      color: $disabledTextColor;
-    }
-  }
-
-  &.btn-disabled {
-    background: lighten($bgColor, 5%);
-    border-color: lighten($disabledTextColor, 5%);
-    color: $disabledTextColor;
+    opacity: 0.5;
     > span, .vicon {
       color: $disabledTextColor;
     }
   }
 
   &.btn-inactive,
-  &.btn-inactive:hover,
-  &.btn-loading:focus,
-  &.btn-loading:hover {
+  &.btn-inactive:hover {
     border-color: $borderColor;
     background-color: $bgColor;
   }
@@ -188,17 +178,19 @@
 
 
 .btn, .core-form .btn {
-    @include transition(background 0.3s);
-    @include transition(color 0.3s);
-  // General Properties
-  $_padding:           4px 15px;
-  $_borderRadius:        $borderRadiusM;
+  transition-property: border, background, color;
+  transition-duration: .3s;
+  .vicon {
+    transition-property: color;
+    transition-duration: .3s;
+  }
 
   // Rules
+  font-weight: 300;
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
-  padding: $_padding;
+  padding: 3.5px $buttonDefaultBorderRadius*1.2;
   @include border-radius($buttonDefaultBorderRadius);
   position: relative;
   text-decoration: none;
@@ -211,9 +203,6 @@
 
   &:hover, &:focus {
     text-decoration: none;
-  }
-  &:active, &.active {
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
   }
 
   // Support for old layout
@@ -239,16 +228,15 @@
 
   .vicon.btn-icon-before,
   .vicon.btn-icon-after {
-    margin-top:-1px;
     font-size: 7px;
   }
   .vicon.btn-icon-before {
-    @include margin-left($rtl, -9px);
-    @include margin-right($rtl, 0);
+    @include margin-left($rtl, -6px);
+    @include margin-right($rtl, 2px);
   }
   .vicon.btn-icon-after {
-    @include margin-left($rtl, 0);
-    @include margin-right($rtl, -9px);
+    @include margin-left($rtl, 2px);
+    @include margin-right($rtl, -6px);
   }
 }
 
@@ -291,35 +279,58 @@
 }
 
 .btn-small, .core-form .btn-small {
-  padding: 2px $spacingS;
+  padding: 2px $buttonSmallBorderRadius*1.2;
   @include border-radius($buttonSmallBorderRadius);
   font-size: 11px;
-
-  .global-icon {
-    margin: -1px 0;
-  }
-
+  font-weight: 300;
 }
 
 .btn-large, .core-form .btn-large {
-  padding: 7px $spacingM;
+  padding: 7px $buttonLargeBorderRadius*1.2;
   @include border-radius($buttonLargeBorderRadius);
   font-size: 13px;
+  font-weight: 400;
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 8px;
+  }
 }
 
 
 .btn-lead, .core-form .btn-lead {
   position: relative;
   z-index: 2;
-  padding: $spacingM $spacingL;
+  padding: 10px $buttonLeadBorderRadius*1.2;
   font-size: 16px;
+  font-weight: 400;
   @include border-radius($buttonLeadBorderRadius);
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 9px;
+  }
 }
+
+.btn-lead-alt, .core-form .btn-lead-alt {
+  position: relative;
+  z-index: 2;
+  padding: 10px $buttonLeadBorderRadius*1.2;
+  font-size: 16px;
+  font-weight: 600;
+  border-width: 2px;
+  @include border-radius($buttonLeadBorderRadius);
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 9px;
+  }
+}
+
 .btn-fat, .core-form .btn-fat{
   position: relative;
   z-index: 2;
-  padding: $spacingL $spacingXl;
-  font-size: 18px;
+  padding: 15px $buttonFatBorderRadius*1.8;
+  font-size: 20px;
+  font-weight: 600;
+  border-width: 2px;
   @include border-radius($buttonFatBorderRadius);
 }
 
@@ -365,29 +376,30 @@
   @include border-radius-right($rtl, $buttonDefaultBorderRadius);
   @include padding-right($rtl, 4px);
   @include padding-left($rtl, 0);
-  @include margin-left($rtl, -$buttonDefaultBorderRadius*1.2);
+  @include margin-left($rtl, -$buttonDefaultBorderRadius);
   &.btn-small {
     @include border-radius-right($rtl, $buttonSmallBorderRadius);
-    @include margin-left($rtl, -$buttonSmallBorderRadius*1.2);
+    @include margin-left($rtl, -$buttonSmallBorderRadius);
   }
   &.btn-large {
     @include border-radius-right($rtl, $buttonLargeBorderRadius);
-    @include margin-left($rtl, -$buttonLargeBorderRadius*1.2);
+    @include margin-left($rtl, -$buttonLargeBorderRadius);
   }
   &.btn-lead {
     @include border-radius-right($rtl, $buttonLeadBorderRadius);
-    @include margin-left($rtl, -$buttonLeadBorderRadius*1.2);
+    @include margin-left($rtl, -$buttonLeadBorderRadius);
   }
   &.btn-fat {
     @include border-radius-right($rtl, $buttonFatBorderRadius);
-    @include margin-left($rtl, -$buttonFatBorderRadius*1.2);
+    @include margin-left($rtl, -$buttonFatBorderRadius);
   }
 }
 
 .btn-icon {
-  padding: 10px 4px 6px;
+  padding: 6px 5px;
+  border-radius: 100%;
   .vicon {
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
   }
 }
@@ -409,6 +421,7 @@
   font-size: ($baseFontSize + 3);
   color: $grayDark;
   background: transparent;
+  font-weight: 400;
 
   .vicon {
     color: $grayDark;
