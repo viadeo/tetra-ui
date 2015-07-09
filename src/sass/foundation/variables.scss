@@ -179,7 +179,7 @@ $altButtonWhiteDisabledTextColor : lighten($gray, 10%) !default;
 $baseFontSize:      12px !default;
 $smallFontSize:     $baseFontSize - 1 !default;
 $baseFontColor:     #2a2a2a !default;
-$baseFontFamily:    Arial, sans-serif !default;
+$baseFontFamily:    $font-stack !default;
 $baseLineHeight:    1.4em !default;
 
 // Border Radius
