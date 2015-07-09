@@ -333,6 +333,10 @@
   font-weight: 600;
   border-width: 2px;
   @include border-radius($buttonFatBorderRadius);
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 10px;
+  }
 }
 
 .btn-desc {
