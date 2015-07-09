@@ -4674,18 +4674,19 @@ a:focus .avatar img {
 .btn .vicon.btn-icon-after,
 .core-form .btn .vicon.btn-icon-after {
   font-size: 7px;
+  line-height: 1;
 }
 
 .btn .vicon.btn-icon-before,
 .core-form .btn .vicon.btn-icon-before {
-  margin-right: 2px;
-  margin-left: -6px;
+  margin-right: 3px;
+  margin-left: -4px;
 }
 
 .btn .vicon.btn-icon-after,
 .core-form .btn .vicon.btn-icon-after {
-  margin-right: -6px;
-  margin-left: 2px;
+  margin-right: -4px;
+  margin-left: 3px;
 }
 
 .btn-default,
