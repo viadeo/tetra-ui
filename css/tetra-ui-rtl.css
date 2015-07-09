@@ -2897,7 +2897,7 @@ pre {
 .core-form button,
 .core-form select,
 .core-form textarea {
-  font-family: Arial, sans-serif;
+  font-family: "Simplified Arabic", "Baghdad", "Arial", sans-serif;
 }
 
 .core-form label {
