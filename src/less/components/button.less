@@ -219,16 +219,15 @@
 
   .vicon.btn-icon-before,
   .vicon.btn-icon-after {
-    margin-top:-1px;
     font-size: 7px;
   }
   .vicon.btn-icon-before {
-    .margin-left(@rtl, -9px);
-    .margin-right(@rtl, 0);
+    .margin-left(@rtl, -6px);
+    .margin-right(@rtl, 2px);
   }
   .vicon.btn-icon-after {
-    .margin-left(@rtl, 0);
-    .margin-right(@rtl, -9px);
+    .margin-left(@rtl, 2px);
+    .margin-right(@rtl, -6px);
   }
 }
 
@@ -275,10 +274,6 @@
   .border-radius(@buttonSmallBorderRadius);
   font-size: 11px;
   font-weight: 300;
-  .global-icon {
-    margin: -1px 0;
-  }
-
 }
 
 .btn-large, .core-form .btn-large {
@@ -286,6 +281,10 @@
   .border-radius(@buttonLargeBorderRadius);
   font-size: 13px;
   font-weight: 400;
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 8px;
+  }
 }
 
 
@@ -296,6 +295,10 @@
   font-size: 16px;
   font-weight: 400;
   .border-radius(@buttonLeadBorderRadius);
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 9px;
+  }
 }
 
 .btn-lead-alt, .core-form .btn-lead-alt {
@@ -306,6 +309,10 @@
   font-weight: 600;
   border-width: 2px;
   .border-radius(@buttonLeadBorderRadius);
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 9px;
+  }
 }
 
 .btn-fat, .core-form .btn-fat{
@@ -363,7 +370,7 @@
   .margin-left(@rtl, -@buttonDefaultBorderRadius);
   &.btn-small {
     .border-radius-right(@rtl, @buttonSmallBorderRadius);
-    .margin-left(@rtl, -@buttonSmallBorderRadius*1.2);
+    .margin-left(@rtl, -@buttonSmallBorderRadius);
   }
   &.btn-large {
     .border-radius-right(@rtl, @buttonLargeBorderRadius);
