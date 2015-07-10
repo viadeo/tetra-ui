@@ -5928,11 +5928,10 @@ a:focus .avatar img {
 
 .dd .dd-btn > .vicon {
   margin: 0 0 0 5px;
-  line-height: 11px;
+  line-height: 1;
 }
 
 .dd .dd-btn.btn-append {
-  border-left-color: #ffffff;
   border-left-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -5941,13 +5940,18 @@ a:focus .avatar img {
   top: 100%;
   left: 0;
   z-index: 10;
-  display: none;
   width: auto;
+  max-height: 0;
   min-width: 100% !important;
+  margin-top: 5px;
+  overflow: hidden;
   background: #ffffff;
-  border-radius: 0 0 3px 3px;
+  border-radius: 4px;
   outline: medium none;
+  opacity: 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.4s ease;
+  will-change: opacity;
 }
 
 .dd .dd-menu .dd-item {
@@ -5958,10 +5962,6 @@ a:focus .avatar img {
 
 .dd .dd-menu .dd-item:first-child {
   border: 0;
-}
-
-.dd .dd-menu .dd-item:last-child a {
-  border-radius: 0 0 3px 3px;
 }
 
 .dd .dd-menu .dd-item a,
@@ -5991,62 +5991,8 @@ a:focus .avatar img {
 }
 
 .dd.open .dd-menu {
-  display: block;
-}
-
-.dd.open .dd-btn {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.dd.open .dd-btn.btn-append {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
-.dd.open.pull-top .dd-btn {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
-
-.dd.open.pull-top .dd-btn.btn-append {
-  border-radius: 0 0 14px 0;
-}
-
-.dd.open.pull-top .dd-btn.btn-append.btn-small {
-  border-radius: 0 0 12px 0;
-}
-
-.dd.open.pull-top .dd-btn.btn-append.btn-large {
-  border-radius: 0 0 18px 0;
-}
-
-.dd.open.pull-top .dd-btn.btn-append.btn-lead {
-  border-radius: 0 0 26px 0;
-}
-
-.dd.open.pull-top .dd-btn.btn-append.btn-fat {
-  border-radius: 0 0 30px 0;
-}
-
-.dd.open.pull-top .dd-btn:not(.btn-append) {
-  border-radius: 0 0 14px 14px;
-}
-
-.dd.open.pull-top .dd-btn:not(.btn-append).btn-small {
-  border-radius: 0 0 12px 12px;
-}
-
-.dd.open.pull-top .dd-btn:not(.btn-append).btn-large {
-  border-radius: 0 0 18px 18px;
-}
-
-.dd.open.pull-top .dd-btn:not(.btn-append).btn-lead {
-  border-radius: 0 0 26px 26px;
-}
-
-.dd.open.pull-top .dd-btn:not(.btn-append).btn-fat {
-  border-radius: 0 0 30px 30px;
+  max-height: 400px;
+  opacity: 1;
 }
 
 .dd.pull-right .dd-menu {
@@ -6057,47 +6003,7 @@ a:focus .avatar img {
 .dd.pull-top .dd-menu {
   top: auto;
   bottom: 100%;
-  border-radius: 14px 14px 0 0;
-  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
-}
-
-.dd.pull-top .dd-item:last-child a {
-  border-radius: 0;
-}
-
-.dd.pull-top .dd-item:first-child a {
-  border-radius: 3px 3px 0 0;
-}
-
-.dd .dd .dd-menu {
-  position: absolute;
-  top: -1px;
-  left: 100%;
-  display: none;
-  min-width: auto;
-  overflow: visible;
-  background: #ffffff;
-}
-
-.dd .dd.open .dd-menu {
-  display: block;
-}
-
-.msie7 .dd .dd-menu,
-.msie8 .dd .dd-menu,
-.lt-ie9 .dd .dd-menu {
-  min-width: 98% !important;
-  border: 1px solid #d9d8dd;
-}
-
-.msie7 .dd .dd-menu .dd-item,
-.lt-ie8 .dd .dd-menu .dd-item {
-  overflow: visible;
-}
-
-.msie7 .dd.open,
-.lt-ie8 .dd.open {
-  z-index: 10;
+  margin-bottom: 5px;
 }
 
 .core-form .input-append .dd .active.btn-default {
