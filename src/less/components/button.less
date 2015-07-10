@@ -170,10 +170,11 @@
 
 .btn, .core-form .btn {
   transition-property: border, background, color;
-  transition-duration: .3s;
+  transition-duration: .2s;
+  transition-timing-function: ease;
   .vicon {
     transition-property: color;
-    transition-duration: .3s;
+    transition-duration: .2s ease;
   }
 
   // Rules
@@ -307,7 +308,7 @@
   z-index: 2;
   padding: 10px @buttonLeadBorderRadius*1.2;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   border-width: 2px;
   .border-radius(@buttonLeadBorderRadius);
   .vicon.btn-icon-before,
@@ -321,7 +322,7 @@
   z-index: 2;
   padding: 15px @buttonFatBorderRadius*1.8;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   border-width: 2px;
   .border-radius(@buttonFatBorderRadius);
   .vicon.btn-icon-before,
