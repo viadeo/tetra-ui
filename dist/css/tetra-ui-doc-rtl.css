@@ -1,4 +1,4 @@
-/*! tetra-ui v3.1.1 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.1.2 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
@@ -4615,7 +4615,7 @@ a:focus .avatar img {
 .core-form .btn {
   position: relative;
   display: inline-block;
-  padding: 3.5px 16.8px;
+  padding: 4px 16.8px;
   font-weight: 300;
   text-align: center;
   text-decoration: none;
@@ -4680,12 +4680,12 @@ a:focus .avatar img {
 .btn .vicon.btn-icon-before,
 .core-form .btn .vicon.btn-icon-before {
   margin-right: -4px;
-  margin-left: 3px;
+  margin-left: 1px;
 }
 
 .btn .vicon.btn-icon-after,
 .core-form .btn .vicon.btn-icon-after {
-  margin-right: 3px;
+  margin-right: 1px;
   margin-left: -4px;
 }
 
@@ -5478,10 +5478,10 @@ a:focus .avatar img {
 
 .btn-large,
 .core-form .btn-large {
-  padding: 7px 19.2px;
+  padding: 7px 21.599999999999998px;
   font-size: 13px;
   font-weight: 400;
-  border-radius: 16px;
+  border-radius: 18px;
 }
 
 .btn-large .vicon.btn-icon-before,
@@ -5596,9 +5596,9 @@ a:focus .avatar img {
 }
 
 .btn-append.btn-large {
-  margin-right: -16px;
-  border-bottom-left-radius: 16px;
-  border-top-left-radius: 16px;
+  margin-right: -18px;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
 }
 
 .btn-append.btn-lead {
@@ -5780,7 +5780,7 @@ a:focus .avatar img {
 }
 
 .dd.open.pull-top .dd-btn.btn-append.btn-large {
-  border-radius: 0 0 16px 0;
+  border-radius: 0 0 18px 0;
 }
 
 .dd.open.pull-top .dd-btn.btn-append.btn-lead {
@@ -5800,7 +5800,7 @@ a:focus .avatar img {
 }
 
 .dd.open.pull-top .dd-btn:not(.btn-append).btn-large {
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 18px 18px;
 }
 
 .dd.open.pull-top .dd-btn:not(.btn-append).btn-lead {

@@ -190,7 +190,7 @@
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
-  padding: 3.5px $buttonDefaultBorderRadius*1.2;
+  padding: 4px $buttonDefaultBorderRadius*1.2;
   @include border-radius($buttonDefaultBorderRadius);
   position: relative;
   text-decoration: none;
@@ -233,10 +233,10 @@
   }
   .vicon.btn-icon-before {
     @include margin-left($rtl, -4px);
-    @include margin-right($rtl, 3px);
+    @include margin-right($rtl, 1px);
   }
   .vicon.btn-icon-after {
-    @include margin-left($rtl, 3px);
+    @include margin-left($rtl, 1px);
     @include margin-right($rtl, -4px);
   }
 }
