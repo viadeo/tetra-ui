@@ -109,7 +109,7 @@
 @defaultColor:             @grayLightLight;
 @buttonDefaultBgColor:     @defaultColor;
 @buttonDefaultEndColor:    @defaultColor;
-@buttonDefaultHoverColor:  desaturate(darken(@defaultColor, 10%), 16%);
+@buttonDefaultHoverColor:  desaturate(darken(@defaultColor, 14%), 15%);
 @buttonDefaultBorderColor: @defaultColor;
 @buttonDefaultTextColor:   @buttonColor;
 @buttonDefaultDisabledTextColor: @buttonColor;
@@ -117,7 +117,7 @@
 @primaryColor:             @blue;
 @buttonPrimaryBgColor:     @primaryColor;
 @buttonPrimaryEndColor:    @primaryColor;
-@buttonPrimaryHoverColor:  desaturate(darken(@primaryColor, 10%), 16%);
+@buttonPrimaryHoverColor:  desaturate(darken(@primaryColor, 14%), 15%);
 @buttonPrimaryBorderColor: @primaryColor;
 @buttonPrimaryTextColor:   @buttonColor;
 @buttonPrimaryDisabledTextColor: @buttonColor;
@@ -125,14 +125,14 @@
 @secondaryColor:             @orange1;
 @buttonSecondaryBgColor:     @secondaryColor;
 @buttonSecondaryEndColor:    @secondaryColor;
-@buttonSecondaryHoverColor:  desaturate(darken(@secondaryColor, 10%), 16%);
+@buttonSecondaryHoverColor:  desaturate(darken(@secondaryColor, 14%), 15%);
 @buttonSecondaryBorderColor: @secondaryColor;
 @buttonSecondaryTextColor:   @buttonColor;
 @buttonSecondaryDisabledTextColor: @buttonColor;
 
 @terColor:                 @green3;
 @buttonTerBgColor:         @terColor;
-@buttonTerHoverColor:      darken(@terColor, 10%);
+@buttonTerHoverColor:      darken(@terColor, 14%);
 @buttonTerBorderColor:     @terColor;
 @buttonTerTextColor:       @buttonColor;
 @buttonTerDisabledTextColor: @buttonColor;
@@ -5292,8 +5292,9 @@ a:focus .avatar img {
   border-radius: 14px;
   zoom: 1;
   box-shadow: none;
-  transition-duration: .3s;
+  transition-duration: .2s;
   transition-property: border, background, color;
+  transition-timing-function: ease;
   -webkit-user-select: none;
    -khtml-user-select: none;
      -moz-user-select: none;
@@ -5303,7 +5304,7 @@ a:focus .avatar img {
 
 .btn .vicon,
 .core-form .btn .vicon {
-  transition-duration: .3s;
+  transition-duration: .2s ease;
   transition-property: color;
 }
 
@@ -5382,8 +5383,8 @@ a:focus .avatar img {
 .secEventsAction:focus,
 .core-form .btn-default:focus {
   color: #ffffff;
-  background: #878787;
-  border-color: #878787;
+  background: #7c7c7c;
+  border-color: #7c7c7c;
 }
 
 .btn-default:hover .vicon,
@@ -5516,8 +5517,8 @@ a:focus .avatar img {
 .eventsAction:focus,
 .core-form .btn-primary:focus {
   color: #ffffff;
-  background: #3b83aa;
-  border-color: #3b83aa;
+  background: #35789c;
+  border-color: #35789c;
 }
 
 .btn-primary:hover .vicon,
@@ -5666,8 +5667,8 @@ a:focus .avatar img {
 .btn-secondary:focus,
 .core-form .btn-secondary:focus {
   color: #ffffff;
-  background: #d95839;
-  border-color: #d95839;
+  background: #d64928;
+  border-color: #d64928;
 }
 
 .btn-secondary:hover .vicon,
@@ -5759,8 +5760,8 @@ a:focus .avatar img {
 .btn-tertiary:hover,
 .btn-tertiary:focus {
   color: #ffffff;
-  background: #3ca594;
-  border-color: #3ca594;
+  background: #369687;
+  border-color: #369687;
 }
 
 .btn-tertiary:hover .vicon,
@@ -6180,7 +6181,7 @@ a:focus .avatar img {
   z-index: 2;
   padding: 10px 31.2px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   border-width: 2px;
   border-radius: 26px;
 }
@@ -6198,7 +6199,7 @@ a:focus .avatar img {
   z-index: 2;
   padding: 15px 54px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   border-width: 2px;
   border-radius: 30px;
 }
