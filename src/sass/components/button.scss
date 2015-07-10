@@ -381,22 +381,22 @@
   @include border-radius-right($rtl, $buttonDefaultBorderRadius);
   @include padding-right($rtl, 4px);
   @include padding-left($rtl, 0);
-  @include margin-left($rtl, -$buttonDefaultBorderRadius);
+  @include margin-left($rtl, -$buttonDefaultBorderRadius*0.95);
   &.btn-small {
     @include border-radius-right($rtl, $buttonSmallBorderRadius);
     @include margin-left($rtl, -$buttonSmallBorderRadius);
   }
   &.btn-large {
     @include border-radius-right($rtl, $buttonLargeBorderRadius);
-    @include margin-left($rtl, -$buttonLargeBorderRadius);
+    @include margin-left($rtl, -$buttonLargeBorderRadius*0.9);
   }
   &.btn-lead {
     @include border-radius-right($rtl, $buttonLeadBorderRadius);
-    @include margin-left($rtl, -$buttonLeadBorderRadius);
+    @include margin-left($rtl, -$buttonLeadBorderRadius*0.7);
   }
   &.btn-fat {
     @include border-radius-right($rtl, $buttonFatBorderRadius);
-    @include margin-left($rtl, -$buttonFatBorderRadius);
+    @include margin-left($rtl, -$buttonFatBorderRadius*0.7);
   }
 }
 
