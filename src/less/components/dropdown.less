@@ -20,11 +20,10 @@
     .padding-right(@rtl, 5px);
     > .vicon {
       .margin(@rtl, 0, 0, 0, 5px);
-      line-height: 11px;
+      line-height: 1;
     }
 
     &.btn-append {
-      .border-left-color(@rtl, rgb(255,255,255)); // force rgb for ie
       .border-left-color(@rtl, rgba(255,255,255,.4));
     }
   }
@@ -32,17 +31,23 @@
   // Menu
 
   .dd-menu {
+    overflow: hidden;
     background: @white;
     box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
-    .border-radius(0 0 @borderRadiusS @borderRadiusS);
+    border-radius: 4px;
     outline: medium none;
     .left(@rtl, 0);
     top: 100%;
+    margin-top: 5px;
     position: absolute;
     width: auto;
     min-width: 100% !important;
     z-index: 10;
-    display: none;
+
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    will-change: opacity;
 
 
     // Menu item
@@ -54,10 +59,6 @@
 
       &:first-child {
         border: 0;
-      }
-
-      &:last-child a {
-        .border-radius(0 0 @borderRadiusS @borderRadiusS);
       }
 
       // Menu link
@@ -92,48 +93,8 @@
 
   &.open {
     .dd-menu {
-      display: block;
-    }
-    .dd-btn {
-      .border-radius-bottom(0);
-      &.btn-append {
-        .border-radius-left(@rtl, 0);
-      }
-    }
-    &.pull-top {
-      .dd-btn {
-        .border-radius-top(0);
-        &.btn-append {
-          .border-radius(0 0 @buttonDefaultBorderRadius 0);
-          &.btn-small {
-            .border-radius(0 0 @buttonSmallBorderRadius 0);
-          }
-          &.btn-large {
-            .border-radius(0 0 @buttonLargeBorderRadius 0);
-          }
-          &.btn-lead {
-            .border-radius(0 0 @buttonLeadBorderRadius 0);
-          }
-          &.btn-fat {
-            .border-radius(0 0 @buttonFatBorderRadius 0);
-          }
-        }
-        &:not(.btn-append) {
-          .border-radius(0 0 @buttonDefaultBorderRadius @buttonDefaultBorderRadius);
-          &.btn-small {
-            .border-radius(0 0 @buttonSmallBorderRadius @buttonSmallBorderRadius);
-          }
-          &.btn-large {
-            .border-radius(0 0 @buttonLargeBorderRadius @buttonLargeBorderRadius);
-          }
-          &.btn-lead {
-            .border-radius(0 0 @buttonLeadBorderRadius @buttonLeadBorderRadius);
-          }
-          &.btn-fat {
-            .border-radius(0 0 @buttonFatBorderRadius @buttonFatBorderRadius);
-          }
-        }
-      }
+      opacity: 1;
+      max-height: 400px;
     }
   }
 
@@ -148,58 +109,12 @@
 
   &.pull-top {
     .dd-menu {
+      margin-bottom: 5px;
       top: auto;
       bottom: 100%;
-      box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
-      .border-radius(@buttonDefaultBorderRadius @buttonDefaultBorderRadius 0 0);
-    }
-    .dd-item {
-      &:last-child a {
-        .border-radius(0);
-      }
-      &:first-child a {
-        .border-radius(@borderRadiusS @borderRadiusS 0 0);
-      }
     }
   }
 
-  // Sub menu
-
-  .dd {
-
-    .dd-menu {
-      overflow:visible;
-      min-width:auto;
-      position:absolute;
-      top:-1px;
-      left:100%;
-      background:@_listBackground;
-      display:none;
-
-    }
-
-    &.open {
-      .dd-menu {
-        display:block;
-      }
-    }
-  }
-
-}
-
-.msie7 .dd .dd-menu,
-.msie8 .dd .dd-menu,
-.lt-ie9 .dd .dd-menu {
-  border: 1px solid @grayLighter;
-  min-width: 98% !important;
-}
-.msie7 .dd .dd-menu .dd-item,
-.lt-ie8 .dd .dd-menu .dd-item {
-  overflow: visible;
-}
-.msie7 .dd.open,
-.lt-ie8 .dd.open {
-  z-index:10
 }
 
 // When the dropdown is appended to an input field
