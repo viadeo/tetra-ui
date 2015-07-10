@@ -372,22 +372,22 @@
   .border-radius-right(@rtl, @buttonDefaultBorderRadius);
   .padding-right(@rtl, 4px);
   .padding-left(@rtl, 0);
-  .margin-left(@rtl, -@buttonDefaultBorderRadius);
+  .margin-left(@rtl, -@buttonDefaultBorderRadius*0.95);
   &.btn-small {
     .border-radius-right(@rtl, @buttonSmallBorderRadius);
     .margin-left(@rtl, -@buttonSmallBorderRadius);
   }
   &.btn-large {
     .border-radius-right(@rtl, @buttonLargeBorderRadius);
-    .margin-left(@rtl, -@buttonLargeBorderRadius);
+    .margin-left(@rtl, -@buttonLargeBorderRadius*0.9);
   }
   &.btn-lead {
     .border-radius-right(@rtl, @buttonLeadBorderRadius);
-    .margin-left(@rtl, -@buttonLeadBorderRadius);
+    .margin-left(@rtl, -@buttonLeadBorderRadius*0.7);
   }
   &.btn-fat {
     .border-radius-right(@rtl, @buttonFatBorderRadius);
-    .margin-left(@rtl, -@buttonFatBorderRadius);
+    .margin-left(@rtl, -@buttonFatBorderRadius*0.7);
   }
 }
 
