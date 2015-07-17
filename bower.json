@@ -20,6 +20,6 @@
     "*.sublime-project"
   ],
   "devDependencies": {
-    "jquery": "~1.11.1"
+    "jquery": "~1.11.3"
   }
 }
