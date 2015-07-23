@@ -17,12 +17,12 @@
 	.custom-checkbox-element {
 		display: inline-block;
     background:#fff;
-		width: 17px; height: 17px; line-height: 16px;
+		width: 15px; height: 15px; line-height: 14px;
 		margin: 0 0 2px 0;
 		.margin-right(@rtl, @spacingXs);
 		.margin-left(@rtl, -20px);
 		border: 1px solid @inputBorder;
-		border-radius: 2px;
+		border-radius: 4px;
 		vertical-align: middle;
 		text-align: center;
 
@@ -30,9 +30,17 @@
 			content: "v";
 			font-family: 'Viadeoicons';
 		  font-size: 6px;
-		  color: tint(@black, 20%);
+		  color: @white;
 		  visibility: hidden;
 		}
+    &.delete{
+      line-height: 12px;
+      &:after{
+        content : "\00D7";
+        font-size : 9px;
+        margin-left: -3px;
+      }
+    }
 	}
 
 	&:hover {
@@ -42,8 +50,14 @@
 	}
 
 	input:checked + .custom-checkbox-element {
+    background-color: @green3;
+    border-color : @green2;
 		&:after {
 		  visibility: visible;
 		}
+    &.delete{
+      background-color: tint(@errorText, 20%);
+      border-color: @errorText;
+    }
 	}
 }
