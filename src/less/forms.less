@@ -327,12 +327,12 @@
       }
 
       input:focus + .btn {
-        .border-right-color (@rtl) when (@rtl = false) { border-right-color: @blue2; }
-        .border-right-color (@rtl) when (@rtl = true) { border-left-color: @blue2; }
+        .border-right-color (@rtl) when (@rtl = false) { border-right-color: @gray; }
+        .border-right-color (@rtl) when (@rtl = true) { border-left-color: @gray; }
 
-        border-top-color: @blue2;
+        border-top-color: @gray;
         .border-right-color(@rtl);
-        border-bottom-color: @blue2;
+        border-bottom-color: @gray;
         box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
       }
     }
@@ -440,8 +440,8 @@
     }
 
     .btn {
-      padding-bottom: 4px;
-      padding-top: 4px;
+      padding-bottom: 5px;
+      padding-top: 5px;
       height: @baseLineHeight;
       .box-sizing(content-box);
     }
@@ -467,12 +467,12 @@
 
     input:focus + .btn,
     input:focus + .custom-select {
-      .border-right-color (@rtl) when (@rtl = false) { border-right-color: @blue2; }
-      .border-right-color (@rtl) when (@rtl = true) { border-left-color: @blue2; }
+      .border-right-color (@rtl) when (@rtl = false) { border-right-color: @gray; }
+      .border-right-color (@rtl) when (@rtl = true) { border-left-color: @gray; }
 
-      border-top-color: @blue2;
+      border-top-color: @gray;
       .border-right-color(@rtl);
-      border-bottom-color: @blue2;
+      border-bottom-color: @gray;
       box-shadow: 0 0 5px fade(@inputBorderFocus, 20%);
     }
 
