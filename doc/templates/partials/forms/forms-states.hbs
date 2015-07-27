@@ -45,32 +45,96 @@ It also includes validation styles for errors, warnings, and success. To use, ad
       </div>
 
       <div class="control-group error">
-        <label for="inputError" class="control-label">Input with error</label>
+        <label for="inputError" class="control-label">Input with error (help block)</label>
         <div class="controls">
-          <input type="text" id="inputError" value="Error :(">
-          <span class="help-inline">Please correct the error</span>
+          <span class="input-container">
+            <input type="text" id="inputError" value="Error :(">
+            <span class="help-block">Please correct the error</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group error">
+        <label for="inputError" class="control-label">Input with error (help block)</label>
+        <div class="controls">
+          <span class="input-container">
+            <input type="text" id="inputError" value="Error :(">
+            <span class="help-icon vicon vicon-remove"></span>
+            <span class="help-block">Error in flow</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group error">
+        <label for="inputError" class="control-label">Input with error (help inline)</label>
+        <div class="controls">
+          <span class="input-container">
+            <input type="text" id="inputError" value="Error :(">
+            <span class="help-inline">Please correct the error</span>
+          </span>
         </div>
       </div>
 
       <div class="control-group success">
-        <label for="inputSuccess" class="control-label">Input with success</label>
+        <label for="inputSuccess" class="control-label">Input with success (help block)</label>
         <div class="controls">
-          <input type="text" id="inputSuccess" value="Success!">
-          <span class="help-inline"><i class="vicon control-success">v</i></span>
+          <span class="input-container">
+            <input type="text" id="inputSuccess" value="Success!">
+            <span class="help-block">Success!</span>
+          </span>
         </div>
       </div>
 
       <div class="control-group success">
-        <label for="selectError" class="control-label">Select with success</label>
+        <label for="inputSuccess" class="control-label">Input with success (help block)</label>
         <div class="controls">
-          <select id="selectError">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-          <span class="help-inline"><i class="vicon control-success">v</i></span>
+          <span class="input-container">
+            <input type="text" id="inputSuccess" value="Success!">
+            <span class="help-icon vicon vicon-checkmark"></span>
+            <span class="help-block">Success!</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group success">
+        <label for="inputSuccess" class="control-label">Input with success (help inline)</label>
+        <div class="controls">
+          <span class="input-container">
+            <input type="text" id="inputSuccess" value="Success!">
+            <span class="help-inline">Success!</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group success">
+        <label for="selectError" class="control-label">Select with success (help block)</label>
+        <div class="controls">
+          <span class="input-container">
+            <select id="selectError">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <span class="help-block">Success!</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="control-group success">
+        <label for="selectError" class="control-label">Select with success (help inline)</label>
+        <div class="controls">
+          <span class="input-container">
+            <select id="selectError">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <span class="help-inline">Success!</span>
+          </span>
         </div>
       </div>
 

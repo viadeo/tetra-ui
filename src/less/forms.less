@@ -303,9 +303,18 @@
 
   .control-group.error {
     > label, .help-block, .help-inline {
+      visibility: visible;
       color: @errorText;
     }
-
+    .help-icon{
+      display: block !important;
+      background-color: @errorText;
+      &::before{
+        font-size: 9px;
+        left : -1px;
+        top : -3px;
+      }
+    }
     input, select, textarea {
       border-color: @errorText;
       color : @errorText;
@@ -351,6 +360,19 @@
     .control-success {
       display: block;
     }
+    .help-block, .help-inline{
+      visibility: visible;
+      color : @successText;
+    }
+    .help-icon{
+      display: block !important;
+      background-color: @successBorder;
+      &::before{
+        font-size: 6px;
+        top:-4px;
+        left : 1px;
+      }
+    }
     input,select,textarea{
       border-color: @successBorder;
       color: @successText;
@@ -369,6 +391,7 @@
       cursor: not-allowed;
     }
     .help-block, .help-inline {
+      visibility: visible;
       color: lighten(@gray, 25%);
     }
   }
@@ -573,6 +596,10 @@
   .control-group {
     margin-bottom: @baseLineHeight;
     .clearfixHack();
+
+    .help-block{
+      visibility: hidden;
+    }
   }
   // Float the labels left
   .control-label {
@@ -584,6 +611,28 @@
   // Move over all input controls and content
   .controls {
     .margin-left(@rtl, 160px);
+
+    .input-container{
+      display: inline-block;
+      text-align: right;
+      position: relative;
+      .help-block{
+        margin-top: 0;
+      }
+      .help-icon{
+        display: none;
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        top: 7px;
+        right: 8px;
+        border-radius: 100%;
+        text-align: center;
+        &::before{
+          color: #FFF;
+        }
+      }
+    }
   }
   // Remove bottom margin on block level help text since that's accounted for on .control-group
   .help-block {
