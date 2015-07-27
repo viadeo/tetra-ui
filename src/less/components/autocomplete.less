@@ -4,24 +4,25 @@
   .autocomplete-menu {
     position: absolute;
     z-index: 1000;
-
+    min-width: 270px;
+    &.documentation-autocomplete{
+      position : relative;
+      z-index: 0;
+      width: 270px;
+    }
     visibility: hidden;
     opacity: 0;
 
-    margin-top: (-1 * @spacingS);
+    margin-top: (@spacingM);
 
-    border: 1px solid @panelBorderDarker;
+    border: 1px solid @grayLighter;
     background: @white;
-    border-bottom-left-radius: @borderRadiusM;
-    border-bottom-right-radius: @borderRadiusM;
-    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
 
     -webkit-transition: margin-top .3s, opacity .3s;
     transition: margin-top .3s, opacity .3s;
 
     li {
-      padding: @spacingS;
-      border-top: 1px dotted @borderColor;
+      padding: 0 @spacingS;
       cursor: pointer;
 
       &:first-child {
@@ -29,25 +30,22 @@
       }
 
       &.active {
-        background: tint(@blueSoft, 85%);
-      }
-
-      &:last-child {
-        border-bottom-left-radius: @borderRadiusM;
-        border-bottom-right-radius: @borderRadiusM;
+        background: #f0f2f4;
+        font-weight: 600;
       }
 
       &:hover {
-        background: tint(@blueSoft, 70%);
+        background: #f0f2f4;
       }
     }
   }
 
   &.active {
     .autocomplete-menu {
+      padding: 5px;
       opacity: 1;
       visibility: visible;
-      margin-top: -1px;
+      margin-top: 0px;
     }
   }
 }

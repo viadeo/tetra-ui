@@ -56,6 +56,20 @@ Add the **.core-form** class to the form element.
         <textarea rows="3" id="textarea" class="input-xlarge"></textarea>
       </div>
     </div>
+    <p>Autocomplete-Menu</p>
+{{#markdown}}
+The autocomplete menu is hidden by default. By adding the class **.active** to the parent div with class **.autocomplete** will make it appear
+{{/markdown}}
+    <div class="autocomplete active">
+      <input class="input-xlarge mbn" value="Item">
+      <ul class="autocomplete-menu documentation-autocomplete">
+        <li>First Item</li>
+        <li class="active">Second Item (Active)</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Last Item</li>
+      </ul>
+    </div>
     <div class="form-actions ptm">
       <button class="btn btn-primary" type="submit">Save changes</button>
       <button class="btn btn-default">Cancel</button>
@@ -114,6 +128,16 @@ Add the **.core-form** class to the form element.
       <div class="controls">
         <textarea rows="3" id="textarea" class="input-xlarge"></textarea>
       </div>
+    </div>
+    <p>Autocomplete-Menu</p>
+    <div class="autocomplete active">
+      <ul class="autocomplete-menu">
+        <li>First Item</li>
+        <li class="active">Second Item (Active)</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Last Item</li>
+      </ul>
     </div>
     <div class="form-actions ptm">
       <button class="btn btn-primary" type="submit">Save changes</button>
