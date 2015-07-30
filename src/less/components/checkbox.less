@@ -9,15 +9,15 @@
 		width: 20px;
 
 		&:focus + .custom-checkbox-element {
-			box-shadow: 0 0 0 1px @inputBorderFocus;
+			border-color: shade(@inputBorder, 25%);
 			outline: thin dotted;
 		}
 	}
 
 	.custom-checkbox-element {
 		display: inline-block;
-    background:#fff;
-		width: 15px; height: 15px; line-height: 14px;
+		background: @white;
+		width: 13px; height: 13px; line-height: 10px;
 		margin: 0 0 2px 0;
 		.margin-right(@rtl, @spacingXs);
 		.margin-left(@rtl, -20px);
@@ -29,16 +29,15 @@
 		&:after {
 			content: "v";
 			font-family: 'Viadeoicons';
-		  font-size: 6px;
+		  font-size: 5px;
 		  color: @white;
 		  visibility: hidden;
 		}
     &.delete{
-      line-height: 12px;
       &:after{
         content : "\00D7";
-        font-size : 9px;
-        margin-left: -3px;
+        font-size : 7px;
+        margin-left: -2px;
       }
     }
 	}

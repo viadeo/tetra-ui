@@ -9,14 +9,14 @@
     width: 20px;
 
     &:focus + .custom-radio-element {
-      box-shadow: 0 0 0 1px @inputBorderFocus;
+      box-shadow: 0 0 0 1px shade(@inputBorder, 25%);
       outline: thin dotted;
     }
   }
 
   .custom-radio-element {
     display: inline-block;
-    width: 12px; height: 12px;
+    width: 9px; height: 9px;
     margin: 0 0 2px 0;
     .margin-right(@rtl, @spacingXs);
     .margin-left(@rtl, -20px);
