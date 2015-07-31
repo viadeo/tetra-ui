@@ -3,13 +3,13 @@
 .custom-select {
 	position: relative;
 	display: inline-block;
-	height: @baseLineHeight;
+	height: 1.7em;
 	overflow: hidden;
-	padding: 4px;
+	padding: 7px 4px;
 	border: 1px solid @inputBorder;
 	background: @white;
 	vertical-align: middle;
-	border-radius: @borderRadiusXs;
+	border-radius: 4px;
 
 	&.cs-focus {
 		border-color: @inputBorderFocus;
@@ -23,8 +23,8 @@
 		z-index: 1;
 		.left(@rtl, 0); top: 0;
 		.right(@rtl, 2em); bottom: 0;
-		padding: 4px;
-		line-height: @baseLineHeight;
+		padding: 7px 4px;
+		line-height: 1.7;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -34,7 +34,7 @@
 		position: absolute;
 		z-index: 2;
 		.right(@rtl, 0); top: 0; bottom: -1px;
-		padding: 4px;
+		padding: 7px 4px;
 		border-left: 1px solid @inputBorder;
 		background: @white;
 		font-size: 8px;
@@ -66,8 +66,12 @@
 		}
 	}
 
+  .radius-right (@rtl) when (@rtl = false) { .border-radius(0 4px 4px 0); }
+  .radius-right (@rtl) when (@rtl = true) { .border-radius(4px 0 0 4px); }
+
 	.input-append & {
 		.margin-left(@rtl, -1px);
+    .radius-right(@rtl);
 
 		.vicon {
 			border: none;

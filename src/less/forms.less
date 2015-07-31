@@ -1,6 +1,8 @@
 // Forms
 // Base styles for various input types, form layouts, and states
 
+@formBaseLineHeight: 1.7;
+
 // Block level inputs
 .input-block-level {
   display: block;
@@ -29,7 +31,7 @@
     padding: 0;
     margin-bottom: (@baseLineHeight * 1.5);
     font-size: (@baseFontSize * 1.5);
-    line-height: (@baseLineHeight * 2);
+    line-height: (@formBaseLineHeight * 2);
     color: @grayDark;
     border: 0;
     border-bottom: 1px solid #eee;
@@ -47,7 +49,7 @@
   button,
   select,
   textarea {
-    #font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
+    #font > .shorthand(@baseFontSize,normal,@formBaseLineHeight); // Set size, weight, line-height here
   }
   input,
   button,
@@ -60,30 +62,6 @@
   ::-ms-expand{
     display: none;
   }
-
-  select{
-    //To allow custom style on select
-    -webkit-appearance : none;
-    -ms-appearance : none;
-    -moz-appearance : none;
-
-  //Reapply some default styling :
-  font-size: 12px !important;
-  line-height: 12px !important;
-  //This is the gray arrow
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8f///9I3ZicAAAAC3RSTlMA2Not8EL5W/54lO6cBCoAAAABYktHRAyBs1FjAAAAKklEQVQI12OQ3r179yYGEyDpzMCavXtbAANDxe52BgYGzt0TgCTDKgYGAP20C5BUgarwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI0VDEzOjEwOjI4KzAwOjAw60LkZgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yNFQxMzoxMDoyOCswMDowMJofXNoAAAAASUVORK5CYII=");
-  background-position: 97% 50%;
-  background-repeat: no-repeat;
-    &.alt{
-      background-color: #F0F2F3;
-      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8f///9I3ZicAAAAC3RSTlMA2Not8EL5W/54lO6cBCoAAAABYktHRAyBs1FjAAAAKklEQVQI12OQ3r179yYGEyDpzMCavXtbAANDxe52BgYGzt0TgCTDKgYGAP20C5BUgarwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI0VDEzOjEwOjI4KzAwOjAw60LkZgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yNFQxMzoxMDoyOCswMDowMJofXNoAAAAASUVORK5CYII="), -webkit-linear-gradient(top, #FFFFFF, #F0F2F3);
-      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8f///9I3ZicAAAAC3RSTlMA2Not8EL5W/54lO6cBCoAAAABYktHRAyBs1FjAAAAKklEQVQI12OQ3r179yYGEyDpzMCavXtbAANDxe52BgYGzt0TgCTDKgYGAP20C5BUgarwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI0VDEzOjEwOjI4KzAwOjAw60LkZgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yNFQxMzoxMDoyOCswMDowMJofXNoAAAAASUVORK5CYII="), linear-gradient(top bottom, #FFFFFF, #F0F2F3);
-      background-repeat: no-repeat, no-repeat;
-      background-position: 97% 50%, center;
-    }
-  }
-
-
 
   // Identify controls by their labels
   label {
@@ -99,11 +77,13 @@
   .uneditable-input {
     display: inline-block;
     width: 210px;
-    height: @baseLineHeight;
-    padding: 7px 0 7px 10px;
+    height: 1.7em;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    .padding-left(@rtl, @spacingS);
     margin-bottom: 9px;
     font-size: @baseFontSize;
-    line-height: @baseLineHeight;
+    line-height: @formBaseLineHeight;
     color: @grayDark;
     vertical-align: middle;
     border: 1px solid @grayLight;
@@ -168,13 +148,29 @@
     height: auto;
   }
 
-  // Set the height of select and file controls to match text inputs
-  // Chrome on Linux and Mobile Safari need background-color
-  select {
+  select{
+    //To allow custom style on select
+    -webkit-appearance : none;
+    -ms-appearance : none;
+    -moz-appearance : none;
+
     width: 220px; // default input width + 10px of padding that doesn't get applied
+
+    //Reapply some default styling
+    height: 36px;
     background-color: @inputBackground;
-    height: 32px; // In IE7, the height of the select element cannot be changed by height, only font-size
-    line-height: 32px;
+
+    //This is the gray arrow
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8f///9I3ZicAAAAC3RSTlMA2Not8EL5W/54lO6cBCoAAAABYktHRAyBs1FjAAAAKklEQVQI12OQ3r179yYGEyDpzMCavXtbAANDxe52BgYGzt0TgCTDKgYGAP20C5BUgarwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI0VDEzOjEwOjI4KzAwOjAw60LkZgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yNFQxMzoxMDoyOCswMDowMJofXNoAAAAASUVORK5CYII=");
+    background-position: 97% 50%;
+    background-repeat: no-repeat;
+    &.alt{
+      background-color: #F0F2F3;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8f///9I3ZicAAAAC3RSTlMA2Not8EL5W/54lO6cBCoAAAABYktHRAyBs1FjAAAAKklEQVQI12OQ3r179yYGEyDpzMCavXtbAANDxe52BgYGzt0TgCTDKgYGAP20C5BUgarwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI0VDEzOjEwOjI4KzAwOjAw60LkZgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yNFQxMzoxMDoyOCswMDowMJofXNoAAAAASUVORK5CYII="), -webkit-linear-gradient(top, #FFFFFF, #F0F2F3);
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8fFw8f///9I3ZicAAAAC3RSTlMA2Not8EL5W/54lO6cBCoAAAABYktHRAyBs1FjAAAAKklEQVQI12OQ3r179yYGEyDpzMCavXtbAANDxe52BgYGzt0TgCTDKgYGAP20C5BUgarwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTI0VDEzOjEwOjI4KzAwOjAw60LkZgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yNFQxMzoxMDoyOCswMDowMJofXNoAAAAASUVORK5CYII="), linear-gradient(top, #FFFFFF, #F0F2F3);
+      background-repeat: no-repeat, no-repeat;
+      background-position: 97% 50%, center;
+    }
   }
 
   // Make multiple select elements height not fixed
@@ -296,6 +292,7 @@
   .uneditable-input {
     float: none;
     margin-left: 0;
+    .margin-left(@rtl, 0);
   }
 
   // Disabled and read-only inputs
@@ -325,8 +322,8 @@
       background-color: @errorText;
       &::before{
         font-size: 9px;
-        left: -2px;
-        top : -3px;
+        .left(@rtl, -2px);
+        top : -2px;
       }
     }
     input, select, textarea {
@@ -381,8 +378,8 @@
       background-color: @successBorder;
       &::before{
         font-size: 6px;
-        top: -5px;
-        left: 0;
+        top: -3px;
+        .left(@rtl, 0);
       }
     }
     input,select,textarea{
@@ -449,11 +446,11 @@
 
   // Input groups
 
-  .radius-right (@rtl) when (@rtl = false) { .border-radius(0 @borderRadiusXs @borderRadiusXs 0); }
-  .radius-right (@rtl) when (@rtl = true) { .border-radius(@borderRadiusXs 0 0 @borderRadiusXs); }
+  .radius-right (@rtl) when (@rtl = false) { .border-radius(0 4px 4px 0); }
+  .radius-right (@rtl) when (@rtl = true) { .border-radius(4px 0 0 4px); }
 
-  .radius-left (@rtl) when (@rtl = false) { .border-radius(@borderRadiusXs 0 0 @borderRadiusXs); }
-  .radius-left (@rtl) when (@rtl = true) { .border-radius(0 @borderRadiusXs @borderRadiusXs 0); }
+  .radius-left (@rtl) when (@rtl = false) { .border-radius(4px 0 0 4px); }
+  .radius-left (@rtl) when (@rtl = true) { .border-radius(0 4px 4px 0); }
 
   // Allow us to put symbols and text within the input field for a cleaner look
   .input-prepend,
@@ -477,7 +474,7 @@
     .btn {
       padding-bottom: 7px;
       padding-top: 7px;
-      height: @baseLineHeight;
+      height: 1.7em;
       .box-sizing(content-box);
     }
 
@@ -508,6 +505,7 @@
       border-top-color: @gray;
       .border-right-color(@rtl);
       border-bottom-color: @gray;
+
     }
 
     .uneditable-input {
@@ -605,7 +603,7 @@
 .form-horizontal {
   // Increase spacing between groups
   .control-group {
-    margin-bottom: @baseLineHeight;
+    margin-bottom: @formBaseLineHeight;
     .clearfixHack();
 
     .help-block{
@@ -637,7 +635,7 @@
         height: 18px;
         width: 18px;
         top: @spacingS;
-        right: 8px;
+        .right(@rtl, 8px);
         border-radius: 100%;
         text-align: center;
         &::before{
@@ -648,7 +646,7 @@
   }
   // Remove bottom margin on block level help text since that's accounted for on .control-group
   .help-block {
-    margin-top: (@baseLineHeight / 2);
+    margin-top: (@formBaseLineHeight / 2);
     margin-bottom: 0;
   }
   // Move over buttons in .form-actions to align with .controls
