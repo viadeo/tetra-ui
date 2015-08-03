@@ -83,9 +83,6 @@ nav:
         slug: "forms-states"
         title: "States form"
       -
-        slug: "forms-placeholder"
-        title: "Placeholders"
-      -
         slug: "forms-extending"
         title: "Extending form"
       -
