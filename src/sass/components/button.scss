@@ -66,7 +66,6 @@
     border-color: $bgColor;
     color: $disabledTextColor;
     opacity: 0.5;
-    color: white;
     > span, .vicon {
       color: $disabledTextColor;
     }
@@ -276,7 +275,7 @@
 .btn-tertiary-alt {
   @include alt-tetra-button(tertiary);
 }
-.btn-white{
+.btn-white-alt{
   @include alt-tetra-button(wht);
 }
 
