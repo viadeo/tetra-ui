@@ -1,4 +1,4 @@
-/*! tetra-ui v3.1.4 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
+/*! tetra-ui v3.2.0 - 2015 | (MIT Licence) (c) Viadeo/APVO Corp - inspired by Bootstrap (c) Twitter, Inc. (Apache 2 Licence) */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
@@ -3828,8 +3828,8 @@ h1 .sub {
   font-family: 'Viadeoicons';
   font-style: normal;
   font-weight: normal;
-  src: url('/tetra-ui/dist/fonts/viadeoicons/1418225492/viadeoicons.eot');
-  src: url('/tetra-ui/dist/fonts/viadeoicons/1418225492/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/tetra-ui/dist/fonts/viadeoicons/1418225492/viadeoicons.woff') format('woff'), url('/tetra-ui/dist/fonts/viadeoicons/1418225492/viadeoicons.ttf') format('truetype');
+  src: url('/tetra-ui/dist/fonts/viadeoicons/1445435140/viadeoicons.eot');
+  src: url('/tetra-ui/dist/fonts/viadeoicons/1445435140/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/tetra-ui/dist/fonts/viadeoicons/1445435140/viadeoicons.woff') format('woff'), url('/tetra-ui/dist/fonts/viadeoicons/1445435140/viadeoicons.ttf') format('truetype');
 }
 
 .vicon,
