@@ -9,30 +9,29 @@ Several kinds of alert: **info**, **success**, **error**, **form-error**, **noti
 {{#each data}}
 <div class="bx-alert bx-alert-{{this}} mbs">
   <button data-event="click" data-comp="alert" class="bx-alert-close">
-    <i class="vicon">×</i>
+    <i class="vicon vicon-remove"></i>
   </button>
 
-  <i class="vicon bx-alert-icon">
   {{#is this 'default'}}
-  :
+    <i class="vicon vicon-information bx-alert-icon">
   {{/is}}
   {{#is this 'warning'}}
-  :
+    <i class="vicon vicon-information bx-alert-icon">
   {{/is}}
   {{#is this 'error'}}
-  :
+    <i class="vicon vicon-information bx-alert-icon">
   {{/is}}
   {{#is this 'error-form'}}
-  :
+    <i class="vicon vicon-information bx-alert-icon">
   {{/is}}
   {{#is this 'ok'}}
-  v
+    <i class="vicon vicon-checkmark bx-alert-icon">
   {{/is}}
   {{#is this 'notification'}}
-  M
+    <i class="vicon vicon-degree bx-alert-icon">
   {{/is}}
   {{#is this 'premium'}}
-  *
+    <i class="vicon vicon-premium bx-alert-icon">
   {{/is}}
   </i>
 
@@ -48,10 +47,10 @@ Several kinds of alert: **info**, **success**, **error**, **form-error**, **noti
 ```html
 <div class="bx-alert bx-alert-ok mbs">
   <button data-event="click" data-comp="alert" class="bx-alert-close bootnode">
-    <i class="vicon">×</i>
+    <i class="vicon vicon-remove"></i>
   </button>
 
-  <i class="vicon bx-alert-icon">:</i>
+  <i class="vicon vicon-information bx-alert-icon"></i>
 
   <div class="bx-alert-content">
     <p class="mbn">Success message...</p>
@@ -61,4 +60,3 @@ Several kinds of alert: **info**, **success**, **error**, **form-error**, **noti
 {{/markdown}}
 {{> copy-code}}
 </div>
-
