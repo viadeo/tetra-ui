@@ -1,7 +1,7 @@
 module.exports = {
   compile : {
     options : {
-      includePaths: ['<%= path.sass.src %>']
+      includePaths: ['<%= path.sass.src %>', 'node_modules']
     },
     files: [{
         expand: true,

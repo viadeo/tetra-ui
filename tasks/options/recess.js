@@ -3,7 +3,7 @@ module.exports = {
   options: {
     compile: true,
     banner: '<%= banner %>',
-    includePath: '<%= path.less.src %>'
+    includePath: ['<%= path.less.src %>', 'node_modules']
   },
   bootstrap: {
     files: [{
