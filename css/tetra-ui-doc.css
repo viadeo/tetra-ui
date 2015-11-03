@@ -3816,8 +3816,8 @@ h1 .sub {
   font-family: 'Viadeoicons';
   font-style: normal;
   font-weight: normal;
-  src: url('/tetra-ui/dist/fonts/viadeoicons.eot?v=1446542585');
-  src: url('/tetra-ui/dist/fonts/viadeoicons.woff2?v=1446542585') format('woff2'), url('/tetra-ui/dist/fonts/viadeoicons.woff?v=1446542585') format('woff'), url('/tetra-ui/dist/fonts/viadeoicons.ttf?v=1446542585') format('truetype'), url('/tetra-ui/dist/fonts/viadeoicons.eot?v=1446542585#iefix') format('embedded-opentype');
+  src: url('fonts/viadeoicons.eot?v=1446542585');
+  src: url('fonts/viadeoicons.woff2?v=1446542585') format('woff2'), url('fonts/viadeoicons.woff?v=1446542585') format('woff'), url('fonts/viadeoicons.ttf?v=1446542585') format('truetype'), url('fonts/viadeoicons.eot?v=1446542585#iefix') format('embedded-opentype');
 }
 
 .vicon[class^="vicon-"],
@@ -4258,7 +4258,7 @@ h1 .sub {
   font: 0/0 a;
   color: transparent;
   vertical-align: text-top;
-  background: url('/tetra-ui/dist/img/viadeo//global-sprite2.png') no-repeat;
+  background: url('img/viadeo//global-sprite2.png') no-repeat;
 }
 
 /***** Font Definition for Open Sans. This stylesheet comes from qrohlf.com/posts/better-opensans *****/
@@ -5530,7 +5530,7 @@ a:focus .avatar img {
   height: 0;
   padding: 1em 0 0 0;
   overflow: hidden;
-  background: transparent url("/tetra-ui/dist/img/buttons//loaders/default.gif") no-repeat 50% 0.3em;
+  background: transparent url("img/buttons//loaders/default.gif") no-repeat 50% 0.3em;
 }
 
 .btn-append {
@@ -5759,7 +5759,7 @@ a:focus .avatar img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/tetra-ui/dist/img/loaders//ajax-loader.gif') no-repeat 50% 35%;
+  background: url('img/loaders//ajax-loader.gif') no-repeat 50% 35%;
 }
 
 .popin-container > .gr {
