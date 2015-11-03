@@ -57,6 +57,10 @@
     "node": ">= 0.10.5"
   },
   "scripts": {
-    "postinstall": "./tasks/postinstall.sh"
+    "postinstall": "./tasks/postinstall.sh",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm version major && npm publish && git push --follow-tags",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   }
 }
