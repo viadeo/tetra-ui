@@ -11,12 +11,8 @@ module.exports = {
       }
     }
   },
-  index: {
-    src: ['<%= path.doc %>/docs/index.hbs'],
-    dest: './'
-  },
   docs: {
-    src: ['<%= path.doc %>/docs/*.hbs', '!index.hbs'],
-    dest: './doc/'
+    src: ['<%= path.doc %>/docs/*.hbs'],
+    dest: './dist/'
   }
 };

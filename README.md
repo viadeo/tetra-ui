@@ -4,8 +4,7 @@
 > A smart, easy-to-use toolkit for creating rich interfaces in lightning speed!
 
 `MASTER` is the main branch.
-The `postinstall` script setup a hook policy to automatically rebase master onto gh-pages at each commit.
-Sync gh-pages with just git `push --all`.
+To update the staging branch (gh-pages) do `npm run deploy`
 
 ## Getting started
 
@@ -35,7 +34,7 @@ Now you should have a `node_modules` folder inside `tetra-ui` with all the requi
 
 `grunt`
 
-And then go to this URL in a browser: <http://localhost:5000/tetra-ui/> or <http://127.0.0.1:5000/tetra-ui/>.<br />
+And then go to this URL in a browser: <http://localhost:5000/tetra-ui/dist> or <http://127.0.0.1:5000/tetra-ui/dist>.<br />
 With this `grunt default` task, every time a Less file is changed, Grunt rebuilds the CSS files.
 
 ## Extras
