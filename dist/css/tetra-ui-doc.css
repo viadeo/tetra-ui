@@ -3816,8 +3816,8 @@ h1 .sub {
   font-family: 'Viadeoicons';
   font-style: normal;
   font-weight: normal;
-  src: url('fonts/viadeoicons.eot?v=1446542585');
-  src: url('fonts/viadeoicons.woff2?v=1446542585') format('woff2'), url('fonts/viadeoicons.woff?v=1446542585') format('woff'), url('fonts/viadeoicons.ttf?v=1446542585') format('truetype'), url('fonts/viadeoicons.eot?v=1446542585#iefix') format('embedded-opentype');
+  src: url('../fonts/viadeoicons.eot?v=1446542585');
+  src: url('../fonts/viadeoicons.woff2?v=1446542585') format('woff2'), url('../fonts/viadeoicons.woff?v=1446542585') format('woff'), url('../fonts/viadeoicons.ttf?v=1446542585') format('truetype'), url('../fonts/viadeoicons.eot?v=1446542585#iefix') format('embedded-opentype');
 }
 
 .vicon[class^="vicon-"],
