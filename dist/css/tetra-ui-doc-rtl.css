@@ -4258,7 +4258,7 @@ h1 .sub {
   font: 0/0 a;
   color: transparent;
   vertical-align: text-top;
-  background: url('img/viadeo//global-sprite2.png') no-repeat;
+  background: url('../img/viadeo//global-sprite2.png') no-repeat;
 }
 
 /***** Font Definition for Open Sans. This stylesheet comes from qrohlf.com/posts/better-opensans *****/
@@ -5530,7 +5530,7 @@ a:focus .avatar img {
   height: 0;
   padding: 1em 0 0 0;
   overflow: hidden;
-  background: transparent url("img/buttons//loaders/default.gif") no-repeat 50% 0.3em;
+  background: transparent url("../img/buttons//loaders/default.gif") no-repeat 50% 0.3em;
 }
 
 .btn-append {
@@ -5759,7 +5759,7 @@ a:focus .avatar img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('img/loaders//ajax-loader.gif') no-repeat 50% 35%;
+  background: url('../img/loaders//ajax-loader.gif') no-repeat 50% 35%;
 }
 
 .popin-container > .gr {
