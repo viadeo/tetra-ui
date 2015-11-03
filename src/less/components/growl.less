@@ -69,8 +69,8 @@
 
 	.growl-close {
 		opacity:1;
-		.position (@rtl) when (@rtl = false) { right: 0; }
-		.position (@rtl) when (@rtl = true) { left: 0; }
+		.position (@rtl) when (@rtl = false) { right: 0.5em; }
+		.position (@rtl) when (@rtl = true) { left: 0.5em; }
 
 		position: absolute;
 		top: 0;
@@ -108,8 +108,8 @@
 	.growl-icon {
 		opacity:1;
 		display: table-cell;
-		padding: 0 6px;
-		font-size: 0.9em;
+		padding: 0 10px;
+		font-size: 1.5em;
 		color: @white;
 		vertical-align: middle;
 		background: shade(@blue2, 10%);

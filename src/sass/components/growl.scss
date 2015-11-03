@@ -73,8 +73,8 @@
 
 	.growl-close {
 		opacity:1;
-		@if $rtl == false { @mixin position($rtl){ right: 0; }}
-		@if $rtl == true { @mixin position($rtl){ left: 0; }}
+		@if $rtl == false { @mixin position($rtl){ right: 0.5em; }}
+		@if $rtl == true { @mixin position($rtl){ left: 0.5em; }}
 
 		position: absolute;
 		top: 0;
@@ -112,8 +112,8 @@
 	.growl-icon {
 		opacity:1;
 		display: table-cell;
-		padding: 0 6px;
-		font-size: 0.9em;
+		padding: 0 10px;
+		font-size: 1.5em;
 		color: $white;
 		vertical-align: middle;
 		background: mix(#000000, $blue2, 10%);

@@ -8,7 +8,7 @@
 @img-loaders-dir: "/v_img/profilev2";
 
 // Fonts
-@fonts-dir: "/css/core/fonts";
+@fonts-dir: "/css/core/fonts/";
 @fonts-version: "1445435140";
 @font-stack: "Open Sans", "Arial", sans-serif;
 
@@ -3372,7 +3372,7 @@ h6,
 
 .h-bx .h-bx-link .vicon {
   margin: 0 -1px 0 0;
-  font-size: 8px;
+  font-size: 14px;
   color: #c5c3c7;
 }
 
@@ -4449,7 +4449,7 @@ h1 .sub {
   top: 0;
   right: 0;
   height: 100%;
-  padding: 0 2.5px;
+  padding: 0 7.5px;
   line-height: 2.1em;
   background: #0b8f8c;
   border-top-right-radius: 3px;
@@ -4466,6 +4466,443 @@ h1 .sub {
   background: #097774;
 }
 
+@font-face {
+  font-family: 'Viadeoicons';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/css/core/fonts/viadeoicons.eot?v=1446542585');
+  src: url('/css/core/fonts/viadeoicons.woff2?v=1446542585') format('woff2'), url('/css/core/fonts/viadeoicons.woff?v=1446542585') format('woff'), url('/css/core/fonts/viadeoicons.ttf?v=1446542585') format('truetype'), url('/css/core/fonts/viadeoicons.eot?v=1446542585#iefix') format('embedded-opentype');
+}
+
+.vicon[class^="vicon-"],
+.vicon[class*=" vicon-"] {
+  display: inline-block;
+  font-family: 'Viadeoicons';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant: normal;
+}
+
+.vicon-notification:before {
+  content: "\EA01";
+}
+
+.vicon-archive:before {
+  content: "\EA02";
+}
+
+.vicon-down-alt:before {
+  content: "\EA03";
+}
+
+.vicon-down:before {
+  content: "\EA04";
+}
+
+.vicon-first:before {
+  content: "\EA05";
+}
+
+.vicon-last:before {
+  content: "\EA06";
+}
+
+.vicon-left-alt:before {
+  content: "\EA07";
+}
+
+.vicon-prev:before {
+  content: "\EA08";
+}
+
+.vicon-right-alt:before {
+  content: "\EA09";
+}
+
+.vicon-next:before {
+  content: "\EA0A";
+}
+
+.vicon-select:before {
+  content: "\EA0B";
+}
+
+.vicon-up-alt:before {
+  content: "\EA0C";
+}
+
+.vicon-up:before {
+  content: "\EA0D";
+}
+
+.vicon-article:before {
+  content: "\EA0E";
+}
+
+.vicon-book:before {
+  content: "\EA0F";
+}
+
+.vicon-bubble:before {
+  content: "\EA10";
+}
+
+.vicon-bubbles:before {
+  content: "\EA11";
+}
+
+.vicon-calendar-1:before {
+  content: "\EA12";
+}
+
+.vicon-calendar-30:before {
+  content: "\EA13";
+}
+
+.vicon-calendar:before {
+  content: "\EA14";
+}
+
+.vicon-checkmark:before {
+  content: "\EA15";
+}
+
+.vicon-remove:before {
+  content: "\EA16";
+}
+
+.vicon-company-add:before {
+  content: "\EA17";
+}
+
+.vicon-company:before {
+  content: "\EA18";
+}
+
+.vicon-contract:before {
+  content: "\EA19";
+}
+
+.vicon-data:before {
+  content: "\EA1A";
+}
+
+.vicon-degree-like:before {
+  content: "\EA1B";
+}
+
+.vicon-degree-ok:before {
+  content: "\EA1C";
+}
+
+.vicon-degree:before {
+  content: "\EA1D";
+}
+
+.vicon-device-computer:before {
+  content: "\EA1E";
+}
+
+.vicon-device-phone:before {
+  content: "\EA1F";
+}
+
+.vicon-device-tablette:before {
+  content: "\EA20";
+}
+
+.vicon-download:before {
+  content: "\EA21";
+}
+
+.vicon-edit:before {
+  content: "\EA22";
+}
+
+.vicon-euro:before {
+  content: "\EA23";
+}
+
+.vicon-export:before {
+  content: "\EA24";
+}
+
+.vicon-facebook:before {
+  content: "\EA25";
+}
+
+.vicon-female-1:before {
+  content: "\EA26";
+}
+
+.vicon-female-2:before {
+  content: "\EA27";
+}
+
+.vicon-blog:before {
+  content: "\EA28";
+}
+
+.vicon-googleplus:before {
+  content: "\EA29";
+}
+
+.vicon-graph:before {
+  content: "\EA2A";
+}
+
+.vicon-group:before {
+  content: "\EA2B";
+}
+
+.vicon-home:before {
+  content: "\EA2C";
+}
+
+.vicon-bulb:before {
+  content: "\EA2D";
+}
+
+.vicon-information:before {
+  content: "\EA2E";
+}
+
+.vicon-experience:before {
+  content: "\EA2F";
+}
+
+.vicon-key:before {
+  content: "\EA30";
+}
+
+.vicon-infinity:before {
+  content: "\EA31";
+}
+
+.vicon-like:before {
+  content: "\EA32";
+}
+
+.vicon-link:before {
+  content: "\EA33";
+}
+
+.vicon-location:before {
+  content: "\EA34";
+}
+
+.vicon-message:before {
+  content: "\EA35";
+}
+
+.vicon-male-1:before {
+  content: "\EA36";
+}
+
+.vicon-male-2:before {
+  content: "\EA37";
+}
+
+.vicon-money:before {
+  content: "\EA38";
+}
+
+.vicon-network:before {
+  content: "\EA39";
+}
+
+.vicon-bell:before {
+  content: "\EA3A";
+}
+
+.vicon-phone:before {
+  content: "\EA3B";
+}
+
+.vicon-photo:before {
+  content: "\EA3C";
+}
+
+.vicon-plus:before {
+  content: "\EA3D";
+}
+
+.vicon-premium:before {
+  content: "\EA3E";
+}
+
+.vicon-print:before {
+  content: "\EA3F";
+}
+
+.vicon-profile:before {
+  content: "\EA40";
+}
+
+.vicon-recommand:before {
+  content: "\EA41";
+}
+
+.vicon-reload:before {
+  content: "\EA42";
+}
+
+.vicon-request-add:before {
+  content: "\EA43";
+}
+
+.vicon-request-delete:before {
+  content: "\EA44";
+}
+
+.vicon-request-ok:before {
+  content: "\EA45";
+}
+
+.vicon-request:before {
+  content: "\EA46";
+}
+
+.vicon-save:before {
+  content: "\EA47";
+}
+
+.vicon-saved:before {
+  content: "\EA48";
+}
+
+.vicon-search-plus:before {
+  content: "\EA49";
+}
+
+.vicon-search-catalog:before {
+  content: "\EA4A";
+}
+
+.vicon-search:before {
+  content: "\EA4B";
+}
+
+.vicon-settings:before {
+  content: "\EA4C";
+}
+
+.vicon-share:before {
+  content: "\EA4D";
+}
+
+.vicon-speech:before {
+  content: "\EA4E";
+}
+
+.vicon-star:before {
+  content: "\EA4F";
+}
+
+.vicon-stream:before {
+  content: "\EA50";
+}
+
+.vicon-school:before {
+  content: "\EA51";
+}
+
+.vicon-tag:before {
+  content: "\EA52";
+}
+
+.vicon-target:before {
+  content: "\EA53";
+}
+
+.vicon-tianji:before {
+  content: "\EA54";
+}
+
+.vicon-tie:before {
+  content: "\EA55";
+}
+
+.vicon-time:before {
+  content: "\EA56";
+}
+
+.vicon-tools:before {
+  content: "\EA57";
+}
+
+.vicon-trust:before {
+  content: "\EA58";
+}
+
+.vicon-twitter:before {
+  content: "\EA59";
+}
+
+.vicon-upload:before {
+  content: "\EA5A";
+}
+
+.vicon-viadeo:before {
+  content: "\EA5B";
+}
+
+.vicon-media:before {
+  content: "\EA5C";
+}
+
+.vicon-visibility:before {
+  content: "\EA5D";
+}
+
+.vicon-visit:before {
+  content: "\EA5E";
+}
+
+.vicon-warning:before {
+  content: "\EA5F";
+}
+
+.vicon-plus-alt:before {
+  content: "\EA60";
+}
+
+.vicon-notification-alt:before {
+  content: "\EA61";
+}
+
+.vicon-catalog:before {
+  content: "\EA62";
+}
+
+.vicon-date:before {
+  content: "\EA63";
+}
+
+.vicon-offer:before {
+  content: "\EA64";
+}
+
+.vicon-add:before {
+  content: "\EA65";
+}
+
+.vicon-question-alt:before {
+  content: "\EA66";
+}
+
+.vicon-question:before {
+  content: "\EA67";
+}
+
+.vicon {
+  font-size: 12px;
+}
+
 .global-icon,
 .ico {
   display: inline-block;
@@ -4476,486 +4913,6 @@ h1 .sub {
   color: transparent;
   vertical-align: text-top;
   background: url('/v_img/global/global-sprite2.png') no-repeat;
-}
-
-@font-face {
-  font-family: 'Viadeoicons';
-  font-style: normal;
-  font-weight: normal;
-  src: url('/css/core/fonts/viadeoicons/1445435140/viadeoicons.eot');
-  src: url('/css/core/fonts/viadeoicons/1445435140/viadeoicons.eot?#iefix') format('embedded-opentype'), url('/css/core/fonts/viadeoicons/1445435140/viadeoicons.woff') format('woff'), url('/css/core/fonts/viadeoicons/1445435140/viadeoicons.ttf') format('truetype');
-}
-
-.vicon,
-.vicon:before {
-  position: relative;
-  display: inline-block;
-  font-family: 'Viadeoicons';
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.vicon {
-  font-size: 10px;
-}
-
-.vicon-message:before {
-  content: "\006D";
-}
-
-.vicon-visit:before {
-  content: "\0065";
-}
-
-.vicon-search:before {
-  content: "\007A";
-}
-
-.vicon-settings:before {
-  content: "\0063";
-}
-
-.vicon-viadeo:before {
-  content: "\006F";
-}
-
-.vicon-tianji:before {
-  content: "\006A";
-}
-
-.vicon-twitter:before {
-  content: "\0074";
-}
-
-.vicon-bubbles:before {
-  content: "\0062";
-}
-
-.vicon-add:before {
-  content: "\0061";
-}
-
-.vicon-plus:before {
-  content: "\002B";
-}
-
-.vicon-plus-alt:before {
-  content: "\0070";
-}
-
-.vicon-remove:before {
-  content: "\00D7";
-}
-
-.vicon-star:before {
-  content: "\002A";
-}
-
-.vicon-reload:before {
-  content: "\0072";
-}
-
-.vicon-speech:before {
-  content: "\0073";
-}
-
-.vicon-facebook:before {
-  content: "\0066";
-}
-
-.vicon-date:before {
-  content: "\0064";
-}
-
-.vicon-googleplus:before {
-  content: "\0067";
-}
-
-.vicon-phone:before {
-  content: "\0068";
-}
-
-.vicon-checkmark:before {
-  content: "\0076";
-}
-
-.vicon-download:before {
-  content: "\0077";
-}
-
-.vicon-network:before {
-  content: "\0078";
-}
-
-.vicon-edit:before {
-  content: "\0079";
-}
-
-.vicon-like:before {
-  content: "\006C";
-}
-
-.vicon-left-alt:before {
-  content: "\003C";
-}
-
-.vicon-right-alt:before {
-  content: "\003E";
-}
-
-.vicon-prev:before {
-  content: "\2039";
-}
-
-.vicon-next:before {
-  content: "\203A";
-}
-
-.vicon-first:before {
-  content: "\00AB";
-}
-
-.vicon-last:before {
-  content: "\00BB";
-}
-
-.vicon-down:before {
-  content: "\25BE";
-}
-
-.vicon-up:before {
-  content: "\25B4";
-}
-
-.vicon-up-alt:before {
-  content: "\2227";
-}
-
-.vicon-down-alt:before {
-  content: "\2228";
-}
-
-.vicon-location:before {
-  content: "\004C";
-}
-
-.vicon-select:before {
-  content: "\2194";
-}
-
-.vicon-bubble:before {
-  content: "\0042";
-}
-
-.vicon-export:before {
-  content: "\0045";
-}
-
-.vicon-degree:before {
-  content: "\004D";
-}
-
-.vicon-degree-ok:before {
-  content: "\004E";
-}
-
-.vicon-photo:before {
-  content: "\0050";
-}
-
-.vicon-tag:before {
-  content: "\0054";
-}
-
-.vicon-experience:before {
-  content: "\0058";
-}
-
-.vicon-recommand:before {
-  content: "\006B";
-}
-
-.vicon-article:before {
-  content: "\004F";
-}
-
-.vicon-profile:before {
-  content: "\0053";
-}
-
-.vicon-company:before {
-  content: "\0043";
-}
-
-.vicon-offer:before {
-  content: "\0046";
-}
-
-.vicon-group:before {
-  content: "\0047";
-}
-
-.vicon-school:before {
-  content: "\0048";
-}
-
-.vicon-book:before {
-  content: "\004B";
-}
-
-.vicon-question:before {
-  content: "\003F";
-}
-
-.vicon-blog:before {
-  content: "\0021";
-}
-
-.vicon-request-ok:before {
-  content: "\0069";
-}
-
-.vicon-share:before {
-  content: "\0052";
-}
-
-.vicon-archive:before {
-  content: "\005A";
-}
-
-.vicon-information:before {
-  content: "\003A";
-}
-
-.vicon-warning:before {
-  content: "\003B";
-}
-
-.vicon-upload:before {
-  content: "\0075";
-}
-
-.vicon-graph:before {
-  content: "\006E";
-}
-
-.vicon-bulb:before {
-  content: "\2022";
-}
-
-.vicon-search-plus:before {
-  content: "\002F";
-}
-
-.vicon-euro:before {
-  content: "\20AC";
-}
-
-.vicon-save:before {
-  content: "\2295";
-}
-
-.vicon-tie:before {
-  content: "\2195";
-}
-
-.vicon-saved:before {
-  content: "\2611";
-}
-
-.vicon-bell:before {
-  content: "\237E";
-}
-
-.vicon-contract:before {
-  content: "\2397";
-}
-
-.vicon-print:before {
-  content: "\2399";
-}
-
-.vicon-time:before {
-  content: "\231A";
-}
-
-.vicon-catalog:before {
-  content: "\229C";
-}
-
-.vicon-tools:before {
-  content: "\2931";
-}
-
-.vicon-target:before {
-  content: "\2299";
-}
-
-.vicon-visibility:before {
-  content: "\29DD";
-}
-
-.vicon-stream:before {
-  content: "\21F4";
-}
-
-.vicon-data:before {
-  content: "\25F7";
-}
-
-.vicon-notification:before {
-  content: "\272A";
-}
-
-.vicon-notification-alt:before {
-  content: "\27C1";
-}
-
-.vicon-media:before {
-  content: "\25B7";
-}
-
-.vicon-trust:before {
-  content: "\29D3";
-}
-
-.vicon-key:before {
-  content: "\26BF";
-}
-
-.vicon-money:before {
-  content: "\0024";
-}
-
-.vicon-infinity:before {
-  content: "\221E";
-}
-
-.vicon-day-1:before {
-  content: "\F021";
-}
-
-.vicon-day-2:before {
-  content: "\F022";
-}
-
-.vicon-day-3:before {
-  content: "\F023";
-}
-
-.vicon-day-4:before {
-  content: "\F024";
-}
-
-.vicon-day-5:before {
-  content: "\F025";
-}
-
-.vicon-day-6:before {
-  content: "\F026";
-}
-
-.vicon-day-7:before {
-  content: "\F027";
-}
-
-.vicon-day-8:before {
-  content: "\F028";
-}
-
-.vicon-day-9:before {
-  content: "\F029";
-}
-
-.vicon-day-10:before {
-  content: "\F02A";
-}
-
-.vicon-day-11:before {
-  content: "\F02B";
-}
-
-.vicon-day-12:before {
-  content: "\F02C";
-}
-
-.vicon-day-13:before {
-  content: "\F02D";
-}
-
-.vicon-day-14:before {
-  content: "\F02E";
-}
-
-.vicon-day-15:before {
-  content: "\F02F";
-}
-
-.vicon-day-16:before {
-  content: "\F030";
-}
-
-.vicon-day-17:before {
-  content: "\F031";
-}
-
-.vicon-day-18:before {
-  content: "\F032";
-}
-
-.vicon-day-19:before {
-  content: "\F033";
-}
-
-.vicon-day-20:before {
-  content: "\F034";
-}
-
-.vicon-day-21:before {
-  content: "\F035";
-}
-
-.vicon-day-22:before {
-  content: "\F036";
-}
-
-.vicon-day-23:before {
-  content: "\F037";
-}
-
-.vicon-day-24:before {
-  content: "\F038";
-}
-
-.vicon-day-25:before {
-  content: "\F039";
-}
-
-.vicon-day-26:before {
-  content: "\F03A";
-}
-
-.vicon-day-27:before {
-  content: "\F03B";
-}
-
-.vicon-day-28:before {
-  content: "\F03C";
-}
-
-.vicon-day-29:before {
-  content: "\F03D";
-}
-
-.vicon-day-30:before {
-  content: "\F03E";
-}
-
-.vicon-day-31:before {
-  content: "\F03F";
 }
 
 /***** Font Definition for Open Sans. This stylesheet comes from qrohlf.com/posts/better-opensans *****/
@@ -5328,20 +5285,20 @@ a:focus .avatar img {
 .core-form .btn .vicon.btn-icon-before,
 .btn .vicon.btn-icon-after,
 .core-form .btn .vicon.btn-icon-after {
-  font-size: 7px;
+  font-size: 9px;
   line-height: 1;
 }
 
 .btn .vicon.btn-icon-before,
 .core-form .btn .vicon.btn-icon-before {
-  margin-right: 1px;
+  margin-right: 4px;
   margin-left: -4px;
 }
 
 .btn .vicon.btn-icon-after,
 .core-form .btn .vicon.btn-icon-after {
   margin-right: -4px;
-  margin-left: 1px;
+  margin-left: 4px;
 }
 
 .btn-default,
@@ -6139,7 +6096,21 @@ a:focus .avatar img {
 .core-form .btn-large .vicon.btn-icon-before,
 .btn-large .vicon.btn-icon-after,
 .core-form .btn-large .vicon.btn-icon-after {
-  font-size: 8px;
+  font-size: 10px;
+}
+
+.btn-lead .vicon.btn-icon-before,
+.core-form .btn-lead .vicon.btn-icon-before,
+.btn-lead .vicon.btn-icon-after,
+.core-form .btn-lead .vicon.btn-icon-after {
+  font-size: 12px;
+}
+
+.btn-fat .vicon.btn-icon-before,
+.core-form .btn-fat .vicon.btn-icon-before,
+.btn-fat .vicon.btn-icon-after,
+.core-form .btn-fat .vicon.btn-icon-after {
+  font-size: 14px;
 }
 
 .btn-lead,
@@ -6150,13 +6121,6 @@ a:focus .avatar img {
   font-size: 16px;
   font-weight: 400;
   border-radius: 26px;
-}
-
-.btn-lead .vicon.btn-icon-before,
-.core-form .btn-lead .vicon.btn-icon-before,
-.btn-lead .vicon.btn-icon-after,
-.core-form .btn-lead .vicon.btn-icon-after {
-  font-size: 9px;
 }
 
 .btn-lead-alt,
@@ -6186,13 +6150,6 @@ a:focus .avatar img {
   font-weight: 400;
   border-width: 2px;
   border-radius: 30px;
-}
-
-.btn-fat .vicon.btn-icon-before,
-.core-form .btn-fat .vicon.btn-icon-before,
-.btn-fat .vicon.btn-icon-after,
-.core-form .btn-fat .vicon.btn-icon-after {
-  font-size: 10px;
 }
 
 .btn-desc {
@@ -6265,13 +6222,14 @@ a:focus .avatar img {
 }
 
 .btn-icon {
-  padding: 6px 5px;
+  padding: 8px 9px;
   border-radius: 100%;
 }
 
 .btn-icon .vicon {
   margin: 0;
-  font-size: 10px;
+  font-size: 14px;
+  vertical-align: top;
 }
 
 .btn-link {
@@ -6302,15 +6260,14 @@ a:focus .avatar img {
 .btn-pagination .vicon.btn-icon-after,
 .btn-pagination .vicon.btn-icon-before {
   position: relative;
-  top: -1px;
 }
 
 .btn-pagination .vicon.btn-icon-after {
-  margin: 0 -10px 0 5px;
+  margin: 0 -5px 0 5px;
 }
 
 .btn-pagination .vicon.btn-icon-before {
-  margin: 0 5px 0 -10px;
+  margin: 0 5px 0 -5px;
 }
 
 .btn-pagination:hover,
@@ -6340,8 +6297,10 @@ a:focus .avatar img {
 }
 
 .dd .dd-btn > .vicon {
-  margin: 0 0 0 5px;
+  margin: 0 8px 0 11px;
+  font-size: 10px;
   line-height: 1;
+  vertical-align: middle;
 }
 
 .dd .dd-btn.btn-append {
@@ -6528,7 +6487,7 @@ a:focus .avatar img {
 }
 
 .popin-container .popin .popin-header .close .vicon {
-  margin-right: -0.2em;
+  line-height: 4.2em;
   color: #999999;
   vertical-align: top;
 }
@@ -6747,7 +6706,6 @@ a:focus .avatar img {
 
 .nav li.side-links a .vicon {
   margin: 0;
-  font-size: 9px;
   color: #999999;
 }
 
@@ -7289,9 +7247,9 @@ a:focus .avatar img {
 
 .custom-checkbox:not(#unsupported) .custom-checkbox-element:after {
   font-family: 'Viadeoicons';
-  font-size: 6px;
+  font-size: 10px;
   color: #333333;
-  content: "v";
+  content: "\EA15";
   visibility: hidden;
 }
 
@@ -7328,13 +7286,14 @@ a:focus .avatar img {
   width: 16px;
   height: 16px;
   margin-right: 5px;
-  line-height: 15px;
+  line-height: 16px;
+  text-align: center;
   background: #ffffff;
   border-radius: 2px;
 }
 
 .btn-toggle .btn-toggle-check .vicon {
-  font-size: 7px;
+  font-size: 10px;
   visibility: hidden;
 }
 
@@ -7439,8 +7398,8 @@ a:focus .avatar img {
 }
 
 .flipswitch .flipswitch-btn-no .flipswitch-icon {
-  margin-top: 2px;
-  margin-left: 20px;
+  margin-top: 7px;
+  margin-left: 27px;
   font-size: 10px;
   color: #87868c;
 }
@@ -7450,9 +7409,9 @@ a:focus .avatar img {
 }
 
 .flipswitch .flipswitch-btn-yes .flipswitch-icon {
-  margin-top: 3px;
-  margin-left: 3px;
-  font-size: 8px;
+  margin-top: 6px;
+  margin-left: 7px;
+  font-size: 12px;
   color: white;
 }
 
@@ -7517,7 +7476,6 @@ a:focus .avatar img {
 }
 
 .bx .bx-close .vicon {
-  font-size: 8px;
   color: #c5c3c7;
 }
 
@@ -7587,12 +7545,11 @@ a:focus .avatar img {
 .bx-alert .bx-alert-close {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 5px;
 }
 
 .bx-alert .bx-alert-close .vicon {
   height: 2em;
-  font-size: 10px;
   line-height: 2em;
   color: #000000;
   opacity: 0.4;
@@ -7610,7 +7567,7 @@ a:focus .avatar img {
 .bx-alert .bx-alert-icon {
   display: table-cell;
   padding: 0 15px;
-  font-size: 12px;
+  font-size: 18px;
   color: #ffffff;
   vertical-align: middle;
   background: #006faf;
@@ -7795,9 +7752,7 @@ a:focus .avatar img {
 }
 
 .bx-editable .bx-edit-btn .bx-edit .vicon {
-  font-size: 8px;
   color: #ffffff;
-  vertical-align: top;
 }
 
 .bx-editable .bx-edit-btn .bx-edit span {
@@ -7886,7 +7841,7 @@ a:focus .avatar img {
 .growl .growl-close {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0.5em;
   opacity: 1;
 }
 
@@ -7919,8 +7874,8 @@ a:focus .avatar img {
 
 .growl .growl-icon {
   display: table-cell;
-  padding: 0 6px;
-  font-size: 0.9em;
+  padding: 0 10px;
+  font-size: 1.5em;
   color: #ffffff;
   vertical-align: middle;
   background: #006faf;
@@ -8447,8 +8402,8 @@ a:focus .avatar img {
 }
 
 .share-links li a .vicon {
-  font-size: 9px;
-  line-height: 2.8em;
+  font-size: 14px;
+  line-height: 1.8em;
   color: #ffffff;
 }
 

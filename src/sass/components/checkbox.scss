@@ -27,9 +27,9 @@
 		text-align: center;
 
 		&:after {
-			content: "v";
+			content: "\EA15";
 			font-family: 'Viadeoicons';
-		  font-size: 6px;
+		  font-size: 10px;
 		  color: mix(#ffffff, $black, 20%);
 		  visibility: hidden;
 		}

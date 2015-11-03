@@ -228,15 +228,15 @@
 
   .vicon.btn-icon-before,
   .vicon.btn-icon-after {
-    font-size: 7px;
+    font-size: 9px;
     line-height: 1;
   }
   .vicon.btn-icon-before {
     @include margin-left($rtl, -4px);
-    @include margin-right($rtl, 1px);
+    @include margin-right($rtl, 4px);
   }
   .vicon.btn-icon-after {
-    @include margin-left($rtl, 1px);
+    @include margin-left($rtl, 4px);
     @include margin-right($rtl, -4px);
   }
 }
@@ -293,7 +293,21 @@
   font-weight: 400;
   .vicon.btn-icon-before,
   .vicon.btn-icon-after {
-    font-size: 8px;
+    font-size: 10px;
+  }
+}
+
+.btn-lead, .core-form .btn-lead {
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 12px;
+  }
+}
+
+.btn-fat, .core-form .btn-fat {
+  .vicon.btn-icon-before,
+  .vicon.btn-icon-after {
+    font-size: 14px;
   }
 }
 
@@ -307,7 +321,6 @@
   @include border-radius($buttonLeadBorderRadius);
   .vicon.btn-icon-before,
   .vicon.btn-icon-after {
-    font-size: 9px;
   }
 }
 
@@ -335,7 +348,6 @@
   @include border-radius($buttonFatBorderRadius);
   .vicon.btn-icon-before,
   .vicon.btn-icon-after {
-    font-size: 10px;
   }
 }
 
@@ -401,11 +413,12 @@
 }
 
 .btn-icon {
-  padding: 6px 5px;
+  padding: 8px 9px;
   border-radius: 100%;
   .vicon {
-    font-size: 10px;
+    font-size: 14px;
     margin: 0;
+    vertical-align: top;
   }
 }
 
@@ -434,14 +447,13 @@
     &.btn-icon-after,
     &.btn-icon-before {
       position: relative;
-      top: -1px;
     }
 
     &.btn-icon-after {
-      @include margin($rtl, 0, -$spacingS, 0, $spacingXs);
+      @include margin($rtl, 0, -$spacingXs, 0, $spacingXs);
     }
     &.btn-icon-before {
-      @include margin($rtl, 0, $spacingXs, 0, -$spacingS);
+      @include margin($rtl, 0, $spacingXs, 0, -$spacingXs);
     }
   }
 

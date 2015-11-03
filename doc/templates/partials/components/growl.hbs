@@ -6,9 +6,9 @@ Several kinds of growl: **info**, **success**, **error**, **notification**, **pr
 <div class="gu-2of3 gu-m-1of1">
   <div class="growl growl-type-info growl-position-center mbs growl-active">
     <button class="growl-close">
-      <i class="vicon">×</i>
+      <i class="vicon vicon-remove"></i>
     </button>
-    <i class="vicon growl-icon">:</i>
+    <i class="vicon vicon-information growl-icon"></i>
     <div class="growl-content">
     info growl with dismiss
     </div>
@@ -18,24 +18,23 @@ Several kinds of growl: **info**, **success**, **error**, **notification**, **pr
 {{#each data}}
 <div class="gu-2of3 gu-m-1of1">
   <div class="growl growl-type-{{this}} growl-position-center mbs growl-active">
-    <i class="vicon growl-icon">
     {{#is this 'info'}}
-    :
+    <i class="vicon vicon-information growl-icon">
     {{/is}}
     {{#is this 'warning'}}
-    :
+    <i class="vicon vicon-information growl-icon">
     {{/is}}
     {{#is this 'error'}}
-    :
+    <i class="vicon vicon-information growl-icon">
     {{/is}}
     {{#is this 'success'}}
-    v
+    <i class="vicon vicon-checkmark growl-icon">
     {{/is}}
     {{#is this 'notification'}}
-    M
+    <i class="vicon vicon-degree growl-icon">
     {{/is}}
     {{#is this 'premium'}}
-    *
+    <i class="vicon vicon-premium growl-icon">
     {{/is}}
     </i>
     <div class="growl-content">
@@ -51,9 +50,9 @@ Several kinds of growl: **info**, **success**, **error**, **notification**, **pr
 ```html
 <div class="growl growl-type-info growl-position-center mbs growl-active">
   <button class="growl-close">
-    <i class="vicon">×</i>
+    <i class="vicon vicon-remove"></i>
   </button>
-  <i class="vicon growl-icon">:</i>
+  <i class="vicon vicon-information growl-icon"></i>
   <div class="growl-content">
   info growl with dismiss
   </div>
@@ -62,4 +61,3 @@ Several kinds of growl: **info**, **success**, **error**, **notification**, **pr
 {{/markdown}}
 {{> copy-code}}
 </div>
-

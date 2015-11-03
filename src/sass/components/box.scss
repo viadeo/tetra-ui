@@ -12,7 +12,6 @@
 
 		.vicon {
 			color: $grayLight;
-			font-size: 8px;
 		}
 
 		&:hover {
@@ -82,8 +81,8 @@
 	}
 
 	.bx-alert-close {
-		@if $rtl == false { @mixin position($rtl){ right: 0; }}
-		@if $rtl == true { @mixin position($rtl){ left: 0; }}
+		@if $rtl == false { @mixin position($rtl){ right: 5px; }}
+		@if $rtl == true { @mixin position($rtl){ left: 5px; }}
 
 		position: absolute;
 		top: 0;
@@ -91,7 +90,6 @@
 
 		.vicon {
 			color: $black;
-			font-size: 10px;
 			opacity: 0.4;
 			height: 2em;
 			line-height: 2em;
@@ -110,7 +108,7 @@
 	.bx-alert-icon {
 		display: table-cell;
 		padding: 0 $spacingM;
-		font-size: 12px;
+		font-size: 18px;
 		color: $white;
 		vertical-align: middle;
 		background: mix(#000000, $blue2, 10%);
@@ -298,9 +296,7 @@
       color: $white;
 
       .vicon {
-        font-size: 8px;
         color: $white;
-        vertical-align: top;
       }
 
       span {

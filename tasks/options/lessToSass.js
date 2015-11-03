@@ -11,7 +11,12 @@ module.exports = {
       excludes: ['default'],
       ignores: [
         '<%= path.less.src %>/foundation/variables.less'
-      ]
+      ],
+      replacements: [{
+        pattern: /tetra-icons\/dist\/(less)\/\_viadeoicons/gi,
+        replacement: 'tetra-icons/dist/scss/_viadeoicons',
+        order: 10
+      }]
     }
   },
   default_variables: {
