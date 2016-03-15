@@ -9,7 +9,7 @@ Several kinds of alert: **info**, **success**, **error**, **form-error**, **noti
 {{#each data}}
 <div class="bx-alert bx-alert-{{this}} mbs">
   <button data-event="click" data-comp="alert" class="bx-alert-close">
-    <i class="vicon vicon-remove"></i>
+    <i class="vicon vicon-close"></i>
   </button>
 
   {{#is this 'default'}}
@@ -25,7 +25,7 @@ Several kinds of alert: **info**, **success**, **error**, **form-error**, **noti
     <i class="vicon vicon-information bx-alert-icon">
   {{/is}}
   {{#is this 'ok'}}
-    <i class="vicon vicon-checkmark bx-alert-icon">
+    <i class="vicon vicon-check bx-alert-icon">
   {{/is}}
   {{#is this 'notification'}}
     <i class="vicon vicon-degree bx-alert-icon">
@@ -47,7 +47,7 @@ Several kinds of alert: **info**, **success**, **error**, **form-error**, **noti
 ```html
 <div class="bx-alert bx-alert-ok mbs">
   <button data-event="click" data-comp="alert" class="bx-alert-close bootnode">
-    <i class="vicon vicon-remove"></i>
+    <i class="vicon vicon-close"></i>
   </button>
 
   <i class="vicon vicon-information bx-alert-icon"></i>
