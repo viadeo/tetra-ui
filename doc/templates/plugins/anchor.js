@@ -14,6 +14,6 @@
 module.exports = [
   '<a href="#<%= id %>" name="<%= id %>" class="anchor">',
   '  <span class="anchor-target" id="<%= id %>"></span>',
-  '  <i aria-hidden="true" class="vicon">⊙</i>',
+  '  <i aria-hidden="true" class="vicon vicon-target"></i>',
   '</a>'
 ].join('\n');
