@@ -12,7 +12,7 @@ Three quick start options are available:
 
 * [Download the latest release](https://github.com/viadeo/tetra-ui/releases).
 * Clone the repo: `git clone https://github.com/viadeo/tetra-ui.git`.
-* Install with [Bower](http://bower.io): `bower install tetra-ui`.
+* Install with [npm](https://www.npmjs.com): `npm install tetra-ui`.
 
 The main folder you’ll use is of course `tetra-ui` where you’ll find the main files: CSS, web fonts, images, Less, Sass.
 
@@ -23,7 +23,6 @@ Here are the instructions to launch and build locally the whole Tetra UI project
 1. Install [Node.js](http://nodejs.org/)
 2. Install [Npm](http://npmjs.org/) dependancies (npm should with Node)
 3. Install `grunt-cli` globally with `npm install -g grunt-cli`.
-4. Install `bower` globally with `npm install -g bower`.
 
 Navigate to the root `tetra-ui` directory and then run `npm install` to install project dependancies.<br />
 The `npm`command installs the dependencies defined in `package.json`.
