@@ -2,48 +2,48 @@
 
 // rule filter to block browsers that don't support that selector from applying rules they shouldn't
 .custom-checkbox:not(#unsupported) {
-	cursor: pointer;
+  cursor: pointer;
 
-	input {
-		opacity: 0;
-		width: 20px;
+  input {
+    opacity: 0;
+    width: 20px;
 
-		&:focus + .custom-checkbox-element {
-			box-shadow: 0 0 0 1px $inputBorderFocus;
-			outline: thin dotted;
-		}
-	}
+    &:focus + .custom-checkbox-element {
+      box-shadow: 0 0 0 1px $inputBorderFocus;
+      outline: thin dotted;
+    }
+  }
 
-	.custom-checkbox-element {
-		display: inline-block;
+  .custom-checkbox-element {
+    display: inline-block;
     background:#fff;
-		width: 17px; height: 17px; line-height: 16px;
-		margin: 0 0 2px 0;
-		@include margin-right($rtl, $spacingXs);
-		@include margin-left($rtl, -20px);
-		border: 1px solid $inputBorder;
-		border-radius: 2px;
-		vertical-align: middle;
-		text-align: center;
+    width: 17px; height: 17px; line-height: 16px;
+    margin: 0 0 2px 0;
+    @include margin-right($rtl, $spacingXs);
+    @include margin-left($rtl, -20px);
+    border: 1px solid $inputBorder;
+    border-radius: 2px;
+    vertical-align: middle;
+    text-align: center;
 
-		&:after {
-			content: "\EA16";
-			font-family: 'Viadeoicons';
-		  font-size: 10px;
-		  color: mix(#ffffff, $black, 20%);
-		  visibility: hidden;
-		}
-	}
+    &:after {
+      content: "\EA1A";
+      font-family: 'Viadeoicons';
+      font-size: 10px;
+      color: mix(#ffffff, $black, 20%);
+      visibility: hidden;
+    }
+  }
 
-	&:hover {
-		.custom-checkbox-element {
-			border-color: mix(#000000, $inputBorder, 25%);
-		}
-	}
+  &:hover {
+    .custom-checkbox-element {
+      border-color: mix(#000000, $inputBorder, 25%);
+    }
+  }
 
-	input:checked + .custom-checkbox-element {
-		&:after {
-		  visibility: visible;
-		}
-	}
+  input:checked + .custom-checkbox-element {
+    &:after {
+      visibility: visible;
+    }
+  }
 }

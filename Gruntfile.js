@@ -41,9 +41,6 @@ module.exports = function(grunt) {
   // Merge configurations
   grunt.initConfig(_.merge(initConfig, config));
 
-  // Force load assemble
-  grunt.loadNpmTasks('assemble');
-
   grunt.registerTask('test', [
     'jshint'
   ]);
@@ -57,8 +54,7 @@ module.exports = function(grunt) {
     'clean:sass',
     'lessToSass',
     'string-replace:sass_dist',
-    'string-replace:less_dist',
-    'test-sass'
+    'string-replace:less_dist'
   ]);
 
   grunt.registerTask('dist-js', [
@@ -87,7 +83,7 @@ module.exports = function(grunt) {
   // Watch and launch server
   grunt.registerTask('watch-server', ['connect', 'watch']);
 
-    // Default task
+  // Default task
   grunt.registerTask('default', ['test', 'dist', 'doc', 'watch-server']);
 
 };
